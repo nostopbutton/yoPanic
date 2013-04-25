@@ -1,0 +1,6 @@
+unit:   ./node_modules/karma/bin/karma start ./config/karma.unit.conf.js
+midway: ./node_modules/karma/bin/karma start ./config/karma.midway.conf.js
+e2e:    ./node_modules/karma/bin/karma start ./config/karma.e2e.conf.js
+
+/Users/Pete/local/node/lib/node_modules/karma/bin/karma start ./config/karma.midway.conf.js
+    /Users/Pete/local/node/lib/node_modules/karma/bin/karma start ./config/karma.e2e.conf.js

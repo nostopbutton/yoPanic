@@ -1,0 +1,77 @@
+{
+  "default": {
+    "neckline": {
+      "type": "nek-001", "fabric": "003", "trim": {"type":"", "fabric":""}
+    }
+    , "skirt": {
+      "type": "skt-010", "fabric": "003"
+    }
+    , "sleeves": {
+      "type": "slv-001", "fabric": "003"
+    }
+    , "extas": {
+      "type": "ext-001", "fabric": "003"
+    }
+  }
+  , "strapline": "use the buttons below to customise your dress"
+  , "description": [  "Cupcake ipsum dolor sit. Amet brownie brownie. Jelly beans tootsie roll gummi bears tootsie roll pudding."
+  , "Wypas muffin cupcake. Cheesecake ice cream halvah tiramisu. Sugar plum gummies caramels powder cheesecake."
+  , "Pastry soufflé pie donut croissant apple pie powder. Caramels sweet dessert. Liquorice chocolate cake chupa chups fruitcake cheesecake powder wypas pudding lollipop."
+  , "Ice cream carrot cake jujubes biscuit faworki. Bonbon icing wypas icing. Pastry jelly chocolate brownie gingerbread jelly beans candy canes. Wafer bear claw jelly pudding marzipan jelly-o gummi bears jelly-o."
+  , "Marshmallow lollipop bear claw macaroon pastry candy. Chocolate bar jelly beans jujubes fruitcake. Chocolate cake wafer icing cake."
+]
+  , "views": ["view-front", "view-left", "view-back", "view-right"]
+  , "sizes": [10,12,14,16,18]
+  , "options": [
+  {
+    "opt_name": "neckline",
+    "active": "true",
+    "opt_label": "Neckline",
+    "opt_values": [
+      {"type": "nek-001"},
+      {"type": "nek-002"},
+      {"type": "nek-003"},
+      {"type": "nek-006"}
+    ]
+  },
+  {
+    "opt_name": "sleeves",
+    "opt_label": "Sleeves",
+    "opt_values": [
+      {"type": "slv-000"},
+      {"type": "slv-001"},
+      {"type": "slv-002"},
+      {"type": "slv-006"},
+      {"type": "slv-007"},
+      {"type": "slv-009"},
+      {"type": "slv-012"}
+    ]
+  },
+  {
+    "opt_name": "skirt",
+    "opt_label": "Skirt",
+    "opt_values": [
+      {"type": "skt-012"},
+      {"type": "skt-011"},
+      {"type": "skt-010"},
+      {"type": "skt-032"},
+      {"type": "skt-031"},
+      {"type": "skt-030"}
+    ]
+  },
+  {
+    "opt_name": "extras",
+    "opt_label": "Extras",
+    "opt_values": [
+      {"type": "ext-008"},
+      {"type": "ext-009"},
+      {"type": "ext-007"},
+      {"type": "ext-011"},
+      {"type": "ext-002"},
+      {"type": "ext-003"},
+      {"type": "ext-004"},
+      {"type": "ext-005"}
+    ]
+  }
+]
+}

@@ -1,0 +1,19 @@
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:c08d3d3fe1b83109fa28aac458a3a581$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.silhouette-sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../images/silhouette-sprite.png);}
+
+.silhouette1 {width:200px; height:349px; background-position: -0px -941px}
+.silhouette2 {width:200px; height:334px; background-position: -0px -1292px}
+.silhouette3 {width:203px; height:316px; background-position: -0px -296px}
+.silhouette5 {width:202px; height:325px; background-position: -0px -614px}
+.silhouette6 {width:208px; height:294px; background-position: -0px -0px}

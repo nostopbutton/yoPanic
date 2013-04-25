@@ -1,0 +1,80 @@
+[
+  {
+    "itemId": "sh-1"
+    , "catId": "dresses"
+    , "silId": "sheath"
+    , "name": "Sheath - Red"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 1500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "neckline": {
+          "type": "nek-008", "fabric": "001"
+        }
+        , "skirt": {
+          "type": "skt-005", "fabric": "001"
+        }
+        , "sleeves": {
+          "type": "slv-000", "fabric": "001"
+        }
+        , "trim": {
+          "type": "trm-009", "fabric": "003"
+        }
+        , "extras": {
+          "type": "ext-000", "fabric": "001"
+        }
+      }
+    }
+  , {
+    "itemId": "sh-2"
+    , "catId": "dresses"
+    , "silId": "sheath"
+    , "name": "Sheath - Evening Dress"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+      "neckline": {
+        "type": "nek-004", "fabric": "005"
+      }
+      , "skirt": {
+        "type": "skt-002", "fabric": "005"
+      }
+      , "sleeves": {
+        "type": "slv-003", "fabric": "005"
+      }
+      , "trim": {
+        "type": "trm-000", "fabric": "001"
+      }
+      , "extras": {
+        "type": "ext-005", "fabric": "005"
+      }
+    }
+  }
+  , {
+    "itemId": "sw-1"
+    , "catId": "dresses"
+    , "silId": "swing"
+    , "name": "Swing - Violet"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+      "neckline": {
+        "type": "nek-006", "fabric": "001"
+      }
+      , "skirt": {
+        "type": "skt-005", "fabric": "003"
+      }
+      , "sleeves": {
+        "type": "slv-001", "fabric": "001"
+      }
+      , "trim": {
+        "type": "trm-024", "fabric": "007"
+      }
+      , "extras": {
+        "type": "ext-000", "fabric": "001"
+      }
+    }
+  }
+]

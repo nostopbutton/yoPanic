@@ -1,0 +1,20 @@
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:cbd2528ecf949f5230ec436089aaae45$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.collection-sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../images/collection-sprite.png);}
+
+.blackandwhitemix {width:200px; height:350px; background-position: -0px -710px}
+.emeraldmix {width:201px; height:350px; background-position: -0px -0px}
+.leather {width:170px; height:286px; background-position: -0px -1740px}
+.leathermix {width:200px; height:325px; background-position: -0px -1413px}
+.redandwhite {width:200px; height:349px; background-position: -0px -1062px}
+.rufflemix {width:200px; height:356px; background-position: -0px -352px}

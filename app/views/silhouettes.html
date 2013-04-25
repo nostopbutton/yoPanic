@@ -1,0 +1,41 @@
+<div id="silhouettesView" class="container">
+    <div class="silhouette header">
+        Sillouttes
+    </div>
+    <div class="silhouette description">
+        customise - colour, neckline, length, sleeves, trim and exact body measurements!
+    </div>
+    <div ng-repeat="silhouette in silhouettes">
+        <p class="silhouette category">{{silhouette.catName}}</p>
+        <div class="row">
+            <!--<div class="span12">-->
+                <!--<div ng-repeat="silhouette in silhouettes">-->
+                <!--<br>-->
+
+                <div ng-repeat="design in silhouette.designs">
+                    <div class="span3">
+                        <div class="row">
+                            <div class="span2">
+                                {{design.desName}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span3 overview price">
+                                <p class="top-border"><i>From: <b>HKD {{design.price}}</b></i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span3 overview image">
+
+                                <a href="#/design/{{design.desId}}">
+                                    <div class="silhouette-sprite {{design.silhouetteImage}}"></div>
+                                </a>
+                                    <!--<a href="#/design/{{silouette.id}}"> <img ng-src="{{silouette.image}}" height="307px"></a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--</div>-->
+        </div>
+    </div>
+</div> <!-- /container -->

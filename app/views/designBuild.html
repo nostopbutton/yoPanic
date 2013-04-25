@@ -1,0 +1,216 @@
+<div id="designBuildView" class="container">
+    <div class="row">
+        <div class="span5 offset5">
+            {{design.longName}}
+            <!--<select ng-model='designId' ng-select="loadDesign()">-->
+                <!--<option value='choose...'>Choose...</option>-->
+                <!--<optgroup ng-repeat='category in ranges' label="{{category.catId}}">-->
+                    <!--<option ng-repeat='design in category.designs'>{{design.desId}}</option>-->
+                <!--</optgroup>-->
+            <!--</select>-->
+
+            <!--<select ng-model="designId" ng-options="category.designs.desId group by category.catName for category in ranges">-->
+            <!--<select ng-repeat="category in ranges">-->
+                <!--&lt;!&ndash;<span ng-repeat="category in ranges">&ndash;&gt;-->
+                    <!--<option value = "category.catId">-->
+                        <!--{{category.catName}}-->
+                    <!--</option>-->
+                    <!--&lt;!&ndash;<option ng-repeat="design in category.designs" value = "{{design.longName}}">&ndash;&gt;-->
+                        <!---- {{design.desName}}-->
+                    <!--</option>-->
+                <!--</span>-->
+            <!--</select>-->
+        </div>
+        <div class="span2 pull-right builder price">
+            <b>HKD {{design.price}}</b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span7 offset5">
+            <p class="handwriting top-border"><i>{{range.strapline}}</i></p>
+        </div>
+    </div>
+    <div class="row">
+        <!--<div class="span3">-->
+            <!--<div class="dress">-->
+                <!--<div class="pic body db-parts-sprite model-front"></div>-->
+
+                <!--<div class="pic skirt db-parts-sprite {{form.skirt.type}}-{{form.skirt.fabric}}"></div>-->
+
+                <!--<div class="pic neckline db-parts-sprite {{form.neckline.type}}-{{form.neckline.fabric}}"></div>-->
+
+                <!--<div class="pic trim db-parts-sprite {{form.trim.type}}-{{form.trim.fabric}}"></div>-->
+
+                <!--<div class="pic  extras db-parts-sprite {{form.extras.type}}-{{form.extras.fabric}}"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="span5">
+            <div class="dress">
+              <div class="pic body db-parts-sprite model-front"></div>
+              <div draw-dress dress="form"></div>
+            </div>
+        </div>
+        <div class="span7">
+
+            <tabs class="tabbable">
+                <pane heading="style selector">
+                    <tabs class="tabbable tabs-left">
+                        <!--<pane heading="Static title">Static content</pane>-->
+                        <pane class=""ng-repeat="option in range.options" heading="{{option.opt_label}}" active="pane.active=option.active">
+                            <div class="row span5">
+                                <!--<br>-->
+                                <div class="" name="option_choice" data-toggle="buttons-checkbox">
+                                    <!--https://github.com/angular-ui/bootstrap/issues/233-->
+                                    <button ng-repeat="opt_value in option.opt_values" type="button" class=" builder options" ng-model="form[option.opt_name]['type']" btn-radio="opt_value.type">
+                                        <div class="db-icons-sprite {{opt_value.type}}"></div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row span5">
+                                <p>fabric</p>
+                                <div class="top-border" name="option_fabric_choice" data-toggle="buttons-checkbox">
+                                    <div fabric-panel selected-option="form[option.opt_name]"></div>
+                                    <div>
+                                        fabric description goes here, lorem blah blah..
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<div class="row span5">-->
+                                <!--<p>trim</p>-->
+                                <!--<div class="top-border" name="option_trim_choice" data-toggle="buttons-checkbox">-->
+                                    <!--<div trim-panel selected-option="form[option.opt_name]"></div>-->
+                                    <!--<div>-->
+                                        <!--trim description goes here, lorem blah blah..-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="top-border" name="option_trim_fabric_choice" data-toggle="buttons-checkbox">-->
+                                    <!--<div fabric-trim-panel selected-option="form[option.opt_name]"></div>-->
+                                    <!--<div>-->
+                                        <!--fabric description goes here, lorem blah blah..-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="row span5">-->
+                                <!--<p>trim</p>-->
+                                <!--&lt;!&ndash;<p class="handwriting top-border"><i>{{range.strapline}}</i></p>&ndash;&gt;-->
+                                <!--<div class="top-border" name="option_trim_choice" data-toggle="buttons-checkbox">-->
+                                    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                                    <!--<div>-->
+                                        <!--&lt;!&ndash;<pre>{{option.opt_name}}</pre>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<pre>{{form.neckline.type}}</pre>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<pre>form.{{option.opt_name}}</pre>&ndash;&gt;-->
+                                        <!--<pre>{{form.neckline.type | trimLookup}}</pre>-->
+                                        <!--<button ng-repeat="opt_trim in form.neckline.type | trimLookup" type="button" class="btn selector option trim{{opt_trim.trimId}}" ng-model="form[option.opt_name]['trim']" btn-radio="opt_trim.trimId">-->
+                                            <!--&lt;!&ndash;<button ng-repeat="opt_fabric in option.opt_fabrics" type="button" class="btn selector option fabric{{opt_fabric.type}}" ng-model="form[option.opt_name]['fabric']" btn-radio="opt_fabric.type">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<div class="selector option fabric{{opt_fabric.type}}"></div>&ndash;&gt;-->
+                                            <!--{{opt_trim.trimId}}-->
+                                        <!--</button>-->
+                                        <!--&lt;!&ndash;<p>{{form.bodice.fabric}}</p>&ndash;&gt;-->
+                                    <!--</div>-->
+                                    <!--<div>-->
+                                        <!--fabric description goes here, lorem blah blah..-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="row span5">-->
+                                <!--<p>trim</p>-->
+                                <!--&lt;!&ndash;<p class="handwriting top-border"><i>{{range.strapline}}</i></p>&ndash;&gt;-->
+                                <!--<div class="top-border" name="option_trim_choice" data-toggle="buttons-checkbox">-->
+                                    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                                    <!--<div>-->
+                                        <!--&lt;!&ndash;<pre>{{option.opt_name}}</pre>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<pre>{{form.neckline.type}}</pre>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<pre>form.{{option.opt_name}}</pre>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<pre>{{form.neckline.type | trimLookup}}</pre>&ndash;&gt;-->
+                                        <!--<button ng-repeat="opt_trim in form.neckline.type | trimLookup" type="button" class="btn selector option trim{{opt_trim.trimId}}" ng-model="form[option.opt_name]['trim']" btn-radio="opt_trim.trimId">-->
+                                            <!--&lt;!&ndash;<button ng-repeat="opt_fabric in option.opt_fabrics" type="button" class="btn selector option fabric{{opt_fabric.type}}" ng-model="form[option.opt_name]['fabric']" btn-radio="opt_fabric.type">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<div class="selector option fabric{{opt_fabric.type}}"></div>&ndash;&gt;-->
+                                            <!--{{opt_trim.trimId}}-->
+                                        <!--</button>-->
+                                        <!--&lt;!&ndash;<p>{{form.bodice.fabric}}</p>&ndash;&gt;-->
+                                    <!--</div>-->
+                                    <!--<div>-->
+                                        <!--fabric description goes here, lorem blah blah..-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </pane>
+                    </tabs>
+                </pane> <!-- /style and colour-->
+                <pane heading="trim">
+                    <tabs class="tabbable tabs-left">
+                        <!--<pane heading="Static title">Static content</pane>-->
+                        <pane class=""ng-repeat="option in range.options" heading="{{option.opt_label}}" active="pane.active=option.active">
+
+                            <div class="row span5">
+                                <p>trim</p>
+
+                                <div class="top-border" name="option_trim_choice" data-toggle="buttons-checkbox">
+                                    <div trim-panel selected-option="form[option.opt_name]"></div>
+                                    <div>
+                                        trim description goes here, lorem blah blah..
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="row span5">
+                                <p>trim fabric</p>
+                                <div class="top-border" name="option_trim_fabric_choice" data-toggle="buttons-checkbox">
+                                    <div fabric-trim-panel selected-option="form[option.opt_name]"></div>
+                                    <div>
+                                        fabric description goes here, lorem blah blah..
+                                    </div>
+                                </div>
+                            </div>
+                        </pane>
+                    </tabs>
+                </pane>
+                <pane heading="description">
+                    <span ng-repeat="para in range.description">{{para}}</span>
+                </pane>
+                <pane heading="size selector">
+                </pane>
+                <!--<pane heading="review my design">-->
+                    <!--Details of your personal {{design.longName}} design:-->
+                    <!--<ul>-->
+                        <!--<li ng-repeat="item in form">{{item.type|labelLookup}} in {{item.fabric|labelLookup}} fabric</li>-->
+                    <!--</ul>-->
+                <!--</pane>-->
+            </tabs>
+
+
+                        <!--<div class="tab-pane" id="tab-sizing">-->
+                            <!--<div class="btn-group" data-toggle="buttons-checkbox">-->
+                                <!--<legend>Choose a standard size:</legend>-->
+                                <!--<select>-->
+                                    <!--<option ng-repeat="size in range.sizes">Size {{size}}</option>-->
+                                <!--</select>-->
+                                <!--<legend>or custom measurements:</legend>-->
+                                <!--todo - how do we enter these details?-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6 offset5" style="text-align: left">
+            <p>
+                <a class="btn" id="review-dress" data-toggle="modal" href="#reviewModal" onClick="_gaq.push(['_trackEvent', 'Design Build', 'review']);">Review my choices</a>
+                <button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'cancel']);">Cancel</button><!--<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>-->
+                <button form="selection_form" ng-click="save()" ng-disabled="isSaveDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'save']);">Save</button><!--<a class="btn" id="save-dress" href="#">Add to bag &raquo;</a>-->
+            </p>
+        </div>
+    </div>
+    <!--Debug View:-->
+    <pre>form={{form}}</pre>
+    <pre>option={{option}}</pre>
+    <pre>options={{options}}</pre>
+
+    <pre>master={{master}}</pre>
+    <pre>category={{category}}</pre>
+<pre>design={{design}}</pre>
+    </div>
+</div> <!-- /designBuildView -->

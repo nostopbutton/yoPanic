@@ -1,0 +1,45 @@
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:5376e908e874cbfdfffaed7570a3a79c$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.icons-sprite {
+    BACKGROUND-SIZE:  WIDTH: 80PX; HEIGHT: 80PX;
+    display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../images/icons-sprite.png);
+}
+
+.blt-000 {width:2px; height:2px; background-position: -110px -1905px}
+.blt-001 {width:125px; height:125px; background-position: -0px -1778px}
+.bod-001 {width:83px; height:83px; background-position: -0px -2500px}
+.bod-002 {width:83px; height:83px; background-position: -0px -2415px}
+.bod-003 {width:83px; height:83px; background-position: -0px -2330px}
+.bod-004 {width:83px; height:83px; background-position: -0px -2245px}
+.bod-005 {width:83px; height:83px; background-position: -0px -2160px}
+.bod-006 {width:83px; height:83px; background-position: -0px -2075px}
+.bod-007 {width:83px; height:83px; background-position: -0px -1990px}
+.bod-008 {width:83px; height:83px; background-position: -0px -1905px}
+.skt-001 {width:125px; height:125px; background-position: -0px -1651px}
+.skt-002 {width:125px; height:125px; background-position: -0px -1524px}
+.skt-003 {width:125px; height:125px; background-position: -0px -1397px}
+.skt-004 {width:125px; height:125px; background-position: -0px -1270px}
+.skt-005 {width:125px; height:125px; background-position: -0px -1143px}
+.skt-006 {width:125px; height:125px; background-position: -0px -1016px}
+.slv-000 {width:125px; height:125px; background-position: -0px -889px}
+.slv-001 {width:125px; height:125px; background-position: -0px -762px}
+.slv-002 {width:125px; height:125px; background-position: -0px -635px}
+.slv-003 {width:125px; height:125px; background-position: -0px -508px}
+.slv-004 {width:125px; height:125px; background-position: -0px -381px}
+.slv-005 {width:125px; height:125px; background-position: -0px -254px}
+.slv-006 {width:125px; height:125px; background-position: -0px -127px}
+.slv-007 {width:125px; height:125px; background-position: -0px -0px}
+.view-back {width:23px; height:56px; background-position: -85px -2021px}
+.view-front {width:23px; height:56px; background-position: -85px -1963px}
+.view-left {width:23px; height:55px; background-position: -85px -2079px}
+.view-right {width:23px; height:56px; background-position: -85px -1905px}
