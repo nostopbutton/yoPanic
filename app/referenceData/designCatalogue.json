@@ -8,9 +8,9 @@
             , "desName": "sheath"
             , "longName": "Sheath Dress"
             , "shortDesc": "It's lovely, you know it is... dah dha"
-            , "price": 0
+            , "price": 1500
             , "image": "design-sheath.png"
-            , "silhouetteImage": "silhouette1"
+            , "silhouetteImage": "silouette1"
           }
           , {
             "desId": "sheath_doloman"
@@ -18,7 +18,7 @@
             , "blurb": "It's lovely, you know it is... dah dha"
             , "price": 0
             , "image": "design-sheath.png"
-            , "silhouetteImage": "silhouette1"
+            , "silhouetteImage": "silouette2"
           }
           , {
             "desId": "audrey"
@@ -26,7 +26,7 @@
             , "blurb": "They're hot this winter, you could be too!"
             , "price": 10
             , "image": "design-audrey.png"
-            , "silhouetteImage": "silhouette2"
+            , "silhouetteImage": "silouette3"
           }
           , {
             "desId": "audrey_doloman"
@@ -34,7 +34,7 @@
             , "blurb": "They're hot this winter, you could be too!"
             , "price": 0
             , "image": "design-sheath.png"
-            , "silhouetteImage": "silhouette2"
+            , "silhouetteImage": "silouette4"
           }
           , {
             "desId": "fit_and_flair"
@@ -42,7 +42,7 @@
             , "blurb": "They'll all be staring at you as you strut your stuff"
             , "price": 0
             , "image": "design-flair.png"
-            , "silhouetteImage": "silhouette3"
+            , "silhouetteImage": "silouette5"
           }
           , {
             "desId": "fit_and_flair_doloman"
@@ -50,7 +50,7 @@
             , "blurb": "They'll all be staring at you as you strut your stuff"
             , "price": 0
             , "image": "design-flair.png"
-            , "silhouetteImage": "silhouette3"
+            , "silhouetteImage": "silouette6"
           }
           , {
             "desId": "swoosh"
@@ -58,7 +58,7 @@
             , "blurb": "They'll all be staring at you as you strut your stuff"
             , "price": 0
             , "image": "design-swoosh.png"
-            , "silhouetteImage": "silhouette2"
+            , "silhouetteImage": "silouette7"
           }
           , {
             "desId": "shift tailored"
@@ -66,39 +66,7 @@
             , "blurb": "It's lovely, you know it is... dah dha"
             , "price": 0
             , "image": "design-shift.png"
-            , "silhouetteImage": "silhouette1"
-          }
-          , {
-            "desId": "shift plain"
-            , "desName": "shift"
-            , "blurb": "It's lovely, you know it is... dah dha"
-            , "price": 0
-            , "image": "design-shift.png"
-            , "silhouetteImage": "silhouette1"
-          }
-          , {
-            "desId": "shift_doloman"
-            , "desName": "shift doloman"
-            , "blurb": "It's lovely, you know it is... dah dha"
-            , "price": 0
-            , "image": "design-shift.png"
-            , "silhouetteImage": "silhouette1"
-          }
-          , {
-            "desId": "shirt"
-            , "desName": "Potato Sack"
-            , "blurb": "They're hot this winter, you could be too!"
-            , "price": 0
-            , "image": "design-shirt.png"
-            , "silhouetteImage": "silhouette2"
-          }
-          , {
-            "desId": "wrap"
-            , "desName": "The Empress' New"
-            , "blurb": "They'll all be staring at you as you strut your stuff"
-            , "price": 0
-            , "image": "design-wrap.png"
-            , "silhouetteImage": "silhouette3"
+            , "silhouetteImage": "silouette8"
           }
         ]
       },
@@ -106,30 +74,30 @@
         "catId": "skirts"
         , "catName": "Skirts"
         , "designs" : [
-          {
-            "desId": "coco"
-            , "desName": "Classic Coco"
-            , "blurb": "It's lovely, you know it is... dah dha"
-            , "price": 0
-            , "image": "design-wrap.png"
-            , "silhouetteImage": "silhouette1"
-          }
-          , {
-            "desId": "potatosack"
-            , "desName": "Potato Sack"
-            , "blurb": "They're hot this winter, you could be too!"
-            , "price": 0
-            , "image": "design-wrap.png"
-            , "silhouetteImage": "silhouette2"
-          }
-          , {
-            "desId": "other"
-            , "desName": "Other"
-            , "blurb": "They'll all be staring at you as you strut your stuff"
-            , "price": 0
-            , "image": "design-wrap.png"
-            , "silhouetteImage": "silhouette2"
-          }
+        {
+          "desId": "shift plain"
+          , "desName": "shift"
+          , "blurb": "It's lovely, you know it is... dah dha"
+          , "price": 0
+          , "image": "design-shift.png"
+          , "silhouetteImage": "silouette9"
+        }
+        , {
+          "desId": "shift_doloman"
+          , "desName": "shift doloman"
+          , "blurb": "It's lovely, you know it is... dah dha"
+          , "price": 0
+          , "image": "design-shift.png"
+          , "silhouetteImage": "silouette10"
+        }
+        , {
+          "desId": "shirt"
+          , "desName": "Potato Sack"
+          , "blurb": "They're hot this winter, you could be too!"
+          , "price": 0
+          , "image": "design-shirt.png"
+          , "silhouetteImage": "silouette11"
+        }
         ]
       },
       {
@@ -142,7 +110,7 @@
             , "blurb": "It's lovely, you know it is... dah dha"
             , "price": 0
             , "image": "design-wrap.png"
-            , "silhouetteImage": "silhouette1"
+            , "silhouetteImage": "silouette1"
           }
           , {
             "desId": "empress"
@@ -150,7 +118,7 @@
             , "blurb": "They'll all be staring at you as you strut your stuff"
             , "price": 0
             , "image": "design-wrap.png"
-            , "silhouetteImage": "silhouette3"
+            , "silhouetteImage": "silouette3"
           }
           , {
             "desId": "other"
@@ -158,7 +126,7 @@
             , "blurb": "They'll all be staring at you as you strut your stuff"
             , "price": 0
             , "image": "design-wrap.png"
-            , "silhouetteImage": "silhouette2"
+            , "silhouetteImage": "silouette2"
           }
         ]
       }

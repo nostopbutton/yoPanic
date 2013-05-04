@@ -1,77 +1,87 @@
 {
   "default": {
-    "neckline": {
-      "type": "nek-001", "fabric": "003", "trim": {"type":"", "fabric":""}
-    }
-    , "skirt": {
-      "type": "skt-010", "fabric": "003"
-    }
-    , "sleeves": {
-      "type": "slv-001", "fabric": "003"
-    }
-    , "extas": {
-      "type": "ext-001", "fabric": "003"
-    }
+      "neckline": {"type": "nek", "id": "001", "fabric": "003", "trim": [{"type":"", "fabric":""}]}
+    , "skirt":    {"type": "skt", "id": "010", "fabric": "003", "trim": [{"type":"", "fabric":""}]}
+    , "sleeves":  {"type": "slv", "id": "001", "fabric": "003", "trim": [{"type":"", "fabric":""}]}
+    , "trim":     {"type": "trm", "id": "001", "fabric": "003", "trim": [{"type":"", "fabric":""}]}
+    , "belt":     {"type": "blt", "id": "000", "fabric": "003", "trim": [{"type":"", "fabric":""}]}
+    , "rosetta":  {"type": "ext", "id": "000", "fabric": "003", "trim": [{"type":"", "fabric":""}]}
   }
-  , "strapline": "use the buttons below to customise your dress"
-  , "description": [  "Cupcake ipsum dolor sit. Amet brownie brownie. Jelly beans tootsie roll gummi bears tootsie roll pudding."
-  , "Wypas muffin cupcake. Cheesecake ice cream halvah tiramisu. Sugar plum gummies caramels powder cheesecake."
-  , "Pastry soufflé pie donut croissant apple pie powder. Caramels sweet dessert. Liquorice chocolate cake chupa chups fruitcake cheesecake powder wypas pudding lollipop."
-  , "Ice cream carrot cake jujubes biscuit faworki. Bonbon icing wypas icing. Pastry jelly chocolate brownie gingerbread jelly beans candy canes. Wafer bear claw jelly pudding marzipan jelly-o gummi bears jelly-o."
-  , "Marshmallow lollipop bear claw macaroon pastry candy. Chocolate bar jelly beans jujubes fruitcake. Chocolate cake wafer icing cake."
-]
-  , "views": ["view-front", "view-left", "view-back", "view-right"]
+  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. "
+  , "Perfect with killer heels for a timeless show stopping look."
+  ]
   , "sizes": [10,12,14,16,18]
   , "options": [
-  {
-    "opt_name": "neckline",
-    "active": "true",
-    "opt_label": "Neckline",
-    "opt_values": [
-      {"type": "nek-001"},
-      {"type": "nek-002"},
-      {"type": "nek-003"},
-      {"type": "nek-006"}
-    ]
-  },
-  {
-    "opt_name": "sleeves",
-    "opt_label": "Sleeves",
-    "opt_values": [
-      {"type": "slv-000"},
-      {"type": "slv-001"},
-      {"type": "slv-002"},
-      {"type": "slv-006"},
-      {"type": "slv-007"},
-      {"type": "slv-009"},
-      {"type": "slv-012"}
-    ]
-  },
-  {
-    "opt_name": "skirt",
-    "opt_label": "Skirt",
-    "opt_values": [
-      {"type": "skt-012"},
-      {"type": "skt-011"},
-      {"type": "skt-010"},
-      {"type": "skt-032"},
-      {"type": "skt-031"},
-      {"type": "skt-030"}
-    ]
-  },
-  {
-    "opt_name": "extras",
-    "opt_label": "Extras",
-    "opt_values": [
-      {"type": "ext-008"},
-      {"type": "ext-009"},
-      {"type": "ext-007"},
-      {"type": "ext-011"},
-      {"type": "ext-002"},
-      {"type": "ext-003"},
-      {"type": "ext-004"},
-      {"type": "ext-005"}
-    ]
-  }
-]
+    {
+      "part_name": "neckline",
+      "type": "nek",
+      "active": "true",
+      "label": "Neckline",
+      "values": [
+        {"id": "001"},
+        {"id": "002"},
+        {"id": "003"},
+        {"id": "006"}
+      ]
+    },
+    {
+      "part_name": "sleeves",
+      "type": "slv",
+      "label": "Sleeves",
+      "values": [
+        {"id": "000"},
+        {"id": "001"},
+        {"id": "002"},
+        {"id": "006"},
+        {"id": "007"},
+        {"id": "009"},
+        {"id": "012"}
+      ]
+    },
+    {
+      "part_name": "skirt",
+      "type": "skt",
+      "label": "Skirt",
+      "values": [
+        {"id": "012"},
+        {"id": "011"},
+        {"id": "010"},
+        {"id": "032"},
+        {"id": "031"},
+        {"id": "030"}
+      ]
+    },
+    {
+      "part_name": "belt",
+      "type": "ext",
+      "label": "Belt",
+      "values": [
+        {"id": "008"},
+        {"id": "009"},
+        {"id": "002"},
+        {"id": "003"}
+      ]
+    },
+    {
+      "part_name": "ruffle",
+      "type": "ext",
+      "label": "Ruffle",
+      "values": [
+        {"id": "007"},
+        {"id": "004"},
+        {"id": "005"}
+      ]
+    },
+    {
+      "part_name": "rosetta",
+      "type": "ext",
+      "label": "Rosetta",
+      "values": [
+        {"id": "011"}
+      ]
+    }
+  ]
+  , "fabrics": ["003", "004", "005", "006", "007", "008", "009", "010"
+      , "011", "012", "013", "120", "121", "122", "123", "007"]
 }

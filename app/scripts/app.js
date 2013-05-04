@@ -39,6 +39,18 @@ angular.module('panicApp',
         templateUrl: 'views/designBuild.html', controller: 'DesignBuildCtrl'
       })
 
+      .when('/newdesign/:rangeId', {
+        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
+      })
+      .when('/newdesign/:rangeId/:itemId', {
+        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
+      })
+
+      // Purchase routes
+      .when('/purchase', {
+        templateUrl: 'views/purchase.html', controller: 'PurchaseCtrl'
+      })
+
       // Admin Page routes
       .when('/adminCollection', {
         templateUrl: 'views/adminCollection.html', controller: 'CollectionCtrl'

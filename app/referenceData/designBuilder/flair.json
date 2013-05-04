@@ -2,8 +2,14 @@
 
     "title": "POTATO SACK RANGE",
     "price": 2400,
-    "strapline": "this demonstrates we can easily configure different default values and different available options",
-    "sizes": [1,2,3,4,5],
+    "strapline": "this demonstrates we can easily configure different default values and different available options"
+, "description": [  "Cupcake ipsum dolor sit. Amet brownie brownie. Jelly beans tootsie roll gummi bears tootsie roll pudding."
+, "Wypas muffin cupcake. Cheesecake ice cream halvah tiramisu. Sugar plum gummies caramels powder cheesecake."
+, "Pastry soufflé pie donut croissant apple pie powder. Caramels sweet dessert. Liquorice chocolate cake chupa chups fruitcake cheesecake powder wypas pudding lollipop."
+, "Ice cream carrot cake jujubes biscuit faworki. Bonbon icing wypas icing. Pastry jelly chocolate brownie gingerbread jelly beans candy canes. Wafer bear claw jelly pudding marzipan jelly-o gummi bears jelly-o."
+, "Marshmallow lollipop bear claw macaroon pastry candy. Chocolate bar jelly beans jujubes fruitcake. Chocolate cake wafer icing cake."
+]
+    , "sizes": [1,2,3,4,5],
     "views": ["front", "left", "back", "right"],
 
     "default": {

@@ -12,15 +12,16 @@ referenceDataServices
   })
 
   .factory('DesignBuilder', function($resource){
-    return $resource('referenceData/designBuilder/:rangeId.json', {}, {
+    return $resource('referenceData/designBuilder/:fileId.json', {}, {
 //      query: {method:'GET', params:{rangeId:'ranges'}, isArray:true},
-      options: {method:'GET', params:{rangeId:'options'}, isArray:true}
+      options: {method:'GET', params:{fileId:'options'}, isArray:true},
+      fabricSets: {method:'GET', params:{fileId:'fabricSets'}, isArray:true}
     });
   })
   .service('ReferenceDataCache', function (Range, DesignBuilder) {
     var designCatalogue = null,
         labelCache = null,
-      optionCache = null,
+        optionCache = null,
         itemCollection = null;
 
 //    $scope.range = DesignBuilder.get({rangeId: $routeParams.rangeId},
@@ -106,6 +107,7 @@ referenceDataServices
       }
     };
   })
+
   .filter('fabricLookup', function(ReferenceDataCache) {
     return function(input) {
       var options = ReferenceDataCache.getOptions();

@@ -61,7 +61,7 @@ angular.module('panicApp.Controllers')
 //      $scope.category = ReferenceDataCache.getCategory(categoryId);
 //      $scope.design = ReferenceDataCache.getDesign(designId);
 
-      $scope.range = DesignBuilder.get({rangeId: $routeParams.rangeId},
+      $scope.range = DesignBuilder.get({fileId: $routeParams.rangeId},
         function (data) {   //success
           if(!itemId) {
             master = angular.copy(data.default);
@@ -77,13 +77,13 @@ angular.module('panicApp.Controllers')
         $scope.form = angular.copy(master);
       };
 
-      $scope.options = DesignBuilder.options(
-        function(data){
-          options = angular.copy(data);
-//          $scope.options = options;
-          $scope.updateFabrics();
-        }
-      );
+//      $scope.options = DesignBuilder.options(
+//        function(data){
+//          options = angular.copy(data);
+////          $scope.options = options;
+//          $scope.updateFabrics();
+//        }
+//      );
 
       $scope.updateFabrics = function() {
 

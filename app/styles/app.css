@@ -49,11 +49,17 @@ table tr a {
 
 
 .dress {
-    position:relative;
-    align: center;
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
+    /*position:absolute;*/
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-left: -100px;
+    margin-right: auto;
     /*left:5px;*/
-    height: 500px;
-    /*width: 200px;*/
+    height: 510px;
+    width: 100%;
 }
 .body {
     z-index:0;
@@ -86,23 +92,23 @@ table tr a {
     left:50px;
 }
 
-.sleeves {
+.slv {
     z-index:1;
 }
 
-.skirt {
+.skt {
     z-index:2;
 }
 
-.neckline {
+.nek {
     z-index:3;
 }
 
-.trim {
+.trm {
     z-index:4;
 }
 
-.extras {
+.ext {
     z-index:4;
 }
 
@@ -113,7 +119,10 @@ table tr a {
 }
 
 .pic {
+
     position:absolute;
+    /*float:left;*/
+
     /*left:100px;*/
     /*width:200px;*/
     /*height:350px;*/
@@ -141,8 +150,8 @@ table tr a {
 .selector.option {
     /*position:absolute;*/
     /*left:550px;*/
-    height: 30px;
-    width: 40px;
+    height: 40px;
+    width: 60px;
     margin:10px;
     /*background: #92cc64;*/
 }
@@ -184,6 +193,14 @@ table tr a {
     border-top-style:solid;
     border-color:#98bf21;
     border-width:5px;
+}
+
+.selector.option.fabric001{
+    background: #101010;
+}
+
+.selector.option.fabric002{
+    background: #7e7e7e;
 }
 
 .selector.option.fabric003{
@@ -231,8 +248,17 @@ table tr a {
 .selector.option.fabric123{
     background: #726053;
 }
-.selector.option.fabric123{
+.selector.option.fabric135{
+    background: #101010;
+}
+.selector.option.fabric136{
     background: #85796e;
+}
+.selector.option.fabric137{
+     background: #e4eef4;
+}
+.selector.option.fabric138{
+    background: #fbfbff;
 }
 
 .design_radio_option {
@@ -276,14 +302,25 @@ table tr a {
  }
 
 .builder.price {
-   text-align: right;
+   text-align: center;
+}
+
+.builder.button {
+    text-align: right;
 }
 
 .builder.options {
     background: #dbeaf6;
-    height: 95px;
-    width: 95px;
-    margin:10px;
+    height: 100px;
+    width: 100px;
+    margin:8px;
+}
+
+.builder.options.active {
+    /*background: #f683b0;*/
+    border-style: ridge;
+    border-color: #bf4b46;
+    border-width: 2px;
 }
 
 /*font-family: 'Arimo', sans-serif;*/
