@@ -7,7 +7,7 @@ describe('Controller: SilhouetteCtrl', function () {
 
   // Load the controllers module
   beforeEach(angular.mock.module('panicApp.Controllers'));
-  beforeEach(angular.mock.module('mock.referenceDataServices'));
+  beforeEach(angular.mock.module('panicApp.referenceDataServices'));
 
 
   beforeEach(angular.mock.inject(function($rootScope, Range, $window, $location, $routeParams, $controller) {
