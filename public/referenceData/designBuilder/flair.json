@@ -1,0 +1,72 @@
+{
+
+    "title": "POTATO SACK RANGE",
+    "price": 2400,
+    "strapline": "this demonstrates we can easily configure different default values and different available options"
+, "description": [  "Cupcake ipsum dolor sit. Amet brownie brownie. Jelly beans tootsie roll gummi bears tootsie roll pudding."
+, "Wypas muffin cupcake. Cheesecake ice cream halvah tiramisu. Sugar plum gummies caramels powder cheesecake."
+, "Pastry soufflé pie donut croissant apple pie powder. Caramels sweet dessert. Liquorice chocolate cake chupa chups fruitcake cheesecake powder wypas pudding lollipop."
+, "Ice cream carrot cake jujubes biscuit faworki. Bonbon icing wypas icing. Pastry jelly chocolate brownie gingerbread jelly beans candy canes. Wafer bear claw jelly pudding marzipan jelly-o gummi bears jelly-o."
+, "Marshmallow lollipop bear claw macaroon pastry candy. Chocolate bar jelly beans jujubes fruitcake. Chocolate cake wafer icing cake."
+]
+    , "sizes": [1,2,3,4,5],
+    "views": ["front", "left", "back", "right"],
+
+    "default": {
+        "view": "front",
+
+        "bodice": {
+            "type": "bodice-01",
+            "fabric": "c03"
+        },
+        "skirt": {
+            "type": "skirt-02",
+            "fabric": "c04"
+        },
+        "sleeves": {
+            "type": "sleeves-01",
+            "fabric": "c01"
+        },
+        "belt": {
+            "type": "belt-01",
+            "fabric": "c01"
+        }
+    },
+
+    "bodice": [
+        {"name": "bodice-01", "type": "bodice-01"},
+        {"name": "bodice-02", "type": "bodice-02"}
+    ],
+    "bodice_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "black",   "type": "c03"}
+    ],
+
+    "skirt": [
+        {"name": "skirt-02", "type": "skirt-02"},
+        {"name": "skirt-05", "type": "skirt-05"}
+    ],
+    "skirt_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "green",   "type": "c04"}
+    ],
+    "sleeves": [
+
+        {"name": "sleeves-02", "type": "sleeves-02"},
+        {"name": "sleeves-07", "type": "sleeves-07"}
+    ],
+    "sleeves_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "black",   "type": "c03"}
+    ],
+
+    "belt": [
+        {"name": "belt-00", "type": "belt-00"},
+        {"name": "belt-01", "type": "belt-01"}
+    ],
+    "belt_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "black",   "type": "c03"}
+    ]
+
+}
