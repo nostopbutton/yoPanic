@@ -11,7 +11,7 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist/public',
+    public: 'dist/public',
     express_dist: 'dist'
   };
 
@@ -39,6 +39,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/{,*/}*.html',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
+          '{.tmp,<%= yeoman.app %>}/referenceData/{,*/}*.json',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ],
         tasks: ['livereload']
@@ -84,11 +85,18 @@ module.exports = function (grunt) {
           src: [
             '.tmp',
             '<%= yeoman.express_dist %>/*',
+            '!<%= yeoman.express_dist %>/.git*'
+          ]
+        }]
+      },
+      quick_dist: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= yeoman.express_dist %>/*',
             '!<%= yeoman.express_dist %>/.git*',
-            '!<%= yeoman.express_dist %>/node_modules',
-            '!<%= yeoman.express_dist %>/public',
-            '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/images'
+            '!<%= yeoman.express_dist %>/node_modules'
           ]
         }]
       },
@@ -149,7 +157,7 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/scripts/scripts.js': [
+          '<%= yeoman.public %>/scripts/scripts.js': [
             '.tmp/scripts/{,*/}*.js',
             '<%= yeoman.app %>/scripts/{,*/}*.js'
           ]
@@ -159,14 +167,14 @@ module.exports = function (grunt) {
     useminPrepare: {
       html: '<%= yeoman.app %>/index.html',
       options: {
-        dest: '<%= yeoman.dist %>'
+        dest: '<%= yeoman.public %>'
       }
     },
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+      html: ['<%= yeoman.public %>/{,*/}*.html'],
+      css: ['<%= yeoman.public %>/styles/{,*/}*.css'],
       options: {
-        dirs: ['<%= yeoman.dist %>']
+        dirs: ['<%= yeoman.public %>']
       }
     },
     imagemin: {
@@ -175,14 +183,14 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.dist %>/images'
+          dest: '<%= yeoman.public %>/images'
         }]
       }
     },
     cssmin: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/styles/main.css': [
+          '<%= yeoman.public %>/styles/main.css': [
             '.tmp/styles/{,*/}*.css',
             '<%= yeoman.app %>/styles/{,*/}*.css'
           ]
@@ -206,30 +214,36 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>',
           src: ['*.html', 'views/*.html'],
-          dest: '<%= yeoman.dist %>'
+          dest: '<%= yeoman.public %>'
         }]
       }
     },
     cdnify: {
       dist: {
-        html: ['<%= yeoman.dist %>/*.html']
+        html: ['<%= yeoman.public %>/*.html']
       }
     },
     ngmin: {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>/scripts',
+          cwd: '<%= yeoman.public %>/scripts',
           src: '*.js',
-          dest: '<%= yeoman.dist %>/scripts'
+          dest: '<%= yeoman.public %>/scripts'
         }]
       }
     },
     uglify: {
+      options: {
+        report: 'gzip'
+        , mangle: false
+        , preserveComments: true
+        , beautify: true
+      },
       dist: {
         files: {
-          '<%= yeoman.dist %>/scripts/scripts.js': [
-            '<%= yeoman.dist %>/scripts/scripts.js'
+          '<%= yeoman.public %>/scripts/scripts.js': [
+            '<%= yeoman.public %>/scripts/scripts.js'
           ]
         }
       }
@@ -238,10 +252,10 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*'
+            '<%= yeoman.public %>/scripts/{,*/}*.js',
+            '<%= yeoman.public %>/styles/{,*/}*.css',
+            '<%= yeoman.public %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.public %>/styles/fonts/*'
           ]
         }
       }
@@ -252,7 +266,7 @@ module.exports = function (grunt) {
           expand: true,
           dot: true,
           cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.dist %>',
+          dest: '<%= yeoman.public %>',
           src: [
             '*.{ico,txt}',
             '.htaccess',
@@ -261,11 +275,41 @@ module.exports = function (grunt) {
             'images/{,*/}*.{gif,webp}',
             'styles/fonts/*'
             , '*.html', 'views/*.html'
-//            ,'views/*.html'
           ]
         },
         {
           expand: true,
+          dest: '<%= yeoman.express_dist %>',
+          cwd: 'heroku',
+          src: ['**/*', '.gitignore'],
+          rename: function (dest, src) {
+            var path = require('path');
+            if (src === 'distpackage.json') {
+              return path.join(dest, 'package.json');
+            }
+            return path.join(dest, src);
+          }
+        }]
+      },
+      quick_dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.public %>',
+          src: [
+            '*.{ico,txt}',
+            '.htaccess',
+            'components/**/*',
+            'referenceData/**/*',
+            'images/{,*/}*.*',
+            'styles/fonts/*'
+            , '*.html', 'views/*.html'
+          ]
+        },
+        {
+          expand: true,
+          dot: true,
           dest: '<%= yeoman.express_dist %>',
           cwd: 'heroku',
           src: ['**/*', '.gitignore'],
@@ -286,7 +330,7 @@ module.exports = function (grunt) {
   grunt.registerTask('install', 'install the backend dependencies', function() {
     var exec = require('child_process').exec;
     var cb = this.async();
-    exec('npm install', {cwd: '<%= yeoman.express_dist %>'}, function(err, stdout, stderr) {
+    exec('npm install', {cwd: 'public'}, function(err, stdout, stderr) {
       console.log(stdout);
       cb();
     });
@@ -323,6 +367,26 @@ module.exports = function (grunt) {
 //    'htmlmin',
     'concat',
     'copy',
+    'cdnify',
+    'ngmin',
+    'uglify',
+//    'rev',
+    'usemin'
+    , 'install'
+  ]);
+
+  grunt.registerTask('quick', [
+    'clean:quick_dist',
+//    'jshint',
+//    'test',
+    'coffee',
+    'compass:dist',
+    'useminPrepare',
+//    'imagemin',
+    'cssmin',
+//    'htmlmin',
+    'concat',
+    'copy:quick_dist',
     'cdnify',
     'ngmin',
     'uglify',
