@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServices", "panicApp.designBuildDirectives", "ui.bootstrap", "analytics" ]).config([ "$routeProvider", function($routeProvider) {
+angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServices", "panicApp.designBuildDirectives", "ui.bootstrap" ]).config([ "$routeProvider", "$locationProvider", function($routeProvider) {
     $routeProvider.when("/", {
         templateUrl: "views/home.html",
         controller: "StaticPageCtrl"
@@ -217,16 +217,22 @@ designBuildDirectives.directive("fabrics", function() {
     s.parentNode.insertBefore(ga, s);
 } ]);
 
-var trackPageInGoogleAnalytics = function() {}, track = function($window, $location, $routeParams) {
+var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams) {
+    console.log("trackPageInGoogleAnalytics"), $rootScope.$on("$viewContentLoaded", track($window, $location, $routeParams));
+}, track = function($window, $location, $routeParams) {
     var path = convertPathToQueryString($location.path(), $routeParams);
-    console.log("track: about to push: " + path), $window._gaq.push([ "_trackPageview", path ]);
+    console.log("track: about to push: " + path), $window._gaq.push([ "_trackPageview", path ]), 
+    console.log("track: pushed ");
 }, convertPathToQueryString = function(path, $routeParams) {
+    console.log("convertPathToQueryString"), console.log("path=" + path);
     for (var key in $routeParams) {
         var queryParam = "/" + $routeParams[key];
-        path = path.replace(queryParam, "");
+        console.log("queryParam=" + queryParam), path = path.replace(queryParam, ""), console.log("path ADDED=" + path);
     }
+    console.log("path NOW=" + path);
+    for (key in $routeParams) console.log("key=" + key);
     var querystring = decodeURIComponent($.param($routeParams));
-    return "" === querystring ? path : path + "?" + querystring;
+    return console.log("querystring=" + querystring), "" === querystring ? path : path + "?" + querystring;
 };
 
 angular.module("panicApp.Controllers").controller("HomeCarouselCtrl", [ "$scope", function($scope) {
