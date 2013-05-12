@@ -67,7 +67,8 @@ app.configure('production', function(){
 // Routes
 //========
 app.get('/', routes.index);
-app.get('/partials/:name', routes.partials);
+//app.get('/:partial', routes.partial);
+//app.get('/:partial/:id', routes.id);
 
 // JSON API
 //app.get('/api/name', api.name);

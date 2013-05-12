@@ -1,12 +1,20 @@
 'use strict';
 
+
+//angular.module('panicApp', [])
+//  .config(function($locationProvider){
+//    $locationProvider.html5Mode(true).hashPrefix('!');
+//  }
+//);
 angular.module('panicApp',
     ['panicApp.Controllers'
       , 'panicApp.referenceDataServices'
       , 'panicApp.designBuildDirectives'
       , 'ui.bootstrap'
-      , 'analytics'])  //'ui'
-  .config(function ($routeProvider) {
+      ])//, 'analytics', 'ui'
+  .config(function ($routeProvider, $locationProvider) {
+//    $locationProvider.html5Mode(true);
+//    $locationProvider.hashPrefix = '!';
     $routeProvider
       // Static Page routes
       .when('/', {

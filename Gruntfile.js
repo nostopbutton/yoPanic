@@ -188,6 +188,9 @@ module.exports = function (grunt) {
       }
     },
     cssmin: {
+      options: {
+        report: 'gzip'
+      },
       dist: {
         files: {
           '<%= yeoman.public %>/styles/main.css': [
@@ -246,6 +249,14 @@ module.exports = function (grunt) {
             '<%= yeoman.public %>/scripts/scripts.js'
           ]
         }
+      }
+    },
+    'install-dependencies': {
+      options: {
+        cwd: '<%= yeoman.express_dist %>'
+        , stdout: true
+        , stderr: true
+        , failOnError: true
       }
     },
     rev: {
@@ -327,14 +338,36 @@ module.exports = function (grunt) {
 
   grunt.renameTask('regarde', 'watch');
 
-  grunt.registerTask('install', 'install the backend dependencies', function() {
-    var exec = require('child_process').exec;
-    var cb = this.async();
-    exec('npm install', {cwd: 'public'}, function(err, stdout, stderr) {
-      console.log(stdout);
-      cb();
-    });
-  });
+//  var exec = require('child_process').exec;
+//
+//  grunt.registerTask('install-dependencies', 'Installs npm dependencies.', function () {
+//    var cb, options, cp;
+//
+//    cb = this.async();
+//    options = this.options({
+//      cwd: '',
+//      stdout: true,
+//      stderr: true,
+//      failOnError: true
+//    });
+//    cp = exec('npm install', {cwd: options.cwd}, function (err, stdout, stderr) {
+//      if (err && options.failOnError) {
+//        grunt.warn(err);
+//      }
+//      cb();
+//    });
+//
+//    grunt.verbose.writeflags(options, 'Options');
+//
+//    if (options.stdout || grunt.option('verbose')) {
+//      console.log("Running npm install in: " + options.cwd)
+//      cp.stdout.pipe(process.stdout);
+//    }
+//
+//    if (options.stderr || grunt.option('verbose')) {
+//      cp.stderr.pipe(process.stderr);
+//    }
+//  });
 
 
   grunt.registerTask('server', [
@@ -362,7 +395,7 @@ module.exports = function (grunt) {
     'coffee',
     'compass:dist',
     'useminPrepare',
-//    'imagemin',
+    'imagemin',
     'cssmin',
 //    'htmlmin',
     'concat',
@@ -372,7 +405,7 @@ module.exports = function (grunt) {
     'uglify',
 //    'rev',
     'usemin'
-    , 'install'
+    , 'install-dependencies'
   ]);
 
   grunt.registerTask('quick', [
@@ -392,8 +425,10 @@ module.exports = function (grunt) {
     'uglify',
 //    'rev',
     'usemin'
-    , 'install'
+//    , 'npm_install'
+    , 'install-dependencies'
   ]);
 
   grunt.registerTask('default', ['build']);
+  grunt.registerTask('inst', ['install-dependencies']);
 };

@@ -16,24 +16,39 @@ angular.module('panicApp.Controllers', [])
 
 var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams){
   // Fire Google Analytics on Angular page load
-//  $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+  console.log("trackPageInGoogleAnalytics");
+  $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
 }
 
 var track = function($window, $location, $routeParams) {
   var path = convertPathToQueryString($location.path(), $routeParams)
   console.log("track: about to push: " + path);
   $window._gaq.push(['_trackPageview', path]);
+  console.log("track: pushed ");
 };
 
 var convertPathToQueryString = function(path, $routeParams) {
+  console.log("convertPathToQueryString");
+  console.log("path="+path);
   for (var key in $routeParams) {
     var queryParam = '/' + $routeParams[key];
+    console.log("queryParam="+queryParam);
     path = path.replace(queryParam, '');
+    console.log("path ADDED="+path);
   }
 
+  console.log("path NOW="+path);
+
+  for (key in $routeParams)
+  {
+    console.log("key="+key);
+  }
   var querystring = decodeURIComponent($.param($routeParams));
+
+  console.log("querystring="+querystring);
 
   if (querystring === '') return path;
 
   return path + "?" + querystring;
+
 };

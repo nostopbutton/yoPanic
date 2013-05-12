@@ -27,6 +27,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-karma": "~0.4.4",
     "grunt-open": "~0.2.0",
+    "grunt-install-dependencies": "git://github.com/nostopbutton/grunt-install-dependencies",
     "matchdep": "~0.1.2",
     "grunt-google-cdn": "~0.1.4",
     "grunt-ngmin": "~0.0.2"
