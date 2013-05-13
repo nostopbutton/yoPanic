@@ -314,6 +314,7 @@ table tr a {
     height: 100px;
     width: 100px;
     margin:8px;
+    padding: 4px;
 }
 
 .builder.options.active {
