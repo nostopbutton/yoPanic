@@ -4,6 +4,9 @@ angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServ
     $routeProvider.when("/", {
         templateUrl: "views/home.html",
         controller: "StaticPageCtrl"
+    }).when("/fit", {
+        templateUrl: "views/fit.html",
+        controller: "StaticPageCtrl"
     }).when("/fabrics", {
         templateUrl: "views/fabrics.html",
         controller: "StaticPageCtrl"
@@ -35,8 +38,8 @@ angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServ
         templateUrl: "views/newDesignBuild.html",
         controller: "NewDesignBuildCtrl"
     }).when("/purchase", {
-        templateUrl: "views/purchase.html",
-        controller: "PurchaseCtrl"
+        templateUrl: "views/sizing.html",
+        controller: "StaticPageCtrl"
     }).when("/adminCollection", {
         templateUrl: "views/adminCollection.html",
         controller: "CollectionCtrl"
@@ -251,6 +254,8 @@ angular.module("panicApp.Controllers").controller("HomeCarouselCtrl", [ "$scope"
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
 } ]), angular.module("panicApp.Controllers").controller("DressCollectionCtrl", [ "$scope", "Range", "$rootScope", "$window", "$location", "$routeParams", function($scope, Range, $rootScope, $window, $location, $routeParams) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams), $scope.dresses = Range.itemCollection();
+} ]), angular.module("panicApp.Controllers").controller("PurchaseCtrl", [ "$scope", "Range", "$rootScope", "$window", "$location", "$routeParams", function($scope, Range, $rootScope, $window, $location, $routeParams) {
+    trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
 } ]), angular.module("panicApp.Controllers").controller("SilhouetteCtrl", [ "$scope", "Range", "$rootScope", "$window", "$location", "$routeParams", function($scope, Range, $rootScope, $window, $location, $routeParams) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams), $scope.silhouettes = Range.designCatalogue();
 } ]), angular.module("panicApp.Controllers").controller("RangeDetailsCtrl", [ "$scope", "$routeParams", "Range", "$rootScope", "$window", "$location", function($scope, $routeParams, Range, $rootScope, $window, $location) {
