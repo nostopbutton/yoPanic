@@ -331,3 +331,86 @@ table tr a {
 /*font-family: 'Nothing You Could Do', cursive;*/
 /*font-family: 'Arizonia', cursive;*/
 /*font-family: 'Dancing Script', cursive;*/
+
+
+
+
+ol.carousel-indicators {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-align: center;
+}
+
+ol.carousel-indicators  li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    /*background: #ddd;*/
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+    float: left;
+
+}
+
+/*ol.carousel-indicators li:hover{*/
+    /*background: #eee;*/
+/*}*/
+
+/*ol.carousel-indicators li:hover:before{*/
+    /*transform: rotate(360deg);*/
+/*}*/
+
+ol.carousel-indicators li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #dce6ec;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+ol.carousel-indicators li.active:before{
+    background: #87ceeb;
+}
+
+.centeredImage
+{
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+.teamText {
+    vertical-align:middle;
+}
+
+.teamText.right {
+    text-align:right;
+}
+
+.teamText.left {
+    text-align:left;
+}
+
+.optionHelp {
+    display:none;
+}

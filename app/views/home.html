@@ -1,64 +1,30 @@
 <div id="homePageView" class="container">
-    <div class="hero-unit">
-        <h1>Don't Panic!</h1>
-        <p>Wypas muffin cupcake. Cheesecake ice cream halvah tiramisu. Sugar plum gummies caramels powder cheesecake.</p>
-        <p>Marshmallow lollipop bear claw macaroon pastry candy. Chocolate jelly beans jujubes fruitcake. Chocolate cake wafer icing cake.</p>
-        <!--<img src="images/kitten1.jpeg" class="img-rounded">-->
-        <img src="images/kitten2.jpeg" class="img-circle">
-        <!--<img src="images/kitten3.jpeg" class="img-polaroid">-->
+    <div class="container-fluid">
+        <div class="row-fluid">
 
-
-        <p>
-            <a class="btn btn-primary btn-large">
-                Learn more
-            </a>
-        </p>
+            <!--<div class="hero-unit">-->
+                <div class="row-fluid">
+                    <h1>Experience custom - feel AMAZING!</h1>
+                </div>
+            <!--</div>-->
+        </div>
+        <div class="row-fluid">
+            <div ng-controller="HomeCarouselCtrl">
+                <carousel interval="myInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>{{slide.text}}</h4>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <p>
+                Your unique dress will arrive in 3 weeks and if it is not exactly how you dreamt it would be we will arrange tailoring, remake it free of charge or offer a full refund if returned unworn within 30 days of purchase*
+            </p>
+        </div>
     </div>
-
-    <!--<div ng-controller="HomeCarouselCtrl">-->
-        <!--<carousel interval="myInterval">-->
-            <!--<slide ng-repeat="slide in slides" active="slide.active">-->
-                <!--<img ng-src="{{slide.image}}" style="margin:auto;">-->
-                <!--<div class="carousel-caption">-->
-                    <!--<h4>Slide {{$index}}</h4>-->
-                    <!--<p>{{slide.text}}</p>-->
-                <!--</div>-->
-            <!--</slide>-->
-        <!--</carousel>-->
-    <!--</div>-->
-
-    <!--<div id="myCarousel" class="carousel slide">-->
-        <!--<ol class="carousel-indicators">-->
-            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
-            <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
-            <!--<li data-target="#smyCarousel" data-slide-to="2"></li>-->
-        <!--</ol>-->
-        <!--<div class="carousel-inner">-->
-            <!--<div class="item active">-->
-                <!--<img src="images/hero.jpg" alt="" height="250">-->
-                <!--<div class="carousel-caption">-->
-                    <!--<h4>First Thumbnail label</h4>-->
-                    <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="item">-->
-                <!--<img src="images/hero2.jpg" alt=""height="250">-->
-                <!--<div class="carousel-caption">-->
-                    <!--<h4>Second Thumbnail label</h4>-->
-                    <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="item">-->
-                <!--<img src="images/hero3.jpg" alt=""height="250">-->
-                <!--<div class="carousel-caption">-->
-                    <!--<h4>Third Thumbnail label</h4>-->
-                    <!--<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>-->
-        <!--<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
-    <!--</div>-->
-
 </div> <!-- /container -->
 

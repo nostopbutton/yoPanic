@@ -235,16 +235,17 @@ var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $route
     return console.log("querystring=" + querystring), "" === querystring ? path : path + "?" + querystring;
 };
 
-angular.module("panicApp.Controllers").controller("HomeCarouselCtrl", [ "$scope", function($scope) {
-    $scope.myInterval = 5e3, $scope.slides = [ {
-        image: "images/kitten1.jpeg",
-        text: "Kitten."
+angular.module("panicApp.Controllers").controller("HomeCarouselCtrl", [ "$scope", "$rootScope", "$window", "$location", "$routeParams", function($scope, $rootScope, $window, $location, $routeParams) {
+    trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams), $scope.myInterval = 5e3, 
+    $scope.slides = [ {
+        image: "images/home/Choose.png",
+        text: "Choose..."
     }, {
-        image: "images/kitten2.jpeg",
-        text: "Kitty!"
+        image: "images/home/Customize.png",
+        text: "Customize..."
     }, {
-        image: "images/kitten3.jpeg",
-        text: "Cat."
+        image: "images/home/Cherish.png",
+        text: "Cherish!"
     } ];
 } ]), angular.module("panicApp.Controllers").controller("StaticPageCtrl", [ "$rootScope", "$window", "$location", "$routeParams", function($rootScope, $window, $location, $routeParams) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);

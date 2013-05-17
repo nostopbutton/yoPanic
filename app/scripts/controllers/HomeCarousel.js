@@ -1,11 +1,16 @@
 'use strict';
 
 angular.module('panicApp.Controllers')
-  .controller('HomeCarouselCtrl', ['$scope', function ($scope) {
+.controller('HomeCarouselCtrl', ['$scope','$rootScope', '$window', '$location', '$routeParams',
+  function ($scope, $rootScope, $window, $location, $routeParams) {
+
+    trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
+
     $scope.myInterval = 5000;
     $scope.slides = [
-      {image: 'images/kitten1.jpeg',text: 'Kitten.'},
-      {image: 'images/kitten2.jpeg',text: 'Kitty!'},
-      {image: 'images/kitten3.jpeg',text: 'Cat.'},
+      {image: 'images/home/Choose.png',text: 'Choose...'},
+      {image: 'images/home/Customize.png',text: 'Customize...'},
+      {image: 'images/home/Cherish.png',text: 'Cherish!'}
+//      {image: 'images/kitten2.jpeg', class:"img-circle", text: 'Cherish!'}
     ];
   }]);

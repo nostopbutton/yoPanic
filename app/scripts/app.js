@@ -18,7 +18,11 @@ angular.module('panicApp',
     $routeProvider
       // Static Page routes
       .when('/', {
+//        templateUrl: 'views/home.html', controller: 'StaticPageCtrl'
         templateUrl: 'views/home.html', controller: 'StaticPageCtrl'
+      })
+      .when('/fit', {
+        templateUrl: 'views/fit.html', controller: 'StaticPageCtrl'
       })
       .when('/fabrics', {
         templateUrl: 'views/fabrics.html', controller: 'StaticPageCtrl'
@@ -56,7 +60,7 @@ angular.module('panicApp',
 
       // Purchase routes
       .when('/purchase', {
-        templateUrl: 'views/purchase.html', controller: 'PurchaseCtrl'
+        templateUrl: 'views/sizing.html', controller: 'StaticPageCtrl'
       })
 
       // Admin Page routes
