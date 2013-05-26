@@ -2,20 +2,27 @@
   { "setId": "s-c"
     , "setName": "Viscose Crepe"
     , "type": "Standard"
+    , "description": "blurb about Viscose Crepe"
     , "fabrics":
       [
         { "fabId": "003", "fabName" : "red"}
         , { "fabId": "004", "fabName" : "violet"}
         , { "fabId": "005", "fabName" : "dirty blue"}
-        , { "fabId": "006", "fabName" : "jade"}
         , { "fabId": "007", "fabName" : "taupe"}
         , { "fabId": "008", "fabName" : "cream"}
-        , { "fabId": "009", "fabName" : "aqua"}
         , { "fabId": "010", "fabName" : "mint"}
         , { "fabId": "011", "fabName" : "black"}
         , { "fabId": "012", "fabName" : "grey"}
-        , { "fabId": "013", "fabName" : "midnight blue"}
       ]
+  }
+  ,{ "setId": "trm"
+    , "setName": "Viscose Crepe"
+    , "type": "Standard"
+    , "description": "blurb about Viscose Crepe"
+    , "fabrics":
+    [
+        { "fabId": "011", "fabName" : "black"}
+    ]
   }
   , { "setId": "p-c"
     , "setName": "Wool Crepe"
@@ -34,7 +41,7 @@
         { "fabId": "120", "fabName" : "black"}
         , { "fabId": "121", "fabName" : "cream"}
         , { "fabId": "122", "fabName" : "grey"}
-        , { "fabId": "123", "fabName" : "brown"}
+
       ]
   }
   , { "setId": "x-s"

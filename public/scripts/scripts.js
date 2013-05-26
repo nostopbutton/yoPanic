@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServices", "panicApp.designBuildDirectives", "ui.bootstrap" ]).config([ "$routeProvider", "$locationProvider", function($routeProvider) {
+angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServices", "panicApp.designBuildDirectives", "panicApp.designBuildFilters", "ui.bootstrap" ]).config([ "$routeProvider", "$locationProvider", function($routeProvider) {
     $routeProvider.when("/", {
         templateUrl: "views/home.html",
         controller: "StaticPageCtrl"
@@ -187,30 +187,67 @@ referenceDataServices.factory("Range", [ "$resource", function($resource) {
     };
 } ]);
 
-var designBuildDirectives = angular.module("panicApp.designBuildDirectives", []);
+var designBuild = angular.module("panicApp.designBuildDirectives", []);
 
-designBuildDirectives.directive("fabrics", function() {
-    return {
-        scope: {
-            selection: "=",
-            selectedOption: "="
-        },
-        template: '<button ng-repeat="fabric in selection" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'fabric\']" btn-radio="fabric"></button>'
-    };
-}), designBuildDirectives.directive("drawDress", function() {
+designBuild.directive("drawDress", function() {
     return {
         scope: {
             dress: "="
         },
         template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
     };
-}), designBuildDirectives.directive("drawFabrics", function() {
+}), designBuild.directive("drawTrim", function() {
+    return {
+        scope: {
+            dress: "="
+        },
+        template: '<img ng-repeat="selection in dress" ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>'
+    };
+}), designBuild.directive("drawExtras", function() {
+    return {
+        scope: {
+            extras: "="
+        },
+        template: '<img ng-repeat="selection in extras" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
+    };
+}), designBuild.directive("fabricSelector", function() {
+    return {
+        restrict: "E",
+        templateUrl: "template/designBuild/fabric.html",
+        scope: {
+            fabricSet: "=",
+            selectedOption: "=",
+            isTrim: "="
+        }
+    };
+}), designBuild.directive("drawFabrics", function() {
     return {
         scope: {
             selection: "=",
             selectedOption: "="
         },
-        template: "<button ng-repeat=\"fabric in selection\" type=\"button\" class=\"btn selector option fabric{{fabric.fabId}}\" ng-model=\"selectedOption['fabric']\" btn-radio=\"fabric.fabId\" onClick=\"_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{selectedOption.type}}-{{selectedOption.id}}', '{{fabric.fabId}}' ]);\"></button>"
+        template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
+    };
+}), designBuild.directive("drawTrimFabrics", function() {
+    return {
+        scope: {
+            selection: "=",
+            selectedOption: "="
+        },
+        template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
+    };
+});
+
+var designBuild = angular.module("panicApp.designBuildFilters", []);
+
+designBuild.filter("filterSets", function() {
+    return function(sets, filter) {
+        var filteredResult = [];
+        for (var filterFabric in filter) for (var fabricSet in sets) if (filter[filterFabric].setId == sets[fabricSet].setId) {
+            filteredResult.push(sets[fabricSet]);
+            break;
+        }
+        return filteredResult;
     };
 }), angular.module("panicApp.Controllers", []).run([ "$http", function() {
     console.log("run analytics"), _gaq.push([ "_setAccount", "UA-38964974-1" ]), _gaq.push([ "_setDomainName", "none" ]);
@@ -314,7 +351,8 @@ var loadDesign = function($scope) {
 angular.module("panicApp.Controllers").controller("NewDesignBuildCtrl", [ "$scope", "$routeParams", "Range", "ReferenceDataCache", "DesignBuilder", "$rootScope", "$window", "$location", function($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, $rootScope, $window, $location) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
     var master = "", categoryId = "dresses", designId = $routeParams.rangeId, itemId = $routeParams.itemId, allFabricSets = {}, range = {};
-    $scope.designId = designId, $scope.categoryId = categoryId, itemId && Range.itemCollection(function(itemData) {
+    $scope.isDebugCollapsed = !0, $scope.designId = designId, $scope.categoryId = categoryId, 
+    itemId && Range.itemCollection(function(itemData) {
         console.log("Looking up item: " + itemId), console.log("itemData.length: " + itemData.length);
         for (var i = 0; itemData.length > i; i++) if (console.log("-Checking item: " + itemData[i].itemId), 
         itemData[i].itemId === itemId) {

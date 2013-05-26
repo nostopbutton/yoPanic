@@ -10,9 +10,8 @@
     , "sizes": [10,12,14,16,18]
     , "design": {
         "neckline":   { "type": "nek", "id": "003", "fabric": "003" }
-        , "skirt":    { "type": "skt", "id": "011", "fabric": "003" }
+        , "skirt":    { "type": "skt", "id": "011", "fabric": "004" }
         , "sleeves":  { "type": "slv", "id": "001", "fabric": "003" }
-        , "trim":     { "type": "trm", "id": "009", "fabric": "003" }
         , "extras":   { "type": "ext", "id": "000", "fabric": "001" }
       }
     }
