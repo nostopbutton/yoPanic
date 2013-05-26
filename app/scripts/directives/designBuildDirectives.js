@@ -1,20 +1,8 @@
 'use strict';
 
-var designBuildDirectives = angular.module('panicApp.designBuildDirectives', []);
+var designBuild = angular.module('panicApp.designBuildDirectives', []);
 
-designBuildDirectives.directive('fabrics', function (){
-  return  {
-    scope: {
-      selection:"=",
-      selectedOption: "="
-    },
-
-    template: '<button ng-repeat="fabric in selection" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'fabric\']" btn-radio="fabric"></button>'
-
-  }
-})
-
-designBuildDirectives.directive('drawDress', function (){
+designBuild.directive('drawDress', function (){
   return  {
     scope: {
       dress:"="
@@ -24,59 +12,61 @@ designBuildDirectives.directive('drawDress', function (){
   }
 })
 
-designBuildDirectives.directive('drawFabrics', function (){
+designBuild.directive('drawTrim', function (){
   return  {
     scope: {
-      selection:"=",
-      selectedOption: "="
+      dress:"="
     },
+//    template: '<div ng-repeat="selection in dress" class="pic {{selection.type}} db-parts-sprite {{selection.type}}-{{selection.id}}-{{selection.fabric}}"></div>'
+    template: '<img ng-repeat="selection in dress" ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>'
+  }
+})
 
-    template: '<button ng-repeat="fabric in selection" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
-
+designBuild.directive('drawExtras', function (){
+  return  {
+    scope: {
+      extras:"="
+    },
+    template: '<img ng-repeat="selection in extras" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
   }
 })
 
 
+designBuild.directive('fabricSelector', function (){
+  return  {
+    restrict:'E',
+    templateUrl: 'template/designBuild/fabric.html',
+    scope: {
+      fabricSet:"="
+      , selectedOption: "="
+      , isTrim: "="
+    }
+  }
+})
 
-//designBuildDirectives.directive('fabricPanel', function (){
-//  return  {
-//    scope: {
-//      selectedOption:"="
-//    },
-//
-//    template: '<button ng-repeat="opt_fabric in selectedOption.type | fabricLookup" type="button" class="btn selector option fabric{{opt_fabric}}" ng-model="selectedOption[\'fabric\']" btn-radio="opt_fabric"></button>'
-//
-//  }
-//})
+designBuild.directive('drawFabrics', function (){
+  return  {
+    scope: {
+//      restrict:'E',
+      selection:"="
+      ,selectedOption: "="
+    },
 
-//designBuildDirectives.directive('trimPanel', function (){
-//  return  {
-//    scope: {
-//      selection:"="
-//    },
-//
-//    template: '<button ng-repeat="trim in selection.type | trimLookup" type="button" class="btn selector option trim{{trim.trimId}}" ng-model="selection[\'trim\'][\'type\']" btn-radio="trim.trimId"></button>'
-//
-//  }
-//})
-//
-//designBuildDirectives.directive('fabricTrimPanel', function (){
-//  return  {
-//    scope: {
-//      selection:"="
-//    },
-//
-//    template: '<button ng-repeat="trim_fabric in selection.trim.type | trimFabricLookup" type="button" class="btn selector option fabric{{trim_fabric}}" ng-model="selection[\'trim\'][\'fabric\']" btn-radio="trim_fabric"></button>'
-//
-//  }
-//})
+    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
+  }
+})
 
-//designBuildDirectives.directive('test', function (){
-//  return  {
-//    template: "<div>Hello {{myName}}</div>",
-//    link: function (scope, element, attrs) {
-//      scope.myName = attrs.name
-//    }
-//  }
-//})
+
+designBuild.directive('drawTrimFabrics', function (){
+  return  {
+    scope: {
+//      restrict:'E',
+      selection:"="
+      ,selectedOption: "="
+    },
+
+    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
+  }
+})
+
 

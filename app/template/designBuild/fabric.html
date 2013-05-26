@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row-fluid fabric-group">
+        <span class="span11 ">
+            <div ng-switch on="isTrim" >
+                <div draw-trim-fabrics ng-switch-when="true" selection="fabricSet" selected-option="selectedOption"></div>
+                <div draw-fabrics ng-switch-default selection="fabricSet" selected-option="selectedOption"></div>
+            </div>
+
+        </span>
+        <span class="span1">
+            <i class="icon-info-sign" tooltip-placement="right" tooltip="{{fabricSet.setName}}"></i>
+        </span>
+    </div>
+</div>

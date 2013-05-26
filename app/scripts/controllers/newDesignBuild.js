@@ -17,6 +17,7 @@ angular.module('panicApp.Controllers')
         range = {},
         options = {};
 
+      $scope.isDebugCollapsed = true;
       $scope.designId = designId;
       $scope.categoryId = categoryId;
 
@@ -93,6 +94,28 @@ angular.module('panicApp.Controllers')
               }
             }
           }
+
+//          $scope.dressFabricSets =[];
+//          for(var set in range.fabricSets){
+//            for(var fabricSet in allFabricSets) {
+//              if(range.fabricSets[set].set == allFabricSets[fabricSet].setId){
+//                $scope.dressFabricSets[set] = allFabricSets[fabricSet];
+//                break;
+//              }
+//            }
+//          }
+//
+//          $scope.trimFabricSets =[];
+//          for(var set in range.trimFabricSets){
+//            for(var fabricSet in allFabricSets) {
+//              if(range.trimFabricSets[set].set == allFabricSets[fabricSet].setId){
+//                $scope.trimFabricSets[set] = allFabricSets[fabricSet];
+//                break;
+//              }
+//            }
+//          }
+
+
         }, function (data) {             //failure
           alert("ooops - loading fabrics");
         });
@@ -158,10 +181,3 @@ var getDesignById = function(designs, id) {
 
   return design;
 }
-
-//angular.module('panicApp.Controllers')
-//  .factory('DesignBuildData', function() {
-//
-//  })
-
-

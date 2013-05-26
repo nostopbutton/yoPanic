@@ -109,9 +109,12 @@ table tr a {
 }
 
 .ext {
-    z-index:4;
-}
+     z-index:4;
+ }
 
+.blt {
+    z-index:5;
+}
 .collection.image{
     width: 270px;
     height: 550px;
@@ -150,9 +153,9 @@ table tr a {
 .selector.option {
     /*position:absolute;*/
     /*left:550px;*/
-    height: 40px;
-    width: 60px;
-    margin:10px;
+    height: 30px;
+    width: 40px;
+    margin:5px;
     /*background: #92cc64;*/
 }
 
@@ -193,6 +196,15 @@ table tr a {
     border-top-style:solid;
     border-color:#98bf21;
     border-width:5px;
+}
+
+.fabric-group {
+    /*background: #dce7ff;*/
+    border-style:solid;
+    border-color:#98bf21;
+    border-width:1px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 .selector.option.fabric001{
@@ -309,7 +321,7 @@ table tr a {
     text-align: right;
 }
 
-.builder.options {
+.builder.option {
     background: #dbeaf6;
     height: 100px;
     width: 100px;
@@ -317,11 +329,14 @@ table tr a {
     padding: 4px;
 }
 
-.builder.options.active {
+.option.active {
     /*background: #f683b0;*/
     border-style: ridge;
     border-color: #bf4b46;
-    border-width: 2px;
+    border-width: 5px;
+    border-style: ridge;
+    /*padding: -10px;*/
+
 }
 
 /*font-family: 'Arimo', sans-serif;*/
@@ -413,4 +428,43 @@ ol.carousel-indicators li.active:before{
 
 .optionHelp {
     display:none;
+}
+
+/*.new_logo_box {*/
+    /*background: #474747;*/
+    /*background: rgba(215,68,78,.5);*/
+/*}*/
+
+/*.new_logo {*/
+    /*font-family: 'Leckerli One', cursive;*/
+    /*font-size: 50px;*/
+    /*padding-top:10px;*/
+    /*padding-left:10px;*/
+    /*padding-bottom:10px;*/
+    /*color: #222;*/
+    /*color: #9c1414;*/
+    /*font-weight:bold;*/
+    /*text-shadow: 0px 2px 3px #666;*/
+    /*text-shadow: 4px 4px 0px rgba(255,255,255,.8), 10px 10px 0px rgba(187,187,187,0.5);*/
+    /*display: inline-block;*/
+    /*-webkit-transition: all 0.2s ease-out*/
+/*}*/
+
+/*.new_logo2 {*/
+    /*font-family: 'Days One', sans-serif;*/
+    /*font-size: 60px;*/
+    /*padding-top:10px;*/
+    /*padding-left:10px;*/
+    /*padding-bottom:10px;*/
+    /*color: #222;*/
+    /*color: #fff;*/
+    /*font-weight:bold;*/
+    /*text-shadow: 0px 2px 3px #666;*/
+    /*text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);*/
+    /*display: inline-block;*/
+    /*-webkit-transition: all 0.2s ease-out*/
+/*}*/
+
+.debug {
+    text-align:right;
 }

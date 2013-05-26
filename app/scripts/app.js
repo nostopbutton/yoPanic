@@ -10,6 +10,7 @@ angular.module('panicApp',
     ['panicApp.Controllers'
       , 'panicApp.referenceDataServices'
       , 'panicApp.designBuildDirectives'
+      , 'panicApp.designBuildFilters'
       , 'ui.bootstrap'
       ])//, 'analytics', 'ui'
   .config(function ($routeProvider, $locationProvider) {
