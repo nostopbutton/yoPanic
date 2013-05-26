@@ -1,8 +1,8 @@
 'use strict';
 
-var designBuild = angular.module('panicApp.designBuildFilters', []);
+var designBuildFilter = angular.module('panicApp.designBuildFilters', []);
 
-designBuild.filter('filterSets', function () {
+designBuildFilter.filter('filterSets', function () {
 
   return function(sets, filter) {
 

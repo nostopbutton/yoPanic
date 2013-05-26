@@ -46,10 +46,10 @@ angular.module('panicApp',
         templateUrl: 'views/silhouettes.html', controller: 'SilhouetteCtrl'
       })
       .when('/design/:rangeId', {
-        templateUrl: 'views/designBuild.html', controller: 'DesignBuildCtrl'
+        templateUrl: 'views/designBuildDirective.html', controller: 'DesignBuildCtrl'
       })
       .when('/design/:rangeId/:itemId', {
-        templateUrl: 'views/designBuild.html', controller: 'DesignBuildCtrl'
+        templateUrl: 'views/designBuildDirective.html', controller: 'DesignBuildCtrl'
       })
 
       .when('/newdesign/:rangeId', {

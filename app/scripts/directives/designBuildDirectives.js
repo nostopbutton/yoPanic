@@ -1,8 +1,8 @@
 'use strict';
 
-var designBuild = angular.module('panicApp.designBuildDirectives', []);
+var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
 
-designBuild.directive('drawDress', function (){
+designBuildDirective.directive('drawDress', function (){
   return  {
     scope: {
       dress:"="
@@ -12,7 +12,7 @@ designBuild.directive('drawDress', function (){
   }
 })
 
-designBuild.directive('drawTrim', function (){
+designBuildDirective.directive('drawTrim', function (){
   return  {
     scope: {
       dress:"="
@@ -22,7 +22,7 @@ designBuild.directive('drawTrim', function (){
   }
 })
 
-designBuild.directive('drawExtras', function (){
+designBuildDirective.directive('drawExtras', function (){
   return  {
     scope: {
       extras:"="
@@ -32,7 +32,7 @@ designBuild.directive('drawExtras', function (){
 })
 
 
-designBuild.directive('fabricSelector', function (){
+designBuildDirective.directive('fabricSelector', function (){
   return  {
     restrict:'E',
     templateUrl: 'template/designBuild/fabric.html',
@@ -44,7 +44,7 @@ designBuild.directive('fabricSelector', function (){
   }
 })
 
-designBuild.directive('drawFabrics', function (){
+designBuildDirective.directive('drawFabrics', function (){
   return  {
     scope: {
 //      restrict:'E',
@@ -57,7 +57,7 @@ designBuild.directive('drawFabrics', function (){
 })
 
 
-designBuild.directive('drawTrimFabrics', function (){
+designBuildDirective.directive('drawTrimFabrics', function (){
   return  {
     scope: {
 //      restrict:'E',

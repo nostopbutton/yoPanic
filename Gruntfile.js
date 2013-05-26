@@ -315,7 +315,8 @@ module.exports = function (grunt) {
             'referenceData/**/*',
             'images/{,*/}*.*',
             'styles/fonts/*'
-            , '*.html', 'views/*.html'
+            , '*.html', 'views/*.html', 'template/{,*/}*.html'
+            , 'scripts/{,*/}*.*'
           ]
         },
         {
@@ -394,7 +395,7 @@ module.exports = function (grunt) {
 //    'test',
     'coffee',
     'compass:dist',
-    'useminPrepare',
+//    'useminPrepare',
     'imagemin',
     'cssmin',
 //    'htmlmin',
@@ -404,7 +405,7 @@ module.exports = function (grunt) {
     'ngmin',
     'uglify',
 //    'rev',
-    'usemin'
+//    'usemin'
     , 'install-dependencies'
   ]);
 
@@ -414,17 +415,17 @@ module.exports = function (grunt) {
 //    'test',
     'coffee',
     'compass:dist',
-    'useminPrepare',
+//    'useminPrepare',
 //    'imagemin',
     'cssmin',
 //    'htmlmin',
-    'concat',
+//    'concat',
     'copy:quick_dist',
     'cdnify',
     'ngmin',
-    'uglify',
+//    'uglify',
 //    'rev',
-    'usemin'
+//    'usemin'
 //    , 'npm_install'
     , 'install-dependencies'
   ]);
