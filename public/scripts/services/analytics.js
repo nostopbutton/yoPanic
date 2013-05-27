@@ -31,11 +31,16 @@ angular.module('analytics',[])
                 path = path.replace(queryParam, '');
             }
 
-            var querystring = decodeURIComponent($.param($routeParams));
+          // TODO - FIX ME
+//            var querystring = "";
+//
+//            querystring =  decodeURIComponent($.param($routeParams));
+//
+//            if (querystring === '') return path;
+//
+//            return path + "?" + querystring;
 
-            if (querystring === '') return path;
-
-            return path + "?" + querystring;
+            return path;
         };
     });
 

@@ -25,16 +25,16 @@ angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServ
     }).when("/design", {
         templateUrl: "views/silhouettes.html",
         controller: "SilhouetteCtrl"
+    }).when("/olddesign/:rangeId", {
+        templateUrl: "views/designBuildDirective.html",
+        controller: "DesignBuildCtrl"
+    }).when("/olddesign/:rangeId/:itemId", {
+        templateUrl: "views/designBuildDirective.html",
+        controller: "DesignBuildCtrl"
     }).when("/design/:rangeId", {
-        templateUrl: "views/designBuildDirective.html",
-        controller: "DesignBuildCtrl"
-    }).when("/design/:rangeId/:itemId", {
-        templateUrl: "views/designBuildDirective.html",
-        controller: "DesignBuildCtrl"
-    }).when("/newdesign/:rangeId", {
         templateUrl: "views/newDesignBuild.html",
         controller: "NewDesignBuildCtrl"
-    }).when("/newdesign/:rangeId/:itemId", {
+    }).when("/design/:rangeId/:itemId", {
         templateUrl: "views/newDesignBuild.html",
         controller: "NewDesignBuildCtrl"
     }).when("/purchase", {
@@ -73,8 +73,7 @@ angular.module("analytics", []).run([ "$http", function() {
             var queryParam = "/" + $routeParams[key];
             path = path.replace(queryParam, "");
         }
-        var querystring = decodeURIComponent($.param($routeParams));
-        return "" === querystring ? path : path + "?" + querystring;
+        return path;
     };
 });
 
@@ -257,22 +256,30 @@ designBuildFilter.filter("filterSets", function() {
     s.parentNode.insertBefore(ga, s);
 } ]);
 
-var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams) {
-    console.log("trackPageInGoogleAnalytics"), $rootScope.$on("$viewContentLoaded", track($window, $location, $routeParams));
-}, track = function($window, $location, $routeParams) {
+var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams, path, search) {
+    console.log("trackPageInGoogleAnalytics"), $rootScope.$on("$viewContentLoaded", track($window, $location, $routeParams, path, search));
+}, track = function($window, $location, $routeParams, path) {
+    console.log("$location="), console.log($location);
     var path = convertPathToQueryString($location.path(), $routeParams);
     console.log("track: about to push: " + path), $window._gaq.push([ "_trackPageview", path ]), 
     console.log("track: pushed ");
-}, convertPathToQueryString = function(path, $routeParams) {
-    console.log("convertPathToQueryString"), console.log("path=" + path);
+}, convertPathToQueryString = function(locpath, $routeParams, path, search) {
+    console.log("convertPathToQueryString"), console.log("$routeParams="), console.log($routeParams), 
+    console.log("locpath="), console.log(locpath), console.log("path="), console.log(path), 
+    console.log("search="), console.log(search);
     for (var key in $routeParams) {
         var queryParam = "/" + $routeParams[key];
-        console.log("queryParam=" + queryParam), path = path.replace(queryParam, ""), console.log("path ADDED=" + path);
+        console.log("queryParam=" + queryParam), locpath = locpath.replace(queryParam, ""), 
+        console.log("path ADDED=" + locpath);
     }
-    console.log("path NOW=" + path);
+    console.log("path NOW=" + locpath);
     for (key in $routeParams) console.log("key=" + key);
-    var querystring = decodeURIComponent($.param($routeParams));
+    var querystring = getAsUriParameters($routeParams);
     return console.log("querystring=" + querystring), "" === querystring ? path : path + "?" + querystring;
+}, getAsUriParameters = function(data) {
+    var url = "";
+    for (var prop in data) url += encodeURIComponent(prop) + "=" + encodeURIComponent(data[prop]) + "&";
+    return url.substring(0, url.length - 1);
 };
 
 angular.module("panicApp.Controllers").controller("HomeCarouselCtrl", [ "$scope", "$rootScope", "$window", "$location", "$routeParams", function($scope, $rootScope, $window, $location, $routeParams) {
@@ -300,59 +307,14 @@ angular.module("panicApp.Controllers").controller("HomeCarouselCtrl", [ "$scope"
     $scope.range = Range.get({
         rangeId: $routeParams.rangeId
     });
-} ]), angular.module("panicApp.Controllers").controller("DesignBuildCtrl", [ "$scope", "$routeParams", "Range", "ReferenceDataCache", "DesignBuilder", "$rootScope", "$window", "$location", function($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, $rootScope, $window, $location) {
-    trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
-    var master = "", categoryId = "dresses", designId = $routeParams.rangeId, itemId = $routeParams.itemId;
-    $scope.designId = designId, $scope.categoryId = categoryId, itemId && Range.itemCollection(function(itemData) {
-        console.log("Looking up item: " + itemId), console.log("itemData.length: " + itemData.length);
-        for (var i = 0; itemData.length > i; i++) if (console.log("-Checking item: " + itemData[i].itemId), 
-        itemData[i].itemId === itemId) {
-            console.log("---Found item: " + itemId + " -> " + itemData[i].design), master = angular.copy(itemData[i].design);
-            break;
-        }
-    }, function(data) {
-        console.log("Oops - failed to getItemColection: " + data.length);
-    }), $scope.ranges = Range.designCatalogue(function() {
-        console.log("=================="), loadDesign($scope);
-    }), $scope.range = DesignBuilder.get({
-        fileId: $routeParams.rangeId
-    }, function(data) {
-        itemId || (master = angular.copy(data.default)), $scope.master = master, $scope.cancel();
-    }, function() {
-        alert("ooops");
-    }), $scope.cancel = function() {
-        $scope.form = angular.copy(master);
-    }, $scope.updateFabrics = function() {
-        $scope.form;
-    }, $scope.save = function() {
-        master = $scope.form, $scope.cancel();
-    }, $scope.isCancelDisabled = function() {
-        return angular.equals(master, $scope.form);
-    };
-} ]);
-
-var loadDesign = function($scope) {
-    var category = getCategoryById($scope.ranges, $scope.categoryId), design = getDesignById(category.designs, $scope.designId);
-    $scope.category = category, $scope.design = design;
-}, getCategoryById = function(categories, id) {
-    console.log("categories.length" + categories.length);
-    for (var category = [], i = 0; categories.length > i; i++) console.log("categoryName" + categories[i].catId), 
-    categories[i].catId === id && (console.log("Found category: " + id + " -> " + categories[i].catId), 
-    category = angular.copy(categories[i]));
-    return console.log("Returning: " + category), category;
-}, getDesignById = function(designs, id) {
-    console.log("designs.length: " + designs.length);
-    for (var design = {}, i = 0; designs.length > i; i++) console.log("id: " + designs[i].desId), 
-    designs[i].desId === id && (console.log("Found category: " + id + " -> " + designs[i].desId), 
-    design = angular.copy(designs[i]));
-    return console.log("Returning: " + design), design;
-};
-
-angular.module("panicApp.Controllers").controller("NewDesignBuildCtrl", [ "$scope", "$routeParams", "Range", "ReferenceDataCache", "DesignBuilder", "$rootScope", "$window", "$location", function($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, $rootScope, $window, $location) {
+} ]), angular.module("panicApp.Controllers").controller("NewDesignBuildCtrl", [ "$scope", "$routeParams", "Range", "ReferenceDataCache", "DesignBuilder", "$rootScope", "$window", "$location", function($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, $rootScope, $window, $location) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
     var master = "", categoryId = "dresses", designId = $routeParams.rangeId, itemId = $routeParams.itemId, allFabricSets = {}, range = {};
-    $scope.isDebugCollapsed = !0, $scope.designId = designId, $scope.categoryId = categoryId, 
-    itemId && Range.itemCollection(function(itemData) {
+    $scope.isDebugCollapsed = !0, $scope.designId = designId, $scope.categoryId = categoryId;
+    var clearTrim = function(partType) {
+        partType.trim = "";
+    };
+    $scope.clearTrim = clearTrim, itemId && Range.itemCollection(function(itemData) {
         console.log("Looking up item: " + itemId), console.log("itemData.length: " + itemData.length);
         for (var i = 0; itemData.length > i; i++) if (console.log("-Checking item: " + itemData[i].itemId), 
         itemData[i].itemId === itemId) {

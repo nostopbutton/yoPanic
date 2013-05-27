@@ -33,16 +33,16 @@ angular.module('panicApp', [
     }).when('/design', {
       templateUrl: 'views/silhouettes.html',
       controller: 'SilhouetteCtrl'
+    }).when('/olddesign/:rangeId', {
+      templateUrl: 'views/designBuildDirective.html',
+      controller: 'DesignBuildCtrl'
+    }).when('/olddesign/:rangeId/:itemId', {
+      templateUrl: 'views/designBuildDirective.html',
+      controller: 'DesignBuildCtrl'
     }).when('/design/:rangeId', {
-      templateUrl: 'views/designBuildDirective.html',
-      controller: 'DesignBuildCtrl'
-    }).when('/design/:rangeId/:itemId', {
-      templateUrl: 'views/designBuildDirective.html',
-      controller: 'DesignBuildCtrl'
-    }).when('/newdesign/:rangeId', {
       templateUrl: 'views/newDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
-    }).when('/newdesign/:rangeId/:itemId', {
+    }).when('/design/:rangeId/:itemId', {
       templateUrl: 'views/newDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
     }).when('/purchase', {

@@ -1,55 +1,43 @@
 'use strict';
 
 angular.module('panicApp.Controllers')
-  .controller('NewDesignBuildCtrl', ['$scope', '$routeParams', 'Range', 'ReferenceDataCache', 'DesignBuilder',
-    '$rootScope', '$window', '$location',
+  .controller('DesignBuildCtrl', ['$scope', '$routeParams', 'Range', 'ReferenceDataCache', 'DesignBuilder',
+              '$rootScope', '$window', '$location',
     function ($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder,
               $rootScope, $window, $location) {
 
       trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
       var master="",
-        categoryId = "dresses",//$routeParams.categoryId;
-        designId = $routeParams.rangeId,
-        itemId = $routeParams.itemId,
-        allFabricSets = {},
-        range = {};
+//          design = {},
+//          category = {},
+          categoryId = "dresses",//$routeParams.categoryId;
+          designId = $routeParams.rangeId,
+          itemId = $routeParams.itemId,
+          fabrics = {},
+          options = {};
 
-      $scope.isDebugCollapsed = true;
       $scope.designId = designId;
       $scope.categoryId = categoryId;
 
-      var clearTrim = function(partType) {
-        partType.trim = "";
-      }
-      $scope.clearTrim = clearTrim;
-
-//      var clearFabric = function(partType) {
-//        console.log("partType");
-//        console.log(partType);
-//
-//        partType.trim = "";
-//      }
-//      $scope.clearFabric = clearFabric;
-
       if(itemId) {
-        Range.itemCollection(function(itemData){
-            console.log("Looking up item: "+itemId);
-            console.log("itemData.length: "+itemData.length);
+       Range.itemCollection(function(itemData){
+           console.log("Looking up item: "+itemId);
+           console.log("itemData.length: "+itemData.length);
 
-            for (var i=0; i<itemData.length; i++){
-              console.log("-Checking item: "+itemData[i].itemId);
+           for (var i=0; i<itemData.length; i++){
+             console.log("-Checking item: "+itemData[i].itemId);
 
-              if (itemData[i].itemId === itemId) {
-                console.log("---Found item: "+itemId + " -> "+itemData[i].design);
-                master = angular.copy(itemData[i].design);
-                break;
-              }
-            }
-          },
-          function(data) {
-            console.log("Oops - failed to getItemColection: " + data.length)
-          })
-      }
+             if (itemData[i].itemId === itemId) {
+               console.log("---Found item: "+itemId + " -> "+itemData[i].design);
+               master = angular.copy(itemData[i].design);
+               break;
+             }
+           }
+         },
+         function(data) {
+           console.log("Oops - failed to getItemColection: " + data.length)
+         })
+       }
 
 
 //      $scope.isActive = function(cat) {
@@ -78,37 +66,30 @@ angular.module('panicApp.Controllers')
           if(!itemId) {
             master = angular.copy(data.default);
           }
-          range = angular.copy(data);
           $scope.master = master;     // so it can be viewed in debug screen
           $scope.cancel();            // set form to master
         },
         function (data) {             //failure
-          alert("ooops - loading range");
+          alert("ooops");
         });
 
       $scope.cancel = function() {
         $scope.form = angular.copy(master);
       };
 
-      $scope.fabricSets = DesignBuilder.fabricSets(
-        function(data) {   // success
-          allFabricSets = angular.copy(data);
-
-          for (var option in range.options){
-            for(var set in range.options[option].fabricSets){
-              for(var fabricSet in allFabricSets) {
-                if(range.options[option].fabricSets[set].set == allFabricSets[fabricSet].setId){
-                  $scope.range.options[option].fabricSets[set] = allFabricSets[fabricSet];
-                  break;
-                }
-              }
-            }
-          }
-
-        }, function (data) {             //failure
-          alert("ooops - loading fabrics");
-        });
+//      $scope.options = DesignBuilder.options(
+//        function(data){
+//          options = angular.copy(data);
+////          $scope.options = options;
+//          $scope.updateFabrics();
+//        }
 //      );
+
+      $scope.updateFabrics = function() {
+
+        var form = $scope.form
+
+      }
 
       $scope.save = function() {
         master = $scope.form;
@@ -127,7 +108,7 @@ angular.module('panicApp.Controllers')
 
 //    $scope.cancel();
 
-    }])
+  }]);
 
 var loadDesign = function($scope){//, catalogue, catId, desId) {
   var category  = getCategoryById($scope.ranges, $scope.categoryId),
@@ -170,4 +151,5 @@ var getDesignById = function(designs, id) {
 
   return design;
 }
+
 

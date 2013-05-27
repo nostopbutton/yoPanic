@@ -2,11 +2,11 @@
   "default": {
     "design": {
       "neckline":   {"type": "nek", "id": "003", "fabric": "003"}
-      , "skirt":    {"type": "skt", "id": "010", "fabric": "003", "trim": ""}
-      , "sleeves":  {"type": "slv", "id": "001", "fabric": "003"}
+      , "skirt":    {"type": "skt", "id": "070", "fabric": "003", "trim": ""}
+      , "sleeves":  {"type": "slv", "id": "009", "fabric": "003"}
     }
     , "belt": {
-      "belt":     {"type": "blt", "id": "004", "fabric": "120"}
+      "belt":     {"type": "blt", "id": "002", "fabric": "012"}
     }
     , "extras": {
       "peplum": {"type": "ext", "id": "000", "fabric": "003"}
@@ -60,10 +60,8 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}, {"setId": "x-sq"}]
       , "values": [
-        {"id": "012"},
-        {"id": "011"},
-        {"id": "010"},
-        {"id": "013"}
+        {"id": "070"},
+        {"id": "071"}
       ]
     }
     ]

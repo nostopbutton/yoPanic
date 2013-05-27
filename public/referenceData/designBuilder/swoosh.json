@@ -1,8 +1,8 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "003", "fabric": "003"}
-      , "skirt":    {"type": "skt", "id": "010", "fabric": "003", "trim": ""}
+      "neckline":   {"type": "nek", "id": "009", "fabric": "003"}
+      , "skirt":    {"type": "skt", "id": "030", "fabric": "003", "trim": ""}
       , "sleeves":  {"type": "slv", "id": "001", "fabric": "003"}
     }
     , "belt": {
@@ -32,11 +32,9 @@
       , "label": "Neckline"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}, {"setId": "x-sq"}]
       , "values": [
-        {"id": "001"}
-        , {"id": "002"}
-        , {"id": "003"}
-        , {"id": "004"}
-      ]
+        {"id": "010"}
+      , {"id": "009"}
+    ]
       , "trim": true
       , "trimFabricSets": [ {"setId": "trm"}]
     }
@@ -49,7 +47,7 @@
         {"id": "015"},
         {"id": "001"},
         {"id": "006"},
-        {"id": "009"}
+        {"id": "007"}
       ]
       , "trim": true
       , "trimFabricSets": [ {"setId": "trm"}]
@@ -60,13 +58,11 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}, {"setId": "x-sq"}]
       , "values": [
-        {"id": "012"},
-        {"id": "011"},
-        {"id": "010"},
-        {"id": "013"}
+        {"id": "030"},
+        {"id": "032"}
       ]
     }
-    ]
+  ]
   }
   , {
     "option_name": "belt"
@@ -78,8 +74,8 @@
         , "label": "Ribbon"
         , "fabricSets": [ {"setId": "s-vc"}]
         , "values": [
-          {"id": "002"}
-        ]
+        {"id": "002"}
+      ]
       }
       , {
         "part_name": "belt"
@@ -106,17 +102,17 @@
     , "label": "Extras"
     , "parts": [
       {
-      "part_name": "peplum"
-      , "type": "ext"
-      , "label": "Peplum"
-      , "active": "true"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-      , "values": [
+        "part_name": "peplum"
+        , "type": "ext"
+        , "label": "Peplum"
+        , "active": "true"
+        , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+        , "values": [
         {"id": "000"}
         , {"id": "002"}
       ]
-    }
-    , {
+      }
+      , {
         "part_name": "rosetta"
         , "type": "ext"
         , "label": "Rosetta"
@@ -126,6 +122,6 @@
           , {"id": "003"}
         ]
       }
-  ]}
+    ]}
 ]
 }
