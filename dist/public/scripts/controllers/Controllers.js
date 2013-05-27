@@ -14,41 +14,71 @@ angular.module('panicApp.Controllers', [])
     s.parentNode.insertBefore(ga, s);
   }])
 
-var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams){
+var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams           , path, search){
   // Fire Google Analytics on Angular page load
   console.log("trackPageInGoogleAnalytics");
-  $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+  $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams           , path, search));
 }
 
-var track = function($window, $location, $routeParams) {
+var track = function($window, $location, $routeParams            , path, search) {
+  console.log("$location=");
+  console.log($location);
   var path = convertPathToQueryString($location.path(), $routeParams)
   console.log("track: about to push: " + path);
   $window._gaq.push(['_trackPageview', path]);
   console.log("track: pushed ");
 };
 
-var convertPathToQueryString = function(path, $routeParams) {
+var convertPathToQueryString = function(locpath, $routeParams           , path, search) {
   console.log("convertPathToQueryString");
-  console.log("path="+path);
+  console.log("$routeParams=");
+  console.log($routeParams);
+  console.log("locpath=");
+  console.log(locpath);
+  console.log("path=");
+  console.log(path);
+  console.log("search=");
+  console.log(search);
+
   for (var key in $routeParams) {
     var queryParam = '/' + $routeParams[key];
     console.log("queryParam="+queryParam);
-    path = path.replace(queryParam, '');
-    console.log("path ADDED="+path);
+    locpath = locpath.replace(queryParam, '');
+    console.log("path ADDED="+locpath);
   }
 
-  console.log("path NOW="+path);
+  console.log("path NOW="+locpath);
 
   for (key in $routeParams)
   {
     console.log("key="+key);
   }
-  var querystring = decodeURIComponent($.param($routeParams));
-
+  // TODO - FIX ME
+//  var querystring = decodeURIComponent($.param($routeParams));// querystring=pete=me&rangeId=sheath-new&itemId=fred
+  var querystring = getAsUriParameters($routeParams);
   console.log("querystring="+querystring);
 
   if (querystring === '') return path;
 
   return path + "?" + querystring;
 
+//  return locpath;
+
 };
+
+//http://stackoverflow.com/questions/14525178/is-there-any-native-function-to-convert-json-to-url-parameters
+
+//url = Object.keys(data).map(function(k) {
+//  return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+//}).join('&')
+
+
+var getAsUriParameters = function(data) {
+  var url = '';
+  for (var prop in data) {
+    url += encodeURIComponent(prop) + '=' +
+      encodeURIComponent(data[prop]) + '&';
+  }
+  return url.substring(0, url.length - 1)
+}
+//getAsUriParameters(data); //"action=actualiza_resultado&postID=1&gl=2&gl2=3"

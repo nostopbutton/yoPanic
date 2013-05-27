@@ -1,5 +1,5 @@
 [
-  { "setId": "s-c"
+  { "setId": "s-vc"
     , "setName": "Viscose Crepe"
     , "type": "Standard"
     , "description": "blurb about Viscose Crepe"
@@ -24,16 +24,22 @@
         { "fabId": "011", "fabName" : "black"}
     ]
   }
-  , { "setId": "p-c"
-    , "setName": "Wool Crepe"
+  , { "setId": "p-sk"
+    , "setName": "Silk"
     , "type": "Premium"
     , "fabrics":
     [
-      { "fabId": "001", "fabName" : "black"}
-      , { "fabId": "002", "fabName" : "grey"}
+      { "fabId": "080", "fabName" : "black"}
+      , { "fabId": "081", "fabName" : "cream"}
+      , { "fabId": "083", "fabName" : "beige"}
+      , { "fabId": "085", "fabName" : "jade"}
+      , { "fabId": "086", "fabName" : "charcol grey"}
+      , { "fabId": "087", "fabName" : "midnight blue"}
+      , { "fabId": "088", "fabName" : "fuscia"}
+      , { "fabId": "089", "fabName" : "red"}
     ]
   }
-  , { "setId": "x-l"
+  , { "setId": "x-fl"
     , "setName": "Faux leather"
     , "type": "Special"
     , "fabrics":
@@ -44,7 +50,7 @@
 
       ]
   }
-  , { "setId": "x-s"
+  , { "setId": "x-sq"
     , "setName": "Sequins"
     , "type": "Special"
     , "fabrics":
