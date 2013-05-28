@@ -364,4 +364,13 @@ var loadDesign = function($scope) {
     designs[i].desId === id && (console.log("Found category: " + id + " -> " + designs[i].desId), 
     design = angular.copy(designs[i]));
     return console.log("Returning: " + design), design;
+}, SizingCtrl = function($scope) {
+    $scope.open = function() {
+        $scope.shouldBeOpen = !0;
+    }, $scope.close = function() {
+        $scope.closeMsg = "I was closed at: " + new Date(), $scope.shouldBeOpen = !1;
+    }, $scope.opts = {
+        backdropFade: !0,
+        dialogFade: !0
+    };
 };

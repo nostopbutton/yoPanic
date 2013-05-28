@@ -15,6 +15,7 @@
           , {
             "desId": "swing"
             , "desName": "fitted swing"
+            , "longName": "Fitted Swing Dress"
             , "blurb": "It's lovely, you know it is... dah dha"
             , "price": 1600
             , "image": "design-sheath.png"
@@ -23,6 +24,7 @@
           , {
             "desId": "flare"
             , "desName": "fitted flare"
+            , "longName": "Fitted Flare Dress"
             , "blurb": "They're hot this winter, you could be too!"
             , "price": 1600
             , "image": "design-audrey.png"
@@ -31,6 +33,7 @@
           , {
             "desId": "swoosh"
             , "desName": "swoosh"
+            , "longName": "Swoosh Dress"
             , "blurb": "They're hot this winter, you could be too!"
             , "price": 1600
             , "image": "design-sheath.png"
@@ -39,6 +42,7 @@
           , {
             "desId": "wrap"
             , "desName": "wrap"
+            , "longName": "Wrap Dress"
             , "blurb": "They'll all be staring at you as you strut your stuff"
             , "price": 2000
             , "image": "design-flair.png"
@@ -53,6 +57,7 @@
         {
           "desId": "shift plain"
           , "desName": "pencil"
+          , "longName": "Pencil Skirt"
           , "blurb": "It's lovely, you know it is... dah dha"
           , "price": 0
           , "image": "design-shift.png"
@@ -61,6 +66,7 @@
         , {
           "desId": "shift_doloman"
           , "desName": "swing"
+          , "longName": "Swing Skirt"
           , "blurb": "It's lovely, you know it is... dah dha"
           , "price": 0
           , "image": "design-shift.png"
@@ -69,6 +75,7 @@
         , {
           "desId": "shirt"
           , "desName": "flare"
+          , "longName": "Flare Skirt"
           , "blurb": "They're hot this winter, you could be too!"
           , "price": 0
           , "image": "design-shirt.png"

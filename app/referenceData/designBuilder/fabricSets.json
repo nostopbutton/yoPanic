@@ -24,6 +24,22 @@
         { "fabId": "011", "fabName" : "black"}
     ]
   }
+  ,{ "setId": "trm2"
+  , "setName": "Viscose Crepe"
+  , "type": "Standard"
+  , "description": "blurb about Viscose Crepe"
+  , "fabrics":
+    [
+      { "fabId": "003", "fabName" : "red"}
+      , { "fabId": "004", "fabName" : "violet"}
+      , { "fabId": "005", "fabName" : "dirty blue"}
+      , { "fabId": "007", "fabName" : "taupe"}
+      , { "fabId": "008", "fabName" : "cream"}
+      , { "fabId": "010", "fabName" : "mint"}
+      , { "fabId": "011", "fabName" : "black"}
+      , { "fabId": "012", "fabName" : "grey"}
+    ]
+}
   , { "setId": "p-sk"
     , "setName": "Silk"
     , "type": "Premium"
