@@ -4,49 +4,112 @@
         , "catName": "Dresses"
         , "designs" : [
           {
-            "desId": "sheath"
-            , "desName": "fitted sheath"
+            "desId": "sheath-fitted"
+            , "desName": "Fitted Sheath"
             , "longName": "Fitted Sheath Dress"
-            , "shortDesc": "It's lovely, you know it is... dah dha"
+            , "shortDesc": "Our impeccably tailored classic sheath creates a perfect silhouette for all occasions"
             , "price": 1600
             , "image": "fittedsheath.png"
             , "silhouetteImage": "fittedsheath"
           }
           , {
-            "desId": "swing"
-            , "desName": "fitted swing"
+            "desId": "sheath-loose"
+            , "desName": "Loose Sheath ??"
+            , "longName": "Loose Sheath Dress"
+            , "shortDesc": "Our classic sheath but with a looser bodice to show off shoulders and balance the hips"
+            , "price": 1600
+            , "image": "fittedsheath.png"
+            , "silhouetteImage": "fittedsheath"
+          }
+          , {
+            "desId": "swing-fitted"
+            , "desName": "Fitted Swing"
             , "longName": "Fitted Swing Dress"
-            , "blurb": "It's lovely, you know it is... dah dha"
+            , "blurb": "Our classic bodice with a full, pleated skirt for a dramatic Audrey Hepburn effect"
             , "price": 1600
             , "image": "design-sheath.png"
             , "silhouetteImage": "fittedswing"
           }
           , {
-            "desId": "flare"
-            , "desName": "fitted flare"
+            "desId": "flare-fitted"
+            , "desName": "Fitted Flare"
             , "longName": "Fitted Flare Dress"
-            , "blurb": "They're hot this winter, you could be too!"
+            , "blurb": "Our classic bodice with a hip skimming skirt for maximum curves and comfort"
+            , "price": 1600
+            , "image": "design-audrey.png"
+            , "silhouetteImage": "fittedflare"
+          }
+          , {
+            "desId": "flare-loose"
+            , "desName": "Loose Flare ??"
+            , "longName": "Loose Flare Dress"
+            , "blurb": "A looser fit bodice with our classic hip skimming skirt"
             , "price": 1600
             , "image": "design-audrey.png"
             , "silhouetteImage": "fittedflare"
           }
           , {
             "desId": "swoosh"
-            , "desName": "swoosh"
+            , "desName": "Swoosh"
             , "longName": "Swoosh Dress"
-            , "blurb": "They're hot this winter, you could be too!"
+            , "blurb": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
             , "price": 1600
             , "image": "design-sheath.png"
             , "silhouetteImage": "swoosh"
           }
           , {
             "desId": "wrap"
-            , "desName": "wrap"
+            , "desName": "Wrap"
             , "longName": "Wrap Dress"
-            , "blurb": "They'll all be staring at you as you strut your stuff"
+            , "blurb": "Perfectly tailored around the chest and waist to drape beautifully"
             , "price": 2000
             , "image": "design-flair.png"
             , "silhouetteImage": "wrap"
+          }
+          , {
+          "desId": "shift-tailored"
+          , "desName": "Tailored Shift"
+          , "longName": "Tailored Shift Dress"
+          , "blurb": "A tailored classic shift dress that skims your body without clinging"
+          , "price": 2000
+          , "image": "design-flair.png"
+          , "silhouetteImage": "looseshift"
+          }
+          , {
+          "desId": "shift-loose"
+          , "desName": "Loose Shift ??"
+          , "longName": "Loose Shift Dress"
+          , "blurb": "Effortless elegance with a straight lined shift that draws no attention to the waist"
+          , "price": 2000
+          , "image": "design-flair.png"
+          , "silhouetteImage": "looseshift"
+          }
+          , {
+          "desId": "shirt-casual"
+          , "desName": "Casual Shirt"
+          , "longName": "Casual Shirt Dress"
+          , "blurb": "Sophisticated and incredibly versatile for all occasions and body shapes"
+          , "price": 2000
+          , "image": "design-flair.png"
+          , "silhouetteImage": "shirt"
+          }
+          , {
+          "desId": "shirt-knee"
+          , "desName": "Knee Shirt"
+          , "longName": "Knee Shirt Dress"
+          , "blurb": "Sophisticated and incredibly versatile for all occasions and body shapes"
+          , "price": 2000
+          , "image": "design-flair.png"
+          , "silhouetteImage": "kneeshirt"
+          }
+          , {
+          "desId": "shirt-maxi"
+          , "desName": "Maxi Shirt"
+          , "longName": "Maxi Shirt Dress"
+          , "blurb": "Maxi version of our shirt that lengthen the  body creating an elegant silhouette."
+          , "price": 2000
+          , "image": "design-flair.png"
+          , "silhouetteImage": "maxishirt"
           }
         ]
       },
@@ -55,32 +118,59 @@
         , "catName": "Skirts"
         , "designs" : [
         {
-          "desId": "shift plain"
-          , "desName": "pencil"
+          "desId": "skirt-pencil"
+          , "desName": "Pencil Skirt"
           , "longName": "Pencil Skirt"
-          , "blurb": "It's lovely, you know it is... dah dha"
-          , "price": 0
+          , "blurb": "Simple lines that are chic and glamourous and never out of style"
+          , "price": 600
           , "image": "design-shift.png"
           , "silhouetteImage": "pencil"
         }
         , {
-          "desId": "shift_doloman"
-          , "desName": "swing"
+          "desId": "skirt-swing"
+          , "desName": "Swing Skirt"
           , "longName": "Swing Skirt"
-          , "blurb": "It's lovely, you know it is... dah dha"
-          , "price": 0
+          , "blurb": "A fuller skirt to glide when you walk pulled tight at the waist for maximum curves"
+          , "price": 600
           , "image": "design-shift.png"
           , "silhouetteImage": "swing"
         }
         , {
-          "desId": "shirt"
-          , "desName": "flare"
+          "desId": "skirt-flare"
+          , "desName": "Flare Skirt"
           , "longName": "Flare Skirt"
-          , "blurb": "They're hot this winter, you could be too!"
-          , "price": 0
+          , "blurb": "A pencil skirt with a kick to compliment your hips"
+          , "price": 600
           , "image": "design-shirt.png"
           , "silhouetteImage": "flare"
         }
         ]
       }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
