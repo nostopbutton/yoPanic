@@ -45,6 +45,9 @@ angular.module('panicApp', [
     }).when('/design/:rangeId/:itemId', {
       templateUrl: 'views/newDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
+    }).when('/designAdmin/:rangeId', {
+      templateUrl: 'views/designBuildAdmin.html',
+      controller: 'NewDesignBuildCtrl'
     }).when('/purchase', {
       templateUrl: 'views/sizing.html',
       controller: 'StaticPageCtrl'

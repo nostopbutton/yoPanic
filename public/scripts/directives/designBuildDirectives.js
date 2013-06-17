@@ -69,4 +69,12 @@ designBuildDirective.directive('drawTrimFabrics', function (){
   }
 })
 
+designBuildDirective.directive('drawAdmin', function (){
+  return  {
+    scope: {
+      dress:"="
+    },
+    template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
+  }
+})
 
