@@ -1,9 +1,7 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "003", "fabric": "003"}
-      , "skirt":    {"type": "skt", "id": "010", "fabric": "003", "trim": ""}
-      , "sleeves":  {"type": "slv", "id": "001", "fabric": "003"}
+      "skirt":    {"type": "skt", "id": "010", "fabric": "003", "trim": ""}
     }
     , "belt": {
       "belt":     {"type": "blt", "id": "004", "fabric": "120"}
@@ -24,36 +22,8 @@
     , "active": "true"
     , "label": "Basic Design"
     , "parts": [
+
     {
-      "part_name": "neckline"
-      , "type": "nek"
-      , "active": "true"
-      , "label": "Neckline"
-      , "fabricSets": [{"setId": "s-vc"}, {"setId": "x-fl"}]
-      , "values": [
-        {"id": "001"}
-        , {"id": "002"}
-        , {"id": "003"}
-        , {"id": "004"}
-      ]
-      , "trim": true
-      , "trimFabricSets": [{"setId": "s-tr"}]
-    }
-    ,{
-      "part_name": "sleeves"
-      , "type": "slv"
-      , "label": "Sleeves"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-      , "null_value": "000"
-      , "values": [
-        {"id": "001"}
-        , {"id": "006"}
-        , {"id": "009"}
-      ]
-      , "trim": true
-      , "trimFabricSets": [{"setId": "s-tr"}]
-    }
-    ,{
       "part_name": "skirt"
       , "type": "skt"
       , "label": "Skirt"
@@ -108,20 +78,5 @@
         ]
       }
     ]}
-  , {
-    "option_name": "extras"
-    , "label": "Extras"
-    , "parts": [
-      {
-        "part_name": "rosetta"
-        , "type": "ext"
-        , "label": "Rosetta"
-        , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-        , "values": [
-          {"id": "000"}
-          , {"id": "003"}
-        ]
-      }
-  ]}
 ]
 }

@@ -176,7 +176,80 @@ referenceDataServices
     }
   })
 
-;
+//  .factory('lookup', ['$http', '$rootScope', '$window', '$filter', function ($http, $rootScope, $window, $filter) {
+//    var lookup = {
+//      // use the $window service to get the language of the user's browser
+//      language:$window.navigator.userLanguage || $window.navigator.language,
+//      // array to hold the lookupd resource string entries
+//      dictionary:[],
+//      // flag to indicate if the service hs loaded the resource file
+//      resourceFileLoaded:false,
+//
+//      // success handler for all server communication
+//      successCallback:function (data) {
+//        // store the returned array in the dictionary
+//        lookup.dictionary = data;
+//        // set the flag that the resource are loaded
+//        lookup.resourceFileLoaded = true;
+//        // broadcast that the file has been loaded
+//        $rootScope.$broadcast('lookupResourcesUpdates');
+//      },
+//
+//      // allows setting of language on the fly
+//      setLanguage: function(value) {
+//        lookup.language = value;
+//        lookup.initlookupdResources();
+//      },
+//
+//      // loads the language resource file from the server
+//      initlookupdResources:function () {
+//        // build the url to retrieve the lookupd resource file
+//        var url = '/i18n/resources-locale_' + lookup.language + '.js';
+//        // request the resource file
+//        $http({ method:"GET", url:url, cache:false }).success(lookup.successCallback).error(function () {
+//          // the request failed set the url to the default resource file
+//          var url = '/i18n/resources-locale_default.js';
+//          // request the default resource file
+//          $http({ method:"GET", url:url, cache:false }).success(lookup.successCallback);
+//        });
+//      },
+//
+//      // checks the dictionary for a lookupd resource string
+//      getCodeName: function(value) {
+//        // default the result to an empty string
+//        var result = '';
+//
+//        // make sure the dictionary has valid data
+//        if ((lookup.dictionary !== []) && (lookup.dictionary.length > 0)) {
+//          // use the filter service to only return those entries which match the value
+//          // and only take the first result
+//          var entry = $filter('filter')(lookup.dictionary, function(element) {
+//              return element.key === value;
+//            }
+//          )[0];
+//
+//          // set the result
+//          result = entry.value;
+//        }
+//        // return the value to the call
+//        return result;
+//      }
+//    };
+//
+//    // force the load of the resource file
+//    lookup.initlookupdResources();
+//
+//    // return the local instance when called
+//    return lookup;
+//  } ])
+//// simple codename lookup filter
+//// usage {{ TOKEN | codename }}
+//  .filter('codename', ['lookup', function (lookup) {
+//    return function (input) {
+//      return lookup.getCodeName(input);
+//    };
+//  }])
+//;
 
 //var getCategoryFromCacheArray = function(id) {
 //  for (var i=0; i<categoryCache; i++){
