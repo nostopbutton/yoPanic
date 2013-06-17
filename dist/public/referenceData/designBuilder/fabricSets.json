@@ -77,4 +77,19 @@
         , { "fabId": "138", "fabName" : "white matt"}
       ]
   }
+  , { "setId": "x-pt"
+  , "setName": "Polyester Trim"
+  , "type": "Special"
+  , "fabrics":
+    [
+      { "fabId": "160", "fabName" : "red"}
+      , { "fabId": "161", "fabName" : "violet"}
+      , { "fabId": "162", "fabName" : "dirty blue"}
+      , { "fabId": "164", "fabName" : "taupe"}
+      , { "fabId": "165", "fabName" : "cream"}
+      , { "fabId": "167", "fabName" : "mint"}
+      , { "fabId": "168", "fabName" : "black"}
+      , { "fabId": "169", "fabName" : "grey"}
+    ]
+}
 ]

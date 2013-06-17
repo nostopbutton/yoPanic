@@ -37,6 +37,9 @@ angular.module("panicApp", [ "panicApp.Controllers", "panicApp.referenceDataServ
     }).when("/design/:rangeId/:itemId", {
         templateUrl: "views/newDesignBuild.html",
         controller: "NewDesignBuildCtrl"
+    }).when("/designAdmin/:rangeId", {
+        templateUrl: "views/designBuildAdmin.html",
+        controller: "NewDesignBuildCtrl"
     }).when("/purchase", {
         templateUrl: "views/sizing.html",
         controller: "StaticPageCtrl"
@@ -234,6 +237,13 @@ designBuildDirective.directive("drawDress", function() {
             selectedOption: "="
         },
         template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn selector option fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
+    };
+}), designBuildDirective.directive("drawAdmin", function() {
+    return {
+        scope: {
+            dress: "="
+        },
+        template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
     };
 });
 
