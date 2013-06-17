@@ -85,7 +85,15 @@
                                     <div class="row-fluid  top-border-small">
                                         <span ng-repeat="set in fabricSets | filterSets:part.fabricSets">
                                             <div class="row-fluid adminHeader">
-                                            Fabric Set: {{set.type}} - {{set.setName}} - ({{set.setId}})
+                                                <div class="span4 align-left">
+                                                    Fabric Set:
+                                                </div>
+                                                <div class="span4 align-center">
+                                                    {{set.type}} - {{set.setName}}
+                                                </div>
+                                                <div class="span4 align-right">
+                                                    ({{set.setId}})
+                                                </div>
                                             </div>
                                             <div class="row-fluid">
                                                 <span ng-repeat="fabric in set.fabrics" class="align-center">
@@ -100,7 +108,7 @@
                                                                 {{part.type}}-{{value.id}}-{{fabric.fabId}}
                                                             </div>
                                                             <div class="row-fluid">
-                                                                .......-{{fabric.fabName}}
+                                                                {{part.type+"-"+value.id | labelLookup}} - {{fabric.fabName}}
                                                             </div>
 
                                                             <!--</div>-->
@@ -114,10 +122,17 @@
                                     </div>
 
                                     <div ng-show="part.trim"class="row-fluid  top-border-small">
-                                            Has TRIM....
                                         <span ng-repeat="set in fabricSets | filterSets:part.trimFabricSets">
                                             <div class="row-fluid adminHeader">
-                                                Trim Fabric Set: {{set.type}} - {{set.setName}} - ({{set.setId}})
+                                                <div class="span4 align-left">
+                                                    Trim Fabric Set:
+                                                </div>
+                                                <div class="span4 align-center">
+                                                    {{set.type}} - {{set.setName}}
+                                                </div>
+                                                <div class="span4 align-right">
+                                                    ({{set.setId}})
+                                                </div>
                                             </div>
                                             <div class="row-fluid">
                                                 <span ng-repeat="fabric in set.fabrics" class="align-center">

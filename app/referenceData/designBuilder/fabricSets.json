@@ -15,8 +15,8 @@
         , { "fabId": "012", "fabName" : "grey"}
       ]
   }
-  ,{ "setId": "trm"
-    , "setName": "Viscose Crepe"
+  ,{ "setId": "s-tr"
+    , "setName": "Viscose Crepe for Trim"
     , "type": "Standard"
     , "description": "blurb about Viscose Crepe"
     , "fabrics":

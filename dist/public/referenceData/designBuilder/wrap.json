@@ -17,7 +17,7 @@
   , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."
 ]
   , "fabricSets": [ {"setId": "s-c"}, {"setId": "x-l"}, {"setId": "x-sq"}]
-  , "trimFabricSets": [ {"setId": "p-c"}, {"setId": "x-l"}, {"setId": "x-sq"}]
+  , "trimFabricSets": [{"setId": "s-tr"}]
   , "sizes": [10,12,14,16,18]
   , "options": [
   {
@@ -43,12 +43,11 @@
       , "label": "Sleeves"
       , "fabricSets": [ {"setId": "p-sk"}, {"setId": "x-sq"}]
       , "values": [
-        {"id": "015"},
+        {"id": "000"},
         {"id": "013"},
         {"id": "014"}
       ]
-      , "trim": true
-      , "trimFabricSets": [ {"setId": "trm"}]
+      , "trim": false
     }
     ,{
       "part_name": "skirt"
@@ -56,10 +55,11 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "p-sk"}]
       , "values": [
-        {"id": "092"},
         {"id": "091"},
-        {"id": "090"}
+        {"id": "092"},
+        {"id": "094"}
       ]
+      , "trim": false
     }
   ]
   }
@@ -71,7 +71,7 @@
         "part_name": "belt"
         , "type": "blt"
         , "label": "Gathered Waistband"
-        , "fabricSets": [ {"setId": "s-c"}]
+        , "fabricSets": [ {"setId": "p-sk"}]
         , "values": [
         {"id": "001"}
       ]
@@ -80,45 +80,9 @@
         "part_name": "belt"
         , "type": "blt"
         , "label": "Fabric"
-        , "fabricSets": [ {"setId": "s-c"}, {"setId": "x-sq"}]
+        , "fabricSets": [ {"setId": "p-sk"}]
         , "values": [
-          {"id": "003"}
-        ]
-      }
-      , {
-        "part_name": "belt"
-        , "type": "blt"
-        , "label": "Obi"
-        , "active": "true"
-        , "fabricSets": [  {"setId": "x-l"}]
-        , "values": [
-          {"id": "004"}
-        ]
-      }
-    ]}
-  , {
-    "option_name": "extras"
-    , "label": "Extras"
-    , "parts": [
-      {
-        "part_name": "peplum"
-        , "type": "ext"
-        , "label": "Peplum"
-        , "active": "true"
-        , "fabricSets": [ {"setId": "s-c"}, {"setId": "x-l"}]
-        , "values": [
-        {"id": "000"}
-        , {"id": "002"}
-      ]
-      }
-      , {
-        "part_name": "rosetta"
-        , "type": "ext"
-        , "label": "Rosetta"
-        , "fabricSets": [ {"setId": "s-c"}, {"setId": "x-l"}]
-        , "values": [
-          {"id": "000"}
-          , {"id": "003"}
+          {"id": "006"}
         ]
       }
     ]}

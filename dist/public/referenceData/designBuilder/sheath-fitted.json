@@ -16,7 +16,7 @@
   , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."
 ]
   , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-  , "trimFabricSets": [{"setId": "p-c"}, {"setId": "x-fl"}, {"setId": "x-sq"}]
+  , "trimFabricSets": [{"setId": "s-tr"}]
   , "sizes": [10,12,14,16,18]
   , "options": [
   {
@@ -37,13 +37,13 @@
         , {"id": "004"}
       ]
       , "trim": true
-      , "trimFabricSets": [{"setId": "s-vc"}, {"setId": "x-fl"}, {"setId": "x-sq"}, {"setId": "x-pt"}]
+      , "trimFabricSets": [{"setId": "s-tr"}]
     }
     ,{
       "part_name": "sleeves"
       , "type": "slv"
       , "label": "Sleeves"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}, {"setId": "x-sq"}]
+      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "null_value": "000"
       , "values": [
         {"id": "001"}
@@ -51,7 +51,7 @@
         , {"id": "009"}
       ]
       , "trim": true
-      , "trimFabricSets": [{"setId": "s-vc"}, {"setId": "x-fl"}, {"setId": "x-sq"}, {"setId": "x-pt"}]
+      , "trimFabricSets": [{"setId": "s-tr"}]
     }
     ,{
       "part_name": "skirt"
