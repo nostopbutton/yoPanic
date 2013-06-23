@@ -2,7 +2,7 @@
   "default": {
     "design": {
       "neckline":   {"type": "nek", "id": "003", "fabric": "003"}
-      , "skirt":    {"type": "skt", "id": "010", "fabric": "003", "trim": ""}
+      , "skirt":    {"type": "skt", "id": "011", "fabric": "003"}
       , "sleeves":  {"type": "slv", "id": "001", "fabric": "003"}
     }
     , "belt": {
@@ -62,7 +62,6 @@
         {"id": "011"}
         , {"id": "012"}
         , {"id": "014"}
-        , {"id": "021"}
         , {"id": "022"}
         , {"id": "024"}
         , {"id": "051"}
@@ -116,6 +115,7 @@
         "part_name": "rosetta"
         , "type": "ext"
         , "label": "Rosetta"
+        , "active": "true"
         , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
         , "values": [
           {"id": "000"}

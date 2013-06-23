@@ -1,9 +1,9 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "017", "fabric": "080"}
-      , "skirt":    {"type": "skt", "id": "122", "fabric": "080", "trim": ""}
-      , "sleeves":  {"type": "slv", "id": "016", "fabric": "086"}
+      "neckline":   {"type": "nek", "id": "018", "fabric": "080"}
+      , "skirt":    {"type": "skt", "id": "122", "fabric": "080"}
+      , "sleeves":  {"type": "slv", "id": "016", "fabric": "080"}
     }
     , "belt": {
       "belt":     {"type": "blt", "id": "007", "fabric": "086"}
