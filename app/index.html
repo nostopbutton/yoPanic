@@ -12,18 +12,20 @@
         <meta name="google-site-verification" content="pUkTUYdu_NIAmwwQJcRay-D7ctXNv0hB-viL6HFOrhw" />
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <!-- build:css style/app.js -->
         <link rel="stylesheet" href="styles/main.css">
 
         <!--TODO- why are these not compiled into main.css?? -->
-        <link rel="stylesheet" href="styles/db-parts-sprite.css">
-        <link rel="stylesheet" href="styles/db-icons-sprite.css">
-        <link rel="stylesheet" href="styles/silhouette-sprite.css">
-        <link rel="stylesheet" href="styles/items-sprite.css">
+        <link rel="stylesheet" href="styles/sprites/db-parts-sprite.css">
+        <link rel="stylesheet" href="styles/sprites/db-icons-sprite.css">
+        <link rel="stylesheet" href="styles/sprites/silhouette-sprite.css">
+        <link rel="stylesheet" href="styles/sprites/items-sprite.css">
         <!-- Added by me -->
-        <link rel="stylesheet" href="styles/theme.css">
+        <link rel="stylesheet" href="styles/styles/theme.css">
         <!-- TODO - should extract footer-->
-        <link rel="stylesheet" href="styles/app.css"/>
-        <link rel="stylesheet" href="styles/dont-panic.css"/>
+        <link rel="stylesheet" href="styles/styles/app.css"/>
+        <link rel="stylesheet" href="styles/styles/dont-panic.css"/>
+        <!-- endbuild -->
 
     </head>
     <body ng-app="panicApp">
@@ -55,8 +57,8 @@
         <!--<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>-->
 
         <!-- build:js scripts/yo.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/plugins.js"></script>
+        <script src="scripts/app/app.js"></script>
+        <script src="scripts/app/plugins.js"></script>
         <script src="scripts/services/analytics.js"></script>
         <script src="scripts/services/referenceDataServices.js"></script>
         <script src="scripts/directives/designBuildDirectives.js"></script>
