@@ -11,7 +11,7 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    public: 'dist/public',
+    public_dist: 'dist/public',
     express_dist: 'dist'
   };
 
@@ -71,6 +71,15 @@ module.exports = function (grunt) {
             ];
           }
         }
+      },
+      dist: {
+        options: {
+          middleware: function (connect) {
+            return [
+              mountFolder(connect, 'dist')
+            ];
+          }
+        }
       }
     },
     open: {
@@ -108,7 +117,9 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
+        '<%= yeoman.app %>/scripts/{,*/}*.js',
+        '!<%= yeoman.app %>/scripts/vendor/*',
+        'test/spec/{,*/}*.js'
       ]
     },
     karma: {
@@ -154,12 +165,44 @@ module.exports = function (grunt) {
         }
       }
     },
-    concat: {
+    // not used since Uglify task does concat,
+    // but still available if needed
+//    concat: {
+//      dist: {
+//        files: {
+//          '<%= yeoman.public_dist %>/scripts/scripts.js': [
+//            '.tmp/scripts/{,*/}*.js',
+//            '<%= yeoman.app %>/scripts/{,*/}*.js'
+//          ]
+//        }
+//      }
+//    },
+    // not enabled since usemin task does concat and uglify
+    // check index.html to edit your build targets
+    // enable this task if you prefer defining your build targets here
+//    uglify: {
+//      options: {
+//        report: 'gzip'
+//        , mangle: false
+//        , preserveComments: true
+//        , beautify: true
+//      },
+//      dist: {
+//        files: {
+//          '<%= yeoman.public_dist %>/scripts/scripts.js': [
+//            '<%= yeoman.public_dist %>/scripts/scripts.js'
+//          ]
+//        }
+//      }
+//    },
+    rev: {
       dist: {
         files: {
-          '<%= yeoman.public %>/scripts/scripts.js': [
-            '.tmp/scripts/{,*/}*.js',
-            '<%= yeoman.app %>/scripts/{,*/}*.js'
+          src: [
+            '<%= yeoman.public_dist %>/scripts/{,*/}*.js',
+            '<%= yeoman.public_dist %>/styles/{,*/}*.css',
+            '<%= yeoman.public_dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.public_dist %>/styles/fonts/*'
           ]
         }
       }
@@ -167,14 +210,14 @@ module.exports = function (grunt) {
     useminPrepare: {
       html: '<%= yeoman.app %>/index.html',
       options: {
-        dest: '<%= yeoman.public %>'
+        dest: '<%= yeoman.public_dist %>'
       }
     },
     usemin: {
-      html: ['<%= yeoman.public %>/{,*/}*.html'],
-      css: ['<%= yeoman.public %>/styles/{,*/}*.css'],
+      html: ['<%= yeoman.public_dist %>/{,*/}*.html'],
+      css: ['<%= yeoman.public_dist %>/styles/{,*/}*.css'],
       options: {
-        dirs: ['<%= yeoman.public %>']
+        dirs: ['<%= yeoman.public_dist %>']
       }
     },
     imagemin: {
@@ -183,7 +226,17 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.public %>/images'
+          dest: '<%= yeoman.public_dist %>/images'
+        }]
+      }
+    },
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/images',
+          src: '{,*/}*.svg',
+          dest: '<%= yeoman.public_dist %>/images'
         }]
       }
     },
@@ -193,7 +246,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= yeoman.public %>/styles/main.css': [
+          '<%= yeoman.public_dist %>/styles/main.css': [
             '.tmp/styles/{,*/}*.css',
             '<%= yeoman.app %>/styles/{,*/}*.css'
           ]
@@ -203,54 +256,40 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
-//          removeCommentsFromCDATA: false,
-//////          https://github.com/yeoman/grunt-usemin/issues/44
-//          collapseWhitespace: false,
-//          collapseBooleanAttributes: false,
-//          removeAttributeQuotes: false,
-//          removeRedundantAttributes: false,
-//          useShortDoctype: false,
-//          removeEmptyAttributes: false,
-//          removeOptionalTags: false
+          /*removeCommentsFromCDATA: true,
+           // https://github.com/yeoman/grunt-usemin/issues/44
+           //collapseWhitespace: true,
+           collapseBooleanAttributes: true,
+           removeAttributeQuotes: true,
+           removeRedundantAttributes: true,
+           useShortDoctype: true,
+           removeEmptyAttributes: true,
+           removeOptionalTags: true*/
         },
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
           src: ['*.html', 'views/*.html'],
-          dest: '<%= yeoman.public %>'
+          dest: '<%= yeoman.public_dist %>'
         }]
       }
     },
     cdnify: {
       dist: {
-        html: ['<%= yeoman.public %>/*.html']
+        html: ['<%= yeoman.public_dist %>/*.html']
       }
     },
     ngmin: {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.public %>/scripts',
+          cwd: '<%= yeoman.public_dist %>/scripts',
           src: '*.js',
-          dest: '<%= yeoman.public %>/scripts'
+          dest: '<%= yeoman.public_dist %>/scripts'
         }]
       }
     },
-    uglify: {
-      options: {
-        report: 'gzip'
-        , mangle: false
-        , preserveComments: true
-        , beautify: true
-      },
-      dist: {
-        files: {
-          '<%= yeoman.public %>/scripts/scripts.js': [
-            '<%= yeoman.public %>/scripts/scripts.js'
-          ]
-        }
-      }
-    },
+    // https://github.com/ahutchings/grunt-install-dependencies
     'install-dependencies': {
       options: {
         cwd: '<%= yeoman.express_dist %>'
@@ -259,25 +298,14 @@ module.exports = function (grunt) {
         , failOnError: true
       }
     },
-    rev: {
-      dist: {
-        files: {
-          src: [
-            '<%= yeoman.public %>/scripts/{,*/}*.js',
-            '<%= yeoman.public %>/styles/{,*/}*.css',
-            '<%= yeoman.public %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.public %>/styles/fonts/*'
-          ]
-        }
-      }
-    },
+    // Put files not handled in other tasks here
     copy: {
       dist: {
         files: [{
           expand: true,
           dot: true,
           cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.public %>',
+          dest: '<%= yeoman.public_dist %>',
           src: [
             '*.{ico,txt}',
             '.htaccess',
@@ -307,7 +335,7 @@ module.exports = function (grunt) {
           expand: true,
           dot: true,
           cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.public %>',
+          dest: '<%= yeoman.public_dist %>',
           src: [
             '*.{ico,txt}',
             '.htaccess',
@@ -334,57 +362,62 @@ module.exports = function (grunt) {
           }
         }]
       }
+    },
+    concurrent: {
+      server: [
+        'coffee:dist',
+        'compass:server'
+      ],
+      test: [
+        'coffee',
+        'compass'
+      ],
+      dist: [
+        'coffee',
+        'compass:dist',
+        'imagemin',
+        'svgmin',
+        'htmlmin'
+      ],
+      quick_dist: [
+        'coffee',
+        'compass:dist'
+      ]
     }
   });
 
   grunt.renameTask('regarde', 'watch');
 
-//  var exec = require('child_process').exec;
-//
-//  grunt.registerTask('install-dependencies', 'Installs npm dependencies.', function () {
-//    var cb, options, cp;
-//
-//    cb = this.async();
-//    options = this.options({
-//      cwd: '',
-//      stdout: true,
-//      stderr: true,
-//      failOnError: true
-//    });
-//    cp = exec('npm install', {cwd: options.cwd}, function (err, stdout, stderr) {
-//      if (err && options.failOnError) {
-//        grunt.warn(err);
-//      }
-//      cb();
-//    });
-//
-//    grunt.verbose.writeflags(options, 'Options');
-//
-//    if (options.stdout || grunt.option('verbose')) {
-//      console.log("Running npm install in: " + options.cwd)
-//      cp.stdout.pipe(process.stdout);
-//    }
-//
-//    if (options.stderr || grunt.option('verbose')) {
-//      cp.stderr.pipe(process.stderr);
-//    }
-//  });
+//  grunt.registerTask('server', [
+//    'clean:server',
+//    'coffee:dist',
+//    'compass:server',
+//    'livereload-start',
+//    'connect:livereload',
+//    'open',
+//    'watch'
+//  ]);
 
+  grunt.registerTask('server', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+    }
 
-  grunt.registerTask('server', [
-    'clean:server',
-    'coffee:dist',
-    'compass:server',
-    'livereload-start',
-    'connect:livereload',
-    'open',
-    'watch'
-  ]);
+    grunt.task.run([
+      'clean:server',
+      'concurrent:server',
+      'livereload-start',
+      'connect:livereload',
+      'open',
+      'watch'
+    ]);
+  });
 
   grunt.registerTask('test', [
     'clean:server',
-    'coffee',
-    'compass',
+//    'coffee',
+//    'compass',
+    'concurrent:test',
     'connect:test',
     'karma'
   ]);
@@ -393,43 +426,43 @@ module.exports = function (grunt) {
     'clean:dist',
 //    'jshint',
 //    'test',
-    'coffee',
-    'compass:dist',
+//    'coffee',
+//    'compass:dist',
     'useminPrepare',
-    'imagemin',
+    'concurrent:dist',
+//    'imagemin',
     'cssmin',
 //    'htmlmin',
     'concat',
+//    'uglify',??
     'copy',
     'cdnify',
     'ngmin',
-    'uglify',
-//    'rev',
+    'rev',
     'usemin'
     , 'install-dependencies'
   ]);
 
   grunt.registerTask('quick', [
     'clean:quick_dist',
-//    'jshint',
-//    'test',
-    'coffee',
-    'compass:dist',
     'useminPrepare',
-//    'imagemin',
+    'concurrent:quick_dist',
     'cssmin',
-//    'htmlmin',
     'concat',
     'copy:quick_dist',
     'cdnify',
     'ngmin',
-    'uglify',
-//    'rev',
+//    'uglify', ??
+    'rev',
     'usemin'
-//    , 'npm_install'
     , 'install-dependencies'
   ]);
 
-  grunt.registerTask('default', ['build']);
-  grunt.registerTask('inst', ['install-dependencies']);
+  grunt.registerTask('default', [
+    'jshint',
+    'test',
+    'build'
+  ]);
+
+//  grunt.registerTask('inst', ['install-dependencies']);
 };

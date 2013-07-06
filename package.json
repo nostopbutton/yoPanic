@@ -27,11 +27,13 @@
     "grunt-rev": "~0.1.0",
     "grunt-karma": "~0.4.4",
     "grunt-open": "~0.2.0",
-    "grunt-install-dependencies": "git://github.com/nostopbutton/grunt-install-dependencies",
+    "grunt-install-dependencies": "~0.1.0",
     "matchdep": "~0.1.2",
     "grunt-google-cdn": "~0.1.4",
-    "grunt-ngmin": "~0.0.2"
-    , "chai": "~1.6.0"
+    "grunt-ngmin": "~0.0.2",
+    "chai": "~1.6.0",
+    "grunt-concurrent": "~0.3.0",
+    "grunt-svgmin": "~0.2.0"
   },
   "engines": {
     "node": ">=0.8.0"
