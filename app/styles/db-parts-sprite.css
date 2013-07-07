@@ -10,7 +10,7 @@
 
 */
 
-.db-parts-sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../../images/db-parts-sprite.png);}
+.db-parts-sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../images/db-parts-sprite.png);}
 
 .ext-005-004 {width:200px; height:513px; background-position: -606px -1061px}
 .ext-005-005 {width:200px; height:513px; background-position: -202px -1062px}

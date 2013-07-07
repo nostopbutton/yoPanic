@@ -11,7 +11,7 @@
 */
 
 .db-silhouettes-sprite {
-    display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../../images/db-silhouettes-sprite.png);}
+    display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../images/db-silhouettes-sprite.png);}
 
 .fittedsheath {width:200px; height:349px; background-position: -0px -4637px}
 .flarefitted {width:202px; height:316px; background-position: -0px -2206px}
