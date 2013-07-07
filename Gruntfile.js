@@ -375,8 +375,8 @@ module.exports = function (grunt) {
       dist: [
         'coffee',
         'compass:dist',
-        'imagemin',
-        'svgmin',
+//        'imagemin',
+//        'svgmin',
         'htmlmin'
       ],
       quick_dist: [
@@ -431,9 +431,9 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
 //    'imagemin',
-    'cssmin',
 //    'htmlmin',
     'concat',
+    'cssmin',
 //    'uglify',
     'copy',
     'cdnify',
@@ -447,8 +447,8 @@ module.exports = function (grunt) {
     'clean:quick_dist',
     'useminPrepare',
     'concurrent:quick_dist',
-    'cssmin',
     'concat',
+    'cssmin',
     'copy:quick_dist',
     'cdnify',
     'ngmin',
