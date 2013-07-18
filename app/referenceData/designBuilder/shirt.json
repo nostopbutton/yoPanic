@@ -6,7 +6,7 @@
       , "sleeves":  {"type": "slv", "id": "016", "fabric": "080"}
     }
     , "belt": {
-      "belt":     {"type": "blt", "id": "007", "fabric": "086"}
+      "belt":     {"type": "blt", "id": "002", "fabric": "164"}
     }
     , "extras": {
       "pockets": {"type": "ext", "id": "000", "fabric": "003"}
@@ -71,7 +71,7 @@
       {
         "part_name": "belt"
         , "type": "blt"
-        , "label": "Shit Fabric"
+        , "label": "Fabric"
         , "fabricSets": [ {"setId": "p-sk"}]
         , "values": [
           {"id": "008"}

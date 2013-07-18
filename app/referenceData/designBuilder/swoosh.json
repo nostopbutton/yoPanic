@@ -36,7 +36,7 @@
       , {"id": "009"}
     ]
       , "trim": true
-      , "trimFabricSets": [ {"setId": "trm"}]
+      , "trimFabricSets": [ {"setId": "s-tr"}]
     }
     ,{
       "part_name": "sleeves"
@@ -62,6 +62,7 @@
         , {"id": "034"}
       ]
       , "trim": false
+      , "trimFabricSets": [{"setId": "s-tr"}]
     }
   ]
   }

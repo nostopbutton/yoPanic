@@ -432,8 +432,8 @@ module.exports = function (grunt) {
     'concurrent:dist',
 //    'imagemin',
 //    'htmlmin',
-    'concat',
-    'cssmin',
+    'concat', // SWAPPED
+    'cssmin', // SWAPPED
 //    'uglify',
     'copy',
     'cdnify',
