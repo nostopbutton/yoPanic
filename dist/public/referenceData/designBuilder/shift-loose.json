@@ -6,7 +6,7 @@
       , "sleeves":  {"type": "slv", "id": "006", "fabric": "080"}
     }
     , "belt": {
-      "belt":     {"type": "blt", "id": "004", "fabric": ""}
+      "belt":     {"type": "blt", "id": "002", "fabric": "169"}
     }
     , "extras": {
       "peplum": {"type": "ext", "id": "000", "fabric": "003"}

@@ -71,6 +71,7 @@
       ]
       , "lengths": [1,2,4]
       , "trim": false
+      , "trimFabricSets": [{"setId": "s-tr"}]
     }
     ]
   }
