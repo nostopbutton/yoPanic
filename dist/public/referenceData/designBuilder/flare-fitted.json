@@ -60,8 +60,8 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}, {"setId": "x-sq"}]
       , "values": [
-        {"id": "070"},
-        {"id": "071"}
+        {"id": "071"},
+        {"id": "072"}
       ]
     }
     ]
