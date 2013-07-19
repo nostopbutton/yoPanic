@@ -6,7 +6,7 @@
       , "sleeves":  {"type": "slv", "id": "001", "fabric": "003"}
     }
     , "belt": {
-      "belt":     {"type": "blt", "id": "003", "fabric": "005"}
+      "belt":     {"type": "blt", "id": "002", "fabric": "011"}
     }
     , "extras": {
       "peplum": {"type": "ext", "id": "000", "fabric": "003"}
@@ -60,8 +60,8 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "values": [
-        {"id": "050"},
-        {"id": "051"}
+        {"id": "051"},
+        {"id": "052"}
       ]
     }
     ]
