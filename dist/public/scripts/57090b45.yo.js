@@ -105,7 +105,7 @@ angular.module('analytics', []).run([
     console.log('run analytics');
     _gaq.push([
       '_setAccount',
-      'UA-38964974-1'
+      'UA-42859790-2'
     ]);
     _gaq.push([
       '_setDomainName',
