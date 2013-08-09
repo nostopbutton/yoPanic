@@ -25,24 +25,24 @@
         <div class="span12 container-fluid">
         <div ng-repeat="dress in dresses">
             <div class="span3 container-fluid row-divider">
-                <div class="row-fluid item title">
-                    <div class="span12">
-                        {{dress.name}}
-                    </div>
-                </div>
-                <!--<div class="row-fluid">-->
-                    <!--<div class="span12 item divider"></div>-->
+                <!--<div class="row-fluid item title">-->
+                    <!--<div class="span12">-->
+                        <!--{{dress.name}}-->
+                    <!--</div>-->
                 <!--</div>-->
-                <div class="row-fluid item purchase">
-                    <div class="span6 purchase price">
-                        <p class=""><i><b>HKD {{dress.price}} </b></i></p>
-                    </div>
+                <!--&lt;!&ndash;<div class="row-fluid">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="span12 item divider"></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--<div class="row-fluid item purchase">-->
+                    <!--<div class="span6 purchase price">-->
+                        <!--<p class=""><i><b>HKD {{dress.price}} </b></i></p>-->
+                    <!--</div>-->
 
-                    <div class="span6 purchase buy-button">
-                        <a class="btn btn-mini btn-info" id="buy-button" data-toggle="modal" href="#purchase" onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'buy', '{{dress.silId}}/{{dress.itemId}}']);">Buy Now</a>
-                        <!--<button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'cancel']);">Buy</button>&lt;!&ndash;<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>&ndash;&gt;-->
-                    </div>
-                </div>
+                    <!--<div class="span6 purchase buy-button">-->
+                        <!--<a class="btn btn-mini btn-info" id="buy-button" data-toggle="modal" href="#purchase" onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'buy', '{{dress.silId}}/{{dress.itemId}}']);">Buy Now</a>-->
+                        <!--&lt;!&ndash;<button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'cancel']);">Buy</button>&lt;!&ndash;<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>&ndash;&gt;&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="row-fluid item image">
                     <div class="span12">
 
@@ -53,13 +53,29 @@
 
                     </div>
                 </div>
-                <div class="row-fluid item customize" >
-                    <div class="span12">
-                        <a class="btn btn-small btn-info" id="customize-button" data-toggle="modal" href="#/design/{{dress.silId}}/{{dress.itemId}}" onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (button)', '{{dress.silId}}/{{dress.itemId}}']);">Customize dress</a>
-                        <!--<button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'cancel']);">Details</button>&lt;!&ndash;<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>&ndash;&gt;-->
-                        <!--<button form="selection_form" ng-click="save()" ng-disabled="isSaveDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'save']);">Customize</button>&lt;!&ndash;<a class="btn" id="save-dress" href="#">Add to bag &raquo;</a>&ndash;&gt;-->
-                    </div>
+              <a class="" id="customize-button" data-toggle="modal" href="#/design/{{dress.silId}}/{{dress.itemId}}" onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (button)', '{{dress.silId}}/{{dress.itemId}}']);">
+                <div class="row-fluid item title">
+                  <div class="span12">
+                    {{dress.name}}
+                  </div>
                 </div>
+                <!--<div class="row-fluid">-->
+                <!--<div class="span12 item divider"></div>-->
+                <!--</div>-->
+                <div class="row-fluid item title">
+                  <div class="span12">
+                    <p class="">HKD {{dress.price}}</p>
+                  </div>
+                </div>
+              </a>
+
+                <!--<div class="row-fluid item customize" >-->
+                    <!--<div class="span12">-->
+                        <!--<a class="btn btn-small btn-info" id="customize-button" data-toggle="modal" href="#/design/{{dress.silId}}/{{dress.itemId}}" onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (button)', '{{dress.silId}}/{{dress.itemId}}']);">Customize dress</a>-->
+                        <!--&lt;!&ndash;<button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'cancel']);">Details</button>&lt;!&ndash;<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>&ndash;&gt;&ndash;&gt;-->
+                        <!--&lt;!&ndash;<button form="selection_form" ng-click="save()" ng-disabled="isSaveDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'save']);">Customize</button>&lt;!&ndash;<a class="btn" id="save-dress" href="#">Add to bag &raquo;</a>&ndash;&gt;&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
         </div> <!-- /ng-repeat -->
     </div>
