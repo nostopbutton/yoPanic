@@ -294,7 +294,7 @@ var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
 designBuildDirective.directive('drawDress', function () {
   return {
     scope: { dress: '=' },
-    template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
+    template: '<div ng-repeat="selection in dress" class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.fabric}}"></div>'
   };
 });
 designBuildDirective.directive('drawTrim', function () {
