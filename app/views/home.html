@@ -1,30 +1,115 @@
 <div id="homePageView" class="container">
-    <div class="container-fluid">
-        <div class="row-fluid">
-
-            <!--<div class="hero-unit">-->
-                <div class="row-fluid">
-                    <h1>Experience custom - feel AMAZING!</h1>
-                </div>
-            <!--</div>-->
-        </div>
-        <div class="row-fluid">
-            <div ng-controller="HomeCarouselCtrl">
-                <carousel interval="myInterval">
-                    <slide ng-repeat="slide in slides" active="slide.active">
-                        <img ng-src="{{slide.image}}" style="margin:auto;">
-                        <div class="carousel-caption">
-                            <h4>{{slide.text}}</h4>
-                        </div>
-                    </slide>
-                </carousel>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <p>
-                Your unique dress will arrive in 3 weeks and if it is not exactly how you dreamt it would be we will arrange tailoring, remake it free of charge or offer a full refund if returned unworn within 30 days of purchase*
-            </p>
-        </div>
+  <!--<div class="container-fluid">-->
+    <div class="row strap-line">
+      <span class="small not-mobile">Experience custom<span class="desktop-only">, make your own design with the click of a few buttons</span> - feel</span> <span class="large not-mobile"> Amazing!</span>
     </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <img class="img-responsive" src="/images/home/AURZA_BANNER1.png">
+      <!--<div ng-controller="HomeCarouselCtrl">-->
+        <!--<carousel interval="myInterval">-->
+          <!--<slide ng-repeat="slide in slides" active="slide.active">-->
+            <!--<img ng-src="{{slide.image}}" style="margin:auto;">-->
+
+            <!--<div class="carousel-caption">-->
+              <!--<h4>{{slide.text}}</h4>-->
+            <!--</div>-->
+          <!--</slide>-->
+        <!--</carousel>-->
+      <!--</div>-->
+      </div>
+    </div>
+    <div class="row">
+      <div class=" col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12  container">
+        <div class="row ">
+          <div class="col-sm-4 col-xs-12 inset">
+            <a href="#design">
+              <img class="img-responsive" src="/images/home/inset1.png">
+            </a>
+          </div>
+          <div class="col-sm-4 col-xs-12 inset">
+          <a href="#collection">
+            <img class="img-responsive" src="/images/home/inset2.png">
+          </a>
+          </div>
+          <div class="col-sm-4 col-xs-12 inset">
+            <img class="img-responsive" src="/images/home/inset3.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="info-box col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+        <div class="row strap-line">
+          <span class="large">--- How it works ---</span>
+          </div>
+        <div class="row">
+          <div class="info-box-item col-sm-4">
+            <div class="title">
+              1. Choose
+            </div>
+            <div class="icon">
+              <img class="img-responsive" src="/images/home/1-Choose.png">
+            </div>
+            <div class="info">
+              <strong>CHOOSE</strong> your favourite dress silhouette or ready-to-buy design.
+            </div>
+          </div>
+          <div class="info-box-item col-sm-4">
+            <div class="title">
+              2. Customise
+            </div>
+            <div class="icon">
+              <img class="img-responsive" src="/images/home/2-Customise.png">
+            </div>
+            <div class="info">
+              Click <strong>CUSTOMISE</strong> to change anything you want to BUY to take it as it is.
+            </div>
+          </div>
+          <div class="info-box-item col-sm-4">
+            <div class="title">
+              3. Deliver
+            </div>
+            <div class="icon">
+              <img class="img-responsive" src="/images/home/3-Deliver.png">
+            </div>
+            <div class="info">
+              Once you have paid through our secure payment gateway, we will make your design exclusively for you and send it to you within <strong>3 weeks</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="info-box-item col-md-12">
+            <div class="row">
+            <!--<div clas="title"></div>-->
+              <div class="col-sm-6 icon wide">
+                <img class="" src="/images/home/4-Cherish.png">
+              </div>
+              <div class="col-sm-6 info wide">
+                <p class="large">We hope that you will <strong>CHERISH</strong> your creation.</p>
+                But if it is not exactly how you dreamt it would be. We will provide 300HKD for local tailoring, remaking it free-of-charge or offer a full refund if returned unworn within 30 days of purchase*
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-3 col-sm-offset-0">
+        <img class="" src="/images/home/Think.png">
+      </div>
+      <div class="col-md-2 col-sm-3">
+        <p>I've never customised before, will it hurt?</p>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="outer">
+          <div class="inner">
+            <p>Don't worry, it's very simple and if you aren't happy with your garment you can return it within 30 days or get it altered.</p>
+            <a class="btn btn-danger" href="#design">Design your own now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
 </div> <!-- /container -->
 

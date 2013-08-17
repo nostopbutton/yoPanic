@@ -1,60 +1,90 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title>Aurza- experience custom</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <meta name="google-site-verification" content="pUkTUYdu_NIAmwwQJcRay-D7ctXNv0hB-viL6HFOrhw" />
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--TODO - add description -->
+  <meta name="description" content="">
+  <meta name="google-site-verification" content="pUkTUYdu_NIAmwwQJcRay-D7ctXNv0hB-viL6HFOrhw"/>
+
+  <title>Aurza - experience custom</title>
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- Standard iPhone -->
+  <link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone-114.png" />
+  <!-- Retina iPhone -->
+  <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114.png" />
+  <!-- Standard iPad -->
+  <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad-144.png" />
+  <!-- Retina iPad -->
+  <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png" />
+
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/custom_bootstrap.css">
+
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <link rel="stylesheet" href="styles/7206d978.main.css">
+
+</head>
+<body ng-app="panicApp">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+  today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+  experience this site.</p>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="components/es5-shim/es5-shim.js"></script>
+<script src="components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+<div ng-include="'views/header.html'"></div>
+<div ng-view></div>
+<div ng-include="'views/footer.html'"></div>
+
+<!-- TODO just used for Google Analytics convertPathToQueryString - can we remove? -->
+<!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+
+<script src="components/angular/angular.min.js"></script>
+<script src="components/angular-resource/angular-resource.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-cookies.min.js"></script>-->
+<script src="components/angular-sanitize/angular-sanitize.min.js"></script>
+<!--<script src="components/angular-ui/build/angular-ui.min.js"></script>-->
+<script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="components/angular-jquery/dist/angular-jquery.min.js"></script>
+<script src="components/angular-bootstrap-affix/dist/angular-bootstrap-affix.min.js"></script>
+<script src="components/angular-ui-utils/modules/scrollfix/scrollfix.js"></script>
+
+<!-- TODO Do I need this?-->
+<!--<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>-->
+
+<script src="scripts/e5e9df48.yo.js"></script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-42859790-2', 'aurza.com');
+  ga('send', 'pageview');
 
 
-
-        <link rel="stylesheet" href="styles/43b6c3e9.main.css">
-
-    </head>
-    <body ng-app="panicApp">
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
-            today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
-            experience this site.</p>
-        <![endif]-->
-
-        <!--[if lt IE 9]>
-        <script src="components/es5-shim/es5-shim.js"></script>
-        <script src="components/json3/lib/json3.min.js"></script>
-        <![endif]-->
-
-        <div ng-include="'views/header.html'"></div>
-        <div ng-view></div>
-        <div ng-include="'views/footer.html'"></div>
-
-        <!-- TODO just used for Google Analytics convertPathToQueryString - can we remove? -->
-        <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-
-        <script src="components/angular/angular.min.js"></script>
-        <script src="components/angular-resource/angular-resource.min.js"></script>
-        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-cookies.min.js"></script>-->
-        <script src="components/angular-sanitize/angular-sanitize.min.js"></script>
-        <!--<script src="components/angular-ui/build/angular-ui.min.js"></script>-->
-        <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        <!-- TODO Do I need this?-->
-        <!--<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>-->
-
-        <script src="scripts/bbe6dbd0.yo.js"></script>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-42859790-2', 'aurza.com');
-        ga('send', 'pageview');
-
-      </script>
-    </body>
+</script>
+</body>
 </html>

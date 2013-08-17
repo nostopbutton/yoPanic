@@ -77,50 +77,35 @@
     </form>
 </div>
 
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class= "container">
-            <div class="pull-left">
-                <a class="logo" href="#home"><img src="/images/aurza_logo.png"></a>
-                <!--<a class="new_logo2" href="#home">AURZA</a>-->
-            </div>
-            <div class="pull-left">
-                <p class="handwriting">experience custom</p>
-            </div>
-            <div class="nav-collapse collapse">
-                <ul class="nav pull-right">
-                    <li><a data-toggle="modal" href="#myModal">SIGN-UP</a></li>
-                    <li><a data-toggle="modal" href="#loginModal">MY-ACCOUNT</a></li>
-                    <li><a href="#wishlist">MY-WISHLIST</a></li>
-                    <li><a href="#bag">MY-BAG</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="navbar-inverse">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav pull-left">
-                        <li><a href="#collection">Shop the collection</a></li>
-                        <li class="active handwriting"><a href="#design">DESIGN YOUR OWN</a></li>
-                        <!--<li><a href="#gallery">Gallery</a></li>-->
-                        <li><a href="#fit">A better fit</a></li>
-                        <li><a href="#fabrics">Browse fabrics</a></li>
-                        <li><a href="#party">Book a party</a></li>
-                        <!--<li><a href="#newdesign/sheath-new">New Sheathy</a></li>-->
-                    </ul>
-                    <ul class="nav pull-right">
-                        <li><a href="#about">ABOUT AURZA</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </div>
-    </div>
-</div>
+<nav class="navbar navbar-fixed-top" role="navigation">
+
+  <div class="container">
+    <!--<div class="navbar-header">-->
+      <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-aurza-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="centeredImage">
+        <a class="logo" href="#home"><img src="/images/aurza_logo.png"></a>
+        <!--<a class="new_logo2" href="#home">AURZA</a>-->
+      </div>
+    <!--</div>-->
+
+    <!-- Place everything within .nav-collapse to hide it until above 768px -->
+    <div class="collapse navbar-collapse navbar-aurza-collapse">
+      <div class="navbar-inner">
+        <ul class="nav navbar-nav">
+          <li><a href="#collection">Shop the collection</a></li>
+          <li><a href="#design">Design your own</a></li>
+          <li><a href="#fit">A better fit</a></li>
+          <li><a href="#fabrics">Browse fabrics</a></li>
+          <li><a href="#party">Book a party</a></li>
+          <li><a href="#about">About AURZA</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div><!-- /.nav-collapse -->
+  </div><!-- /.container -->
+</nav><!-- /.navbar -->

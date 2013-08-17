@@ -85,8 +85,6 @@ table tr a {
 .body {
     z-index:0;
 
-
-
     transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
