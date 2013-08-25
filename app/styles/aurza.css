@@ -1,3 +1,7 @@
+.view {
+    margin-top: 20px;
+}
+
 .strap-line {
     /*height:55px;*/
     /*line-height: 50px;*/
@@ -7,6 +11,13 @@
     color: #888;
     margin-top:10px;
     margin-bottom: 5px;
+}
+
+.strap-line > .very-small {
+    color: #888;
+    font-size:18px;
+    vertical-align:middle;
+    margin: 0px;
 }
 
 .strap-line > .small {
@@ -461,3 +472,111 @@
     margin-bottom: 20px;
 
 }
+
+.quote.left{
+    /*color: red;*/
+    width: 24px;
+}
+
+.quote.right{
+    /*color: red;*/
+    float:right;
+    width: 24px;
+}
+
+.quote.text{
+    /*color: red;*/
+    float:left;
+}
+
+/*http://www.webmaster-source.com/2012/04/24/pure-css-blockquote-styling/*/
+blockquote {
+    /*font-family: Georgia, serif;*/
+    /*font-size: 18px;*/
+    /*font-style: italic;*/
+    /*width: 500px;*/
+    /*margin: 0.25em 0;*/
+    /*padding: 0.25em 40px;*/
+    /*line-height: 1.45;*/
+    /*position: relative;*/
+    /*color: #383838;*/
+    font-family:"Times New Roman", Times, serif;
+    font-size:24px;
+    font-style:italic;
+    color: #888;
+    margin: 0px 10px 0px 0px;
+    /*margin-bottom: 20px;*/
+    /* Reset Bootstrap blockquote attributes */
+    border-left:0px;
+    padding:0px;
+
+}
+blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -40px;
+    top: -25px;
+    color: #7a7a7a;
+}
+blockquote:after {
+    /*display: block;*/
+    content: "\201D";
+    font-size: 80px;
+    position: absolute;
+    /*left: 20px;*/
+    /*top: 20px;*/
+    color: #7a7a7a;
+    margin-top: -10px;
+    margin-left: -5px;
+}
+
+
+blockquote cite {
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+/*blockquote.style5 {*/
+    /*font: 12px/18px normal "Courier New", sans-serif;*/
+    /*padding-left: 70px;*/
+    /*padding-top: 2px;*/
+    /*padding-bottom: 2px;*/
+    /*background-color: #000;*/
+    /*color: white;*/
+    /*border-top: 1px solid #ccc;*/
+    /*border-bottom: 1px solid #ccc;*/
+    /*margin: 5px;*/
+    /*background-image: url(images/openquote5.gif);*/
+    /*background-position: middle left;*/
+    /*background-repeat: no-repeat;*/
+    /*text-indent: 23px;*/
+/*}*/
+/*blockquote.style5 div {*/
+    /*padding-right: 50px;*/
+    /*display: block;*/
+    /*background-image: url(images/closequote5.gif);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: bottom right;*/
+/*}*/
+
+/** blockquote styles **/
+/*.bq3 { */
+    /*width: 400px; */
+    /*background: url('http://i47.tinypic.com/a9l0g3.png') top left no-repeat; */
+    /*padding-left: 55px; */
+    /*line-height: 18px; */
+    /*color: #575757; }*/
+/*.bq3 p { padding-right: 35px; */
+    /*line-height: 18px; */
+    /*background: url('http://i48.tinypic.com/eb1yrr.png') bottom right no-repeat; */
+    /*padding-bottom: 15px; */
+    /*color: #333; */
+    /*font-size: 13px; }*/

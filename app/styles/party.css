@@ -1,0 +1,40 @@
+.party {
+    margin-bottom: 40px;
+}
+
+.party .party-img {
+    margin:0px;
+    padding:0px;
+}
+
+.party .booking-form {
+    background-color: #e93629;
+    color:#ffffff;
+    margin:0px;
+    padding:20px;
+}
+
+.party .booking-form .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.party .booking-form .desc {
+    margin: 5px 0px 10px 0px;
+    font-size: 12px;
+}
+
+.party .booking-form label {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.party .booking-form button {
+    text-align:center;
+    font-size: 12px;
+    font-weight: normal;
+    color: #e93629;
+    width: 50%;
+    /*height: 30px;*/
+    margin:10px 0px 2px 0px;
+}
