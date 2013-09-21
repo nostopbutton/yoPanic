@@ -1,0 +1,86 @@
+<div id="shopItemView" class="container">
+
+  <div class="row">
+
+    <div class="col-md-10 col-md-offset-1">
+      <div shop-breadcrumb step="shop"></div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div id="view_dress_panel" class="col-md-5  col-md-offset-1">
+      <div class="container">
+        <div class="row dress">
+          <img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"
+               ng-src="images/dresses/{{item.img}}.png" class="">
+        </div>
+      </div>
+    </div>
+
+    <div id="dress_designer_panel" class="col-md-5">
+      <div class="container style">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row formal-name">
+              {{style.styleFormalName}}
+            </div>
+            <div class="row name">
+              {{style.styleName}}
+            </div>
+            <div class="row price">
+              HKD {{style.price}}
+            </div>
+          </div>
+          <div class="col-md-6 align-right">
+            <div class="row">
+              <a class="btn btn-mini btn-danger" id="buy" href="#/purchase"
+                 onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
+                Choose size and checkout</a>
+            </div>
+            <div class="row">
+              ...add social icons here
+            </div>
+          </div>
+        </div>
+
+        <div class="row top-border">
+          <ul>
+            <li class="description">{{style.strapline}}</li>
+            <li class="description" ng-repeat="para in style.description">{{para}}</li>
+          </ul>
+        </div>
+        <div class="row top-border">
+          <h4>Info</h4>
+          <li class="info" ng-repeat="para in style.care">{{para}}</li>
+        </div>
+        <div class="row top-border customise">
+          Add your own personal touches?
+          <a class="btn" id="customize" href="#!/design/{{style.styleId}}/{{item.itemId}}"
+             onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
+            Customize</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="debug_view">
+    <div class="col-md-12 align-center">
+      <a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>
+    </div>
+    <hr>
+    <div collapse="isDebugCollapsed">
+      <pre>form={{form}}</pre>
+      <pre>fabricSets={{fabricSets}}</pre>
+      <pre>trimFabricSets={{trimFabricSets}}</pre>
+      <pre>dressFabricSets={{dressFabricSets}}</pre>
+
+
+      <pre>master={{master}}</pre>
+      <pre>category={{category}}</pre>
+      <pre>design={{design}}</pre>
+      <pre>range={{range}}</pre>
+    </div>
+  </div>
+</div><!-- /designBuildView -->

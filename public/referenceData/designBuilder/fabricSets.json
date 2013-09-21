@@ -5,23 +5,23 @@
     , "description": "blurb about Viscose Crepe"
     , "fabrics":
       [
-        { "fabId": "003", "fabName" : "red"}
-        , { "fabId": "004", "fabName" : "violet"}
-        , { "fabId": "005", "fabName" : "dirty blue"}
-        , { "fabId": "007", "fabName" : "taupe"}
-        , { "fabId": "008", "fabName" : "cream"}
-        , { "fabId": "010", "fabName" : "mint"}
+        { "fabId": "010", "fabName" : "teal"}
         , { "fabId": "011", "fabName" : "black"}
+        , { "fabId": "015", "fabName" : "aubergine"}
+        , { "fabId": "008", "fabName" : "cream"}
         , { "fabId": "012", "fabName" : "grey"}
+        , { "fabId": "014", "fabName" : "midnight blue"}
       ]
   }
   ,{ "setId": "s-tr"
-    , "setName": "Viscose Crepe for Trim"
+    , "setName": "Trim Fabric"
     , "type": "Standard"
     , "description": "blurb about Viscose Crepe"
     , "fabrics":
     [
-        { "fabId": "011", "fabName" : "black"}
+        { "fabId": "120", "fabName" : "black faux leather"}
+      , { "fabId": "135", "fabName" : "black sequins"}
+      , { "fabId": "011", "fabName" : "black beads"}
     ]
   }
   ,{ "setId": "trm2"
@@ -61,8 +61,6 @@
     , "fabrics":
       [
         { "fabId": "120", "fabName" : "black"}
-        , { "fabId": "121", "fabName" : "cream"}
-        , { "fabId": "122", "fabName" : "grey"}
 
       ]
   }

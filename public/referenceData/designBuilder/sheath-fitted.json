@@ -1,14 +1,12 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "003", "fabric": "003"}
-      , "skirt":    {"type": "skt", "id": "011", "fabric": "003"}
-      , "sleeves":  {"type": "slv", "id": "001", "fabric": "003"}
-    }
-    , "belt": {
-      "belt":     {"type": "blt", "id": "004", "fabric": "120"}
+      "neckline":   {"type": "nek", "id": "001", "fabric": "011"}
+      , "skirt":    {"type": "skt", "id": "012", "fabric": "011"}
+      , "sleeves":  {"type": "slv", "id": "009", "fabric": "011"}
     }
     , "extras": {
+      "belt":     {"type": "blt", "id": "004", "fabric": "000"},
       "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
     }
   }
@@ -22,7 +20,7 @@
   {
     "option_name": "design"
     , "active": "true"
-    , "label": "Basic Design"
+    , "label": "Customize Dress"
     , "parts": [
     {
       "part_name": "neckline"
@@ -31,10 +29,10 @@
       , "label": "Neckline"
       , "fabricSets": [{"setId": "s-vc"}, {"setId": "x-fl"}]
       , "values": [
-        {"id": "001"}
-        , {"id": "002"}
-        , {"id": "003"}
-        , {"id": "004"}
+        {"id": "001", "name": "bateau"}
+        , {"id": "002", "name": "scoop"}
+        , {"id": "003", "name": "v-slit"}
+        , {"id": "004", "name": "wrap"}
       ]
       , "trim": true
       , "trimFabricSets": [{"setId": "s-tr"}]
@@ -46,9 +44,10 @@
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "null_value": "000"
       , "values": [
-        {"id": "001"}
-        , {"id": "006"}
-        , {"id": "009"}
+        {"id": "001", "name": "none"}
+        , {"id": "002", "name": "cap"}
+        , {"id": "006", "name": "elbow"}
+        , {"id": "009", "name": "flared"}
       ]
       , "trim": true
       , "trimFabricSets": [{"setId": "s-tr"}]
@@ -59,70 +58,43 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "values": [
-        {"id": "011"}
-        , {"id": "012"}
-        , {"id": "014"}
-        , {"id": "022"}
-        , {"id": "024"}
-        , {"id": "051"}
-        , {"id": "052"}
-        , {"id": "071"}
-        , {"id": "072"}
+        {"id": "011", "name": "short"}
+        , {"id": "012", "name": "knee"}
+        , {"id": "014", "name": "long"}
+        , {"id": "024", "name": "ruffle"}
       ]
       , "lengths": [1,2,4]
-      , "trim": false
+      , "trim": true
       , "trimFabricSets": [{"setId": "s-tr"}]
     }
     ]
   }
   , {
-    "option_name": "belt"
-    , "label": "Belt"
-    , "parts": [
-      {
-        "part_name": "belt"
-        , "type": "blt"
-        , "label": "Ribbon"
-        , "fabricSets": [ {"setId": "x-pt"}]
-        , "values": [
-          {"id": "002"}
-        ]
-      }
-      , {
-        "part_name": "belt"
-        , "type": "blt"
-        , "label": "Fabric"
-        , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-sq"}]
-        , "values": [
-          {"id": "003"}
-        ]
-      }
-      , {
-        "part_name": "belt"
-        , "type": "blt"
-        , "label": "Obi"
-        , "active": "true"
-        , "fabricSets": [  {"setId": "x-fl"}]
-        , "values": [
-          {"id": "004"}
-        ]
-      }
-    ]}
-  , {
     "option_name": "extras"
     , "label": "Extras"
     , "parts": [
       {
+        "part_name": "belt"
+        , "type": "blt"
+        , "active": "true"
+        , "label": "Belt"
+        , "fabricSets": [ {"setId": "x-fl"}]
+        , "values": [
+        {"id": "004", "name": "obi"}
+        , {"id": "003", "name": "fabric"}
+        , {"id": "002", "name": "ribbon"}
+      ]
+      }
+      , {
         "part_name": "rosetta"
         , "type": "ext"
         , "label": "Rosetta"
-        , "active": "true"
         , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
         , "values": [
-          {"id": "000"}
-          , {"id": "003"}
+          {"id": "000", "name": "none"}
+          , {"id": "003", "name": "rosetta"}
         ]
       }
-  ]}
+    ]}
 ]
 }
