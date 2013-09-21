@@ -19,9 +19,9 @@
     , "description": "blurb about Viscose Crepe"
     , "fabrics":
     [
-        { "fabId": "120", "fabName" : "black faux leather"}
+      { "fabId": "011", "fabName" : "black beads"}
+      ,{ "fabId": "120", "fabName" : "black faux leather"}
       , { "fabId": "135", "fabName" : "black sequins"}
-      , { "fabId": "011", "fabName" : "black beads"}
     ]
   }
   ,{ "setId": "trm2"
