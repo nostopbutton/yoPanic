@@ -48,19 +48,7 @@ table tr a {
 }
 
 
-.dress {
-    /*margin-left:auto;*/
-    /*margin-right:auto;*/
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    /*margin-left: -100px;*/
-    /*margin-right: auto;*/
-    /*left:5px;*/
-    height: 510px;
-    width: 100%;
-}
+
 
 .admindress {
     /*margin-left:auto;*/
@@ -85,10 +73,10 @@ table tr a {
 .body {
     z-index:0;
 
-    transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
+    /*transition: all 0.5s ease;*/
+    /*-o-transition: all 0.5s ease;*/
+    /*-moz-transition: all 0.5s ease;*/
+    /*-webkit-transition: all 0.5s ease;*/
     /*background: lightblue;*/
     /*max-height: 50px; *//* 1000px works too */
     overflow: hidden;
@@ -96,9 +84,9 @@ table tr a {
 }
 /* The 'hidden' state to transition from & to */
 .body.ui-animate {
-    opacity: 0;
-    max-height: 0;
-    padding: 0 5px;
+    /*opacity: 0;*/
+    /*max-height: 0;*/
+    /*padding: 0 5px;*/
 }
 
 .left {
@@ -140,17 +128,17 @@ table tr a {
     text-align: center;
 }
 
-.pic {
+/*.pic {*/
 
-    position:absolute;
+    /*position:absolute;*/
     /*height: 550px;*/
-    float:left;
+    /*float:left;*/
 
-    left:100px;
-    width:200px;
+    /*left:100px;*/
+    /*width:200px;*/
     /*height:350px;*/
-    opacity:1;
-}
+    /*opacity:1;*/
+/*}*/
 
 .adminHeader {
 
@@ -231,14 +219,7 @@ table tr a {
     text-align: center;
 }
 
-.selector.option {
-    /*position:absolute;*/
-    /*left:550px;*/
-    height: 30px;
-    width: 40px;
-    margin:5px;
-    /*background: #92cc64;*/
-}
+
 
 .selector.view {
     height: 80px;
@@ -275,8 +256,8 @@ table tr a {
 }
 .top-border {
     border-top-style:solid;
-    border-color:#98bf21;
-    border-width:5px;
+    border-color:#dedede;
+    border-width:1px;
 }
 
 .top-divider {
@@ -297,138 +278,8 @@ table tr a {
     border-width:1px;
 }
 
-.fabric-group {
-    /*background: #dce7ff;*/
-    border-style:solid;
-    border-color:#98bf21;
-    border-width:1px;
-    margin-top:10px;
-    margin-bottom:10px;
-}
 
-.fabric-header {
-    font-size: 10px;
-    margin-bottom:-5px;
-    margin-bottom:-5px;
-}
 
-.selector.option.fabric001{
-    background: #101010;
-}
-
-.selector.option.fabric002{
-    background: #7e7e7e;
-}
-/* s-vc: viscose crepe */
-.selector.option.fabric003{
-    background: #c10050;
-}
-.selector.option.fabric004{
-    background: #a4006a;
-}
-.selector.option.fabric005{
-    background:#1d587c;
-}
-.selector.option.fabric006{
-    background: #1d597f;
-}
-.selector.option.fabric007{
-    background: #85796e;
-}
-.selector.option.fabric008{
-    background: #dfcdb7;
-}
-.selector.option.fabric009{
-    background:#0d759e;
-}
-.selector.option.fabric010{
-    background: #3ec4b8;
-}
-.selector.option.fabric011{
-    background: #101010;
-}
-.selector.option.fabric012{
-    background: #7e7e7e;
-}
-.selector.option.fabric013{
-    background:#002195;
-}
-/* p-sk: Silk */
-.selector.option.fabric080{
-    background: #262626;
-}
-.selector.option.fabric081{
-    background: #e1dcd4;
-}
-.selector.option.fabric083{
-    background: #c1b2a4;
-}
-.selector.option.fabric085{
-    background: #56c1bb;
-}
-.selector.option.fabric086{
-    background: #676767;
-}
-.selector.option.fabric087{
-    background: #1a21ab;
-}
-.selector.option.fabric088{
-    background: #d04893;
-}
-.selector.option.fabric089{
-    background: #e04854;
-}
-/* x-fl: faux-leather */
-.selector.option.fabric120{
-    background: #4b4b4b;
-}
-.selector.option.fabric121{
-    background: #d7cfbf;
-}
-.selector.option.fabric122{
-    background: #bab0ac;
-}
-.selector.option.fabric123{
-    background: #726053;
-}
-/* x-sq: Sequins */
-.selector.option.fabric135{
-    background: #101010;
-}
-.selector.option.fabric136{
-    background: #85796e;
-}
-.selector.option.fabric137{
-     background: #e4eef4;
-}
-.selector.option.fabric138{
-    background: #fbfbff;
-}
-/* x-pt: Polyester Trim*/
-.selector.option.fabric160{
-    background: #c10050;
-}
-.selector.option.fabric161{
-    background: #a4006a;
-}
-.selector.option.fabric162{
-    background:#1d587c;
-}
-.selector.option.fabric164{
-    background: #85796e;
-}
-.selector.option.fabric165{
-    background: #dfcdb7;
-}
-.selector.option.fabric167{
-    background: #3ec4b8;
-}
-.selector.option.fabric168{
-    background: #101010;
-}
-.selector.option.fabric169{
-    background: #7e7e7e;
-}
 
 .design_radio_option {
 
@@ -482,23 +333,7 @@ table tr a {
     text-align: right;
 }
 
-.builder.option {
-    background: #dbeaf6;
-    height: 100px;
-    width: 100px;
-    margin:8px;
-    padding: 4px;
-}
 
-.option.active {
-    /*background: #f683b0;*/
-    border-style: ridge;
-    border-color: #bf4b46;
-    border-width: 5px;
-    border-style: ridge;
-    /*padding: -10px;*/
-
-}
 
 /*font-family: 'Arimo', sans-serif;*/
 /*font-family: 'La Belle Aurore', cursive;*/

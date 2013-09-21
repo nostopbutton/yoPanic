@@ -1,58 +1,27 @@
 <div id="silhouettesView" class="container">
-  <!--<div class="container-fluid">-->
-    <!--<div class="row silhouette header">-->
-    <!--Sillouttes-->
-    <!--</div>-->
-    <div class="row">
-      <!--<p class="col-md-9 col-md-offset-1 catalogue description">-->
-      <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 strap-line">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 strap-line">
         <span class="very-small">
           Start by choosing our favourite dress style. Then add your own personal touches by changing the neckline, sleeves, skirt length and style, adding trim or changing the colour and fabric.
         </span>
-      </div>
-      <!--</p>-->
     </div>
-    <div class="row">
-      <div ng-repeat="silhouette in silhouettes">
-        <div class="row">
-          <!--<p class="col-lg-9 col-lg-offset-1 catalogue category">{{silhouette.catName}}</p>-->
-          <div class="col-lg-9 col-lg-offset-1 strap-line">
-            <span class="large">
-              {{silhouette.catName}}
-            </span>
-          </div>
-        </div>
-        <div class="row">
-          <div ng-repeat="design in silhouette.designs">
-            <div class="col-lg-3 container item">
-              <div class="row title">
-                  {{design.desName}}
-              </div>
-              <div class="row price">
-                  <i>From: <b>HKD {{design.price}}</b></i>
-              </div>
-              <div class="row image">
-                <div class="col-lg-12 ">
-                  <a href="#/design/{{design.desId}}"
-                     onClick="_gaq.push(['_trackEvent', 'Silhouettes', 'customize', '{{design.desId}}']);">
-                    <!--{{design.silhouetteImage}}-->
-                    <img ng-src="images/silhouettes/{{design.silhouetteImage}}.png">
-                    <!--<div class="items-sprite {{dress.itemId}}"></div>-->
-                  </a>
-                </div>
-              </div>
-              <div class="row item customize">
-                <div class="col-lg-12">
-                  <a class="btn btn-info" id="review-dress" href="#/design/{{design.desId}}"
-                     onClick="_gaq.push(['_trackEvent', 'Silhouettes', 'customize-button', '{{design.desId}}']);">
-                    Customize
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+  </div>
+  <div class="row silhouette-filter">
+    <div class="col-sm-5 col-sm-offset-1">
+      View all items | <a href="#!design">View Dresses</a> | <a href="#!design">View Skirts</a>
+    </div>
+
+    <div class="col-sm-5 " style="text-align:right">
+      Showing items 1 - 10 of 10
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div ng-repeat="style in styles">
+        <div class="col-lg-3 container item">
+          <div silhouette style="style"></div>
         </div>
       </div>
     </div>
-  <!--</div>-->
+  </div>
 </div> <!-- /container -->

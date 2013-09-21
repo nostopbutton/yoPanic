@@ -1,70 +1,70 @@
 <div id="collection-view" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 strap-line">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 strap-line">
         <span class="small">
           Be inspired by the dresses we love. Choose to buy from the collection below
           or modify something you see. It's really that simple.
         </span>
-      </div>
     </div>
-    <div class="row">
+  </div>
+  <div class="row">
 
-      <div class="col-sm-4 col-md-3 col-md-offset-1">
-        <!--<div bs-affix data-offset-top="50" data-offset-bottom="400" class="silhouette-filter">-->
-        <div ui-scrollfix="65" class="filter">
-          <div class="header container">
-            <!--<div class="">-->
-              <div class="col-xs-6 title">
-                <span class="glyphicon glyphicon-chevron-down">​</span><span class=""> Filter</span>
-              </div>
-              <div class="col-xs-6 reset">
-                <a class="" ng-click="reset()">Reset all</a>
-              </div>
-            <!--</div>-->
-          </div> <!--  header -->
-          <div class="attributes container">
-            <div class="col-xs-12 group">Style</div>
-            <div class="attr col-xs-12">
-              <label ng-repeat="silhouette in silhouettes" class="checkbox"><input type=checkbox ng-model="silhouette.checked">{{silhouette.label}}</label>
-            </div>
-            <span class="col-xs-12 group">Type</span>
-            <div class="attr col-xs-12">
-              <label ng-repeat="type in types" class="checkbox"><input type=checkbox ng-model="type.checked">{{type.label}}</label>
-            </div>
+    <div class="col-sm-4 col-md-3 col-md-offset-1">
+      <!--<div bs-affix data-offset-top="50" data-offset-bottom="400" class="silhouette-filter">-->
+      <div ui-scrollfix="65" class="filter">
+        <div class="header container">
+          <!--<div class="">-->
+          <div class="col-xs-6 title">
+            <span class="glyphicon glyphicon-chevron-down">​</span><span class=""> Filter</span>
           </div>
-          {{trim}}
+          <div class="col-xs-6 reset">
+            <a class="" ng-click="reset()">Reset all</a>
+          </div>
+          <!--</div>-->
         </div>
-        <!--<img src="http://placehold.it/250x300&text=Filter">-->
+        <!--  header -->
+        <div class="attributes container">
+          <div class="col-xs-12 group">Style</div>
+          <div class="attr col-xs-12">
+            <label ng-repeat="silhouette in silhouettes" class="checkbox"><input type=checkbox
+                                                                                 ng-model="silhouette.checked">{{silhouette.label}}</label>
+          </div>
+          <span class="col-xs-12 group">Type</span>
+
+          <div class="attr col-xs-12">
+            <label ng-repeat="type in types" class="checkbox"><input type=checkbox ng-model="type.checked">{{type.label}}</label>
+          </div>
+        </div>
+        <!--{{trim}}-->
       </div>
-      <div class="col-sm-8  ">
+    </div>
 
-        <!--<pre><strong>selected with filter:</strong> {{silhouettes | filter:{checked:true} | json}}</pre>-->
-        <!--<pre><strong>all silhouettes:</strong> {{silhouettes | json}}</pre>-->
+    <div class="col-sm-8  ">
 
+      <div ng-repeat="dress in dresses | filter: search">
+        <div class="col-sm-3 container item">
 
-        <!--<div class="container">-->
-        <div ng-repeat="dress in dresses | filter: search"> <!-- | filter:{checked:true}"> -->
-            <div class="col-sm-3 container item">
-                <div class="row image">
-                  <a href="#/design/{{dress.silId}}/{{dress.itemId}}" onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
-                      <img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)" ng-src="images/dresses/{{dress.img}}.png" class="">
-                      <!--<div class="items-sprite {{dress.itemId}}"></div>-->
-                  </a>
-                </div>
-                <a class="" id="customize-button" data-toggle="modal" href="#/design/{{dress.silId}}/{{dress.itemId}}" onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (button)', '{{dress.silId}}/{{dress.itemId}}']);">
-                  <div class="row title">
-                    {{dress.name}}
-                  </div>
-                  <div class="row type">
-                    {{dress.shortDesc}}
-                  </div>
-                  <div class="row price">
-                    HKD {{dress.price}}
-                  </div>
-                </a>
+          <a href="#!/shop/{{dress.silId}}/{{dress.itemId}}"
+             onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
+            <div class="row image">
+              <img ng-src="images/dresses/{{dress.img}}.png" class="">
+              <!--<img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"-->
+                   <!--ng-src="images/dresses/{{dress.img}}.png" class="">-->
             </div>
-        </div> <!-- /ng-repeat -->
+            <div class="row title">
+              {{dress.name}}
+            </div>
+            <div class="row type">
+              {{dress.shortDesc}}
+            </div>
+            <div class="row price">
+              HKD {{dress.price}}
+            </div>
+          </a>
+
+        </div>
+      </div> <!-- /ng-repeat -->
     </div>
-    </div>
+  </div>
 </div> <!-- /container -->
 

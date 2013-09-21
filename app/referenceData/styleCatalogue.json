@@ -1,0 +1,169 @@
+[
+  {
+    "styleId": "sheath-fitted"
+    , "type": "dress"
+    , "styleName": "Coco"
+    , "styleFormalName": "Sheath Dress"
+    , "shortDesc": "Our signature dress impeccably tailored cut of the sheath dress flatters your curves by defining your waist and highlighting your calves to give you a perfect hourglass shape. "
+    , "strapline": "Turn heads in this classic tailored dress."
+    , "description": [ "Whether you choose dark colours or bold colours. our crepe fabric will give you a sophisticated day look.  Add glamour with leather trim or sequin detail for a sassy nighttime vibe. "
+      , "Highlight your striking silhouette with killer heels and contrasting obi belt."]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+    , "price": 1600
+    , "silhouetteImage": "pat-301"
+  }
+  , {
+    "styleId": "flare-fitted"
+    , "type": "dress"
+    , "styleName": "Olivia"
+    , "styleFormalName": "Fit and Flare Dress"
+    , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
+    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+      , "Perfect with killer heels for a timeless show stopping look." ]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+  , "price": 1600
+    , "silhouetteImage": "pat-302"
+  }
+  , {
+    "styleId": "swing"
+    , "type": "dress"
+    , "styleName": "Audrey"
+    , "styleFormalName": "Swing Dress"
+    , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
+    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+      , "Perfect with killer heels for a timeless show stopping look."]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+    , "price": 1600
+    , "silhouetteImage": "pat-302swing"
+  }
+  , {
+    "styleId": "swoosh"
+    , "type": "dress"
+    , "styleName": "Carla"
+    , "styleFormalName": "Swoosh Dress"
+    , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+      , "Perfect with killer heels for a timeless show stopping look." ]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+    , "price": 2000
+    , "silhouetteImage": "pat-303"
+  }
+  , {
+  "styleId": "shift"
+  , "type": "dress"
+  , "styleName": "Edie"
+  , "styleFormalName": "Shift Dress"
+  , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+    , "Perfect with killer heels for a timeless show stopping look." ]
+  , "care": [ "Look after it"
+    , "And it will last" ]
+  , "price": 2000
+  , "silhouetteImage": "pat-202"
+}
+  , {
+  "styleId": "shirt"
+  , "type": "dress"
+  , "styleName": "Elle"
+  , "styleFormalName": "Shirt Dress"
+  , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+    , "Perfect with killer heels for a timeless show stopping look." ]
+  , "care": [ "Look after it"
+    , "And it will last" ]
+  , "price": 2000
+  , "silhouetteImage": "pat-203"
+}
+  , {
+  "styleId": "shirt-maxi"
+  , "type": "dress"
+  , "styleName": "Elle maxi"
+  , "styleFormalName": "Maxi Shirt Dress"
+  , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+    , "Perfect with killer heels for a timeless show stopping look." ]
+  , "care": [ "Look after it"
+    , "And it will last" ]
+  , "price": 2000
+  , "silhouetteImage": "pat-203maxi"
+}
+  , {
+    "styleId": "skirt-pencil"
+    , "type": "skirt"
+    , "styleName": "Christina Skirt"
+    , "styleFormalName": "Pencil Skirt"
+    , "shortDesc": "Simple lines that are chic and glamorous and never out of style"
+    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+      , "Perfect with killer heels for a timeless show stopping look." ]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+    , "price": 600
+    , "silhouetteImage": "skt-014"
+  }
+  , {
+    "styleId": "skirt-swing"
+    , "type": "skirt"
+    , "styleName": "Audrey Skirt"
+    , "styleFormalName": "Swing Skirt"
+    , "shortDesc": "A fuller skirt to glide when you walk pulled tight at the waist for maximum curves"
+    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+      , "Perfect with killer heels for a timeless show stopping look." ]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+    , "price": 600
+    , "silhouetteImage": "skt-052"
+  }
+  , {
+    "styleId": "skirt-flare"
+    , "type": "skirt"
+    , "styleName": "Olivia Skirt"
+    , "styleFormalName": "Flare Skirt"
+    , "shortDesc": "A pencil skirt with a kick to compliment your hips"
+    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+      , "Perfect with killer heels for a timeless show stopping look." ]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+    , "price": 600
+    , "silhouetteImage": "skt-072"
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

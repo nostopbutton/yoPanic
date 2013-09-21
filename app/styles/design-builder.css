@@ -1,0 +1,456 @@
+.silhouette-filter a:link {color:#d14d46;}
+.silhouette-filter a:visited {color:#d14d46;}
+.silhouette-filter a:hover {color:#d14d46;}
+.silhouette-filter a:active {color:#d14d46;}
+
+.dress {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    height: 530px;
+    width: 100%;
+}
+
+.dress{
+    margin:0 0 10px 5px;
+    padding: 10px 0 0 0;
+    background: white;
+    /*position: relative;*/
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    background: #efefef; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #efefef 0%, #f9f9f9 10%, #fefefe 20%, #fefefe 80%, #f9f9f9 90%, #efefef 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#efefef), color-stop(10%,#f9f9f9), color-stop(20%,#fefefe), color-stop(80%,#fefefe), color-stop(90%,#f9f9f9), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* IE10+ */
+    background: linear-gradient(to right,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#efefef',GradientType=1 ); /* IE6-8 */
+
+}
+
+.dress:before,
+.dress:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 70%;
+    max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
+    max-height: 100px;
+    height: 55%;
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transform: skew(-15deg) rotate(-6deg);
+    -moz-transform: skew(-15deg) rotate(-6deg);
+    -ms-transform: skew(-15deg) rotate(-6deg);
+    -o-transform: skew(-15deg) rotate(-6deg);
+    transform: skew(-15deg) rotate(-6deg); }
+
+.dress:after {
+    left: auto;
+    right: 15px;
+    -webkit-transform: skew(15deg) rotate(6deg);
+    -moz-transform: skew(15deg) rotate(6deg);
+    -ms-transform: skew(15deg) rotate(6deg);
+    -o-transform: skew(15deg) rotate(6deg);
+    transform: skew(15deg) rotate(6deg); }
+
+
+
+.pic {
+
+    position:absolute;
+    /*height: 550px;*/
+    float:left;
+    margin: 0 auto;
+    left:120px;
+    width:200px;
+    /*height:350px;*/
+    opacity:1;
+}
+
+.body {
+    z-index:0;
+    overflow: hidden;
+}
+
+#reset-design {
+    margin-top:15px;
+    margin-right:10px;
+    color: red;
+    background-color: #f4efe7;
+    width:150px;
+    font-size:16px
+}
+
+#reset-design[disabled=disabled] {
+    color: grey;
+    background-color: #dce6ec;
+}
+
+.option-button {
+    float:left;
+    /*width:80px;*/
+}
+
+.option-button .option {
+    /*background: red;*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    height: 87px;
+    width:87px;
+    margin: 12px;
+    padding: 0;
+    border-radius: 0;
+    z-index: 1;
+}
+
+.option-button .option.highlight:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: solid 1px red;
+    width: 94px;
+    height: 94px;
+    margin-top:-24px;
+    margin-left:-4px;
+
+    z-index: 1;
+}
+
+.db-icons-sprite {
+    /*max-height: 40px;*/
+}
+
+input[type="radio"].hidden,
+input[type="checkbox"].hidden {
+    display: none;
+}
+
+
+
+.fabric-selector {
+    /*position:absolute;*/
+    /*left:550px;*/
+    height: 35px;
+    width: 35px;
+    margin:5px;
+    /*background: #92cc64;*/
+    border-radius: 2px;
+}
+
+.fabric-selector.active {
+    border: solid 1px;
+}
+
+
+.fabric-selector.active:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: solid 1px red;
+    width: 41px;
+    height: 41px;
+    margin-top:-21px;
+    margin-left:-16px;
+
+    z-index: 10;
+}
+
+.fabric-selector.fabric001{
+    background: #101010;
+}
+
+.fabric-selector.fabric002{
+    background: #7e7e7e;
+}
+/* s-vc: viscose crepe */
+.fabric-selector.fabric003{
+    background: #c10050;
+}
+.fabric-selector.fabric004{
+    background: #a4006a;
+}
+.fabric-selector.fabric005{
+    background:#1d587c;
+}
+.fabric-selector.fabric006{
+    background: #1d597f;
+}
+.fabric-selector.fabric007{
+    background: #85796e;
+}
+.fabric-selector.fabric008{
+    background: #d6c2a7;
+}
+.fabric-selector.fabric009{
+    background:#0d759e;
+}
+.fabric-selector.fabric010{
+    background: #007c8d;
+}
+.fabric-selector.fabric011{
+    background: #101010;
+}
+.fabric-selector.fabric012{
+    background: #767980;
+}
+.fabric-selector.fabric014{
+    background:#111461;
+}
+.fabric-selector.fabric015{
+    background:#81002d;
+}
+/* p-sk: Silk */
+.fabric-selector.fabric080{
+    background: #262626;
+}
+.fabric-selector.fabric081{
+    background: #e1dcd4;
+}
+.fabric-selector.fabric083{
+    background: #c1b2a4;
+}
+.fabric-selector.fabric085{
+    background: #56c1bb;
+}
+.fabric-selector.fabric086{
+    background: #676767;
+}
+.fabric-selector.fabric087{
+    background: #1a21ab;
+}
+.fabric-selector.fabric088{
+    background: #d04893;
+}
+.fabric-selector.fabric089{
+    background: #e04854;
+}
+/* x-fl: faux-leather */
+.fabric-selector.fabric120{
+    background: #4b4b4b;
+}
+.fabric-selector.fabric121{
+    background: #d7cfbf;
+}
+.fabric-selector.fabric122{
+    background: #bab0ac;
+}
+.fabric-selector.fabric123{
+    background: #726053;
+}
+/* x-sq: Sequins */
+.fabric-selector.fabric135{
+    background: #101010;
+}
+.fabric-selector.fabric136{
+    background: #85796e;
+}
+.fabric-selector.fabric137{
+    background: #e4eef4;
+}
+.fabric-selector.fabric138{
+    background: #fbfbff;
+}
+/* x-pt: Polyester Trim*/
+.fabric-selector.fabric160{
+    background: #c10050;
+}
+.fabric-selector.fabric161{
+    background: #a4006a;
+}
+.fabric-selector.fabric162{
+    background:#1d587c;
+}
+.fabric-selector.fabric164{
+    background: #85796e;
+}
+.fabric-selector.fabric165{
+    background: #dfcdb7;
+}
+.fabric-selector.fabric167{
+    background: #3ec4b8;
+}
+.fabric-selector.fabric168{
+    background: #101010;
+}
+.fabric-selector.fabric169{
+    background: #7e7e7e;
+}
+
+
+#customise-accordion .panel {
+    border-top-style: solid;
+    border-top-color: #AAAAAA;
+    border-radius: 0;
+    -webkit-box-shadow:none;
+}
+
+#customise-accordion.panel-group {
+    border-bottom-style: solid;
+    border-bottom-color: #AAAAAA;
+    border-bottom-width: 1px;
+    margin-bottom:50px;
+    /*border-radius: 0;*/
+    /*-webkit-box-shadow:none;*/
+}
+
+#customise-accordion .panel-body {
+    border-top-style: none;
+    border-top-color: #ffffff;
+    border-radius: 0;
+    padding-top:3px;
+}
+
+#customise-accordion .nav-tabs > li > a {
+    border-radius: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#customise-accordion .nav-tabs > li.active > a {
+    border-radius: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#customise-accordion .nav-tabs > li > a:link {color:#555555;}
+#customise-accordion .nav-tabs > li > a:visited {color:#555555;}
+#customise-accordion .nav-tabs > li > a:hover {color:#555555;}
+#customise-accordion .nav-tabs > li > a:active {color:#555555;}
+
+#customise-accordion .nav-tabs > li {
+    background-color: #eeeeee;
+    margin-right:2px;
+    margin-top:5px;
+}
+
+#customise-accordion .nav-tabs > li.active{
+    background-color: #ffffff;
+    /*margin:0 2px;*/
+    margin-top:0;
+}
+
+#customise-accordion .nav-tabs > li.active > a{
+    background-color: #ffffff;
+    margin:0 2px;
+}
+
+#customise-accordion .tab-content {
+    border-style: solid;
+    border-color: #dddddd;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0;
+    padding: 20px;
+}
+
+.fabric-group {
+    /*background: #dce7ff;*/
+    border-style:none;
+    /*border-color:#98bf21;*/
+    /*border-width:1px;*/
+    margin-top:0;
+    margin-bottom:5px;
+    margin-left: 10px;
+}
+
+.fabric-header {
+    font-size: 14px;
+
+}
+
+.trim-selector {
+    border-top-style:solid;
+    border-color:#dedede;
+    border-width:1px;
+    margin: 20px 0 0 0;
+    padding: 20px 5px 0 5px;
+    /*padding-top:20px;*/
+}
+
+/* http://css-tricks.com/triangle-breadcrumbs/ */
+.breaded {
+    list-style: none;
+    overflow: hidden;
+    font: 14px Helvetica, Arial, Sans-Serif;
+    /*margin-top:0px;*/
+    margin-bottom: 20px;
+    margin-left: -36px;
+}
+.breaded li {
+    float: left;
+}
+.breaded li a {
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 9px 0 9px 50px;
+    background: #f1f1f1;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.breaded li.active a  {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 0 9px 50px;
+    background: #222222;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+/*Add the triangles*/
+.breaded li a:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;            /*Go big on the size, and let overflow hide*/
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+
+.breaded li.active a:after {
+    border-left: 30px solid #222222;
+}
+/*Create second set of triangles to act as border*/
+.breaded li a:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 4px;
+    left: 100%;
+    z-index: 1;
+}
+
+.breaded li:first-child a {
+    padding-left: 14px;
+}
+
+/*.breaded li a:hover { background: #444444; }*/
+/*.breaded li a:hover:after { border-left-color: #444444 !important; }*/
+
+.silhouette-filter {
+    margin: 15px 0;
+}
+

@@ -9,7 +9,7 @@
     font-family:"Times New Roman", Times, serif;
     font-style:italic;
     color: #888;
-    margin-top:10px;
+    margin-top:-5px;
     margin-bottom: 5px;
 }
 
@@ -295,16 +295,22 @@
 }
 
 .item .title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .item .type {
-    font-size: 10px;
+    font-size: 12px;
+    font-style:italic;
 }
 
 .item .price {
     font-size: 14px;
+}
+
+.item .btn-danger {
+    width:140px;
+    margin-top:10px;
 }
 
 /*.item .purchase {*/
@@ -580,3 +586,42 @@ blockquote cite:before {
     /*padding-bottom: 15px; */
     /*color: #333; */
     /*font-size: 13px; }*/
+
+
+.style .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.style .formal-name {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.style .price {
+    font-size: 18px;
+}
+
+.style .description {
+    font-size: 14px;
+    margin-left: 0px;
+    padding-left: 0px;
+    -webkit-margin:0px;
+}
+.style .description li {
+    -webkit-margin:0px;
+}
+
+.style .info {
+    font-size: 18px;
+}
+
+.style .customize {
+    font-size: 18px;
+}
+
+.style .customize .btn{
+    font-size: 18px;
+}
+
+
