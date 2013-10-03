@@ -112,14 +112,14 @@
     z-index: 1;
 }
 
-.option-button .option.highlight:before {
+.option-button .option.highlight:after {
     content: "";
     display: block;
     position: absolute;
     border: solid 1px red;
     width: 94px;
     height: 94px;
-    margin-top:-24px;
+    margin-top:-57px;
     margin-left:-4px;
 
     z-index: 1;
@@ -151,7 +151,7 @@ input[type="checkbox"].hidden {
 }
 
 
-.fabric-selector.active:before {
+.fabric-selector.active:after {
     content: "";
     display: block;
     position: absolute;
@@ -359,6 +359,15 @@ input[type="checkbox"].hidden {
     margin-top:0;
     margin-bottom:5px;
     margin-left: 10px;
+}
+
+.middle-container { position:relative }
+.middle-inner {
+    position:absolute;
+    /*top:100%;*/
+    margin-top:40px;
+    /*height:10em;*/
+    /*margin-top:25%;*/
 }
 
 .fabric-header {
