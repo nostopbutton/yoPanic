@@ -2,27 +2,27 @@
 
 var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
 
-designBuildDirective.directive('designBreadcrumb', function () {
-  return  {
-    restrict: 'A',
-    scope: {
-      step: "@"
-    },
-    template: '<ul class="breaded">' +
-      '<li ng-class="{active: step == \'customize\'}"><a href="#">Customize</a></li>' +
-      '<li ng-class="{active: step == \'sizing\'}"><a href="#">Sizing</a></li>' +
-      '<li ng-class="{active: step == \'review\'}"><a href="#">Review design</a></li>' +
-      '<li ng-class="{active: step == \'checkout\'}"><a href="#">Checkout</a></li>' +
-      '</ul>'
-  }
-})
+//designBuildDirective.directive('designBreadcrumb', function () {
+//  return  {
+//    restrict: 'A',
+//    scope: {
+//      step: "@"
+//    },
+//    template: '<ul class="breaded">' +
+//      '<li ng-class="{active: step == \'customize\'}"><a href="#">Customize</a></li>' +
+//      '<li ng-class="{active: step == \'sizing\'}"><a href="#">Sizing</a></li>' +
+//      '<li ng-class="{active: step == \'review\'}"><a href="#">Review design</a></li>' +
+//      '<li ng-class="{active: step == \'checkout\'}"><a href="#">Checkout</a></li>' +
+//      '</ul>'
+//  }
+//})
 
 designBuildDirective.directive('shopBreadcrumb', function () {
   return  {
     restrict: 'A',
-    scope: {
-      step: "@"
-    },
+//    scope: {
+//      step: "@"
+//    },
     template: '<ul class="breaded">' +
       '<li ng-class="{active: step == \'shop\'}"><a href="#">Shop collection</a></li>' +
       '<li ng-class="{active: step == \'sizing\'}"><a href="#">Sizing</a></li>' +
@@ -42,6 +42,22 @@ designBuildDirective.directive('overview', function () {
       '<div class="row name">{{info.styleName}}</div>' +
       '<div class="row formal-name">{{info.styleFormalName}}</div>' +
       '<div class="row price">HKD {{info.price}}</div>'
+  }
+})
+
+designBuildDirective.directive('designBreadcrumb', function () {
+  return  {
+    restrict: 'A',
+//    scope: {
+//      step: "@"
+//    },
+    template:
+      '<ul class=" breaded" id="options">' +
+      ' <li class="active"><a href="#design" data-toggle="tab">Customize</a></li>' +
+      ' <li><a href="#accessorize" data-toggle="tab">Accessorize</a></li>' +
+      ' <li><a href="#sizing" data-toggle="tab">Sizing</a></li>' +
+      ' <li><a href="#checkout" data-toggle="tab">Checkout</a></li>' +
+      '</ul>'
   }
 })
 
@@ -87,32 +103,63 @@ designBuildDirective.directive('description', function () {
 })
 
 
+designBuildDirective.directive('drawDesign', function () {
+  return  {
+    scope: {
+      design: "="
+    },
+    template:
+      '<img ng-src="images/parts/whole body.png" class="pic body">' +
+      '<div draw-dress parts="design.design"></div>' +
+      '<div draw-accessories parts="design.extras"></div>'
+  }
+})
+
 designBuildDirective.directive('drawDress', function () {
   return  {
     scope: {
-      dress: "="
+      parts: "="
     },
-    template: '<div ng-repeat="selection in dress" class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>'
-//    template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
+    template:
+      '<div ng-repeat="selection in parts">' +
+      ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>' +
+      ' <img ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>' +
+      '</div>'
   }
 })
 
-designBuildDirective.directive('drawTrim', function () {
+designBuildDirective.directive('drawAccessories', function () {
   return  {
     scope: {
-      dress: "="
+      parts: "="
     },
-//    template: '<div ng-repeat="selection in dress" class="pic {{selection.type}} db-parts-sprite {{selection.type}}-{{selection.id}}-{{selection.fabric}}"></div>'
-    template: '<img ng-repeat="selection in dress" ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>'
+    template:
+      '<div ng-repeat="selection in parts">' +
+      ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>' +
+      '</div>'
   }
 })
 
-designBuildDirective.directive('drawExtras', function () {
+
+designBuildDirective.directive('partSelector', function () {
   return  {
+    restrict: 'E',
+//    templateUrl: 'template/designBuild/fabric.html',
     scope: {
-      extras: "="
+      part: "=", selectedOption: "="
     },
-    template: '<img ng-repeat="selection in extras" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
+    template:
+      ' <div data-toggle="buttons">' +
+        '  <!--https://github.com/angular-ui/bootstrap/issues/233-->' +
+        '  <div class="option-button" ng-repeat="value in part.values">' +
+        '    <button type="button" class="btn btn-default option"' +
+        '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' +
+        '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' +
+        '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>' +
+        '   </button>' +
+        '  </div>' +
+        '</div>'
+
   }
 })
 
@@ -148,17 +195,17 @@ designBuildDirective.directive('extrasFabricSelector', function () {
       fabricSet: "=", selectedOption: "=", isTrim: "=", type: "="
     },
     template:
-        ' <div class="fabric-group middle-inner row">' +
-        '   <div class="col-md-6 fabric-header">' +
+        ' <div class="fabric-group middle-inner">' +
+        '   <div class="col-md-3 fabric-header">' +
         '     {{fabricSet.setName}}' +
         '   </div>' +
-        '    <div class="col-md-6 ">' +
+        '    <div class="col-md-9 ">' +
         '      <div ng-switch on="isTrim" >' +
 //        '        <div draw-trim-fabrics ng-switch-when="true" selection="fabricSet" selected-option="selectedOption"></div>' +
 //        '        <div draw-extras-fabrics ng-switch-default selection="fabricSet" selected-option="selectedOption"></div>' +
               '<button ng-repeat="fabric in fabricSet.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' +
 //              'ng-click="setExtraType(form[option.name][part.part_name]['id'], type)' +
-                'ng-click="selectedOption[\'fabric\'] = fabric.fabId; selectedOption[\'id\'] = type"; ' +
+                'ng-click="selectedOption[\'fabric\'] = fabric.fabId; selectedOption[\'id\'] = type" ' +
                 'ng-model="selectedOption[\'code\']" btn-radio="type +\'-\'+fabric.fabId" ' +
                 'ng-class="{active: form[option.name][part.part_name][\'code\']==type +\'-\'+fabric.fabId }"' +
                 'tooltip="{{fabric.fabName}}"' +
@@ -185,7 +232,8 @@ designBuildDirective.directive('trimSelector', function () {
       '       No {{partName}} trim' +
       '     </div>' +
       '     <div class="row ">' +
-      '       <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>' +
+      '       <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"' +
+      '           onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>' +
       '     </div>' +
       '   </div>' +
       ' </div>' +
@@ -250,4 +298,3 @@ designBuildDirective.directive('drawAdmin', function () {
     template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
   }
 })
-

@@ -1,0 +1,49 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:02ea57bd3eb659a1d32e2c9591720611:1/1$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(db-icons-sprite.png);}
+
+.blt-000 {width:80px; height:80px; background-position: -738px -164px}
+.blt-002 {width:80px; height:80px; background-position: -656px -246px}
+.blt-004 {width:80px; height:80px; background-position: -656px -164px}
+.ext-000 {width:80px; height:80px; background-position: -738px -82px}
+.ext-002 {width:80px; height:80px; background-position: -656px -82px}
+.ext-003 {width:80px; height:80px; background-position: -574px -246px}
+.nek-001 {width:80px; height:80px; background-position: -574px -164px}
+.nek-002 {width:80px; height:80px; background-position: -574px -82px}
+.nek-003 {width:80px; height:80px; background-position: -738px -0px}
+.nek-004 {width:80px; height:80px; background-position: -656px -0px}
+.nek-006 {width:80px; height:80px; background-position: -574px -0px}
+.nek-007 {width:80px; height:80px; background-position: -492px -246px}
+.nek-009 {width:80px; height:80px; background-position: -492px -164px}
+.nek-010 {width:80px; height:80px; background-position: -492px -82px}
+.nek-014 {width:80px; height:80px; background-position: -492px -0px}
+.nek-015 {width:80px; height:80px; background-position: -410px -246px}
+.nek-017 {width:80px; height:80px; background-position: -410px -164px}
+.nek-018 {width:80px; height:80px; background-position: -410px -82px}
+.skt-01 {width:80px; height:80px; background-position: -410px -0px}
+.skt-02 {width:80px; height:80px; background-position: -328px -246px}
+.skt-05 {width:80px; height:80px; background-position: -328px -164px}
+.skt-07 {width:80px; height:80px; background-position: -328px -82px}
+.skt-101 {width:80px; height:95px; background-position: -82px -168px}
+.skt-103 {width:80px; height:95px; background-position: -0px -168px}
+.skt-122 {width:80px; height:166px; background-position: -82px -0px}
+.skt-125 {width:80px; height:166px; background-position: -0px -0px}
+.slv-00 {width:80px; height:80px; background-position: -328px -0px}
+.slv-000 {width:80px; height:80px; background-position: -246px -246px}
+.slv-001 {width:80px; height:80px; background-position: -246px -164px}
+.slv-002 {width:80px; height:80px; background-position: -246px -82px}
+.slv-006 {width:80px; height:80px; background-position: -246px -0px}
+.slv-008 {width:80px; height:80px; background-position: -164px -246px}
+.slv-009 {width:80px; height:80px; background-position: -164px -164px}
+.slv-011 {width:80px; height:80px; background-position: -164px -82px}
+.slv-012 {width:80px; height:80px; background-position: -164px -0px}

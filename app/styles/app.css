@@ -58,7 +58,7 @@ table tr a {
     margin: 0 auto;
     text-align: left;
     display: block;
-    margin-left: -175px;
+    margin-left: -100px;
     margin-right: auto;
     /*left:5px;*/
     height: 510px;
@@ -159,19 +159,17 @@ table tr a {
 
 
 .adminPic {
-
-    position: relative;
-    float:left;
-
-    /*left:100px;*/
+    min-height:100px;
     width:200px;
-    /*height:205px;*/
     margin:0;
     padding:0;
     opacity:1;
     border:solid;
     border-color: #a2a8bf;
     border-width:1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 
 }
 
