@@ -1,18 +1,18 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "001", "fabric": "011"}
-      , "skirt":    {"type": "skt", "id": "012", "fabric": "011"}
-      , "sleeves":  {"type": "slv", "id": "009", "fabric": "011"}
+      "neckline":   {"type": "nek", "id": "001", "length": "", "fabric": "011"}
+      , "skirt":    {"type": "skt", "id": "01", "length": "4","fabric": "011"}
+      , "sleeves":  {"type": "slv", "id": "009", "length": "", "fabric": "011"}
     }
     , "extras": {
-      "belt":     {"type": "blt", "id": "004", "fabric": "000"},
-      "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+      "belt":     {"type": "blt", "id": "000", "fabric": "000", "code": "000-000"},
+      "rosetta": {"type": "ext", "id": "000", "fabric": "000", "code": "000-000"}
     }
+    , "size": 12
   }
   , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."
-]
+  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
   , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
   , "trimFabricSets": [{"setId": "s-tr"}]
   , "sizes": [10,12,14,16,18]
@@ -20,14 +20,14 @@
   {
     "option_name": "design"
     , "active": "true"
-    , "label": "Customize Dress"
+    , "label": "Customize"
     , "parts": [
     {
       "part_name": "neckline"
       , "type": "nek"
       , "active": "true"
       , "label": "Neckline"
-      , "fabricSets": [{"setId": "s-vc"}, {"setId": "x-fl"}]
+      , "fabricSets": [{"setId": "s-vc"}]
       , "values": [
         {"id": "001", "name": "bateau"}
         , {"id": "002", "name": "scoop"}
@@ -35,7 +35,7 @@
         , {"id": "004", "name": "wrap"}
       ]
       , "trim": true
-      , "trimFabricSets": [{"setId": "s-tr"}]
+      , "trimFabricSets": [{"setId": "x-fl"}]
     }
     ,{
       "part_name": "sleeves"
@@ -44,13 +44,11 @@
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "null_value": "000"
       , "values": [
-        {"id": "001", "name": "none"}
+        {"id": "000", "name": "none"}
         , {"id": "002", "name": "cap"}
         , {"id": "006", "name": "elbow"}
         , {"id": "009", "name": "flared"}
       ]
-      , "trim": true
-      , "trimFabricSets": [{"setId": "s-tr"}]
     }
     ,{
       "part_name": "skirt"
@@ -58,31 +56,34 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "values": [
-        {"id": "011", "name": "short"}
-        , {"id": "012", "name": "knee"}
-        , {"id": "014", "name": "long"}
-        , {"id": "024", "name": "ruffle"}
+        {"id": "01", "name": "pencil"}
+        , {"id": "02", "name": "ruffle"}
       ]
-      , "lengths": [1,2,4]
-      , "trim": true
-      , "trimFabricSets": [{"setId": "s-tr"}]
+      , "length": true
+      , "lengths": [
+        {"id": "1", "name": "short"}
+        , {"id": "2", "name": "knee"}
+        , {"id": "4", "name": "long"}
+      ]
+      , "trim": false
     }
     ]
-  }
-  , {
-    "option_name": "extras"
+  }]
+  , "extras": [
+  {
+    "name": "extras"
     , "label": "Extras"
+    , "active": "true"
     , "parts": [
       {
         "part_name": "belt"
         , "type": "blt"
         , "active": "true"
         , "label": "Belt"
-        , "fabricSets": [ {"setId": "x-fl"}]
         , "values": [
-        {"id": "004", "name": "obi"}
-        , {"id": "003", "name": "fabric"}
-        , {"id": "002", "name": "ribbon"}
+        {"id": "004", "name": "Obi belt", "defaultFabric": "120", "fabricSets": [ {"setId": "x-fl"}]}
+        , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+        , {"id": "000", "name": "none"}
       ]
       }
       , {
@@ -92,9 +93,10 @@
         , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
         , "values": [
           {"id": "000", "name": "none"}
-          , {"id": "003", "name": "rosetta"}
+          , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
         ]
       }
     ]}
 ]
+
 }

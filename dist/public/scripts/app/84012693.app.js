@@ -88,3 +88,6 @@ angular.module('panicApp',
       });
     $locationProvider.hashPrefix('!');
   });
+
+//"type":"blt","id":"004","fabric":"120","code":"004-120"
+//"type":"blt","id":"004","fabric":"120","code":"004-120"

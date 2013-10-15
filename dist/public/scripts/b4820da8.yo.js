@@ -327,17 +327,9 @@ referenceDataServices.factory('Range', [
 ]);
 'use strict';
 var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
-designBuildDirective.directive('designBreadcrumb', function () {
-  return {
-    restrict: 'A',
-    scope: { step: '@' },
-    template: '<ul class="breaded">' + '<li ng-class="{active: step == \'customize\'}"><a href="#">Customize</a></li>' + '<li ng-class="{active: step == \'sizing\'}"><a href="#">Sizing</a></li>' + '<li ng-class="{active: step == \'review\'}"><a href="#">Review design</a></li>' + '<li ng-class="{active: step == \'checkout\'}"><a href="#">Checkout</a></li>' + '</ul>'
-  };
-});
 designBuildDirective.directive('shopBreadcrumb', function () {
   return {
     restrict: 'A',
-    scope: { step: '@' },
     template: '<ul class="breaded">' + '<li ng-class="{active: step == \'shop\'}"><a href="#">Shop collection</a></li>' + '<li ng-class="{active: step == \'sizing\'}"><a href="#">Sizing</a></li>' + '<li ng-class="{active: step == \'review\'}"><a href="#">Review design</a></li>' + '<li ng-class="{active: step == \'checkout\'}"><a href="#">Checkout</a></li>' + '</ul>'
   };
 });
@@ -346,6 +338,12 @@ designBuildDirective.directive('overview', function () {
     restrict: 'A',
     scope: { info: '=' },
     template: '<div class="row name">{{info.styleName}}</div>' + '<div class="row formal-name">{{info.styleFormalName}}</div>' + '<div class="row price">HKD {{info.price}}</div>'
+  };
+});
+designBuildDirective.directive('designBreadcrumb', function () {
+  return {
+    restrict: 'A',
+    template: '<ul class=" breaded" id="options">' + ' <li class="active"><a href="#design" data-toggle="tab">Customize</a></li>' + ' <li><a href="#accessorize" data-toggle="tab">Accessorize</a></li>' + ' <li><a href="#sizing" data-toggle="tab">Sizing</a></li>' + ' <li><a href="#checkout" data-toggle="tab">Checkout</a></li>' + '</ul>'
   };
 });
 designBuildDirective.directive('silhouette', function () {
@@ -362,22 +360,32 @@ designBuildDirective.directive('description', function () {
     template: '<ol class="breadcrumb">' + '<li ng-class="{active: step == \'customize\'}">Customize</li>' + '<li ng-class="{active: step == \'sizing\'}">Sizing</li>' + '<li ng-class="{active: step == \'review\'}">Review design</li>' + '<li ng-class="{active: step == \'checkout\'}">Checkout</li>' + '</ol>'
   };
 });
+designBuildDirective.directive('drawDesign', function () {
+  return {
+    scope: { design: '=' },
+    template: '<img ng-src="images/parts/whole body.png" class="pic body">' + '<div draw-dress parts="design.design"></div>' + '<div draw-accessories parts="design.extras"></div>'
+  };
+});
 designBuildDirective.directive('drawDress', function () {
   return {
-    scope: { dress: '=' },
-    template: '<div ng-repeat="selection in dress" class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.fabric}}"></div>'
+    scope: { parts: '=' },
+    template: '<div ng-repeat="selection in parts">' + ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>' + ' <img ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>' + '</div>'
   };
 });
-designBuildDirective.directive('drawTrim', function () {
+designBuildDirective.directive('drawAccessories', function () {
   return {
-    scope: { dress: '=' },
-    template: '<img ng-repeat="selection in dress" ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>'
+    scope: { parts: '=' },
+    template: '<div ng-repeat="selection in parts">' + ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>' + '</div>'
   };
 });
-designBuildDirective.directive('drawExtras', function () {
+designBuildDirective.directive('partSelector', function () {
   return {
-    scope: { extras: '=' },
-    template: '<img ng-repeat="selection in extras" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
+    restrict: 'E',
+    scope: {
+      part: '=',
+      selectedOption: '='
+    },
+    template: ' <div data-toggle="buttons">' + '  <!--https://github.com/angular-ui/bootstrap/issues/233-->' + '  <div class="option-button" ng-repeat="value in part.values">' + '    <button type="button" class="btn btn-default option"' + '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' + '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' + '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>' + '   </button>' + '  </div>' + '</div>'
   };
 });
 designBuildDirective.directive('fabricSelector', function () {
@@ -391,6 +399,30 @@ designBuildDirective.directive('fabricSelector', function () {
     template: ' <div class="fabric-group">' + '   <div class="row fabric-header">' + '     {{fabricSet.setName}}' + '   </div>' + '    <div class="row ">' + '    <div ng-switch on="isTrim" >' + '      <div draw-trim-fabrics ng-switch-when="true" selection="fabricSet" selected-option="selectedOption"></div>' + '      <div draw-fabrics ng-switch-default selection="fabricSet" selected-option="selectedOption"></div>' + '     </div>' + '  </div>' + '</div>'
   };
 });
+designBuildDirective.directive('extrasFabricSelector', function () {
+  return {
+    restrict: 'E',
+    scope: {
+      fabricSet: '=',
+      selectedOption: '=',
+      isTrim: '=',
+      type: '='
+    },
+    template: ' <div class="fabric-group middle-inner">' + '   <div class="col-md-3 fabric-header">' + '     {{fabricSet.setName}}' + '   </div>' + '    <div class="col-md-9 ">' + '      <div ng-switch on="isTrim" >' + '<button ng-repeat="fabric in fabricSet.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' + 'ng-click="selectedOption[\'fabric\'] = fabric.fabId; selectedOption[\'id\'] = type" ' + 'ng-model="selectedOption[\'code\']" btn-radio="type +\'-\'+fabric.fabId" ' + 'ng-class="{active: form[option.name][part.part_name][\'code\']==type +\'-\'+fabric.fabId }"' + 'tooltip="{{fabric.fabName}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);">' + '      </button>' + '      </div>' + '    </div>' + '</div>'
+  };
+});
+designBuildDirective.directive('trimSelector', function () {
+  return {
+    restrict: 'E',
+    scope: {
+      fabricSet: '=',
+      selectedOption: '=',
+      isTrim: '=',
+      partName: '='
+    },
+    template: ' <div class="col-md-7">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '       No {{partName}} trim' + '     </div>' + '     <div class="row ">' + '       <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"' + '           onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>' + '     </div>' + '   </div>' + ' </div>' + ' <div class="col-md-5">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '        {{fabricSet.setName}}' + '     </div>' + '     <div class="row ">' + '       <div ng-switch on="isTrim" >' + '         <div draw-trim-fabrics ng-switch-when="true" selection="fabricSet" selected-option="selectedOption"></div>' + '         <div draw-fabrics ng-switch-default selection="fabricSet" selected-option="selectedOption"></div>' + '       </div>' + '     </div>' + '   </div>' + ' </div>'
+  };
+});
 designBuildDirective.directive('drawFabrics', function () {
   return {
     scope: {
@@ -398,6 +430,16 @@ designBuildDirective.directive('drawFabrics', function () {
       selectedOption: '='
     },
     template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' + 'ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
+  };
+});
+designBuildDirective.directive('drawExtrasFabrics', function () {
+  return {
+    scope: {
+      selection: '=',
+      selectedOption: '=',
+      type: '='
+    },
+    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' + 'ng-model="selectedOption[\'code\']" btn-radio="type +\'-\'+fabric.fabId" tooltip="{{selectedOption.id}}-{{fabric.fabName}}"onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>'
   };
 });
 designBuildDirective.directive('drawTrimFabrics', function () {

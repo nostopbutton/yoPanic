@@ -131,6 +131,10 @@ angular.module('panicApp.Controllers')
 
 //    $scope.cancel();
 
+//      $scope.setType = function(attr, type) {
+//        attr
+//      }
+
     }])
 
 var loadStyle = function($scope){//, catalogue, catId, desId) {

@@ -1,37 +1,23 @@
 <div id="designBuildView" class="container">
-<!--<div class="container">-->
 
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <div design-breadcrumb step="customize"></div>
-  </div>
-</div>
 <div class="row">
 
 <div id="view_dress_panel" class="col-md-5  col-md-offset-1">
-  <!--<div class="container">-->
-    <div class="row dress">
-      <!--<div class=" pic body db-parts-sprite model-front"></div>-->
-      <img ng-src="images/parts/whole body.png" class="pic body">
-
-      <div draw-dress dress="form.design"></div>
-      <div draw-trim dress="form.design"></div>
-      <div draw-dress dress="form.belt"></div>
-      <div draw-dress dress="form.extras"></div>
-    </div>
-    <div class="row">
-    <!--<div style="float:left">-->
-      <!--Mouseover to zoom-->
-      <!--</div>-->
-    <div class=" align-right" style="margin-bottom:50px">
-      <a class="btn btn-default reset" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
+  <div class="row dress">
+    <div draw-design design="form"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 align-left" style="margin-bottom:50px">
+      <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
          onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">
-        Reset</a>
-      <!--<a class="btn btn-info" id="buy-big-btn" href="#/purchase"-->
-      <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-big-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
-      <!--Buy Now</a>-->
+        Reset design</a>
     </div>
-      <!--</div>-->
+
+    <div class="col-sm-6 align-right" style="margin-bottom:50px">
+      <a class="btn btn-danger design-buttons" href="#/purchase"
+         onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
+        Buy this dress</a>
+    </div>
   </div>
 </div>
 
@@ -43,9 +29,9 @@
   </div>
   <div class="col-md-6 align-right">
     <div class="row">
-      <a class="btn btn-mini btn-danger" id="buy-sml-btn" href="#/purchase"
+      <a class="btn btn-mini btn-danger" href="#/purchase"
          onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
-        Choose size and checkout</a>
+        Buy this dress</a>
     </div>
     <div class="row">
       <!--...add social icons here-->
@@ -53,240 +39,209 @@
   </div>
 </div>
 
-<!--<div class="row top-border">-->
+<div class="row">
+<div design-breadcrumb></div>
 
-  <!--<ul>-->
-    <!--<li>{{range.strapline}}</li>-->
-    <!--<li ng-repeat="para in range.description">{{para}}</li>-->
-  <!--</ul>-->
-<!--</div>-->
-
-<div class="row" ng-hide="isFlatDesigner">
+<div class="tab-content">
+<div ng-repeat="option in range.options" class="tab-pane" ng-class="{active: option.active}"
+     id="{{option.option_name}}">
   <div class="row">
-    <div class="panel-group" id="customise-accordion">
 
-      <div class="panel" ng-repeat="option in range.options">
-        <div class="panel-heading">
-          <h3 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#customise-accordion"
-               href="#{{option.option_name}}">
-              {{option.label}}
-            </a>
-          </h3>
+    <!-- Start of inner pannel --->
+    <div class="option-panel">
+      <ul class="nav nav-tabs" id="{{option.option_name}}-tab">
+        <li ng-repeat="part in option.parts" ng-class="{active: part.active}">
+          <a href="#{{part.part_name}}" data-toggle="tab">{{part.label}}</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div ng-repeat="part in option.parts" class="tab-pane" ng-class="{active: part.active}" id="{{part.part_name}}">
+          <div class="row">
+            <div class="col-md-7">
+              <part-selector part="part" selected-option="form[option.option_name][part.part_name]"/>
+            </div>
+            <div class="col-md-4">
+              <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
+                               selected-option="form[option.option_name][part.part_name]"/>
+            </div>
+          </div>
+          <div class="row trim-selector" ng-show="part.length">
+            <div class="col-md-7">
+              Length:
+            </div>
+            <div class="col-md-4">
+              <select class="form-control input-sm" ng-model="form[option.option_name][part.part_name]['length']"
+                      ng-options="len.id as len.name for len in part.lengths">
+              </select>
+            </div>
+          </div>
+          <div class="row trim-selector" ng-show="part.trim">
+            <trim-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"
+                           ng-checked="form[option.option_name][part.part_name]['trim']"
+                           fabric-set="set" selected-option="form[option.option_name][part.part_name]"
+                           is-trim="true" part-name="part.part_name"/>
+          </div>
         </div>
-        <!--TODO - default open panel is class="panel-collapse collapse" -->
-        <div id="{{option.option_name}}" class="panel-collapse collapse " ng-class="{in: option.active}">
-          <div class="panel-body">
+      </div>
+    </div>
+    <!-- End of inner pannel --->
 
-            <ul class="nav nav-tabs" id="{{option.option_name}}-tab">
-              <!--<pane class="" ng-repeat="part in option.parts" heading="{{part.label}}"-->
-              <!--active="pane.active=part.active">-->
-              <li ng-repeat="part in option.parts" ng-class="{active: part.active}"><a href="#{{part.part_name}}"
-                                                                                       data-toggle="tab">{{part.label}}</a>
-              </li>
-              <!-- class="active" ===> active="pane.active=part.active" -->
-            </ul>
+  </div>
+</div>
 
-            <div class="tab-content">
+<div class="tab-pane" ng-class="{active: option.active}" id="accessorize">
 
-              <div ng-repeat="part in option.parts" class="tab-pane" ng-class="{active: part.active}"
-                   id="{{part.part_name}}">
-                <div class="row">
-                  <div class="col-md-7">
+  <div class="row option-panel" ng-repeat="option in range.extras"> <!-- test -->
 
-                    <div data-toggle="buttons">
-                      <!--https://github.com/angular-ui/bootstrap/issues/233-->
-                      <div class="option-button"ng-repeat="value in part.values">
-                        <button type="button" class="btn btn-default option"
-                            ng-model="form[option.option_name][part.part_name]['id']" btn-radio="value.id"
-                            ng-class="{highlight: form[option.option_name][part.part_name]['id']==value.id }">
-                          <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>
-                        </button>
-                        <!--<label class="btn btn-default option">-->
-                            <!--<input type="radio" class="hidden" name="options" id="{{value.id}}" ng-value="{{value.id}}"-->
-                                   <!--ng-model="form[option.option_name][part.part_name]['id']">-->
-                              <!--<div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{part.type}}-{{value.id}}"></div>-->
-                        <!--</label>-->
+    <ul class="nav nav-tabs" id="{{option.name}}-tab">
+      <li ng-repeat="part in option.parts" ng-class="{active: part.active}">
+        <a href="#{{part.part_name}}-extra" data-toggle="tab">{{part.label}}</a>
+      </li>
+    </ul>
 
-                      </div>
-                    </div>
-                    <!--<button ng-repeat="value in option.values" type="button" class="btn builder option ng-scope ng-pristine ng-valid" ng-model="form[option.part_name]['id']" btn-radio="value.id">-->
-                    <!--<div class="db-icons-sprite nek-001" tooltip="nek-001"></div>-->
-                    <!--</button>-->
-                    <!--<button ng-repeat="value in option.values" type="button" class="btn builder option ng-scope ng-pristine ng-valid" ng-model="form[option.part_name]['id']" btn-radio="value.id">-->
-                    <!--<div class="db-icons-sprite blt-002" tooltip="blt-002"></div>-->
-                    <!--</button>-->
-                  </div>
-                  <div class="col-md-4">
-                    <!--<div fabric-selector ng-repeat="set in fabricSets | filterSets:option.fabricSets"  fabric-set="set" selected-option="form[option.part_name]"></div>-->
-                    <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
-                                     selected-option="form[option.option_name][part.part_name]"/>
-                  </div>
+    <div class="tab-content">
+
+      <div ng-repeat="part in option.parts" class="tab-pane" ng-class="{active: part.active}"
+           id="{{part.part_name}}-extra">
+
+        <div class="row  middle-container" ng-repeat="value in part.values">
+          <div class="col-md-4">
+
+            <div data-toggle="buttons">
+              <!--https://github.com/angular-ui/bootstrap/issues/233-->
+              <div class="option-button">
+                <button type="button" class="btn btn-default option"
+                        ng-model="form[option.name][part.part_name]['id']" btn-radio="value.id"
+                        ng-click="form[option.name][part.part_name]['fabric'] = value.defaultFabric; form[option.name][part.part_name]['code']=value.id + '-' +value.defaultFabric"
+                        ng-class="{highlight: form[option.name][part.part_name]['id']==value.id }">
+                  <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8" style="vertical-align: middle">
+            <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
+              <div class="fabric-group middle-inner">
+                <div class="row extras-fabric-header">
+                  {{set.setName}}
                 </div>
-                <div class="row trim-selector" ng-show="part.trim">
-                  <div class="col-md-7">
-                    <label class="checkbox"><input type=checkbox
-                                                   ng-click="clearTrim(form[option.option_name][part.part_name])"
-                                                   ng-model="trim">Add trim</label>
-                  </div>
-                  <div class="col-md-5"> <!--ng-show="trim">-->
-                    <!--<div fabric-selector ng-repeat="set in fabricSets | filterSets:option.fabricSets"  fabric-set="set" selected-option="form[option.part_name]"></div>-->
-                    <fabric-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"
-                                     ng-checked="form[option.option_name][part.part_name]['trim']"
-                                     fabric-set="set" selected-option="form[option.option_name][part.part_name]"
-                                     is-trim="true"/>
-                  </div>
+                <div class="row">
+                  <!--<div ng-switch on="isTrim">-->
+
+
+                    <button ng-repeat="fabric in set.fabrics" type="button"
+                            class="btn fabric-selector fabric{{fabric.fabId}}"
+
+                            ng-click="form[option.name][part.part_name]['fabric'] = fabric.fabId; form[option.name][part.part_name]['id'] = value.id"
+                            ng-model="form[option.name][part.part_name]['code']" btn-radio="value.id +'-'+fabric.fabId"
+                            ng-class="{active: form[option.name][part.part_name]['code']==value.id +'-'+fabric.fabId }"
+                            tooltip="{{fabric.fabName}}"
+                            onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[option.name][part.part_name].type}}-{{form[option.name][part.part_name].id}}', '{{fabric.fabId}}' ]);">
+                    </button>
+                  <!--</div>-->
                 </div>
               </div>
             </div>
-
-
           </div>
 
         </div>
-        <!--<script>-->
-        <!--$(function () {-->
-        <!--$('#{{option.option_name}}- a:last').tab('show')-->
-        <!--})-->
-        <!--</script>-->
-      </div>
-
-      <div class="panel">
-        <div class="panel-heading">
-          <h3 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#customise-accordion"
-               href="#info">
-              Info
-            </a>
-          </h3>
-        </div>
-        <!--TODO - default open panel is class="panel-collapse collapse" -->
-        <div id="info" class="panel-collapse collapse ">
-          <div class="panel-body">
-            <ul>
-              <li>{{range.strapline}}</li>
-              <li ng-repeat="para in range.description">{{para}}</li>
-            </ul>
+        <div class="row trim-selector" ng-show="part.length">
+          <div class="col-md-7">
+            Length:
           </div>
+          <div class="col-md-4">
+            <select class="form-control input-sm" ng-model="form[option.option_name][part.part_name]['length']"
+                    ng-options="len.id as len.name for len in part.lengths">
+
+            </select>
+          </div>
+        </div>
+        <div class="row trim-selector" ng-show="part.trim">
+
+          <trim-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"
+                         ng-checked="form[option.option_name][part.part_name]['trim']"
+                         fabric-set="set" selected-option="form[option.option_name][part.part_name]"
+                         is-trim="true" part-name="part.part_name"/>
         </div>
       </div>
     </div>
+
   </div>
-
+  <!-- End test -->
 
 </div>
 
-<!--<div class="row">-->
-<!--<accordion close-others="true">-->
+<div class="tab-pane" ng-class="{active: option.active}" id="sizing">
+  <span>Select your size for your DRESS:</span>
 
-<!--<accordion-group ng-repeat="option in range.options" heading="{{option.label}}" is-open="option.active">-->
+  <div class="form-group">
+    <label for="size">Size:</label>
 
-<!--<tabs class="tabbable ">-->
-<!--<pane class="" ng-repeat="part in option.parts" heading="{{part.label}}"-->
-<!--active="pane.active=part.active">-->
+    <select class="form-control" id="size"
+            ng-model="form.size" ng-options="size for size in range.sizes">
+    </select>
 
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--<div class="col-md-6">-->
-<!--<div class="" name="option_choice" data-toggle="buttons-checkbox">-->
-<!--&lt;!&ndash;https://github.com/angular-ui/bootstrap/issues/233&ndash;&gt;-->
-<!--<button ng-repeat="value in part.values" type="button" class="btn builder option"-->
-<!--ng-model="form[option.option_name][part.part_name]['id']" btn-radio="value.id">-->
-<!--<div class="db-icons-sprite {{part.type}}-{{value.id}}"-->
-<!--tooltip="{{part.type}}-{{value.id}}"></div>-->
-<!--</button>-->
-<!--</div>-->
-<!--&lt;!&ndash;<button ng-repeat="value in option.values" type="button" class="btn builder option ng-scope ng-pristine ng-valid" ng-model="form
-[option.part_name]['id']" btn-radio="value.id">&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="db-icons-sprite nek-001" tooltip="nek-001"></div>&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--&lt;!&ndash;<button ng-repeat="value in option.values" type="button" class="btn builder option ng-scope ng-pristine ng-valid" ng-model="form
-[option.part_name]['id']" btn-radio="value.id">&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="db-icons-sprite blt-002" tooltip="blt-002"></div>&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--</div>-->
-<!--<div class="col-md-6">-->
-<!--&lt;!&ndash;<div fabric-selector ng-repeat="set in fabricSets | filterSets:option.fabricSets"  fabric-set="set" selected-option="form
-[option.part_name]"></div>&ndash;&gt;-->
-<!--<fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"-->
-<!--selected-option="form[option.option_name][part.part_name]"/>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="row top-border" ng-show="part.trim">-->
-<!--<div class="col-md-6">-->
-<!--<label class="checkbox"><input type=checkbox-->
-<!--ng-click="clearTrim(form[option.option_name][part.part_name])"-->
-<!--ng-model="trim">Add trim</label>-->
-<!--</div>-->
-<!--<div class="col-md-6" ng-show="trim">-->
-<!--&lt;!&ndash;<div fabric-selector ng-repeat="set in fabricSets | filterSets:option.fabricSets"  fabric-set="set" selected-option="form
-[option.part_name]"></div>&ndash;&gt;-->
-<!--<fabric-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"-->
-<!--ng-checked="form[option.option_name][part.part_name]['trim']"-->
-<!--fabric-set="set" selected-option="form[option.option_name][part.part_name]"-->
-<!--is-trim="true"/>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-
-<!--</pane>-->
-<!--</tabs>-->
-
-<!--</accordion-group>-->
-<!--</accordion>-->
-<!--</div>-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--</div>-->
-
-<div class="row" ng-show="isFlatDesigner">
-
-  <div class="top-border" ng-repeat="option in range.options" heading="{{option.label}}"
-       is-open="option.active">
-    {{option.label}}
-    <div class="" ng-repeat="part in option.parts" heading="{{part.label}}" active="pane.active=part.active">
-
-      <div class="container">
-        <div class="row  top-border-small">
-          {{part.label}}
-        </div>
-        <div class="row  top-border-small">
-
-          <div class="col-md-6">
-            <div class="align-center" name="option_choice" data-toggle="buttons-checkbox">
-              <!--https://github.com/angular-ui/bootstrap/issues/233-->
-              <button ng-repeat="value in part.values" type="button" class="btn builder option"
-                      ng-model="form[option.option_name][part.part_name]['id']" btn-radio="value.id">
-                <div class="db-icons-sprite {{part.type}}-{{value.id}}"
-                     tooltip="{{part.type}}-{{value.id}}"></div>
-              </button>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
-                             selected-option="form[option.option_name][part.part_name]"/>
-          </div>
-        </div>
-
-
-        <div class="row top-divider " ng-show="part.trim">
-          <div class="col-md-6">
-            <label class="checkbox"><input type=checkbox
-                                           ng-click="clearTrim(form[option.option_name][part.part_name])"
-                                           ng-model="trim">Add trim</label>
-          </div>
-          <div class="col-md-6" ng-show="trim">
-            <fabric-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"
-                             ng-checked="form[option.option_name][part.part_name]['trim']"
-                             fabric-set="set" selected-option="form[option.option_name][part.part_name]"
-                             is-trim="true"/>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
+    <p class="help-block">For help in choosing the right size for you, please refer to our sizing chart.</p>
   </div>
+</div>
+
+<div class="tab-pane" ng-class="{active: option.active}" id="checkout">
+
+  Review your design
+
+  <table  class="reviewDesign">
+    <tr>
+      <th>Component</th>
+      <th>Style</th>
+      <th>Length</th>
+      <th>Fabric</th>
+      <th>Trim</th>
+    </tr>
+    <tr ng-repeat="design in form.design" ng-class-even="'alt'">
+      <td class="bold">{{design.type}}</td>
+      <td>{{design.id}}</td>
+      <td>{{design.length}}</td>
+      <td>{{design.fabric}}</td>
+      <td>{{design.trim}}</td>
+    </tr>
+    <tr><td> &nbsp</td></tr>
+    <tr>
+      <th>Accessory</th>
+      <th>Style</th>
+      <th>Fabric</th>
+      <th>Length</th>
+      <th>Trim</th>
+    </tr>
+    <tr ng-repeat="design in form.extras" ng-class-even="'alt'">
+      <td class="bold">{{design.type}}</td>
+      <td>{{design.id}}</td>
+      <td>{{design.fabric}}</td>
+      <td>{{design.length}}</td>
+      <td>{{design.trim}}</td>
+    </tr>
+  </table>
+<br>
+  <table  class="reviewDesign"  ng-class-even="'alt'">
+    <tr>
+      <th>Option</th>
+      <th>Measurement</th>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>{{form.size}}</td>
+    </tr>
+  </table>
+
+
+  <div class="col-sm-12 align-right" style="margin-bottom:50px">
+    <a class="btn btn-danger design-buttons" href="#/purchase"
+       onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
+      Place order</a>
+  </div>
+</div>
+</div>
+
 
 </div>
 
@@ -295,29 +250,30 @@
 </div>
 
 
-<!--<div class="row" id="debug_view">-->
-  <!--<div class="col-md-4 align-left">-->
-    <!--<a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>-->
-  <!--</div>-->
-  <!--<div class="col-md-4 align-center">-->
-    <!--<a class="btn btn-mini" href="#/designAdmin/{{style.styleId}}">Toggle admin view</a>-->
-  <!--</div>-->
-  <!--<div class="col-md-4 align-right">-->
+<div class="row" id="debug_view">
+  <div class="col-md-4 align-left">
+    <a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>
+  </div>
+  <div class="col-md-4 align-center">
     <!--<a class="btn btn-mini" ng-click="isFlatDesigner = !isFlatDesigner">Toggle flat designer</a>-->
-  <!--</div>-->
-  <!--<hr>-->
-  <!--<div >-->
-    <!--<pre>form={{form}}</pre>-->
-    <!--<pre>fabricSets={{fabricSets}}</pre>-->
-    <!--<pre>trimFabricSets={{trimFabricSets}}</pre>-->
-    <!--<pre>dressFabricSets={{dressFabricSets}}</pre>-->
+  </div>
+  <div class="col-md-4 align-right">
+    <a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>
+
+  </div>
+  <hr>
+  <div ng-show="!isDebugCollapsed">
+    <pre>form={{form}}</pre>
+    <pre>fabricSets={{fabricSets}}</pre>
+    <pre>trimFabricSets={{trimFabricSets}}</pre>
+    <pre>dressFabricSets={{dressFabricSets}}</pre>
 
 
-    <!--<pre>master={{master}}</pre>-->
-    <!--<pre>category={{category}}</pre>-->
-    <!--<pre>style={{style}}</pre>-->
-    <!--<pre>range={{range}}</pre>-->
-  <!--</div>-->
-<!--</div>-->
+    <pre>master={{master}}</pre>
+    <pre>category={{category}}</pre>
+    <pre>style={{style}}</pre>
+    <pre>range={{range}}</pre>
+  </div>
+</div>
 </div>
 <!-- /designBuildView -->
