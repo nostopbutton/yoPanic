@@ -1,8 +1,8 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085"}
-      , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085"}
+      "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "085"}
+      , "sleeves":  {"type": "slv", "id": "001", "size": "00", "fabric": "085"}
     }
     , "extras": {
       "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
@@ -27,13 +27,13 @@
       , "label": "Neckline"
       , "fabricSets": [{"setId": "p-sk"}]
       , "values": [
-        {"id": "017", "name": "shirt collar"}
-        , {"id": "018", "name": "shirt no collar"}
+        {"id": "014", "name": "shift scoop"}
+        , {"id": "015", "name": "shift v slit"}
       ]
       , "size": true
       , "sizes": [
         {"id": "02", "name": "knee"}
-        , {"id": "05", "name": "maxi"}
+        , {"id": "03", "name": "mid"}
       ]
       , "trim": true
       , "trimFabricSets": [{"setId": "x-fl"}]
@@ -45,8 +45,9 @@
       , "fabricSets": [ {"setId": "p-sk"}]
       , "null_value": "000"
       , "values": [
-        {"id": "011", "name": "shirt long tab"}
-        , {"id": "012", "name": "shirt short"}
+        {"id": "000", "name": "none"}
+        , {"id": "001", "name": "short cap"}
+        , {"id": "008", "name": "bell"}
       ]
     }
     ]

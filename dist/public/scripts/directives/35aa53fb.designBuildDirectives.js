@@ -122,7 +122,8 @@ designBuildDirective.directive('drawDress', function () {
     },
     template:
       '<div ng-repeat="selection in parts">' +
-      ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>' +
+      ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>' +
+//        ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} dressPartCode()"></div>' +
       ' <img ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>' +
       '</div>'
   }
@@ -160,6 +161,17 @@ designBuildDirective.directive('partSelector', function () {
         '  </div>' +
         '</div>'
 
+  }
+})
+
+designBuildDirective.directive('sizeSelector', function () {
+  return  {
+    restrict: 'E',
+//    templateUrl: 'template/designBuild/fabric.html',
+    scope: {
+      part: "=", selectedOption: "="
+    },
+    template: '<select class="form-control input-sm" ng-model="selectedOption[\'size\']" ng-options="size.id as size.name for size in part.sizes"></select>'
   }
 })
 
@@ -298,3 +310,4 @@ designBuildDirective.directive('drawAdmin', function () {
     template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
   }
 })
+

@@ -66,14 +66,12 @@
                                selected-option="form[option.option_name][part.part_name]"/>
             </div>
           </div>
-          <div class="row trim-selector" ng-show="part.length">
+          <div class="row trim-selector" ng-show="part.size">
             <div class="col-md-7">
-              Length:
+              Size:
             </div>
             <div class="col-md-4">
-              <select class="form-control input-sm" ng-model="form[option.option_name][part.part_name]['length']"
-                      ng-options="len.id as len.name for len in part.lengths">
-              </select>
+              <size-selector part="part" selected-option="form[option.option_name][part.part_name]"/>
             </div>
           </div>
           <div class="row trim-selector" ng-show="part.trim">
@@ -127,8 +125,6 @@
                   {{set.setName}}
                 </div>
                 <div class="row">
-                  <!--<div ng-switch on="isTrim">-->
-
 
                     <button ng-repeat="fabric in set.fabrics" type="button"
                             class="btn fabric-selector fabric{{fabric.fabId}}"
@@ -139,36 +135,34 @@
                             tooltip="{{fabric.fabName}}"
                             onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[option.name][part.part_name].type}}-{{form[option.name][part.part_name].id}}', '{{fabric.fabId}}' ]);">
                     </button>
-                  <!--</div>-->
                 </div>
               </div>
             </div>
           </div>
 
         </div>
-        <div class="row trim-selector" ng-show="part.length">
-          <div class="col-md-7">
-            Length:
-          </div>
-          <div class="col-md-4">
-            <select class="form-control input-sm" ng-model="form[option.option_name][part.part_name]['length']"
-                    ng-options="len.id as len.name for len in part.lengths">
+        <!--<div class="row trim-selector" ng-show="part.length">-->
+          <!--<div class="col-md-7">-->
+            <!--Length:-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<select class="form-control input-sm" ng-model="form[option.option_name][part.part_name]['length']"-->
+                    <!--ng-options="len.id as len.name for len in part.lengths">-->
 
-            </select>
-          </div>
-        </div>
-        <div class="row trim-selector" ng-show="part.trim">
+            <!--</select>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row trim-selector" ng-show="part.trim">-->
 
-          <trim-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"
-                         ng-checked="form[option.option_name][part.part_name]['trim']"
-                         fabric-set="set" selected-option="form[option.option_name][part.part_name]"
-                         is-trim="true" part-name="part.part_name"/>
-        </div>
+          <!--<trim-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"-->
+                         <!--ng-checked="form[option.option_name][part.part_name]['trim']"-->
+                         <!--fabric-set="set" selected-option="form[option.option_name][part.part_name]"-->
+                         <!--is-trim="true" part-name="part.part_name"/>-->
+        <!--</div>-->
       </div>
     </div>
 
   </div>
-  <!-- End test -->
 
 </div>
 
@@ -176,10 +170,10 @@
   <span>Select your size for your DRESS:</span>
 
   <div class="form-group">
-    <label for="size">Size:</label>
+    <label for="dressSize">Size:</label>
 
-    <select class="form-control" id="size"
-            ng-model="form.size" ng-options="size for size in range.sizes">
+    <select class="form-control" id="dressSize"
+            ng-model="form.dressSize" ng-options="size for size in range.dressSizes">
     </select>
 
     <p class="help-block">For help in choosing the right size for you, please refer to our sizing chart.</p>
@@ -194,14 +188,14 @@
     <tr>
       <th>Component</th>
       <th>Style</th>
-      <th>Length</th>
+      <th>Size</th>
       <th>Fabric</th>
       <th>Trim</th>
     </tr>
     <tr ng-repeat="design in form.design" ng-class-even="'alt'">
       <td class="bold">{{design.type}}</td>
       <td>{{design.id}}</td>
-      <td>{{design.length}}</td>
+      <td>{{design.size}}</td>
       <td>{{design.fabric}}</td>
       <td>{{design.trim}}</td>
     </tr>
@@ -210,14 +204,14 @@
       <th>Accessory</th>
       <th>Style</th>
       <th>Fabric</th>
-      <th>Length</th>
+      <th>Size</th>
       <th>Trim</th>
     </tr>
     <tr ng-repeat="design in form.extras" ng-class-even="'alt'">
       <td class="bold">{{design.type}}</td>
       <td>{{design.id}}</td>
       <td>{{design.fabric}}</td>
-      <td>{{design.length}}</td>
+      <td>{{design.size}}</td>
       <td>{{design.trim}}</td>
     </tr>
   </table>

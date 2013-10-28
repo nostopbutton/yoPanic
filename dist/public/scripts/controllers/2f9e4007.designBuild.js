@@ -35,6 +35,14 @@ angular.module('panicApp.Controllers')
 //      }
 //      $scope.clearFabric = clearFabric;
 
+      $scope.dressPartCode = function(selection) {
+        console.log ("SELCTION:" + selection);
+        return selection.type + "-"
+          + selection.id + selection.length+ "-"
+          + selection.fabric
+      }
+
+
       if(itemId) {
         Range.itemCollection(function(itemData){
             console.log("Looking up item: "+itemId);
@@ -178,4 +186,3 @@ var getStyleById = function(styles, id) {
 
   return style;
 }
-

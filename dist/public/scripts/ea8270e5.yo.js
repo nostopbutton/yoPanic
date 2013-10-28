@@ -369,7 +369,7 @@ designBuildDirective.directive('drawDesign', function () {
 designBuildDirective.directive('drawDress', function () {
   return {
     scope: { parts: '=' },
-    template: '<div ng-repeat="selection in parts">' + ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>' + ' <img ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>' + '</div>'
+    template: '<div ng-repeat="selection in parts">' + ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>' + ' <img ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>' + '</div>'
   };
 });
 designBuildDirective.directive('drawAccessories', function () {
@@ -386,6 +386,16 @@ designBuildDirective.directive('partSelector', function () {
       selectedOption: '='
     },
     template: ' <div data-toggle="buttons">' + '  <!--https://github.com/angular-ui/bootstrap/issues/233-->' + '  <div class="option-button" ng-repeat="value in part.values">' + '    <button type="button" class="btn btn-default option"' + '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' + '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' + '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>' + '   </button>' + '  </div>' + '</div>'
+  };
+});
+designBuildDirective.directive('sizeSelector', function () {
+  return {
+    restrict: 'E',
+    scope: {
+      part: '=',
+      selectedOption: '='
+    },
+    template: '<select class="form-control input-sm" ng-model="selectedOption[\'size\']" ng-options="size.id as size.name for size in part.sizes"></select>'
   };
 });
 designBuildDirective.directive('fabricSelector', function () {
@@ -727,6 +737,10 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
       partType.trim = '';
     };
     $scope.clearTrim = clearTrim;
+    $scope.dressPartCode = function (selection) {
+      console.log('SELCTION:' + selection);
+      return selection.type + '-' + selection.id + selection.length + '-' + selection.fabric;
+    };
     if (itemId) {
       Range.itemCollection(function (itemData) {
         console.log('Looking up item: ' + itemId);

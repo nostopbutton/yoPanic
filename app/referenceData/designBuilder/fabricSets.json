@@ -45,14 +45,11 @@
     , "type": "Premium"
     , "fabrics":
     [
-      { "fabId": "080", "fabName" : "black"}
-      , { "fabId": "081", "fabName" : "cream"}
-      , { "fabId": "083", "fabName" : "beige"}
-      , { "fabId": "085", "fabName" : "jade"}
-      , { "fabId": "086", "fabName" : "charcol grey"}
+      { "fabId": "085", "fabName" : "jade"}
       , { "fabId": "087", "fabName" : "midnight blue"}
       , { "fabId": "088", "fabName" : "fuscia"}
       , { "fabId": "089", "fabName" : "red"}
+
     ]
   }
   , { "setId": "x-fl"

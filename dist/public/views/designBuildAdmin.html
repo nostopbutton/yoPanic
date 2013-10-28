@@ -4,7 +4,9 @@
 <div id="view_dress_panel" class="col-md-3">
   <div class="fixed">
     <table class="admin">
-      <th>style</th>
+      <th>style.attr</th>
+      <th>value</th>
+      <th>style.attr</th>
       <th>value</th>
       <tr>
         <td>styleName</td>
@@ -12,7 +14,7 @@
         <td>styleId</td>
         <td>{{style.styleId}}</td>
       </tr>
-      <tr>
+      <tr class="alt">
         <td>type</td>
         <td>{{style.type}}</td>
         <td>price</td>
@@ -34,14 +36,14 @@
 
 <div class="row">
   <div class="col-md-9">
-    <table>
-      <th>style</th>
+    <table class="admin">
+      <th>style.attr</th>
       <th>value</th>
       <tr>
         <td>styleFormalName</td>
         <td>{{style.styleFormalName}}</td>
       </tr>
-      <tr>
+      <tr class="alt">
         <td>silhouetteImage</td>
         <td>{{style.silhouetteImage}}</td>
       </tr>
@@ -49,7 +51,7 @@
         <td>shortDesc</td>
         <td>{{style.shortDesc}}</td>
       </tr>
-      <tr>
+      <tr class="alt">
         <td>strapline</td>
         <td>{{style.strapline}}</td>
       </tr>
@@ -57,18 +59,18 @@
         <td>description</td>
         <td>{{style.description}}</td>
       </tr>
-      <tr>
+      <tr class="alt">
         <td>care</td>
         <td>{{style.care}}</td>
       </tr>
       <!-- End of style overview -->
-      <th>range</th>
+      <th>range.attr</th>
       <th>value</th>
       <tr>
         <td>strapline</td>
         <td>{{range.strapline}}</td>
       </tr>
-      <tr>
+      <tr class="alt">
         <td>description</td>
         <td>{{range.description}}</td>
       </tr>
@@ -85,7 +87,7 @@
 </div>
 
 
-<div class="row top-border container">
+<div class="row container">
   <div ng-repeat="option in range.options">
 
     <div class="row col-md-11">
@@ -96,19 +98,19 @@
       <div class="row col-md-11 top-border-small">
         {{part.label}}
       </div>
-      <div class="row  top-border-small">
+      <div class="row  admin-top-border-small">
 
         <div class="col-md-3">
           <part-selector part="part" selected-option="form[option.option_name][part.part_name]"/>
           <!--<div data-toggle="buttons">-->
-            <!--&lt;!&ndash;https://github.com/angular-ui/bootstrap/issues/233&ndash;&gt;-->
-            <!--<div class="option-button" ng-repeat="value in part.values">-->
-              <!--<button type="button" class="btn btn-default option"-->
-                      <!--ng-model="form[option.option_name][part.part_name]['id']" btn-radio="value.id"-->
-                      <!--ng-class="{highlight: form[option.option_name][part.part_name]['id']==value.id }">-->
-                <!--<div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>-->
-              <!--</button>-->
-            <!--</div>-->
+          <!--&lt;!&ndash;https://github.com/angular-ui/bootstrap/issues/233&ndash;&gt;-->
+          <!--<div class="option-button" ng-repeat="value in part.values">-->
+          <!--<button type="button" class="btn btn-default option"-->
+          <!--ng-model="form[option.option_name][part.part_name]['id']" btn-radio="value.id"-->
+          <!--ng-class="{highlight: form[option.option_name][part.part_name]['id']==value.id }">-->
+          <!--<div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>-->
+          <!--</button>-->
+          <!--</div>-->
           <!--</div>-->
         </div>
         <div class="col-md-2">
@@ -263,6 +265,7 @@
     <pre>style={{style}}</pre>
     <pre>range={{range}}</pre>
   </div>
+</div>
 </div>
 </div>
 <!-- /designBuildView -->
