@@ -360,6 +360,12 @@ designBuildDirective.directive('description', function () {
     template: '<ol class="breadcrumb">' + '<li ng-class="{active: step == \'customize\'}">Customize</li>' + '<li ng-class="{active: step == \'sizing\'}">Sizing</li>' + '<li ng-class="{active: step == \'review\'}">Review design</li>' + '<li ng-class="{active: step == \'checkout\'}">Checkout</li>' + '</ol>'
   };
 });
+designBuildDirective.directive('drawDesignPic', function () {
+  return {
+    scope: { design: '=' },
+    template: '<img ng-src="images/magick_output/' + 'skt-011-{{design.design.skirt.fabric}}-' + 'slv-{{design.design.sleeves.id}}-{{design.design.sleeves.fabric}}-' + 'nek-{{design.design.neckline.id}}-{{design.design.neckline.fabric}}-' + 'blt-{{design.extras.belt.id}}-120' + '" class="pic body">'
+  };
+});
 designBuildDirective.directive('drawDesign', function () {
   return {
     scope: { design: '=' },

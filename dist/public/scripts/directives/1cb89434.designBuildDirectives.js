@@ -102,6 +102,23 @@ designBuildDirective.directive('description', function () {
   }
 })
 
+designBuildDirective.directive('drawDesignPic', function () {
+  return  {
+    scope: {
+      design: "="
+    },
+    template:
+      '<img ng-src="images/magick_output/' +
+//        'skt-{{design.design.skirt.id}}-{{design.design.skirt.fabric}}-' +
+        'skt-011-{{design.design.skirt.fabric}}-' +
+        'slv-{{design.design.sleeves.id}}-{{design.design.sleeves.fabric}}-' +
+        'nek-{{design.design.neckline.id}}-{{design.design.neckline.fabric}}-' +
+        'blt-{{design.extras.belt.id}}-120' +
+//        'blt-{{design.extras.belt.id}}-{{design.extras.belt.fabric}}' +
+        '" class="pic body">'
+  }
+})
+
 
 designBuildDirective.directive('drawDesign', function () {
   return  {
