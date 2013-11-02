@@ -83,7 +83,7 @@
         , "label": "Belt"
         , "values": [
         {"id": "004", "name": "Obi belt", "defaultFabric": "120", "fabricSets": [ {"setId": "x-fl"}]}
-        , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+        , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
         , {"id": "000", "name": "none"}
       ]
       }

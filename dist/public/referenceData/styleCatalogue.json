@@ -1,6 +1,6 @@
 [
   {
-    "styleId": "sheath-fitted"
+    "styleId": "sheath"
     , "type": "dress"
     , "styleName": "Coco"
     , "styleFormalName": "Sheath Dress"
@@ -10,22 +10,8 @@
       , "Highlight your striking silhouette with killer heels and contrasting obi belt."]
     , "care": [ "Look after it"
       , "And it will last" ]
-    , "price": 1600
+    , "price": 16010
     , "silhouetteImage": "pat-301"
-  }
-  , {
-    "styleId": "flare-fitted"
-    , "type": "dress"
-    , "styleName": "Olivia"
-    , "styleFormalName": "Fit and Flare Dress"
-    , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
-    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
-      , "Perfect with killer heels for a timeless show stopping look." ]
-    , "care": [ "Look after it"
-      , "And it will last" ]
-  , "price": 1600
-    , "silhouetteImage": "pat-302"
   }
   , {
     "styleId": "swing"
@@ -40,6 +26,20 @@
       , "And it will last" ]
     , "price": 1600
     , "silhouetteImage": "pat-302swing"
+  }
+  , {
+    "styleId": "flare-fitted"
+    , "type": "dress"
+    , "styleName": "Olivia"
+    , "styleFormalName": "Fit and Flare Dress"
+    , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
+    , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+    , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+      , "Perfect with killer heels for a timeless show stopping look." ]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+  , "price": 1600
+    , "silhouetteImage": "pat-302"
   }
   , {
     "styleId": "swoosh"

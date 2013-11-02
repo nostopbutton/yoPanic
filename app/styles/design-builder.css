@@ -175,7 +175,7 @@ input[type="checkbox"].hidden {
 }
 /* s-vc: viscose crepe */
 .fabric-selector.fabric003{
-    background: #c10050;
+    background: #ca0019;
 }
 .fabric-selector.fabric004{
     background: #a4006a;
@@ -203,6 +203,9 @@ input[type="checkbox"].hidden {
 }
 .fabric-selector.fabric012{
     background: #767980;
+}
+.fabric-selector.fabric013{
+    background:#5f203d;
 }
 .fabric-selector.fabric014{
     background:#111461;
@@ -263,10 +266,10 @@ input[type="checkbox"].hidden {
 }
 /* x-pt: Polyester Trim*/
 .fabric-selector.fabric160{
-    background: #c10050;
+    background: #ca0019;
 }
 .fabric-selector.fabric161{
-    background: #a4006a;
+    background: #5f203d;
 }
 .fabric-selector.fabric162{
     background:#1d587c;
@@ -275,8 +278,12 @@ input[type="checkbox"].hidden {
     background: #85796e;
 }
 .fabric-selector.fabric165{
-    background: #dfcdb7;
+    background: #d6c2a7;
 }
+.fabric-selector.fabric166{
+    background: #007c8d;
+}
+
 .fabric-selector.fabric167{
     background: #3ec4b8;
 }
@@ -285,6 +292,9 @@ input[type="checkbox"].hidden {
 }
 .fabric-selector.fabric169{
     background: #7e7e7e;
+}
+.fabric-selector.fabric170{
+    background: #111461;
 }
 
 

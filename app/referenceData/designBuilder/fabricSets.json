@@ -5,11 +5,11 @@
     , "description": "blurb about Viscose Crepe"
     , "fabrics":
       [
-        { "fabId": "010", "fabName" : "teal"}
+        { "fabId": "003", "fabName" : "red"}
+        , { "fabId": "008", "fabName" : "cream/champagne"}
+        , { "fabId": "010", "fabName" : "teal"}
         , { "fabId": "011", "fabName" : "black"}
-        , { "fabId": "015", "fabName" : "aubergine"}
-        , { "fabId": "008", "fabName" : "cream"}
-        , { "fabId": "012", "fabName" : "grey"}
+        , { "fabId": "013", "fabName" : "aubergine"}
         , { "fabId": "014", "fabName" : "midnight blue"}
       ]
   }
@@ -34,7 +34,7 @@
       , { "fabId": "004", "fabName" : "violet"}
       , { "fabId": "005", "fabName" : "dirty blue"}
       , { "fabId": "007", "fabName" : "taupe"}
-      , { "fabId": "008", "fabName" : "cream"}
+      , { "fabId": "008", "fabName" : "cream/champagne"}
       , { "fabId": "010", "fabName" : "mint"}
       , { "fabId": "011", "fabName" : "black"}
       , { "fabId": "012", "fabName" : "grey"}
@@ -78,13 +78,12 @@
   , "fabrics":
     [
       { "fabId": "160", "fabName" : "red"}
-      , { "fabId": "161", "fabName" : "violet"}
-      , { "fabId": "162", "fabName" : "dirty blue"}
-      , { "fabId": "164", "fabName" : "taupe"}
-      , { "fabId": "165", "fabName" : "cream"}
-      , { "fabId": "167", "fabName" : "mint"}
+      , { "fabId": "161", "fabName" : "aubergine"}
+      , { "fabId": "165", "fabName" : "cream/champagne"}
+      , { "fabId": "166", "fabName" : "teal"}
       , { "fabId": "168", "fabName" : "black"}
       , { "fabId": "169", "fabName" : "grey"}
+      , { "fabId": "170", "fabName" : "midnight blue"}
     ]
 }
 ]

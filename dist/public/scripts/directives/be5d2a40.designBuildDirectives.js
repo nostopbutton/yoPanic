@@ -141,7 +141,8 @@ designBuildDirective.directive('drawDress', function () {
       '<div ng-repeat="selection in parts">' +
       ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>' +
 //        ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} dressPartCode()"></div>' +
-      ' <img ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>' +
+//      ' <img ng-src="images/parts/trm-{{selection.type}}-{{selection.id}}-{{selection.trim}}.png" class="pic {{selection.type}}"/>' +
+      ' <div class="pic trm sprite-{{selection.trim}} trm-{{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.trim}}"></div>' +
       '</div>'
   }
 })
@@ -153,7 +154,7 @@ designBuildDirective.directive('drawAccessories', function () {
     },
     template:
       '<div ng-repeat="selection in parts">' +
-      ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}{{selection.length}}-{{selection.fabric}}"></div>' +
+      ' <div class="pic {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>' +
       '</div>'
   }
 })
