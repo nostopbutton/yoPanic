@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('panicApp.Controllers')
+angular.module('panicApp.Controllers')//, ['ngSocial'])
   .controller('NewDesignBuildCtrl', ['$scope', '$routeParams', 'Range', 'ReferenceDataCache', 'DesignBuilder',
     '$rootScope', '$window', '$location',
     function ($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder,
@@ -13,6 +13,9 @@ angular.module('panicApp.Controllers')
         itemId = $routeParams.itemId,
         allFabricSets = {},
         range = {};
+
+      $scope.current_title = 'Test';
+      $scope.current_description = 'Test description';
 
       // Put Style data into page scope
       ReferenceDataCache.getStyleById($routeParams.styleId, $scope);

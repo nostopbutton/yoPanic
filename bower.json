@@ -11,6 +11,7 @@
     "angular-ui-utils": "~0.0.4",
     "angular-bootstrap-affix": "~0.2.1",
     "angular-jquery": "~0.2.1",
+    "angular-social": "~0.1.0",
     "bootstrap": "~3.0.0"
   },
   "devDependencies": {

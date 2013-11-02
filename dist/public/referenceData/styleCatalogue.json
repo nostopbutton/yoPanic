@@ -28,7 +28,7 @@
     , "silhouetteImage": "pat-302swing"
   }
   , {
-    "styleId": "flare-fitted"
+    "styleId": "flare"
     , "type": "dress"
     , "styleName": "Olivia"
     , "styleFormalName": "Fit and Flare Dress"
@@ -39,6 +39,20 @@
     , "care": [ "Look after it"
       , "And it will last" ]
   , "price": 1600
+    , "silhouetteImage": "pat-302"
+  }
+  , {
+    "styleId": "doloman"
+    , "type": "dress"
+    , "styleName": "Christina"
+    , "styleFormalName": "Doloman Dress"
+    , "shortDesc": "...."
+    , "strapline": "..."
+    , "description": [ "..."
+      , "..." ]
+    , "care": [ "Look after it"
+      , "And it will last" ]
+    , "price": 1600
     , "silhouetteImage": "pat-302"
   }
   , {

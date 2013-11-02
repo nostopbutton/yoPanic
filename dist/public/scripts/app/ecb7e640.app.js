@@ -14,6 +14,7 @@ angular.module('panicApp',
       , 'ui.bootstrap'
       , 'mgcrea.bootstrap.affix'
       , 'ui.scrollfix'
+//      ,'ngSocial'
       ])//, 'analytics', 'ui'
   .config(function ($routeProvider, $locationProvider) {
 //    $locationProvider.html5Mode(true);

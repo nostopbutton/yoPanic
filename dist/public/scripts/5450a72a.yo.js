@@ -734,6 +734,8 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
   function ($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, $rootScope, $window, $location) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
     var master = '', categoryId = 'dresses', styleId = $routeParams.styleId, itemId = $routeParams.itemId, allFabricSets = {}, range = {};
+    $scope.current_title = 'Test';
+    $scope.current_description = 'Test description';
     ReferenceDataCache.getStyleById($routeParams.styleId, $scope);
     ReferenceDataCache.getItemById($routeParams.itemId, $scope);
     $scope.isDebugCollapsed = true;
