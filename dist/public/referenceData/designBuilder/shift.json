@@ -1,8 +1,8 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "085"}
-      , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "085"}
+      "neckline":   {"type": "nek", "id": "01", "size": "03", "fabric": "085"}
+      , "sleeves":  {"type": "slv", "id": "001", "size": "00", "fabric": "085"}
     }
     , "extras": {
       "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}

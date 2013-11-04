@@ -1,0 +1,23 @@
+/**
+ * Created with TexturePacker http://www.codeandweb.com/texturepacker
+ *
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:6007cfeedaffc2ffe8a55d634851d05e:1/1$ 
+ * 
+ * .silhouetes {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('silhouetes.png?$TexturePacker:SmartUpdate:6007cfeedaffc2ffe8a55d634851d05e:1/1$');}
+ */
+
+.sprite-silhouettes {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/silhouetes.png');}
+.whole-body-tshirt {width:200px;height:501px; background-position: -0px -0px}
+.whole-body-straps {width:200px;height:501px; background-position: -0px -502px}
+.pat-304 {width:118px;height:293px; background-position: -201px -0px}
+.pat-305 {width:105px;height:293px; background-position: -201px -294px}
+.pat-102 {width:119px;height:291px; background-position: -201px -588px}
+.pat-301 {width:118px;height:292px; background-position: -307px -294px}
+.pat-103 {width:118px;height:292px; background-position: -321px -587px}
+.pat-203 {width:117px;height:292px; background-position: -320px -0px}
+.pat-202 {width:117px;height:292px; background-position: -426px -293px}
+.pat-203maxi {width:117px;height:291px; background-position: -438px -0px}
+.pat-302 {width:97px;height:292px; background-position: -440px -586px}
+.pat-303 {width:99px;height:291px; background-position: -538px -586px}
+.pat-101 {width:95px;height:291px; background-position: -544px -292px}
+

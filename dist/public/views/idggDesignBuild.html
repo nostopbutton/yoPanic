@@ -1,0 +1,322 @@
+<div id="designBuildView" class="container">
+
+<div class="row">
+
+<div id="view_dress_panel" class="col-md-3  col-md-offset-1">
+  <div class="row dress">
+    <!--<div draw-design-Pic design="form"></div>-->
+    <div draw-design design="form"></div>
+  </div>
+  <!--<div class="row align-center">-->
+    <!--<ul ng-social-buttons-->
+        <!--data-url="'http://www.aurza.com/'"-->
+        <!--data-title="'current_title'"-->
+        <!--data-description="'current_desc'"-->
+        <!--data-image="'http://prototype.aurza.com/images/silhouettes/pat-301.png'">-->
+      <!--<li>Share:</li>-->
+      <!--<li class="ng-social-facebook">Facebook</li>-->
+      <!--<li class="ng-social-google-plus" data-proxy-url="'/proxy.php'">Google+</li>-->
+      <!--<li class="ng-social-twitter">Twitter</li>-->
+      <!--&lt;!&ndash;<li class="ng-social-vk">Вконтакте</li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<li class="ng-social-odnoklassniki">Одноклассники</li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<li class="ng-social-mailru">Мой мир</li>&ndash;&gt;-->
+      <!--<li class="ng-social-pinterest">Pinterest</li>-->
+      <!--&lt;!&ndash;<li class="ng-social-github" user="esvit" repository="ng-table">GitHub</li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<li class="ng-social-github-forks" user="esvit" repository="ng-table">Forks</li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<li class="ng-social-stumbleupon">StumbleUpon</li>&ndash;&gt;-->
+    <!--</ul>-->
+  <!--</div>-->
+  <!--<div class="row">-->
+    <!--<div class="col-sm-6 align-left" style="margin-bottom:50px">-->
+      <!--<a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"-->
+         <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
+        <!--Reset design</a>-->
+    <!--</div>-->
+
+    <!--<div class="col-sm-6 align-right" style="margin-bottom:50px">-->
+      <!--<a class="btn btn-danger design-buttons" href="#/purchase"-->
+         <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
+        <!--Back to indiegogo</a>-->
+    <!--</div>-->
+  <!--</div>-->
+
+
+</div>
+
+<div id="dress_designer_panel" class="col-md-6 col-md-offset-1">
+<div class="container style">
+<!--<div class="row">-->
+  <!--<div class="col-md-6">-->
+    <!--<div overview info="style"></div>-->
+  <!--</div>-->
+  <!--<div class="col-md-6 align-right">-->
+    <!--<div class="row">-->
+      <!--<a class="btn btn-mini btn-danger" href="#/purchase"-->
+         <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
+        <!--Back to Indiegogo</a>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--&lt;!&ndash;...add social icons here&ndash;&gt;-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="row">
+<!--<div design-breadcrumb></div>-->
+<ul class=" breaded" id="options">
+   <!--<li class="active"><a href="#design" data-toggle="tab">Customize</a></li>-->
+   <!--<li><a href="#accessorize" data-toggle="tab">Accessorize</a></li>-->
+   <!--<li><a href="#sizing" data-toggle="tab">Sizing</a></li>-->
+   <!--<li><a href="#checkout" data-toggle="tab">Checkout</a></li>-->
+    <li ng-repeat="part in range.options[0].parts" ng-class="{active: part.active}"><a href="#{{part.part_name}}" data-toggle="tab">{{part.label}}</a></li>
+    <li ng-repeat="part in range.extras[0].parts"><a href="#{{part.part_name}}-extra" data-toggle="tab">{{part.label}}</a></li>
+  </ul>
+
+<!--<div class="tab-content">-->
+<!--<div ng-repeat="option in range.options" class="tab-pane" ng-class="{active: option.active}"-->
+     <!--id="{{option.option_name}}">-->
+  <!--<div class="row">-->
+
+    <!-- Start of inner pannel --->
+    <div class="option-panel">
+      <!--<ul class="nav nav-tabs" id="{{option.option_name}}-tab">-->
+        <!--<li ng-repeat="part in option.parts" ng-class="{active: part.active}">-->
+          <!--<a href="#{{part.part_name}}" data-toggle="tab">{{part.label}}</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+
+      <div class="tab-content">
+        <div ng-repeat="part in range.options[0].parts" class="tab-pane" ng-class="{active: part.active}" id="{{part.part_name}}">
+          <div class="row">
+            <div class="col-md-7">
+              <part-selector part="part" selected-option="form[range.options[0].option_name][part.part_name]"/>
+            </div>
+            <div class="col-md-4">
+              <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
+                               selected-option="form[range.options[0].option_name][part.part_name]"/>
+            </div>
+          </div>
+          <div class="row trim-selector" ng-show="part.size">
+            <div class="col-md-7">
+              Size:
+            </div>
+            <div class="col-md-4">
+              <size-selector part="part" selected-option="form[range.options[0].option_name][part.part_name]"/>
+            </div>
+          </div>
+          <div class="row trim-selector" ng-show="part.trim">
+            <trim-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"
+                           ng-checked="form[range.options[0].option_name][part.part_name]['trim']"
+                           fabric-set="set" selected-option="form[range.options[0].option_name][part.part_name]"
+                           is-trim="true" part-name="part.part_name"/>
+          </div>
+        </div>
+      <!--</div>-->
+    <!--</div>-->
+    <!-- End of inner pannel --->
+
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="tab-pane" ng-class="{active: option.active}" id="accessorize">-->
+
+  <!--<div class="row option-panel" ng-repeat="option in range.extras"> &lt;!&ndash; test &ndash;&gt;-->
+
+    <!--<ul class="nav nav-tabs" id="{{option.name}}-tab">-->
+      <!--<li ng-repeat="part in option.parts" ng-class="{active: part.active}">-->
+        <!--<a href="#{{part.part_name}}-extra" data-toggle="tab">{{part.label}}</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+
+    <!--<div class="tab-content">-->
+
+      <div ng-repeat="part in range.extras[0].parts" class="tab-pane"
+           id="{{part.part_name}}-extra">
+
+        <div class="row  middle-container" ng-repeat="value in part.values">
+          <div class="col-md-4">
+
+            <div data-toggle="buttons">
+              <!--https://github.com/angular-ui/bootstrap/issues/233-->
+              <div class="option-button">
+                <button type="button" class="btn btn-default option"
+                        ng-model="form[range.extras[0].name][part.part_name]['id']" btn-radio="value.id"
+                        ng-click="form[range.extras[0].name][part.part_name]['fabric'] = value.defaultFabric; form[range.extras[0].name][part.part_name]['code']=value.id + '-' +value.defaultFabric"
+                        ng-class="{highlight: form[range.extras[0].name][part.part_name]['id']==value.id }">
+                  <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8" style="vertical-align: middle">
+            <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
+              <div class="fabric-group middle-inner">
+                <div class="row extras-fabric-header">
+                  {{set.setName}}
+                </div>
+                <div class="row">
+
+                    <button ng-repeat="fabric in set.fabrics" type="button"
+                            class="btn fabric-selector fabric{{fabric.fabId}}"
+
+                            ng-click="form[range.extras[0].name][part.part_name]['fabric'] = fabric.fabId; form[range.extras[0].name][part.part_name]['id'] = value.id"
+                            ng-model="form[range.extras[0].name][part.part_name]['code']" btn-radio="value.id +'-'+fabric.fabId"
+                            ng-class="{active: form[range.extras[0].name][part.part_name]['code']==value.id +'-'+fabric.fabId }"
+                            tooltip="{{fabric.fabName}}"
+                            onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[range.extras[0].name][part.part_name].type}}-{{form[range.extras[0].name][part.part_name].id}}', '{{fabric.fabId}}' ]);">
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--<div class="row trim-selector" ng-show="part.length">-->
+          <!--<div class="col-md-7">-->
+            <!--Length:-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<select class="form-control input-sm" ng-model="form[option.option_name][part.part_name]['length']"-->
+                    <!--ng-options="len.id as len.name for len in part.lengths">-->
+
+            <!--</select>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row trim-selector" ng-show="part.trim">-->
+
+          <!--<trim-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"-->
+                         <!--ng-checked="form[option.option_name][part.part_name]['trim']"-->
+                         <!--fabric-set="set" selected-option="form[option.option_name][part.part_name]"-->
+                         <!--is-trim="true" part-name="part.part_name"/>-->
+        <!--</div>-->
+      </div>
+    </div>
+
+  </div>
+
+<!--</div>-->
+
+<!--<div class="tab-pane" ng-class="{active: option.active}" id="sizing">-->
+  <!--<span>Select your size for your DRESS:</span>-->
+
+  <!--<div class="form-group">-->
+    <!--<label for="dressSize">Size:</label>-->
+
+    <!--<select class="form-control" id="dressSize"-->
+            <!--ng-model="form.dressSize" ng-options="size for size in range.dressSizes">-->
+    <!--</select>-->
+
+    <!--<p class="help-block">For help in choosing the right size for you, please refer to our sizing chart.</p>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="tab-pane" ng-class="{active: option.active}" id="checkout">-->
+
+  <!--Review your design-->
+
+  <!--<table  class="reviewDesign">-->
+    <!--<tr>-->
+      <!--<th>Component</th>-->
+      <!--<th>Style</th>-->
+      <!--<th>Size</th>-->
+      <!--<th>Fabric</th>-->
+      <!--<th>Trim</th>-->
+    <!--</tr>-->
+    <!--<tr ng-repeat="design in form.design" ng-class-even="'alt'">-->
+      <!--<td class="bold">{{design.type}}</td>-->
+      <!--<td>{{design.id}}</td>-->
+      <!--<td>{{design.size}}</td>-->
+      <!--<td>{{design.fabric}}</td>-->
+      <!--<td>{{design.trim}}</td>-->
+    <!--</tr>-->
+    <!--<tr><td> &nbsp</td></tr>-->
+    <!--<tr>-->
+      <!--<th>Accessory</th>-->
+      <!--<th>Style</th>-->
+      <!--<th>Fabric</th>-->
+      <!--<th>Size</th>-->
+      <!--<th>Trim</th>-->
+    <!--</tr>-->
+    <!--<tr ng-repeat="design in form.extras" ng-class-even="'alt'">-->
+      <!--<td class="bold">{{design.type}}</td>-->
+      <!--<td>{{design.id}}</td>-->
+      <!--<td>{{design.fabric}}</td>-->
+      <!--<td>{{design.size}}</td>-->
+      <!--<td>{{design.trim}}</td>-->
+    <!--</tr>-->
+  <!--</table>-->
+<!--<br>-->
+  <!--<table  class="reviewDesign"  ng-class-even="'alt'">-->
+    <!--<tr>-->
+      <!--<th>Option</th>-->
+      <!--<th>Measurement</th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Size</td>-->
+      <!--<td>{{form.size}}</td>-->
+    <!--</tr>-->
+  <!--</table>-->
+
+
+  <!--<div class="col-sm-12 align-right" style="margin-bottom:50px">-->
+    <!--<a class="btn btn-danger design-buttons" href="#/purchase"-->
+       <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
+      <!--Place order</a>-->
+  <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+</div>
+
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-3 col-sm-offset-1 align-left" style="margin-bottom:50px">
+    <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
+       onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">
+      Reset design</a>
+  </div>
+
+  <div class="col-sm-2 col-md-offset-1 align-left" style="margin-bottom:50px">
+    <a class="btn btn-danger design-buttons" href="#/purchase"
+       onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
+      Change silluoette</a>
+  </div>
+
+  <div class="col-sm-4 align-right" style="margin-bottom:50px">
+    <a class="btn btn-danger design-buttons" href="#/purchase"
+       onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
+      Back to indiegogo</a>
+  </div>
+</div>
+
+
+<div class="row" id="debug_view">
+  <div class="col-md-4 align-left">
+    <a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>
+  </div>
+  <div class="col-md-4 align-center">
+    <!--<a class="btn btn-mini" ng-click="isFlatDesigner = !isFlatDesigner">Toggle flat designer</a>-->
+  </div>
+  <div class="col-md-4 align-right">
+    <a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>
+
+  </div>
+  <hr>
+  <div ng-show="!isDebugCollapsed">
+    <pre>form={{form}}</pre>
+    <pre>fabricSets={{fabricSets}}</pre>
+    <pre>trimFabricSets={{trimFabricSets}}</pre>
+    <pre>dressFabricSets={{dressFabricSets}}</pre>
+
+
+    <pre>master={{master}}</pre>
+    <pre>category={{category}}</pre>
+    <pre>style={{style}}</pre>
+    <pre>range={{range}}</pre>
+  </div>
+</div>
+</div>
+<!-- /designBuildView -->

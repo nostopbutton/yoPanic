@@ -73,13 +73,13 @@ designBuildDirective.directive('silhouette', function () {
       '<div class="row image">' +
       '<div class="col-lg-12 ">' +
       //<!--{{style.silhouetteImage}}-->
-      '<img ng-src="images/silhouettes/{{style.silhouetteImage}}.png">' +
-      //<!--<div class="items-sprite {{dress.itemId}}"></div>-->
+//      '<img ng-src="images/silhouettes/{{style.silhouetteImage}}.png">' +
+      ' <div class="pic sprite-silhouettes {{style.silhouetteImage}}"></div>' +
       '</div>' +
       '</div>' +
       '<div class="row title">{{style.styleName}}</div>' +
       '<div class="row type">({{style.styleFormalName}})</div>' +
-      '<div class="row price">from HKD {{style.price}}</div>' +
+//      '<div class="row price">from HKD {{style.price}}</div>' +
       '<div class="row item customize">' +
       '<button class="btn btn-danger" id="review-dress">Customize</button>' +
       '</div>' +

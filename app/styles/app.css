@@ -233,8 +233,8 @@ table tr a {
     font-family: 'Krona One', sans-serif;
     font-size: 30px;
     display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
 }
 .logo.custom {
     font-family: 'Nothing You Could Do', cursive;

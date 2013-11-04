@@ -1,9 +1,9 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "011"}
-      , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "011"}
-      , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "011"}
+      "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011"}
+      , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "011"}
+      , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "011"}
     }
     , "extras": {
       "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
@@ -57,7 +57,7 @@
       , "label": "Skirt"
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "values": [
-        {"id": "007", "name": "flare"}
+        {"id": "007", "name": "swing"}
       ]
       , "size": true
       , "sizes": [

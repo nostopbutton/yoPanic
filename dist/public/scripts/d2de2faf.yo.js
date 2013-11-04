@@ -12,40 +12,10 @@ angular.module('panicApp', [
   '$locationProvider',
   function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'views/home.html',
-      controller: 'StaticPageCtrl'
-    }).when('/fit', {
-      templateUrl: 'views/fit.html',
-      controller: 'StaticPageCtrl'
-    }).when('/fabrics', {
-      templateUrl: 'views/fabrics.html',
-      controller: 'StaticPageCtrl'
-    }).when('/party', {
-      templateUrl: 'views/party.html',
-      controller: 'StaticPageCtrl'
-    }).when('/contact', {
-      templateUrl: 'views/contact.html',
-      controller: 'StaticPageCtrl'
-    }).when('/about', {
-      templateUrl: 'views/about.html',
-      controller: 'StaticPageCtrl'
-    }).when('/collection', {
-      templateUrl: 'views/dressCollection.html',
-      controller: 'DressCollectionCtrl'
-    }).when('/shop/:styleId/:itemId', {
-      templateUrl: 'views/shopItem.html',
-      controller: 'ShopItemCtrl'
-    }).when('/design', {
       templateUrl: 'views/silhouettes.html',
       controller: 'SilhouetteCtrl'
-    }).when('/olddesign/:styleId', {
-      templateUrl: 'views/designBuildDirective.html',
-      controller: 'DesignBuildCtrl'
-    }).when('/olddesign/:styleId/:itemId', {
-      templateUrl: 'views/designBuildDirective.html',
-      controller: 'DesignBuildCtrl'
     }).when('/design/:styleId', {
-      templateUrl: 'views/newDesignBuild.html',
+      templateUrl: 'views/idggDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
     }).when('/design/:styleId/:itemId', {
       templateUrl: 'views/newDesignBuild.html',
@@ -53,15 +23,6 @@ angular.module('panicApp', [
     }).when('/designAdmin/:styleId', {
       templateUrl: 'views/designBuildAdmin.html',
       controller: 'NewDesignBuildCtrl'
-    }).when('/purchase', {
-      templateUrl: 'views/sizing.html',
-      controller: 'StaticPageCtrl'
-    }).when('/adminCollection', {
-      templateUrl: 'views/adminCollection.html',
-      controller: 'CollectionCtrl'
-    }).when('/adminCollection/:styleId', {
-      templateUrl: 'views/adminRangeDetails.html',
-      controller: 'RangeDetailsCtrl'
     }).otherwise({ redirectTo: '/' });
     $locationProvider.hashPrefix('!');
   }
@@ -350,7 +311,7 @@ designBuildDirective.directive('silhouette', function () {
   return {
     restrict: 'A',
     scope: { style: '=' },
-    template: '<a href="#!/design/{{style.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{style.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + '<img ng-src="images/silhouettes/{{style.silhouetteImage}}.png">' + '</div>' + '</div>' + '<div class="row title">{{style.styleName}}</div>' + '<div class="row type">({{style.styleFormalName}})</div>' + '<div class="row price">from HKD {{style.price}}</div>' + '<div class="row item customize">' + '<button class="btn btn-danger" id="review-dress">Customize</button>' + '</div>' + '</a>'
+    template: '<a href="#!/design/{{style.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{style.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{style.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title">{{style.styleName}}</div>' + '<div class="row type">({{style.styleFormalName}})</div>' + '<div class="row item customize">' + '<button class="btn btn-danger" id="review-dress">Customize</button>' + '</div>' + '</a>'
   };
 });
 designBuildDirective.directive('drawDesignPic', function () {
@@ -582,15 +543,13 @@ angular.module('panicApp.Controllers').controller('HomeCarouselCtrl', [
   }
 ]);
 'use strict';
-angular.module('panicApp.Controllers', ['ngSocial']).controller('StaticPageCtrl', [
+angular.module('panicApp.Controllers').controller('StaticPageCtrl', [
   '$scope',
   '$rootScope',
   '$window',
   '$location',
   '$routeParams',
   function ($scope, $rootScope, $window, $location, $routeParams) {
-    $scope.current_title = 'Test';
-    $scope.current_desc = 'Test desc';
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
   }
 ]);

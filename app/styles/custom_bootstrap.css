@@ -1,4 +1,5 @@
-body { padding-top: 160px;}
+/*body { padding-top: 160px;}*/
+body { padding-top: 110px;}
 
 @media (max-width: 768px) {
     body { padding-top: 130px;}

@@ -16,7 +16,7 @@
   <!--TODO - add description -->
   <meta name="description" content="">
 
-  <title>AURZA - experience custom</title>
+  <title>Aurza - experience custom</title>
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- Standard iPhone -->
@@ -28,16 +28,25 @@
   <!-- Retina iPad -->
   <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png" />
 
+
+  <!--<link rel="stylesheet" href="styles/bootstrap.css">-->
+  <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">-->
   <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="components/angular-social/angular-social.css">
 
   <!-- build:css styles/main.css -->
+
+  <!--<link rel="stylesheet" href="styles/main.css">-->
   <link rel="stylesheet" href="styles/custom_bootstrap.css">
 
   <link rel="stylesheet" href="styles/footer.css">
 
+  <!--TODO- why are these not compiled into main.css?? -->
   <link rel="stylesheet" href="styles/db-parts-sprite.css">
   <link rel="stylesheet" href="styles/db-icons-sprite.css">
+  <!--<link rel="stylesheet" href="styles/silhouette-sprite.css">-->
+  <!--<link rel="stylesheet" href="styles/items-sprite.css">-->
+  <!-- Added by me -->
   <link rel="stylesheet" href="styles/aurza.css">
   <link rel="stylesheet" href="styles/fabrics.css">
   <link rel="stylesheet" href="styles/party.css">
@@ -50,9 +59,14 @@
   <link rel="stylesheet" href="styles/dont-panic.css"/>
 
   <link rel="stylesheet" href="styles/003.css"/>
+  <!--<link rel="stylesheet" href="styles/004.css"/>-->
+  <!--<link rel="stylesheet" href="styles/005.css"/>-->
+  <!--<link rel="stylesheet" href="styles/006.css"/>-->
+  <!--<link rel="stylesheet" href="styles/007.css"/>-->
   <link rel="stylesheet" href="styles/008.css"/>
   <link rel="stylesheet" href="styles/010.css"/>
   <link rel="stylesheet" href="styles/011.css"/>
+  <!--<link rel="stylesheet" href="styles/012.css"/>-->
   <link rel="stylesheet" href="styles/013.css"/>
   <link rel="stylesheet" href="styles/014.css"/>
   <link rel="stylesheet" href="styles/085.css"/>
@@ -60,6 +74,9 @@
   <link rel="stylesheet" href="styles/088.css"/>
   <link rel="stylesheet" href="styles/089.css"/>
   <link rel="stylesheet" href="styles/120.css"/>
+  <!--<link rel="stylesheet" href="styles/121.css"/>-->
+  <!--<link rel="stylesheet" href="styles/122.css"/>-->
+  <!--<link rel="stylesheet" href="styles/123.css"/>-->
   <link rel="stylesheet" href="styles/160.css"/>
   <link rel="stylesheet" href="styles/161.css"/>
   <link rel="stylesheet" href="styles/165.css"/>
@@ -68,7 +85,6 @@
   <link rel="stylesheet" href="styles/169.css"/>
   <link rel="stylesheet" href="styles/170.css"/>
   <link rel="stylesheet" href="styles/body.css"/>
-  <link rel="stylesheet" href="styles/silhouetes.css"/>
 
   <!-- endbuild -->
 
@@ -86,8 +102,9 @@
 <![endif]-->
 
 <!--data-description="current_description"-->
-<div ng-include="'views/idggHeader.html'"></div>
+<div ng-include="'views/header.html'"></div>
 <div ng-view></div>
+<!--<div ng-include="'views/footer.html'"></div>-->
 <div class="row copyright">
   <div class="col-sm-12">
     <p>© 2013 AURZA. All rights reserved.</p>

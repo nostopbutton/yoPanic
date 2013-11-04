@@ -25,12 +25,12 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 1600
-    , "silhouetteImage": "pat-302swing"
+    , "silhouetteImage": "pat-304"
   }
   , {
     "styleId": "flare"
     , "type": "dress"
-    , "styleName": "Olivia"
+    , "styleName": "Alexa"
     , "styleFormalName": "Fit and Flare Dress"
     , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
     , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
@@ -53,12 +53,12 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 1600
-    , "silhouetteImage": "pat-302"
+    , "silhouetteImage": "pat-305"
   }
   , {
     "styleId": "swoosh"
     , "type": "dress"
-    , "styleName": "Carla"
+    , "styleName": "Kate"
     , "styleFormalName": "Swoosh Dress"
     , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
     , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
@@ -72,7 +72,7 @@
   , {
   "styleId": "shift"
   , "type": "dress"
-  , "styleName": "Edie"
+  , "styleName": "Eddie"
   , "styleFormalName": "Shift Dress"
   , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
   , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
@@ -100,7 +100,7 @@
   , {
   "styleId": "shirt-maxi"
   , "type": "dress"
-  , "styleName": "Elle maxi"
+  , "styleName": "Claudia"
   , "styleFormalName": "Maxi Shirt Dress"
   , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
   , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
@@ -123,7 +123,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 600
-    , "silhouetteImage": "skt-014"
+    , "silhouetteImage": "pat-101"
   }
   , {
     "styleId": "skirt-swing"
@@ -137,7 +137,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 600
-    , "silhouetteImage": "skt-052"
+    , "silhouetteImage": "pat-102"
   }
   , {
     "styleId": "skirt-flare"
@@ -151,7 +151,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 600
-    , "silhouetteImage": "skt-072"
+    , "silhouetteImage": "pat-103"
   }
 ]
 
