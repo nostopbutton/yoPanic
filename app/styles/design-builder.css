@@ -166,34 +166,12 @@ input[type="checkbox"].hidden {
     z-index: 10;
 }
 
-.fabric-selector.fabric001{
-    background: #101010;
-}
-
-.fabric-selector.fabric002{
-    background: #7e7e7e;
-}
 /* s-vc: viscose crepe */
 .fabric-selector.fabric003{
     background: #ca0019;
 }
-.fabric-selector.fabric004{
-    background: #a4006a;
-}
-.fabric-selector.fabric005{
-    background:#1d587c;
-}
-.fabric-selector.fabric006{
-    background: #1d597f;
-}
-.fabric-selector.fabric007{
-    background: #85796e;
-}
 .fabric-selector.fabric008{
     background: #d6c2a7;
-}
-.fabric-selector.fabric009{
-    background:#0d759e;
 }
 .fabric-selector.fabric010{
     background: #007c8d;
@@ -201,33 +179,16 @@ input[type="checkbox"].hidden {
 .fabric-selector.fabric011{
     background: #101010;
 }
-.fabric-selector.fabric012{
-    background: #767980;
-}
 .fabric-selector.fabric013{
     background:#5f203d;
 }
 .fabric-selector.fabric014{
     background:#111461;
 }
-.fabric-selector.fabric015{
-    background:#81002d;
-}
+
 /* p-sk: Silk */
-.fabric-selector.fabric080{
-    background: #262626;
-}
-.fabric-selector.fabric081{
-    background: #e1dcd4;
-}
-.fabric-selector.fabric083{
-    background: #c1b2a4;
-}
 .fabric-selector.fabric085{
     background: #56c1bb;
-}
-.fabric-selector.fabric086{
-    background: #676767;
 }
 .fabric-selector.fabric087{
     background: #1a21ab;
@@ -271,21 +232,11 @@ input[type="checkbox"].hidden {
 .fabric-selector.fabric161{
     background: #5f203d;
 }
-.fabric-selector.fabric162{
-    background:#1d587c;
-}
-.fabric-selector.fabric164{
-    background: #85796e;
-}
 .fabric-selector.fabric165{
     background: #d6c2a7;
 }
 .fabric-selector.fabric166{
     background: #007c8d;
-}
-
-.fabric-selector.fabric167{
-    background: #3ec4b8;
 }
 .fabric-selector.fabric168{
     background: #101010;
