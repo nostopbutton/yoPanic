@@ -1,8 +1,6 @@
 .tmp
 .idea
 .sass-cache
-app/components
 app/images/magick_output
-node_modules
 ~*
 todelete*
