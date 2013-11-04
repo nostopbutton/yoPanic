@@ -353,13 +353,6 @@ designBuildDirective.directive('silhouette', function () {
     template: '<a href="#!/design/{{style.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{style.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + '<img ng-src="images/silhouettes/{{style.silhouetteImage}}.png">' + '</div>' + '</div>' + '<div class="row title">{{style.styleName}}</div>' + '<div class="row type">({{style.styleFormalName}})</div>' + '<div class="row price">from HKD {{style.price}}</div>' + '<div class="row item customize">' + '<button class="btn btn-danger" id="review-dress">Customize</button>' + '</div>' + '</a>'
   };
 });
-designBuildDirective.directive('description', function () {
-  return {
-    restrict: 'A',
-    scope: { step: '=' },
-    template: '<ol class="breadcrumb">' + '<li ng-class="{active: step == \'customize\'}">Customize</li>' + '<li ng-class="{active: step == \'sizing\'}">Sizing</li>' + '<li ng-class="{active: step == \'review\'}">Review design</li>' + '<li ng-class="{active: step == \'checkout\'}">Checkout</li>' + '</ol>'
-  };
-});
 designBuildDirective.directive('drawDesignPic', function () {
   return {
     scope: { design: '=' },
@@ -589,12 +582,15 @@ angular.module('panicApp.Controllers').controller('HomeCarouselCtrl', [
   }
 ]);
 'use strict';
-angular.module('panicApp.Controllers').controller('StaticPageCtrl', [
+angular.module('panicApp.Controllers', ['ngSocial']).controller('StaticPageCtrl', [
+  '$scope',
   '$rootScope',
   '$window',
   '$location',
   '$routeParams',
-  function ($rootScope, $window, $location, $routeParams) {
+  function ($scope, $rootScope, $window, $location, $routeParams) {
+    $scope.current_title = 'Test';
+    $scope.current_desc = 'Test desc';
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
   }
 ]);

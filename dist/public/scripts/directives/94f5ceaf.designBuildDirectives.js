@@ -87,20 +87,20 @@ designBuildDirective.directive('silhouette', function () {
   }
 })
 
-designBuildDirective.directive('description', function () {
-  return  {
-    restrict: 'A',
-    scope: {
-      step: "="
-    },
-    template: '<ol class="breadcrumb">' +
-      '<li ng-class="{active: step == \'customize\'}">Customize</li>' +
-      '<li ng-class="{active: step == \'sizing\'}">Sizing</li>' +
-      '<li ng-class="{active: step == \'review\'}">Review design</li>' +
-      '<li ng-class="{active: step == \'checkout\'}">Checkout</li>' +
-      '</ol>'
-  }
-})
+//designBuildDirective.directive('description', function () {
+//  return  {
+//    restrict: 'A',
+//    scope: {
+//      step: "="
+//    },
+//    template: '<ol class="breadcrumb">' +
+//      '<li ng-class="{active: step == \'customize\'}">Customize</li>' +
+//      '<li ng-class="{active: step == \'sizing\'}">Sizing</li>' +
+//      '<li ng-class="{active: step == \'review\'}">Review design</li>' +
+//      '<li ng-class="{active: step == \'checkout\'}">Checkout</li>' +
+//      '</ol>'
+//  }
+//})
 
 designBuildDirective.directive('drawDesignPic', function () {
   return  {
