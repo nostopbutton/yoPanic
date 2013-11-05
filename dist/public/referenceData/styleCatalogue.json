@@ -153,6 +153,20 @@
     , "price": 600
     , "silhouetteImage": "pat-103"
   }
+  , {
+  "styleId": "tops"
+  , "type": "top"
+  , "styleName": "Tops"
+  , "styleFormalName": "Seperate Tops"
+  , "shortDesc": "..."
+  , "strapline": "... "
+  , "description": [ "..."
+    , "..." ]
+  , "care": [ "Look after it"
+    , "And it will last" ]
+  , "price": 600
+  , "silhouetteImage": "pat-103"
+}
 ]
 
 

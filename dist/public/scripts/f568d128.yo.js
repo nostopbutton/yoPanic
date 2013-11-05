@@ -311,7 +311,7 @@ designBuildDirective.directive('silhouette', function () {
   return {
     restrict: 'A',
     scope: { design: '=' },
-    template: '<a href="#!/design/{{design.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{design.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title">{{design.styleName}}</div>' + '<div class="row type">({{design.styleFormalName}})</div>' + '<div class="row item customize">' + '<button class="btn btn-danger" id="review-dress">Customize</button>' + '</div>' + '</a>'
+    template: '<a href="#!/design/{{design.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{design.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title">{{design.styleName}}</div>' + '<div class="row type">({{design.styleFormalName}})</div>' + '<div class="row item customize">' + '</div>' + '</a>'
   };
 });
 designBuildDirective.directive('drawDesignPic', function () {
@@ -323,7 +323,7 @@ designBuildDirective.directive('drawDesignPic', function () {
 designBuildDirective.directive('drawDesign', function () {
   return {
     scope: { design: '=' },
-    template: '<img ng-src="images/parts/whole body.png" class="pic body">' + '<div draw-dress parts="design.design"></div>' + '<div draw-accessories parts="design.extras"></div>'
+    template: '<div class="pic body sprite-silhouettes {{design.model}}"></div>' + '<div draw-dress parts="design.design"></div>' + '<div draw-accessories parts="design.extras"></div>'
   };
 });
 designBuildDirective.directive('drawDress', function () {

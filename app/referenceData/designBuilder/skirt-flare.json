@@ -1,10 +1,10 @@
 {
   "default": {
     "design": {
-      "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "013"}
+      "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "010"}
     }
     , "extras": {
-      "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+      "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "168", "code": "002-168"}
     }
     , "dressSize": 12
     , "model": "whole-body-tshirt"
@@ -54,7 +54,7 @@
         , "active": "true"
         , "label": "Belt"
         , "values": [
-         {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
+        {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
         , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
         , {"id": "000", "name": "none"}
       ]

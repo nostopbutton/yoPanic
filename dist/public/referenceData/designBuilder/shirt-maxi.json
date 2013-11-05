@@ -1,7 +1,7 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085"}
+      "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "089"}
       , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085"}
     }
     , "extras": {

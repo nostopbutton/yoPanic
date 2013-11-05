@@ -1,5 +1,14 @@
 [
-  { "setId": "s-vc"
+  { "setId": "0x0"
+    , "setName": "None"
+    , "type": "Standard"
+    , "description": "blurb about Viscose Crepe"
+    , "fabrics":
+    [
+      { "fabId": "000", "fabName" : "None"}
+    ]
+  }
+  ,{ "setId": "s-vc"
     , "setName": "Viscose Crepe"
     , "type": "Standard"
     , "description": "blurb about Viscose Crepe"
@@ -61,6 +70,20 @@
 
       ]
   }
+  , { "setId": "x-l"
+  , "setName": "Leather"
+  , "type": "Special"
+  , "fabrics":
+    [
+      { "fabId": "103", "fabName" : "red"}
+      , { "fabId": "108", "fabName" : "cream/champagne"}
+      , { "fabId": "110", "fabName" : "teal"}
+      , { "fabId": "111", "fabName" : "black"}
+      , { "fabId": "112", "fabName" : "grey"}
+      , { "fabId": "113", "fabName" : "aubergine"}
+      , { "fabId": "114", "fabName" : "midnight blue"}
+    ]
+}
   , { "setId": "x-sq"
     , "setName": "Sequins"
     , "type": "Special"

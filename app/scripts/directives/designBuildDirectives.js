@@ -81,7 +81,7 @@ designBuildDirective.directive('silhouette', function () {
       '<div class="row type">({{design.styleFormalName}})</div>' +
 //      '<div class="row price">from HKD {{style.price}}</div>' +
       '<div class="row item customize">' +
-      '<button class="btn btn-danger" id="review-dress">Customize</button>' +
+//      '<button class="btn btn-danger" id="review-dress">Customize</button>' +
       '</div>' +
       '</a>'
   }
@@ -126,7 +126,8 @@ designBuildDirective.directive('drawDesign', function () {
       design: "="
     },
     template:
-      '<img ng-src="images/parts/whole body.png" class="pic body">' +
+      '<div class="pic body sprite-silhouettes {{design.model}}"></div>' +
+//      '<img ng-src="images/parts/whole body.png" class="pic body">' +
       '<div draw-dress parts="design.design"></div>' +
       '<div draw-accessories parts="design.extras"></div>'
   }

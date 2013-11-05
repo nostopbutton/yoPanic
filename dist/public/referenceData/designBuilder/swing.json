@@ -10,6 +10,7 @@
       "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
     }
     , "dressSize": 12
+    , "model": "whole-body-straps"
   }
   , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
   , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
@@ -76,36 +77,27 @@
     , "active": "true"
     , "parts": [
       {
-        "part_name": "belt"
-        , "type": "blt"
-        , "active": "true"
-        , "label": "Belt"
-        , "values": [
-        {"id": "004", "name": "Obi belt", "defaultFabric": "120", "fabricSets": [ {"setId": "x-fl"}]}
-        , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
-        , {"id": "000", "name": "none"}
-      ]
-      }
-      , {
-        "part_name": "peplum"
-        , "type": "ext"
-        , "label": "Peplum"
-        , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-        , "values": [
-          {"id": "000", "name": "none"}
-          , {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-        ]
-      }
-      , {
         "part_name": "rosetta"
         , "type": "ext"
         , "label": "Rosetta"
         , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
         , "values": [
-          {"id": "000", "name": "none"}
-          , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+          {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+          , {"id": "000", "name": "none"}
         ]
       }
+    ,       {
+      "part_name": "belt"
+      , "type": "blt"
+      , "active": "true"
+      , "label": "Belt"
+      , "values": [
+        {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
+        , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+        , {"id": "000", "name": "none"}
+      ]
+    }
+
     ]}
 ]
 

@@ -96,6 +96,13 @@
     font-size:16px
 }
 
+.igg-design-buttons {
+    /*margin-top:15px;*/
+    margin:15px 0;
+    /*width:150px;*/
+    font-size:16px
+}
+
 .option-button {
     float:left;
     /*width:80px;*/
@@ -166,6 +173,11 @@ input[type="checkbox"].hidden {
     z-index: 10;
 }
 
+.fabric-selector.fabric000{
+    background: rgba(0, 0, 0, 0.16);
+    background-image: url(../images/smallicon-36.png);
+}
+
 /* s-vc: viscose crepe */
 .fabric-selector.fabric003{
     background: #ca0019;
@@ -199,6 +211,30 @@ input[type="checkbox"].hidden {
 .fabric-selector.fabric089{
     background: #e04854;
 }
+
+/* s-vc: viscose crepe */
+.fabric-selector.fabric103{
+    background: #ca0019;
+}
+.fabric-selector.fabric108{
+    background: #d6c2a7;
+}
+.fabric-selector.fabric110{
+    background: #007c8d;
+}
+.fabric-selector.fabric111{
+    background: #101010;
+}
+.fabric-selector.fabric112{
+    background: #7e7e7e;
+}
+.fabric-selector.fabric113{
+    background:#5f203d;
+}
+.fabric-selector.fabric114{
+    background:#111461;
+}
+
 /* x-fl: faux-leather */
 .fabric-selector.fabric120{
     background: #4b4b4b;
@@ -313,6 +349,7 @@ input[type="checkbox"].hidden {
     /*border-width: 0;*/
     border-radius: 0;
     padding: 20px;
+    height:370px;
 }
 
 .fabric-group {

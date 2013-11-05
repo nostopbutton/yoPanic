@@ -8,6 +8,7 @@
       "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
     }
     , "dressSize": 12
+    , "model": "whole-body-straps"
   }
   , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
   , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
@@ -51,24 +52,5 @@
     }
     ]
   }]
-  , "extras": [
-  {
-    "name": "extras"
-    , "label": "Extras"
-    , "active": "true"
-    , "parts": [
-      {
-        "part_name": "belt"
-        , "type": "blt"
-        , "active": "true"
-        , "label": "Belt"
-        , "values": [
-        {"id": "004", "name": "Obi belt", "defaultFabric": "120", "fabricSets": [ {"setId": "x-fl"}]}
-        , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
-        , {"id": "000", "name": "none"}
-      ]
-      }
-    ]}
-]
 
 }

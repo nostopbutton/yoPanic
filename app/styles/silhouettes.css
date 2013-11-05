@@ -1,12 +1,12 @@
 /**
  * Created with TexturePacker http://www.codeandweb.com/texturepacker
  *
- * SmartUpdateHash: $TexturePacker:SmartUpdate:6007cfeedaffc2ffe8a55d634851d05e:1/1$ 
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:3a65ffbfec9648d0252a4cc54140b9b1:1/1$ 
  * 
- * .silhouetes {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('silhouetes.png?$TexturePacker:SmartUpdate:6007cfeedaffc2ffe8a55d634851d05e:1/1$');}
+ * .silhouetes {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('silhouetes.png?$TexturePacker:SmartUpdate:3a65ffbfec9648d0252a4cc54140b9b1:1/1$');}
  */
 
-.sprite-silhouettes {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/silhouetes.png');}
+.sprite-silhouettes {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/silhouettes.png');}
 .whole-body-tshirt {width:200px;height:501px; background-position: -0px -0px}
 .whole-body-straps {width:200px;height:501px; background-position: -0px -502px}
 .pat-304 {width:118px;height:293px; background-position: -201px -0px}
