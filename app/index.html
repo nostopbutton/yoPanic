@@ -87,7 +87,11 @@
 
 <!--data-description="current_description"-->
 <div ng-include="'views/idggHeader.html'"></div>
-<div ng-view></div>
+<div ng-controller="appController">
+  <div class="alert alert-info" ng-show="loading">Loading</div>
+  <div ng-view></div>
+</div>
+
 <div class="row copyright">
   <div class="col-sm-12">
     <p>© 2013 AURZA. All rights reserved.</p>

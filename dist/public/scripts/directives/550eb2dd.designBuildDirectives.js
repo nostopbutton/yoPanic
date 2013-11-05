@@ -66,19 +66,19 @@ designBuildDirective.directive('silhouette', function () {
   return  {
     restrict: 'A',
     scope: {
-      style: "="
+      design: "="
     },
-    template: '<a href="#!/design/{{style.styleId}}"' +
-      "onClick=\"_gaq.push(['_trackEvent', 'Silhouettes', 'customize', '{{style.styleId}}']);\">" +
+    template: '<a href="#!/design/{{design.styleId}}"' +
+      "onClick=\"_gaq.push(['_trackEvent', 'Silhouettes', 'customize', '{{design.styleId}}']);\">" +
       '<div class="row image">' +
       '<div class="col-lg-12 ">' +
       //<!--{{style.silhouetteImage}}-->
 //      '<img ng-src="images/silhouettes/{{style.silhouetteImage}}.png">' +
-      ' <div class="pic sprite-silhouettes {{style.silhouetteImage}}"></div>' +
+      ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' +
       '</div>' +
       '</div>' +
-      '<div class="row title">{{style.styleName}}</div>' +
-      '<div class="row type">({{style.styleFormalName}})</div>' +
+      '<div class="row title">{{design.styleName}}</div>' +
+      '<div class="row type">({{design.styleFormalName}})</div>' +
 //      '<div class="row price">from HKD {{style.price}}</div>' +
       '<div class="row item customize">' +
       '<button class="btn btn-danger" id="review-dress">Customize</button>' +

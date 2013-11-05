@@ -310,8 +310,8 @@ designBuildDirective.directive('designBreadcrumb', function () {
 designBuildDirective.directive('silhouette', function () {
   return {
     restrict: 'A',
-    scope: { style: '=' },
-    template: '<a href="#!/design/{{style.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{style.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{style.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title">{{style.styleName}}</div>' + '<div class="row type">({{style.styleFormalName}})</div>' + '<div class="row item customize">' + '<button class="btn btn-danger" id="review-dress">Customize</button>' + '</div>' + '</a>'
+    scope: { design: '=' },
+    template: '<a href="#!/design/{{design.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{design.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title">{{design.styleName}}</div>' + '<div class="row type">({{design.styleFormalName}})</div>' + '<div class="row item customize">' + '<button class="btn btn-danger" id="review-dress">Customize</button>' + '</div>' + '</a>'
   };
 });
 designBuildDirective.directive('drawDesignPic', function () {
@@ -655,10 +655,45 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
   '$window',
   '$location',
   '$routeParams',
-  function ($scope, Range, $rootScope, $window, $location, $routeParams) {
+  '$http',
+  '$q',
+  function ($scope, Range, $rootScope, $window, $location, $routeParams, $http, $q) {
+    $scope.$emit('LOAD');
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
     $scope.styles = Range.styleCatalogue(function (data) {
       console.log('$scope.styles.length: ' + $scope.styles.length);
+    });
+    var aggregatedPromise = $q.all([
+        $http.get('/images/003.png'),
+        $http.get('/images/008.png'),
+        $http.get('/images/010.png'),
+        $http.get('/images/011.png'),
+        $http.get('/images/013.png'),
+        $http.get('/images/014.png'),
+        $http.get('/images/085.png'),
+        $http.get('/images/088.png'),
+        $http.get('/images/089.png'),
+        $http.get('/images/120.png'),
+        $http.get('/images/160.png'),
+        $http.get('/images/161.png'),
+        $http.get('/images/165.png'),
+        $http.get('/images/166.png'),
+        $http.get('/images/168.png'),
+        $http.get('/images/169.png'),
+        $http.get('/images/170.png')
+      ]);
+    aggregatedPromise.then(function () {
+      $scope.$emit('UNLOAD');
+    });
+  }
+]).controller('appController', [
+  '$scope',
+  function ($scope) {
+    $scope.$on('LOAD', function () {
+      $scope.loading = true;
+    });
+    $scope.$on('UNLOAD', function () {
+      $scope.loading = false;
     });
   }
 ]);
