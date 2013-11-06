@@ -2,7 +2,6 @@
 
 angular.module('panicApp',
     ['panicApp.Controllers'
-//      , 'panicApp.metaDataService'
       , 'panicApp.referenceDataServices'
       , 'panicApp.designBuildDirectives'
       , 'panicApp.designBuildFilters'
