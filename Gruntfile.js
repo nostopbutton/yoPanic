@@ -253,6 +253,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    imageoptim: {
+      png: {
+        options: {
+          jpegMini: false,
+          imageAlpha: true,
+          quitAfter: true
+        },
+        src: ['/Users/Pete/dev/Sprites/MagickOut']
+      }
+    },
     htmlmin: {
       dist: {
         options: {
@@ -462,6 +472,10 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('images', [
+    'imageoptim:png'
   ]);
 
 //  grunt.registerTask('inst', ['install-dependencies']);

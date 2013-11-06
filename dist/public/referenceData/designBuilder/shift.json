@@ -48,6 +48,7 @@
       , "values": [
         {"id": "000", "name": "none"}
         , {"id": "001", "name": "short cap"}
+        , {"id": "006", "name": "elbow"}
         , {"id": "008", "name": "bell"}
       ]
     }
