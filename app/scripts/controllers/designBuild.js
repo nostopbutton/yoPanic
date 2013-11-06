@@ -106,6 +106,7 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
         $scope.form = angular.copy(master);
       };
 
+
       $scope.fabricSets = DesignBuilder.fabricSets(
         function(data) {   // success
           allFabricSets = angular.copy(data);

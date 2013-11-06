@@ -62,6 +62,7 @@ designBuildDirective.directive('designBreadcrumb', function () {
 })
 
 
+
 designBuildDirective.directive('silhouette', function () {
   return  {
     restrict: 'A',
@@ -102,6 +103,36 @@ designBuildDirective.directive('silhouette', function () {
 //  }
 //})
 
+designBuildDirective.directive('facebook', ["$location", function($location) {
+  return  {
+    scope: {
+      design: "="
+    },
+    template:
+      '<a class="btn btn-default igg-design-buttons" ' +
+        'href="' +
+          'https://www.facebook.com/dialog/feed?app_id=153275411536544' +
+          '&name=I+just+designed+this+fabulous+dress+at+AURZA' +
+          '&link='+
+        encodeURIComponent($location.absUrl()) +
+          '&redirect_uri=' +
+        encodeURIComponent('http://indiegogo-prototype-designer.aurza.com')+
+          '&picture=http://img.aurza.com/' +
+          'skt-{{design.design.skirt.id}}-{{design.design.skirt.size}}-{{design.design.skirt.fabric}}-' +
+          'slv-{{design.design.sleeves.id}}-{{design.design.sleeves.size}}-{{design.design.sleeves.fabric}}-' +
+          'nek-{{design.design.neckline.id}}-{{design.design.neckline.size}}-{{design.design.neckline.fabric}}-' +
+          'blt-{{design.extras.belt.id}}-{{design.extras.belt.size}}-{{design.extras.belt.fabric}}-' +
+          'ext-{{design.extras.peplum.id}}-{{design.extras.peplum.size}}-{{design.extras.peplum.fabric}}-' +
+          'ext-{{design.extras.rosetta.id}}-{{design.extras.rosetta.size}}-{{design.extras.rosetta.fabric}}' +
+          '.png' +
+          '&caption=www.aurza.com' +
+          '&description=You+can+design+your+individual+dress+at+www.aurza.com' +
+        '"' +
+        'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'{{dress.silId}}/{{dress.itemId}}\']);">'+
+        'Facebook</a>'
+  }
+}])
+
 designBuildDirective.directive('drawDesignPic', function () {
   return  {
     scope: {
@@ -110,10 +141,8 @@ designBuildDirective.directive('drawDesignPic', function () {
     template:
       '<img ng-src="http://img.aurza.com/' +
         'skt-{{design.design.skirt.id}}-{{design.design.skirt.size}}-{{design.design.skirt.fabric}}-' +
-//        'skt-011-{{design.design.skirt.fabric}}-' +
         'slv-{{design.design.sleeves.id}}-{{design.design.sleeves.size}}-{{design.design.sleeves.fabric}}-' +
         'nek-{{design.design.neckline.id}}-{{design.design.neckline.size}}-{{design.design.neckline.fabric}}-' +
-//        'blt-{{design.extras.belt.id}}-120' +
         'blt-{{design.extras.belt.id}}-{{design.extras.belt.size}}-{{design.extras.belt.fabric}}-' +
         'ext-{{design.extras.peplum.id}}-{{design.extras.peplum.size}}-{{design.extras.peplum.fabric}}-' +
         'ext-{{design.extras.rosetta.id}}-{{design.extras.rosetta.size}}-{{design.extras.rosetta.fabric}}' +
