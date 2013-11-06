@@ -84,8 +84,8 @@
         , "label": "Peplum"
         , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
         , "values": [
-           {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "0x0"},{"setId": "s-vc"}]}
-        , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "0x0"}, {"setId": "s-vc"}]}
+           {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
         ]
       }
       , {
@@ -94,8 +94,7 @@
         , "label": "Rosetta"
         , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
         , "values": [
-        {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "0x0"}, {"setId": "s-vc"}]}
-        , {"id": "000", "name": "none"}
+        {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
         ]
       }
       , {

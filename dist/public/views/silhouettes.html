@@ -1,27 +1,8 @@
 
-<nav class="navbar navbar-fixed-top" role="navigation">
 
-  <div class="container">
-
-    <div class="col-md-10 col-md-offset-1">
-      <table width="100%">
-        <tr>
-          <td>
-            <a class="logo"  href="/"><img src="/images/home/AURZAlogo.png"></a>
-          </td>
-          <td style="vertical-align:middle; text-align: right; font-family: 'Nothing You Could Do', cursive;font-size: 40px;">
-            CREATE before you PLEDGE
-          </td>
-        </tr>
-      </table>
-    </div>
-</nav>
 <div id="silhouettesView" class="container">
-  <div class="row">
+  <div class="row" style="margin-top:20px">
     <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 strap-line">
-        <!--<p class="large">-->
-          <!--Create before you pledge-->
-        <!--</p>-->
         <span class="very-small">
           Start by choosing your favourite style below. Then use the designer to add your own personal touches by changing the neckline, sleeves, skirt length and style, adding trim or changing the colour and fabric.
         </span>
@@ -39,7 +20,7 @@
   <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
       <div ng-repeat="design in styles">
-        <div class="col-lg-3 container item">
+        <div class="col-sm-3 container item">
           <div silhouette design="design"></div>
         </div>
       </div>

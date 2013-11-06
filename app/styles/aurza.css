@@ -2,6 +2,16 @@
     margin-top: 20px;
 }
 
+.handwriting {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 20px;
+}
+
+.large-hand {
+    font-weight: bold;
+
+}
+
 .strap-line {
     /*height:55px;*/
     /*line-height: 50px;*/

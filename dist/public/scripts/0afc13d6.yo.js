@@ -323,7 +323,7 @@ designBuildDirective.directive('silhouette', function () {
   return {
     restrict: 'A',
     scope: { design: '=' },
-    template: '<a href="#!/design/{{design.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{design.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title">{{design.styleName}}</div>' + '<div class="row type">({{design.styleFormalName}})</div>' + '<div class="row item customize">' + '</div>' + '</a>'
+    template: '<a href="#!/design/{{design.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{design.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title handwriting large-hand">{{design.styleName}}</div>' + '<div class="row type handwriting">({{design.styleFormalName}})</div>' + '<div class="row item customize">' + '</div>' + '</a>'
   };
 });
 designBuildDirective.directive('facebook', [
@@ -411,7 +411,7 @@ designBuildDirective.directive('trimSelector', function () {
       isTrim: '=',
       partName: '='
     },
-    template: ' <div class="col-md-7">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '       No {{partName}} trim' + '     </div>' + '     <div class="row ">' + '       <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"' + '           onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"></button>' + '     </div>' + '   </div>' + ' </div>' + ' <div class="col-md-5">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '        {{fabricSet.setName}}' + '     </div>' + '     <div class="row ">' + '       <div ng-switch on="isTrim" >' + '         <div draw-trim-fabrics ng-switch-when="true" selection="fabricSet" selected-option="selectedOption"></div>' + '         <div draw-fabrics ng-switch-default selection="fabricSet" selected-option="selectedOption"></div>' + '       </div>' + '     </div>' + '   </div>' + ' </div>'
+    template: ' <div class="col-md-7">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '       {{fabricSet.setName}} trim' + '     </div>' + '     <div class="row">' + '       <div class="col-md-5">' + '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"' + '             onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);">' + '        </button>' + '     </div>' + '       <div class="col-md-5">' + '         <div draw-trim-fabrics selection="fabricSet" selected-option="selectedOption"></div>' + '     </div>' + '     </div>' + '   </div>' + ' </div>'
   };
 });
 designBuildDirective.directive('drawFabrics', function () {

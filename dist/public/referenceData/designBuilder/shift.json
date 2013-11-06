@@ -67,7 +67,6 @@
         , "label": "Belt"
         , "values": [
         {"id": "003", "name": "Silk belt", "defaultFabric": "120", "fabricSets": [ {"setId": "p-sk"}]}
-        , {"id": "000", "name": "none"}
       ]
       }
     ]}

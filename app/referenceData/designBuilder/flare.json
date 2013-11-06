@@ -7,7 +7,7 @@
     }
     , "extras": {
       "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-      "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+      "extras":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
       "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
     }
     , "dressSize": 12
@@ -78,24 +78,14 @@
     , "active": "true"
     , "parts": [
       {
-        "part_name": "peplum"
-        , "type": "ext"
-        , "label": "Peplum"
-        , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-        , "values": [
-          {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-        , {"id": "000", "name": "none"}
-        ]
-      }
-      , {
-        "part_name": "rosetta"
-        , "type": "ext"
-        , "label": "Rosetta"
-        , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-        , "values": [
-          {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-         , {"id": "000", "name": "none"}
-        ]
+      "part_name": "extras"
+      , "type": "ext"
+      , "label": "Extras"
+      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+      , "values": [
+      {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+      , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+      ]
       }
       , {
         "part_name": "belt"
@@ -105,7 +95,6 @@
         , "values": [
           {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
           , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
-          , {"id": "000", "name": "none"}
         ]
       }
     ]}

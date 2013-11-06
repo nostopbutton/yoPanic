@@ -1,5 +1,10 @@
 /*body { padding-top: 160px;}*/
-body { padding-top: 140px;}
+body { padding-top: 105px;}
+
+/*.container{*/
+    /*max-width: none !important;*/
+    /*width: 970px;*/
+/*}*/
 
 @media (max-width: 768px) {
     body { padding-top: 130px;}
@@ -44,7 +49,7 @@ body { padding-top: 140px;}
 
 .navbar{
     background-color: white;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
     border-color: white;
 }
 
