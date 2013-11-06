@@ -36,13 +36,12 @@
       <!--<div draw-design-Pic design="form"></div>-->
       <div draw-design design="form"></div>
     </div>
-    <div class="row align-center">
+    <div ng-controller="MetaCtrlInput" class="row align-center">
       <ul ng-social-buttons
-          data-url="$location.absUrl()">
-          <!--data-url="'http://www.aurza.com/'">-->
-          <!--data-title="'current_title'"-->
-          <!--data-description="'current_desc'"-->
-          <!--data-image="'http://prototype.aurza.com/images/silhouettes/pat-301.png'">-->
+          data-url="$location.absUrl()"
+          data-title="data.og_title"
+          data-description="'current_desc'"
+          data-image="data.og_image">
         <li>Share:</li>
         <li class="ng-social-facebook">Facebook</li>
         <li class="ng-social-google-plus" data-proxy-url="'/proxy.php'">Google+</li>
