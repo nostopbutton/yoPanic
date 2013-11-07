@@ -75,8 +75,8 @@
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
 }
 
-.info-box:before,
-.info-box:after {
+.info-box::before,
+.info-box::after {
     content: '';
     z-index: -1;
     position: absolute;
@@ -98,7 +98,7 @@
     -o-transform: skew(-15deg) rotate(-6deg);
     transform: skew(-15deg) rotate(-6deg); }
 
-.info-box:after {
+.info-box::after {
     left: auto;
     right: 10px;
     right: 20px;
@@ -371,8 +371,8 @@
 
 }
 
-.item .image:before,
-.item .image:after {
+.item .image::before,
+.item .image::after {
     content: '';
     z-index: -1;
     position: absolute;
@@ -395,7 +395,7 @@
     -o-transform: skew(-15deg) rotate(-6deg);
     transform: skew(-15deg) rotate(-6deg); }
 
-.item .image:after {
+.item .image::after {
     left: auto;
     right: 10px;
     /*right: 20px;*/
@@ -527,7 +527,7 @@ blockquote {
     padding:0px;
 
 }
-blockquote:before {
+blockquote::before {
     display: block;
     content: "\201C";
     font-size: 80px;
@@ -536,7 +536,7 @@ blockquote:before {
     top: -25px;
     color: #7a7a7a;
 }
-blockquote:after {
+blockquote::after {
     /*display: block;*/
     content: "\201D";
     font-size: 80px;
@@ -556,7 +556,7 @@ blockquote cite {
     margin-top: 5px;
 }
 
-blockquote cite:before {
+blockquote cite::before {
     content: "\2014 \2009";
 }
 

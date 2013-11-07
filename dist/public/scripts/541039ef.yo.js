@@ -323,7 +323,7 @@ designBuildDirective.directive('silhouette', function () {
   return {
     restrict: 'A',
     scope: { design: '=' },
-    template: '<a href="#!/design/{{design.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{design.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title handwriting large-hand">{{design.styleName}}</div>' + '<div class="row type handwriting">({{design.styleFormalName}})</div>' + '<div class="row item customize">' + '</div>' + '</a>'
+    template: '<a href="#!/design/{{design.styleId}}"' + 'onClick="_gaq.push([\'_trackEvent\', \'Silhouettes\', \'customize\', \'{{design.styleId}}\']);">' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-silhouettes {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title handwriting large-hand">{{design.styleName}}</div>' + '<div class="row type handwriting">({{design.styleFormalName}})</div>' + '</a>'
   };
 });
 designBuildDirective.directive('facebook', [

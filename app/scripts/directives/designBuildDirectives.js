@@ -81,9 +81,9 @@ designBuildDirective.directive('silhouette', function () {
       '<div class="row title handwriting large-hand">{{design.styleName}}</div>' +
       '<div class="row type handwriting">({{design.styleFormalName}})</div>' +
 //      '<div class="row price">from HKD {{style.price}}</div>' +
-      '<div class="row item customize">' +
+//      '<div class="row item customize">' +
 //      '<button class="btn btn-danger" id="review-dress">Customize</button>' +
-      '</div>' +
+//      '</div>' +
       '</a>'
   }
 })
