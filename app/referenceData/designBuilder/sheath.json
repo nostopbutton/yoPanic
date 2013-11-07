@@ -29,7 +29,7 @@
       , "type": "nek"
       , "active": "true"
       , "label": "Neckline"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+      , "fabricSets": [ {"setId": "s-vc"}]
       , "values": [
         {"id": "001", "name": "bateau"}
         , {"id": "002", "name": "scoop"}

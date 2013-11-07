@@ -289,19 +289,19 @@ designBuildDirective.directive('trimSelector', function () {
       fabricSet: "=", selectedOption: "=", isTrim: "=", partName: "="
     },
     template:
-      ' <div class="col-md-7">' +
+      ' <div class="col-sm-7 col-sm-12">' +
       '   <div class="fabric-group">' +
       '     <div class="row fabric-header">' +
       '       {{fabricSet.setName}} trim' +
       '     </div>' +
       '     <div class="row">' +
-      '       <div class="col-md-5">' +
+      '       <div class="col-sm-3 col-xs-5">' +
       '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"' +
       '             onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);">' +
 //        '<img ng-src="images/smallicon-36.png"/>' +
       '        </button>' +
       '     </div>' +
-        '       <div class="col-md-5">' +
+        '       <div class="col-xs-5">' +
         '         <div draw-trim-fabrics selection="fabricSet" selected-option="selectedOption"></div>' +        '     </div>' +
       '     </div>' +
       '   </div>' +

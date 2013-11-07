@@ -1,105 +1,30 @@
 <div id="designBuildView" class="container">
-<!--<nav class="navbar navbar-fixed-top" role="navigation">-->
-
-  <!--<div class="container">-->
-    <!--<div class="col-md-10 col-md-offset-1">-->
-      <!--<table width="100%">-->
-        <!--<tr>-->
-          <!--<td>-->
-            <!--<a class="logo" style="margin-left:-25px" href="#!"><img src="/images/home/AURZAlogo.png"></a>-->
-          <!--</td>-->
-          <!--<td style="vertical-align:middle; text-align: right; font-family: 'Nothing You Could Do', cursive;font-size: 40px;">-->
-            <!--design your perfect dress-->
-          <!--</td>-->
-        <!--</tr>-->
-      <!--</table>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;<div class="col-md-4 col-md-offset-1">&ndash;&gt;-->
-
-    <!--&lt;!&ndash;<a class="logo" href="#!"><img src="/images/home/AURZAlogo.png"></a>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-    <!--&lt;!&ndash;<div class="col-md-6" style="text-align: right; font-family: 'Nothing You Could Do', cursive;font-size: 40px;">&ndash;&gt;-->
-    <!--&lt;!&ndash;design your perfect dress&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-  <!--</div>-->
-  <!--&lt;!&ndash; /.container &ndash;&gt;-->
-<!--</nav>-->
-<!-- /.navbar -->
 <div class="row">
 
-  <div id="view_dress_panel" class="col-md-3  col-md-offset-1">
+  <div id="view_dress_panel" class="col-lg-3 col-lg-offset-1 col-md-3 ">
     <div class="row dress">
       <!--<div draw-design-Pic design="form"></div>-->
       <div draw-design design="form"></div>
     </div>
-    <!--<div ng-controller="MetaCtrlInput" class="row align-center">-->
-      <!--<ul ng-social-buttons-->
-          <!--data-url="$location.absUrl()"-->
-          <!--data-title="data.og_title"-->
-          <!--data-description="'current_desc'"-->
-          <!--data-image="data.og_image">-->
-        <!--<li>Share:</li>-->
-        <!--<li class="ng-social-facebook">Facebook</li>-->
-        <!--<li class="ng-social-google-plus" data-proxy-url="'/proxy.php'">Google+</li>-->
-        <!--<li class="ng-social-twitter">Twitter</li>-->
-        <!--&lt;!&ndash;<li class="ng-social-vk">Вконтакте</li>&ndash;&gt;-->
-        <!--&lt;!&ndash;<li class="ng-social-odnoklassniki">Одноклассники</li>&ndash;&gt;-->
-        <!--&lt;!&ndash;<li class="ng-social-mailru">Мой мир</li>&ndash;&gt;-->
-        <!--<li class="ng-social-pinterest">Pinterest</li>-->
-        <!--&lt;!&ndash;<li class="ng-social-github" user="esvit" repository="ng-table">GitHub</li>&ndash;&gt;-->
-        <!--&lt;!&ndash;<li class="ng-social-github-forks" user="esvit" repository="ng-table">Forks</li>&ndash;&gt;-->
-        <!--&lt;!&ndash;<li class="ng-social-stumbleupon">StumbleUpon</li>&ndash;&gt;-->
-      <!--</ul>-->
-    <!--</div>-->
+
     <div class="row">
-    <!--<div class="col-sm-6 align-left" style="margin-bottom:50px">-->
-    <!--<a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"-->
-    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
-    <!--Reset design</a>-->
-    <!--</div>-->
 
-    <!--<div class="col-sm-6 align-right" style="margin-bottom:50px">-->
-    <!--<a class="btn btn-danger design-buttons" href="#/purchase"-->
-    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
-    <!--Back to indiegogo</a>-->
-    <!--</div>-->
     </div>
-
-
 
   </div>
 
-  <div id="dress_designer_panel" class="col-md-6 col-md-offset-1">
+  <div id="dress_designer_panel" class="col-lg-6 col-lg-offset-1 col-md-8 col-md-offset-">
     <div class="container style">
-      <!--<div class="row">-->
-      <!--<div class="col-md-6">-->
-      <!--<div overview info="style"></div>-->
-      <!--</div>-->
-      <!--<div class="col-md-6 align-right">-->
-      <!--<div class="row">-->
-      <!--<a class="btn btn-mini btn-danger" href="#/purchase"-->
-      <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
-      <!--Back to Indiegogo</a>-->
-      <!--</div>-->
-      <!--<div class="row">-->
-      <!--&lt;!&ndash;...add social icons here&ndash;&gt;-->
-      <!--</div>-->
-      <!--</div>-->
-      <!--</div>-->
 
       <div class="row">
         <!--<div design-breadcrumb></div>-->
-        <ul class=" breaded" id="options">
+        <ul class="breaded" id="options">
           <li ng-repeat="part in range.options[0].parts" ng-class="{active: part.active}">
             <a href="#{{part.part_name}}" data-toggle="tab">{{part.label}}</a>
           </li>
           <li ng-repeat="part in range.extras[0].parts"><a href="#{{part.part_name}}-extra" data-toggle="tab">{{part.label}}</a>
           </li>
         </ul>
-
-        <!--<li><a href="#share" data-toggle="tab">Share</a>-->
-        <!--</li>-->
 
         <!-- Start of inner pannel --->
         <div class="option-panel">
@@ -108,19 +33,19 @@
             <div ng-repeat="part in range.options[0].parts" class="tab-pane" ng-class="{active: part.active}"
                  id="{{part.part_name}}">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-xs-6">
                   <part-selector part="part" selected-option="form[range.options[0].option_name][part.part_name]"/>
                 </div>
-                <div class="col-md-6">
+                <div class="col-xs-6">
                   <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
                                    selected-option="form[range.options[0].option_name][part.part_name]"/>
                 </div>
               </div>
               <div class="row trim-selector" ng-show="part.size">
-                <div class="col-md-7">
+                <div class="col-xs-7">
                   Size:
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-4">
                   <size-selector part="part" selected-option="form[range.options[0].option_name][part.part_name]"/>
                 </div>
               </div>
@@ -137,7 +62,7 @@
                  id="{{part.part_name}}-extra">
 
               <div class="row  middle-container" ng-repeat="value in part.values">
-                <div class="col-md-3">
+                <div class="col-xs-3">
 
                   <div data-toggle="buttons">
                     <!--https://github.com/angular-ui/bootstrap/issues/233-->
@@ -152,7 +77,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-3" style="vertical-align: middle">
+                <div class="col-xs-3" style="vertical-align: middle">
                   <div>
                     <div class="fabric-group middle-inner">
                       <div class="row extras-fabric-header">
@@ -175,7 +100,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-6" style="vertical-align: middle">
+                <div class="col-xs-6" style="vertical-align: middle">
                   <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
                     <div class="fabric-group middle-inner">
                       <div class="row extras-fabric-header">
@@ -203,10 +128,6 @@
             </div>
 
 
-            <!--<div class="tab-pane" id="share">-->
-
-            <!--Share-->
-            <!--</div>-->
 
           </div>
           <!--<div style="vertical-align:middle; text-align: left; font-family: 'Nothing You Could Do', cursive;font-size: 30px;">-->
@@ -223,11 +144,11 @@
               <!--</li>-->
               <!--<li class="ng-social-facebook">Facebook</li>-->
               <!--&lt;!&ndash;<li class="ng-social-google-plus" data-proxy-url="'/proxy.php'">Google+</li>&ndash;&gt;-->
-              <!--<li class="ng-social-twitter">Twitter</li>-->
+              <!--&lt;!&ndash;<li class="ng-social-twitter">Twitter</li>&ndash;&gt;-->
               <!--&lt;!&ndash;<li class="ng-social-vk">Вконтакте</li>&ndash;&gt;-->
               <!--&lt;!&ndash;<li class="ng-social-odnoklassniki">Одноклассники</li>&ndash;&gt;-->
               <!--&lt;!&ndash;<li class="ng-social-mailru">Мой мир</li>&ndash;&gt;-->
-              <!--<li class="ng-social-pinterest">Pinterest</li>-->
+              <!--&lt;!&ndash;<li class="ng-social-pinterest">Pinterest</li>&ndash;&gt;-->
               <!--&lt;!&ndash;<li class="ng-social-github" user="esvit" repository="ng-table">GitHub</li>&ndash;&gt;-->
               <!--&lt;!&ndash;<li class="ng-social-github-forks" user="esvit" repository="ng-table">Forks</li>&ndash;&gt;-->
               <!--&lt;!&ndash;<li class="ng-social-stumbleupon">StumbleUpon</li>&ndash;&gt;-->
@@ -281,39 +202,24 @@
         Reset design</a>
   </div>
   <div class="col-sm-7 align-center" style="margin-bottom:50px">
-    <a class="btn btn-danger" href="#/purchase"
+    <a class="btn btn-danger" href="http://www.indiegogo.com/projects/aurza-utterly-fabulous-custom-made-dresses"
        style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"
-       onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
+       onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/back-to-igg']);">
       back to indiegogo</a>
   </div>
 </div>
 
 <div class="row" id="debug_view">
-  <!--<div>-->
-    <!--location {{location}}-->
-  <!--</div>-->
-  <!--<div>-->
-    <!--params {{params}}-->
-  <!--</div>-->
-  <!--<div>-->
-    <!--deparam {{deparam}}-->
-<!--</div>-->
-  <!--<div>-->
-    <!--designCode {{designCode}}-->
-  <!--</div>-->
 
-
-  <div class="col-md-4 align-left">
-    <a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>
-  </div>
-  <div class="col-md-4 align-center">
-    <!--<a class="btn btn-mini" ng-click="isFlatDesigner = !isFlatDesigner">Toggle flat designer</a>-->
-  </div>
-  <div class="col-md-4 align-right">
-    <a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>
-
-  </div>
-  <hr>
+  <!--<div class="col-md-4 align-left">-->
+    <!--<a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>-->
+  <!--</div>-->
+  <!--<div class="col-md-4 align-center">-->
+  <!--</div>-->
+  <!--<div class="col-md-4 align-right">-->
+    <!--<a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>-->
+  <!--</div>-->
+  <!--<hr>-->
   <div ng-show="!isDebugCollapsed">
     <pre>form={{form}}</pre>
     <pre>fabricSets={{fabricSets}}</pre>

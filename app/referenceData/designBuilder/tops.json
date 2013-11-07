@@ -1,10 +1,11 @@
 {
   "default": {
     "design": {
-      "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "013"}
+      "neckline":   {"type": "nek", "id": "001", "size": "10", "fabric": "013"}
       , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "013"}
     }
     , "extras": {
+      "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
       "extras":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
       "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
     }

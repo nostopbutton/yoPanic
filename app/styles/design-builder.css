@@ -48,7 +48,7 @@
     box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.3);
     -webkit-transform: skew(-15deg) rotate(-6deg);
     -moz-transform: skew(-15deg) rotate(-6deg);
-    -ms-transform: skew(-15deg) rotate(-6deg);
+    /*-ms-transform: matrix(0.494,-0.069,-0.120,0.876,-26.051,1.633);*/
     -o-transform: skew(-15deg) rotate(-6deg);
     transform: skew(-15deg) rotate(-6deg); }
 
@@ -57,7 +57,7 @@
     right: 15px;
     -webkit-transform: skew(15deg) rotate(6deg);
     -moz-transform: skew(15deg) rotate(6deg);
-    -ms-transform: skew(15deg) rotate(6deg);
+    /*-ms-transform: skew(15deg) rotate(6deg);*/
     -o-transform: skew(15deg) rotate(6deg);
     transform: skew(15deg) rotate(6deg); }
 
@@ -349,7 +349,7 @@ input[type="checkbox"].hidden {
     /*border-width: 0;*/
     border-radius: 0;
     padding: 20px;
-    height:370px;
+    min-height:370px;
 }
 
 .fabric-group {
@@ -420,47 +420,56 @@ input[type="checkbox"].hidden {
     display: block;
     float: left;
 }
-
-/*Add the triangles*/
-.breaded li a:after {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;            /*Go big on the size, and let overflow hide*/
-    border-bottom: 50px solid transparent;
-    border-left: 30px solid #f1f1f1;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    left: 100%;
-    z-index: 2;
+@media (max-width: 550px) {
+    .breaded li a {
+        padding: 9px 20px 9px 20px;
+    }
+    .breaded li.active a  {
+        padding: 9px 20px 9px 20px;
+    }
 }
 
-.breaded li.active a:after {
-    border-left: 30px solid #222222;
-}
-/*Create second set of triangles to act as border*/
-.breaded li a:before {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 30px solid white;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    margin-left: 4px;
-    left: 100%;
-    z-index: 1;
-}
+@media (min-width: 550px) {
+    /*Add the triangles*/
+    .breaded li a:after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;            /*Go big on the size, and let overflow hide*/
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 100%;
+        z-index: 2;
+    }
+
+    .breaded li.active a:after {
+        border-left: 30px solid #222222;
+    }
+    /*Create second set of triangles to act as border*/
+    .breaded li a:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid white;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        margin-left: 4px;
+        left: 100%;
+        z-index: 1;
+    }
 
 .breaded li:first-child a {
     padding-left: 14px;
 }
-
+}
 /*.breaded li a:hover { background: #444444; }*/
 /*.breaded li a:hover:after { border-left-color: #444444 !important; }*/
 

@@ -1,10 +1,10 @@
 {
   "default": {
     "design": {
-      "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "010"}
+      "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "010"}
     }
     , "extras": {
-      "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "168", "code": "002-168"}
+      "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "002-168"}
     }
     , "dressSize": 12
     , "model": "tshirt-whole-body"
@@ -27,16 +27,13 @@
       , "active": true
       , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
       , "values": [
-        {"id": "001", "name": "pencil"}
-        , {"id": "002", "name": "ruffle"}
-      , {"id": "005", "name": "swing"}
+       {"id": "005", "name": "swing"}
       , {"id": "007", "name": "flare"}
       ]
       , "size": true
       , "sizes": [
         {"id": "01", "name": "short"}
         , {"id": "02", "name": "knee"}
-        , {"id": "04", "name": "long"}
       ]
       , "trim": false
     }

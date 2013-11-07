@@ -50,6 +50,8 @@ ${TP} --smart-update Resources/114.tps
         ${TP} --smart-update Resources/170.tps
         ${TP} --smart-update Resources/body.tps
 
+        cp ${PROJECT_DIR}/${PROJECT}/output/images cp ${PROJECT_DIR}/${PROJECT}/output/images_opt
+
         exit 0
     else
         #if here the TexturePacker command line file could not be found

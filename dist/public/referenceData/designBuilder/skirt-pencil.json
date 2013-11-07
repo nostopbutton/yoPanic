@@ -29,8 +29,6 @@
       , "values": [
         {"id": "001", "name": "pencil"}
         , {"id": "002", "name": "ruffle"}
-      , {"id": "005", "name": "swing"}
-      , {"id": "007", "name": "flare"}
       ]
       , "size": true
       , "sizes": [
