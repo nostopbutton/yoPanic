@@ -371,39 +371,39 @@
 
 }
 
-.item .image::before,
-.item .image::after {
-    content: '';
-    z-index: -1;
-    position: absolute;
+/*.item .image::before,*/
+/*.item .image::after {*/
+    /*content: '';*/
+    /*z-index: -1;*/
+    /*position: absolute;*/
     /*left: 10px;*/
-    left: 10px;
-    bottom: 10px;
-    width: 70%;
-    max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
-    max-height: 100px;
-    height: 55%;
+    /*left: 10px;*/
+    /*bottom: 10px;*/
+    /*width: 70%;*/
+    /*max-width: 300px; *//* avoid rotation causing ugly appearance at large container widths */
+    /*max-height: 100px;*/
+    /*height: 55%;*/
     /*-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
     /*-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
     /*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
-    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.3);
-    -webkit-transform: skew(-15deg) rotate(-6deg);
-    -moz-transform: skew(-15deg) rotate(-6deg);
+    /*-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
+    /*-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
+    /*box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.3);*/
+    /*-webkit-transform: skew(-15deg) rotate(-6deg);*/
+    /*-moz-transform: skew(-15deg) rotate(-6deg);*/
     /*-ms-transform: skew(-15deg) rotate(-6deg);*/
-    -o-transform: skew(-15deg) rotate(-6deg);
-    transform: skew(-15deg) rotate(-6deg); }
+    /*-o-transform: skew(-15deg) rotate(-6deg);*/
+    /*transform: skew(-15deg) rotate(-6deg); }*/
 
-.item .image::after {
-    left: auto;
-    right: 10px;
+/*.item .image::after {*/
+    /*left: auto;*/
+    /*right: 10px;*/
     /*right: 20px;*/
-    -webkit-transform: skew(15deg) rotate(6deg);
-    -moz-transform: skew(15deg) rotate(6deg);
+    /*-webkit-transform: skew(15deg) rotate(6deg);*/
+    /*-moz-transform: skew(15deg) rotate(6deg);*/
     /*-ms-transform: skew(15deg) rotate(6deg);*/
-    -o-transform: skew(15deg) rotate(6deg);
-    transform: skew(15deg) rotate(6deg); }
+    /*-o-transform: skew(15deg) rotate(6deg);*/
+    /*transform: skew(15deg) rotate(6deg); }*/
 
 .item  .image img {
     height: 250px;
