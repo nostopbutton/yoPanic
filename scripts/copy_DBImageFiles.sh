@@ -28,4 +28,9 @@ echo "From: ${DROPBOX_BODY}"
 echo "To: ${PROJECT_DIR}/${PROJECT}"
 cp -v ${DROPBOX_BODY}/* ${PROJECT_DIR}/${PROJECT}
 
+echo "Copying files..."
+echo "From: ${MISSING}"
+echo "To: ${PROJECT_DIR}/${PROJECT}"
+cp -v ${MISSING}/* ${PROJECT_DIR}/${PROJECT}
+
 exit 0

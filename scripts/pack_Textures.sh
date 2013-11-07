@@ -22,6 +22,7 @@ else
         # create assets
         # ${TP} --smart-update Resources/test.tps
         
+        ${TP} --smart-update Resources/000.tps
         ${TP} --smart-update Resources/003.tps
         ${TP} --smart-update Resources/008.tps
         ${TP} --smart-update Resources/010.tps
@@ -32,6 +33,13 @@ else
         ${TP} --smart-update Resources/087.tps
         ${TP} --smart-update Resources/088.tps
         ${TP} --smart-update Resources/089.tps
+${TP} --smart-update Resources/103.tps
+${TP} --smart-update Resources/108.tps
+${TP} --smart-update Resources/110.tps
+${TP} --smart-update Resources/111.tps
+${TP} --smart-update Resources/112.tps
+${TP} --smart-update Resources/113.tps
+${TP} --smart-update Resources/114.tps
         ${TP} --smart-update Resources/120.tps
         ${TP} --smart-update Resources/160.tps
         ${TP} --smart-update Resources/161.tps

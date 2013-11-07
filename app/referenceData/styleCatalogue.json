@@ -11,7 +11,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 16010
-    , "silhouetteImage": "pat-301"
+    , "silhouetteImage": "pat-301-body"
   }
   , {
     "styleId": "swing"
@@ -25,7 +25,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 1600
-    , "silhouetteImage": "pat-304"
+    , "silhouetteImage": "pat-304-body"
   }
   , {
     "styleId": "flare"
@@ -39,7 +39,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
   , "price": 1600
-    , "silhouetteImage": "pat-302"
+    , "silhouetteImage": "pat-302-body"
   }
   , {
     "styleId": "doloman"
@@ -53,7 +53,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 1600
-    , "silhouetteImage": "pat-305"
+    , "silhouetteImage": "pat-305-body"
   }
   , {
     "styleId": "swoosh"
@@ -67,7 +67,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 2000
-    , "silhouetteImage": "pat-303"
+    , "silhouetteImage": "pat-303-body"
   }
   , {
   "styleId": "shift"
@@ -81,7 +81,7 @@
   , "care": [ "Look after it"
     , "And it will last" ]
   , "price": 2000
-  , "silhouetteImage": "pat-202"
+  , "silhouetteImage": "pat-202-body"
 }
   , {
   "styleId": "shirt"
@@ -95,7 +95,7 @@
   , "care": [ "Look after it"
     , "And it will last" ]
   , "price": 2000
-  , "silhouetteImage": "pat-203"
+  , "silhouetteImage": "pat-203-body"
 }
   , {
   "styleId": "shirt-maxi"
@@ -109,7 +109,7 @@
   , "care": [ "Look after it"
     , "And it will last" ]
   , "price": 2000
-  , "silhouetteImage": "pat-203maxi"
+  , "silhouetteImage": "pat-203maxi-body"
 }
   , {
     "styleId": "skirt-pencil"
@@ -123,7 +123,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 600
-    , "silhouetteImage": "pat-101"
+    , "silhouetteImage": "pat-101-body"
   }
   , {
     "styleId": "skirt-swing"
@@ -137,7 +137,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 600
-    , "silhouetteImage": "pat-102"
+    , "silhouetteImage": "pat-102-body"
   }
   , {
     "styleId": "skirt-flare"
@@ -151,7 +151,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 600
-    , "silhouetteImage": "pat-103"
+    , "silhouetteImage": "pat-103-body"
   }
   , {
   "styleId": "tops"
@@ -165,7 +165,7 @@
   , "care": [ "Look after it"
     , "And it will last" ]
   , "price": 600
-  , "silhouetteImage": "pat-103"
+  , "silhouetteImage": "pat-10-body"
 }
 ]
 

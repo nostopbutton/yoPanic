@@ -108,10 +108,10 @@
             <div ng-repeat="part in range.options[0].parts" class="tab-pane" ng-class="{active: part.active}"
                  id="{{part.part_name}}">
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-6">
                   <part-selector part="part" selected-option="form[range.options[0].option_name][part.part_name]"/>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
                                    selected-option="form[range.options[0].option_name][part.part_name]"/>
                 </div>
@@ -152,7 +152,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2" style="vertical-align: middle">
+                <div class="col-md-3" style="vertical-align: middle">
                   <div>
                     <div class="fabric-group middle-inner">
                       <div class="row extras-fabric-header">
@@ -175,7 +175,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-7" style="vertical-align: middle">
+                <div class="col-md-6" style="vertical-align: middle">
                   <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
                     <div class="fabric-group middle-inner">
                       <div class="row extras-fabric-header">
@@ -209,28 +209,30 @@
             <!--</div>-->
 
           </div>
-          <div style="vertical-align:middle; text-align: left; font-family: 'Nothing You Could Do', cursive;font-size: 30px;">
-            share your design:
-          </div>
-          <div ng-controller="MetaCtrlInput" class="row align-center">
-            <ul ng-social-buttons
-                data-url="$location.absUrl()"
-                data-title="data.og_title"
-                data-description="'current_desc'"
-                data-image="data.og_image">
-
-              <li class="ng-social-facebook">Facebook</li>
-              <li class="ng-social-google-plus" data-proxy-url="'/proxy.php'">Google+</li>
-              <li class="ng-social-twitter">Twitter</li>
-              <!--<li class="ng-social-vk">Вконтакте</li>-->
-              <!--<li class="ng-social-odnoklassniki">Одноклассники</li>-->
-              <!--<li class="ng-social-mailru">Мой мир</li>-->
-              <li class="ng-social-pinterest">Pinterest</li>
-              <!--<li class="ng-social-github" user="esvit" repository="ng-table">GitHub</li>-->
-              <!--<li class="ng-social-github-forks" user="esvit" repository="ng-table">Forks</li>-->
-              <!--<li class="ng-social-stumbleupon">StumbleUpon</li>-->
-            </ul>
-          </div>
+          <!--<div style="vertical-align:middle; text-align: left; font-family: 'Nothing You Could Do', cursive;font-size: 30px;">-->
+            <!--share your design:-->
+          <!--</div>-->
+          <!--<div ng-controller="MetaCtrlInput" class="row align-left">-->
+            <!--<ul ng-social-buttons style="margin-top:10px"-->
+                <!--data-url="$location.absUrl()"-->
+                <!--data-title="data.og_title"-->
+                <!--data-description="'current_desc'"-->
+                <!--data-image="data.og_image">-->
+              <!--<li style="vertical-align:middle; text-align: left; font-family: 'Nothing You Could Do', cursive;font-size: 24px;">-->
+                <!--share your design:-->
+              <!--</li>-->
+              <!--<li class="ng-social-facebook">Facebook</li>-->
+              <!--&lt;!&ndash;<li class="ng-social-google-plus" data-proxy-url="'/proxy.php'">Google+</li>&ndash;&gt;-->
+              <!--<li class="ng-social-twitter">Twitter</li>-->
+              <!--&lt;!&ndash;<li class="ng-social-vk">Вконтакте</li>&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="ng-social-odnoklassniki">Одноклассники</li>&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="ng-social-mailru">Мой мир</li>&ndash;&gt;-->
+              <!--<li class="ng-social-pinterest">Pinterest</li>-->
+              <!--&lt;!&ndash;<li class="ng-social-github" user="esvit" repository="ng-table">GitHub</li>&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="ng-social-github-forks" user="esvit" repository="ng-table">Forks</li>&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="ng-social-stumbleupon">StumbleUpon</li>&ndash;&gt;-->
+            <!--</ul>-->
+          <!--</div>-->
         </div>
 
         <!--<div class="row">-->
@@ -257,15 +259,15 @@
 
 
         <!--</div>-->
-        <div class="row align-center">
-          <!--<div class="col-sm-12 align-center" style="margin-bottom:50px">-->
-            <!--<a class="btn btn-danger" href="#/purchase"-->
-               <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"-->
-               <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
-              <!--back to indiegogo</a>-->
-          <!--</div>-->
-          <div facebook design="form"></div>
-        </div>
+        <!--<div class="row align-center">-->
+          <!--&lt;!&ndash;<div class="col-sm-12 align-center" style="margin-bottom:50px">&ndash;&gt;-->
+            <!--&lt;!&ndash;<a class="btn btn-danger" href="#/purchase"&ndash;&gt;-->
+               <!--&lt;!&ndash;style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"&ndash;&gt;-->
+               <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+              <!--&lt;!&ndash;back to indiegogo</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--<div facebook design="form"></div>-->
+        <!--</div>-->
 
       </div>
 
@@ -278,7 +280,7 @@
          onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">
         Reset design</a>
   </div>
-  <div class="col-sm-6 align-center" style="margin-bottom:50px">
+  <div class="col-sm-7 align-center" style="margin-bottom:50px">
     <a class="btn btn-danger" href="#/purchase"
        style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"
        onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
@@ -287,6 +289,19 @@
 </div>
 
 <div class="row" id="debug_view">
+  <!--<div>-->
+    <!--location {{location}}-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--params {{params}}-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--deparam {{deparam}}-->
+<!--</div>-->
+  <!--<div>-->
+    <!--designCode {{designCode}}-->
+  <!--</div>-->
+
 
   <div class="col-md-4 align-left">
     <a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>

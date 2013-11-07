@@ -15,11 +15,17 @@
     , "fabrics":
       [
         { "fabId": "003", "fabName" : "red"}
-        , { "fabId": "008", "fabName" : "cream/champagne"}
-        , { "fabId": "010", "fabName" : "teal"}
         , { "fabId": "011", "fabName" : "black"}
         , { "fabId": "013", "fabName" : "aubergine"}
+
+        , { "fabId": "010", "fabName" : "teal"}
+        , { "fabId": "008", "fabName" : "cream/champagne"}
         , { "fabId": "014", "fabName" : "midnight blue"}
+
+
+
+
+
       ]
   }
   ,{ "setId": "s-tr"
@@ -76,11 +82,11 @@
   , "fabrics":
     [
       { "fabId": "103", "fabName" : "red"}
+      , { "fabId": "113", "fabName" : "aubergine"}
       , { "fabId": "108", "fabName" : "cream/champagne"}
       , { "fabId": "110", "fabName" : "teal"}
       , { "fabId": "111", "fabName" : "black"}
-      , { "fabId": "112", "fabName" : "grey"}
-      , { "fabId": "113", "fabName" : "aubergine"}
+
       , { "fabId": "114", "fabName" : "midnight blue"}
     ]
 }
@@ -105,7 +111,6 @@
       , { "fabId": "165", "fabName" : "cream/champagne"}
       , { "fabId": "166", "fabName" : "teal"}
       , { "fabId": "168", "fabName" : "black"}
-      , { "fabId": "169", "fabName" : "grey"}
       , { "fabId": "170", "fabName" : "midnight blue"}
     ]
 }

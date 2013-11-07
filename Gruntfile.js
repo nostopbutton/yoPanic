@@ -254,13 +254,21 @@ module.exports = function (grunt) {
       }
     },
     imageoptim: {
-      png: {
+      magick_png: {
         options: {
           jpegMini: false,
           imageAlpha: true,
           quitAfter: true
         },
-        src: ['/Users/Pete/dev/Sprites/MagickOut']
+        src: ['/Users/Pete/dev/Sprites/MagickOut/shift']
+      },
+      sprite_png: {
+        options: {
+          jpegMini: false,
+          imageAlpha: true,
+          quitAfter: true
+        },
+        src: ['/Users/Pete/dev/Sprites/dressSprites/output/images']
       }
     },
     htmlmin: {
@@ -474,8 +482,12 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('images', [
-    'imageoptim:png'
+  grunt.registerTask('optim_magick', [
+    'imageoptim:magick_png'
+  ]);
+
+  grunt.registerTask('optim_sprites', [
+    'imageoptim:sprite_png'
   ]);
 
 //  grunt.registerTask('inst', ['install-dependencies']);

@@ -149,7 +149,7 @@ input[type="checkbox"].hidden {
     /*position:absolute;*/
     /*left:550px;*/
     height: 35px;
-    width: 35px;
+    width: 70px;
     margin:5px;
     /*background: #92cc64;*/
     border-radius: 2px;
@@ -165,7 +165,7 @@ input[type="checkbox"].hidden {
     display: block;
     position: absolute;
     border: solid 1px red;
-    width: 41px;
+    width: 76px;
     height: 41px;
     margin-top:-21px;
     margin-left:-16px;
@@ -175,7 +175,7 @@ input[type="checkbox"].hidden {
 
 .fabric-selector.fabric000{
     background: rgba(0, 0, 0, 0.16);
-    background-image: url(../images/smallicon-36.png);
+    /*background-image: url(../images/smallicon-36.png);*/
 }
 
 /* s-vc: viscose crepe */

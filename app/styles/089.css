@@ -1,9 +1,9 @@
 /**
  * Created with TexturePacker http://www.codeandweb.com/texturepacker
  *
- * SmartUpdateHash: $TexturePacker:SmartUpdate:35a8138af1c7aa2b23a3df7fcf5e9e10:1/1$ 
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:f65cc971383f366af37182f98f3d53a4:1/1$ 
  * 
- * .089 {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('089.png?$TexturePacker:SmartUpdate:35a8138af1c7aa2b23a3df7fcf5e9e10:1/1$');}
+ * .089 {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('089.png?$TexturePacker:SmartUpdate:f65cc971383f366af37182f98f3d53a4:1/1$');}
  */
 
 .sprite-089 {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/089.png');}
@@ -15,8 +15,9 @@
 .nek-018-02-089 {width:200px;height:319px; background-position: -201px -458px}
 .slv-001-00-089 {width:200px;height:90px; background-position: -201px -778px}
 .trm-nek-017-00-089 {width:200px;height:47px; background-position: -0px -786px}
+.slv-000-00-089 {width:200px;height:2px; background-position: -0px -834px}
 .nek-017-02-089 {width:200px;height:312px; background-position: -603px -0px}
-.nek-102-03-089 {width:200px;height:298px; background-position: -603px -313px}
+.nek-015-03-089 {width:200px;height:298px; background-position: -603px -313px}
 .blt-003-00-089 {width:200px;height:258px; background-position: -603px -612px}
 .nek-014-03-089 {width:200px;height:298px; background-position: -804px -0px}
 .slv-011-00-089 {width:200px;height:223px; background-position: -804px -299px}

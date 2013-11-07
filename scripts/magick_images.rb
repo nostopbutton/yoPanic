@@ -2,10 +2,50 @@
 require 'RMagick'
 include Magick
 
+DRESS = 'shift'
 IMG_PARTS = '/Users/Pete/dev/Sprites/DesignBuilder'
-OUPUT_DIR = '/Users/Pete/dev/Sprites/MagickOut'
+OUPUT_DIR = "/Users/Pete/dev/Sprites/MagickOut/#{DRESS}"
 
 body = "whole-body"
+
+
+## SHIFT ##
+############
+combo = { 
+	:neckline => [
+		"nek", 
+		["014", "015"], 
+		["02", "03"],
+		["085", "087", "088", "089"]],
+	:necktrim => [
+		"trm", 
+		["000","120"]],
+	:sleeves => [
+		"slv", 
+		["000","001","006","008"], 
+		["00"],
+		["085", "087", "088", "089"]],
+	:skirt => [
+		"skt", 
+		["001", "002"],
+		["01","02","04"], 
+		["003", "008", "010", "011", "013", "014", "120"]],
+	:belt => [
+		"blt", 
+		["003"], 
+		["00"],
+		["000","085","087", "088", "089"]],
+	:peplum => [
+		"ext", 
+		["002"], 
+		["00"],
+		["000"]],
+	:rosetta => [
+		"ext", 
+		["003"], 
+		["00"],
+		["000"]]
+}
 
 # combo = { 
 # 	:neckline => [
@@ -49,47 +89,48 @@ body = "whole-body"
 # 		["120"]]
 # }
 
-
-combo = { 
-	:neckline => [
-		"nek", 
-		["001", "002", "003", "004"], 
-		["00"],
-		["003", "008", "010", "011", "013", "014", "120"]],
-	:necktrim => [
-		"trm", 
-		["000","120"]],
-	:sleeves => [
-		"slv", 
-		["000","002","006","009"], 
-		["00"],
-		["003", "008", "010", "011", "013", "014", "120"]],
-	:skirt => [
-		"skt", 
-		["001", "002"],
-		["01","02","04"], 
-		["003", "008", "010", "011", "013", "014", "120"]],
-	:belt2 => [
-		"blt", 
-		["002"], 
-		["00"],
-		["000","160","161", "165", "168","169", "170"]],
-	:belt4 => [
-		"blt", 
-		["004"], 
-		["00"],
-		["000","103","108", "110", "111","112", "113", "114"]],
-	:peplum => [
-		"ext", 
-		["002"], 
-		["00"],
-		["000", "003", "008", "010", "011", "013", "014"]],
-	:rosetta => [
-		"ext", 
-		["003"], 
-		["00"],
-		["000", "003", "008", "010", "011", "013", "014"]]
-}
+## SHEATH ##
+############
+# combo = { 
+# 	:neckline => [
+# 		"nek", 
+# 		["001", "002", "003", "004"], 
+# 		["00"],
+# 		["003", "008", "010", "011", "013", "014", "120"]],
+# 	:necktrim => [
+# 		"trm", 
+# 		["000","120"]],
+# 	:sleeves => [
+# 		"slv", 
+# 		["000","002","006","009"], 
+# 		["00"],
+# 		["003", "008", "010", "011", "013", "014", "120"]],
+# 	:skirt => [
+# 		"skt", 
+# 		["001", "002"],
+# 		["01","02","04"], 
+# 		["003", "008", "010", "011", "013", "014", "120"]],
+# 	:belt2 => [
+# 		"blt", 
+# 		["002"], 
+# 		["00"],
+# 		["000","160","161", "165", "168","169", "170"]],
+# 	:belt4 => [
+# 		"blt", 
+# 		["004"], 
+# 		["00"],
+# 		["000","103","108", "110", "111","112", "113", "114"]],
+# 	:peplum => [
+# 		"ext", 
+# 		["002"], 
+# 		["00"],
+# 		["000", "003", "008", "010", "011", "013", "014"]],
+# 	:rosetta => [
+# 		"ext", 
+# 		["003"], 
+# 		["00"],
+# 		["000", "003", "008", "010", "011", "013", "014"]]
+# }
 
 # combo = { 
 # 	:neckline => [
@@ -160,14 +201,45 @@ def create_trim_options(params)
 
 end
 
+def check_images(image_list)
+	list_count = 0
+	
+	image_list.each { |image|
+		image_list = ImageList.new("#{IMG_PARTS}/#{image}.png")
+		list_count=list_count+1
+		puts "Count:  #{list_count} - #{image}.png"
+	}
+end
+
+def check_trims(neck_list, trim_list)
+	list_count = 0
+	
+	neck_list.each { |neck|
+		trim_list.each { |necktrim|
+			image_list = ImageList.new("#{IMG_PARTS}/trm-#{neck[0..-4]}#{necktrim}.png")
+			list_count=list_count+1
+			puts "#{IMG_PARTS}/trm-#{neck[0..-4]}#{necktrim}.png"
+		}
+	}
+end
 
 skirts =  create_options(combo[:skirt])
 sleeves = create_options(combo[:sleeves])
 necklines = create_options(combo[:neckline])
 necktrims = create_trim_options(combo[:necktrim])
-belts = create_options(combo[:belt2]).concat create_options(combo[:belt4])
+belts = create_options(combo[:belt])
+# belts = create_options(combo[:belt2]).concat create_options(combo[:belt4])
 peplums = create_options(combo[:peplum])
 rosettas = create_options(combo[:rosetta])
+
+check_images(skirts)
+check_images(sleeves)
+check_images(necklines)
+check_trims(necklines, necktrims)
+check_images(belts)
+check_images(peplums)
+check_images(rosettas)
+
 
 count = 0
 
@@ -186,8 +258,9 @@ skirts.each { |skirt|
 								"#{IMG_PARTS}/trm-#{neck[0..-4]}#{necktrim}.png",
 								"#{IMG_PARTS}/#{belt}.png", "#{IMG_PARTS}/#{peplum}.png", "#{IMG_PARTS}/#{rosetta}.png")
 							# image.flatten_images.display
-							# image.flatten_images.write("#{OUPUT_DIR}/#{skirt}-#{sleeve}-#{neck}-trm-#{neck[0..-4]}#{necktrim}-#{belt}-#{peplum}-#{rosetta}.png")
-							# puts "#{OUPUT_DIR}/#{skirt}-#{sleeve}-#{neck}-#{belt}-#{peplum}-#{rosetta}.png"
+							output_filename = "#{OUPUT_DIR}/#{skirt}-#{sleeve}-#{neck}-trm-#{neck[0..-4]}#{necktrim}-#{belt}-#{peplum}-#{rosetta}.png"
+							image.flatten_images.write(output_filename)
+							puts "#{count} - #{output_filename}"
 						}
 					}
 				}
