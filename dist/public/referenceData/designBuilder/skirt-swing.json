@@ -34,6 +34,7 @@
       , "sizes": [
         {"id": "01", "name": "short"}
         , {"id": "02", "name": "knee"}
+      , {"id": "04", "name": "long"}
       ]
       , "trim": false
     }
