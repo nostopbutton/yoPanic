@@ -50,7 +50,7 @@ ${TP} --smart-update Resources/114.tps
         ${TP} --smart-update Resources/170.tps
         ${TP} --smart-update Resources/body.tps
 
-        cp ${PROJECT_DIR}/${PROJECT}/output/images ${PROJECT_DIR}/${PROJECT}/output/images_opt
+        cp ${PROJECT_DIR}/${PROJECT}/output/images/* ${PROJECT_DIR}/${PROJECT}/output/images_final_opt
 
         exit 0
     else

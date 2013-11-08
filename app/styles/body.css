@@ -1,9 +1,9 @@
 /**
  * Created with TexturePacker http://www.codeandweb.com/texturepacker
  *
- * SmartUpdateHash: $TexturePacker:SmartUpdate:7f5da26c32bee67d12af808c9222bb5f:1/1$ 
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:24c903fe0aa3f1df6d7c3a5608c49160:1/1$ 
  * 
- * .body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('body.png?$TexturePacker:SmartUpdate:7f5da26c32bee67d12af808c9222bb5f:1/1$');}
+ * .body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('body.png?$TexturePacker:SmartUpdate:24c903fe0aa3f1df6d7c3a5608c49160:1/1$');}
  */
 
 .sprite-body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/body.png');}

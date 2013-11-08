@@ -198,12 +198,19 @@
 <div class="row">
   <div class="col-sm-5 align-center" style="margin-bottom:50px">
       <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
+         style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
          onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">
         Reset design</a>
   </div>
-  <div class="col-sm-7 align-center" style="margin-bottom:50px">
-    <a class="btn btn-danger" href="http://www.indiegogo.com/projects/aurza-utterly-fabulous-custom-made-dresses"
-       style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"
+  <div class="col-sm-3 align-center" style="margin-bottom:50px">
+    <a class="btn btn-default  igg-design-buttons" href="#!/"
+       style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+       onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/back-to-igg']);">
+      try a different style</a>
+  </div>
+  <div class="col-sm-4 align-center" style="margin-bottom:50px">
+    <a class="btn btn-danger igg-design-buttons" href="http://www.indiegogo.com/projects/aurza-utterly-fabulous-custom-made-dresses"
+       style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
        onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/back-to-igg']);">
       back to indiegogo</a>
   </div>
@@ -211,15 +218,15 @@
 
 <div class="row" id="debug_view">
 
-  <!--<div class="col-md-4 align-left">-->
-    <!--<a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>-->
-  <!--</div>-->
-  <!--<div class="col-md-4 align-center">-->
-  <!--</div>-->
-  <!--<div class="col-md-4 align-right">-->
-    <!--<a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>-->
-  <!--</div>-->
-  <!--<hr>-->
+  <div class="col-md-4 align-left">
+    <a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>
+  </div>
+  <div class="col-md-4 align-center">
+  </div>
+  <div class="col-md-4 align-right">
+    <a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>
+  </div>
+  <hr>
   <div ng-show="!isDebugCollapsed">
     <pre>form={{form}}</pre>
     <pre>fabricSets={{fabricSets}}</pre>

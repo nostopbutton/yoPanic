@@ -1,9 +1,9 @@
 /**
  * Created with TexturePacker http://www.codeandweb.com/texturepacker
  *
- * SmartUpdateHash: $TexturePacker:SmartUpdate:3d0ceeaecd89d4d0a024c6cfeb8c5654:1/1$ 
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:ec23a4f5921bfc3c32aa3191e7407862:1/1$ 
  * 
- * .089 {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('089.png?$TexturePacker:SmartUpdate:3d0ceeaecd89d4d0a024c6cfeb8c5654:1/1$');}
+ * .089 {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('089.png?$TexturePacker:SmartUpdate:ec23a4f5921bfc3c32aa3191e7407862:1/1$');}
  */
 
 .sprite-089 {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/089.png');}
@@ -14,8 +14,10 @@
 .nek-014-02-089 {width:200px;height:327px; background-position: -0px -458px}
 .nek-018-02-089 {width:200px;height:319px; background-position: -201px -458px}
 .slv-001-00-089 {width:200px;height:90px; background-position: -201px -778px}
-.trm-nek-017-00-089 {width:200px;height:47px; background-position: -0px -786px}
-.slv-000-00-089 {width:200px;height:2px; background-position: -0px -834px}
+.trm-nek-017-05-089 {width:200px;height:47px; background-position: -0px -786px}
+.trm-nek-017-02-089 {width:200px;height:47px; background-position: -0px -834px}
+.trm-nek-017-00-089 {width:200px;height:47px; background-position: -402px -785px}
+.slv-000-00-089 {width:200px;height:2px; background-position: -402px -833px}
 .nek-017-02-089 {width:200px;height:312px; background-position: -603px -0px}
 .nek-015-03-089 {width:200px;height:298px; background-position: -603px -313px}
 .blt-003-00-089 {width:200px;height:258px; background-position: -603px -612px}

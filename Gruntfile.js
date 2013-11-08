@@ -268,7 +268,7 @@ module.exports = function (grunt) {
           imageAlpha: true,
           quitAfter: true
         },
-        src: ['/Users/Pete/dev/Sprites/dressSprites/output/images']
+        src: ['/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt']
       }
     },
     htmlmin: {

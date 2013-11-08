@@ -37,7 +37,7 @@
         , {"id": "05", "name": "maxi"}
       ]
       , "trim": true
-      , "trimFabricSets": [{"setId": "x-fl"}]
+      , "trimFabricSets": [{"setId": "p-sk"}]
     }
     ,{
       "part_name": "sleeves"
@@ -46,8 +46,8 @@
       , "fabricSets": [ {"setId": "p-sk"}]
       , "null_value": "000"
       , "values": [
-        {"id": "011", "name": "shirt long tab"}
-        , {"id": "016", "name": "shirt short"}
+        {"id": "016", "name": "shirt short"}
+        , {"id": "011", "name": "shirt long tab"}
       ]
     }
     ]

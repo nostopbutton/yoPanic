@@ -12,6 +12,7 @@ body { padding-top: 105px;}
 
 @media (max-width: 540px) {
     .nav-large {display:none;}
+    body { padding-top: 0px;}
 }
 @media (min-width: 540px) {
     .nav-small {display:none;}
