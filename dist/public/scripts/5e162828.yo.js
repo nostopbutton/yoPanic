@@ -501,7 +501,7 @@ angular.module('panicApp.Controllers', []).run([
     console.log('run analytics');
     _gaq.push([
       '_setAccount',
-      'UA-38964974-1'
+      'UA-42859790-2'
     ]);
     _gaq.push([
       '_setDomainName',
@@ -515,11 +515,11 @@ angular.module('panicApp.Controllers', []).run([
     s.parentNode.insertBefore(ga, s);
   }
 ]);
-var trackPageInGoogleAnalytics = function ($rootScope, $window, $location, $routeParams, path, search) {
+var trackPageInGoogleAnalytics = function ($rootScope, $window, $location, $routeParams) {
   console.log('trackPageInGoogleAnalytics');
-  $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams, path, search));
+  $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
 };
-var track = function ($window, $location, $routeParams, path, search) {
+var track = function ($window, $location, $routeParams) {
   console.log('$location=');
   console.log($location);
   var path = convertPathToQueryString($location.path(), $routeParams);
@@ -530,16 +530,12 @@ var track = function ($window, $location, $routeParams, path, search) {
   ]);
   console.log('track: pushed ');
 };
-var convertPathToQueryString = function (locpath, $routeParams, path, search) {
+var convertPathToQueryString = function (locpath, $routeParams) {
   console.log('convertPathToQueryString');
   console.log('$routeParams=');
   console.log($routeParams);
   console.log('locpath=');
   console.log(locpath);
-  console.log('path=');
-  console.log(path);
-  console.log('search=');
-  console.log(search);
   for (var key in $routeParams) {
     var queryParam = '/' + $routeParams[key];
     console.log('queryParam=' + queryParam);
@@ -553,8 +549,8 @@ var convertPathToQueryString = function (locpath, $routeParams, path, search) {
   var querystring = getAsUriParameters($routeParams);
   console.log('querystring=' + querystring);
   if (querystring === '')
-    return path;
-  return path + '?' + querystring;
+    return locpath;
+  return locpath + '?' + querystring;
 };
 var getAsUriParameters = function (data) {
   var url = '';
