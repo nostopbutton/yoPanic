@@ -677,7 +677,7 @@ blockquote cite::before {
 .help-textbox {
     margin:0px 0 10px 5px;
     /*width:200px;*/
-    height: 180px;
+    height: 260px;
     /*padding: 20px 100px 0px 0px;*/
     padding: 20px;
     background: white;
@@ -697,6 +697,12 @@ blockquote cite::before {
 
 }
 @media (max-width: 380px) {
+    .help-textbox {
+        height: 350px;
+    }
+}
+
+@media (min-width: 381px) and (max-width: 1200px) {
     .help-textbox {
         height: 250px;
     }
