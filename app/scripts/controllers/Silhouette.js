@@ -52,7 +52,16 @@ angular.module('panicApp.Controllers')
 //        })
 
     }])
-  .controller('appController',['$scope',function($scope){
+  .controller('appController',['$scope', '$location',function($scope, $location){
+    if($location.path()=='/how-to-help')
+    {
+      $scope.headline = "How YOU can HELP..."
+    } else {
+      $scope.headline = "CREATE before you PLEDGE"
+    }
+
+//    console.log("Location.path is: ");
+//    console.log($location.path());
     $scope.$on('LOAD',function(){$scope.loading=true});
     $scope.$on('UNLOAD',function(){$scope.loading=false});
   }])

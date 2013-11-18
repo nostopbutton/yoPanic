@@ -104,8 +104,9 @@
 <![endif]-->
 
 <!--data-description="current_description"-->
-<div ng-include="'views/idggHeader.html'"></div>
+
 <div ng-controller="appController">
+  <div ng-include="'views/idggHeader.html'"></div>
   <div class="alert alert-info" ng-show="loading">Loading</div>
   <div ng-view></div>
 </div>
