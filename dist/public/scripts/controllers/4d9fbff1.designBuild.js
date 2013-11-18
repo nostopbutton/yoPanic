@@ -18,6 +18,7 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
 
       $scope.current_title = 'Test';
       $scope.current_description = 'Test description';
+      $scope.headline = "test";
 
       // Put Style data into page scope
       ReferenceDataCache.getStyleById($routeParams.styleId, $scope);

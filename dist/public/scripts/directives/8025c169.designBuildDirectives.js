@@ -368,3 +368,16 @@ designBuildDirective.directive('drawAdmin', function () {
   }
 })
 
+// http://stackoverflow.com/questions/10931315/how-to-preventdefault-on-anchor-tags-in-angularjs
+app.directive('a', function() {
+  return {
+    restrict: 'E',
+    link: function(scope, elem, attrs) {
+      if(attrs.ngClick || attrs.href === '' || attrs.href === '#'){
+        elem.on('click', function(e){
+          e.preventDefault();
+        });
+      }
+    }
+  };
+});

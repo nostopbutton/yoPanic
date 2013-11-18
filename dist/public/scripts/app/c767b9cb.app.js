@@ -19,6 +19,9 @@ angular.module('panicApp',
           templateUrl: 'views/silhouettes.html', controller: 'SilhouetteCtrl'
 //        templateUrl: 'views/home.html', controller: 'StaticPageCtrl'
       })
+            .when('/how-to-help', {
+        templateUrl: 'views/howToHelp.html', controller: 'StaticPageCtrl'
+      })
 //      .when('/fit', {
 //        templateUrl: 'views/fit.html', controller: 'StaticPageCtrl'
 //      })

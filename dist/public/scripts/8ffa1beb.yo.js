@@ -15,6 +15,9 @@ angular.module('panicApp', [
     $routeProvider.when('/', {
       templateUrl: 'views/silhouettes.html',
       controller: 'SilhouetteCtrl'
+    }).when('/how-to-help', {
+      templateUrl: 'views/howToHelp.html',
+      controller: 'StaticPageCtrl'
     }).when('/design/:styleId', {
       templateUrl: 'views/idggDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
@@ -474,6 +477,18 @@ designBuildDirective.directive('drawAdmin', function () {
     template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
   };
 });
+app.directive('a', function () {
+  return {
+    restrict: 'E',
+    link: function (scope, elem, attrs) {
+      if (attrs.ngClick || attrs.href === '' || attrs.href === '#') {
+        elem.on('click', function (e) {
+          e.preventDefault();
+        });
+      }
+    }
+  };
+});
 'use strict';
 var designBuildFilter = angular.module('panicApp.designBuildFilters', []);
 designBuildFilter.filter('filterSets', function () {
@@ -592,8 +607,14 @@ angular.module('panicApp.Controllers').controller('StaticPageCtrl', [
   '$window',
   '$location',
   '$routeParams',
-  function ($scope, $rootScope, $window, $location, $routeParams) {
+  '$anchorScroll',
+  function ($scope, $rootScope, $window, $location, $routeParams, $anchorScroll) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
+    $scope.scrollTo = function (id) {
+      $location.hash(id);
+      $anchorScroll();
+    };
+    $scope.headline = 'test';
   }
 ]);
 'use strict';
@@ -731,7 +752,13 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
   }
 ]).controller('appController', [
   '$scope',
-  function ($scope) {
+  '$location',
+  function ($scope, $location) {
+    if ($location.path() == '/how-to-help') {
+      $scope.headline = 'How YOU can HELP...';
+    } else {
+      $scope.headline = 'CREATE before you PLEDGE';
+    }
     $scope.$on('LOAD', function () {
       $scope.loading = true;
     });
@@ -781,6 +808,7 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
     var master = '', categoryId = 'dresses', styleId = $routeParams.styleId, itemId = $routeParams.itemId, designCode = $routeParams.designCode, allFabricSets = {}, range = {};
     $scope.current_title = 'Test';
     $scope.current_description = 'Test description';
+    $scope.headline = 'test';
     ReferenceDataCache.getStyleById($routeParams.styleId, $scope);
     ReferenceDataCache.getItemById($routeParams.itemId, $scope);
     $scope.isDebugCollapsed = true;
