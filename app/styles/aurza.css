@@ -696,3 +696,12 @@ blockquote cite::before {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#efefef',GradientType=1 ); /* IE6-8 */
 
 }
+@media (max-width: 380px) {
+    .help-textbox {
+        height: 250px;
+    }
+}
+
+.anchor {
+    margin-top:50px;
+}

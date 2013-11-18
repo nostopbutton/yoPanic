@@ -753,12 +753,17 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
 ]).controller('appController', [
   '$scope',
   '$location',
-  function ($scope, $location) {
+  '$anchorScroll',
+  function ($scope, $location, $anchorScroll) {
     if ($location.path() == '/how-to-help') {
       $scope.headline = 'How YOU can HELP...';
     } else {
       $scope.headline = 'CREATE before you PLEDGE';
     }
+    $scope.scrollTo = function (id) {
+      $location.hash(id);
+      $anchorScroll();
+    };
     $scope.$on('LOAD', function () {
       $scope.loading = true;
     });

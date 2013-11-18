@@ -1,41 +1,43 @@
 <div id="aboutView" class="container ">
   <div class="row" style="margin-top:20px;">
-    <div class="col-lg-12 col-lg-offset- col-sm-12 col-xs-12">
+    <div class="col-sm-12 col-sm-offset- col-sm-12 col-xs-12">
       <div class="row">
-        <div class="col-lg-3 col-lg-offset-2" >
+        <div class="col-md-3 col-md-offset-2 col-sm-5 col-sm-offst-1" >
           <span style="background-color: #fdeee0;">
-            <img src="images/help/help-indiegogo-page.jpg" width="100%" class="img-polaroid">
+            <img src="images/help/help-indiegogo-page.jpg" width="100%" class="img-polaroid"/>
           </span>
         </div>
-        <!--<div class="col-lg-2" >-->
+        <!--<div class="col-sm-2" >-->
         <!--</div>-->
-        <div class="col-lg-5 col-md-offset-1 help-textbox">
-          <div class="desc">
+        <div class="col-md-5 col-md-offset-1   col-sm-7 help-texbox">
+          <div class="help-textbox">
             <p>The success of our campaign, depends very much on the actions of others.</p>
             <p>Here are a few ways that you help with just a few button clicks:</p>
               <ol>
-                <li>Be an active part of our campaign</li>
-                <li>Leave COMMENTS on our Indiegogo page</li>
-                <li>Help spread the word</li>
+                <li><a ng-click="scrollTo('active')">Be an active part of our campaign</a></li>
+                <li><a ng-click="scrollTo('comment')">Leave COMMENTS on our Indiegogo page</a></li>
+                <li><a ng-click="scrollTo('word')">Help spread the word</a></li>
               </ol>
-
           </div>
+
         </div>
       </div>
     </div>
   </div>
-  <a id="active"></a>
+
+  <div id="active"></div>
+  <div class="anchor"></div>
   <div class="row">
-    <div class="col-lg-12 col-lg-offset- ">
+    <div class="col-sm-12 col-sm-offset- ">
       <div class="row">
-        <div class="col-md-12 col-lg-offset-">
+        <div class="col-sm-12 col-sm-offset-">
           <div class="help-headlline">1. Be an ACTIVE part of our campaign</div>
         </div>
       </div>
 
 
       <div class="row">
-        <div class="col-md-4 help-item">
+        <div class="col-sm-4 help-item">
           <!--<div class="row col-xs-12">-->
           <a href="http://igg.me/at/aurza/x/5021303" target="_blank">
             <img src="images/help/help-buy.jpg" width="100%" class="img-polaroid">
@@ -47,7 +49,7 @@
               the AURZA range</a></p>
 
         </div>
-        <div class="col-md-4 help-item">
+        <div class="col-sm-4 help-item">
           <a href="http://igg.me/at/aurza/x/5021303" target="_blank">
             <img src="images/help/help-gift.jpg" width="100%" class="img-polaroid">
           </a>
@@ -59,7 +61,7 @@
             buy a gift box</a>
               and give some fabulousness this Christmas</p>
         </div>
-        <div class="col-md-4 help-item">
+        <div class="col-sm-4 help-item">
           <a href="http://igg.me/at/aurza/x/5021303" target="_blank">
             <img src="images/help/help-contr.jpg" width="100%" class="img-polaroid">
           </a>
@@ -74,16 +76,17 @@
       </div>
     </div>
   </div>
-
+  <div id="comment"></div>
+  <div class="anchor"></div>
   <div class="row">
-    <div class="col-lg-12 col-lg-offset- ">
+    <div class="col-sm-12 col-sm-offset- ">
       <div class="row">
-        <div class="col-md-12 col-lg-offset-">
+        <div class="col-sm-12 col-sm-offset-">
           <div class="help-headlline">2 - Leave COMMENTS on our Indiegogo page</div>
         </div>
       </div>
 
-      <div class="col-md-4 col-lg-offset-2 ">
+      <div class="col-md-4 col-md-offset-2 ">
         <a href="http://www.indiegogo.com/projects/aurza-utterly-fabulous-custom-made-dresses/x/5021303?c=comments" target="_blank">
           <img src="images/help/help-comment.jpg" width="100%" class="img-polaroid">
         </a>
@@ -105,38 +108,39 @@
 
       </div>
     </div>
-
+  <div id="word"></div>
+  <div class="anchor"></div>
   <div class="row">
-    <div class="col-lg-12 col-lg-offset- ">
+    <div class="col-sm-12 col-sm-offset- ">
       <div class="row">
 
-        <div class="col-md-12 col-lg-offset-">
+        <div class="col-sm-12 col-sm-offset-">
           <div class="help-headlline">3 - Help spread the word</div>
         </div>
       </div>
       <div class="row">
 
-        <div class="col-md-10 col-lg-offset-1">
+        <div class="col-sm-10 col-sm-offset-1">
           <a href="http://igg.me/at/aurza/x/5021303" target="_blank">
             <img src="images/help/help-share.jpg" width="100%" class="img-polaroid">
           </a>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-2 col-md-offset-1 help-item">
+        <div class="col-sm-2 col-sm-offset-1 help-item">
           <h4>Facebook 'like'</h4>
           <p>Simply click 'like' on our
             <a href="http://igg.me/at/aurza/x/5021303" target="_blank">
             campaign page</a></p>
         </div>
-        <div class="col-md-3 col-md-offset-1  help-item">
+        <div class="col-sm-3 col-sm-offset-1  help-item">
           <h4>Twitter share</h4>
 
           <p>
             Clicking <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.indiegogo.com%2Fprojects%2Faurza-utterly-fabulous-custom-made-dresses%2Fx%2F5021303&text=Help%20make%20it%20happen%20for%20AURZA%20Utterly%20fabulous%20custom-made%20dresses%20on%20%40indiegogo&tw_p=tweetbutton&url=http%3A%2F%2Figg.me%2Fp%2F550245%2Ftwtr%2F5021303" >'Tweet'</a>
             on our page, not only helps spread the word, but increases page activity recorded by Indiegogo
         </div>
-        <div class="col-md-4 col-md-offset- help-item">
+        <div class="col-sm-4 col-sm-offset- help-item">
           <h4>Recommendations</h4>
 
           <p>if you know someone who would love a custom dress from AURZA, or someone who is well connected
@@ -149,11 +153,11 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12 col-lg-offset-">
+    <div class="col-sm-12 col-sm-offset-">
       <div class="help-headlline">Does this really make any difference?</div>
     </div>
 
-    <div class="col-md-10 col-lg-offset-1">
+    <div class="col-sm-10 col-sm-offset-1">
 
       <p>
         In case you are wondering, here is a bit of background.
