@@ -63,13 +63,13 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
       if(itemId) {
         Range.itemCollection(function(itemData){
             console.log("Looking up item: "+itemId);
-            console.log("itemData.length: "+itemData.length);
+//            console.log("itemData.length: "+itemData.length);
 
             for (var i=0; i<itemData.length; i++){
-              console.log("-Checking item: "+itemData[i].itemId);
+//              console.log("-Checking item: "+itemData[i].itemId);
 
               if (itemData[i].itemId === itemId) {
-                console.log("---Found item: "+itemId + " -> "+itemData[i].design);
+//                console.log("---Found item: "+itemId + " -> "+itemData[i].design);
                 master = angular.copy(itemData[i].design);
                 break;
               }
@@ -173,13 +173,13 @@ var loadStyle = function($scope){//, catalogue, catId, desId) {
 }
 
 var getCategoryById = function(categories, id) {
-  console.log("categories.length:"+categories.length);
+//  console.log("categories.length:"+categories.length);
 
   var category = [];
   for (var i=0; i<categories.length; i++){
-    console.log("categoryName:"+categories[i].catId);
+//    console.log("categoryName:"+categories[i].catId);
     if (categories[i].catId === id) {
-      console.log("Found category: "+id + " -> "+categories[i].catId);
+//      console.log("Found category: "+id + " -> "+categories[i].catId);
       category = angular.copy(categories[i]);
       break;
     }
@@ -190,13 +190,13 @@ var getCategoryById = function(categories, id) {
 }
 
 var getStyleById = function(styles, id) {
-  console.log("styles.length: "+styles.length);
+//  console.log("styles.length: "+styles.length);
 
   var style = {};
   for (var i=0; i<styles.length; i++){
-    console.log("id: "+styles[i].styleId);
+//    console.log("id: "+styles[i].styleId);
     if (styles[i].styleId === id) {
-      console.log("Found style: "+id + " -> "+styles[i].styleId);
+//      console.log("Found style: "+id + " -> "+styles[i].styleId);
       style = angular.copy(styles[i]);
       break;
     }

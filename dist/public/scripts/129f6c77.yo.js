@@ -226,10 +226,7 @@ referenceDataServices.factory('Range', [
       getItemDesign: function (itemId) {
         var items = {}, out = '';
         items = this.getItemCollection(function (data) {
-          console.log('Looking up item: ' + itemId);
-          console.log('item.length: ' + items.length);
           for (var i = 0; i < items.length; i++) {
-            console.log('-Checking item: ' + items[i].itemId);
             if (items[i].itemId === itemId) {
               console.log('---Found item: ' + itemId + ' -> ' + items[i].design);
               out = angular.copy(items[i].design);
@@ -243,32 +240,24 @@ referenceDataServices.factory('Range', [
       },
       getStyleById: function (id, $scope) {
         var styleCatalogue = Range.styleCatalogue(function (data) {
-            console.log('styleCatalogue.length: ' + styleCatalogue.length);
             for (var i = 0; i < styleCatalogue.length; i++) {
-              console.log('id: ' + styleCatalogue[i].styleId);
               if (styleCatalogue[i].styleId === id) {
                 console.log('Found style: ' + id + ' -> ' + styleCatalogue[i].styleId);
                 $scope.style = angular.copy(styleCatalogue[i]);
                 break;
               }
             }
-            console.log('Returning:');
-            console.log($scope.style);
           });
       },
       getItemById: function (id, $scope) {
         var itemCollection = Range.itemCollection(function (data) {
-            console.log('itemCollection.length: ' + itemCollection.length);
             for (var i = 0; i < itemCollection.length; i++) {
-              console.log('id: ' + itemCollection[i].itemId);
               if (itemCollection[i].itemId === id) {
                 console.log('Found item: ' + id + ' -> ' + itemCollection[i].itemId);
                 $scope.item = angular.copy(itemCollection[i]);
                 break;
               }
             }
-            console.log('Returning:');
-            console.log($scope.item);
           });
       }
     };
@@ -279,8 +268,6 @@ referenceDataServices.factory('Range', [
     return function (input) {
       var options = ReferenceDataCache.getOptions();
       var out = '';
-      console.log('Looking up fabric: ' + input);
-      console.log('options.length: ' + options.length);
       for (var i = 0; i < options.length; i++) {
         if (options[i].id === input) {
           console.log('**Found options: ' + input + ' -> ' + options[i].fabrics);
@@ -297,8 +284,6 @@ referenceDataServices.factory('Range', [
     return function (input) {
       var options = ReferenceDataCache.getOptions();
       var out = '';
-      console.log('Looking up trim: ' + input);
-      console.log('options.length: ' + options.length);
       for (var i = 0; i < options.length; i++) {
         if (options[i].id === input) {
           console.log('***********Found trim: ' + input + ' -> ' + options[i].trims);
@@ -315,8 +300,6 @@ referenceDataServices.factory('Range', [
     return function (input) {
       var labels = ReferenceDataCache.getLabels();
       var out = '';
-      console.log('Looking up label: ' + input);
-      console.log('label.length: ' + labels.length);
       for (var i = 0; i < labels.length; i++) {
         if (labels[i].id === input) {
           console.log('Found label: ' + input + ' -> ' + labels[i].label);
@@ -477,18 +460,6 @@ designBuildDirective.directive('drawAdmin', function () {
     template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
   };
 });
-app.directive('a', function () {
-  return {
-    restrict: 'E',
-    link: function (scope, elem, attrs) {
-      if (attrs.ngClick || attrs.href === '' || attrs.href === '#') {
-        elem.on('click', function (e) {
-          e.preventDefault();
-        });
-      }
-    }
-  };
-});
 'use strict';
 var designBuildFilter = angular.module('panicApp.designBuildFilters', []);
 designBuildFilter.filter('filterSets', function () {
@@ -513,14 +484,14 @@ designBuildFilter.filter('rollover', function () {
 angular.module('panicApp.Controllers', []).run([
   '$http',
   function ($http) {
-    console.log('run analytics');
+    console.log('Controllers: run analytics');
     _gaq.push([
       '_setAccount',
       'UA-42859790-2'
     ]);
     _gaq.push([
       '_setDomainName',
-      'none'
+      '.aurza.com'
     ]);
     var ga = document.createElement('script');
     ga.type = 'text/javascript';
@@ -531,38 +502,25 @@ angular.module('panicApp.Controllers', []).run([
   }
 ]);
 var trackPageInGoogleAnalytics = function ($rootScope, $window, $location, $routeParams) {
-  console.log('trackPageInGoogleAnalytics');
   $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
 };
 var track = function ($window, $location, $routeParams) {
-  console.log('$location=');
-  console.log($location);
   var path = convertPathToQueryString($location.path(), $routeParams);
   console.log('track: about to push: ' + path);
   $window._gaq.push([
     '_trackPageview',
     path
   ]);
-  console.log('track: pushed ');
 };
 var convertPathToQueryString = function (locpath, $routeParams) {
-  console.log('convertPathToQueryString');
-  console.log('$routeParams=');
-  console.log($routeParams);
-  console.log('locpath=');
-  console.log(locpath);
   for (var key in $routeParams) {
     var queryParam = '/' + $routeParams[key];
-    console.log('queryParam=' + queryParam);
     locpath = locpath.replace(queryParam, '');
-    console.log('path ADDED=' + locpath);
   }
-  console.log('path NOW=' + locpath);
   for (key in $routeParams) {
     console.log('key=' + key);
   }
   var querystring = getAsUriParameters($routeParams);
-  console.log('querystring=' + querystring);
   if (querystring === '')
     return locpath;
   return locpath + '?' + querystring;
@@ -725,7 +683,7 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
     $scope.$emit('LOAD');
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
     $scope.styles = Range.styleCatalogue(function (data) {
-      console.log('$scope.styles.length: ' + $scope.styles.length);
+      console.log('styles.length: ' + $scope.styles.length);
     });
     var aggregatedPromise = $q.all([
         $http.get('/images/003.png'),
@@ -834,11 +792,8 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
     if (itemId) {
       Range.itemCollection(function (itemData) {
         console.log('Looking up item: ' + itemId);
-        console.log('itemData.length: ' + itemData.length);
         for (var i = 0; i < itemData.length; i++) {
-          console.log('-Checking item: ' + itemData[i].itemId);
           if (itemData[i].itemId === itemId) {
-            console.log('---Found item: ' + itemId + ' -> ' + itemData[i].design);
             master = angular.copy(itemData[i].design);
             break;
           }
@@ -895,12 +850,9 @@ var loadStyle = function ($scope) {
   $scope.style = style;
 };
 var getCategoryById = function (categories, id) {
-  console.log('categories.length:' + categories.length);
   var category = [];
   for (var i = 0; i < categories.length; i++) {
-    console.log('categoryName:' + categories[i].catId);
     if (categories[i].catId === id) {
-      console.log('Found category: ' + id + ' -> ' + categories[i].catId);
       category = angular.copy(categories[i]);
       break;
     }
@@ -909,12 +861,9 @@ var getCategoryById = function (categories, id) {
   return category;
 };
 var getStyleById = function (styles, id) {
-  console.log('styles.length: ' + styles.length);
   var style = {};
   for (var i = 0; i < styles.length; i++) {
-    console.log('id: ' + styles[i].styleId);
     if (styles[i].styleId === id) {
-      console.log('Found style: ' + id + ' -> ' + styles[i].styleId);
       style = angular.copy(styles[i]);
       break;
     }

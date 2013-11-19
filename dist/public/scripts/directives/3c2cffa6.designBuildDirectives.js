@@ -366,18 +366,4 @@ designBuildDirective.directive('drawAdmin', function () {
     },
     template: '<img ng-repeat="selection in dress" ng-src="images/parts/{{selection.type}}-{{selection.id}}-{{selection.fabric}}.png" class="pic {{selection.type}}"/>'
   }
-})
-
-// http://stackoverflow.com/questions/10931315/how-to-preventdefault-on-anchor-tags-in-angularjs
-app.directive('a', function() {
-  return {
-    restrict: 'E',
-    link: function(scope, elem, attrs) {
-      if(attrs.ngClick || attrs.href === '' || attrs.href === '#'){
-        elem.on('click', function(e){
-          e.preventDefault();
-        });
-      }
-    }
-  };
 });

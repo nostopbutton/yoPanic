@@ -94,11 +94,11 @@ referenceDataServices
             out = "";
 
         items = this.getItemCollection(function(data){
-          console.log("Looking up item: "+itemId);
-          console.log("item.length: "+items.length);
+//          console.log("Looking up item: "+itemId);
+//          console.log("item.length: "+items.length);
 
           for (var i=0; i<items.length; i++){
-            console.log("-Checking item: "+items[i].itemId);
+//            console.log("-Checking item: "+items[i].itemId);
 
             if (items[i].itemId === itemId) {
               console.log("---Found item: "+itemId + " -> "+items[i].design);
@@ -117,34 +117,34 @@ referenceDataServices
       getStyleById: function(id, $scope) {
         var styleCatalogue = Range.styleCatalogue(
           function (data) {   //success
-            console.log("styleCatalogue.length: "+styleCatalogue.length);
+//            console.log("styleCatalogue.length: "+styleCatalogue.length);
             for (var i=0; i<styleCatalogue.length; i++){
-              console.log("id: "+styleCatalogue[i].styleId);
+//              console.log("id: "+styleCatalogue[i].styleId);
               if (styleCatalogue[i].styleId === id) {
                 console.log("Found style: "+id + " -> "+styleCatalogue[i].styleId);
                 $scope.style = angular.copy(styleCatalogue[i]);
                 break;
               }
             }
-            console.log("Returning:");
-            console.log($scope.style);
+//            console.log("Returning:");
+//            console.log($scope.style);
           }
         );
       },
       getItemById: function(id, $scope) {
         var itemCollection = Range.itemCollection(
           function (data) {   //success
-            console.log("itemCollection.length: "+itemCollection.length);
+//            console.log("itemCollection.length: "+itemCollection.length);
             for (var i=0; i<itemCollection.length; i++){
-              console.log("id: "+itemCollection[i].itemId);
+//              console.log("id: "+itemCollection[i].itemId);
               if (itemCollection[i].itemId === id) {
                 console.log("Found item: "+id + " -> "+itemCollection[i].itemId);
                 $scope.item = angular.copy(itemCollection[i]);
                 break;
               }
             }
-            console.log("Returning:");
-            console.log($scope.item);
+//            console.log("Returning:");
+//            console.log($scope.item);
           }
         );
       }
@@ -155,8 +155,8 @@ referenceDataServices
     return function(input) {
       var options = ReferenceDataCache.getOptions();
       var out = "";
-      console.log("Looking up fabric: "+input);
-      console.log("options.length: "+options.length);
+//      console.log("Looking up fabric: "+input);
+//      console.log("options.length: "+options.length);
 
       for (var i=0; i<options.length; i++){
         if (options[i].id === input) {
@@ -172,8 +172,8 @@ referenceDataServices
     return function(input) {
       var options = ReferenceDataCache.getOptions();
       var out = "";
-      console.log("Looking up trim: "+input);
-      console.log("options.length: "+options.length);
+//      console.log("Looking up trim: "+input);
+//      console.log("options.length: "+options.length);
 
       for (var i=0; i<options.length; i++){
         if (options[i].id === input) {
@@ -206,8 +206,8 @@ referenceDataServices
     return function(input) {
       var labels = ReferenceDataCache.getLabels();
       var out = "";
-      console.log("Looking up label: "+input);
-      console.log("label.length: "+labels.length);
+//      console.log("Looking up label: "+input);
+//      console.log("label.length: "+labels.length);
 
       for (var i=0; i<labels.length; i++){
         if (labels[i].id === input) {

@@ -13,7 +13,7 @@ angular.module('panicApp.Controllers')
       // Put Style Catalogue data into page scope
       $scope.styles = Range.styleCatalogue(
         function (data) {   //success
-          console.log("$scope.styles.length: "+$scope.styles.length);
+          console.log("styles.length: "+$scope.styles.length);
 
         }
       );
