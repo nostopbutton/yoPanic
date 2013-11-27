@@ -21,8 +21,14 @@ angular.module('panicApp', [
     }).when('/design/:styleId', {
       templateUrl: 'views/idggDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
-    }).when('/design/:styleId/:itemId', {
-      templateUrl: 'views/newDesignBuild.html',
+    }).when('/review/:styleId', {
+      templateUrl: 'views/idggPlaceOrder.html',
+      controller: 'NewDesignBuildCtrl'
+    }).when('/review/:styleId/:designCode', {
+      templateUrl: 'views/idggPlaceOrder.html',
+      controller: 'NewDesignBuildCtrl'
+    }).when('/design/:styleId/:designCode', {
+      templateUrl: 'views/idggDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
     }).when('/designAdmin/:styleId', {
       templateUrl: 'views/designBuildAdmin.html',
@@ -312,6 +318,68 @@ referenceDataServices.factory('Range', [
 ]);
 'use strict';
 var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
+designBuildDirective.directive('placeOrder', [
+  '$location',
+  function ($location) {
+    return {
+      scope: {
+        design: '=',
+        extras: '=',
+        params: '=',
+        sil: '='
+      },
+      template: '<a class="btn btn-danger igg-design-buttons"  target="_blank"' + 'href="' + 'mailto:info@aurza.com' + '?subject=Dress Design' + '&body=' + 'Dear Team AURZA, %0D%0A' + '%0D%0A Please find below the component codes for my dress design: %0D%0A %0D%0A' + '{{design}}' + '%0D%0A ' + '{{extras}}' + '%0D%0A %0D%0A ' + 'Please paste the link to your design: ' + '"' + 'style="font-family: \'Nothing You Could Do\', cursive;font-size: 20px;"' + 'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/place-order\']);"' + '>' + '<span class="glyphicon glyphicon-send"></span> ' + 'Send us your design' + '</a>'
+    };
+  }
+]);
+designBuildDirective.directive('reviewLink', [
+  '$location',
+  function ($location) {
+    return {
+      scope: {
+        design: '=',
+        sil: '='
+      },
+      template: '<a class="btn btn-danger igg-design-buttons" ' + 'href="' + '#!/review/{{sil.styleId}}/{{design}}"' + 'style="font-family: \'Nothing You Could Do\', cursive;font-size: 20px;"' + 'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/send\']);">' + 'Send us your design</a>'
+    };
+  }
+]);
+designBuildDirective.directive('designLink', [
+  '$location',
+  function ($location) {
+    return {
+      scope: {
+        design: '=',
+        sil: '='
+      },
+      template: '<a class="btn btn-default igg-design-buttons" ' + 'href="' + '#!/design/{{sil.styleId}}/{{design}}"' + 'style="font-family: \'Nothing You Could Do\', cursive;font-size: 20px;"' + 'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/send\']);">' + '<span class="glyphicon glyphicon-hand-left"></span> Make more changes</a>'
+    };
+  }
+]);
+designBuildDirective.directive('rawLink', [
+  '$location',
+  function ($location) {
+    return {
+      scope: {
+        design: '=',
+        sil: '='
+      },
+      template: '<a class="" ' + 'href="' + '#!/design/{{sil.styleId}}/{{design}}"' + 'style="font-size: 12px;"' + 'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/send\']);">' + $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#!/design/{{sil.styleId}}/{{design}}</a>'
+    };
+  }
+]);
+designBuildDirective.directive('rawLinkBox', [
+  '$location',
+  function ($location) {
+    return {
+      scope: {
+        design: '=',
+        sil: '='
+      },
+      template: '<textarea name="select1" style="width:100%" >' + $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#!/design/{{sil.styleId}}/{{design}}' + '</textarea>'
+    };
+  }
+]);
 designBuildDirective.directive('shopBreadcrumb', function () {
   return {
     restrict: 'A',
@@ -478,6 +546,13 @@ designBuildFilter.filter('filterSets', function () {
 designBuildFilter.filter('rollover', function () {
   return function (img) {
     return img.replace(/_bk$/, '');
+  };
+});
+designBuildFilter.filter('designString', function () {
+  return function (design) {
+    var returnString = JSON.stringify(design);
+    console.log('Returning---: ' + returnString);
+    return returnString;
   };
 });
 'use strict';
@@ -716,7 +791,7 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
     if ($location.path() == '/how-to-help') {
       $scope.headline = 'How YOU can HELP...';
     } else {
-      $scope.headline = 'CREATE before you PLEDGE';
+      $scope.headline = 'Send us YOUR design';
     }
     $scope.scrollTo = function (id) {
       $location.hash(id);
@@ -769,6 +844,7 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
   function ($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, $rootScope, $window, $location) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
     var master = '', categoryId = 'dresses', styleId = $routeParams.styleId, itemId = $routeParams.itemId, designCode = $routeParams.designCode, allFabricSets = {}, range = {};
+    $scope.form = '';
     $scope.current_title = 'Test';
     $scope.current_description = 'Test description';
     $scope.headline = 'test';
@@ -779,7 +855,7 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
     $scope.categoryId = categoryId;
     if (designCode) {
       $scope.designCode = designCode;
-      $scope.deparam = $.deparam(designCode);
+      $scope.deparam = angular.copy($.deparam(designCode));
     }
     var clearTrim = function (partType) {
       partType.trim = '';
@@ -818,7 +894,10 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
       alert('ooops - loading range');
     });
     $scope.cancel = function () {
-      $scope.form = angular.copy(master);
+      if ($scope.deparam)
+        $scope.form = angular.copy($scope.deparam);
+      else
+        $scope.form = angular.copy(master);
     };
     $scope.fabricSets = DesignBuilder.fabricSets(function (data) {
       allFabricSets = angular.copy(data);
@@ -841,6 +920,30 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
     };
     $scope.isCancelDisabled = function () {
       return angular.equals(master, $scope.form);
+    };
+    $scope.param = function (form) {
+      return $.param($scope.form);
+    };
+    $scope.designString = function (form) {
+      var returnString = ' ';
+      console.log('I have:' + JSON.stringify(form));
+      for (var design in form) {
+        var partString = '';
+        for (var element in form[design]) {
+          if (element != '$$hashKey')
+            partString += element + ' = ' + JSON.stringify(form[design][element]) + '| ';
+        }
+        console.log(partString);
+        returnString += design + ' : ' + ' %0D%0A ' + partString + ' %0D%0A ';
+      }
+      console.log('Returning---: ' + returnString);
+      return returnString;
+    };
+    $scope.designLink = function (form) {
+      var returnString = ' ';
+      console.log('I have:' + JSON.stringify(form));
+      console.log('Returning---: ' + returnString);
+      return returnString;
     };
   }
 ]);

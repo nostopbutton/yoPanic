@@ -59,9 +59,18 @@ angular.module('panicApp',
       .when('/design/:styleId', {
         templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
       })
-      .when('/design/:styleId/:itemId', {
-        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
+      .when('/review/:styleId', {
+        templateUrl: 'views/idggPlaceOrder.html', controller: 'NewDesignBuildCtrl'
       })
+      .when('/review/:styleId/:designCode', {
+        templateUrl: 'views/idggPlaceOrder.html', controller: 'NewDesignBuildCtrl'
+      })
+      .when('/design/:styleId/:designCode', {
+        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+      })
+//      .when('/design/:styleId/:itemId', {
+//        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
+//      })
 
 //      .when('/design/:styleId/dress/:designCode', {
 //        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'

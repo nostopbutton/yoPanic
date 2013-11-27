@@ -152,6 +152,24 @@
 <!--<script src="scripts/controllers/NewDesignBuild.js"></script>-->
 <script src="scripts/controllers/SizingCtrl.js"></script>
 <!-- endbuild -->
+<script type="text/javascript">
+
+  /***********************************************
+   * Select and Copy form element script- By Dynamicdrive.com
+   * This notice MUST stay intact for legal use
+   * Visit http://www.dynamicdrive.com/ for this script and 100s more.
+   ***********************************************/
+
+  function selectcopy(fieldid){
+    var field=document.getElementById(fieldid) || eval('document.'+fieldid)
+    field.select()
+    if (field.createTextRange){ //if browser supports built in copy and paste (IE only at the moment)
+      field.createTextRange().execCommand("Copy")
+      alert("Value copied to clipboard!")
+    }
+  }
+
+</script>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

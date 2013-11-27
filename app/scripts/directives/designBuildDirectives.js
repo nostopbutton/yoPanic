@@ -17,6 +17,143 @@ var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
 //  }
 //})
 
+
+designBuildDirective.directive('placeOrder',["$location", function($location) {
+  return  {
+//    restrict: 'E',
+//    replace: true,
+    scope: {
+//      restrict: 'A',
+      design: "=", extras: "=", params: "=",  sil:"="
+    },
+//    template:
+//      '<div class="pic body sprite-body {{design.model}}"></div>' +
+    template:
+    '<a class="btn btn-danger igg-design-buttons"  target="_blank"' +
+    'href="' +
+      'mailto:info@aurza.com' +
+      '?subject=Dress Design' +
+      '&body=' +
+      'Dear Team AURZA, %0D%0A' +
+      '%0D%0A Please find below the component codes for my dress design: %0D%0A %0D%0A' +
+      '{{design}}' +
+//      '{{design | designString}}'+
+      '%0D%0A ' +
+      '{{extras}}' +
+      '%0D%0A %0D%0A ' +
+//      '{{params}}' +
+      'Please paste the link to your design: ' +
+//      $location.protocol() + "://" + $location.host() + ":" + $location.port() +
+//      '/#!/design/{{sil.styleId}}/{{params}}' +
+      '"' +
+    'style="font-family: \'Nothing You Could Do\', cursive;font-size: 20px;"' +
+    'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/place-order\']);"' +
+      '>' +
+    '<span class="glyphicon glyphicon-send"></span> ' +
+      'Send us your design' +
+//      '{{params}}' +
+      '</a>'
+//    link: function ($scope, element, attrs) {
+////      $scope.designString = function() {
+//      console.log("test" + $scope.design);
+//        return "test";
+////        for (var element in scope.form.design){
+////          scope.designString += element.type + element.id + "\n";
+////        }
+////        return returnString;
+////      }
+//    }
+//    link: function(scope, element, attrs) {
+//      scope.designString(); //scope.someCtrlFn({arg1: 22});
+//    }
+  }
+}])
+
+//var designString = function () {
+//  var returnString = "";
+//  alert("Here");
+//  for (var element in $scope.form.design){
+//    returnString += element.type + element.id + "\n";
+//  }
+//  console.log("Returning---: "+returnString);
+//  return returnString;
+//}
+
+
+designBuildDirective.directive('reviewLink', ["$location", function($location) {
+  return  {
+    scope: {
+      design: "=", sil:"="
+    },
+    template:
+
+      '<a class="btn btn-danger igg-design-buttons" '+
+    'href="' +
+        '#!/review/{{sil.styleId}}/{{design}}"' +
+        'style="font-family: \'Nothing You Could Do\', cursive;font-size: 20px;"' +
+        'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/send\']);">' +
+        'Send us your design</a>'
+  }
+}])
+
+designBuildDirective.directive('designLink', ["$location", function($location) {
+  return  {
+    scope: {
+      design: "=", sil:"="
+    },
+    template:
+
+      '<a class="btn btn-default igg-design-buttons" '+
+        'href="' +
+        '#!/design/{{sil.styleId}}/{{design}}"' +
+        'style="font-family: \'Nothing You Could Do\', cursive;font-size: 20px;"' +
+        'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/send\']);">' +
+        '<span class="glyphicon glyphicon-hand-left"></span> Make more changes</a>'
+  }
+}])
+
+designBuildDirective.directive('rawLink', ["$location", function($location) {
+  return  {
+    scope: {
+      design: "=", sil:"="
+    },
+    template:
+
+      '<a class="" '+
+        'href="' +
+        '#!/design/{{sil.styleId}}/{{design}}"' +
+        'style="font-size: 12px;"' +
+        'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'buy-sml-btn\', \'design-build/send\']);">' +
+        $location.protocol() + "://" + $location.host() + ":" + $location.port() +
+        '/#!/design/{{sil.styleId}}/{{design}}</a>'
+  }
+}])
+
+designBuildDirective.directive('rawLinkBox', ["$location", function($location) {
+  return  {
+    scope: {
+      design: "=", sil:"="
+    },
+    template:
+
+      '<textarea name="select1" style="width:100%" >' +
+        $location.protocol() + "://" + $location.host() + ":" + $location.port() +
+        '/#!/design/{{sil.styleId}}/{{design}}' +
+        '</textarea>'
+//        '<span ID="copytext" style="width:100%">' +
+//        $location.protocol() + "://" + $location.host() + ":" + $location.port() +
+//        '/#!/design/{{sil.styleId}}/{{design}}' +
+//        '</span>'
+
+//        <SPAN ID="copytext" STYLE="height:150;width:162;background-color:pink">
+//    This text will be copied onto the clipboard when you click the button below. Try it!
+//    </SPAN>
+
+
+  }
+}])
+
+
 designBuildDirective.directive('shopBreadcrumb', function () {
   return  {
     restrict: 'A',

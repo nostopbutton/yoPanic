@@ -16,6 +16,7 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
         allFabricSets = {},
         range = {};
 
+      $scope.form ="";
       $scope.current_title = 'Test';
       $scope.current_description = 'Test description';
       $scope.headline = "test";
@@ -29,9 +30,10 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
       $scope.categoryId = categoryId;
 
       if(designCode) {
-      $scope.designCode = designCode;
-      $scope.deparam = $.deparam(designCode)
-}
+        $scope.designCode = designCode;
+        $scope.deparam = angular.copy($.deparam(designCode));
+//        alert("in depararm")
+      }
 //    $scope.location =  $location.protocol()+"://" +
 //    $location.host()+ ":" +
 //      $location.port()+ "/#!/" +
@@ -117,7 +119,10 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
         });
 
       $scope.cancel = function() {
-        $scope.form = angular.copy(master);
+        if($scope.deparam)
+          $scope.form = angular.copy($scope.deparam);
+        else
+          $scope.form = angular.copy(master);
       };
 
 
@@ -149,6 +154,41 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
       $scope.isCancelDisabled = function() {
         return angular.equals(master, $scope.form);
       };
+
+      $scope.param = function (form) {
+//        alert(form);
+        return $.param($scope.form);
+      };
+
+      $scope.designString = function (form) {
+        var returnString = " ";
+        console.log("I have:" +JSON.stringify(form));
+
+        for (var design in form){
+          var partString = "";
+          for (var element in form[design]) {
+            if (element != "$$hashKey")
+              partString += element + " = " +JSON.stringify(form[design][element]) + "| ";
+//            returnString += element.type + element.id + "\n";
+          }
+          console.log(partString);
+          returnString += design + " : " + " %0D%0A "+ partString + " %0D%0A "
+//            returnString += design + " : " + JSON.stringify(form[design]) + " %0D%0A "
+        }
+
+        console.log("Returning---: "+returnString);
+        return returnString;
+      }
+
+      $scope.designLink = function (form) {
+        var returnString = " ";
+        console.log("I have:" +JSON.stringify(form));
+
+
+
+        console.log("Returning---: "+returnString);
+        return returnString;
+      }
 
 //      $scope.loadStyle = loadStyle;//, styleId);
 

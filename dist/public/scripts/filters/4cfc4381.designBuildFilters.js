@@ -27,3 +27,14 @@ designBuildFilter.filter('rollover', function () {
   };
 });
 
+designBuildFilter.filter('designString', function () {
+  return function(design) {
+    var returnString = JSON.stringify(design);
+//    alert("Here");
+//    for (var element in design){
+//      returnString += element.type + element.id + "\n";
+//    }
+    console.log("Returning---: "+returnString);
+    return returnString;
+  };
+});

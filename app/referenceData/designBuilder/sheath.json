@@ -10,9 +10,9 @@
       "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
       "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
     }
-    , "dressSize": 12
     , "model": "strap-whole-body"
   }
+
   , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
   , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
   , "fabricSets": [ {"setId": "s-vc"}]
