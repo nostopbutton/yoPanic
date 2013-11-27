@@ -138,7 +138,7 @@ designBuildDirective.directive('rawLinkBox', ["$location", function($location) {
 
       '<textarea name="select1" style="width:100%" >' +
         $location.protocol() + "://" + $location.host() + ":" + $location.port() +
-        '/#!/design/{{sil.styleId}}/{{design}}' +
+        '/#!/review/{{sil.styleId}}/{{design}}' +
         '</textarea>'
 //        '<span ID="copytext" style="width:100%">' +
 //        $location.protocol() + "://" + $location.host() + ":" + $location.port() +

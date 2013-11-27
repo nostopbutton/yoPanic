@@ -376,7 +376,7 @@ designBuildDirective.directive('rawLinkBox', [
         design: '=',
         sil: '='
       },
-      template: '<textarea name="select1" style="width:100%" >' + $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#!/design/{{sil.styleId}}/{{design}}' + '</textarea>'
+      template: '<textarea name="select1" style="width:100%" >' + $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#!/review/{{sil.styleId}}/{{design}}' + '</textarea>'
     };
   }
 ]);
