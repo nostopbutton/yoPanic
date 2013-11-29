@@ -157,7 +157,7 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
 
       $scope.param = function (form) {
 //        alert(form);
-        return $.param($scope.form);
+        return $.param(form);
       };
 
       $scope.designString = function (form) {

@@ -922,7 +922,7 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
       return angular.equals(master, $scope.form);
     };
     $scope.param = function (form) {
-      return $.param($scope.form);
+      return $.param(form);
     };
     $scope.designString = function (form) {
       var returnString = ' ';
