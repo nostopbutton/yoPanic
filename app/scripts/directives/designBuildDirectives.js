@@ -140,16 +140,26 @@ designBuildDirective.directive('rawLinkBox', ["$location", function($location) {
         $location.protocol() + "://" + $location.host() + ":" + $location.port() +
         '/#!/review/{{sil.styleId}}/{{design}}' +
         '</textarea>'
-//        '<span ID="copytext" style="width:100%">' +
-//        $location.protocol() + "://" + $location.host() + ":" + $location.port() +
-//        '/#!/design/{{sil.styleId}}/{{design}}' +
-//        '</span>'
+  }
+}])
 
-//        <SPAN ID="copytext" STYLE="height:150;width:162;background-color:pink">
-//    This text will be copied onto the clipboard when you click the button below. Try it!
-//    </SPAN>
-
-
+designBuildDirective.directive('rawLinkTextarea', ["$location", function($location) {
+  return  {
+    scope: {
+      design: "=", sil:"="
+    },
+    template:
+      '<textarea id="Field216"' +
+        'name="Field216"' +
+        'class="field textarea small"' +
+        'spellcheck="true"' +
+        'rows="10" cols="50"' +
+        'tabindex="4"' +
+        'onkeyup=""' +
+        'required readonly>' +
+        $location.protocol() + "://" + $location.host() + ":" + $location.port() +
+        '/#!/review/{{sil.styleId}}/{{design}}' +
+        '</textarea>'
   }
 }])
 

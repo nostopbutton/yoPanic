@@ -1,149 +1,285 @@
 <div id="designBuildView" class="container">
 <div class="row">
 
-  <div id="view_dress_panel" class="col-lg-3 col-lg-offset-1 col-md-3 ">
-    <div class="row dress">
-      <!--<div draw-design-Pic design="form"></div>-->
-      <div draw-design design="form"></div>
-    </div>
-
-    <div class="row">
-
-    </div>
-
+<div id="view_dress_panel" class="col-lg-3 col-lg-offset-1 col-md-3 ">
+  <div class="row dress">
+    <!--<div draw-design-Pic design="form"></div>-->
+    <div draw-design design="form"></div>
   </div>
 
-  <div id="dress_designer_panel" class="col-lg-6 col-lg-offset-1 col-md-8 col-md-offset-">
-    <div class="container style">
+  <div class="row">
+    <div class="col-sm-6 align-center" style="margin-bottom:10px">
+      <div design-link design="param(form)" sil="style"></div>
+    </div>
+  </div>
 
-      <div class="row" style="border-width:1px; border-color: black; border-style:solid; padding: 10px">
+</div>
 
-        <div style="border-width:1px; border-color: black">
+<div id="dress_designer_panel" class="col-lg-6 col-lg-offset-1 col-md-8 col-md-offset-">
+<div class="contaner style">
 
-          <div style="border-bottom-width:1px; border-bottom-color: #c2c2c2; border-bottom-style:solid; padding: 10px">
-            <p><b>To:</b> info@aurza.com</p>
-            <p><b>Subject</b>: My Design Details</p>
-          </div>
-        <br>
-        <p>Dear Team AURZA,</p>
+<div class="row" style="border-width:1px; border-color: black; border-style:solid; padding: 10px">
 
-        <p>Please find below the component codes for my dress design:</p>
+<div style="border-width:1px; border-color: black">
 
-        <table  class="reviewDesign">
-          <tr>
-            <th>Component</th>
-            <th>Style</th>
-            <th>Size</th>
-            <th>Fabric</th>
-            <th>Trim</th>
-          </tr>
-          <tr ng-repeat="design in form.design" ng-class-even="'alt'">
-            <td class="bold">{{design.type}}</td>
-            <td>{{design.id}}</td>
-            <td>{{design.size}}</td>
-            <td>{{design.fabric}}</td>
-            <td>{{design.trim}}</td>
-          </tr>
-          <tr><td> &nbsp</td></tr>
-          <tr>
-            <th>Accessory</th>
-            <th>Style</th>
-            <th>Fabric</th>
-            <th>Length</th>
-            <th>Trim</th>
-          </tr>
-          <tr ng-repeat="design in form.extras" ng-class-even="'alt'">
-            <td class="bold">{{design.type}}</td>
-            <td>{{design.id}}</td>
-            <td>{{design.fabric}}</td>
-            <td>{{design.size}}</td>
-            <td>{{design.trim}}</td>
-          </tr>
-        </table>
-        <br>
+<div style="border-bottom-width:1px; border-bottom-color: #c2c2c2; border-bottom-style:solid; padding: 10px">
+  <p><b>To:</b> info@aurza.com</p>
 
-          <form name="test">
-          Raw link to my design (<a class="highlighttext" href="javascript:selectcopy('test.select1')">select all</a>)
-          <br>
-          <div raw-link-box design="param(form)" sil="style"></div>
+  <p><b>Subject</b>: My Design Details</p>
+</div>
+<br>
 
-            </form>
+<p>Dear Team AURZA,</p>
 
+<p>Please find below the component codes for my dress design:</p>
 
+<table class="reviewDesign">
+  <tr>
+    <th>Component</th>
+    <th>Style</th>
+    <th>Size</th>
+    <th>Fabric</th>
+    <th>Trim</th>
+  </tr>
+  <tr ng-repeat="design in form.design" ng-class-even="'alt'">
+    <td class="bold">{{design.type}}</td>
+    <td>{{design.id}}</td>
+    <td>{{design.size}}</td>
+    <td>{{design.fabric}}</td>
+    <td>{{design.trim}}</td>
+  </tr>
+  <tr>
+    <td> &nbsp</td>
+  </tr>
+  <tr>
+    <th>Accessory</th>
+    <th>Style</th>
+    <th>Fabric</th>
+    <th>Length</th>
+    <th>Trim</th>
+  </tr>
+  <tr ng-repeat="design in form.extras" ng-class-even="'alt'">
+    <td class="bold">{{design.type}}</td>
+    <td>{{design.id}}</td>
+    <td>{{design.fabric}}</td>
+    <td>{{design.size}}</td>
+    <td>{{design.trim}}</td>
+  </tr>
+</table>
+<br>
 
-        <!--<div class="row">-->
-          <!--<div class="col-sm-4 align-left">-->
-            <!--<a class="btn btn-default igg-design-buttons" id="reset-design" ng-click="cancel()"-->
-               <!--ng-disabled="isCancelDisabled()"-->
-               <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
-              <!--Reset design</a>-->
-          <!--</div>-->
+<!--<form name="test">-->
+  <!--Raw link to my design (<a class="highlighttext" href="javascript:selectcopy('test.select1')">select all</a>)-->
+  <!--<br>-->
 
-          <!--&lt;!&ndash;<div class="col-sm-4 col-md-offset- align-left" style="margin-bottom:50px">&ndash;&gt;-->
-          <!--&lt;!&ndash;<a class="btn btn-danger design-buttons" href="#/purchase"&ndash;&gt;-->
-          <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
-          <!--&lt;!&ndash;Change silhouette</a>&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--<div raw-link-box design="param(form)" sil="style"></div>-->
 
-          <!--<div class="col-sm-4 col-md-offset-4 align-right">-->
-            <!--&lt;!&ndash;<a class="btn btn-default igg-design-buttons"&ndash;&gt;-->
-               <!--&lt;!&ndash;href="https://www.facebook.com/dialog/feed?picture=http://img.aurza.com/skt-001-02-013-slv-009-00-013-nek-001-00-003-blt-002-00-000-ext-002-00-000-ext-003-00-000.png&description=For more details on this dress...&app_id=153275411536544&redirect_uri=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&link=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&name=Check+out+the+dress+I+designed+-+what+do+you+think%3F"&ndash;&gt;-->
-               <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
-              <!--&lt;!&ndash;Facebook</a>&ndash;&gt;-->
-            <!--<div facebook design="form"></div>-->
-          <!--</div>-->
+<!--</form>-->
 
+  <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+        action="https://nostopbutton.wufoo.com/forms/z199qnco0rr1m9i/#public">
 
-        <!--</div>-->
-        <!--<div class="row align-center">-->
-          <!--&lt;!&ndash;<div class="col-sm-12 align-center" style="margin-bottom:50px">&ndash;&gt;-->
-            <!--&lt;!&ndash;<a class="btn btn-danger" href="#/purchase"&ndash;&gt;-->
-               <!--&lt;!&ndash;style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"&ndash;&gt;-->
-               <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
-              <!--&lt;!&ndash;back to indiegogo</a>&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--<div facebook design="form"></div>-->
-        <!--</div>-->
-      </div>
-      </div>
+    <ul>
 
-      <div class="row">
-        <div class="col-sm-6 align-center" style="margin-bottom:10px">
-          <div design-link design="param(form)" sil="style"></div>
+      <li id="foli4" class="notranslate      ">
+        <label class="desc" id="title4" for="Field4">
+          Name
+          <span id="req_4" class="req">*</span>
+        </label>
+<span>
+<input id="Field4" name="Field4" type="text" class="field text fn" value="" size="8" tabindex="1" required />
+<label for="Field4">First</label>
+</span>
+<span>
+<input id="Field5" name="Field5" type="text" class="field text ln" value="" size="14" tabindex="2" required />
+<label for="Field5">Last</label>
+</span>
+      </li>
+      <li id="foli2" class="notranslate      ">
+        <label class="desc" id="title2" for="Field2">
+          Email
+          <span id="req_2" class="req">*</span>
+        </label>
+        <div>
+          <input id="Field2" name="Field2" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required />
         </div>
-        <div class="col-sm-6 align-center" style="margin-bottom:10px">
-          <div place-order design="designString(form.design)" extras="designString(form.extras)" params="param(form)" sil="style"></div>
-        </div>
+      </li>
+
+      </li><li id="foli214" class="notranslate section      ">
+      <section>
+        <h3 id="title214">
+          My measurements
+        </h3>
+      </section>
+    </li><li id="foli208" class="notranslate       ">
+      <label class="desc" id="title208" for="Field208">
+        Dress Size
+        <span id="req_208" class="req">*</span>
+      </label>
+      <div>
+        <select id="Field208" name="Field208" class="field select medium" tabindex="5" >
+          <option value="Don&#039;t know" >
+            Don't know
+          </option>
+          <option value="8" >
+            8
+          </option>
+          <option value="10" >
+            10
+          </option>
+          <option value="12">
+            12
+          </option>
+          <option value="14" >
+            14
+          </option>
+          <option value="16" >
+            16
+          </option>
+          <option value="18" >
+            18
+          </option>
+          <option value="20" >
+            20
+          </option>
+          <option value="Custom size" >
+            Custom size
+          </option>
+        </select>
       </div>
+    </li>
+      <li id="foli209" class="notranslate      ">
+        <label class="desc " id="title209" for="Field209">
+          Height (cm)
+        </label>
+        <div>
+          <input id="Field209" name="Field209" type="text" class="field text nospin medium"  value="" tabindex="6" onkeyup="" />
+        </div>
+        <p class="instruct " id="instruct209"><small>Only required if "Custom" dress size is selected.</small></p>
+      </li><li id="foli210" class="notranslate      ">
+      <label class="desc " id="title210" for="Field210">
+        Bust (cm)
+      </label>
+      <div>
+        <input id="Field210" name="Field210" type="text" class="field text nospin medium"  value="" tabindex="7" onkeyup="" />
+      </div>
+      <p class="instruct " id="instruct210"><small>Only required if "Custom" dress size is selected.</small></p>
+    </li><li id="foli211" class="notranslate      ">
+      <label class="desc " id="title211" for="Field211">
+        Waist (cm)
+      </label>
+      <div>
+        <input id="Field211" name="Field211" type="text" class="field text nospin medium"  value="" tabindex="8" onkeyup="" />
+      </div>
+      <p class="instruct " id="instruct211"><small>Only required if "Custom" dress size is selected.</small></p>
+    </li><li id="foli212" class="notranslate      ">
+      <label class="desc " id="title212" for="Field212">
+        Hips (cm)
+      </label>
+      <div>
+        <input id="Field212" name="Field212" type="text" class="field text nospin medium"  value="" tabindex="9" onkeyup="" />
+      </div>
+      <p class="instruct " id="instruct212"><small>Only required if "Custom" dress size is selected.</small></p>
+    </li>
 
-    </div>
-  </div>
+      <li class="buttons ">
+        <div>
+
+          <button id="saveForm" name="saveForm"
+                 style="height:50px; padding:10px; width:100%"
+                 class="btn btn-danger igg-design-buttons"
+                 type="submit" value="Send us your design"
+              >
+            <p style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
+            <span style="color: white"class="glyphicon glyphicon-send"> </span>  Send us your design </p>
+          </button></div>
+      </li>
+
+      <li id="foli216"
+          class="notranslate      "><label class="desc" id="title216" for="Field216">
+        Link (<a class="highlighttext" href="javascript:selectcopy('form1.Field216')">select all</a>)
+        <span id="req_216" class="req">*</span>
+      </label>
+
+        <div>
+          <!--<textarea id="Field216"-->
+          <!--name="Field216"-->
+          <!--class="field textarea small"-->
+          <!--spellcheck="true"-->
+          <!--rows="10" cols="50"-->
+          <!--tabindex="4"-->
+          <!--onkeyup=""-->
+          <!--required>-->
+
+          <!--</textarea>-->
+          <div raw-link-textarea design="param(form)" sil="style"></div>
+        </div>
+
+      <li class="hide">
+        <label for="comment">Do Not Fill This Out</label>
+        <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+        <input type="hidden" id="idstamp" name="idstamp" value="w4BNpjs6vK5IbJ3450yIFqThStTRyNdCiLcR9dmRlxs=" />
+      </li>
+    </ul>
+  </form>
+
+</div><!--container-->
+
+
+<!--<div class="row">-->
+<!--<div class="col-sm-4 align-left">-->
+<!--<a class="btn btn-default igg-design-buttons" id="reset-design" ng-click="cancel()"-->
+<!--ng-disabled="isCancelDisabled()"-->
+<!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
+<!--Reset design</a>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;<div class="col-sm-4 col-md-offset- align-left" style="margin-bottom:50px">&ndash;&gt;-->
+<!--&lt;!&ndash;<a class="btn btn-danger design-buttons" href="#/purchase"&ndash;&gt;-->
+<!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+<!--&lt;!&ndash;Change silhouette</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--<div class="col-sm-4 col-md-offset-4 align-right">-->
+<!--&lt;!&ndash;<a class="btn btn-default igg-design-buttons"&ndash;&gt;-->
+<!--&lt;!&ndash;href="https://www.facebook.com/dialog/feed?picture=http://img.aurza.com/skt-001-02-013-slv-009-00-013-nek-001-00-003-blt-002-00-000-ext-002-00-000-ext-003-00-000.png&description=For more details on this dress...&app_id=153275411536544&redirect_uri=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&link=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&name=Check+out+the+dress+I+designed+-+what+do+you+think%3F"&ndash;&gt;
+-->
+<!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+<!--&lt;!&ndash;Facebook</a>&ndash;&gt;-->
+<!--<div facebook design="form"></div>-->
+<!--</div>-->
+
+
+<!--</div>-->
+<!--<div class="row align-center">-->
+<!--&lt;!&ndash;<div class="col-sm-12 align-center" style="margin-bottom:50px">&ndash;&gt;-->
+<!--&lt;!&ndash;<a class="btn btn-danger" href="#/purchase"&ndash;&gt;-->
+<!--&lt;!&ndash;style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"&ndash;&gt;-->
+<!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+<!--&lt;!&ndash;back to indiegogo</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<div facebook design="form"></div>-->
+<!--</div>-->
+</div>
 </div>
 
-
-<div class="row" id="debug_view">
-
-  <!--<div class="col-md-4 align-left">-->
-    <!--<a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>-->
+<!--<div class="row">-->
+  <!--<div class="col-sm-6 align-center" style="margin-bottom:10px">-->
+    <!--<div design-link design="param(form)" sil="style"></div>-->
   <!--</div>-->
-  <!--<div class="col-md-4 align-center">-->
+  <!--<div class="col-sm-6 align-center" style="margin-bottom:10px">-->
+    <!--<div place-order design="designString(form.design)" extras="designString(form.extras)" params="param(form)"-->
+         <!--sil="style"></div>-->
   <!--</div>-->
-  <!--<div class="col-md-4 align-right">-->
-    <!--<a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>-->
-  <!--</div>-->
-  <hr>
-  <div ng-show="!isDebugCollapsed">
-    <pre>form={{form}}</pre>
-    <pre>fabricSets={{fabricSets}}</pre>
-    <pre>trimFabricSets={{trimFabricSets}}</pre>
-    <pre>dressFabricSets={{dressFabricSets}}</pre>
+<!--</div>-->
 
-
-    <pre>master={{master}}</pre>
-    <pre>category={{category}}</pre>
-    <pre>style={{style}}</pre>
-    <pre>range={{range}}</pre>
-  </div>
 </div>
 </div>
+</div>
+
+</div>
+    <br>
 <!-- /designBuildView -->

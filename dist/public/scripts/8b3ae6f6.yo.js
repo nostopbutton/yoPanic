@@ -380,6 +380,18 @@ designBuildDirective.directive('rawLinkBox', [
     };
   }
 ]);
+designBuildDirective.directive('rawLinkTextarea', [
+  '$location',
+  function ($location) {
+    return {
+      scope: {
+        design: '=',
+        sil: '='
+      },
+      template: '<textarea id="Field216"' + 'name="Field216"' + 'class="field textarea small"' + 'spellcheck="true"' + 'rows="10" cols="50"' + 'tabindex="4"' + 'onkeyup=""' + 'required readonly>' + $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#!/review/{{sil.styleId}}/{{design}}' + '</textarea>'
+    };
+  }
+]);
 designBuildDirective.directive('shopBreadcrumb', function () {
   return {
     restrict: 'A',
