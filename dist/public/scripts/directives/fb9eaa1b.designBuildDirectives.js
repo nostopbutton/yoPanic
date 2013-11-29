@@ -152,7 +152,7 @@ designBuildDirective.directive('rawLinkTextarea', ["$location", function($locati
       '<textarea id="Field216"' +
         'name="Field216"' +
         'class="field textarea small"' +
-        'spellcheck="true"' +
+//        'spellcheck="true"' +
         'rows="10" cols="50"' +
         'tabindex="4"' +
         'onkeyup=""' +

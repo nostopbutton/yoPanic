@@ -28,7 +28,7 @@
   <p><b>Subject</b>: My Design Details</p>
 </div>
 <br>
-
+<p>{{design}}</p>
 <p>Dear Team AURZA,</p>
 
 <p>Please find below the component codes for my dress design:</p>
@@ -196,24 +196,25 @@
       </li>
 
       <li id="foli216"
-          class="notranslate      "><label class="desc" id="title216" for="Field216">
+          class="notranslate      ">
+        <label class="desc" id="title216" for="Field216">
         Link (<a class="highlighttext" href="javascript:selectcopy('form1.Field216')">select all</a>)
         <span id="req_216" class="req">*</span>
-      </label>
+        </label>
 
         <div>
-          <!--<textarea id="Field216"-->
-          <!--name="Field216"-->
-          <!--class="field textarea small"-->
-          <!--spellcheck="true"-->
-          <!--rows="10" cols="50"-->
-          <!--tabindex="4"-->
-          <!--onkeyup=""-->
-          <!--required>-->
-
-          <!--</textarea>-->
           <div raw-link-textarea design="param(form)" sil="style"></div>
         </div>
+      </li>
+      {{extras}}
+      <li id="foli218" class="hide">
+        {{extras}}
+        <!--<div>-->
+          <textarea name="Field218" id="Field218" rows="10" cols="50">
+            {{form.design}}
+            {{form.extras}}</textarea>
+        <!--</div>>-->
+      </li>
 
       <li class="hide">
         <label for="comment">Do Not Fill This Out</label>

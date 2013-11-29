@@ -388,7 +388,7 @@ designBuildDirective.directive('rawLinkTextarea', [
         design: '=',
         sil: '='
       },
-      template: '<textarea id="Field216"' + 'name="Field216"' + 'class="field textarea small"' + 'spellcheck="true"' + 'rows="10" cols="50"' + 'tabindex="4"' + 'onkeyup=""' + 'required readonly>' + $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#!/review/{{sil.styleId}}/{{design}}' + '</textarea>'
+      template: '<textarea id="Field216"' + 'name="Field216"' + 'class="field textarea small"' + 'rows="10" cols="50"' + 'tabindex="4"' + 'onkeyup=""' + 'required readonly>' + $location.protocol() + '://' + $location.host() + ':' + $location.port() + '/#!/review/{{sil.styleId}}/{{design}}' + '</textarea>'
     };
   }
 ]);
