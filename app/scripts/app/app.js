@@ -38,10 +38,10 @@ angular.module('panicApp',
 //        templateUrl: 'views/about.html', controller: 'StaticPageCtrl'
 //      })
 
-      // Design Build routes
-//      .when('/collection', {
-//        templateUrl: 'views/dressCollection.html', controller: 'DressCollectionCtrl'
-//      })
+//      Design Build routes
+      .when('/collection', {
+        templateUrl: 'views/dressCollection.html', controller: 'DressCollectionCtrl'
+      })
 //      .when('/shop/:styleId/:itemId', {
 //        templateUrl: 'views/shopItem.html', controller: 'ShopItemCtrl'
 //      })

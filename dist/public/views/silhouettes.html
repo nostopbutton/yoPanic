@@ -8,19 +8,39 @@
         </span>
     </div>
   </div>
-  <!--<div class="row silhouette-filter">-->
-    <!--<div class="col-sm-5 col-sm-offset-1">-->
-      <!--View all items | <a href="#!design">View Dresses</a> | <a href="#!design">View Skirts</a>-->
-    <!--</div>-->
-
-    <!--<div class="col-sm-5 " style="text-align:right">-->
-      <!--Showing items 1 - 10 of 10-->
-    <!--</div>-->
-  <!--</div>-->
   <div class="row">
-    <div class="col-lg-10 col-lg-offset-1 col-md-9 col-md-offset-2 col-xs-12 col-sm-offset- ">
-      <div ng-repeat="design in styles">
-        <div class="col-sm-3 col-xs-6 container item">
+
+    <div class="col-xs-3">
+      <!--<div bs-affix data-offset-top="50" data-offset-bottom="400" class="silhouette-filter">-->
+      <div ui-scrollfi="65" class="filter">
+        <div class="header container">
+          <div class="col-xs-9 title">
+            <span class="glyphicon glyphicon-filter"></span>  <span class="group">Indiegogo Perk</span>
+          </div>
+          <div class="col-xs-3 reset">
+            <a class="" ng-click="reset()">Reset</a>
+          </div>
+        </div>
+        <!--  header -->
+        <div class="attributes container">
+
+          <div class="attr col-xs-12">
+            <label ng-repeat="perk in perks" class="radio">
+              <input type="radio" name="perk" ng-value="perk.values"
+               ng-model="$parent.perkValues" ng-checked="perk.default">
+              {{perk.label}}
+            </label>
+
+          </div>
+        </div>
+        <!--{{trim}}-->
+      </div>
+    </div>
+
+    <div class="col-xs-9">
+      <!--<div class="col-lg-10 col-lg-offset-1 col-md-9 col-md-offset-2 col-xs-9">-->
+      <div ng-repeat="design in styles | filter: search">
+        <div class="col-md-3 col-sm-6 container item">
           <div silhouette design="design"></div>
         </div>
       </div>

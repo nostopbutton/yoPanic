@@ -18,6 +18,9 @@ angular.module('panicApp', [
     }).when('/how-to-help', {
       templateUrl: 'views/howToHelp.html',
       controller: 'StaticPageCtrl'
+    }).when('/collection', {
+      templateUrl: 'views/dressCollection.html',
+      controller: 'DressCollectionCtrl'
     }).when('/design/:styleId', {
       templateUrl: 'views/idggDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
@@ -772,6 +775,80 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
     $scope.styles = Range.styleCatalogue(function (data) {
       console.log('styles.length: ' + $scope.styles.length);
     });
+    var perks_reset, perkChecked, perkValues;
+    perks_reset = [
+      {
+        id: 'all',
+        label: 'View all',
+        default: true,
+        values: [
+          'skirt',
+          'top',
+          'dress',
+          'silk',
+          'maxi'
+        ]
+      },
+      {
+        id: 'separates',
+        label: 'Perfect Skirt or Top ($140)',
+        values: [
+          'skirt',
+          'top'
+        ]
+      },
+      {
+        id: 'silk_dress',
+        label: 'Perfect Silk Dress ($210)',
+        values: ['silk']
+      },
+      {
+        id: 'tailored_dress',
+        label: 'Perfect Tailored Dress ($235)',
+        values: ['dress']
+      },
+      {
+        id: 'skirt_and_top',
+        label: 'Perfect Skirt and Top ($285)',
+        values: [
+          'skirt',
+          'top'
+        ]
+      },
+      {
+        id: 'silk_maxi',
+        label: 'Perfect Silk Maxi Dress ($290)',
+        values: ['maxi']
+      },
+      {
+        id: 'bundles',
+        label: ' Multi-Dress Bundles',
+        values: [
+          'silk',
+          'maxi',
+          'dress'
+        ]
+      }
+    ];
+    $scope.perkValues = '';
+    $scope.search = function (item) {
+      var found = false;
+      console.log('$scope.perkValues: ' + JSON.stringify($scope.perkValues));
+      console.log('item.type: ' + JSON.stringify(item.type));
+      for (var i = 0; i < $scope.perkValues.length; i++) {
+        if ($scope.perkValues[i] == item.type) {
+          console.log('Found dress: ' + item.type + ' checked: ' + $scope.perkValues[i]);
+          found = true;
+          break;
+        }
+      }
+      return found;
+    };
+    $scope.reset = function () {
+      $scope.perkValues = angular.copy(perks_reset[0].values);
+      $scope.perks = angular.copy(perks_reset);
+    };
+    $scope.reset();
     var aggregatedPromise = $q.all([
         $http.get('/images/003.png'),
         $http.get('/images/008.png'),

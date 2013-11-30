@@ -71,7 +71,7 @@
   }
   , {
   "styleId": "shift"
-  , "type": "dress"
+  , "type": "silk"
   , "styleName": "Eddie"
   , "styleFormalName": "Shift Dress"
   , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
@@ -85,7 +85,7 @@
 }
   , {
   "styleId": "shirt"
-  , "type": "dress"
+  , "type": "silk"
   , "styleName": "Elle"
   , "styleFormalName": "Shirt Dress"
   , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
@@ -99,7 +99,7 @@
 }
   , {
   "styleId": "shirt-maxi"
-  , "type": "dress"
+  , "type": "maxi"
   , "styleName": "Claudia"
   , "styleFormalName": "Maxi Shirt Dress"
   , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"

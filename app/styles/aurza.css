@@ -425,12 +425,14 @@
 }
 
 .filter.ui-scrollfix{
-    position: fixed;
+    /*position: fixed;*/
     top:160px;
+    width:20%;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
     .filter.ui-scrollfix{
         top:180px;
+        width:30%;
     }
 }
 
@@ -445,7 +447,7 @@
 }
 
 .filter .attributes {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .attributes .group {
@@ -459,7 +461,8 @@
 
 .filter > .header  .title {
     /*line-height: 30px;*/
-    font-size:16px;
+    font-size:13px;
+    font-weight: bold;
     vertical-align:middle;
     text-align: left;
 }
