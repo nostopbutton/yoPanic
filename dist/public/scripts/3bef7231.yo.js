@@ -716,7 +716,7 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
     if ($location.path() == '/how-to-help') {
       $scope.headline = 'How YOU can HELP...';
     } else {
-      $scope.headline = 'CREATE before you PLEDGE';
+      $scope.headline = 'CREATE your own DESIGN';
     }
     $scope.scrollTo = function (id) {
       $location.hash(id);

@@ -57,7 +57,8 @@ angular.module('panicApp.Controllers')
     {
       $scope.headline = "How YOU can HELP..."
     } else {
-      $scope.headline = "CREATE before you PLEDGE"
+//      $scope.headline = "CREATE before you PLEDGE"
+        $scope.headline = "CREATE your own DESIGN"
     }
 
     $scope.scrollTo = function(id) {
