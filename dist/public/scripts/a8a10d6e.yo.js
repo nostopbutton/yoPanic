@@ -791,7 +791,7 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
       },
       {
         id: 'separates',
-        label: 'Perfect Skirt or Top ($140)',
+        label: 'Perfect Skirt or Top',
         values: [
           'skirt',
           'top'
@@ -799,17 +799,17 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
       },
       {
         id: 'silk_dress',
-        label: 'Perfect Silk Dress ($210)',
+        label: 'Perfect Silk Dress',
         values: ['silk']
       },
       {
         id: 'tailored_dress',
-        label: 'Perfect Tailored Dress ($235)',
+        label: 'Perfect Tailored Dress',
         values: ['dress']
       },
       {
         id: 'skirt_and_top',
-        label: 'Perfect Skirt and Top ($285)',
+        label: 'Perfect Skirt and Top',
         values: [
           'skirt',
           'top'
@@ -817,7 +817,7 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
       },
       {
         id: 'silk_maxi',
-        label: 'Perfect Silk Maxi Dress ($290)',
+        label: 'Perfect Silk Maxi Dress',
         values: ['maxi']
       },
       {
@@ -826,6 +826,14 @@ angular.module('panicApp.Controllers').controller('SilhouetteCtrl', [
         values: [
           'silk',
           'maxi',
+          'dress'
+        ]
+      },
+      {
+        id: 'gift',
+        label: ' GIFT BOX (Voucher)',
+        values: [
+          'silk',
           'dress'
         ]
       }

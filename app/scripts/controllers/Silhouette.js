@@ -22,12 +22,13 @@ angular.module('panicApp.Controllers')
 
       perks_reset = [
         { id: 'all', label: 'View all', default: true,  values: ['skirt', 'top', 'dress', 'silk', 'maxi'] },
-        { id: 'separates', label: 'Perfect Skirt or Top ($140)',   values: ['skirt', 'top'] },
-        { id: 'silk_dress', label:'Perfect Silk Dress ($210)',   values: ['silk'] },
-        { id: 'tailored_dress', label: 'Perfect Tailored Dress ($235)',   values: [ 'dress'] },
-        { id: 'skirt_and_top', label: 'Perfect Skirt and Top ($285)',   values: ['skirt', 'top'] },
-        { id: 'silk_maxi', label: 'Perfect Silk Maxi Dress ($290)',   values: [ 'maxi'] },
-        { id: 'bundles', label: ' Multi-Dress Bundles',  values: [ 'silk', 'maxi','dress'] }
+        { id: 'separates', label: 'Perfect Skirt or Top',   values: ['skirt', 'top'] },
+        { id: 'silk_dress', label:'Perfect Silk Dress',   values: ['silk'] },
+        { id: 'tailored_dress', label: 'Perfect Tailored Dress',   values: [ 'dress'] },
+        { id: 'skirt_and_top', label: 'Perfect Skirt and Top',   values: ['skirt', 'top'] },
+        { id: 'silk_maxi', label: 'Perfect Silk Maxi Dress',   values: [ 'maxi'] },
+        { id: 'bundles', label: ' Multi-Dress Bundles',  values: [ 'silk', 'maxi','dress'] },
+        { id: 'gift', label: ' GIFT BOX (Voucher)',  values: [ 'silk', 'dress'] }
       ];
 
       $scope.perkValues = "";
