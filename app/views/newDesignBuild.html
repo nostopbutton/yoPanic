@@ -34,10 +34,52 @@
     </div>
 
     <div class="col-sm-6 align-right" style="margin-bottom:50px">
-      <a class="btn btn-danger design-buttons" href="#/purchase"
-         onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
-        Buy this dress</a>
+      <!--<a class="btn btn-danger design-buttons" href="#/purchase"-->
+         <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
+        <!--Buy this dress</a>-->
+
+
+        <!--<FORM METHOD="POST"-->
+              <!--ACTION="http://ww8.aitsafe.com/cf/add.cfm">-->
+            <!--<INPUT TYPE="HIDDEN" NAME="userid" VALUE="A9218855">-->
+
+            <!--<INPUT TYPE="HIDDEN" NAME="product" VALUE="Orange V Neck-->
+<!--Cardigan">-->
+            <!--<INPUT TYPE="HIDDEN" NAME="price"-->
+                   <!--VALUE="79.99">-->
+            <!--<b>79.99</b>-->
+
+            <!--<INPUT TYPE="SUBMIT" VALUE="BUY NOW!">-->
+        <!--</FORM>-->
+
+        <!-- link example -->
+        <a href="https://aurza.foxycart.com/cart?name=Cool%20Example&price=10&color=red&code=sku123">Add a red Cool Example</a>
+        <!-- form example -->
+        <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8">
+            <input type="hidden" name="name" value="Cool Example" />
+            <input type="hidden" name="price" value="10" />
+            <input type="hidden" name="code" value="sku123" />
+            <label class="label_left">Size</label>
+            <select name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            <input type="submit" name="Add a Cool Example" value="Add a Cool Example" class="submit" />
+        </form>
+
+        <a href="https://yourdomain.foxycart.com/cart?cart=view" id="fc_minicart">
+            <span id="fc_quantity">0</span>
+            <span id="fc_singular"> item </span>
+            <span id="fc_plural"> items </span> in cart
+        </a>
+    <!--<a class="btn btn-danger design-buttons" href="#/purchase"-->
+       <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
+        <!--Buy this dress</a>-->
     </div>
+
+
+
   </div>
 
 
