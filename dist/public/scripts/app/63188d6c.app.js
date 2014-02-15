@@ -11,17 +11,18 @@ angular.module('panicApp',
       , 'ngSocial'
       ])//, 'analytics', 'ui'
   .config(function ($routeProvider, $locationProvider) {
-//    $locationProvider.html5Mode(true);
-//    $locationProvider.hashPrefix = '!';
+    $locationProvider
+//      .html5Mode(true)
+        .hashPrefix('!');
     $routeProvider
       // Static Page routes
       .when('/', {
-          templateUrl: 'views/silhouettes.html', controller: 'SilhouetteCtrl'
-//        templateUrl: 'views/home.html', controller: 'StaticPageCtrl'
+        templateUrl: 'views/home.html', controller: 'StaticPageCtrl'
+//          templateUrl: 'views/silhouettes.html', controller: 'SilhouetteCtrl'
       })
-            .when('/how-to-help', {
-        templateUrl: 'views/howToHelp.html', controller: 'StaticPageCtrl'
-      })
+//            .when('/how-to-help', {
+//        templateUrl: 'views/howToHelp.html', controller: 'StaticPageCtrl'
+//      })
 //      .when('/fit', {
 //        templateUrl: 'views/fit.html', controller: 'StaticPageCtrl'
 //      })
@@ -39,16 +40,16 @@ angular.module('panicApp',
 //      })
 
 //      Design Build routes
-      .when('/collection', {
-        templateUrl: 'views/dressCollection.html', controller: 'DressCollectionCtrl'
-      })
+//      .when('/collection', {
+//        templateUrl: 'views/dressCollection.html', controller: 'DressCollectionCtrl'
+//      })
 //      .when('/shop/:styleId/:itemId', {
 //        templateUrl: 'views/shopItem.html', controller: 'ShopItemCtrl'
 //      })
 //
-//      .when('/design', {
-//        templateUrl: 'views/silhouettes.html', controller: 'SilhouetteCtrl'
-//      })
+      .when('/design', {
+        templateUrl: 'views/silhouettes.html', controller: 'SilhouetteCtrl'
+      })
 //      .when('/olddesign/:styleId', {
 //        templateUrl: 'views/designBuildDirective.html', controller: 'DesignBuildCtrl'
 //      })
@@ -59,15 +60,15 @@ angular.module('panicApp',
       .when('/design/:styleId', {
         templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
       })
-      .when('/review/:styleId', {
-        templateUrl: 'views/idggPlaceOrder.html', controller: 'NewDesignBuildCtrl'
-      })
+//      .when('/review/:styleId', {
+//        templateUrl: 'views/idggPlaceOrder.html', controller: 'NewDesignBuildCtrl'
+//      })
       .when('/review/:styleId/:designCode', {
         templateUrl: 'views/idggPlaceOrder.html', controller: 'NewDesignBuildCtrl'
       })
-      .when('/design/:styleId/:designCode', {
-        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
-      })
+//      .when('/design/:styleId/:designCode', {
+//        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+//      })
 //      .when('/design/:styleId/:itemId', {
 //        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
 //      })
@@ -76,9 +77,9 @@ angular.module('panicApp',
 //        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
 //      })
 
-      .when('/designAdmin/:styleId', {
-        templateUrl: 'views/designBuildAdmin.html', controller: 'NewDesignBuildCtrl'
-      })
+//      .when('/designAdmin/:styleId', {
+//        templateUrl: 'views/designBuildAdmin.html', controller: 'NewDesignBuildCtrl'
+//      })
 
       // Purchase routes
 //      .when('/purchase', {
@@ -97,7 +98,4 @@ angular.module('panicApp',
       .otherwise({
         redirectTo: '/'
       });
-    $locationProvider
-//      .html5Mode(true)
-      .hashPrefix('!');
   });

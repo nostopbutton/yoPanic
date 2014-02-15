@@ -12,32 +12,20 @@ angular.module('panicApp', [
   '$routeProvider',
   '$locationProvider',
   function ($routeProvider, $locationProvider) {
+    $locationProvider.hashPrefix('!');
     $routeProvider.when('/', {
+      templateUrl: 'views/home.html',
+      controller: 'StaticPageCtrl'
+    }).when('/design', {
       templateUrl: 'views/silhouettes.html',
       controller: 'SilhouetteCtrl'
-    }).when('/how-to-help', {
-      templateUrl: 'views/howToHelp.html',
-      controller: 'StaticPageCtrl'
-    }).when('/collection', {
-      templateUrl: 'views/dressCollection.html',
-      controller: 'DressCollectionCtrl'
     }).when('/design/:styleId', {
       templateUrl: 'views/idggDesignBuild.html',
-      controller: 'NewDesignBuildCtrl'
-    }).when('/review/:styleId', {
-      templateUrl: 'views/idggPlaceOrder.html',
       controller: 'NewDesignBuildCtrl'
     }).when('/review/:styleId/:designCode', {
       templateUrl: 'views/idggPlaceOrder.html',
       controller: 'NewDesignBuildCtrl'
-    }).when('/design/:styleId/:designCode', {
-      templateUrl: 'views/idggDesignBuild.html',
-      controller: 'NewDesignBuildCtrl'
-    }).when('/designAdmin/:styleId', {
-      templateUrl: 'views/designBuildAdmin.html',
-      controller: 'NewDesignBuildCtrl'
     }).otherwise({ redirectTo: '/' });
-    $locationProvider.hashPrefix('!');
   }
 ]);
 (function () {
