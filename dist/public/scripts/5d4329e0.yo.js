@@ -16,6 +16,18 @@ angular.module('panicApp', [
     $routeProvider.when('/', {
       templateUrl: 'views/home.html',
       controller: 'StaticPageCtrl'
+    }).when('/fabrics', {
+      templateUrl: 'views/fabrics.html',
+      controller: 'StaticPageCtrl'
+    }).when('/party', {
+      templateUrl: 'views/party.html',
+      controller: 'StaticPageCtrl'
+    }).when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'StaticPageCtrl'
+    }).when('/collection', {
+      templateUrl: 'views/dressCollection.html',
+      controller: 'DressCollectionCtrl'
     }).when('/design', {
       templateUrl: 'views/silhouettes.html',
       controller: 'SilhouetteCtrl'
@@ -24,6 +36,9 @@ angular.module('panicApp', [
       controller: 'NewDesignBuildCtrl'
     }).when('/review/:styleId/:designCode', {
       templateUrl: 'views/idggPlaceOrder.html',
+      controller: 'NewDesignBuildCtrl'
+    }).when('/design/:styleId/:designCode', {
+      templateUrl: 'views/idggDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
     }).otherwise({ redirectTo: '/' });
   }

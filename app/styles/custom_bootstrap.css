@@ -1,10 +1,9 @@
-/*body { padding-top: 160px;}*/
-body { padding-top: 105px;}
+/* Drop page body down below the header navbar */
+body { padding-top: 150px;}
 
-
-@media (max-width: 1200px) {
-    body { padding-top: 130px;}
-}
+/*@media (max-width: 1000px) {*/
+    /*body { padding-top: 170px;}*/
+/*}*/
 
 @media (max-width: 634px) {
     body { padding-top: 160px;}
@@ -26,8 +25,8 @@ body { padding-top: 105px;}
     *zoom:1; /* hasLayout ie7 trigger */
     vertical-align: top;
     height: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navbar .nav > li {
@@ -45,7 +44,7 @@ body { padding-top: 105px;}
 
 .navbar-inner {
     text-align:center;
-    height: 40px; /* change value here*/
+    height: 45px; /* This define the amount of space taken by the height of top navbar*/
 }
 
 .navbar-nav > li > a {

@@ -26,23 +26,23 @@ angular.module('panicApp',
 //      .when('/fit', {
 //        templateUrl: 'views/fit.html', controller: 'StaticPageCtrl'
 //      })
-//      .when('/fabrics', {
-//        templateUrl: 'views/fabrics.html', controller: 'StaticPageCtrl'
-//      })
-//      .when('/party', {
-//        templateUrl: 'views/party.html', controller: 'StaticPageCtrl'
-//      })
+      .when('/fabrics', {
+        templateUrl: 'views/fabrics.html', controller: 'StaticPageCtrl'
+      })
+      .when('/party', {
+        templateUrl: 'views/party.html', controller: 'StaticPageCtrl'
+      })
 //      .when('/contact', {
 //        templateUrl: 'views/contact.html', controller: 'StaticPageCtrl'
 //      })
-//      .when('/about', {
-//        templateUrl: 'views/about.html', controller: 'StaticPageCtrl'
-//      })
+      .when('/about', {
+        templateUrl: 'views/about.html', controller: 'StaticPageCtrl'
+      })
 
 //      Design Build routes
-//      .when('/collection', {
-//        templateUrl: 'views/dressCollection.html', controller: 'DressCollectionCtrl'
-//      })
+      .when('/collection', {
+        templateUrl: 'views/dressCollection.html', controller: 'DressCollectionCtrl'
+      })
 //      .when('/shop/:styleId/:itemId', {
 //        templateUrl: 'views/shopItem.html', controller: 'ShopItemCtrl'
 //      })
@@ -66,9 +66,9 @@ angular.module('panicApp',
       .when('/review/:styleId/:designCode', {
         templateUrl: 'views/idggPlaceOrder.html', controller: 'NewDesignBuildCtrl'
       })
-//      .when('/design/:styleId/:designCode', {
-//        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
-//      })
+      .when('/design/:styleId/:designCode', {
+        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+      })
 //      .when('/design/:styleId/:itemId', {
 //        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
 //      })
