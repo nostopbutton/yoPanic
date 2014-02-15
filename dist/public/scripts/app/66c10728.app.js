@@ -69,6 +69,13 @@ angular.module('panicApp',
       .when('/design/:styleId/:designCode', {
         templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
       })
+
+        .when('/checkout', {
+            templateUrl: 'views/checkout.html', controller: 'StaticPageCtrl'
+        })
+        .when('/cart', {
+            templateUrl: 'views/cart.html', controller: 'StaticPageCtrl'
+        })
 //      .when('/design/:styleId/:itemId', {
 //        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
 //      })

@@ -40,6 +40,12 @@ angular.module('panicApp', [
     }).when('/design/:styleId/:designCode', {
       templateUrl: 'views/idggDesignBuild.html',
       controller: 'NewDesignBuildCtrl'
+    }).when('/checkout', {
+      templateUrl: 'views/checkout.html',
+      controller: 'StaticPageCtrl'
+    }).when('/cart', {
+      templateUrl: 'views/cart.html',
+      controller: 'StaticPageCtrl'
     }).otherwise({ redirectTo: '/' });
   }
 ]);
