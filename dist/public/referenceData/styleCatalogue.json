@@ -10,8 +10,23 @@
       , "Highlight your striking silhouette with killer heels and contrasting obi belt."]
     , "care": [ "Look after it"
       , "And it will last" ]
-    , "price": 16010
+    , "price": 2000
     , "silhouetteImage": "pat-301-body"
+    , "foxyImage": "pat-301"
+    , "fc_category": "category||f0413cfa2afa3244e16b1d1893e138c9669316c8a3597fb9c34b6ab99826ab54"
+    , "fc_code": "code||2a36651dbfd988e00f18a02e5cbdee7dd867168bb305909c496517204d25ae31"
+    , "fc_name": "name||1ed77a1b465d0eaddf3698675b57a2dc8e68696dfe4cf49c551c0d996627c68d"
+    , "fc_price": "price||4532e694c6ddc3eee9c7e0ee4acc44f217e18c0ff770697b3bd8e3ec63245fc8"
+    , "fc_image": "image||df0c77da9365f3d26c8a2d802c694dfb8eeb89cd5425e9b7e72e1fbf4ea3aeb8||open"
+    , "fc_url": "url||2ab1d7cf48d9afe991ac5769fbb34300fd3280c48e55055251d58f8a24921f8d||open"
+    , "fc_neckline": "neckline||df5b3e809f1583f528a7b49cc219475db6da209ddbe94767b39f705ef9f4d4b1||open"
+    , "fc_sleeves": "sleeves||0a23da813c947351c1edca32042b6d495e21f6f96f35fd907b91480ed64770a9||open"
+    , "fc_skirt": "skirt||15dc71987ad145e53fe8364dc4a6b55f079d3e99f8212abcf5c44a4ed2f977f4||open"
+    , "fc_peplum": "peplum||bc1407ab12dd24e1862c177e9424492dd11fdf11cd0f50a29359992de726f4ab||open"
+    , "fc_rosetta": "rosetta||fb4acd6b327a36b8340ee8b97d25231d441ba0602c703de4f93ed620dd0414eb||open"
+    , "fc_belt": "belt||34062ce199df92f8e205c6b1aaef4c7b7e399b92f185cf1466d89e225928a8ac||open"
+
+
   }
   , {
     "styleId": "swing"
@@ -24,8 +39,21 @@
       , "Perfect with killer heels for a timeless show stopping look."]
     , "care": [ "Look after it"
       , "And it will last" ]
-    , "price": 1600
+    , "price": 2000
     , "silhouetteImage": "pat-304-body"
+    , "foxyImage": "pat-304"
+    , "fc_category": "category||05be67359dd9dfc344935dd39b55945810a66efe99555234f7153ad1084b5f17"
+    , "fc_code": "code||ae669290b7afe449027d32791d0de6ac732125ac615bce0db30c8fd5ea0157cf"
+    , "fc_name": "name||adbb1f7b19be2e806ee7732ecb290dc54205abaf0a02809cb74c1e95c264cb87"
+    , "fc_price": "price||aaad0f9617d3549a8aa950dd152eecae2811078c0806bdec110e201c0dd3ee5b"
+    , "fc_image": "image||80c38c433856f7b1e23fb4ffe6e9819d0a5561266d0b971d5302c3d10c617e6a||open"
+    , "fc_url": "url||95d7696a8bb8f60541a0e5f4651f5960dd3493633203c6039efd8bc2183e9255||open"
+    , "fc_neckline": "neckline||46dfb3a7089aa5ccb84b34ba4d71396faab5c364ed9a8194ad27391727d5119b||open"
+    , "fc_sleeves": "sleeves||f6db1dea6572aa92dd0110b5be09b14bdd093db30ea45b76e58fdbfb2f7c9f86||open"
+    , "fc_skirt": "skirt||e16f8737dad968e1570342368d3cc8868498b0241da6161b08dde7746d2ce270||open"
+    , "fc_peplum": "peplum||2241e7d783d7fb856d5aaf699c7b2862ae09995cb96446bb71aa3f52958c1a36||open"
+    , "fc_rosetta": "rosetta||235a9134b4deb226b7e7b11aa7ce53bbe9e4dd75ccbc465ceb8ff2f331407a6a||open"
+    , "fc_belt": "belt||7af78b54679a3a671c02c4e93523e90c6b4437f4a988ff4e2b056ae06c78c35f||open"
   }
   , {
     "styleId": "flare"
@@ -38,8 +66,21 @@
       , "Perfect with killer heels for a timeless show stopping look." ]
     , "care": [ "Look after it"
       , "And it will last" ]
-  , "price": 1600
+  , "price": 2000
     , "silhouetteImage": "pat-302-body"
+    , "foxyImage": "pat-302"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
   }
   , {
     "styleId": "doloman"
@@ -52,8 +93,21 @@
       , "..." ]
     , "care": [ "Look after it"
       , "And it will last" ]
-    , "price": 1600
+    , "price": 2000
     , "silhouetteImage": "pat-305-body"
+    , "foxyImage": "pat-305"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
   }
   , {
     "styleId": "swoosh"
@@ -68,6 +122,19 @@
       , "And it will last" ]
     , "price": 2000
     , "silhouetteImage": "pat-303-body"
+    , "foxyImage": "pat-303"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
   }
   , {
   "styleId": "shift"
@@ -80,8 +147,21 @@
     , "Perfect with killer heels for a timeless show stopping look." ]
   , "care": [ "Look after it"
     , "And it will last" ]
-  , "price": 2000
+  , "price": 2500
   , "silhouetteImage": "pat-202-body"
+    , "foxyImage": "pat-202"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
 }
   , {
   "styleId": "shirt"
@@ -94,22 +174,48 @@
     , "Perfect with killer heels for a timeless show stopping look." ]
   , "care": [ "Look after it"
     , "And it will last" ]
-  , "price": 2000
+  , "price": 2500
   , "silhouetteImage": "pat-203-body"
+    , "foxyImage": "pat-203"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
 }
   , {
   "styleId": "shirt-maxi"
-  , "type": "maxi"
+  , "type": "silk"
   , "styleName": "Claudia"
-  , "styleFormalName": "Maxi Shirt Dress"
+  , "styleFormalName": "Maxi-Shirt Dress"
   , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
   , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
   , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
     , "Perfect with killer heels for a timeless show stopping look." ]
   , "care": [ "Look after it"
     , "And it will last" ]
-  , "price": 2000
+  , "price": 3000
   , "silhouetteImage": "pat-203maxi-body"
+    , "foxyImage": "pat-203maxi"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
 }
   , {
     "styleId": "skirt-pencil"
@@ -122,8 +228,21 @@
       , "Perfect with killer heels for a timeless show stopping look." ]
     , "care": [ "Look after it"
       , "And it will last" ]
-    , "price": 600
+    , "price": 800
     , "silhouetteImage": "pat-101-body"
+    , "foxyImage": "pat-101"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
   }
   , {
     "styleId": "skirt-swing"
@@ -136,8 +255,21 @@
       , "Perfect with killer heels for a timeless show stopping look." ]
     , "care": [ "Look after it"
       , "And it will last" ]
-    , "price": 600
+    , "price": 800
     , "silhouetteImage": "pat-102-body"
+    , "foxyImage": "pat-102"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
   }
   , {
     "styleId": "skirt-flare"
@@ -150,8 +282,21 @@
       , "Perfect with killer heels for a timeless show stopping look." ]
     , "care": [ "Look after it"
       , "And it will last" ]
-    , "price": 600
+    , "price": 800
     , "silhouetteImage": "pat-103-body"
+    , "foxyImage": "pat-103"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
   }
   , {
   "styleId": "tops"
@@ -166,6 +311,19 @@
     , "And it will last" ]
   , "price": 600
   , "silhouetteImage": "pat-10-body"
+    , "foxyImage": "pat-10"
+    , "fc_category": ""
+    , "fc_code": ""
+    , "fc_name": ""
+    , "fc_price": ""
+    , "fc_image": ""
+    , "fc_url": ""
+    , "fc_neckline": ""
+    , "fc_sleeves": ""
+    , "fc_skirt": ""
+    , "fc_peplum": ""
+    , "fc_rosetta": ""
+    , "fc_belt": ""
 }
 ]
 
