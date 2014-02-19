@@ -223,23 +223,7 @@
               <!--<input type="submit" value="Buy It Now!" />-->
           <!--</form>-->
 
-          <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8" >
-              <!-- https://wiki.foxycart.com/v/1.1/products -->
-              <input type="hidden" name="{{style.fc_category}}" value="{{style.type}}"/>
-              <input type="hidden" name="{{style.fc_code}}" value="{{style.styleId}}" />
-              <input type="hidden" name="{{style.fc_name}}" value="{{style.styleName}} ({{style.styleFormalName}})" />
-              <input type="hidden" name="{{style.fc_price}}" value="{{style.price}}" />
-              <input type="hidden" name="{{style.fc_image}}" value="images/silhouettes/{{style.foxyImage}}.png" />
-              <input type="hidden" name="{{style.fc_url}}" value="#!/review/{{style.styleId}}/{{param(form)}}" />
-              <!-- Custom Product Options -->
-              <input type="hidden" name="{{style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />
-              <input type="hidden" name="{{style.fc_sleeves}}" value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}" />
-              <input type="hidden" name="{{style.fc_skirt}}" value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}" />
-              <input type="hidden" name="{{style.fc_peplum}}" value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}" />
-              <input type="hidden" name="{{style.fc_rosetta}}" value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}" />
-              <input type="hidden" name="{{style.fc_belt}}" value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}" />
-              <input type="submit" value="Buy It Now!" />
-          </form>
+
 
 
 
@@ -268,6 +252,46 @@
             <!--</ul>-->
           <!--</div>-->
         </div>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-3 align-center" style="margin-bottom:10px">
+                <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                   onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">
+                    Reset</a>
+            </div>
+            <div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">
+                <a class="btn btn-default  igg-design-buttons" href="#!/design"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                   onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/different-style']);">
+                    try a different style</a>
+            </div>
+            <div class="col-sm-4 align-center" style="margin-bottom:10px">
+                <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8" >
+                    <!-- https://wiki.foxycart.com/v/1.1/products -->
+                    <input type="hidden" name="{{style.fc_category}}" value="{{style.type}}"/>
+                    <input type="hidden" name="{{style.fc_code}}" value="{{style.styleId}}" />
+                    <input type="hidden" name="{{style.fc_name}}" value="{{style.styleName}} ({{style.styleFormalName}})" />
+                    <input type="hidden" name="{{style.fc_price}}" value="{{style.price}}" />
+                    <input type="hidden" name="{{style.fc_image}}" value="images/silhouettes/{{style.foxyImage}}.png" />
+                    <input type="hidden" name="{{style.fc_url}}" value="#!/review/{{style.styleId}}/{{param(form)}}" />
+                    <!-- Custom Product Options -->
+                    <input type="hidden" name="{{style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />
+                    <input type="hidden" name="{{style.fc_sleeves}}" value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}" />
+                    <input type="hidden" name="{{style.fc_skirt}}" value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}" />
+                    <input type="hidden" name="{{style.fc_peplum}}" value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}" />
+                    <input type="hidden" name="{{style.fc_rosetta}}" value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}" />
+                    <input type="hidden" name="{{style.fc_belt}}" value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}" />
+                    <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
+                           style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                           onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/send']);"/>
+                </form>
+                <!--<div review-link design="param(form)" sil="style"/>-->
+
+
+            </div>
+        </div>
+
 
         <!--<div class="row">-->
           <!--<div class="col-sm-4 align-left">-->
@@ -313,27 +337,7 @@
 <!--<pre>form={{form}}</pre>-->
 <!--<div design-link design="param(form)" sil="style"/>-->
 
-<div class="row">
-  <div class="col-md-5 col-sm-3 align-center" style="margin-bottom:10px">
-      <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
-         style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-         onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">
-        Reset design</a>
-  </div>
-  <div class="col-md-3 col-sm-5 align-center" style="margin-bottom:10px">
-    <a class="btn btn-default  igg-design-buttons" href="#!/"
-       style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-       onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/different-style']);">
-      try a different style</a>
-  </div>
-  <div class="col-sm-4 align-center" style="margin-bottom:10px">
-    <!--<a class="btn btn-danger igg-design-buttons" href="#!/review/{{style.styleId}}/{$.param(design)}'"-->
-       <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"-->
-       <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/send']);">-->
-      <!--Send us your design</a>-->
-    <div review-link design="param(form)" sil="style"/>
-  </div>
-</div>
+
 
 <div class="row" id="debug_view">
 

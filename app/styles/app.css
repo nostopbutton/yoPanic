@@ -228,17 +228,6 @@ table tr a {
     font-size: 12px;
 }
 
-.logo {
-    /*font-family: 'Aclonica', sans-serif;*/
-    font-family: 'Krona One', sans-serif;
-    font-size: 30px;
-    display: block;
-    /*padding-top: 10px;*/
-    /*padding-bottom: 10px;*/
-}
-.logo.custom {
-    font-family: 'Nothing You Could Do', cursive;
-}
 
 .teal-headers {
     font-family: 'Krona One', sans-serif;
@@ -457,4 +446,33 @@ ol.carousel-indicators li.active:before{
     /*text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);*/
     /*display: inline-block;*/
     /*-webkit-transition: all 0.2s ease-out*/
+/*}*/
+
+/* http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements*/
+header {
+    text-align: center;
+}
+
+header div {
+    vertical-align: top
+}
+
+header a:link,    /* unvisited link */
+header a:visited {font-size: 14px; color:#d95657;text-decoration:none;}  /* visited link */
+header a:hover {color:#d95657;text-decoration:underline;}  /* mouse over link */
+
+.cart {
+    text-align:right;
+    margin-top: 10px;
+}
+
+.logo img{
+    margin-top: -25px;
+    margin-bottom: 10px;
+    /*display: block;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+}
+/*.logo.custom {*/
+    /*font-family: 'Nothing You Could Do', cursive;*/
 /*}*/
