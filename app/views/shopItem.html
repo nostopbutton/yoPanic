@@ -14,7 +14,7 @@
       <div class="container">
         <div class="row dress">
           <img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"
-               ng-src="images/dresses/{{item.img}}.png" class="">
+               ng-src="images/items/{{item.img}}.png" class="">
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
                           <input type="hidden" name="{{style.fc_code}}" value="{{style.styleId}}" />
                           <input type="hidden" name="{{style.fc_name}}" value="{{style.styleName}} ({{style.styleFormalName}})" />
                           <input type="hidden" name="{{style.fc_price}}" value="{{style.price}}" />
-                          <input type="hidden" name="{{style.fc_image}}" value="images/dresses/{{item.img}}.png" />
+                          <input type="hidden" name="{{style.fc_image}}" value="images/items/{{item.img}}.png" />
                           <input type="hidden" name="{{style.fc_url}}" value="#!/shop/{{style.styleId}}/{{item.itemId}}" />
                           <!-- Custom Product Options -->
                           <input type="hidden" name="{{style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />

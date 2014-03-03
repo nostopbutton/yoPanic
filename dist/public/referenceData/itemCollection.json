@@ -4,7 +4,7 @@
     , "catId": "dress"
     , "name": "COCO"
     , "shortDesc": "Sheath dress - Red"
-    , "img": "01 - Coco/sheath-red"
+    , "img": "sheath-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 1500
     , "sizes": [10,12,14,16,18]
@@ -29,7 +29,7 @@
     , "catId": "dress"
     , "name": "COCO"
     , "shortDesc": "Sheath dress - Black"
-    , "img": "01 - Coco/sheath-black"
+    , "img": "sheath-black"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -54,7 +54,7 @@
     , "catId": "dress"
     , "name": "COCO"
     , "shortDesc": "Sheath dress - Teal"
-    , "img": "01 - Coco/sheath-teal"
+    , "img": "sheath-teal"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -79,7 +79,7 @@
     , "catId": "dress"
     , "name": "COCO"
     , "shortDesc": "Sheath dress - Blue"
-    , "img": "01 - Coco/sheath-blue"
+    , "img": "sheath-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -104,7 +104,7 @@
     , "catId": "dress"
     , "name": "COCO"
     , "shortDesc": "Sheath dress - Aubergine"
-    , "img": "01 - Coco/sheath-aubergine"
+    , "img": "sheath-aubergine"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -155,7 +155,7 @@
     , "silId": "swing"
     , "name": "AUDREY"
     , "shortDesc": "Swing dress - Teal"
-    , "img": "02 - Audrey/swing-teal"
+    , "img": "swing-teal"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -180,7 +180,7 @@
     , "silId": "swing"
     , "name": "AUDREY"
     , "shortDesc": "Swing dress - Black"
-    , "img": "02 - Audrey/swing-black"
+    , "img": "swing-black"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -205,7 +205,7 @@
     , "silId": "swing"
     , "name": "AUDREY"
     , "shortDesc": "Swing dress - Mix"
-    , "img": "02 - Audrey/swing-mixed"
+    , "img": "swing-mixed"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -230,7 +230,7 @@
     , "silId": "swing"
     , "name": "AUDREY"
     , "shortDesc": "Swing dress - Red"
-    , "img": "02 - Audrey/swing-red"
+    , "img": "swing-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -255,7 +255,7 @@
     , "silId": "flare"
     , "name": "ALEXA"
     , "shortDesc": "Flare dress - Black"
-    , "img": "03 - Alexa/flare-black"
+    , "img": "flare-black"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -280,7 +280,7 @@
     , "silId": "flare"
     , "name": "ALEXA"
     , "shortDesc": "Flare dress - Teal"
-    , "img": "03 - Alexa/flare-teal"
+    , "img": "flare-teal"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -305,7 +305,7 @@
     , "silId": "doloman"
     , "name": "CHRISTINA"
     , "shortDesc": "Doloman - Black"
-    , "img": "04 - Christina/doloman-black"
+    , "img": "doloman-black"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -330,7 +330,7 @@
     , "silId": "doloman"
     , "name": "CHRISTINA"
     , "shortDesc": "Doloman - Aubergine"
-    , "img": "04 - Christina/doloman-aubergine"
+    , "img": "doloman-aubergine"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -355,7 +355,7 @@
     , "silId": "doloman"
     , "name": "CHRISTINA"
     , "shortDesc": "Doloman - Blue"
-    , "img": "04 - Christina/doloman-blue"
+    , "img": "doloman-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -380,7 +380,7 @@
     , "silId": "doloman"
     , "name": "CHRISTINA"
     , "shortDesc": "Doloman - Mixed"
-    , "img": "04 - Christina/doloman-mixed"
+    , "img": "doloman-mixed"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -405,7 +405,7 @@
     , "silId": "doloman"
     , "name": "CHRISTINA"
     , "shortDesc": "Doloman - Red"
-    , "img": "04 - Christina/doloman-red"
+    , "img": "doloman-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -430,7 +430,7 @@
     , "silId": "doloman"
     , "name": "CHRISTINA"
     , "shortDesc": "Doloman - Teal"
-    , "img": "04 - Christina/doloman-teal"
+    , "img": "doloman-teal"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -455,7 +455,7 @@
     , "silId": "swoosh"
     , "name": "KATE"
     , "shortDesc": "Swoosh - Long - Aubergine"
-    , "img": "05 - Kate/swoosh-long-aubergine"
+    , "img": "swoosh-long-aubergine"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -480,7 +480,7 @@
     , "silId": "swoosh"
     , "name": "KATE"
     , "shortDesc": "Swoosh - Long - Blue"
-    , "img": "05 - Kate/swoosh-long-blue"
+    , "img": "swoosh-long-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -505,7 +505,7 @@
     , "silId": "swoosh"
     , "name": "KATE"
     , "shortDesc": "Swoosh - Long - Red"
-    , "img": "05 - Kate/swoosh-long-red"
+    , "img": "swoosh-long-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -530,7 +530,7 @@
     , "silId": "swoosh"
     , "name": "KATE"
     , "shortDesc": "Swoosh - Medium - Blue"
-    , "img": "05 - Kate/swoosh-med-blue"
+    , "img": "swoosh-med-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -555,7 +555,7 @@
     , "silId": "swoosh"
     , "name": "KATE"
     , "shortDesc": "Swoosh - Medium - Black"
-    , "img": "05 - Kate/swoosh-med-black"
+    , "img": "swoosh-med-black"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -580,7 +580,7 @@
     , "silId": "swoosh"
     , "name": "KATE"
     , "shortDesc": "Swoosh - Short - teal"
-    , "img": "05 - Kate/swoosh-short-teal"
+    , "img": "swoosh-short-teal"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -605,7 +605,7 @@
     , "silId": "shift"
     , "name": "EDDIE"
     , "shortDesc": "Shift - Blue"
-    , "img": "06 - Eddie/shift-blue"
+    , "img": "shift-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -630,7 +630,7 @@
     , "silId": "shift"
     , "name": "EDDIE"
     , "shortDesc": "Shift - fuscia"
-    , "img": "06 - Eddie/shift-fuscia"
+    , "img": "shift-fuscia"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -655,7 +655,7 @@
     , "silId": "shift"
     , "name": "EDDIE"
     , "shortDesc": "Shift - Jade"
-    , "img": "06 - Eddie/shift-jade"
+    , "img": "shift-jade"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -680,7 +680,7 @@
     , "silId": "shift"
     , "name": "EDDIE"
     , "shortDesc": "Shift - Red"
-    , "img": "06 - Eddie/shift-red"
+    , "img": "shift-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -705,7 +705,7 @@
     , "silId": "shift"
     , "name": "EDDIE"
     , "shortDesc": "Shift - Mix"
-    , "img": "06 - Eddie/shift-mix1"
+    , "img": "shift-mix1"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -730,7 +730,7 @@
     , "silId": "shift"
     , "name": "EDDIE"
     , "shortDesc": "Shift - Mix"
-    , "img": "06 - Eddie/shift-mix2"
+    , "img": "shift-mix2"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -755,7 +755,7 @@
     , "silId": "shirt"
     , "name": "ELLE"
     , "shortDesc": "Shirt - Blue"
-    , "img": "07 - Elle/shirt-blue"
+    , "img": "shirt-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -780,7 +780,7 @@
     , "silId": "shirt"
     , "name": "ELLE"
     , "shortDesc": "Shirt - Fuscia"
-    , "img": "07 - Elle/shirt-fuscia"
+    , "img": "shirt-fuscia"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -805,7 +805,7 @@
     , "silId": "shirt"
     , "name": "ELLE"
     , "shortDesc": "Shirt - Jade"
-    , "img": "07 - Elle/shirt-jade"
+    , "img": "shirt-jade"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -830,7 +830,7 @@
     , "silId": "shirt"
     , "name": "ELLE"
     , "shortDesc": "Shirt - Red"
-    , "img": "07 - Elle/shirt-red"
+    , "img": "shirt-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -855,7 +855,7 @@
     , "silId": "maxi-shirt"
     , "name": "CLAUDIA"
     , "shortDesc": "Maxi-Shirt - Blue"
-    , "img": "08 - Claudia/shirt-maxi-blue"
+    , "img": "shirt-maxi-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -880,7 +880,7 @@
     , "silId": "maxi-shirt"
     , "name": "CLAUDIA"
     , "shortDesc": "Shirt - Fuscia"
-    , "img": "08 - Claudia/shirt-maxi-fuscia"
+    , "img": "shirt-maxi-fuscia"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -905,7 +905,7 @@
     , "silId": "maxi-shirt"
     , "name": "CLAUDIA"
     , "shortDesc": "Shirt - Jade"
-    , "img": "08 - Claudia/shirt-maxi-jade"
+    , "img": "shirt-maxi-jade"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -930,7 +930,7 @@
     , "silId": "maxi-shirt"
     , "name": "CLAUDIA"
     , "shortDesc": "Shirt - Red"
-    , "img": "08 - Claudia/shirt-maxi-red"
+    , "img": "shirt-maxi-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
