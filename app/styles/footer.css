@@ -10,53 +10,27 @@
     color: #eee;
 }
 
-#footer .glyphicon {
-    font-size:24px;
-    vertical-align:middle;
-}
-
-#footer .contact {
-    height:40px;
-    /*line-height: 50px;*/
-    /*text-align: center;*/
-    /*font-family:"Times New Roman", Times, serif;*/
-    /*font-style:italic;*/
-    color: #eee;
-    margin-top:10px;
-    margin-bottom: 5px;
-}
-
-#footer .contact > .small {
-    /*color: #888;*/
-    /*font-size:20px;*/
-    vertical-align:middle;
-    /*margin: 0px;*/
-}
-
-#footer .contact > .large{
-    font-size:36px;
-    vertical-align:middle;
-}
-
-/*#footer {*/
-    /*min-height: 260px;*/
-    /*margin-top: 140px;*/
-    /*background-color: #252528;*/
-    /*color: #fff;*/
-    /*padding-top: 35px;*/
+/*#footer .glyphicon {*/
+    /*font-size:14px;*/
+    /*vertical-align:middle;*/
 /*}*/
-/*#footer .footer_header {*/
-    /*color: rgb(196, 196, 196);*/
-    /*font-style: italic;*/
-    /*font-weight: 300;*/
-    /*font-size: 25px;*/
-    /*margin-bottom: 40px;*/
-    /*margin-left: 15px;*/
+
+/*#footer .contact {*/
+    /*height:40px;*/
+    /*color: #eee;*/
+    /*margin-top:10px;*/
+    /*margin-bottom: 5px;*/
 /*}*/
-/*#footer .credits {*/
-    /*border-top: 1px solid #343437;*/
-    /*padding: 10px 0px 60px 0px;*/
+
+/*#footer .contact > .small {*/
+    /*vertical-align:middle;*/
 /*}*/
+
+/*#footer .contact > .large{*/
+    /*font-size:36px;*/
+    /*vertical-align:middle;*/
+/*}*/
+
 
 #footer .social {
     margin-top: 0px;
@@ -79,34 +53,6 @@
     width: 33px;
     height: 33px;
 }
-#footer .social span.ico1,
-#footer .social span.ico1h{
-    background-position: 0px 0px;
-}
-#footer .social span.ico2,
-#footer .social span.ico2h{
-    background-position: -37px 0px;
-}
-#footer .social span.ico3,
-#footer .social span.ico3h{
-    background-position: -75px 0px;
-}
-#footer .social span.ico4,
-#footer .social span.ico4h{
-    background-position: -112px -1px;
-}
-#footer .social span.ico5,
-#footer .social span.ico5h{
-    background-position: -151px 0px;
-}
-#footer .social span.ico6,
-#footer .social span.ico6h{
-    background-position: -188px -1px;
-}
-#footer .social span.ico7,
-#footer .social span.ico7h{
-    background-position: -226px 0px;
-}
 #footer .social a:hover span.socialicons{
     display: none;
 }
@@ -115,22 +61,6 @@
 }
 #footer .social span.socialicons_h{
     display: none;
-}
-.socialicons{
-    background: url('../images/socialicons_h.png') no-repeat;
-    width: 265px;
-    height: 36px;
-}
-.socialicons_h{
-    background: url('../images/socialicons_h.png') no-repeat;
-    width: 265px;
-    height: 36px;
-}
-
-.social_icon{
-    background: url("../images/socialicons.png") no-repeat;
-    width: 110px;
-    height: 18px;
 }
 #email-signup{
     border-right-style: solid;

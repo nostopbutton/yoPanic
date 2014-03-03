@@ -38,15 +38,20 @@ angular.module('panicApp',
       .when('/about', {
         templateUrl: 'views/about.html', controller: 'StaticPageCtrl'
       })
-
+    .when('/terms', {
+        templateUrl: 'views/terms.html', controller: 'StaticPageCtrl'
+    })
+    .when('/privacy', {
+        templateUrl: 'views/privacy.html', controller: 'StaticPageCtrl'
+    })
 //      Design Build routes
       .when('/collection', {
         templateUrl: 'views/dressCollection.html', controller: 'DressCollectionCtrl'
       })
-//      .when('/shop/:styleId/:itemId', {
-//        templateUrl: 'views/shopItem.html', controller: 'ShopItemCtrl'
-//      })
-//
+      .when('/shop/:styleId/:itemId', {
+        templateUrl: 'views/shopItem.html', controller: 'ShopItemCtrl'
+      })
+
       .when('/design', {
         templateUrl: 'views/silhouettes.html', controller: 'SilhouetteCtrl'
       })
@@ -88,10 +93,10 @@ angular.module('panicApp',
 //        templateUrl: 'views/designBuildAdmin.html', controller: 'NewDesignBuildCtrl'
 //      })
 
-      // Purchase routes
-//      .when('/purchase', {
-//        templateUrl: 'views/sizing.html', controller: 'StaticPageCtrl'
-//      })
+//      Purchase routes
+      .when('/purchase', {
+        templateUrl: 'views/sizing.html', controller: 'StaticPageCtrl'
+      })
 
       // Admin Page routes
 //      .when('/adminCollection', {

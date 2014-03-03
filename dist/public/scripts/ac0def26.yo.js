@@ -25,9 +25,18 @@ angular.module('panicApp', [
     }).when('/about', {
       templateUrl: 'views/about.html',
       controller: 'StaticPageCtrl'
+    }).when('/terms', {
+      templateUrl: 'views/terms.html',
+      controller: 'StaticPageCtrl'
+    }).when('/privacy', {
+      templateUrl: 'views/privacy.html',
+      controller: 'StaticPageCtrl'
     }).when('/collection', {
       templateUrl: 'views/dressCollection.html',
       controller: 'DressCollectionCtrl'
+    }).when('/shop/:styleId/:itemId', {
+      templateUrl: 'views/shopItem.html',
+      controller: 'ShopItemCtrl'
     }).when('/design', {
       templateUrl: 'views/silhouettes.html',
       controller: 'SilhouetteCtrl'
@@ -45,6 +54,9 @@ angular.module('panicApp', [
       controller: 'StaticPageCtrl'
     }).when('/cart', {
       templateUrl: 'views/cart.html',
+      controller: 'StaticPageCtrl'
+    }).when('/purchase', {
+      templateUrl: 'views/sizing.html',
       controller: 'StaticPageCtrl'
     }).otherwise({ redirectTo: '/' });
   }
@@ -688,29 +700,54 @@ angular.module('panicApp.Controllers').controller('DressCollectionCtrl', [
     var silhouettes_reset, types_reset;
     silhouettes_reset = [
       {
-        id: 'swoosh',
-        label: 'SHIFT (Twiggy)',
-        checked: true
-      },
-      {
         id: 'sheath',
-        label: 'SHEATH (Christina)',
+        label: 'COCO (Sheath)',
         checked: true
       },
       {
         id: 'swing',
-        label: 'SWING (Audrey)',
+        label: 'AUDREY (Swing)',
+        checked: true
+      },
+      {
+        id: 'flare',
+        label: 'ALEXA (Flare)',
+        checked: true
+      },
+      {
+        id: 'doloman',
+        label: 'CHRISTINA (Doloman)',
+        checked: true
+      },
+      {
+        id: 'swoosh',
+        label: 'KATE (Swoosh)',
+        checked: true
+      },
+      {
+        id: 'shift',
+        label: 'EDDIE (Shift)',
+        checked: true
+      },
+      {
+        id: 'shirt',
+        label: 'ELLE (Shirt)',
+        checked: true
+      },
+      {
+        id: 'maxi-shirt',
+        label: 'CLAUDIA (Maxi-shirt)',
         checked: true
       }
     ];
     types_reset = [
       {
-        id: 'dresses',
+        id: 'dress',
         label: 'Dress',
         checked: true
       },
       {
-        id: 'skirts',
+        id: 'skirt',
         label: 'Skirt',
         checked: true
       }

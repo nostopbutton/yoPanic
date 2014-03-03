@@ -14,14 +14,19 @@ angular.module('panicApp.Controllers')
       var silhouettes_reset, types_reset;
 
       silhouettes_reset = [
-        { id: 'swoosh', label: 'SHIFT (Twiggy)',   checked: true },
-        { id: 'sheath', label:'SHEATH (Christina)',   checked: true },
-        { id: 'swing', label: 'SWING (Audrey)',   checked: true }
+        { id: 'sheath', label:'COCO (Sheath)',   checked: true },
+        { id: 'swing', label: 'AUDREY (Swing)',   checked: true },
+        { id: 'flare', label: 'ALEXA (Flare)',   checked: true },
+          { id: 'doloman', label: 'CHRISTINA (Doloman)',   checked: true },
+          { id: 'swoosh', label: 'KATE (Swoosh)',   checked: true },
+          { id: 'shift', label: 'EDDIE (Shift)',   checked: true },
+          { id: 'shirt', label: 'ELLE (Shirt)',   checked: true },
+          { id: 'maxi-shirt', label: 'CLAUDIA (Maxi-shirt)',   checked: true }
       ];
 
         types_reset = [
-        { id: 'dresses', label: 'Dress',   checked: true },
-        { id: 'skirts', label:'Skirt',   checked: true }
+        { id: 'dress', label: 'Dress',   checked: true },
+        { id: 'skirt', label:'Skirt',   checked: true }
       ];
 
       $scope.search = function (item){

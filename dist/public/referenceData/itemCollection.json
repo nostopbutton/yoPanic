@@ -1,14 +1,14 @@
 [
   {
     "itemId": "sh-1"
-    , "catId": "dresses"
-    , "silId": "swoosh"
-    , "name": "SELMA"
-    , "shortDesc": "Swoosh dress - Red"
-    , "img": "sheath"
+    , "catId": "dress"
+    , "name": "COCO"
+    , "shortDesc": "Sheath dress - Red"
+    , "img": "01 - Coco/sheath-red"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 1500
     , "sizes": [10,12,14,16,18]
+    , "silId": "sheath"
     , "design": {
           "design": {
             "neckline":   {"type": "nek", "id": "009", "fabric": "003"}
@@ -26,14 +26,14 @@
   }
   , {
     "itemId": "sh-2"
-    , "catId": "dresses"
-    , "silId": "sheath"
-    , "name": "CHRISTINA"
-    , "shortDesc": "Evening Sheath Dress - Emerald"
-    , "img": "eveningsheath"
+    , "catId": "dress"
+    , "name": "COCO"
+    , "shortDesc": "Sheath dress - Black"
+    , "img": "01 - Coco/sheath-black"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
+    , "silId": "sheath"
     , "design": {
         "design": {
           "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
@@ -50,11 +50,86 @@
       }
     }
     , {
+    "itemId": "sh-3"
+    , "catId": "dress"
+    , "name": "COCO"
+    , "shortDesc": "Sheath dress - Teal"
+    , "img": "01 - Coco/sheath-teal"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "silId": "sheath"
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "sh-4"
+    , "catId": "dress"
+    , "name": "COCO"
+    , "shortDesc": "Sheath dress - Blue"
+    , "img": "01 - Coco/sheath-blue"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "silId": "sheath"
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "sh-5"
+    , "catId": "dress"
+    , "name": "COCO"
+    , "shortDesc": "Sheath dress - Aubergine"
+    , "img": "01 - Coco/sheath-aubergine"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "silId": "sheath"
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
       "itemId": "sw-1"
-      , "catId": "dresses"
+      , "catId": "dress"
       , "silId": "swing"
       , "name": "AUDREY"
-      , "shortDesc": "Swing dress- Violet"
+      , "shortDesc": "Swing dress - Blue"
       , "img": "swing"
       , "desc": "It's lovely, you know it is... dah dha"
       , "price": 999
@@ -74,38 +149,163 @@
         }
       }
     }
-    ,  {
-    "itemId": "sh-1"
-    , "catId": "skirts"
-    , "silId": "swoosh"
-    , "name": "SELMA"
-    , "shortDesc": "Swoosh (skirt only) - Red"
-    , "img": "sheath"
+    , {
+    "itemId": "sw-2"
+    , "catId": "dress"
+    , "silId": "swing"
+    , "name": "AUDREY"
+    , "shortDesc": "Swing dress - Teal"
+    , "img": "02 - Audrey/swing-teal"
     , "desc": "It's lovely, you know it is... dah dha"
-    , "price": 1500
+    , "price": 999
     , "sizes": [10,12,14,16,18]
     , "design": {
-      "design": {
-        "neckline":   {"type": "nek", "id": "009", "fabric": "003"}
-        , "skirt":    {"type": "skt", "id": "030", "fabric": "003", "trim": ""}
-        , "sleeves":  {"type": "slv", "id": "001", "fabric": "003"}
-      }
-      , "belt": {
-        "belt":     {"type": "blt", "id": "002", "fabric": ""}
-      }
-      , "extras": {
-        "peplum": {"type": "ext", "id": "000", "fabric": "003"}
-        , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
-      }
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
     }
-  }
+}
     , {
-    "itemId": "sh-2"
-    , "catId": "skirts"
-    , "silId": "sheath"
+    "itemId": "sw-3"
+    , "catId": "dress"
+    , "silId": "swing"
+    , "name": "AUDREY"
+    , "shortDesc": "Swing dress - Black"
+    , "img": "02 - Audrey/swing-black"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sw-4"
+    , "catId": "dress"
+    , "silId": "swing"
+    , "name": "AUDREY"
+    , "shortDesc": "Swing dress - Mix"
+    , "img": "02 - Audrey/swing-mixed"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sw-5"
+    , "catId": "dress"
+    , "silId": "swing"
+    , "name": "AUDREY"
+    , "shortDesc": "Swing dress - Red"
+    , "img": "02 - Audrey/swing-red"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "fl-1"
+    , "catId": "dress"
+    , "silId": "flare"
+    , "name": "ALEXA"
+    , "shortDesc": "Flare dress - Black"
+    , "img": "03 - Alexa/flare-black"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "fl-2"
+    , "catId": "dress"
+    , "silId": "flare"
+    , "name": "ALEXA"
+    , "shortDesc": "Flare dress - Teal"
+    , "img": "03 - Alexa/flare-teal"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "do-1"
+    , "catId": "dress"
+    , "silId": "doloman"
     , "name": "CHRISTINA"
-    , "shortDesc": "Sheath (skirt only)"
-    , "img": "eveningsheath"
+    , "shortDesc": "Doloman - Black"
+    , "img": "04 - Christina/doloman-black"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 2500
     , "sizes": [10,12,14,16,18]
@@ -125,12 +325,287 @@
     }
   }
     , {
-    "itemId": "sw-1"
-    , "catId": "skirts"
-    , "silId": "swing"
-    , "name": "AUDREY"
-    , "shortDesc": "Swing (skirt only)- Violet"
-    , "img": "swing"
+    "itemId": "do-2"
+    , "catId": "dress"
+    , "silId": "doloman"
+    , "name": "CHRISTINA"
+    , "shortDesc": "Doloman - Aubergine"
+    , "img": "04 - Christina/doloman-aubergine"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "do-3"
+    , "catId": "dress"
+    , "silId": "doloman"
+    , "name": "CHRISTINA"
+    , "shortDesc": "Doloman - Blue"
+    , "img": "04 - Christina/doloman-blue"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "do-4"
+    , "catId": "dress"
+    , "silId": "doloman"
+    , "name": "CHRISTINA"
+    , "shortDesc": "Doloman - Mixed"
+    , "img": "04 - Christina/doloman-mixed"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "do-5"
+    , "catId": "dress"
+    , "silId": "doloman"
+    , "name": "CHRISTINA"
+    , "shortDesc": "Doloman - Red"
+    , "img": "04 - Christina/doloman-red"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "do-6"
+    , "catId": "dress"
+    , "silId": "doloman"
+    , "name": "CHRISTINA"
+    , "shortDesc": "Doloman - Teal"
+    , "img": "04 - Christina/doloman-teal"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "swo-1"
+    , "catId": "dress"
+    , "silId": "swoosh"
+    , "name": "KATE"
+    , "shortDesc": "Swoosh - Long - Aubergine"
+    , "img": "05 - Kate/swoosh-long-aubergine"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "swo-2"
+    , "catId": "dress"
+    , "silId": "swoosh"
+    , "name": "KATE"
+    , "shortDesc": "Swoosh - Long - Blue"
+    , "img": "05 - Kate/swoosh-long-blue"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "swo-3"
+    , "catId": "dress"
+    , "silId": "swoosh"
+    , "name": "KATE"
+    , "shortDesc": "Swoosh - Long - Red"
+    , "img": "05 - Kate/swoosh-long-red"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "swo-4"
+    , "catId": "dress"
+    , "silId": "swoosh"
+    , "name": "KATE"
+    , "shortDesc": "Swoosh - Medium - Blue"
+    , "img": "05 - Kate/swoosh-med-blue"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "swo-5"
+    , "catId": "dress"
+    , "silId": "swoosh"
+    , "name": "KATE"
+    , "shortDesc": "Swoosh - Medium - Black"
+    , "img": "05 - Kate/swoosh-med-black"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "swo-3"
+    , "catId": "dress"
+    , "silId": "swoosh"
+    , "name": "KATE"
+    , "shortDesc": "Swoosh - Short - teal"
+    , "img": "05 - Kate/swoosh-short-teal"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 2500
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "009", "fabric": "010"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "010", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "010"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "004", "fabric": "121"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "000", "fabric": "011"}
+        }
+    }
+}
+    , {
+    "itemId": "sft-1"
+    , "catId": "dress"
+    , "silId": "shift"
+    , "name": "EDDIE"
+    , "shortDesc": "Shift - Blue"
+    , "img": "06 - Eddie/shift-blue"
     , "desc": "It's lovely, you know it is... dah dha"
     , "price": 999
     , "sizes": [10,12,14,16,18]
@@ -149,4 +624,329 @@
       }
     }
   }
+    , {
+    "itemId": "sft-2"
+    , "catId": "dress"
+    , "silId": "shift"
+    , "name": "EDDIE"
+    , "shortDesc": "Shift - fuscia"
+    , "img": "06 - Eddie/shift-fuscia"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sft-3"
+    , "catId": "dress"
+    , "silId": "shift"
+    , "name": "EDDIE"
+    , "shortDesc": "Shift - Jade"
+    , "img": "06 - Eddie/shift-jade"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sft-4"
+    , "catId": "dress"
+    , "silId": "shift"
+    , "name": "EDDIE"
+    , "shortDesc": "Shift - Red"
+    , "img": "06 - Eddie/shift-red"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sft-5"
+    , "catId": "dress"
+    , "silId": "shift"
+    , "name": "EDDIE"
+    , "shortDesc": "Shift - Mix"
+    , "img": "06 - Eddie/shift-mix1"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sft-6"
+    , "catId": "dress"
+    , "silId": "shift"
+    , "name": "EDDIE"
+    , "shortDesc": "Shift - Mix"
+    , "img": "06 - Eddie/shift-mix2"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sht-1"
+    , "catId": "dress"
+    , "silId": "shirt"
+    , "name": "ELLE"
+    , "shortDesc": "Shirt - Blue"
+    , "img": "07 - Elle/shirt-blue"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sht-2"
+    , "catId": "dress"
+    , "silId": "shirt"
+    , "name": "ELLE"
+    , "shortDesc": "Shirt - Fuscia"
+    , "img": "07 - Elle/shirt-fuscia"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sht-3"
+    , "catId": "dress"
+    , "silId": "shirt"
+    , "name": "ELLE"
+    , "shortDesc": "Shirt - Jade"
+    , "img": "07 - Elle/shirt-jade"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "sht-4"
+    , "catId": "dress"
+    , "silId": "shirt"
+    , "name": "ELLE"
+    , "shortDesc": "Shirt - Red"
+    , "img": "07 - Elle/shirt-red"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "msht-1"
+    , "catId": "dress"
+    , "silId": "maxi-shirt"
+    , "name": "CLAUDIA"
+    , "shortDesc": "Maxi-Shirt - Blue"
+    , "img": "08 - Claudia/shirt-maxi-blue"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "msht-2"
+    , "catId": "dress"
+    , "silId": "maxi-shirt"
+    , "name": "CLAUDIA"
+    , "shortDesc": "Shirt - Fuscia"
+    , "img": "08 - Claudia/shirt-maxi-fuscia"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "msht-3"
+    , "catId": "dress"
+    , "silId": "maxi-shirt"
+    , "name": "CLAUDIA"
+    , "shortDesc": "Shirt - Jade"
+    , "img": "08 - Claudia/shirt-maxi-jade"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
+    , {
+    "itemId": "msht-4"
+    , "catId": "dress"
+    , "silId": "maxi-shirt"
+    , "name": "CLAUDIA"
+    , "shortDesc": "Shirt - Red"
+    , "img": "08 - Claudia/shirt-maxi-red"
+    , "desc": "It's lovely, you know it is... dah dha"
+    , "price": 999
+    , "sizes": [10,12,14,16,18]
+    , "design": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "002", "fabric": "005"}
+            , "skirt":    {"type": "skt", "id": "030", "fabric": "005", "trim": ""}
+            , "sleeves":  {"type": "slv", "id": "001", "fabric": "005"}
+        }
+        , "belt": {
+            "belt":     {"type": "blt", "id": "002", "fabric": "004"}
+        }
+        , "extras": {
+            "peplum": {"type": "ext", "id": "000", "fabric": "003"}
+            , "rosetta": {"type": "ext", "id": "003", "fabric": "004"}
+        }
+    }
+}
 ]

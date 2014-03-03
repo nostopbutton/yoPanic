@@ -464,10 +464,11 @@ header a:hover {color:#d95657;text-decoration:underline;}  /* mouse over link */
 .cart {
     text-align:right;
     margin-top: 10px;
+    margin-bottom: -30px;
 }
 
 .logo img{
-    margin-top: -25px;
+    /*margin-top: -25px;*/
     margin-bottom: 10px;
     /*display: block;*/
     /*padding-top: 10px;*/
