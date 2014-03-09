@@ -457,15 +457,21 @@ header div {
     vertical-align: top
 }
 
-header a:link,    /* unvisited link */
-header a:visited {font-size: 14px; color:#d95657;text-decoration:none;}  /* visited link */
-header a:hover {color:#d95657;text-decoration:underline;}  /* mouse over link */
+/*header a:link,    *//* unvisited link */
+/*header a:visited {font-size: 14px; color:#d95657;text-decoration:none;}  *//* visited link */
+/*header a:hover {color:#d95657;text-decoration:underline;}  *//* mouse over link */
 
 .cart {
     text-align:right;
     margin-top: 10px;
     margin-bottom: -30px;
+    padding-right: 50px;
+    font-family:'Lucida Grande', Helvetica, Arial, Verdana, sans-serif;
 }
+
+.cart a:link,    /* unvisited link */
+.cart a:visited
+{font-size: 14px; color:#d14395; text-decoration:none;}  /* visited link */
 
 .logo img{
     /*margin-top: -25px;*/

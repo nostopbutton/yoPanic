@@ -11,6 +11,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 2000
+      , "dressSizes": [10,12,14,16,18]
     , "silhouetteImage": "pat-301-body"
     , "foxyImage": "pat-301"
     , "fc_category": "category||f0413cfa2afa3244e16b1d1893e138c9669316c8a3597fb9c34b6ab99826ab54"

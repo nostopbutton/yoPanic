@@ -1,124 +1,134 @@
 <div id="shopItemView" class="container">
 
-  <!--<div class="row">-->
+    <!--<div class="row">-->
 
     <!--<div class="col-md-10 col-md-offset-1">-->
-      <!--<div shop-breadcrumb step="shop"></div>-->
+    <!--<div shop-breadcrumb step="shop"></div>-->
     <!--</div>-->
 
-  <!--</div>-->
+    <!--</div>-->
 
-  <div class="row">
+    <div class="row">
 
-    <div id="view_dress_panel" class="col-md-4  col-md-offset-1">
-      <div class="container">
-        <div class="row dress">
-          <img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"
-               ng-src="images/items/{{item.img}}.png" class="">
+        <div id="view_dress_panel" class="col-md-4  col-md-offset-1">
+
+                <div class="row dress">
+                    <img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"
+                         ng-src="images/items/{{item.itemDesign.itemId}}.png" class="">
+                </div>
+
         </div>
-      </div>
+
+        <div id="dress_designer_panel" class="col-md-6">
+            <!--<div class="container style">-->
+                <!--<div class="row">-->
+                <!--<div shop-breadcrumb step="shop"></div>-->
+                <!--</div>-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row formal-name">
+                            {{item.style.styleFormalName}}
+                        </div>
+                        <div class="row name">
+                            {{item.style.styleName}}
+                        </div>
+                        <div class="row price">
+                            HKD {{item.style.price}}
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-right" style="margin-bottom:10px">
+                        <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8">
+                            <!-- https://wiki.foxycart.com/v/1.1/products -->
+                            <input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>
+                            <input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}"/>
+                            <input type="hidden" name="{{item.style.fc_name}}"
+                                   value="{{item.style.styleName}} ({{item.style.styleFormalName}})"/>
+                            <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}"/>
+                            <input type="hidden" name="{{item.style.fc_image}}" value="images/items/{{item.itemId}}.png"/>
+                            <input type="hidden" name="{{item.style.fc_url}}"
+                                   value="#!/shop/{{item.style.styleId}}/{{item.itemId}}"/>
+                            <!-- Custom Product Options -->
+                            <input type="hidden" name="{{item.style.fc_neckline}}"
+                                   value="{{item.itemDesign.design.neckline.type}}-{{item.itemDesign.design.neckline.id}}-{{item.itemDesign.design.neckline.size}}-{{item.itemDesign.design.neckline.fabric}}"/>
+                            <input type="hidden" name="{{item.style.fc_sleeves}}"
+                                   value="{{item.itemDesign.design.sleeves.type}}-{{item.itemDesign.design.sleeves.id}}-{{item.itemDesign.design.sleeves.size}}-{{item.itemDesign.design.sleeves.fabric}}"/>
+                            <input type="hidden" name="{{item.style.fc_skirt}}"
+                                   value="{{item.itemDesign.design.skirt.type}}-{{item.itemDesign.design.skirt.id}}-{{item.itemDesign.design.skirt.size}}-{{item.itemDesign.design.skirt.fabric}}"/>
+                            <input type="hidden" name="{{item.style.fc_peplum}}"
+                                   value="{{item.itemDesign.extras.peplum.type}}-{{item.itemDesign.extras.peplum.id}}-{{item.itemDesign.extras.peplum.size}}-{{item.itemDesign.extras.peplum.fabric}}"/>
+                            <input type="hidden" name="{{item.style.fc_rosetta}}"
+                                   value="{{item.itemDesign.extras.rosetta.type}}-{{item.itemDesign.extras.rosetta.id}}-{{item.itemDesign.extras.rosetta.size}}-{{item.itemDesign.extras.rosetta.fabric}}"/>
+                            <input type="hidden" name="{{item.style.fc_belt}}"
+                                   value="{{item.itemDesign.extras.belt.type}}-{{item.itemDesign.extras.belt.id}}-{{item.itemDesign.extras.belt.size}}-{{item.itemDesign.extras.belt.fabric}}"/>
+                            <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
+                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                                   onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'item/buy']);"/>
+                        </form>
+                        <!--<div review-link design="param(form)" sil="style"/>-->
+
+                        <!--</div>-->
+
+                    </div>
+                </div>
+
+                <div class="row top-border" style="padding:10px 0 10px 0">
+                    <ul>
+                        <li class="description">{{item.style.strapline}}</li>
+                        <li class="description" ng-repeat="para in item.style.description">{{para}}</li>
+                    </ul>
+                </div>
+                <div class="row top-border" style="margin-bottom:10px">
+                    <h4>Sizing</h4>
+                    <select>
+                        <option ng-repeat="size in item.style.dressSizes" value="size">{{size}}</option>
+                    </select>
+                </div>
+                <div class="row top-border">
+                    <h4>Info</h4>
+                    <p ng-repeat="para in item.style.care">{{para}}</p>
+                </div>
+                <div class="row top-border">
+                    <h5>Not your perfect dress?</h5>
+                    <div class="row">
+                        <div class="col-sm-6 align-center">
+                            <a class="btn btn-default  igg-design-buttons" id="customize"
+                               href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}"
+                               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                               onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{item.style.styleId}}/{{item.itemDesign.itemId}}']);">
+                                Customise this</a>
+                        </div>
+                        <div class="col-sm-6 align-right">
+                            <!--<div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">-->
+                            <a class="btn btn-default  igg-design-buttons" href="#!/collection"
+                               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                               onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">
+                                Try a different style</a>
+                            <!--</div>-->
+                        </div>
+
+                        <!--{{item.itemDesign.itemId}}-->
+                    </div>
+                <!--</div>-->
+            </div>
+        </div>
     </div>
 
-    <div id="dress_designer_panel" class="col-md-6">
-      <div class="container style">
-        <div class="row">
-          <div shop-breadcrumb step="shop"></div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row formal-name">
-              {{style.styleFormalName}}
-            </div>
-            <div class="row name">
-              {{style.styleName}}
-            </div>
-            <div class="row price">
-              HKD {{style.price}}
-            </div>
-          </div>
-          <div class="col-md-6 align-right">
-            <!--<div class="row">-->
-              <!--<a class="btn btn-mini btn-danger" id="buy" href="#/purchase"-->
-                 <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">-->
-                <!--Choose size and checkout</a>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-              <!--...add social icons here-->
-            <!--</div>-->
-              <div class="row">
-
-                  <div class="col-sm-4 align-center" style="margin-bottom:10px">
-                      <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8" >
-                          <!-- https://wiki.foxycart.com/v/1.1/products -->
-                          <input type="hidden" name="{{style.fc_category}}" value="{{style.type}}"/>
-                          <input type="hidden" name="{{style.fc_code}}" value="{{style.styleId}}" />
-                          <input type="hidden" name="{{style.fc_name}}" value="{{style.styleName}} ({{style.styleFormalName}})" />
-                          <input type="hidden" name="{{style.fc_price}}" value="{{style.price}}" />
-                          <input type="hidden" name="{{style.fc_image}}" value="images/items/{{item.img}}.png" />
-                          <input type="hidden" name="{{style.fc_url}}" value="#!/shop/{{style.styleId}}/{{item.itemId}}" />
-                          <!-- Custom Product Options -->
-                          <input type="hidden" name="{{style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />
-                          <input type="hidden" name="{{style.fc_sleeves}}" value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}" />
-                          <input type="hidden" name="{{style.fc_skirt}}" value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}" />
-                          <input type="hidden" name="{{style.fc_peplum}}" value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}" />
-                          <input type="hidden" name="{{style.fc_rosetta}}" value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}" />
-                          <input type="hidden" name="{{style.fc_belt}}" value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}" />
-                          <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
-                                 style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                                 onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/send']);"/>
-                      </form>
-                      <!--<div review-link design="param(form)" sil="style"/>-->
-
-
-                  </div>
-              </div>
-
-          </div>
-        </div>
-
-        <div class="row top-border">
-          <ul>
-            <li class="description">{{style.strapline}}</li>
-            <li class="description" ng-repeat="para in style.description">{{para}}</li>
-          </ul>
-        </div>
-        <div class="row top-border">
-          <h4>Info</h4>
-          <li class="info" ng-repeat="para in style.care">{{para}}</li>
-        </div>
-        <div class="row top-border customise">
-          Add your own personal touches?
-          <a class="btn" id="customize" href="#!/design/{{style.styleId}}/{{item.itemId}}"
-             onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">
-            Customize</a>
-        </div>
-      <div class="row top-border">
-          <div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">
-              <a class="btn btn-default  igg-design-buttons" href="#!/collection"
-                 style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                 onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">
-                  try a different style</a>
-          </div>
-      </div>
-      </div>
-    </div>
-  </div>
-
-  <!--<div class="row" id="debug_view">-->
+    <!--<div class="row" id="debug_view">-->
     <!--<div class="col-md-12 align-center">-->
-      <!--<a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>-->
+    <!--<a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>-->
     <!--</div>-->
     <!--<hr>-->
     <!--<div collapse="isDebugCollapsed">-->
-      <!--<pre>form={{form}}</pre>-->
-      <!--<pre>fabricSets={{fabricSets}}</pre>-->
-      <!--<pre>trimFabricSets={{trimFabricSets}}</pre>-->
-      <!--<pre>dressFabricSets={{dressFabricSets}}</pre>-->
+    <!--<pre>form={{form}}</pre>-->
+    <!--<pre>fabricSets={{fabricSets}}</pre>-->
+    <!--<pre>trimFabricSets={{trimFabricSets}}</pre>-->
+    <!--<pre>dressFabricSets={{dressFabricSets}}</pre>-->
 
-      <!--<pre>master={{master}}</pre>-->
-      <!--<pre>category={{category}}</pre>-->
-      <!--<pre>design={{design}}</pre>-->
-      <!--<pre>range={{range}}</pre>-->
+    <!--<pre>master={{master}}</pre>-->
+    <!--<pre>category={{category}}</pre>-->
+    <!--<pre>design={{design}}</pre>-->
+    <!--<pre>range={{range}}</pre>-->
     <!--</div>-->
-  <!--</div>-->
-</div><!-- /designBuildView -->
+    <!--</div>-->
+</div>
+<!-- /designBuildView -->

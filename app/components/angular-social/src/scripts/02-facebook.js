@@ -10,13 +10,7 @@ app.directive('ngSocialFacebook', function() {
             }
         },
         popup: {
-//            url: 'http://www.facebook.com/sharer/sharer.php?u={url}',
-//          url: 'http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Btitle%5D=titlehere&amp;p%5Burl%5D=http%3A%2F%2Fwww.yoururlhere.com&amp;p%5Bsummary%5D=yoursummaryhere&amp;p%5Bimages%5D%5B0%5D=https://www.google.com/images/srpr/logo3w.png'
-            url: 'http://www.facebook.com/sharer.php?s=100' +
-                  '&p[url]={url}' +
-                  '&p[images][0]={image}' +
-                  '&p[title]={title}' +
-                  '&p[summary]=In this blog, Arzumy will teach you how to rock!>Customized Share',
+            url: 'http://www.facebook.com/sharer/sharer.php?u={url}',
             width: 600,
             height: 500
         },

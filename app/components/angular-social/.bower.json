@@ -14,6 +14,6 @@
     "commit": "dc637f476760b01db64fa4ae349f008b40ef82b7"
   },
   "_source": "git://github.com/esvit/angular-social.git",
-  "_target": "~0.1.1",
-  "_direct": true
+  "_target": "0.1.1",
+  "_originalSource": "angular-social"
 }
