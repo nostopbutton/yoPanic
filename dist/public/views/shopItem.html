@@ -44,22 +44,22 @@
                             <input type="hidden" name="{{item.style.fc_name}}"
                                    value="{{item.style.styleName}} ({{item.style.styleFormalName}})"/>
                             <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}"/>
-                            <input type="hidden" name="{{item.style.fc_image}}" value="images/items/{{item.itemId}}.png"/>
+                            <input type="hidden" name="{{item.style.fc_image}}" value="images/items/{{item.itemDesign.itemId}}.png"/>
                             <input type="hidden" name="{{item.style.fc_url}}"
-                                   value="#!/shop/{{item.style.styleId}}/{{item.itemId}}"/>
+                                   value="#!/shop/{{item.style.styleId}}/{{item.itemDesign.itemId}}"/>
                             <!-- Custom Product Options -->
                             <input type="hidden" name="{{item.style.fc_neckline}}"
-                                   value="{{item.itemDesign.design.neckline.type}}-{{item.itemDesign.design.neckline.id}}-{{item.itemDesign.design.neckline.size}}-{{item.itemDesign.design.neckline.fabric}}"/>
+                                   value="{{item.itemDesign.itemDesign.design.neckline.type}}-{{item.itemDesign.itemDesign.design.neckline.id}}-{{item.itemDesign.itemDesign.design.neckline.size}}-{{item.itemDesign.itemDesign.design.neckline.fabric}}"/>
                             <input type="hidden" name="{{item.style.fc_sleeves}}"
-                                   value="{{item.itemDesign.design.sleeves.type}}-{{item.itemDesign.design.sleeves.id}}-{{item.itemDesign.design.sleeves.size}}-{{item.itemDesign.design.sleeves.fabric}}"/>
+                                   value="{{item.itemDesign.itemDesign.design.sleeves.type}}-{{item.itemDesign.itemDesign.design.sleeves.id}}-{{item.itemDesign.itemDesign.design.sleeves.size}}-{{item.itemDesign.itemDesign.design.sleeves.fabric}}"/>
                             <input type="hidden" name="{{item.style.fc_skirt}}"
-                                   value="{{item.itemDesign.design.skirt.type}}-{{item.itemDesign.design.skirt.id}}-{{item.itemDesign.design.skirt.size}}-{{item.itemDesign.design.skirt.fabric}}"/>
+                                   value="{{item.itemDesign.itemDesign.design.skirt.type}}-{{item.itemDesign.itemDesign.design.skirt.id}}-{{item.itemDesign.itemDesign.design.skirt.size}}-{{item.itemDesign.itemDesign.design.skirt.fabric}}"/>
                             <input type="hidden" name="{{item.style.fc_peplum}}"
-                                   value="{{item.itemDesign.extras.peplum.type}}-{{item.itemDesign.extras.peplum.id}}-{{item.itemDesign.extras.peplum.size}}-{{item.itemDesign.extras.peplum.fabric}}"/>
+                                   value="{{item.itemDesign.itemDesign.extras.peplum.type}}-{{item.itemDesign.itemDesign.extras.peplum.id}}-{{item.itemDesign.itemDesign.extras.peplum.size}}-{{item.itemDesign.itemDesign.extras.peplum.fabric}}"/>
                             <input type="hidden" name="{{item.style.fc_rosetta}}"
-                                   value="{{item.itemDesign.extras.rosetta.type}}-{{item.itemDesign.extras.rosetta.id}}-{{item.itemDesign.extras.rosetta.size}}-{{item.itemDesign.extras.rosetta.fabric}}"/>
+                                   value="{{item.itemDesign.itemDesign.extras.rosetta.type}}-{{item.itemDesign.itemDesign.extras.rosetta.id}}-{{item.itemDesign.itemDesign.extras.rosetta.size}}-{{item.itemDesign.itemDesign.extras.rosetta.fabric}}"/>
                             <input type="hidden" name="{{item.style.fc_belt}}"
-                                   value="{{item.itemDesign.extras.belt.type}}-{{item.itemDesign.extras.belt.id}}-{{item.itemDesign.extras.belt.size}}-{{item.itemDesign.extras.belt.fabric}}"/>
+                                   value="{{item.itemDesign.itemDesign.extras.belt.type}}-{{item.itemDesign.itemDesign.extras.belt.id}}-{{item.itemDesign.itemDesign.extras.belt.size}}-{{item.itemDesign.itemDesign.extras.belt.fabric}}"/>
                             <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
                                    style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
                                    onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'item/buy']);"/>

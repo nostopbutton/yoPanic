@@ -132,13 +132,13 @@
 
             <!--<form action="https://aurza.foxycart.com/cart" method="post">-->
             <!--&lt;!&ndash; https://wiki.foxycart.com/v/1.1/products &ndash;&gt;-->
-            <!--<input type="hidden" name="name" value="{{style.styleName}} ({{style.styleFormalName}})" />-->
+            <!--<input type="hidden" name="name" value="{{item.style.styleName}} ({{item.style.styleFormalName}})" />-->
             <!--<input type="hidden" name="price" value="5.00" />-->
             <!--&lt;!&ndash;<input type="hidden" name="image" value="images/dresses/eveningsheath.png" />&ndash;&gt;-->
-            <!--<input type="hidden" name="image" value="images/silhouettes/{{style.silhouetteImage}}.png" />-->
+            <!--<input type="hidden" name="image" value="images/silhouettes/{{item.style.silhouetteImage}}.png" />-->
             <!--&lt;!&ndash;<input type="hidden" name="image" value="images/silhouettes/pat-304-body.png" />&ndash;&gt;-->
             <!--<input type="hidden" name="url" value="#!/collection" />-->
-            <!--<input type="hidden" name="code" value="{{style.styleName}}" />-->
+            <!--<input type="hidden" name="code" value="{{item.style.styleName}}" />-->
             <!--<input type="hidden" name="quantity" value="1" />-->
             <!--<input type="hidden" name="category" value="dress" />-->
             <!--&lt;!&ndash; Custom Product Options &ndash;&gt;-->
@@ -269,19 +269,19 @@
             <div class="col-sm-4 align-center" style="margin-bottom:10px">
                 <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8" >
                     <!-- https://wiki.foxycart.com/v/1.1/products -->
-                    <input type="hidden" name="{{style.fc_category}}" value="{{style.type}}"/>
-                    <input type="hidden" name="{{style.fc_code}}" value="{{style.styleId}}" />
-                    <input type="hidden" name="{{style.fc_name}}" value="{{style.styleName}} ({{style.styleFormalName}})" />
-                    <input type="hidden" name="{{style.fc_price}}" value="{{style.price}}" />
-                    <input type="hidden" name="{{style.fc_image}}" value="images/silhouettes/{{style.foxyImage}}.png" />
-                    <input type="hidden" name="{{style.fc_url}}" value="#!/review/{{style.styleId}}/{{param(form)}}" />
+                    <input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>
+                    <input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}" />
+                    <input type="hidden" name="{{item.style.fc_name}}" value="{{item.style.styleName}} ({{item.style.styleFormalName}})" />
+                    <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}" />
+                    <input type="hidden" name="{{item.style.fc_image}}" value="images/silhouettes/{{item.style.foxyImage}}.png" />
+                    <input type="hidden" name="{{item.style.fc_url}}" value="#!/review/{{item.style.styleId}}/{{param(form)}}" />
                     <!-- Custom Product Options -->
-                    <input type="hidden" name="{{style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />
-                    <input type="hidden" name="{{style.fc_sleeves}}" value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}" />
-                    <input type="hidden" name="{{style.fc_skirt}}" value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}" />
-                    <input type="hidden" name="{{style.fc_peplum}}" value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}" />
-                    <input type="hidden" name="{{style.fc_rosetta}}" value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}" />
-                    <input type="hidden" name="{{style.fc_belt}}" value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}" />
+                    <input type="hidden" name="{{item.style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />
+                    <input type="hidden" name="{{item.style.fc_sleeves}}" value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}" />
+                    <input type="hidden" name="{{item.style.fc_skirt}}" value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}" />
+                    <input type="hidden" name="{{item.style.fc_peplum}}" value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}" />
+                    <input type="hidden" name="{{item.style.fc_rosetta}}" value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}" />
+                    <input type="hidden" name="{{item.style.fc_belt}}" value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}" />
                     <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
                            style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
                            onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/send']);"/>
@@ -347,7 +347,7 @@
   <div class="col-md-4 align-center">
   </div>
   <div class="col-md-4 align-right">
-    <a class="btn btn-mini" href="#!/designAdmin/{{style.styleId}}">Toggle admin view</a>
+    <a class="btn btn-mini" href="#!/designAdmin/{{item.style.styleId}}">Toggle admin view</a>
   </div>
   <hr>
   <div ng-show="!isDebugCollapsed">
