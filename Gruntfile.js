@@ -455,7 +455,7 @@ module.exports = function (grunt) {
     'cssmin', // SWAPPED
 //    'uglify',
     'copy',
-    'cdnify',
+//    'cdnify',
     'ngmin',
     'rev',
     'usemin'
