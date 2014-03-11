@@ -1,27 +1,39 @@
 {
-  "default": {
-    "design": {
-      "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003"}
-      , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003"}
+    "style":
+    {
+        "styleId": "swoosh"
+        , "type": "dress"
+        , "styleName": "Kate"
+        , "styleFormalName": "Swoosh Dress"
+        , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+        , "Perfect with killer heels for a timeless show stopping look." ]
+        , "care": [ "Look after it, and it will last..."]
+        , "price": 2000
+        , "dressSizes": [10,12,14,16,18]
+        , "silhouetteImage": "pat-303-body"
+        , "defaultItemId": "swo-1"
+        , "foxyImage": "pat-303"
+        , "fc_category": ""
+        , "fc_code": ""
+        , "fc_name": ""
+        , "fc_price": ""
+        , "fc_image": ""
+        , "fc_url": ""
+        , "fc_neckline": ""
+        , "fc_sleeves": ""
+        , "fc_skirt": ""
+        , "fc_peplum": ""
+        , "fc_rosetta": ""
+        , "fc_belt": ""
     }
-    , "extras": {
-      "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-      "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-      "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-    }
-    , "dressSize": 12
-    , "model": "strap-whole-body"
-  }
-  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
-  , "fabricSets": [ {"setId": "s-vc"}]
-  , "trimFabricSets": [{"setId": "s-tr"}]
-  , "dressSizes": [10,12,14,16,18]
-  , "options": [
+    , "design":
+{
+    "model": "strap-whole-body"
+    , "options": [
   {
     "option_name": "design"
-    , "active": "true"
-    , "label": "Customize"
     , "parts": [
     {
       "part_name": "neckline"
@@ -85,4 +97,38 @@
     ]}
 ]
 
+
+
+    ,"default": {
+        "design": {
+            "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003"}
+            , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003"}
+        }
+        , "extras": {
+            "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+            "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+            "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+        }
+        , "dressSize": 12
+        , "model": "strap-whole-body"
+    }
+}
+    , "collection":
+    [
+        {
+            "itemId": "swo-1"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
 }

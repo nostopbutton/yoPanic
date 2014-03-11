@@ -94,7 +94,8 @@
                 , "label": "Rosetta"
                 , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
                 , "values": [
-                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]
+            }
             ]
             }
             ,       {
@@ -128,15 +129,15 @@
     [
         {
             "itemId": "sw-1"
-            , "itemDesc": "Swing dress - Red"
+            , "itemDesc": "Swing dress - Midnight Blue"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "002", "size": "00", "fabric": "003", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "003", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "003", "trim": ""}
+                "neckline":   {"type": "nek", "id": "002", "size": "00", "fabric": "014", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "014", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "014", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "121", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -158,21 +159,24 @@
             }
         }
     }
-        , {
-        "itemId": "sw-3"
-        , "itemDesc": "Swing dress - Midnight Blue"
-        , "itemDesign": {
+        ,
+
+        {
+            "itemId": "sw-3"
+            , "itemDesc": "Swing dress - Red"
+            , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "002", "size": "00", "fabric": "014", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "014", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "014", "trim": ""}
+                "neckline":   {"type": "nek", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "003", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "003", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "121", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
-    }
+        }
+
     ]
 }

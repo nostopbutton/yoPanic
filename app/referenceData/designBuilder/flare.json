@@ -1,28 +1,39 @@
 {
-  "default": {
-    "design": {
-      "neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "014"}
-      , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "014"}
-      , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "014"}
+    "style":
+    {
+        "styleId": "flare"
+        , "type": "dress"
+        , "styleName": "Alexa"
+        , "styleFormalName": "Fit and Flare Dress"
+        , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
+        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+        , "Perfect with killer heels for a timeless show stopping look." ]
+        , "care": [ "Look after it, and it will last..."]
+        , "price": 2000
+        , "dressSizes": [10,12,14,16,18]
+        , "silhouetteImage": "pat-302-body"
+        , "defaultItemId": "fl-1"
+        , "foxyImage": "pat-302"
+        , "fc_category": ""
+        , "fc_code": ""
+        , "fc_name": ""
+        , "fc_price": ""
+        , "fc_image": ""
+        , "fc_url": ""
+        , "fc_neckline": ""
+        , "fc_sleeves": ""
+        , "fc_skirt": ""
+        , "fc_peplum": ""
+        , "fc_rosetta": ""
+        , "fc_belt": ""
     }
-    , "extras": {
-      "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-      "extras":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-      "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-    }
-    , "dressSize": 12
-    , "model": "strap-whole-body"
-  }
-  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
-  , "fabricSets": [ {"setId": "s-vc"}]
-  , "trimFabricSets": [{"setId": "s-tr"}]
-  , "dressSizes": [10,12,14,16,18]
+    , "design":
+{
+    "model": "strap-whole-body"
   , "options": [
   {
     "option_name": "design"
-    , "active": "true"
-    , "label": "Customize"
     , "parts": [
     {
       "part_name": "neckline"
@@ -78,15 +89,22 @@
     , "active": "true"
     , "parts": [
       {
-      "part_name": "extras"
-      , "type": "ext"
-      , "label": "Extras"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-      , "values": [
-      {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-      , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-      ]
-      }
+          "part_name": "peplum"
+          , "type": "ext"
+          , "label": "Peplum"
+          , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+          , "values": [
+            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]
+      }]}
+      , {
+              "part_name": "rosetta"
+              , "type": "ext"
+              , "label": "Rosetta"
+              , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+              , "values": [
+                  {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]
+                  }]}
+
       , {
         "part_name": "belt"
         , "type": "blt"
@@ -99,5 +117,38 @@
       }
     ]}
 ]
-
+, "default": {
+"design": {
+"neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "014"}
+, "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "014"}
+, "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "014"}
+}
+, "extras": {
+"belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+"extras":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+"rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+}
+, "dressSize": 12
+, "model": "strap-whole-body"
+}
+}
+    , "collection":
+    [
+        {
+            "itemId": "fl-1"
+            , "itemDesc": "Fit and Flare dress - Teal"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "010", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "010", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "010", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "168", "code": "002-168"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
 }

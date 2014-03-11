@@ -1,20 +1,36 @@
 {
-  "default": {
-    "design": {
-      "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "089"}
-      , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "089"}
+    "style":
+    {
+        "styleId": "shirt-maxi"
+        , "type": "silk"
+        , "styleName": "Claudia"
+        , "styleFormalName": "Maxi-Shirt Dress"
+        , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+        , "Perfect with killer heels for a timeless show stopping look." ]
+, "care": [ "Look after it, and it will last..."]
+, "price": 3000
+, "dressSizes": [10,12,14,16,18]
+        , "silhouetteImage": "pat-203maxi-body"
+, "defaultItemId": "shtm-1"
+        , "foxyImage": "pat-203maxi"
+        , "fc_category": ""
+        , "fc_code": ""
+        , "fc_name": ""
+        , "fc_price": ""
+        , "fc_image": ""
+        , "fc_url": ""
+        , "fc_neckline": ""
+        , "fc_sleeves": ""
+        , "fc_skirt": ""
+        , "fc_peplum": ""
+        , "fc_rosetta": ""
+        , "fc_belt": ""
     }
-    , "extras": {
-      "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-    }
-    , "dressSize": 12
-    , "model": "strap-whole-body"
-  }
-  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
-  , "fabricSets": [ {"setId": "s-vc"}]
-  , "trimFabricSets": [{"setId": "s-tr"}]
-  , "dressSizes": [10,12,14,16,18]
+, "design":
+{
+"model": "strap-whole-body"
   , "options": [
   {
     "option_name": "design"
@@ -53,4 +69,36 @@
     ]
   }]
 
+
+
+
+, "default": {
+"design": {
+"neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "089"}
+, "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "089"}
+}
+, "extras": {
+"belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+}
+, "dressSize": 12
+, "model": "strap-whole-body"
+}
+}
+
+, "collection":
+[
+{
+"itemId": "shtm-1"
+, "itemDesc": "Maxi-Shirt dress - Fuscia"
+, "itemDesign": {
+"design": {
+"neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "088", "trim": ""}
+, "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "088", "trim": ""}
+}
+, "extras": {
+"belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+}
+}
+}
+]
 }

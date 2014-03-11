@@ -1,25 +1,39 @@
 {
-  "default": {
-    "design": {
-      "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085"}
-      , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085"}
+    "style":
+    {
+        "styleId": "shirt"
+        , "type": "silk"
+        , "styleName": "Elle"
+        , "styleFormalName": "Shirt Dress"
+        , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+        , "Perfect with killer heels for a timeless show stopping look." ]
+        , "care": [ "Look after it, and it will last..."]
+        , "price": 2500
+        , "dressSizes": [10,12,14,16,18]
+        , "silhouetteImage": "pat-203-body"
+        , "defaultItemId": "sht-1"
+        , "foxyImage": "pat-203"
+        , "fc_category": ""
+        , "fc_code": ""
+        , "fc_name": ""
+        , "fc_price": ""
+        , "fc_image": ""
+        , "fc_url": ""
+        , "fc_neckline": ""
+        , "fc_sleeves": ""
+        , "fc_skirt": ""
+        , "fc_peplum": ""
+        , "fc_rosetta": ""
+        , "fc_belt": ""
     }
-    , "extras": {
-      "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-    }
-    , "dressSize": 12
-    , "model": "strap-whole-body"
-  }
-  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
-  , "fabricSets": [ {"setId": "s-vc"}]
-  , "trimFabricSets": [{"setId": "s-tr"}]
-  , "dressSizes": [10,12,14,16,18]
-  , "options": [
+    , "design":
+{
+    "model": "strap-whole-body"
+ , "options": [
   {
     "option_name": "design"
-    , "active": "true"
-    , "label": "Customize"
     , "parts": [
     {
       "part_name": "neckline"
@@ -53,4 +67,36 @@
     ]
   }]
 
+
+
+
+, "default": {
+"design": {
+"neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085"}
+, "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085"}
+}
+, "extras": {
+"belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+}
+, "dressSize": 12
+, "model": "strap-whole-body"
+}
+
+}
+    , "collection":
+    [
+        {
+            "itemId": "sht-1"
+            , "itemDesc": "Shirt dress - Jade"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
 }

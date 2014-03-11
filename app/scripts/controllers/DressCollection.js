@@ -16,7 +16,9 @@ angular.module('panicApp.Controllers')
         stylesPromise.then(function(result) {  // this is only run after $http completes
             styles = result;
 
-            var itemsPromise = CatalogueService.getItemCollectionWithStyleDataPromiseForStyles(['sheath', 'swing' ]);
+            var itemsPromise = CatalogueService.getItemCollectionWithStyleDataPromiseForStyles(
+                ['sheath', 'swing', 'flare', 'doloman', 'swoosh'
+                , 'shift', 'shirt', 'shirt-maxi']);
 //                styles);
             var items = [], itemIds = [];
 

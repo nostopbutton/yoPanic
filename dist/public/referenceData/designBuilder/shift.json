@@ -1,20 +1,38 @@
 {
-  "default": {
-    "design": {
-      "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087"}
-      , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087"}
+    "style":
+     {
+        "styleId": "shift"
+        , "type": "silk"
+        , "styleName": "Eddie"
+        , "styleFormalName": "Shift Dress"
+        , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
+        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
+        , "Perfect with killer heels for a timeless show stopping look." ]
+         , "care": [ "Look after it, and it will last..."]
+         , "price": 2000
+         , "dressSizes": [10,12,14,16,18]
+        , "silhouetteImage": "pat-202-body"
+         , "defaultItemId": "sft-1"
+        , "foxyImage": "pat-202"
+        , "fc_category": ""
+        , "fc_code": ""
+        , "fc_name": ""
+        , "fc_price": ""
+        , "fc_image": ""
+        , "fc_url": ""
+        , "fc_neckline": ""
+        , "fc_sleeves": ""
+        , "fc_skirt": ""
+        , "fc_peplum": ""
+        , "fc_rosetta": ""
+        , "fc_belt": ""
     }
-    , "extras": {
-      "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-    }
-    , "dressSize": 12
-    , "model": "strap-whole-body"
-  }
-  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
-  , "fabricSets": [ {"setId": "s-vc"}]
-  , "trimFabricSets": [{"setId": "s-tr"}]
-  , "dressSizes": [10,12,14,16,18]
+
+    , "design":
+{
+    "model": "strap-whole-body"
+
   , "options": [
   {
     "option_name": "design"
@@ -72,4 +90,34 @@
     ]}
 ]
 
+,
+"default": {
+"design": {
+"neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087"}
+, "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087"}
+}
+, "extras": {
+"belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+}
+, "dressSize": 12
+, "model": "strap-whole-body"
+}
+}
+    , "collection":
+    [
+        {
+            "itemId": "sft-1"
+            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
 }
