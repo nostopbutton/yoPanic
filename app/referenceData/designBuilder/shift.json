@@ -10,23 +10,24 @@
         , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
         , "Perfect with killer heels for a timeless show stopping look." ]
         , "care": [ "Look after it, and it will last..."]
-        , "price": 2000
+        , "price": 2500
         , "dressSizes": [10,12,14,16,18]
         , "silhouetteImage": "pat-202-body"
         , "defaultItemId": "sft-1"
         , "foxyImage": "pat-202"
-        , "fc_category": ""
-        , "fc_code": ""
-        , "fc_name": ""
-        , "fc_price": ""
-        , "fc_image": ""
-        , "fc_url": ""
-        , "fc_neckline": ""
-        , "fc_sleeves": ""
-        , "fc_skirt": ""
-        , "fc_peplum": ""
-        , "fc_rosetta": ""
-        , "fc_belt": ""
+        , "fc_category": "category||31b898ce8f01d294f0dbe505e3a523b37c10223e610e593dae34fec8b9120c30"
+        , "fc_code": "code||5cda5cff0cd0b28c96b4e802c07d9dded79760e559d22b44ed163e179cb2d5d1"
+        , "fc_name": "name||09526b4c0f02e8e2886bc7cc16cd2462cc0ac20758506b76ff93e5907b5ee636"
+        , "fc_price": "price||e7c70132e7d1bbbb3342f23e1adab2c7db2dafde2314da3f6b5d60ea7f159d6e"
+        , "fc_image": "image||4ea03c4379f632e7e45b1ac5aeaee55480117b92bd8ed0b1b765c7b0edbe79f4||open"
+        , "fc_url": "url||30937fb475bacf2dbca5fc5628544f1ade64eae72b067ee422c21a4feb305ead||open"
+        , "fc_neckline": "neckline||14c6080f26aa7699a85b484ae6e9181effd019d05990cc7daae0c4e27a1faa8d||open"
+        , "fc_sleeves": "sleeves||29de1a9b0c25043befb2c7563899c9d4c78b1eac7b40414991c8aabc50e9dc51||open"
+        , "fc_skirt": "skirt||956ea8ea984a60dc9f719bee9804335287f283b41a01da3f228085e4c7fdc45b||open"
+        , "fc_peplum": "peplum||68c182714d2429a3d3c0acec3657229c1dfc8f9661d6fe947dc9186b33f6d16b||open"
+        , "fc_rosetta": "rosetta||548372c028c832b51d5ca75dc76c968f9a8a37aff73874749ad8643c41f97f1f||open"
+        , "fc_belt": "belt||24fa11d019ae2ce21081127fd281c854f2e124b830a17c68ed939586397b8779||open"
+
     }
 
     , "design":

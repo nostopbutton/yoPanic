@@ -1,5 +1,5 @@
 /* Drop page body down below the header navbar */
-body { padding-top: 165px;}
+body { padding-top: 135px;}
 
 /*@media (max-width: 1000px) {*/
     /*body { padding-top: 170px;}*/
@@ -58,7 +58,7 @@ body { padding-top: 165px;}
 
 .navbar-inner {
     text-align:center;
-    height: 45px; /* This define the amount of space taken by the height of top navbar*/
+    height: 30px; /* This define the amount of space taken by the height of top navbar*/
 }
 
 .navbar-nav > li > a {

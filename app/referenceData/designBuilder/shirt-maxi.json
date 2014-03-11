@@ -1,7 +1,7 @@
 {
     "style":
     {
-        "styleId": "shirt-maxi"
+        "styleId": "maxi-shirt"
         , "type": "silk"
         , "styleName": "Claudia"
         , "styleFormalName": "Maxi-Shirt Dress"
@@ -15,18 +15,18 @@
         , "silhouetteImage": "pat-203maxi-body"
         , "defaultItemId": "shtm-1"
         , "foxyImage": "pat-203maxi"
-        , "fc_category": ""
-        , "fc_code": ""
-        , "fc_name": ""
-        , "fc_price": ""
-        , "fc_image": ""
-        , "fc_url": ""
-        , "fc_neckline": ""
-        , "fc_sleeves": ""
-        , "fc_skirt": ""
-        , "fc_peplum": ""
-        , "fc_rosetta": ""
-        , "fc_belt": ""
+        , "fc_category": "category||87d54c8b8c02de63ed7ec6697cdb8a91806cb4bfced9f907e09939d5b2f376b9"
+        , "fc_code": "code||d199f790331a9b8f5f38e8e8317e5275f89f0d2b89c81475b652c27fc692fd38"
+        , "fc_name": "name||1cb305629b5ac901cdc6892305b8d4ce55f9d20cb557e75e1cf319cb8e187a65"
+        , "fc_price": "price||238854caf002325f2256e81a51e4801fe746df27651ba90a24a60fa644922782"
+        , "fc_image": "image||0494fa01ec6c51a1c33fc242583ca88282bfa72d52b39deeaa6516491c5ded35||open"
+        , "fc_url": "url||8a5e4e2d34d99214f2e6944c22ebb810160dffaba0f8977b9c6b4fad02f96851||open"
+        , "fc_neckline": "neckline||386b7fa13a541448d98f93f2bf8f7cb3335f38d9b982b8ebc9cbe18b785cdbe4||open"
+        , "fc_sleeves": "sleeves||34d3d7a2bde1adf5eec6d96ac0057677ea972d2bab2386e4a93097fb92c343f9||open"
+        , "fc_skirt": "skirt||59a622578a9caace90af0877384c6c60f53011bc2f51db5752498eb7a4175dd8||open"
+        , "fc_peplum": "peplum||bf4f1c5bf8e297d79388bdf4f1d125836e401e9ae8611d680bc1d15888fbd667||open"
+        , "fc_rosetta": "rosetta||028756feda54b1fee44034ad9c1c6ef22af22d9c2e59c1e05b30c8e2f7e24911||open"
+        , "fc_belt": "belt||97180bd37dd0c77cf041e3530fc41e550d431fc612f27553656d89d076d02f72||open"
     }
     , "design":
 {
