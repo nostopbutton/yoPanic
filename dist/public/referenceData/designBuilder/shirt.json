@@ -31,56 +31,41 @@
     , "design":
 {
     "model": "strap-whole-body"
- , "options": [
-  {
-    "option_name": "design"
-    , "parts": [
+    , "options": [
     {
-      "part_name": "neckline"
-      , "type": "nek"
-      , "active": "true"
-      , "label": "Neckline"
-      , "fabricSets": [{"setId": "p-sk"}]
-      , "values": [
-        {"id": "017", "name": "shirt collar"}
-        , {"id": "018", "name": "shirt no collar"}
-      ]
-      , "size": true
-      , "sizes": [
-        {"id": "02", "name": "knee"}
-        , {"id": "05", "name": "maxi"}
-      ]
-      , "trim": true
-      , "trimFabricSets": [{"setId": "p-sk"}]
-    }
-    ,{
-      "part_name": "sleeves"
-      , "type": "slv"
-      , "label": "Sleeves"
-      , "fabricSets": [ {"setId": "p-sk"}]
-      , "null_value": "000"
-      , "values": [
-        {"id": "016", "name": "shirt short"}
-        , {"id": "011", "name": "shirt long tab"}
-      ]
-    }
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [{"setId": "p-sk"}]
+            , "values": [
+            {"id": "017", "name": "shirt collar"}
+            , {"id": "018", "name": "shirt no collar"}
+        ]
+            , "size": true
+            , "sizes": [
+            {"id": "02", "name": "knee"}
+            , {"id": "05", "name": "maxi"}
+        ]
+            , "trim": true
+            , "trimFabricSets": [{"setId": "p-sk"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "p-sk"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "016", "name": "shirt short"}
+                , {"id": "011", "name": "shirt long tab"}
+            ]
+        }
     ]
-  }]
-
-
-
-
-, "default": {
-"design": {
-"neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085"}
-, "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085"}
-}
-, "extras": {
-"belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-}
-, "dressSize": 12
-, "model": "strap-whole-body"
-}
+    }]
 
 }
     , "collection":

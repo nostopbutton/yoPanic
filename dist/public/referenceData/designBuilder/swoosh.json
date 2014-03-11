@@ -32,86 +32,70 @@
 {
     "model": "strap-whole-body"
     , "options": [
-  {
-    "option_name": "design"
-    , "parts": [
     {
-      "part_name": "neckline"
-      , "type": "nek"
-      , "active": "true"
-      , "label": "Neckline"
-      , "fabricSets": [{"setId": "s-vc"}]
-      , "values": [
-        {"id": "009", "name": "asymetrical"}
-        , {"id": "010", "name": "swoosh scoop"}
-      ]
-      , "size": true
-        , "sizes": [
-          {"id": "01", "name": "short"}
-          , {"id": "02", "name": "knee"}
-          , {"id": "04", "name": "long"}
-       ]
-      , "trim": true
-      , "trimFabricSets": [{"setId": "x-fl"}]
-    }
-    ,{
-      "part_name": "sleeves"
-      , "type": "slv"
-      , "label": "Sleeves"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-      , "null_value": "000"
-      , "values": [
-        {"id": "000", "name": "none"}
-        , {"id": "002", "name": "cap"}
-        , {"id": "006", "name": "elbow"}
-        , {"id": "009", "name": "flared"}
-      ]
-    }
-    ]
-  }]
-  , "extras": [
-  {
-    "name": "extras"
-    , "label": "Extras"
-    , "active": "true"
-    , "parts": [
-      {
-        "part_name": "rosetta"
-        , "type": "ext"
-        , "label": "Rosetta"
-        , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-        , "values": [
-          {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [{"setId": "s-vc"}]
+            , "values": [
+            {"id": "009", "name": "asymetrical"}
+            , {"id": "010", "name": "swoosh scoop"}
         ]
-      }
-      ,      {
-      "part_name": "belt"
-      , "type": "blt"
-      , "active": "true"
-      , "label": "Belt"
-      , "values": [
-        {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
-        , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
-      ]
-    }
+            , "size": true
+            , "sizes": [
+            {"id": "01", "name": "short"}
+            , {"id": "02", "name": "knee"}
+            , {"id": "04", "name": "long"}
+        ]
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "000", "name": "none"}
+                , {"id": "002", "name": "cap"}
+                , {"id": "006", "name": "elbow"}
+                , {"id": "009", "name": "flared"}
+            ]
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "rosetta"
+            , "type": "ext"
+            , "label": "Rosetta"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+            {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+        ,      {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
+                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+            ]
+        }
     ]}
 ]
-
-
-
-    ,"default": {
-        "design": {
-            "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003"}
-            , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003"}
-        }
-        , "extras": {
-            "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-            "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-            "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-        }
-        , "dressSize": 12
-        , "model": "strap-whole-body"
-    }
 }
     , "collection":
     [

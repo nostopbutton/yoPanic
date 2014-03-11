@@ -28,10 +28,24 @@ body { padding-top: 165px;}
     padding-left: 20px;
     padding-right: 20px;
 }
+@media (max-width: 1200px) {
+    .navbar .nav,
+    .navbar .nav > li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    .navbar .nav,
+    .navbar .nav > li {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
 
 .navbar .nav > li {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
     border-right-style: solid;
     border-right-color: #ccc;
@@ -69,7 +83,7 @@ body { padding-top: 165px;}
     border-top-color: #bbb;
     border-top-width: 1px;
 
-    height: 40px;
+    height: 30px;
 }
 
 #footer .terms {

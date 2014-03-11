@@ -1,86 +1,116 @@
 {
-  "default": {
-    "design": {
-      "neckline":   {"type": "nek", "id": "001", "size": "10", "fabric": "013"}
-      , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "013"}
-    }
-    , "extras": {
-      "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-      "extras":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-      "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-    }
-    , "dressSize": 12
-    , "model": "skirt-whole-body"
-  }
-  , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-  , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist. Perfect with killer heels for a timeless show stopping look."]
-  , "fabricSets": [ {"setId": "s-vc"}]
-  , "trimFabricSets": [{"setId": "s-tr"}]
-  , "dressSizes": [10,12,14,16,18]
-  , "options": [
-  {
-    "option_name": "design"
-    , "active": "true"
-    , "label": "Customize"
-    , "parts": [
+    "style":
     {
-      "part_name": "neckline"
-      , "type": "nek"
-      , "active": "true"
-      , "label": "Neckline"
-      , "fabricSets": [{"setId": "s-vc"}]
-      , "values": [
-        {"id": "001", "name": "bateau"}
-        , {"id": "002", "name": "scoop"}
-        , {"id": "003", "name": "v-slit"}
-        , {"id": "004", "name": "wrap"}
-      ]
-      , "size": false
-      , "trim": true
-      , "trimFabricSets": [{"setId": "x-fl"}]
+        "styleId": "tops"
+        , "type": "top"
+        , "styleName": "Tops"
+        , "styleFormalName": "Separates"
+        , "shortDesc": "..."
+        , "strapline": "... "
+        , "description": [ "..."
+        , "..." ]
+        , "care": [ "Look after it, and it will last..."]
+        , "price": 600
+        , "dressSizes": [10,12,14,16,18]
+        , "silhouetteImage": "pat-10-body"
+        , "defaultItemId": "top-1"
+        , "foxyImage": "pat-10"
+        , "fc_category": ""
+        , "fc_code": ""
+        , "fc_name": ""
+        , "fc_price": ""
+        , "fc_image": ""
+        , "fc_url": ""
+        , "fc_neckline": ""
+        , "fc_sleeves": ""
+        , "fc_skirt": ""
+        , "fc_peplum": ""
+        , "fc_rosetta": ""
+        , "fc_belt": ""
     }
-    ,{
-      "part_name": "sleeves"
-      , "type": "slv"
-      , "label": "Sleeves"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-      , "null_value": "000"
-      , "values": [
-        {"id": "000", "name": "none"}
-        , {"id": "002", "name": "cap"}
-        , {"id": "006", "name": "elbow"}
-        , {"id": "009", "name": "flared"}
-      ]
-    }
-    ]
-  }]
-  , "extras": [
-  {
-    "name": "extras"
-    , "label": "Extras"
-    , "active": "true"
-    , "parts": [
+    , "design":
+{
+    "model": "skirt-whole-body"
+    , "options": [
     {
-      "part_name": "extras"
-      , "type": "ext"
-      , "label": "Extras"
-      , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-      , "values": [
-      {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-      , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-    ]
-    }
-      , {
-        "part_name": "belt"
-        , "type": "blt"
-        , "active": "true"
-        , "label": "Belt"
-        , "values": [
-          {"id": "002", "name": "Ribbon belt", "defaultFabric": "161", "fabricSets": [ {"setId": "x-pt"}]}
-          , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
-        ]
-      }
-  ]}
-]
+        "option_name": "design"
 
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [{"setId": "s-vc"}]
+            , "values": [
+            {"id": "001", "name": "bateau"}
+            , {"id": "002", "name": "scoop"}
+            , {"id": "003", "name": "v-slit"}
+            , {"id": "004", "name": "wrap"}
+        ]
+            , "size": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "000", "name": "none"}
+                , {"id": "002", "name": "cap"}
+                , {"id": "006", "name": "elbow"}
+                , {"id": "009", "name": "flared"}
+            ]
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "extras"
+            , "type": "ext"
+            , "label": "Extras"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+            , {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+        , {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "002", "name": "Ribbon belt", "defaultFabric": "161", "fabricSets": [ {"setId": "x-pt"}]}
+                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+            ]
+        }
+    ]}
+]
+}    , "collection":
+    [
+        {
+            "itemId": "top-1"
+            , "itemDesc": "Top - Aubergine"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "10", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "013", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
 }
