@@ -11,7 +11,7 @@
         , "Perfect with killer heels for a timeless show stopping look."]
         , "care": [ "Look after it, and it will last..."]
         , "price": 2000
-        , "dressSizes": [10,12,14,16,18]
+        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
         , "silhouetteImage": "pat-304-body"
         , "defaultItemId": "sw-1"
         , "foxyImage": "pat-304"
@@ -21,12 +21,20 @@
         , "fc_price": "price||aaad0f9617d3549a8aa950dd152eecae2811078c0806bdec110e201c0dd3ee5b"
         , "fc_image": "image||80c38c433856f7b1e23fb4ffe6e9819d0a5561266d0b971d5302c3d10c617e6a||open"
         , "fc_url": "url||95d7696a8bb8f60541a0e5f4651f5960dd3493633203c6039efd8bc2183e9255||open"
+
         , "fc_neckline": "neckline||46dfb3a7089aa5ccb84b34ba4d71396faab5c364ed9a8194ad27391727d5119b||open"
         , "fc_sleeves": "sleeves||f6db1dea6572aa92dd0110b5be09b14bdd093db30ea45b76e58fdbfb2f7c9f86||open"
         , "fc_skirt": "skirt||e16f8737dad968e1570342368d3cc8868498b0241da6161b08dde7746d2ce270||open"
         , "fc_peplum": "peplum||2241e7d783d7fb856d5aaf699c7b2862ae09995cb96446bb71aa3f52958c1a36||open"
         , "fc_rosetta": "rosetta||235a9134b4deb226b7e7b11aa7ce53bbe9e4dd75ccbc465ceb8ff2f331407a6a||open"
         , "fc_belt": "belt||7af78b54679a3a671c02c4e93523e90c6b4437f4a988ff4e2b056ae06c78c35f||open"
+
+        , "fc_size": "size||909f16f6f4ad8bf6da534f2b24bc7365f652c6c7b6454d43e4071e28a5c83884||open"
+        , "fc_bust": "bust||b8370eb2fd48b620e01a21c968b1cf607c499347fcd2baf907da94b447da66d6||open"
+        , "fc_waist": "waist||2899683ea8d9e0c683cef30c18081e9cfc8ab73ea68dd243200e6b4b84ca6eb6||open"
+        , "fc_hips": "hips||bfc249c7c8bbe4c642ee2c6931dcb139b3ee30b8649633eb9240330b48eecfb1||open"
+        , "fc_hollowfloor": "hollow_to_floor||8cc5f85685787e36d13408cfc63a06f210374dbaa68741d91213748e2470449b||open"
+        , "fc_height": "my_height||c38f34b7defa9f27b2f375f5b8ca013de1b9b9cb763a1b0a53c834e2d1e035dc||open"
     }
     , "design":
 {

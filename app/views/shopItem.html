@@ -1,134 +1,365 @@
 <div id="shopItemView" class="container">
-
-    <!--<div class="row">-->
-
-    <!--<div class="col-md-10 col-md-offset-1">-->
-    <!--<div shop-breadcrumb step="shop"></div>-->
-    <!--</div>-->
-
-    <!--</div>-->
-
-    <div class="row">
-
-        <div id="view_dress_panel" class="col-md-4  col-md-offset-1">
-
-                <div class="row dress">
-                    <img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"
-                         ng-src="images/items/{{item.itemDesign.itemId}}.png" class="">
+<div class="modal fade" id="sizeChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header row">
+                <div class="col-md-6">
+                    <h3>SizeChart</h3>
                 </div>
-
-        </div>
-
-        <div id="dress_designer_panel" class="col-md-6">
-            <!--<div class="container style">-->
-                <!--<div class="row">-->
-                <!--<div shop-breadcrumb step="shop"></div>-->
-                <!--</div>-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row formal-name">
-                            {{item.style.styleFormalName}}
-                        </div>
-                        <div class="row name">
-                            {{item.style.styleName}}
-                        </div>
-                        <div class="row price">
-                            HKD {{item.style.price}}
-                        </div>
-                    </div>
-                    <div class="col-md-6 align-right" style="margin-bottom:10px">
-                        <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8">
-                            <!-- https://wiki.foxycart.com/v/1.1/products -->
-                            <input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>
-                            <input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}"/>
-                            <input type="hidden" name="{{item.style.fc_name}}"
-                                   value="{{item.style.styleName}} ({{item.style.styleFormalName}})"/>
-                            <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}"/>
-                            <input type="hidden" name="{{item.style.fc_image}}" value="images/items/{{item.itemDesign.itemId}}.png"/>
-                            <input type="hidden" name="{{item.style.fc_url}}"
-                                   value="#!/shop/{{item.style.styleId}}/{{item.itemDesign.itemId}}"/>
-                            <!-- Custom Product Options -->
-                            <input type="hidden" name="{{item.style.fc_neckline}}"
-                                   value="{{item.itemDesign.itemDesign.design.neckline.type}}-{{item.itemDesign.itemDesign.design.neckline.id}}-{{item.itemDesign.itemDesign.design.neckline.size}}-{{item.itemDesign.itemDesign.design.neckline.fabric}}"/>
-                            <input type="hidden" name="{{item.style.fc_sleeves}}"
-                                   value="{{item.itemDesign.itemDesign.design.sleeves.type}}-{{item.itemDesign.itemDesign.design.sleeves.id}}-{{item.itemDesign.itemDesign.design.sleeves.size}}-{{item.itemDesign.itemDesign.design.sleeves.fabric}}"/>
-                            <input type="hidden" name="{{item.style.fc_skirt}}"
-                                   value="{{item.itemDesign.itemDesign.design.skirt.type}}-{{item.itemDesign.itemDesign.design.skirt.id}}-{{item.itemDesign.itemDesign.design.skirt.size}}-{{item.itemDesign.itemDesign.design.skirt.fabric}}"/>
-                            <input type="hidden" name="{{item.style.fc_peplum}}"
-                                   value="{{item.itemDesign.itemDesign.extras.peplum.type}}-{{item.itemDesign.itemDesign.extras.peplum.id}}-{{item.itemDesign.itemDesign.extras.peplum.size}}-{{item.itemDesign.itemDesign.extras.peplum.fabric}}"/>
-                            <input type="hidden" name="{{item.style.fc_rosetta}}"
-                                   value="{{item.itemDesign.itemDesign.extras.rosetta.type}}-{{item.itemDesign.itemDesign.extras.rosetta.id}}-{{item.itemDesign.itemDesign.extras.rosetta.size}}-{{item.itemDesign.itemDesign.extras.rosetta.fabric}}"/>
-                            <input type="hidden" name="{{item.style.fc_belt}}"
-                                   value="{{item.itemDesign.itemDesign.extras.belt.type}}-{{item.itemDesign.itemDesign.extras.belt.id}}-{{item.itemDesign.itemDesign.extras.belt.size}}-{{item.itemDesign.itemDesign.extras.belt.fabric}}"/>
-                            <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                                   onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'item/buy']);"/>
-                        </form>
-                        <!--<div review-link design="param(form)" sil="style"/>-->
-
-                        <!--</div>-->
-
-                    </div>
+                <div class="col-md-6 align-right">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
+            </div>
+            <div class="modal-body">
 
-                <div class="row top-border" style="padding:10px 0 10px 0">
-                    <ul>
-                        <li class="description">{{item.style.strapline}}</li>
-                        <li class="description" ng-repeat="para in item.style.description">{{para}}</li>
-                    </ul>
-                </div>
-                <div class="row top-border" style="margin-bottom:10px">
-                    <h4>Sizing</h4>
-                    <select>
-                        <option ng-repeat="size in item.style.dressSizes" value="size">{{size}}</option>
-                    </select>
-                </div>
-                <div class="row top-border">
-                    <h4>Info</h4>
-                    <p ng-repeat="para in item.style.care">{{para}}</p>
-                </div>
-                <div class="row top-border">
-                    <h5>Not your perfect dress?</h5>
-                    <div class="row">
-                        <div class="col-sm-6 align-center">
-                            <a class="btn btn-default  igg-design-buttons" id="customize"
-                               href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}"
-                               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                               onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{item.style.styleId}}/{{item.itemDesign.itemId}}']);">
-                                Customise this</a>
-                        </div>
-                        <div class="col-sm-6 align-right">
-                            <!--<div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">-->
-                            <a class="btn btn-default  igg-design-buttons" href="#!/collection"
-                               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                               onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">
-                                Try a different style</a>
-                            <!--</div>-->
-                        </div>
+                <p>Our dresses are designed to fit the following size bodies perfectly.</p>
 
-                        <!--{{item.itemDesign.itemId}}-->
-                    </div>
-                <!--</div>-->
+                <p class="centeredImage">
+                    <img src="images/sizing/sizeChart.png" class="img-polaroid">
+                </p>
+
+                <p>Plus – thanks to some clever designs and fabric choices all of our sizes have a
+                    little stretch and so for further guidance on picking the best size for you please
+                    see the range of body measurements below that we think each size flatters the most. </p>
+
+                <p class="centeredImage">
+                    <img src="images/sizing/bodyMeasurements.png" class="img-polaroid">
+                </p>
+
+                <p>However please don’t despair if you measure yourself and you don’t fall any one size
+                    – remember at BRAZEN you can mix and match sizes for the top and bottom on many of
+                    our dresses or provide key body measurements and 400 HKD for a fully customized size
+                    (see how to measure)</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!--<div class="row" id="debug_view">-->
-    <!--<div class="col-md-12 align-center">-->
-    <!--<a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>-->
-    <!--</div>-->
-    <!--<hr>-->
-    <!--<div collapse="isDebugCollapsed">-->
-    <!--<pre>form={{form}}</pre>-->
-    <!--<pre>fabricSets={{fabricSets}}</pre>-->
-    <!--<pre>trimFabricSets={{trimFabricSets}}</pre>-->
-    <!--<pre>dressFabricSets={{dressFabricSets}}</pre>-->
 
-    <!--<pre>master={{master}}</pre>-->
-    <!--<pre>category={{category}}</pre>-->
-    <!--<pre>design={{design}}</pre>-->
-    <!--<pre>range={{range}}</pre>-->
-    <!--</div>-->
-    <!--</div>-->
+<div class="row">
+
+<div id="view_dress_panel" class="col-md-4  col-md-offset-1">
+
+    <div class="row dress">
+        <img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"
+             ng-src="images/items/{{item.itemDesign.itemId}}.png" class="">
+    </div>
+
+</div>
+
+<div id="shop_item_panel" class="col-lg-6 col-lg-offset-1 col-md-8 col-md-offset-">
+
+
+<div class="row">
+<!--<div design-breadcrumb></div>-->
+<ul class="breaded" id="options">
+    <!--<li ng-repeat="part in item.design.options[0].parts" ng-class="{active: part.active}">-->
+    <!--<a href="#{{part.part_name}}" data-toggle="tab">{{part.label}}</a>-->
+    <!--</li>-->
+    <li ng-class="{active: false}">
+        <a href="#!/collection">Collection</a>
+    </li>
+    <li ng-class="{active: true}">
+        <a href="#dress_details" data-toggle="tab">Dress</a>
+    </li>
+    <li ng-class="{active: false}">
+        <a href="#sizing" data-toggle="tab">Sizing</a>
+    </li>
+    <li>
+        <a href="#">Place order</a>
+    </li>
+</ul>
+
+<!-- Start of inner pannel --->
+<div class="option-panel">
+
+<div class="tab-content">
+<div id="dress_details" class="tab-pane" ng-class="{active: true}">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row name">
+                {{item.style.styleName}}
+            </div>
+            <div class="row formal-name">
+                {{item.style.styleFormalName}}
+            </div>
+            <div class="row price">
+                HKD {{item.style.price}}
+            </div>
+        </div>
+        <div class="col-md-8 align-right" style="margin-bottom:10px">
+            <a class="btn btn-danger  igg-design-buttons"
+               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+               href="#sizing" data-toggle="tab">Choose size and <br>Place order</a>
+
+        </div>
+    </div>
+    <div class="row top-border" style="padding:10px 0 10px 0">
+        <ul>
+            <li class="description">{{item.style.strapline}}</li>
+            <li class="description" ng-repeat="para in item.style.description">{{para}}</li>
+        </ul>
+    </div>
+    <div class="row top-border">
+        <h4>Info</h4>
+
+        <p ng-repeat="para in item.style.care">{{para}}</p>
+    </div>
+    <div class="row top-border">
+        <h5>Not your perfect dress?</h5>
+
+        <div class="row">
+            <div class="col-sm-6 align-center">
+                <a class="btn btn-default  igg-design-buttons" id="customize"
+                   href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                   onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{item.style.styleId}}/{{item.itemDesign.itemId}}']);">
+                    Customise this</a>
+            </div>
+            <div class="col-sm-6 align-right">
+                <!--<div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">-->
+                <a class="btn btn-default  igg-design-buttons" href="#!/collection"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                   onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">
+                    Try a different style</a>
+                <!--</div>-->
+            </div>
+
+            <!--{{item.itemDesign.itemId}}-->
+        </div>
+        <!--</div>-->
+    </div>
+</div>
+
+<div id="sizing" class="tab-pane" ng-class="{active: false}">
+    <div class="span12">
+        <tabs class="tabbable ">
+            <pane class="" heading="Standard Sizing" active="true">
+
+                <div class="row">
+                    <form name="sizingForm" class="" role="form">
+                        <div class="col-sm-6">
+                            <h4>a. Select your dress size:</h4>
+                            <select ng-model="sizing.size" name="sizingForm"
+                                    ng-options="size for size in item.style.dressSizes">
+                            </select>
+
+                            <p>For help in choosing the right size for you please refer to our
+                                <!--<a data-toggle="modal" ng-click="open()">size chart</a>-->
+                                <a data-toggle="modal" data-target="#sizeChartModal">size chart</a>
+                            </p>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>b. Adjust for your personal measurements:</h4>
+
+                            <p>Select your measurements to help our pattern makers get the right
+                                waist, sleeve and body length</p>
+                            <!-- TODO: the input disappears in responsive mode -->
+                            <div class="form-group">
+                                <label for="bustInput" class="control-label">Bust:</label>
+
+                                <div class="input-group">
+                                    <!--<span class="input-group-addon">Bust:</span>-->
+                                    <input type="text" class="form-control" id="bustInput" ng-model="sizing.bust">
+                                    <span class="input-group-addon">in</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="waistInput" class="control-label">Waist:</label>
+
+                                <div class="input-group">
+                                    <!--<span class="input-group-addon">Bust:</span>-->
+                                    <input type="text" class="form-control" id="waistInput" ng-model="sizing.waist">
+                                    <span class="input-group-addon">in</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hipsInput" class="control-label">Hips:</label>
+
+                                <div class="input-group">
+                                    <!--<span class="input-group-addon">Bust:</span>-->
+                                    <input type="text" class="form-control" id="hipsInput" ng-model="sizing.hips">
+                                    <span class="input-group-addon">in</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hollowInput" class="control-label">Hollow-to-Floor:</label>
+
+                                <div class="input-group">
+                                    <!--<span class="input-group-addon">Bust:</span>-->
+                                    <input type="text" class="form-control" id="hollowInput" ng-model="sizing.hollowfloor">
+                                    <span class="input-group-addon">in</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="heightInput" class="control-label">Height:</label>
+
+                                <div class="input-group">
+                                    <!--<span class="input-group-addon">Bust:</span>-->
+                                    <input type="text" class="form-control" id="heightInput" ng-model="sizing.height">
+                                    <span class="input-group-addon">in</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="row align-right top-border">
+                    <form action="https://aurza.foxycart.com/cart" method="post" name="foxyForm" accept-charset="utf-8">
+                        <!-- https://wiki.foxycart.com/v/1.1/products -->
+                        <input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>
+                        <input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}"/>
+                        <input type="hidden" name="{{item.style.fc_name}}"
+                               value="{{item.style.styleName}} ({{item.style.styleFormalName}})"/>
+                        <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}"/>
+                        <input type="hidden" name="{{item.style.fc_image}}"
+                               value="images/items/{{item.itemDesign.itemId}}.png"/>
+                        <input type="hidden" name="{{item.style.fc_url}}"
+                               value="#!/shop/{{item.style.styleId}}/{{item.itemDesign.itemId}}"/>
+                        <!-- Custom Product Options -->
+                        <input type="hidden" name="{{item.style.fc_neckline}}"
+                               value="{{item.itemDesign.itemDesign.design.neckline.type}}-{{item.itemDesign.itemDesign.design.neckline.id}}-{{item.itemDesign.itemDesign.design.neckline.size}}-{{item.itemDesign.itemDesign.design.neckline.fabric}}"/>
+                        <input type="hidden" name="{{item.style.fc_sleeves}}"
+                               value="{{item.itemDesign.itemDesign.design.sleeves.type}}-{{item.itemDesign.itemDesign.design.sleeves.id}}-{{item.itemDesign.itemDesign.design.sleeves.size}}-{{item.itemDesign.itemDesign.design.sleeves.fabric}}"/>
+                        <input type="hidden" name="{{item.style.fc_skirt}}"
+                               value="{{item.itemDesign.itemDesign.design.skirt.type}}-{{item.itemDesign.itemDesign.design.skirt.id}}-{{item.itemDesign.itemDesign.design.skirt.size}}-{{item.itemDesign.itemDesign.design.skirt.fabric}}"/>
+                        <input type="hidden" name="{{item.style.fc_peplum}}"
+                               value="{{item.itemDesign.itemDesign.extras.peplum.type}}-{{item.itemDesign.itemDesign.extras.peplum.id}}-{{item.itemDesign.itemDesign.extras.peplum.size}}-{{item.itemDesign.itemDesign.extras.peplum.fabric}}"/>
+                        <input type="hidden" name="{{item.style.fc_rosetta}}"
+                               value="{{item.itemDesign.itemDesign.extras.rosetta.type}}-{{item.itemDesign.itemDesign.extras.rosetta.id}}-{{item.itemDesign.itemDesign.extras.rosetta.size}}-{{item.itemDesign.itemDesign.extras.rosetta.fabric}}"/>
+                        <input type="hidden" name="{{item.style.fc_belt}}"
+                               value="{{item.itemDesign.itemDesign.extras.belt.type}}-{{item.itemDesign.itemDesign.extras.belt.id}}-{{item.itemDesign.itemDesign.extras.belt.size}}-{{item.itemDesign.itemDesign.extras.belt.fabric}}"/>
+                        <!-- Size Options -->
+                        <input type="hidden" name="{{item.style.fc_size}}" value="{{sizing.size}}" />
+                        <input type="hidden" name="{{item.style.fc_bust}}" value="{{sizing.bust}}" />
+                        <input type="hidden" name="{{item.style.fc_waist}}" value="{{sizing.waist}}" />
+                        <input type="hidden" name="{{item.style.fc_hips}}" value="{{sizing.hips}}" />
+                        <input type="hidden" name="{{item.style.fc_hollowfloor}}" value="{{sizing.hollowfloor}}" />
+                        <input type="hidden" name="{{item.style.fc_height}}" value="{{sizing.height}}" />
+
+
+                        <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
+                               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                               onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'item/buy']);"/>
+                    </form>
+                </div>
+
+            </pane>
+
+            <!--<pane class="" heading="Custom Sizing">-->
+            <!--<div class="row">-->
+            <!--<div class="span12">-->
+            <!--<p>For just 400 HKD our tailors will use your body measurements to create your-->
+            <!--perfect dress</p>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+            <!--<div class="col-sm-6">-->
+            <!--<div class="row">-->
+
+            <!--<div class="control-group offset2">-->
+            <!--<label class="control-label" for="inputBust">Bust (Inches): </label>-->
+
+            <!--<div class="controls">-->
+            <!--<select class="span4" id="inputBust">-->
+            <!--<option selected disabled class="optionHelp">Please Select</option>-->
+            <!--<option>1</option>-->
+            <!--<option>2</option>-->
+            <!--<option>3</option>-->
+            <!--<option>4</option>-->
+            <!--<option>5</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+            <!--<div class="control-group offset2">-->
+            <!--<label class="control-label" for="inputWaist">Waist (Inches): </label>-->
+
+            <!--<div class="controls">-->
+            <!--<select class="span4" id="inputWaist">-->
+            <!--<option selected disabled class="optionHelp">Please Select</option>-->
+            <!--<option>1</option>-->
+            <!--<option>2</option>-->
+            <!--<option>3</option>-->
+            <!--<option>4</option>-->
+            <!--<option>5</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="row">-->
+            <!--<div class="control-group offset2">-->
+            <!--<label class="control-label" for="inputHips">Hips (Inches): </label>-->
+
+            <!--<div class="controls">-->
+            <!--<select class="span4" id="inputHips">-->
+            <!--<option selected disabled class="optionHelp">Please Select</option>-->
+            <!--<option>1</option>-->
+            <!--<option>2</option>-->
+            <!--<option>3</option>-->
+            <!--<option>4</option>-->
+            <!--<option>5</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+            <!--<div class="control-group offset2">-->
+            <!--<label class="control-label" for="inputHollow">Hollow to Floor-->
+            <!--(Inches): </label>-->
+
+            <!--<div class="controls">-->
+            <!--<select class="span4" id="inputHollow">-->
+            <!--<option selected disabled class="optionHelp">Please Select</option>-->
+            <!--<option>1</option>-->
+            <!--<option>2</option>-->
+            <!--<option>3</option>-->
+            <!--<option>4</option>-->
+            <!--<option>5</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+            <!--<div class="control-group offset2">-->
+            <!--<label class="control-label" for="inputHeight">Height (Inches): </label>-->
+
+            <!--<div class="controls">-->
+            <!--<select class="span4" id="inputHeight">-->
+            <!--<option selected disabled class="optionHelp">Please Select</option>-->
+            <!--<option>1</option>-->
+            <!--<option>2</option>-->
+            <!--<option>3</option>-->
+            <!--<option>4</option>-->
+            <!--<option>5</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+            <!--<p class="centeredImage">-->
+            <!--<img src="images/sizing/customMeasure.png" class="img-polaroid">-->
+            <!--</p>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</pane>-->
+        </tabs>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
 </div>
 <!-- /designBuildView -->

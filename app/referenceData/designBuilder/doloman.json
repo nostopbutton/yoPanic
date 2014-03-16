@@ -11,7 +11,7 @@
         , "..." ]
         , "care": [ "Look after it, and it will last..."]
         , "price": 2000
-        , "dressSizes": [10,12,14,16,18]
+        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
         , "silhouetteImage": "pat-305-body"
         , "defaultItemId": "do-1"
         , "foxyImage": "pat-305"
@@ -21,12 +21,20 @@
         , "fc_price": "price||966b6aadcdd6a21c5bc3b650040a143af7c65d098496348c34fce6c5f2c68c23"
         , "fc_image": "image||f1c5cc3d76405ad2b5eb6982d13e9e6e9b40ba136a58086fc1708784ecb9e455||open"
         , "fc_url": "url||8abf282aac2377375e6619b9776a29a990603c7ceefc63d098e1c3caaff7f968||open"
+
         , "fc_neckline": "neckline||4cee8cc34f85e62204a990571e43af0aae4e0478c39d047e6847e5dd182c743e||open"
         , "fc_sleeves": "sleeves||0e42e4597bed2b6ccd1984ef70a7700f1e45be3d30c29e2f8b7a273353cd4283||open"
         , "fc_skirt": "skirt||4d6de66e3263b2a08244ce8efcaa6c14da33ea0221205ae57ea7eb99b0f9366f||open"
         , "fc_peplum": "peplum||f2ed8231e00acd2a628ddd3f3ef5bcf9eb05a25960e7ffd07ea69db173e33546||open"
         , "fc_rosetta": "rosetta||60a594180096f5085cc0218f2b97e968393f3fd899fede3555b71855137ef049||open"
         , "fc_belt": "belt||b7cf9ed773e9b522f37221edc3ed7ba3068d778fe49666d5da87d6d0cf402fe8||open"
+
+        , "fc_size": "size||7b27534383d877d8000a66c10804ef4ab1eb2cf974859020fbfe993810c41398||open"
+        , "fc_bust": "bust||fdabbeb1519668463b5ef83507e24c3cc7a8afe05f99c2cea7ba07123aa2b4b2||open"
+        , "fc_waist": "waist||25eb38df9c854bd8fc49f806ffbf26cbe8cbcc582f9918b329dac0c37bf4d3f0||open"
+        , "fc_hips": "hips||01ff9f0b7bcd8bc92d10f3d3fa1ca7f66e1f6796151effa2fa3c29e1c9868630||open"
+        , "fc_hollowfloor": "hollow_to_floor||063f488b1637658c68aebc8e62b222a79c89f87908f5cfe45780632fa875aea2||open"
+        , "fc_height": "my_height||78bb2576fabda433529056287d270e3f3f1d341edd68bb5f0b6486856521495a||open"
     }
     , "design":
 {

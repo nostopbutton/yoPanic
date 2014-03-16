@@ -1,7 +1,7 @@
 {
     "style":
     {
-        "styleId": "maxi-shirt"
+        "styleId": "shirt-maxi"
         , "type": "silk"
         , "styleName": "Claudia"
         , "styleFormalName": "Maxi-Shirt Dress"
@@ -11,22 +11,30 @@
         , "Perfect with killer heels for a timeless show stopping look." ]
         , "care": [ "Look after it, and it will last..."]
         , "price": 3000
-        , "dressSizes": [10,12,14,16,18]
+        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
         , "silhouetteImage": "pat-203maxi-body"
         , "defaultItemId": "shtm-1"
         , "foxyImage": "pat-203maxi"
-        , "fc_category": "category||87d54c8b8c02de63ed7ec6697cdb8a91806cb4bfced9f907e09939d5b2f376b9"
-        , "fc_code": "code||d199f790331a9b8f5f38e8e8317e5275f89f0d2b89c81475b652c27fc692fd38"
-        , "fc_name": "name||1cb305629b5ac901cdc6892305b8d4ce55f9d20cb557e75e1cf319cb8e187a65"
-        , "fc_price": "price||238854caf002325f2256e81a51e4801fe746df27651ba90a24a60fa644922782"
-        , "fc_image": "image||0494fa01ec6c51a1c33fc242583ca88282bfa72d52b39deeaa6516491c5ded35||open"
-        , "fc_url": "url||8a5e4e2d34d99214f2e6944c22ebb810160dffaba0f8977b9c6b4fad02f96851||open"
-        , "fc_neckline": "neckline||386b7fa13a541448d98f93f2bf8f7cb3335f38d9b982b8ebc9cbe18b785cdbe4||open"
-        , "fc_sleeves": "sleeves||34d3d7a2bde1adf5eec6d96ac0057677ea972d2bab2386e4a93097fb92c343f9||open"
-        , "fc_skirt": "skirt||59a622578a9caace90af0877384c6c60f53011bc2f51db5752498eb7a4175dd8||open"
-        , "fc_peplum": "peplum||bf4f1c5bf8e297d79388bdf4f1d125836e401e9ae8611d680bc1d15888fbd667||open"
-        , "fc_rosetta": "rosetta||028756feda54b1fee44034ad9c1c6ef22af22d9c2e59c1e05b30c8e2f7e24911||open"
-        , "fc_belt": "belt||97180bd37dd0c77cf041e3530fc41e550d431fc612f27553656d89d076d02f72||open"
+        , "fc_category": "category||31b15320b56008f194e77afe8c28be726e177d430cce844e8da42b190117c473"
+        , "fc_code": "code||75e0afeb9c76fb83c4c861b263270e78708ad90baf142d2ae581e79981d243cc"
+        , "fc_name": "name||3da6a5a214509515248482ab6230d0db4a076a06b9f2e855b7fdc5a624756d33"
+        , "fc_price": "price||66473807db29ab3df734243eba835f124ac389a01d0ed601ee5b31034afbb6eb"
+        , "fc_image": "image||a27938bda721943f0e0123bfb404a0a9b39ea02ec1a3f3d89bce1f68c5705d99||open"
+        , "fc_url": "url||b0172aafe74d1272a742ea1fca86c65083dfe9d69b1e7b4b574da4ab34065e35||open"
+
+        , "fc_neckline": "neckline||1481510e2fccf4220e8b54244080157adc26260d9f0eae9e535837ff939f9351||open"
+        , "fc_sleeves": "sleeves||ebc3e6112bd3b73d28c204e6e1101f19463f798fe4f8354e87df15c6ab9af5d9||open"
+        , "fc_skirt": "skirt||7ea092f25f0efefc631bc3110a4670e8ad7c0185dc0dba54452325d054a85878||open"
+        , "fc_peplum": "peplum||2f9380638fbcff5a4450507bfae7d2f637a2fc9f49ecad5534545f787ac6beb9||open"
+        , "fc_rosetta": "rosetta||a2aca946fe0311fdb733bb3adfea74933b39ac3f808f9ba4a5f7d5881cd79ba1||open"
+        , "fc_belt": "belt||73f917142761a078f277d14f989a97954736330a0cd7a1ec7204c081bb669223||open"
+
+        , "fc_size": "size||02d80d7b9e2d559598dfb641b1696d157ba05275f13d655a3939fdaeddd56c27||open"
+        , "fc_bust": "bust||78bf618aa52ecb412003ddf527f3d8ab1f5f659e05c841f3af0572c1d042e2de||open"
+        , "fc_waist": "waist||57cb17ec26b8b2b342385f76e0870447af484e216ae44dd0c9c5323c1ee54dbc||open"
+        , "fc_hips": "hips||acb7b02b9d097c06fa82305561438fe611b125b8bedf0a46d4881b160d6eb9a9||open"
+        , "fc_hollowfloor": "hollow_to_floor||0ebf5912bfa55383396b8f218baeaaab2d8046a7ce192ab6e00f4e48ba424b01||open"
+        , "fc_height": "my_height||ffdb5dcb568d8622d79b1bf3648f6843009a7e1a1cc2651516cd20bd4fbfb3e6||open"
     }
     , "design":
 {

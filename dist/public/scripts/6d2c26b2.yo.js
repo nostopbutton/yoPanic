@@ -1098,7 +1098,6 @@ angular.module('panicApp.Controllers').controller('DressCollectionCtrl', [
   function ($scope, Range, CatalogueService, $rootScope, $window, $location, $routeParams) {
     trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
     // Put Dress Collection data into page scope
-    //      $scope.dresses = Range.itemCollection();
     var stylesPromise = CatalogueService.getStyleListPromise();
     var styles = [];
     stylesPromise.then(function (result) {
@@ -1114,7 +1113,6 @@ angular.module('panicApp.Controllers').controller('DressCollectionCtrl', [
           'shirt',
           'shirt-maxi'
         ]);
-      //                styles);
       var items = [], itemIds = [];
       itemsPromise.then(function (result) {
         // this is only run after $http completes
@@ -1122,94 +1120,115 @@ angular.module('panicApp.Controllers').controller('DressCollectionCtrl', [
         ;
       });
     });
-    //        var styleCat, styleIds = [];
-    //
-    //        Range.styleCatalogue().$promise.then(function (result) {
-    //            styleCat = result;
-    //        })
-    //
-    //        angular.forEach(styleCat, function (style) {
-    //            styleIds = styleIds.concat(style.styleId);
-    //        });
-    var silhouettes_reset, types_reset;
-    silhouettes_reset = [
+    //      var silhouettes_reset, types_reset;
+    $scope.silhouettes = [
+      {
+        id: '',
+        label: '-- All silhouettes --'
+      },
       {
         id: 'sheath',
-        label: 'COCO (Sheath)',
-        checked: true
+        label: 'COCO (Sheath)'
       },
       {
         id: 'swing',
-        label: 'AUDREY (Swing)',
-        checked: true
+        label: 'AUDREY (Swing)'
       },
       {
         id: 'flare',
-        label: 'ALEXA (Flare)',
-        checked: true
+        label: 'ALEXA (Flare)'
       },
       {
         id: 'doloman',
-        label: 'CHRISTINA (Doloman)',
-        checked: true
+        label: 'CHRISTINA (Doloman)'
       },
       {
         id: 'swoosh',
-        label: 'KATE (Swoosh)',
-        checked: true
+        label: 'KATE (Swoosh)'
       },
       {
         id: 'shift',
-        label: 'EDDIE (Shift)',
-        checked: true
+        label: 'EDDIE (Shift)'
       },
       {
         id: 'shirt',
-        label: 'ELLE (Shirt)',
-        checked: true
+        label: 'ELLE (Shirt)'
       },
       {
         id: 'maxi-shirt',
-        label: 'CLAUDIA (Maxi-shirt)',
-        checked: true
+        label: 'CLAUDIA (Maxi-shirt)'
       }
     ];
-    types_reset = [
+    $scope.types = [
+      {
+        id: '',
+        label: '-- All dresses --'
+      },
       {
         id: 'dress',
-        label: 'Dress',
-        checked: true
+        label: 'Dress'
       },
       {
         id: 'skirt',
-        label: 'Skirt',
-        checked: true
+        label: 'Skirt'
+      },
+      {
+        id: 'top',
+        label: 'Top'
       }
     ];
-    $scope.search = function (item) {
-      var found = false;
-      for (var i = 0; i < $scope.silhouettes.length; i++) {
-        if ($scope.silhouettes[i].id == item.styleId) {
-          console.log('Found dress: ' + item.styleId + ' checked: ' + $scope.silhouettes[i].checked);
-          if ($scope.silhouettes[i].checked) {
-            for (var i = 0; i < $scope.types.length; i++) {
-              if ($scope.types[i].id == item.catId) {
-                console.log('Found type: ' + item.catId + ' checked: ' + $scope.types[i].checked);
-                if ($scope.types[i].checked)
-                  found = true;
-              }
-            }
-          }
-          break;
-        }
+    $scope.colours = [
+      {
+        id: '',
+        label: '-- All colours --'
+      },
+      {
+        id: 'red',
+        label: 'Red'
+      },
+      {
+        id: 'blue',
+        label: 'Blue'
+      },
+      {
+        id: 'black',
+        label: 'Black'
       }
-      return found;
-    };
+    ];
+    $scope.silhouetteFilter = $scope.silhouettes[0].id;
+    $scope.typeFilter = $scope.types[0].id;
+    $scope.colourFilter = $scope.colours[0].id;
+    //            $scope.silFilter = { id: '', label: 'All'};
+    //            $scope.updateSilFilter = function(val){
+    //                alert (val);
+    //                $scope.silFilter = val;
+    //                alert (val);
+    //            }
+    //      $scope.search = function (item){
+    //        var found = false;
+    //        for(var i = 0; i < $scope.silhouettes.length; i++) {
+    //          if ($scope.silhouettes[i].id == item.styleId) {
+    //            console.log("Found dress: "+ item.styleId + " checked: "+ $scope.silhouettes[i].checked)
+    //            if ($scope.silhouettes[i].checked) {
+    //              for(var i = 0; i < $scope.types.length; i++) {
+    //                if ($scope.types[i].id == item.catId) {
+    //                  console.log("Found type: "+ item.catId + " checked: " + $scope.types[i].checked)
+    //                  if ($scope.types[i].checked)
+    //                    found = true;
+    //                }
+    //              }
+    //            }
+    //            break;
+    //          }
+    //        }
+    //        return found;
+    //      };
     $scope.reset = function () {
-      $scope.silhouettes = angular.copy(silhouettes_reset);
-      $scope.types = angular.copy(types_reset);
-    };
-    $scope.reset();
+      $scope.silhouetteFilter = $scope.silhouettes[0].id;
+      $scope.typeFilter = $scope.types[0].id;
+      $scope.colourFilter = $scope.colours[0].id;
+    }  //      $scope.reset();
+;
   }
 ]);
 'use strict';
@@ -1231,6 +1250,14 @@ angular.module('panicApp.Controllers').controller('ShopItemCtrl', [
       // this is only run after $http completes
       $scope.item = angular.copy(result);
     });
+    $scope.sizing = {
+      'size': '',
+      'bust': '',
+      'waist': '',
+      'hips': '',
+      'hollowfloor': '',
+      'height': ''
+    };
   }
 ]);
 'use strict';

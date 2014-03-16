@@ -16,4 +16,13 @@ angular.module('panicApp.Controllers')
             $scope.item = angular.copy(result);
         });
 
+        $scope.sizing = {
+            "size": "",
+            "bust":"",
+            "waist":"",
+            "hips":"",
+            "hollowfloor":"",
+            "height":""
+        }
+
     }]);
