@@ -35,18 +35,13 @@
         , "fc_hips": "hips||5bf75b34e9abaf0961bf707c8e418a5b713bb6181cfd54db8e8d82c36cdcde76||open"
         , "fc_hollowfloor": "hollow_to_floor||4a62351471aca76b91d3bdc515a459362f34113a98ef5230eab1b4a06420a2f9||open"
         , "fc_height": "my_height||5dd0409d84afd9a583964a731f0204c2a32a11edebeaf229b0c281d218433059||open"
-
     }
-
-    , "design":
+    , "design_builder":
 {
     "model": "strap-whole-body"
-
     , "options": [
     {
         "option_name": "design"
-        , "active": "true"
-        , "label": "Customize"
         , "parts": [
         {
             "part_name": "neckline"

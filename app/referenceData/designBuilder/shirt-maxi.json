@@ -36,7 +36,7 @@
         , "fc_hollowfloor": "hollow_to_floor||0ebf5912bfa55383396b8f218baeaaab2d8046a7ce192ab6e00f4e48ba424b01||open"
         , "fc_height": "my_height||ffdb5dcb568d8622d79b1bf3648f6843009a7e1a1cc2651516cd20bd4fbfb3e6||open"
     }
-    , "design":
+    , "design_builder":
 {
     "model": "strap-whole-body"
     , "options": [

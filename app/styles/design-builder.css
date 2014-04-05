@@ -1,19 +1,11 @@
-.silhouette-filter a:link {color:#d14d46;}
-.silhouette-filter a:visited {color:#d14d46;}
-.silhouette-filter a:hover {color:#d14d46;}
-.silhouette-filter a:active {color:#d14d46;}
-
-.dress {
+.dress_image_panel {
     position: relative;
     margin: 0 auto;
     text-align: center;
     display: block;
     height: 530px;
-    width: 100%;
-}
+    width: 260px;
 
-.dress{
-    margin:0 0 10px 5px;
     padding: 10px 0 0 0;
     background: white;
     /*position: relative;*/
@@ -29,80 +21,135 @@
     background: -ms-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* IE10+ */
     background: linear-gradient(to right,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#efefef',GradientType=1 ); /* IE6-8 */
-
 }
 
-/*.dress:before,*/
-/*.dress:after {*/
-    /*content: '';*/
-    /*z-index: -1;*/
-    /*position: absolute;*/
-    /*left: 15px;*/
-    /*bottom: 15px;*/
-    /*width: 70%;*/
-    /*max-width: 300px; *//* avoid rotation causing ugly appearance at large container widths */
-    /*max-height: 100px;*/
-    /*height: 55%;*/
-    /*-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
-    /*-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
-    /*box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.3);*/
-    /*-webkit-transform: skew(-15deg) rotate(-6deg);*/
-    /*-moz-transform: skew(-15deg) rotate(-6deg);*/
-    /*-ms-transform: matrix(0.494,-0.069,-0.120,0.876,-26.051,1.633);*/
-    /*-o-transform: skew(-15deg) rotate(-6deg);*/
-    /*transform: skew(-15deg) rotate(-6deg); }*/
-
-/*.dress:after {*/
-    /*left: auto;*/
-    /*right: 15px;*/
-    /*-webkit-transform: skew(15deg) rotate(6deg);*/
-    /*-moz-transform: skew(15deg) rotate(6deg);*/
-    /*-ms-transform: skew(15deg) rotate(6deg);*/
-    /*-o-transform: skew(15deg) rotate(6deg);*/
-    /*transform: skew(15deg) rotate(6deg); }*/
-
-
-
-.pic {
-
+.db-image {
     position:absolute;
-    /*height: 550px;*/
     float:left;
-    margin: 0 auto;
-    left:36px;
-    /*width:200px;*/
-    /*height:350px;*/
+    left:30px; /* (DressImagePanelWidth - ImageWidth) / 2 */
     opacity:1;
 }
 
-.body {
-    z-index:0;
+.name {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 40px;
+}
+
+
+/* http://css-tricks.com/triangle-breadcrumbs/ */
+.breaded > ul{
+    list-style: none;
     overflow: hidden;
+    font: 14px Helvetica, Arial, Sans-Serif;
+    /*margin-top:0px;*/
+    margin-bottom: 20px;
+    margin-left: 0;
+    width: 800px;
+}
+.breaded > ul li {
+    float: left;
+
+}
+.breaded > ul li a {
+    color: #aaaaaa;
+    text-decoration: none;
+    text-align: center;
+    padding: 9px 0 9px 50px;
+    background: #f1f1f1;
+    position: relative;
+    display: block;
+    float: left;
+    width: 175px;
 }
 
-#reset-design{
-    color: #black;
-    background-color: #dce6ec;
+.breaded > ul li.active a  {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 0 9px 50px;
+    background: #222222;
+    position: relative;
+    display: block;
+    float: left;
+}
+@media (max-width: 550px) {
+    .breaded > ul li a {
+        padding: 9px 20px 9px 20px;
+    }
+    .breaded > ul li.active a  {
+        padding: 9px 20px 9px 20px;
+    }
 }
 
-#reset-design[disabled=disabled] {
-    color: grey;
-    background-color: rgba(220, 230, 236, 0.68);
+@media (min-width: 550px) {
+    /*Add the triangles*/
+    .breaded > ul li a:after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;            /*Go big on the size, and let overflow hide*/
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 100%;
+        z-index: 2;
+    }
+
+    .breaded > ul li.active a:after {
+        border-left: 30px solid #222222;
+    }
+    /*Create second set of triangles to act as border*/
+    .breaded > ul li a:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid white;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        margin-left: 4px;
+        left: 100%;
+        z-index: 1;
+    }
+
+    .breaded > ul li:first-child a {
+        padding-left: 14px;
+    }
+}
+/*.breaded li a:hover { background: #444444; }*/
+/*.breaded li a:hover:after { border-left-color: #444444 !important; }*/
+
+.db-options .container-fluid {
+
+    height: 220px;
 }
 
-.design-buttons {
-    margin:15px 20px;
-    width:150px;
-    font-size:16px
+.db-options .tab-content {
+    border-style: solid;
+    border-color: #dddddd;
+    border-width: 1px 1px 1px 1px;
+    /*border-width: 0;*/
+    border-radius: 0;
+    padding: 20px;
+    min-height:370px;
+    float: left;
+    /*background-color: blue;*/
+    width: 700px;
 }
 
-.igg-design-buttons {
-    /*margin-top:15px;*/
-    margin:15px 0;
-    padding-left:20px;
-    padding-right:20px;
-    /*width:150px;*/
-    font-size:16px
+
+.db-options-divider {
+    border-top-style:solid;
+    border-color:#dedede;
+    border-width:1px;
+    margin: 20px 0 0 0;
+    padding: 20px 5px 0 5px;
+    /*padding-top:20px;*/
 }
 
 .option-button {
@@ -134,10 +181,6 @@
     margin-left:-4px;
 
     z-index: 1;
-}
-
-.db-icons-sprite {
-    /*max-height: 40px;*/
 }
 
 input[type="radio"].hidden,
@@ -284,237 +327,4 @@ input[type="checkbox"].hidden {
 }
 .fabric-selector.fabric170{
     background: #111461;
-}
-
-
-.option-panel .panel {
-    border-top-style: solid;
-    border-top-color: #AAAAAA;
-    border-radius: 0;
-    -webkit-box-shadow:none;
-}
-
-.option-panel.panel-group {
-    border-bottom-style: solid;
-    border-bottom-color: #AAAAAA;
-    border-bottom-width: 1px;
-    margin-bottom:50px;
-    /*border-radius: 0;*/
-    /*-webkit-box-shadow:none;*/
-}
-
-.option-panel .panel-body {
-    border-top-style: none;
-    border-top-color: #ffffff;
-    border-radius: 0;
-    padding-top:3px;
-}
-
-.option-panel .nav-tabs > li > a {
-    border-radius: 0;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.option-panel .nav-tabs > li.active > a {
-    border-radius: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.option-panel .nav-tabs > li > a:link {color:#555555;}
-.option-panel .nav-tabs > li > a:visited {color:#555555;}
-.option-panel .nav-tabs > li > a:hover {color:#555555;}
-.option-panel .nav-tabs > li > a:active {color:#555555;}
-
-.option-panel .nav-tabs > li {
-    background-color: #eeeeee;
-    margin-right:2px;
-    margin-top:5px;
-}
-
-.option-panel .nav-tabs > li.active{
-    background-color: #ffffff;
-    /*margin:0 2px;*/
-    margin-top:0;
-}
-
-.option-panel .nav-tabs > li.active > a{
-    background-color: #ffffff;
-    margin:0 2px;
-}
-
-.option-panel .tab-content {
-    border-style: solid;
-    border-color: #dddddd;
-    border-width: 1px 1px 1px 1px;
-    /*border-width: 0;*/
-    border-radius: 0;
-    padding: 20px;
-    min-height:370px;
-}
-
-.fabric-group {
-    /*background: #dce7ff;*/
-    border-style:none;
-    /*border-color:#98bf21;*/
-    /*border-width:1px;*/
-    margin-top:0;
-    margin-bottom:5px;
-    margin-left: 10px;
-}
-
-.middle-container { position:relative }
-.middle-inner {
-    /*position:absolute;*/
-    /*top:100%;*/
-    /*margin-top:5px;*/
-    /*height:10em;*/
-    /*margin-top:25%;*/
-}
-
-.fabric-header {
-    font-size: 14px;
-
-}
-
-.extras-fabric-header {
-    font-size: 10px;
-}
-
-.trim-selector {
-    border-top-style:solid;
-    border-color:#dedede;
-    border-width:1px;
-    margin: 20px 0 0 0;
-    padding: 20px 5px 0 5px;
-    /*padding-top:20px;*/
-}
-
-/* http://css-tricks.com/triangle-breadcrumbs/ */
-.breaded {
-    list-style: none;
-    overflow: hidden;
-    font: 14px Helvetica, Arial, Sans-Serif;
-    /*margin-top:0px;*/
-    margin-bottom: 20px;
-    margin-left: -36px;
-}
-.breaded li {
-    float: left;
-}
-.breaded li a {
-    color: #aaaaaa;
-    text-decoration: none;
-    padding: 9px 0 9px 50px;
-    background: #f1f1f1;
-    position: relative;
-    display: block;
-    float: left;
-}
-
-.breaded li.active a  {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 9px 0 9px 50px;
-    background: #222222;
-    position: relative;
-    display: block;
-    float: left;
-}
-@media (max-width: 550px) {
-    .breaded li a {
-        padding: 9px 20px 9px 20px;
-    }
-    .breaded li.active a  {
-        padding: 9px 20px 9px 20px;
-    }
-}
-
-@media (min-width: 550px) {
-    /*Add the triangles*/
-    .breaded li a:after {
-        content: " ";
-        display: block;
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;            /*Go big on the size, and let overflow hide*/
-        border-bottom: 50px solid transparent;
-        border-left: 30px solid #f1f1f1;
-        position: absolute;
-        top: 50%;
-        margin-top: -50px;
-        left: 100%;
-        z-index: 2;
-    }
-
-    .breaded li.active a:after {
-        border-left: 30px solid #222222;
-    }
-    /*Create second set of triangles to act as border*/
-    .breaded li a:before {
-        content: " ";
-        display: block;
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;
-        border-bottom: 50px solid transparent;
-        border-left: 30px solid white;
-        position: absolute;
-        top: 50%;
-        margin-top: -50px;
-        margin-left: 4px;
-        left: 100%;
-        z-index: 1;
-    }
-
-.breaded li:first-child a {
-    padding-left: 14px;
-}
-}
-/*.breaded li a:hover { background: #444444; }*/
-/*.breaded li a:hover:after { border-left-color: #444444 !important; }*/
-
-.silhouette-filter {
-    margin: 15px 0;
-}
-
-
-.reviewDesign
-{
-    /*font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
-    width:100%;
-    border-collapse:collapse;
-}
-.reviewDesign td, .reviewDesign th
-{
-    font-size:1em;
-    border:none;
-    padding:3px 7px 2px 7px;
-    background-color:#ffffff;
-    color:#000000;
-}
-.reviewDesign th
-{
-    border-top:1px solid #aaaaaa;
-    border-bottom:1px solid #aaaaaa;
-    font-size:1em;
-    text-align:left;
-    padding-top:5px;
-    padding-bottom:4px;
-    /*background-color:#ffffff;*/
-    /*color:#000000;*/
-    font-weight: normal;
-}
-
-.reviewDesign tr td.bold
-{
-    /*font-size:1.1em;*/
-    font-weight: bold;
-}
-
-.reviewDesign tr.alt td
-{
-    color:#000000;
-    background-color:#f7f7f7;
 }

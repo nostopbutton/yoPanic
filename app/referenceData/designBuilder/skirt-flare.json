@@ -36,10 +36,9 @@
         , "fc_hollowfloor": "hollow_to_floor||123ce29c2f145addd210553e24e94c7588daf638e3ac6ecbcf737026d48e1ff0||open"
         , "fc_height": "my_height||e569d773838d697cee101c40cfe95c2b80f343c2685cae6637ee551362e4d4f2||open"
     }
-    , "design":
+    , "design_builder":
 {
     "model": "tshirt-whole-body"
-
     , "options": [
     {
         "option_name": "design"

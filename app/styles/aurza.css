@@ -306,13 +306,15 @@
 }
 
 .item .title {
-    font-size: 18px;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .item .type {
-    font-size: 12px;
-    font-style:italic;
+    font-size: 10px;
+    /*font-style:italic;*/
+    margin-bottom:3px;
 }
 
 .item .price {
@@ -342,7 +344,7 @@
 .item .image{
     /*width: 210px;*/
     /*height: 530px;*/
-    height: 320px;
+    height: 280px;
     text-align: center;
     /*display: block;*/
     /*margin-left: auto;*/
