@@ -64,16 +64,19 @@ angular.module('panicApp',
 //      })
 
       .when('/design/:styleId', {
-        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+//        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+            templateUrl: 'views/designBuild.html', controller: 'NewDesignBuildCtrl'
       })
       .when('/design/:styleId/:itemId', {
-        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+//        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+        templateUrl: 'views/designBuild.html', controller: 'NewDesignBuildCtrl'
       })
       .when('/review/:styleId/dress/:designCode', {
         templateUrl: 'views/idggPlaceOrder.html', controller: 'NewDesignBuildCtrl'
       })
       .when('/design/:styleId/dress/:designCode', {
-        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+//        templateUrl: 'views/idggDesignBuild.html', controller: 'NewDesignBuildCtrl'
+            templateUrl: 'views/designBuild.html', controller: 'NewDesignBuildCtrl'
       })
 
         .when('/checkout', {

@@ -302,12 +302,11 @@ designBuildDirective.directive('drawDesignPic', function () {
 designBuildDirective.directive('drawDesign', function () {
   return  {
     scope: {
-        builder: "=", design: "="
+        model: "=", design: "="
     },
     template:
 
-      '<div class="pic body sprite-body {{builder.model}}"></div>' +
-//      '<img ng-src="images/parts/whole body.png" class="pic body">' +
+      '<div class="pic body sprite-body {{model}}"></div>' +
       '<div draw-dress parts="design.design"></div>' +
       '<div draw-accessories parts="design.extras"></div>'
   }

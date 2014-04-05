@@ -20,6 +20,8 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
             $scope.current_description = 'Test description';
             $scope.headline = "test";
 
+            $scope.tabs = {"style":false, "design": true, "fit": false, "order": false};
+
             // Put Style data into page scope
 //      ReferenceDataCache.getStyleById($routeParams.styleId, $scope);
 //      ReferenceDataCache.getItemById($routeParams.itemId, $scope);
@@ -77,13 +79,13 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
 //        return cat.category.categoryName.designs.id === styleId;
 //      };
 
-            $scope.ranges = Range.styleCatalogue(
-                function (data) {   //success
-                    console.log("==================");
-                    loadStyle($scope);//, data, categoryId, styleId);
-
-                }
-            );
+//            $scope.ranges = Range.styleCatalogue(
+//                function (data) {   //success
+//                    console.log("==================");
+//                    loadStyle($scope);//, data, categoryId, styleId);
+//
+//                }
+//            );
 //      $scope.category = ReferenceDataCache.getCategory(categoryId);
 //      $scope.design = ReferenceDataCache.getDesign(styleId);
 

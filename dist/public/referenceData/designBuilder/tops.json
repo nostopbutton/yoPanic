@@ -36,7 +36,7 @@
         , "fc_hollowfloor": "hollow_to_floor||476c4f06674eb9aa55a1e1e884da34911bfe3dea9eb81e5feefc75cef1ec3bd8||open"
         , "fc_height": "my_height||2005a5a275bac766825e5eb8aab30b2bcabf2239233b4916133f21448266ec3e||open"
     }
-    , "design":
+    , "design_builder":
 {
     "model": "skirt-whole-body"
     , "options": [

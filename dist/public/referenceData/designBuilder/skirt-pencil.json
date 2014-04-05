@@ -37,7 +37,7 @@
         , "fc_height": "my_height||6fd6013999099f2e94687b9e8ac7f10a05d5e008bd9ba434e6452d277f3761b5||open"
     }
 
-    , "design":
+    , "design_builder":
 {
     "model": "tshirt-whole-body"
     , "options": [

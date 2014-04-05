@@ -143,7 +143,7 @@
                                     | filter:{itemDesc: colourFilter}">
                     <div class="col-sm-2 item">
 
-                        <a ng-href="#!/shop/{{dress.styleId}}/{{dress.itemId}}"
+                        <a ng-href="#!/design/{{dress.styleId}}/{{dress.itemId}}"
                            onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
                             <div class="row image">
                                 <img ng-src="images/items/{{dress.itemId}}.png" class="">
@@ -157,10 +157,8 @@
                                 {{dress.itemDesc}}
                             </div>
                             <div class="row price">
-                                HKD {{dress.price}}
+                                HKD {{dress.price | number:0}}
                             </div>
-                            {{dress.styleId}}
-                            {{silhouetteFilter}}
                         </a>
 
                     </div>
