@@ -54,8 +54,10 @@ designBuildDirective.directive('partSelector', function () {
                 '    <button type="button" class="btn btn-default option"' +
                 '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' +
                 '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' +
-                '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>' +
+//                'tooltip="{{value.name}}">' +
+                '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" ></div>' +
                 '   </button>' +
+
                 '  </div>' +
                 '</div>'
 
@@ -111,7 +113,8 @@ designBuildDirective.directive('trimSelector', function () {
                 '     </div>' +
                 '     <div class="row">' +
                 '       <div class="col-sm-3">' +
-                '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"' +
+                '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" ' +
+//                'tooltip="No trim"' +
 //                '             onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"' +
                 '>' +
 //        '<img ng-src="images/smallicon-36.png"/>' +
@@ -147,7 +150,8 @@ designBuildDirective.directive('drawFabrics', function () {
         },
 
         template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' +
-            'ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"' +
+            'ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" ' +
+//            'tooltip="{{fabric.fabName}}"' +
 //            'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"' +
             '></button>'
     }
@@ -162,7 +166,8 @@ designBuildDirective.directive('drawTrimFabrics', function () {
             selection: "=", selectedOption: "="
         },
 
-        template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"' +
+        template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" ' +
+//            'tooltip="{{fabric.fabName}}"' +
 //            'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);' +
             '"></button>'
     }

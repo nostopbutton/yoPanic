@@ -701,7 +701,7 @@ designBuildDirective.directive('partSelector', function () {
       part: '=',
       selectedOption: '='
     },
-    template: ' <div data-toggle="buttons">' + '  <!--https://github.com/angular-ui/bootstrap/issues/233-->' + '  <div class="option-button" ng-repeat="value in part.values">' + '    <button type="button" class="btn btn-default option"' + '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' + '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' + '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>' + '   </button>' + '  </div>' + '</div>'
+    template: ' <div data-toggle="buttons">' + '  <!--https://github.com/angular-ui/bootstrap/issues/233-->' + '  <div class="option-button" ng-repeat="value in part.values">' + '    <button type="button" class="btn btn-default option"' + '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' + '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' + '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" ></div>' + '   </button>' + '  </div>' + '</div>'
   };
 });
 designBuildDirective.directive('sizeSelector', function () {
@@ -734,7 +734,7 @@ designBuildDirective.directive('trimSelector', function () {
       isTrim: '=',
       partName: '='
     },
-    template: ' <div class="col-sm-7">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '       {{fabricSet.setName}} trim' + '     </div>' + '     <div class="row">' + '       <div class="col-sm-3">' + '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="No trim"' + '>' + '        </button>' + '     </div>' + '       <div class="col-sm-9 col-xs-6">' + '         <div draw-trim-fabrics selection="fabricSet" selected-option="selectedOption"></div>' + '     </div>' + '     </div>' + '   </div>' + ' </div>'
+    template: ' <div class="col-sm-7">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '       {{fabricSet.setName}} trim' + '     </div>' + '     <div class="row">' + '       <div class="col-sm-3">' + '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" ' + '>' + '        </button>' + '     </div>' + '       <div class="col-sm-9 col-xs-6">' + '         <div draw-trim-fabrics selection="fabricSet" selected-option="selectedOption"></div>' + '     </div>' + '     </div>' + '   </div>' + ' </div>'
   };
 });
 designBuildDirective.directive('drawFabrics', function () {
@@ -743,7 +743,7 @@ designBuildDirective.directive('drawFabrics', function () {
       selection: '=',
       selectedOption: '='
     },
-    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' + 'ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"' + '></button>'
+    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' + 'ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" ' + '></button>'
   };
 });
 //ng-model="form[option.name][part.part_name]['id']" btn-radio="value.id"
@@ -753,7 +753,7 @@ designBuildDirective.directive('drawTrimFabrics', function () {
       selection: '=',
       selectedOption: '='
     },
-    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" tooltip="{{fabric.fabName}}"' + '"></button>'
+    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" ' + '"></button>'
   };
 });
 designBuildDirective.directive('silhouette', function () {

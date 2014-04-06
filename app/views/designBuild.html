@@ -203,7 +203,7 @@
 
         <div id="view_dress_image_panel" class="col-lg-3 col-md-4 col-sm-5"><!-- style="border-style: solid; border-width:2px;border-color: black">-->
             <div class="dress_image_panel"> <!--style="border-style: solid; border-width:2px;border-color: red">-->
-                <div draw-design model="item.design_builder.model" design="form" model=""></div>
+                <div draw-design model="item.design_builder.model" design="form"></div>
             </div>
         </div>
 
@@ -303,10 +303,12 @@
                                             <!--https://github.com/angular-ui/bootstrap/issues/233-->
                                             <div class="option-button">
                                                 <button type="button" class="btn btn-default option"
-                                                        ng-model="form[item.design.extras[0].name][part.part_name]['id']" btn-radio="value.id"
-                                                        ng-click="form[item.design.extras[0].name][part.part_name]['fabric'] = value.defaultFabric; form[item.design.extras[0].name][part.part_name]['code']=value.id + '-' +value.defaultFabric"
-                                                        ng-class="{highlight: form[item.design.extras[0].name][part.part_name]['id']==value.id }">
-                                                    <div class="db-icons-sprite {{part.type}}-{{value.id}}" tooltip="{{value.name}}"></div>
+                                                        ng-model="form[item.design_builder.extras[0].name][part.part_name]['id']" btn-radio="value.id"
+                                                        ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = value.defaultFabric; form[item.design_builder.extras[0].name][part.part_name]['code']=value.id + '-' +value.defaultFabric"
+                                                        ng-class="{highlight: form[item.design_builder.extras[0].name][part.part_name]['id']==value.id }">
+                                                    <div class="db-icons-sprite {{part.type}}-{{value.id}}">
+                                                         <!--tooltip="{{value.name}}">    -->
+                                                    </div>
                                                 </button>
                                             </div>
                                         </div>
@@ -323,12 +325,12 @@
                                                     <button type="button"
                                                             class="btn fabric-selector fabric000"
 
-                                                            ng-click="form[item.design.extras[0].name][part.part_name]['fabric'] = 000; form[item.design.extras[0].name][part.part_name]['id'] = value.id"
-                                                            ng-model="form[item.design.extras[0].name][part.part_name]['code']"
+                                                            ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = 000; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
+                                                            ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
                                                             btn-radio="value.id +'-'+000"
-                                                            ng-class="{active: form[item.design.extras[0].name][part.part_name]['code']==value.id +'-'+000 }"
-                                                            tooltip="None">
-                                                            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design.extras[0].name][part.part_name].type}}-{{form[item.design.extras[0].name][part.part_name].id}}', '000' ]);">-->
+                                                            ng-class="{active: form[item.design_builder.extras[0].name][part.part_name]['code']==value.id +'-'+000 }">
+                                                            <!--tooltip="None">-->
+                                                            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '000' ]);">-->
                                                     </button>
                                                 </div>
                                             </div>
@@ -346,12 +348,12 @@
                                                     <button ng-repeat="fabric in set.fabrics" type="button"
                                                             class="btn fabric-selector fabric{{fabric.fabId}}"
 
-                                                            ng-click="form[item.design.extras[0].name][part.part_name]['fabric'] = fabric.fabId; form[item.design.extras[0].name][part.part_name]['id'] = value.id"
-                                                            ng-model="form[item.design.extras[0].name][part.part_name]['code']"
+                                                            ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = fabric.fabId; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
+                                                            ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
                                                             btn-radio="value.id +'-'+fabric.fabId"
-                                                            ng-class="{active: form[item.design.extras[0].name][part.part_name]['code']==value.id +'-'+fabric.fabId }"
-                                                            tooltip="{{fabric.fabName}}">
-                                                            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design.extras[0].name][part.part_name].type}}-{{form[item.design.extras[0].name][part.part_name].id}}', '{{fabric.fabId}}' ]);">-->
+                                                            ng-class="{active: form[item.design.extras[0].name][part.part_name]['code']==value.id +'-'+fabric.fabId }">
+                                                            <!--tooltip="{{fabric.fabName}}">-->
+                                                            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '{{fabric.fabId}}' ]);">-->
                                                     </button>
                                                 </div>
                                             </div>
@@ -364,8 +366,7 @@
 
                             <div class="col-md-3 col-sm-3 align-center" style="margin-top:60px">
                                 <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                                        >
+                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
                                     <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
                                     Reset</a>
                             </div>
@@ -389,8 +390,7 @@
                             <!--</div>-->
                             <div class="col-md-8 col-sm-8 align-left" style="margin-top:60px">
                                 <a class="btn btn-default  igg-design-buttons" href="#!/design"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                                   >
+                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
                                    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/different-style']);">-->
 
                                     try a different style</a>
