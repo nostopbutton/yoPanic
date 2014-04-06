@@ -20,7 +20,7 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
             $scope.current_description = 'Test description';
             $scope.headline = "test";
 
-            $scope.tabs = {"style":false, "design": false, "fit": false, "order": true};
+            $scope.tabs = {"style":true, "design": false, "fit": false, "order": false};
 
             // Put Style data into page scope
 //      ReferenceDataCache.getStyleById($routeParams.styleId, $scope);

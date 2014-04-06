@@ -1367,10 +1367,10 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
     $scope.current_description = 'Test description';
     $scope.headline = 'test';
     $scope.tabs = {
-      'style': false,
+      'style': true,
       'design': false,
       'fit': false,
-      'order': true
+      'order': false
     };
     // Put Style data into page scope
     //      ReferenceDataCache.getStyleById($routeParams.styleId, $scope);
