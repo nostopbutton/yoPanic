@@ -178,7 +178,7 @@ body { padding-top: 135px;}
 
 .tabs-left > .nav-tabs {
     float: left;
-    margin-right: 19px;
+    /*margin-right: 19px;*/
     border-right: 1px solid #ddd;
 }
 

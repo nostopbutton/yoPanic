@@ -59,7 +59,10 @@
     position: relative;
     display: block;
     float: left;
-    width: 175px;
+    width: 129px;
+    height:50px;
+    /*line-height:25px;*/
+    vertical-align: bottom;
 }
 
 .breaded > ul li.active a  {
@@ -124,26 +127,31 @@
 /*.breaded li a:hover { background: #444444; }*/
 /*.breaded li a:hover:after { border-left-color: #444444 !important; }*/
 
-.db-options .container-fluid {
+.db-options {
 
-    height: 220px;
+    height: 370px;
 }
 
 .db-options .tab-content {
     border-style: solid;
     border-color: #dddddd;
-    border-width: 1px 1px 1px 1px;
+    border-width: 1px 1px 1px 0;
     /*border-width: 0;*/
     border-radius: 0;
     padding: 20px;
     min-height:370px;
     float: left;
     /*background-color: blue;*/
-    width: 700px;
+    width: 520px;
+}
+
+.db-options .opt-parts{
+    height: 220px;
 }
 
 
-.db-options-divider {
+.db-options .opt-length,
+.db-options .opt-trim{
     border-top-style:solid;
     border-color:#dedede;
     border-width:1px;

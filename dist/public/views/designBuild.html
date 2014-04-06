@@ -269,16 +269,17 @@
                     <div class="row">
                         <tabset class="tabs-left db-options">
                             <tab ng-repeat="part in item.design_builder.options[0].parts" heading="{{part.label}}"> <!--active="{{part.active}}">-->
-                                <div class="container-fluid">
-                                    <div class="col-xs-6">
+                                <div class="container-fluid opt-parts">
+                                    <div class="col-xs-7">
                                         <part-selector part="part" selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
                                     </div>
-                                    <div class="col-xs-6">
-                                        <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
+                                    <div class="col-xs-5">
+                                        <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set" attrib="'fabric'"
                                                          selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+
                                     </div>
                                 </div>
-                                <div class="row db-options-divider" ng-show="part.size">
+                                <div class="container-fluid opt-length db-options-divider" ng-show="part.size">
                                     <div class="col-xs-6">
                                         Length:
                                     </div>
@@ -286,18 +287,33 @@
                                         <size-selector part="part" selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
                                     </div>
                                 </div>
-                                <div class="row db-options-divider" ng-show="part.trim">
-                                    <trim-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets"
-                                                   ng-checked="form[item.design_builder.options[0].option_name][part.part_name]['trim']"
-                                                   fabric-set="set" selected-option="form[item.design_builder.options[0].option_name][part.part_name]"
-                                                   is-trim="true" part-name="part.part_name"/>
+                                <div class="container-fluid opt-trim db-options-divider" ng-show="part.trim">
+                                    <div class="col-sm-7">
+                                        <div class="row fabric-header">
+                                            Trim:
+                                        </div>
+                                        <div class="row">
+
+                                            <button type="button" class="btn fabric-selector fabric-none" ng-model="form[item.design_builder.options[0].option_name][part.part_name]['trim']" btn-radio="fabric.fabId">
+                                                None
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 ">
+                                            <fabric-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets" fabric-set="set" attrib="'trim'"
+                                                             ng-checked="form[item.design_builder.options[0].option_name][part.part_name]['trim']"
+                                                             selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+
+
+                                    </div>
                                 </div>
                             </tab>
 
                             <tab ng-repeat="part in item.design_builder.extras[0].parts" heading="{{part.label}}">
 
-                                <div class="row  middle-container" ng-repeat="value in part.values">
-                                    <div class="col-xs-3">
+                                <div class="container-fluid" ng-repeat="value in part.values">
+                                    <div class="col-xs-4">
 
                                         <div data-toggle="buttons">
                                             <!--https://github.com/angular-ui/bootstrap/issues/233-->
@@ -337,7 +353,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-6" style="vertical-align: middle">
+                                    <div class="col-xs-5" style="vertical-align: middle">
                                         <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
                                             <div class="fabric-group middle-inner">
                                                 <div class="row extras-fabric-header">

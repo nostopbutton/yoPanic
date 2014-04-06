@@ -720,42 +720,84 @@ designBuildDirective.directive('fabricSelector', function () {
     scope: {
       fabricSet: '=',
       selectedOption: '=',
-      isTrim: '='
+      attrib: '='
     },
-    template: ' <div class="fabric-group">' + '   <div class="row fabric-header">' + '     {{fabricSet.setName}}' + '   </div>' + '    <div class="row ">' + '    <div ng-switch on="isTrim" >' + '      <div draw-trim-fabrics ng-switch-when="true" selection="fabricSet" selected-option="selectedOption"></div>' + '      <div draw-fabrics ng-switch-default selection="fabricSet" selected-option="selectedOption"></div>' + '     </div>' + '  </div>' + '</div>'
+    template: ' <div class="fabric-group">' + '   <div class="row fabric-header">' + '     {{fabricSet.setName}}' + '   </div>' + '   <div class="row ">' + '       <button ng-repeat="fabric in fabricSet.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' + '           ng-model="selectedOption[attrib]" ' + '          btn-radio="fabric.fabId"></button>' + '   </div>' + '</div>'
   };
 });
-designBuildDirective.directive('trimSelector', function () {
-  return {
-    restrict: 'E',
-    scope: {
-      fabricSet: '=',
-      selectedOption: '=',
-      isTrim: '=',
-      partName: '='
-    },
-    template: ' <div class="col-sm-7">' + '   <div class="fabric-group">' + '     <div class="row fabric-header">' + '       {{fabricSet.setName}} trim' + '     </div>' + '     <div class="row">' + '       <div class="col-sm-3">' + '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" ' + '>' + '        </button>' + '     </div>' + '       <div class="col-sm-9 col-xs-6">' + '         <div draw-trim-fabrics selection="fabricSet" selected-option="selectedOption"></div>' + '     </div>' + '     </div>' + '   </div>' + ' </div>'
-  };
-});
-designBuildDirective.directive('drawFabrics', function () {
-  return {
-    scope: {
-      selection: '=',
-      selectedOption: '='
-    },
-    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' + 'ng-model="selectedOption[\'fabric\']" btn-radio="fabric.fabId" ' + '></button>'
-  };
-});
-//ng-model="form[option.name][part.part_name]['id']" btn-radio="value.id"
-designBuildDirective.directive('drawTrimFabrics', function () {
-  return {
-    scope: {
-      selection: '=',
-      selectedOption: '='
-    },
-    template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" ' + '"></button>'
-  };
-});
+//designBuildDirective.directive('drawFabrics', function () {
+//    return  {
+////        restrict: 'E',
+//        scope: {
+//            selection: "=", selectedOption: "=", isTrim: "="
+//        },
+//
+//        template:
+//            '<div ng-switch on="isTrim" >' +
+//            '   <button ng-switch-when="true" ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' +
+//            '       ng-model="selectedOption[\'trim\']" ' +
+//            '       btn-radio="fabric.fabId"></button>' +
+//            '   <button ng-switch-default ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' +
+//            '       ng-model="selectedOption[\'fabric\']" ' +
+//            '       btn-radio="fabric.fabId"></button>' +
+//            '</div>'
+//    }
+//})
+//designBuildDirective.directive('trimSelector', function () {
+//    return  {
+//        restrict: 'E',
+////    templateUrl: 'template/designBuild/fabric.html',
+//        scope: {
+//            fabricSet: "=", selectedOption: "=", isTrim: "=", partName: "="
+//        },
+//        template:
+//            ' <div class="col-sm-12">' +
+//                '   <div class="fabric-group">' +
+//                '     <div class="row fabric-header">' +
+//                '       {{fabricSet.setName}} trim' +
+//                '     </div>' +
+//                '     <div class="row">' +
+//                '       <div class="col-sm-7">' +
+//                '         <button type="button" class="btn fabric-selector fabric-none" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId"></button> ' +
+////                'tooltip="No trim"' +
+////                '             onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);"' +
+//                '         </button>' +
+//                '       </div>' +
+//                '       <div class="col-sm-5 ">' +
+//                '         <div draw-trim-fabrics selection="fabricSet" selected-option="selectedOption"></div>' +        '     </div>' +
+//                '       </div>' +
+////                '     </div>' +
+////      ' </div>' +
+////      ' <div class="col-md-5">' +
+////      '   <div class="fabric-group">' +
+////      '     <div class="row fabric-header">' +
+//////      '        {{fabricSet.setName}}' +
+////      '     </div>' +
+////      '     <div class="row ">' +
+////      '       <div ng-switch on="isTrim" >' +
+////      '         <div draw-trim-fabrics ng-switch-when="true" selection="fabricSet" selected-option="selectedOption"></div>' +
+////      '         <div draw-fabrics ng-switch-default selection="fabricSet" selected-option="selectedOption"></div>' +
+////      '       </div>' +
+////      '     </div>' +
+////      '   </div>' +
+//            ' </div>'
+//
+//    }
+//})
+////ng-model="form[option.name][part.part_name]['id']" btn-radio="value.id"
+//designBuildDirective.directive('drawTrimFabrics', function () {
+//    return  {
+//        scope: {
+////      restrict:'E',
+//            selection: "=", selectedOption: "="
+//        },
+//
+//        template: '<button ng-repeat="fabric in selection.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ng-model="selectedOption[\'trim\']" btn-radio="fabric.fabId" ' +
+////            'tooltip="{{fabric.fabName}}"' +
+////            'onClick="_gaq.push([\'_trackEvent\', \'Design Build\', \'select fabric\', \'{{selectedOption.type}}-{{selectedOption.id}}\', \'{{fabric.fabId}}\' ]);' +
+//            '"></button>'
+//    }
+//})
 designBuildDirective.directive('silhouette', function () {
   return {
     restrict: 'A',
