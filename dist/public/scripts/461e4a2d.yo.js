@@ -51,15 +51,6 @@ angular.module('panicApp', [
     }).when('/design/:styleId/dress/:designCode', {
       templateUrl: 'views/designBuild.html',
       controller: 'NewDesignBuildCtrl'
-    }).when('/checkout', {
-      templateUrl: 'views/checkout.html',
-      controller: 'StaticPageCtrl'
-    }).when('/cart', {
-      templateUrl: 'views/cart.html',
-      controller: 'StaticPageCtrl'
-    }).when('/purchase', {
-      templateUrl: 'views/sizing.html',
-      controller: 'StaticPageCtrl'
     }).otherwise({ redirectTo: '/' });
   }
 ]);
@@ -673,6 +664,13 @@ referenceDataServices.factory('Range', [
 //});
 'use strict';
 var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
+designBuildDirective.directive('styleOverview', function () {
+  return {
+    restrict: 'E',
+    scope: { styleInfo: '=' },
+    template: '<div class="container-fluid ">' + '<div class="row">' + '    <div class="col-md-6">' + '        <div class="name">{{styleInfo.styleName}}</div>' + '        <div class="formal-name">{{styleInfo.styleFormalName}} </div>' + '    </div>' + '    <div class="col-md-6">' + '        <div class="price-label">TOTAL</div>' + '        <div class="price">HKD {{styleInfo.price | number:0}}</div>' + '    </div>' + '</div>' + '<div class="row top-border" style="padding:10px 0 10px 0">' + '    <ul>' + '        <li class="description">{{styleInfo.strapline}}</li>' + '        <li class="description" ng-repeat="para in styleInfo.description">{{para}}</li>' + '    </ul>' + '</div>' + '</div>'
+  };
+});
 designBuildDirective.directive('drawDesign', function () {
   return {
     scope: {
@@ -802,7 +800,7 @@ designBuildDirective.directive('silhouette', function () {
   return {
     restrict: 'A',
     scope: { design: '=' },
-    template: '<a href="#!/design/{{design.styleId}}"' + '>' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-body {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title handwriting large-hand">{{design.styleName}}</div>' + '<div class="row type handwriting">({{design.styleFormalName}})</div>' + '<div class="row price">from HKD {{design.price}}</div>' + '</a>'
+    template: '<a href="#!/design/{{design.styleId}}"' + '>' + '<div class="row image">' + '<div class="col-lg-12 ">' + ' <div class="pic sprite-body {{design.silhouetteImage}}"></div>' + '</div>' + '</div>' + '<div class="row title handwriting large-hand">{{design.styleName}}</div>' + '<div class="row type handwriting">({{design.styleFormalName}})</span></div>' + '<div class="row price"><span class="glyphicon glyphicon-tags"></span>&nbsp from HKD {{design.price | number:0}}</div>' + '</a>'
   };
 });
 'use strict';
@@ -952,7 +950,6 @@ angular.module('panicApp.Controllers').controller('StaticPageCtrl', [
       $location.hash(id);
       $anchorScroll();
     };
-    $scope.headline = 'test';
   }
 ]);
 'use strict';
@@ -1371,9 +1368,9 @@ angular.module('panicApp.Controllers').controller('NewDesignBuildCtrl', [
     $scope.headline = 'test';
     $scope.tabs = {
       'style': false,
-      'design': true,
+      'design': false,
       'fit': false,
-      'order': false
+      'order': true
     };
     // Put Style data into page scope
     //      ReferenceDataCache.getStyleById($routeParams.styleId, $scope);

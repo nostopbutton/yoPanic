@@ -2,6 +2,34 @@
 
 var designBuildDirective = angular.module('panicApp.designBuildDirectives', []);
 
+designBuildDirective.directive('styleOverview', function () {
+    return  {
+        restrict: 'E',
+        scope: {
+            styleInfo: "="
+        },
+        template:
+            '<div class="container-fluid ">'
+            + '<div class="row">'
+            + '    <div class="col-md-6">'
+            + '        <div class="name">{{styleInfo.styleName}}</div>'
+            + '        <div class="formal-name">{{styleInfo.styleFormalName}} </div>'
+            + '    </div>'
+            + '    <div class="col-md-6">'
+            + '        <div class="price-label">TOTAL</div>'
+            + '        <div class="price">HKD {{styleInfo.price | number:0}}</div>'
+            + '    </div>'
+            + '</div>'
+            + '<div class="row top-border" style="padding:10px 0 10px 0">'
+            + '    <ul>'
+            + '        <li class="description">{{styleInfo.strapline}}</li>'
+            + '        <li class="description" ng-repeat="para in styleInfo.description">{{para}}</li>'
+            + '    </ul>'
+            + '</div>'
+            + '</div>'
+    }
+})
+
 designBuildDirective.directive('drawDesign', function () {
     return  {
         scope: {
@@ -192,8 +220,8 @@ designBuildDirective.directive('silhouette', function () {
             '</div>' +
             '</div>' +
             '<div class="row title handwriting large-hand">{{design.styleName}}</div>' +
-            '<div class="row type handwriting">({{design.styleFormalName}})</div>' +
-      '<div class="row price">from HKD {{design.price}}</div>' +
+            '<div class="row type handwriting">({{design.styleFormalName}})</span></div>' +
+      '<div class="row price"><span class="glyphicon glyphicon-tags"></span>&nbsp from HKD {{design.price | number:0}}</div>' +
 //      '<div class="row item customize">' +
 //      '<button class="btn btn-danger" id="review-dress">Customize</button>' +
 //      '</div>' +

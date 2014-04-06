@@ -36,21 +36,13 @@
     <!--</div>-->
 
     <div class="col-xs-10 col-xs-offset-1">
-      <!--<div class="col-lg-10 col-lg-offset-1 col-md-9 col-md-offset-2 col-xs-9">-->
         <div class="row">
-      <div ng-repeat="design in styles | filter: search">
-        <div class="col-sm-3 col-xs-6  item">
-          <div silhouette design="design"></div>
-        </div>
-          {{design | number:0}}
-      </div>
+            <div ng-repeat="design in styles"> <!-- | filter: search">-->
+                <div class="col-sm-3 col-xs-6  item">
+                    <div silhouette design="design"></div>
+                </div>
+            </div>
         </div>
     </div>
   </div>
-
-  <!--<div class="col-sm-12 align-center" style="margin-bottom:50px">-->
-    <!--<a class="btn btn-danger" href="http://aurza.co/19Yb3PN" style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"-->
-       <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'silhouettes/back-to-igg']);">-->
-      <!--back to indiegogo</a>-->
-  <!--</div>-->
 </div> <!-- /container -->

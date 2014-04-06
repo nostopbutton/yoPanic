@@ -198,429 +198,526 @@
     </div>
 </div>
 
+<div class="row">
 
-    <div class="row">
+<div id="view_dress_image_panel" class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-5">
+    <!-- style="border-style: solid; border-width:2px;border-color: black">-->
+    <div class="dress_image_panel"> <!--style="border-style: solid; border-width:2px;border-color: red">-->
+        <div draw-design model="item.design_builder.model" design="form"></div>
+    </div>
+</div>
 
-        <div id="view_dress_image_panel" class="col-lg-3 col-md-4 col-sm-5"><!-- style="border-style: solid; border-width:2px;border-color: black">-->
-            <div class="dress_image_panel"> <!--style="border-style: solid; border-width:2px;border-color: red">-->
-                <div draw-design model="item.design_builder.model" design="form"></div>
+
+<div id="builder_controls_panel" class="col-lg-7 col-md-8 col-sm-7">
+
+<tabset class="breaded" type="pills">
+<tab heading="Style" active="tabs.style">
+    <style-overview style-info="item.style"/>
+
+    <div class="row top-border">
+        <h4>Info</h4>
+
+        <p ng-repeat="para in item.style.care">{{para}}</p>
+    </div>
+    <div class="row top-border" style="margin-top:100px">
+        <h5>Not your perfect dress?</h5>
+
+        <div class="row">
+            <div class="col-sm-6 align-left">
+                <a class="btn btn-default  igg-design-buttons" id="customize"
+                   href="#design" data-toggle="tab"
+                   ng-click="tabs.design = true"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
+                    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{item.style.styleId}}/{{item.itemDesign.itemId}}']);">-->
+                    Customise it</a>
+
+                <a class="btn btn-danger  igg-design-buttons"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                   href="#fit" data-toggle="tab"
+                   ng-click="tabs.fit = true">Fit your size</a>
+            </div>
+            <div class="col-sm-6 align-right">
+                <!--<div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">-->
+                <a class="btn btn-default  igg-design-buttons" href="#!/collection"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                        >
+                    <!--onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">-->
+                    Try a different style</a>
+                <!--</div>-->
+            </div>
+
+            <!--{{item.itemDesign.itemId}}-->
+        </div>
+        <!--</div>-->
+    </div>
+</tab>
+<tab heading="Customize" active="tabs.design" ng-hide="">
+
+<div class="row">
+<tabset class="tabs-left db-options">
+    <tab ng-repeat="part in item.design_builder.options[0].parts" heading="{{part.label}}">
+        <!--active="{{part.active}}">-->
+        <div class="container-fluid opt-parts">
+            <div class="col-xs-7">
+                <part-selector part="part"
+                               selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+            </div>
+            <div class="col-xs-5">
+                <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
+                                 attrib="'fabric'"
+                                 selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+
             </div>
         </div>
+        <div class="container-fluid opt-length db-options-divider" ng-show="part.size">
+            <div class="col-xs-6">
+                Length:
+            </div>
+            <div class="col-xs-6">
+                <size-selector part="part"
+                               selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+            </div>
+        </div>
+        <div class="container-fluid opt-trim db-options-divider" ng-show="part.trim">
+            <div class="col-sm-7">
+                <div class="row fabric-header">
+                    Trim:
+                </div>
+                <div class="row">
+
+                    <button type="button" class="btn fabric-selector fabric-none"
+                            ng-model="form[item.design_builder.options[0].option_name][part.part_name]['trim']"
+                            btn-radio="fabric.fabId">
+                        None
+                    </button>
+
+                </div>
+            </div>
+            <div class="col-sm-5 ">
+                <fabric-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets" fabric-set="set"
+                                 attrib="'trim'"
+                                 ng-checked="form[item.design_builder.options[0].option_name][part.part_name]['trim']"
+                                 selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
 
 
+            </div>
+        </div>
+    </tab>
 
-        <div id="builder_controls_panel" class="col-lg-9 col-md-8 col-sm-7">
+    <tab ng-repeat="part in item.design_builder.extras[0].parts" heading="{{part.label}}">
 
-            <tabset class="breaded" type="pills" >
-                <tab heading="Style Information" active="tabs.style">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="name">{{item.style.styleName}}</p>
-                            <p class="formal-name">{{item.style.styleFormalName}} - HKD {{item.style.price | number:0}}</p>
-                            <!--<p class="price"></p>-->
+        <div class="container-fluid" ng-repeat="value in part.values">
+            <div class="col-xs-4">
+
+                <div data-toggle="buttons">
+                    <!--https://github.com/angular-ui/bootstrap/issues/233-->
+                    <div class="option-button">
+                        <button type="button" class="btn btn-default option"
+                                ng-model="form[item.design_builder.extras[0].name][part.part_name]['id']"
+                                btn-radio="value.id"
+                                ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = value.defaultFabric; form[item.design_builder.extras[0].name][part.part_name]['code']=value.id + '-' +value.defaultFabric"
+                                ng-class="{highlight: form[item.design_builder.extras[0].name][part.part_name]['id']==value.id }">
+                            <div class="db-icons-sprite {{part.type}}-{{value.id}}">
+                                <!--tooltip="{{value.name}}">    -->
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3" style="vertical-align: middle">
+                <div>
+                    <div class="fabric-group middle-inner">
+                        <div class="row extras-fabric-header">
+                            None
                         </div>
-                        <div class="col-md-6 align-right" style="margin-bottom:10px">
-                            <a class="btn btn-danger  igg-design-buttons"
-                               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                               href="#fit" data-toggle="tab"
-                               ng-click="tabs.fit = true">Fit your size</a>
-                        </div>
-                    </div>
-                    <div class="row top-border" style="padding:10px 0 10px 0">
-                        <ul>
-                            <li class="description">{{item.style.strapline}}</li>
-                            <li class="description" ng-repeat="para in item.style.description">{{para}}</li>
-                        </ul>
-                    </div>
-                    <div class="row top-border">
-                        <h4>Info</h4>
-
-                        <p ng-repeat="para in item.style.care">{{para}}</p>
-                    </div>
-                    <div class="row top-border"  style="margin-top:100px">
-                        <h5>Not your perfect dress?</h5>
-
                         <div class="row">
-                            <div class="col-sm-6 align-left">
-                                <a class="btn btn-default  igg-design-buttons" id="customize"
-                                   href="#design"  data-toggle="tab"
-                                   ng-click="tabs.design = true"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
-                                    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{item.style.styleId}}/{{item.itemDesign.itemId}}']);">-->
-                                    Customise it</a>
-                            </div>
-                            <div class="col-sm-6 align-right">
-                                <!--<div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">-->
-                                <a class="btn btn-default  igg-design-buttons" href="#!/collection"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                                   >
-                                   <!--onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">-->
-                                    Try a different style</a>
-                                <!--</div>-->
-                            </div>
 
-                            <!--{{item.itemDesign.itemId}}-->
+                            <button type="button"
+                                    class="btn fabric-selector fabric000"
+
+                                    ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = 000; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
+                                    ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
+                                    btn-radio="value.id +'-'+000"
+                                    ng-class="{active: form[item.design_builder.extras[0].name][part.part_name]['code']==value.id +'-'+000 }">
+                                <!--tooltip="None">-->
+                                <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '000' ]);">-->
+                            </button>
                         </div>
-                        <!--</div>-->
                     </div>
-                </tab>
-                <tab heading="Perfect your Design" active="tabs.design" ng-hide="">
+                </div>
+            </div>
 
-                    <div class="row">
-                        <tabset class="tabs-left db-options">
-                            <tab ng-repeat="part in item.design_builder.options[0].parts" heading="{{part.label}}"> <!--active="{{part.active}}">-->
-                                <div class="container-fluid opt-parts">
-                                    <div class="col-xs-7">
-                                        <part-selector part="part" selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
-                                    </div>
-                                    <div class="col-xs-5">
-                                        <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set" attrib="'fabric'"
-                                                         selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
-
-                                    </div>
-                                </div>
-                                <div class="container-fluid opt-length db-options-divider" ng-show="part.size">
-                                    <div class="col-xs-6">
-                                        Length:
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <size-selector part="part" selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
-                                    </div>
-                                </div>
-                                <div class="container-fluid opt-trim db-options-divider" ng-show="part.trim">
-                                    <div class="col-sm-7">
-                                        <div class="row fabric-header">
-                                            Trim:
-                                        </div>
-                                        <div class="row">
-
-                                            <button type="button" class="btn fabric-selector fabric-none" ng-model="form[item.design_builder.options[0].option_name][part.part_name]['trim']" btn-radio="fabric.fabId">
-                                                None
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 ">
-                                            <fabric-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets" fabric-set="set" attrib="'trim'"
-                                                             ng-checked="form[item.design_builder.options[0].option_name][part.part_name]['trim']"
-                                                             selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
-
-
-                                    </div>
-                                </div>
-                            </tab>
-
-                            <tab ng-repeat="part in item.design_builder.extras[0].parts" heading="{{part.label}}">
-
-                                <div class="container-fluid" ng-repeat="value in part.values">
-                                    <div class="col-xs-4">
-
-                                        <div data-toggle="buttons">
-                                            <!--https://github.com/angular-ui/bootstrap/issues/233-->
-                                            <div class="option-button">
-                                                <button type="button" class="btn btn-default option"
-                                                        ng-model="form[item.design_builder.extras[0].name][part.part_name]['id']" btn-radio="value.id"
-                                                        ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = value.defaultFabric; form[item.design_builder.extras[0].name][part.part_name]['code']=value.id + '-' +value.defaultFabric"
-                                                        ng-class="{highlight: form[item.design_builder.extras[0].name][part.part_name]['id']==value.id }">
-                                                    <div class="db-icons-sprite {{part.type}}-{{value.id}}">
-                                                         <!--tooltip="{{value.name}}">    -->
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-3" style="vertical-align: middle">
-                                        <div>
-                                            <div class="fabric-group middle-inner">
-                                                <div class="row extras-fabric-header">
-                                                    None
-                                                </div>
-                                                <div class="row">
-
-                                                    <button type="button"
-                                                            class="btn fabric-selector fabric000"
-
-                                                            ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = 000; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
-                                                            ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
-                                                            btn-radio="value.id +'-'+000"
-                                                            ng-class="{active: form[item.design_builder.extras[0].name][part.part_name]['code']==value.id +'-'+000 }">
-                                                            <!--tooltip="None">-->
-                                                            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '000' ]);">-->
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-5" style="vertical-align: middle">
-                                        <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
-                                            <div class="fabric-group middle-inner">
-                                                <div class="row extras-fabric-header">
-                                                    {{set.setName}}
-                                                </div>
-                                                <div class="row">
-
-                                                    <button ng-repeat="fabric in set.fabrics" type="button"
-                                                            class="btn fabric-selector fabric{{fabric.fabId}}"
-
-                                                            ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = fabric.fabId; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
-                                                            ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
-                                                            btn-radio="value.id +'-'+fabric.fabId"
-                                                            ng-class="{active: form[item.design.extras[0].name][part.part_name]['code']==value.id +'-'+fabric.fabId }">
-                                                            <!--tooltip="{{fabric.fabName}}">-->
-                                                            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '{{fabric.fabId}}' ]);">-->
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </tab>
-
-                            <div class="col-md-3 col-sm-3 align-center" style="margin-top:60px">
-                                <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
-                                    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
-                                    Reset</a>
-                            </div>
-                        </tabset>
-                        <!--<div design-breadcrumb></div>-->
-                        <!--<ul class="" id="options">-->
-                            <!--<li ng-repeat="part in item.design_builder.options[0].parts" ng-class="{active: part.active}">-->
-                                <!--<a href="#{{part.part_name}}" data-toggle="tab">{{part.label}}</a>-->
-                            <!--</li>-->
-                            <!--<li ng-repeat="part in item.design_builder.extras[0].parts"><a href="#{{part.part_name}}-extra" data-toggle="tab">{{part.label}}</a>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-
+            <div class="col-xs-5" style="vertical-align: middle">
+                <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
+                    <div class="fabric-group middle-inner">
+                        <div class="row extras-fabric-header">
+                            {{set.setName}}
+                        </div>
                         <div class="row">
-                            <!--<div class="col-md-3 col-sm-3 align-center" style="margin-top:60px">-->
-                                <!--<a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"-->
-                                   <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"-->
-                                   <!-->
-                                   <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
-                                    <!--Reset</a>-->
-                            <!--</div>-->
-                            <div class="col-md-8 col-sm-8 align-left" style="margin-top:60px">
-                                <a class="btn btn-default  igg-design-buttons" href="#!/design"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
-                                   <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/different-style']);">-->
 
-                                    try a different style</a>
-                            </div>
-                            <div class="col-sm-4 align-right" style="margin-top:60px">
-                                <!--<form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8" >-->
-                                    <!--&lt;!&ndash; https://wiki.foxycart.com/v/1.1/products &ndash;&gt;-->
-                                    <!--<input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>-->
-                                    <!--<input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_name}}" value="{{item.style.styleName}} ({{item.style.styleFormalName}})" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_image}}" value="images/silhouettes/{{item.style.foxyImage}}.png" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_url}}" value="#!/review/{{item.style.styleId}}/{{param(form)}}" />-->
-                                    <!--&lt;!&ndash; Custom Product Options &ndash;&gt;-->
-                                    <!--<input type="hidden" name="{{item.style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_sleeves}}" value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_skirt}}" value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_peplum}}" value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_rosetta}}" value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}" />-->
-                                    <!--<input type="hidden" name="{{item.style.fc_belt}}" value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}" />-->
-                                    <!--<input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"-->
-                                           <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"-->
-                                            <!--/>-->
-                                <!--</form>-->
-                                <!--<div review-link design="param(form)" sil="style"/>-->
-                                <!--<div class="col-md-6 align-right" style="margin-bottom:10px">-->
-                                    <a class="btn btn-danger  igg-design-buttons"
-                                       style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                                       href="#fit" data-toggle="tab"
-                                       ng-click="tabs.fit = true">Fit me</a>
-                                <!--</div>-->
+                            <button ng-repeat="fabric in set.fabrics" type="button"
+                                    class="btn fabric-selector fabric{{fabric.fabId}}"
 
-                            </div>
+                                    ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = fabric.fabId; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
+                                    ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
+                                    btn-radio="value.id +'-'+fabric.fabId"
+                                    ng-class="{active: form[item.design.extras[0].name][part.part_name]['code']==value.id +'-'+fabric.fabId }">
+                                <!--tooltip="{{fabric.fabName}}">-->
+                                <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '{{fabric.fabId}}' ]);">-->
+                            </button>
                         </div>
-
-
-                        <!--<div class="row">-->
-                        <!--<div class="col-sm-4 align-left">-->
-                        <!--<a class="btn btn-default igg-design-buttons" id="reset-design" ng-click="cancel()"-->
-                        <!--ng-disabled="isCancelDisabled()"-->
-                        <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
-                        <!--Reset design</a>-->
-                        <!--</div>-->
-
-                        <!--&lt;!&ndash;<div class="col-sm-4 col-md-offset- align-left" style="margin-bottom:50px">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a class="btn btn-danger design-buttons" href="#/purchase"&ndash;&gt;-->
-                        <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
-                        <!--&lt;!&ndash;Change silhouette</a>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-                        <!--<div class="col-sm-4 col-md-offset-4 align-right">-->
-                        <!--&lt;!&ndash;<a class="btn btn-default igg-design-buttons"&ndash;&gt;-->
-                        <!--&lt;!&ndash;href="https://www.facebook.com/dialog/feed?picture=http://img.aurza.com/skt-001-02-013-slv-009-00-013-nek-001-00-003-blt-002-00-000-ext-002-00-000-ext-003-00-000.png&description=For more details on this dress...&app_id=153275411536544&redirect_uri=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&link=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&name=Check+out+the+dress+I+designed+-+what+do+you+think%3F"&ndash;&gt;-->
-                        <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
-                        <!--&lt;!&ndash;Facebook</a>&ndash;&gt;-->
-                        <!--<div facebook design="form"></div>-->
-                        <!--</div>-->
-
-
-                        <!--</div>-->
-                        <!--<div class="row align-center">-->
-                        <!--&lt;!&ndash;<div class="col-sm-12 align-center" style="margin-bottom:50px">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a class="btn btn-danger" href="#/purchase"&ndash;&gt;-->
-                        <!--&lt;!&ndash;style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"&ndash;&gt;-->
-                        <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
-                        <!--&lt;!&ndash;back to indiegogo</a>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                        <!--<div facebook design="form"></div>-->
-                        <!--</div>-->
-
                     </div>
+                </div>
+            </div>
+
+        </div>
+
+    </tab>
+
+    <div class="col-md-3 col-sm-3 align-center" style="margin-top:60px">
+        <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
+           style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
+            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
+            Reset</a>
+    </div>
+</tabset>
+<!--<div design-breadcrumb></div>-->
+<!--<ul class="" id="options">-->
+<!--<li ng-repeat="part in item.design_builder.options[0].parts" ng-class="{active: part.active}">-->
+<!--<a href="#{{part.part_name}}" data-toggle="tab">{{part.label}}</a>-->
+<!--</li>-->
+<!--<li ng-repeat="part in item.design_builder.extras[0].parts"><a href="#{{part.part_name}}-extra" data-toggle="tab">{{part.label}}</a>-->
+<!--</li>-->
+<!--</ul>-->
+
+<div class="row">
+    <!--<div class="col-md-3 col-sm-3 align-center" style="margin-top:60px">-->
+    <!--<a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"-->
+    <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"-->
+    <!-->
+    <!--&lt;!&ndash;onClick="_gaq.push([
+    '_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+    <!--Reset</a>-->
+    <!--</div>-->
+    <div class="col-md-8 col-sm-8 align-left" style="margin-top:60px">
+        <a class="btn btn-default  igg-design-buttons" href="#!/design"
+           style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
+            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/different-style']);">-->
+
+            try a different style</a>
+    </div>
+    <div class="col-sm-4 align-right" style="margin-top:60px">
+        <a class="btn btn-danger  igg-design-buttons"
+           style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+           href="#fit" data-toggle="tab"
+           ng-click="tabs.fit = true">Fit me</a>
+        <!--</div>-->
+
+    </div>
+</div>
 
 
-                </tab>
-                <tab heading="Fitting Room" active="tabs.fit">
-                    <div class="col-sm-12">
-                    <p>
-                    At AURZA we use our expertise to combine our 3D developed patterns and YOUR measurements to
-                    give you a superior fit. All you need to do is provide 4 basic measurements and / or choose
-                    the size* that you think is best for you. All size and design customisations are included in
-                    the price.
-                    </p>
+<!--<div class="row">-->
+<!--<div class="col-sm-4 align-left">-->
+<!--<a class="btn btn-default igg-design-buttons" id="reset-design" ng-click="cancel()"-->
+<!--ng-disabled="isCancelDisabled()"-->
+<!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
+<!--Reset design</a>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;<div class="col-sm-4 col-md-offset- align-left" style="margin-bottom:50px">&ndash;&gt;-->
+<!--&lt;!&ndash;<a class="btn btn-danger design-buttons" href="#/purchase"&ndash;&gt;-->
+<!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+<!--&lt;!&ndash;Change silhouette</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--<div class="col-sm-4 col-md-offset-4 align-right">-->
+<!--&lt;!&ndash;<a class="btn btn-default igg-design-buttons"&ndash;&gt;-->
+<!--&lt;!&ndash;href="https://www.facebook.com/dialog/feed?picture=http://img.aurza.com/skt-001-02-013-slv-009-00-013-nek-001-00-003-blt-002-00-000-ext-002-00-000-ext-003-00-000.png&description=For more details on this dress...&app_id=153275411536544&redirect_uri=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&link=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&name=Check+out+the+dress+I+designed+-+what+do+you+think%3F"&ndash;&gt;
+-->
+<!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+<!--&lt;!&ndash;Facebook</a>&ndash;&gt;-->
+<!--<div facebook design="form"></div>-->
+<!--</div>-->
 
 
+<!--</div>-->
+<!--<div class="row align-center">-->
+<!--&lt;!&ndash;<div class="col-sm-12 align-center" style="margin-bottom:50px">&ndash;&gt;-->
+<!--&lt;!&ndash;<a class="btn btn-danger" href="#/purchase"&ndash;&gt;-->
+<!--&lt;!&ndash;style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"&ndash;&gt;-->
+<!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+<!--&lt;!&ndash;back to indiegogo</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<div facebook design="form"></div>-->
+<!--</div>-->
 
-                    <form name="sizingForm" class="" role="form">
-                    <div class="row">
-                    <div class="col-sm-6">
+</div>
+
+
+</tab>
+<tab heading="Fit" active="tabs.fit">
+    <div class="col-sm-12">
+        <p>
+            At AURZA we use our expertise to combine our 3D developed patterns and YOUR measurements to
+            give you a superior fit. All you need to do is provide 4 basic measurements and / or choose
+            the size* that you think is best for you. All size and design customisations are included in
+            the price.
+        </p>
+
+
+        <form name="sizingForm" class="" role="form">
+            <div class="row">
+                <div class="col-sm-6">
                     <h4>Select your size for your DRESS:</h4>
-                    </div>
-                    <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
                     <select ng-model="sizing.size" name="sizingForm" class="form-control"
-                    ng-options="size for size in item.style.dressSizes">
+                            ng-options="size for size in item.style.dressSizes">
                     </select>
-                    </div>
-                    </div>
+                </div>
+            </div>
 
 
-                    <div class="row">
-                    <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12">
                     <p>For help in choosing the right size for you please refer to our
-                    <!--<a data-toggle="modal" ng-click="open()">size chart</a>-->
-                    <a data-toggle="modal" data-target="#sizeChartModal">size chart</a>
+                        <!--<a data-toggle="modal" ng-click="open()">size chart</a>-->
+                        <a data-toggle="modal" data-target="#sizeChartModal">size chart</a>
                     </p>
-                    </div>
-                    </div>
-                    <!--</div>-->
-                    <!--<div class="row">-->
-                    <h4>Tell us your key measurements (in CM):</h4>
+                </div>
+            </div>
+            <!--</div>-->
+            <!--<div class="row">-->
+            <h4>Tell us your key measurements (in CM):</h4>
 
-                    <p>Use our <a data-toggle="modal" data-target="#measureGuide">how to measure guide</a> to help you
-                    measure your body accurately</p>
-                    <div class="col-sm-6">
-                    <div class="form-group">
+            <p>Use our <a data-toggle="modal" data-target="#measureGuide">how to measure guide</a> to help you
+                measure your body accurately</p>
+
+            <div class="col-sm-6">
+                <div class="form-group">
                     <label for="bustInput" class="control-label">Bust:</label>
 
                     <div class="input-group">
-                    <!--<span class="input-group-addon">Bust:</span>-->
-                    <input type="text" class="form-control" id="bustInput" ng-model="sizing.bust">
-                    <span class="input-group-addon">cm</span>
+                        <!--<span class="input-group-addon">Bust:</span>-->
+                        <input type="text" class="form-control" id="bustInput" ng-model="sizing.bust">
+                        <span class="input-group-addon">cm</span>
                     </div>
-                    </div>
-                    <div class="form-group">
+                </div>
+                <div class="form-group">
                     <label for="waistInput" class="control-label">Waist:</label>
 
                     <div class="input-group">
-                    <!--<span class="input-group-addon">Bust:</span>-->
-                    <input type="text" class="form-control" id="waistInput" ng-model="sizing.waist">
-                    <span class="input-group-addon">cm</span>
+                        <!--<span class="input-group-addon">Bust:</span>-->
+                        <input type="text" class="form-control" id="waistInput" ng-model="sizing.waist">
+                        <span class="input-group-addon">cm</span>
                     </div>
-                    </div>
-                    </div>
-                    <div class="col-sm-6">
-                    <div class="form-group">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
                     <label for="hipsInput" class="control-label">Hips:</label>
 
                     <div class="input-group">
-                    <!--<span class="input-group-addon">Bust:</span>-->
-                    <input type="text" class="form-control" id="hipsInput" ng-model="sizing.hips">
-                    <span class="input-group-addon">cm</span>
+                        <!--<span class="input-group-addon">Bust:</span>-->
+                        <input type="text" class="form-control" id="hipsInput" ng-model="sizing.hips">
+                        <span class="input-group-addon">cm</span>
                     </div>
-                    </div>
-                    <!--<div class="form-group">-->
-                    <!--<label for="hollowInput" class="control-label">Hollow-to-Floor:</label>-->
+                </div>
+                <!--<div class="form-group">-->
+                <!--<label for="hollowInput" class="control-label">Hollow-to-Floor:</label>-->
 
-                    <!--<div class="input-group">-->
-                    <!--&lt;!&ndash;<span class="input-group-addon">Bust:</span>&ndash;&gt;-->
-                    <!--<input type="text" class="form-control" id="hollowInput" ng-model="sizing.hollowfloor">-->
-                    <!--<span class="input-group-addon">cm</span>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <div class="form-group">
+                <!--<div class="input-group">-->
+                <!--&lt;!&ndash;<span class="input-group-addon">Bust:</span>&ndash;&gt;-->
+                <!--<input type="text" class="form-control" id="hollowInput" ng-model="sizing.hollowfloor">-->
+                <!--<span class="input-group-addon">cm</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="form-group">
                     <label for="heightInput" class="control-label">Height:</label>
 
                     <div class="input-group">
-                    <!--<span class="input-group-addon">Bust:</span>-->
-                    <input type="text" class="form-control" id="heightInput" ng-model="sizing.height">
-                    <span class="input-group-addon">cm</span>
+                        <!--<span class="input-group-addon">Bust:</span>-->
+                        <input type="text" class="form-control" id="heightInput" ng-model="sizing.height">
+                        <span class="input-group-addon">cm</span>
                     </div>
-                    </div>
-                    </div>
+                </div>
+            </div>
 
-                    <p>
-                    * Please note, from our extensive testing, simply providing 4 key measurements significantly improves our
-                    ability to perfect your dress. It takes only 5 minutes, is really easy to do and guidance on how to measure
-                    can be found <a data-toggle="modal" data-target="#measureGuide">here</a>. If once you have submitted your
-                    measurements we feel we need any additional information, we will contact you immediately.
-                    </p>
+            <p>
+                * Please note, from our extensive testing, simply providing 4 key measurements significantly improves
+                our
+                ability to perfect your dress. It takes only 5 minutes, is really easy to do and guidance on how to
+                measure
+                can be found <a data-toggle="modal" data-target="#measureGuide">here</a>. If once you have submitted
+                your
+                measurements we feel we need any additional information, we will contact you immediately.
+            </p>
 
-                    <!--</div>-->
-                    </form>
-                    </div>
-                    <div class="col-md-6 align-right" style="margin-bottom:10px">
-                        <a class="btn btn-danger  igg-design-buttons"
-                           style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                           href="" data-toggle="tab"
-                           ng-click="tabs.order = true">Review and Place Order</a>
+            <!--</div>-->
+        </form>
+    </div>
+    <div class="col-md-6 align-right" style="margin-bottom:10px">
+        <a class="btn btn-danger  igg-design-buttons"
+           style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+           href="" data-toggle="tab"
+           ng-click="tabs.order = true">Review and Place Order</a>
 
-                    </div>
-                </tab>
-                <tab heading="Review" active="tabs.order">
-                    <div class="col-sm-4 align-center" style="margin-top:60px">
-                        <form action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8" >
-                            <!-- https://wiki.foxycart.com/v/1.1/products -->
-                            <input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>
-                            <input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}" />
-                            <input type="hidden" name="{{item.style.fc_name}}" value="{{item.style.styleName}} ({{item.style.styleFormalName}})" />
-                            <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}" />
-                            <input type="hidden" name="{{item.style.fc_image}}" value="images/silhouettes/{{item.style.foxyImage}}.png" />
-                            <input type="hidden" name="{{item.style.fc_url}}" value="#!/review/{{item.style.styleId}}/{{param(form)}}" />
-                            <!-- Custom Product Options -->
-                            <input type="hidden" name="{{item.style.fc_neckline}}" value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}" />
-                            <input type="hidden" name="{{item.style.fc_sleeves}}" value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}" />
-                            <input type="hidden" name="{{item.style.fc_skirt}}" value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}" />
-                            <input type="hidden" name="{{item.style.fc_peplum}}" value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}" />
-                            <input type="hidden" name="{{item.style.fc_rosetta}}" value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}" />
-                            <input type="hidden" name="{{item.style.fc_belt}}" value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}" />
-                            <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
-                                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
-                                    />
-                            <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/send']);"/>-->
-                        </form>
-                        <!--<div review-link design="param(form)" sil="style"/>-->
+    </div>
+</tab>
+<tab heading="Review" active="tabs.order">
+    <div class="review">
+        <div class="headline">
+            <span>REVIEW YOUR DESIGN</span>
 
+            <form id="foxyForm" action="https://aurza.foxycart.com/cart" method="post" accept-charset="utf-8">
+                <!-- https://wiki.foxycart.com/v/1.1/products -->
+                <input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>
+                <input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}"/>
+                <input type="hidden" name="{{item.style.fc_name}}"
+                       value="{{item.style.styleName}} ({{item.style.styleFormalName}})"/>
+                <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}"/>
+                <input type="hidden" name="{{item.style.fc_image}}"
+                       value="images/silhouettes/{{item.style.foxyImage}}.png"/>
+                <input type="hidden" name="{{item.style.fc_url}}"
+                       value="#!/review/{{item.style.styleId}}/{{param(form)}}"/>
+                <!-- Custom Product Options -->
+                <input type="hidden" name="{{item.style.fc_neckline}}"
+                       value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_sleeves}}"
+                       value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_skirt}}"
+                       value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_peplum}}"
+                       value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_rosetta}}"
+                       value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_belt}}"
+                       value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}"/>
 
-                    </div>
-                </tab>
-            </tabset>
+                <input type="hidden" name="{{item.style.fc_size}}"
+                       value="{{sizing.size}}"/>
+                <input type="hidden" name="{{item.style.fc_bust}}"
+                       value="{{sizing.bust}}"/>
+                <input type="hidden" name="{{item.style.fc_waist}}"
+                       value="{{sizing.waist}}"/>
+                <input type="hidden" name="{{item.style.fc_hips}}"
+                       value="{{sizing.hips}}"/>
+                <input type="hidden" name="{{item.style.fc_height}}"
+                       value="{{sizing.height}}"/>
+
+                <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
+                       style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"/>
+                <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/send']);"/>-->
+            </form>
         </div>
 
+        <style-overview style-info="item.style"></style-overview>
+
+        <div class="container-fluid">
+            <div class="row">
+                <table class="table table-striped table-condensed">
+                    <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Style</th>
+                        <th>Size</th>
+                        <th>Fabric</th>
+                        <th>Trim</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="design in form.design" ng-class-even="'alt'">
+                        <td class="bold">{{design.type}}</td>
+                        <td>{{design.id}}</td>
+                        <td>{{design.size}}</td>
+                        <td>{{design.fabric}}</td>
+                        <td>{{design.trim}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"> &nbsp</td>
+                    </tr>
+                    </tbody>
+                    <thead>
+                    <tr>
+                        <th>Accessory</th>
+                        <th>Style</th>
+                        <th>Size</th>
+                        <th>Fabric</th>
+                        <th>Trim</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="design in form.extras" ng-class-even="'alt'">
+                        <td class="bold">{{design.type}}</td>
+                        <td>{{design.id}}</td>
+                        <td>{{design.size}}</td>
+                        <td>{{design.fabric}}</td>
+                        <td>{{design.trim}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"> &nbsp</td>
+                    </tr>
+                    </tbody>
+                    <!--</table>-->
+                    <!--&nbsp-->
+
+                    <!--<div class="row">-->
+                    <!--<table class="table table-striped table-condensed">-->
+                    <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th colspan="4">Measurement</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Dress size</td>
+                        <td colspan="4">{{sizing.size}}</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Bust</td>
+                        <td colspan="4">{{sizing.bust}} cm</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Waist</td>
+                        <td colspan="4">{{sizing.waist}} cm</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Hips</td>
+                        <td colspan="4">{{sizing.hips}} cm</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Height</td>
+                        <td colspan="4">{{sizing.height}} cm</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </div>
+<div class="align-right">
+            <input type="submit" class="btn btn-danger igg-design-buttons" value="Buy It Now!"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"
+                    form="foxyForm"/>
+</div>
     </div>
 
 
-    <div class="row" id="debug_view">
+</tab>
+</tabset>
+</div>
+
+</div>
+
+
+<div class="row" id="debug_view">
 
     <div class="col-md-4 align-left">
         <a class="btn btn-mini" ng-click="isDebugCollapsed = !isDebugCollapsed">Toggle debug view</a>

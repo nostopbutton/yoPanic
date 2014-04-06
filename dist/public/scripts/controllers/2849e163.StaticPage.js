@@ -10,5 +10,4 @@ angular.module('panicApp.Controllers')
           $anchorScroll();
         }
 
-        $scope.headline = "test";
       }]);

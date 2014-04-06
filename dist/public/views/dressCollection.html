@@ -5,9 +5,6 @@
           Be inspired by the dresses we love. Choose to buy from the collection below
           or modify something you see. It's really that simple.
         </span>
-            <!--<div ng-repeat="dress in dresses track by $index">{{dress.itemId}}</div>{{dresses.length}}-->
-            <!--{{dresses}}-->
-
 
         </div>
     </div>
@@ -16,44 +13,15 @@
             <span class="glyphicon glyphicon-chevron-down">​</span><span class=""> Filters</span>
         </div>
         <div class="col-sm-2 header">
-            <!--<li class="dropdown">-->
-                <!--<a class="dropdown-toggle">-->
-                    <!--Silhouettes: {{silFilter}}-->
-                <!--</a>-->
-                <!--<ul class="dropdown-menu">-->
-                    <!--<li ng-repeat="choice in silhouettes" ng-click="alert(choice)">-->
-                        <!--<button ng-click="alert(choice)">{{choice.label}}</button>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</li>-->
+
             <select ng-model="silhouetteFilter" ng-options="sil.id as sil.label for sil in silhouettes">
             </select>
         </div>
         <div class="col-sm-2 header">
-            <!--<li class="dropdown">-->
-                <!--<a class="dropdown-toggle">-->
-                    <!--typeFilter-->
-                <!--</a>-->
-                <!--<ul class="dropdown-menu">-->
-                    <!--<li ng-repeat="choice in types">-->
-                        <!--<a>{{choice.label}}</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</li>-->
             <select ng-model="typeFilter" ng-options="type.id as type.label for type in types">
             </select>
         </div>
         <div class="col-sm-2 header">
-            <!--<li class="dropdown">-->
-                <!--<a class="dropdown-toggle">-->
-                    <!--colourFilter-->
-                <!--</a>-->
-                <!--<ul class="dropdown-menu">-->
-                    <!--<li ng-repeat="choice in colours">-->
-                        <!--<a>{{choice.label}}</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</li>-->
             <select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">
             </select>
         </div>
@@ -68,69 +36,6 @@
         </div>
     </div>
     <div class="row">
-
-        <!--<div class="col-sm-3 col-md-3 col-md-offset-">-->
-            <!--&lt;!&ndash;<div bs-affix data-offset-top="50" data-offset-bottom="400" class="silhouette-filter">&ndash;&gt;-->
-            <!--<div ui-scrollfix="65" class="filter">-->
-                <!--<div class="header row">-->
-                    <!--&lt;!&ndash;<div class="">&ndash;&gt;-->
-                    <!--<div class="col-xs-6 title">-->
-                        <!--<span class="glyphicon glyphicon-chevron-down">​</span><span class=""> Filter</span>-->
-                    <!--</div>-->
-                    <!--<div class="col-xs-6 reset">-->
-                        <!--<a class="" ng-click="reset()">Reset all</a>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--</div>-->
-                <!--&lt;!&ndash;  header &ndash;&gt;-->
-                <!--<div class="attributes row">-->
-                    <!--&lt;!&ndash;<div class="col-xs-12 group">Style</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="attr col-xs-12">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<label ng-repeat="silhouette in silhouettes" class="checkbox">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<input type=checkbox ng-model="silhouette.checked">{{silhouette.label}}&ndash;&gt;-->
-                        <!--&lt;!&ndash;</label>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--<div class="col-xs-12 group">Style {{silhouetteFilter}}</div>-->
-                    <!--<form name="silhouetteOptForm">-->
-                        <!--<div class="attr col-xs-12">-->
-                            <!--<div class="radio" ng-repeat="silhouette in silhouettes track by $index">-->
-                                <!--<label>-->
-                                    <!--<input type="radio" name="silOpt" ng-value="silhouette.id"-->
-                                           <!--ng-model="$parent.silhouetteFilter">-->
-                                    <!--{{silhouette.label}}-->
-                                <!--</label>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</form>-->
-
-                    <!--<span class="col-xs-12 group">Type</span>-->
-                    <!--<form name="typeOptForm">-->
-                        <!--<div class="attr col-xs-12">-->
-                            <!--<div class="radio" ng-repeat="type in types track by $index">-->
-                                <!--<label>-->
-                                    <!--<input type="radio" name="typeOpt" ng-value="type.id"-->
-                                           <!--ng-model="$parent.typeFilter">-->
-                                    <!--{{type.label}}-->
-                                <!--</label>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                    <!--<span class="col-xs-12 group">Colour</span>-->
-                    <!--<form name="colourOptForm">-->
-                        <!--<div class="attr col-xs-12">-->
-                            <!--<div class="radio" ng-repeat="colour in colours track by $index">-->
-                                <!--<label>-->
-                                    <!--<input type="radio" name="colourOpt" ng-value="colour.id"-->
-                                           <!--ng-model="$parent.colourFilter">-->
-                                    <!--{{colour.label}}-->
-                                <!--</label>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                <!--</div>-->
-                <!--&lt;!&ndash;{{trim}}&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
 
         <div class="col-sm-11 col-sm-offset-1 ">
             <div class="row">
@@ -157,7 +62,7 @@
                                 {{dress.itemDesc}}
                             </div>
                             <div class="row price">
-                                HKD {{dress.price | number:0}}
+                                <span class="glyphicon glyphicon-tags"></span>&nbsp HKD {{dress.price | number:0}}
                             </div>
                         </a>
 

@@ -79,12 +79,12 @@ angular.module('panicApp',
             templateUrl: 'views/designBuild.html', controller: 'NewDesignBuildCtrl'
       })
 
-        .when('/checkout', {
-            templateUrl: 'views/checkout.html', controller: 'StaticPageCtrl'
-        })
-        .when('/cart', {
-            templateUrl: 'views/cart.html', controller: 'StaticPageCtrl'
-        })
+//        .when('/checkout', {
+//            templateUrl: 'views/checkout.html', controller: 'StaticPageCtrl'
+//        })
+//        .when('/cart', {
+//            templateUrl: 'views/cart.html', controller: 'StaticPageCtrl'
+//        })
 //      .when('/design/:styleId/:itemId', {
 //        templateUrl: 'views/newDesignBuild.html', controller: 'NewDesignBuildCtrl'
 //      })
@@ -98,9 +98,9 @@ angular.module('panicApp',
 //      })
 
 //      Purchase routes
-      .when('/purchase', {
-        templateUrl: 'views/sizing.html', controller: 'StaticPageCtrl'
-      })
+//      .when('/purchase', {
+//        templateUrl: 'views/sizing.html', controller: 'StaticPageCtrl'
+//      })
 
       // Admin Page routes
 //      .when('/adminCollection', {

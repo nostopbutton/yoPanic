@@ -33,6 +33,21 @@
 .name {
     font-family: 'Nothing You Could Do', cursive;
     font-size: 40px;
+    line-height: 40px;
+}
+.formal-name {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #808080;
+}
+.price-label {
+    font-size: 14px;
+    color: #808080;
+    text-align: right;
+}
+.price {
+    font-size: 24px;
+    text-align: right;
 }
 
 
@@ -60,7 +75,7 @@
     display: block;
     float: left;
     width: 129px;
-    height:50px;
+    /*height:50px;*/
     /*line-height:25px;*/
     vertical-align: bottom;
 }
@@ -335,4 +350,53 @@ input[type="checkbox"].hidden {
 }
 .fabric-selector.fabric170{
     background: #111461;
+}
+
+.review .headline  {
+    border-width:1px;
+    border-color: black;
+    border-style:solid;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.reviewDesign
+{
+    /*font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
+    width:100%;
+    border-collapse:collapse;
+}
+.reviewDesign td, .reviewDesign th
+{
+    font-size:1em;
+    border:none;
+    padding:3px 7px 2px 7px;
+    background-color:#ffffff;
+    color:#000000;
+}
+.reviewDesign th
+{
+    border-top:1px solid #aaaaaa;
+    border-bottom:1px solid #aaaaaa;
+    font-size:1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    /*background-color:#ffffff;*/
+    /*color:#000000;*/
+    font-weight: normal;
+}
+
+.reviewDesign tr td.bold
+{
+    /*font-size:1.1em;*/
+    font-weight: bold;
+}
+
+.reviewDesign tr.alt td
+{
+    color:#000000;
+    background-color:#f7f7f7;
 }
