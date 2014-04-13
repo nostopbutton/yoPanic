@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="styles/home_custom_bootstrap.css">
+    <link rel="stylesheet" href="styles/footer.css">
 
 <!-- TODO: research latest shims and shivs - do not use CDN, locla copy-->
     <!--[if lt IE 10]>
@@ -99,8 +100,8 @@
                 <h1>CUSTOM-MADE FABULOUS</h1>
                 <p>no more compromise on style or fit</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">START DESIGNING</a></p>
-                <p><em>your style, your personality, your size,</em></p>
-                <h1>YOUR<br>PERFECT DRESS</h1>
+                <p>your style, your personality, your size, <br><em>YOUR PERFECT DRESS</em></p>
+                <!--<h1>YOUR<br>PERFECT DRESS</h1>-->
             </div>
         </div>
     </section>
@@ -136,7 +137,7 @@
 </article>
 
 
-<article id="how-it-works"  class="container">
+<article id="how-it-works" class="container">
     <h1 class="row">HOW IT WORKS</h1>
     <div class="row">
         <section id="choose" class="col-sm-4">
@@ -173,29 +174,65 @@
     </div>
 </article>
 
-<article id="never-customised-before">
-    <img src="./images/home/never_before.jpg" alt="I've never customised before">
-    Don't worry it's very simple and if you aren't happy with your garment you can return it within 14 days or get it altered.
-    Start designing.
+<article id="never-customised-before" class="container">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-6">
+            <img src="./images/home/never_before.jpg" alt="I've never customised before">
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-6 outer">
+            <div class="inner">
+                <p>Don't worry it's very simple and if you aren't happy with your garment you can return it within 14 days or get it altered.</p>
+                <a class="btn btn-lg btn-primary" href="#" role="button">START DESIGNING</a>
+            </div>
+        </div>
+    </div>
 </article>
 
 
 <footer role="contentinfo">
-    <section id="signup">
-        Exclusive Offers & Customising Tips from our Experts
-        Enter your email
-        Signup
-    </section>
-    <section id="community">
-        Join the AURZA community:
-        facebook
-        wordpress
-        twitter
-        pinterest
-        instagram
-        email
-    </section>
-    <nav>
+    <div class="container">
+        <!--<div class="row">-->
+            <section id="signup" class="col-md-5 col-md-offset-1 col-sm-6">
+                <p>Exclusive Offers & Customising Tips from our Experts</p>
+
+                <form class="form-inline">
+                    <input id="email" type="text" class="form-control" placeholder="Enter your email...">
+                    <button type="submit" class="btn btn-default">Sign up</button>
+                </form>
+            </section>
+            <section id="community" class="col-sm-6">
+                <p>Join the AURZA community:</p>
+
+                <div class="row social">
+                        <a href="http://www.facebook.com/AURZAcustom" target="_blank">
+                            <image src="/images/somicro-borderless/facebook.png"></image>
+                        </a>
+                        <a href="http://letsgetfabulous.com/" target="_blank">
+                            <image src="/images/somicro-borderless/wordpress.png"></image>
+                        </a>
+                        <a href="http://twitter.com/AURZAcustom" target="_blank">
+                            <image src="/images/somicro-borderless/twitter.png"></image>
+                        </a>
+                        <a href="   http://www.pinterest.com/aurza/" target="_blank">
+                            <image src="/images/somicro-borderless/pinterest.png"></image>
+                        </a>
+                        <a href="http://instagram.com/aurzacustom" target="_blank">
+                            <image src="/images/somicro-borderless/instagram.png"></image>
+                        </a>
+                        <a href="mailto:info@aurza.com" target="_blank">
+                            <image src="/images/somicro-borderless/email.png"></image>
+                        </a>
+
+                </div>
+            </section>
+    </div>
+</footer>
+<footer class="nb" role="contentinfo">
+    <!--</div>-->
+    <div class="container">
+    <!--<div class="row">-->
+    <nav class="navbar" role="navigation">
+    <!--<nav>-->
         <ul>
             <li>Looks we love</li>
             <li>Design your own</li>
@@ -205,6 +242,8 @@
             <li>About aurza</li>
         </ul>
     </nav>
+        </div>
+        </div>
     <nav>
         <ul>
             <li>Terms of use</li>

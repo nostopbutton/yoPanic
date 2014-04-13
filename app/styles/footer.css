@@ -1,4 +1,4 @@
-#footer {
+footer {
     min-height: 120px;
     margin: 0px;
     background-color: #eee;
@@ -6,7 +6,15 @@
     padding-top: 25px;
 }
 
-#footer .navbar, #footer .navbar a {
+footer.nb{
+    min-height: 120px;
+    margin: 0px;
+    background-color: #333;
+    color: #555;
+    padding-top: 25px;
+}
+
+footer .navbar, footer .navbar a {
     color: #eee;
 }
 
@@ -32,11 +40,11 @@
 /*}*/
 
 
-#footer .social {
+footer .social {
     margin-top: 0px;
     text-align: center;
 }
-#footer .social a {
+footer .social a {
     margin: 10px;
 }
 /*#footer .credits .copyright {*/
@@ -45,21 +53,21 @@
     /*text-align: center;*/
     /*margin-top: 30px;*/
 /*}*/
-#footer .social a {
+footer .social a {
     margin: 10px;
 }
-#footer .social a span{
+footer .social a span{
     display: inline-block;
     width: 33px;
     height: 33px;
 }
-#footer .social a:hover span.socialicons{
+footer .social a:hover span.socialicons{
     display: none;
 }
-#footer .social a:hover span.socialicons_h{
+footer .social a:hover span.socialicons_h{
     display: inline-block !important;
 }
-#footer .social span.socialicons_h{
+footer .social span.socialicons_h{
     display: none;
 }
 #email-signup{
@@ -76,16 +84,16 @@
     margin-left:25px;
 }
 
-#footer .navbar {
+footer .navbar {
     background-color: #333;
     margin-top: 20px;
 }
 
-#footer .navbar-nav > li > a {
+footer .navbar-nav > li > a {
     color: #eee;
     font-weight: 200;
 }
-#footer .navbar .nav {
+footer .navbar .nav {
     border-style: none;
 }
 
