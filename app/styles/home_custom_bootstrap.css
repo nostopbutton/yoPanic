@@ -1,5 +1,5 @@
 /* Drop page body down below the header navbar */
-body { padding-top: 80px;}
+body { padding-top: 65px;}
 
 
 /*@media (max-width: 1000px) {*/
@@ -8,7 +8,7 @@ body { padding-top: 80px;}
 
 @media (min-width: 540px) {
     /*.nav-large {display:none;}*/
-
+    body { padding-top: 77px;}
 }
 
 @media (min-width: 768px) {
@@ -300,7 +300,7 @@ body { padding-top: 80px;}
     }
     #logo img {
 
-        /*width:80%;*/
+        width:220px;
     }
     .navbar-header {
         width: auto;
