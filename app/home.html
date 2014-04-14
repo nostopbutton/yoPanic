@@ -26,8 +26,8 @@
 
 <!-- TODO: research latest shims and shivs - do not use CDN, locla copy-->
     <!--[if lt IE 10]>
-    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
     <!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
         today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
@@ -80,8 +80,17 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#">LOOKS WE LOVE <img src="./images/home/heart.png"></a></li>
                     <li><a href="#">DESIGN YOUR OWN</a></li>
-                    <li><a href="#">HOW IT WORKS</a></li>
-                    <li><a href="#">CRAFTMANSHIP</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">HOW IT WORKS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">HOW IT WORKS</a></li>
+                            <li><a href="#">CRAFTMANSHIP</a></li>
+                            <!--<li><a href="#">Something else here</a></li>-->
+                            <!--<li class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                        </ul>
+                    <!--<li><a href="#">HOW IT WORKS</a></li>-->
+                    <!--<li><a href="#">CRAFTMANSHIP</a></li>-->
                     <li><a href="#">BOOK A PARTY</a></li>
                     <li><a href="#">ABOUT AURZA</a></li>
                 </ul>
@@ -109,8 +118,8 @@
         <div class="row">
             <div class="col-sm-4">
                 <section id="craftmanship">
-                    <div style="width:100%">
-                        <img src="./images/home/AURZA-factory.png" alt="individually crafted pieces">
+                    <div  style="width:100%">
+                        <img src="./images/home/AURZA-factory.jpg" alt="individually crafted pieces">
                         <p>individually crafted pieces</p>
                         <h1>HOW WE MAKE YOUR DRESS</h1>
                     </div>
@@ -128,7 +137,7 @@
             </div>
             <div class="col-sm-4">
                 <section id="collection">
-                    <img src="./images/home/AURZA-factory.png" alt="individually crafted pieces">
+                    <img src="./images/home/AURZA-collection.jpg" alt="individually crafted pieces">
                     <h1>SHOP THE COLLECTION</h1>
                 </section>
             </div>
@@ -156,7 +165,7 @@
         <section id="deliver" class="col-sm-4">
             <h2>3. Deliver</h2>
             <img src="./images/home/3-Deliver.png" alt="Secure Payment Gateway -> Delivery in 14 days">
-            <p>Once you have paid through our secure payment gateway, we will make your design exclusively for you and send it to you within 14 days.</p>
+            <p>Once you have paid through our secure payment gateway, we will make your design exclusively for you and send it to you within 4 weeks.</p>
         </section>
     </div>
     <div class="row">
@@ -226,32 +235,51 @@
                 </div>
             </section>
     </div>
-</footer>
-<footer class="nb" role="contentinfo">
+<!--</footer>-->
+<!--<footer class="nb" role="contentinfo">-->
     <!--</div>-->
-    <div class="container">
+
     <!--<div class="row">-->
     <nav class="navbar" role="navigation">
-    <!--<nav>-->
-        <ul>
-            <li>Looks we love</li>
-            <li>Design your own</li>
-            <li>How it works</li>
-            <li>Craftmanship</li>
-            <li>Book a party</li>
-            <li>About aurza</li>
-        </ul>
-    </nav>
+        <!--<div class="container">-->
+        <!--&lt;!&ndash; .navbar-toggle is used as the toggle for collapsed navbar content &ndash;&gt;-->
+        <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+        <!--</button>-->
+        <!--<div class="collapse navbar-collapse navbar-collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li>Looks we love</li>-->
+                <!--<li>Design your own</li>-->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">How it works <b class="caret"></b></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">How it works</a></li>-->
+                        <!--<li><a href="#">Craftmanship</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                    <!--</ul>-->
+                <!--&lt;!&ndash;<li>How it works</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li>Craftmanship</li>&ndash;&gt;-->
+                <!--<li>Book a party</li>-->
+                <!--<li>About AURZA</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>Terms of use</li>
+                <li>Privacy policy</li>
+            </ul>
         </div>
-        </div>
-    <nav>
-        <ul>
-            <li>Terms of use</li>
-            <li>Privacy policy</li>
-        </ul>
     </nav>
-    <section id="copyright">
-        © 2014 AURZA. All rights reserved.
+    <section id="copyright" class="row copyright">
+        <p>© 2014 AURZA. All rights reserved.</p>
     </section>
 </footer>
 

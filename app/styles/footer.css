@@ -87,6 +87,7 @@ footer .social span.socialicons_h{
 footer .navbar {
     background-color: #333;
     margin-top: 20px;
+    border-color: #333;
 }
 
 footer .navbar-nav > li > a {
