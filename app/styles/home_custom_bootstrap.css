@@ -32,13 +32,13 @@ body {
     /*font-family: Verdana, Geneva, sans-serif;*/
 }
 
-body .btn {
+body .btn-primary {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     background-color: #ff5200;
     border-color: #ff5200;;
 }
-body .btn:hover {
+body .btn-primary:hover {
     background-color: rgba(255, 83, 0, 0.82);
     border-color: #dd4800;;
 }
