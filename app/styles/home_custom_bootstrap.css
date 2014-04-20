@@ -1,6 +1,44 @@
+/*http://cssfontstack.com/*/
+/*font-family: "Lucida Bright", Georgia, serif;*/
+/*font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;*/
+
+/*font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;*/
+/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+
+/*http://www.erin-lawrence.com/webfonts/*/
+/*font-family: Baskerville, Cochin, , Gentium, "Times New Roman", serif ;*/
+
+/*font-family: Futura, "Gill Sans", "Century Gothic", "Dejavu Sans", "Trebuchet MS", sans-serif ;*/
+
+/*font-family: "Palatino Linotype", Palatino, "Book Antiqua", "Lucida Bright", Georgia, serif ;*/
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+#home-splash h1 {
+    /*font-family: "Lucida Bright", Georgia, serif;*/
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+#wow h1 {
+    /*font-family: "Times New Roman", Times, serif;*/
+    /*font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;*/
+    /*font-family: Georgia, serif;*/
+}
+
+#wow h2 {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    /*font-family: Verdana, Geneva, sans-serif;*/
+}
+
+body .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
 /* Drop page body down below the header navbar */
 body { padding-top: 65px;}
-
 
 /*@media (max-width: 1000px) {*/
     /*body { padding-top: 170px;}*/
@@ -38,6 +76,11 @@ body { padding-top: 65px;}
     height: 20px;
     padding-left: 0;
     padding-right: 0;
+}
+
+footer .navbar .nav > li {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -82,17 +125,18 @@ body { padding-top: 65px;}
     border-right-style: none;
 }
 
-/*.navbar-inner {*/
-.navbar .container {
-    text-align:center;
-}
-
 .navbar-nav > li > a {
     height: 20px;
     padding-top: 5px;
     line-height: 10px;
     color: #222;
     font-size: 12px;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav > li > a {
+        font-size: 14px;
+    }
 }
 
 .navbar{
@@ -111,6 +155,11 @@ body { padding-top: 65px;}
     border-top-width: 1px;
 
     height: 30px;
+}
+
+/*.navbar-inner {*/
+.navbar .container {
+    text-align:center;
 }
 
 .navbar-toggle {
@@ -361,16 +410,6 @@ body { padding-top: 65px;}
     margin-bottom:20px;
 }
 
-#wow h1 {
-    font-family: "Times New Roman", Times, serif;
-    /*font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;*/
-    /*font-family: Georgia, serif;*/
-}
-
-#wow p {
-    font-family: Arial, Helvetica, sans-serif;
-    /*font-family: Verdana, Geneva, sans-serif;*/
-}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
@@ -385,18 +424,18 @@ body { padding-top: 65px;}
         margin: 20px 0 10px 0;
     }
     #wow p {
-        font-size: 20px;
+        font-size: 18px;
         margin: 24px 0;
     }
 }
 /* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
 @media (min-width: 1200px) {
     #wow h1 {
-        font-size: 50px;
+        font-size: 48px;
         margin: 80px 0 30px 0;
     }
     #wow p {
-        font-size: 20px;
+        font-size: 18px;
         margin: 30px 0;
     }
 }
@@ -420,11 +459,13 @@ body { padding-top: 65px;}
     width:100%;
     background-color: black;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     padding: 5px;
     text-align: center;
     margin:0;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 #home-splash aside #craftmanship p {
     /*background-color: black;*/
@@ -437,6 +478,11 @@ body { padding-top: 65px;}
     padding: 5px;
     text-align: left;
     margin:0;
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+#home-splash aside #design h1 {
+    display: none;
 }
 @media (max-width: 767px) {
     #home-splash aside #design {
@@ -477,13 +523,23 @@ body { padding-top: 65px;}
     #home-splash aside #craftmanship p {
         font-size: 12px;
     }
+    #home-splash aside #design .btn {
+        font-size: 12px;
+    }
     #home-splash aside #design p {
-        font-size: 14px;
+        font-size: 13px;
        padding-bottom: 0;
     }
 }
 /* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
 @media (min-width: 992px) {
+
+    #home-splash aside h1 {
+        font-size: 14px;
+    }
+    #home-splash aside img {
+        height: 174px
+    }
     #home-splash aside section {
         height:204px;
     }
@@ -491,8 +547,11 @@ body { padding-top: 65px;}
         font-size: 16px;
     }
     #home-splash aside #design p {
-        font-size: 20px;
-        padding: 11px 15px;
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+    #home-splash aside #design .btn {
+        font-size: 14px;
     }
     #home-splash aside h1 {
         font-size: 18px;
@@ -501,6 +560,10 @@ body { padding-top: 65px;}
 }
 /* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
 @media (min-width: 1200px) {
+    #home-splash aside img {
+        height: 214px
+    }
+
     #home-splash aside section {
         height:244px;
     }
@@ -508,7 +571,10 @@ body { padding-top: 65px;}
         font-size: 18px;
     }
     #home-splash aside #design p {
-        font-size: 24px;
+        font-size: 22px;
+    }
+    #home-splash aside #design .btn {
+        font-size: 18px;
     }
 }
 
@@ -539,6 +605,9 @@ body { padding-top: 65px;}
     border-width: 10px;
     /*height: 290px;*/
 }
+#how-it-works h1{
+    font-size: 30px;
+}
 
 #how-it-works section h2{
 /*.info-box-item > .title {*/
@@ -546,14 +615,14 @@ body { padding-top: 65px;}
     border-bottom-color: #bbb;
     border-bottom-width: 1px;
 
-    height: 60px;
+    /*height: 60px;*/
 
     color: #666;
     text-align: center;
-    font-size:28px;
+    font-size:24px;
 
-    padding: 15px 0px;
-    font-family: 'Nothing You Could Do', cursive;
+    padding: 10px 0px;
+    /*font-family: 'Nothing You Could Do', cursive;*/
 }
 
 #how-it-works section,
@@ -590,7 +659,7 @@ body { padding-top: 65px;}
 /* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
 @media (min-width: 768px) {
     #how-it-works section {
-        height:313px;
+        height:340px;
         /*margin: 0;*/
     }
     #how-it-works img,
@@ -623,6 +692,14 @@ body { padding-top: 65px;}
 #never-customised-before{
     text-align: center;
 }
+#never-customised-before .btn {
+    font-size: 18px;
+}
+
+#copyright p {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
 
 .outer {
     border: 2px solid #ddd;
@@ -636,6 +713,9 @@ body { padding-top: 65px;}
     font-size:16px;
 }
 
+#signup .btn {
+    font-size: 14px;
+}
 
 
 .box {

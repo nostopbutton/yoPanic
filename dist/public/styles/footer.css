@@ -42,10 +42,7 @@ footer .navbar, footer .navbar a {
 
 footer .social {
     margin-top: 0px;
-    text-align: center;
-}
-footer .social a {
-    margin: 10px;
+    text-align: left;
 }
 /*#footer .credits .copyright {*/
     /*color: #a6a6a7;*/
@@ -54,8 +51,15 @@ footer .social a {
     /*margin-top: 30px;*/
 /*}*/
 footer .social a {
-    margin: 10px;
+    margin: 0 8px 0 0;
 }
+
+@media (min-width: 540px) {
+    footer .social a {
+        margin: 0 10px 0 0;
+    }
+}
+
 footer .social a span{
     display: inline-block;
     width: 33px;
@@ -96,6 +100,17 @@ footer .navbar-nav > li > a {
 }
 footer .navbar .nav {
     border-style: none;
+}
+
+footer .nav {
+    padding-top:0;
+}
+
+@media (min-width: 768px) {
+    footer .nav {
+        padding-top:10px;
+    }
+
 }
 
 .copyright{
