@@ -35,7 +35,14 @@ body {
 body .btn {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
+    background-color: #ff5200;
+    border-color: #ff5200;;
 }
+body .btn:hover {
+    background-color: rgba(255, 83, 0, 0.82);
+    border-color: #dd4800;;
+}
+
 
 /* Drop page body down below the header navbar */
 body { padding-top: 65px;}
