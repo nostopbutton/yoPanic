@@ -619,8 +619,27 @@ hr.grad-line  {
 
 #how-it-works h1 {
     text-align: center;
-
+    overflow: hidden;
 }
+#how-it-works h1:before,
+#how-it-works h1:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+#how-it-works h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+#how-it-works h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
 #how-it-works section,
 #how-it-works aside {
 /*.info-box-item {*/
@@ -634,6 +653,9 @@ hr.grad-line  {
 }
 #how-it-works h1{
     font-size: 30px;
+}
+#how-it-works h1{
+    margin-top: 10px;
 }
 
 #how-it-works section h2{
