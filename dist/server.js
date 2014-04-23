@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express')
-    , connect  = require('connect') // node.js h5bp server-config
+//    , connect  = require('connect') // node.js h5bp server-config
     , colors = require('colors')    // node.js h5bp server-config
 //    path = require('path'),
 //    fs = require('fs'),
