@@ -32,408 +32,21 @@ body {
     /*font-family: Verdana, Geneva, sans-serif;*/
 }
 
-body .btn-primary {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    background-color: #ff5200;
-    border-color: #ff5200;;
-}
-body .btn-primary:hover {
-    background-color: rgba(255, 83, 0, 0.82);
-    border-color: #dd4800;;
-}
 
-
-/* Drop page body down below the header navbar */
-body { padding-top: 65px;}
-
-/*@media (max-width: 1000px) {*/
-    /*body { padding-top: 170px;}*/
-/*}*/
-
-@media (min-width: 540px) {
-    /*.nav-large {display:none;}*/
-    body { padding-top: 77px;}
-}
-
-@media (min-width: 768px) {
-    body { padding-top: 120px;}
-}
-/*@media (min-width: 540px) {*/
-    /*.nav-small {display:none;}*/
-/*}*/
-
-.navbar-header {
-    width: 100%;
-    text-align:center;
-}
-
-.navbar-brand {
-    margin-left: auto  !important;
-    margin-right: auto  !important;
-}
-
-.navbar .nav,
-.navbar .nav > li {
-    float:none;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-    *zoom:1; /* hasLayout ie7 trigger */
-    vertical-align: top;
-    height: 20px;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
-
-
-footer .navbar .nav > li {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
-@media (min-width: 768px) {
-    .navbar .nav,
-    .navbar .nav > li {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
-@media (min-width: 992px) {
-    .navbar .nav,
-    .navbar .nav > li {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-}
-/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
-@media (min-width: 1200px) {
-    .navbar .nav,
-    .navbar .nav > li {
-        padding-left: 17px;
-        padding-right: 17px;
-    }
-}
-
-
-.navbar .nav > li {
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    border-right-style: solid;
-    border-right-color: #ccc;
-    border-right-width: 1px;
-}
-
-.navbar .nav > :last-child {
-    border-right-style: none;
-}
-
-.navbar-nav > li > a {
-    height: 20px;
-    padding-top: 5px;
-    line-height: 10px;
-    color: #222;
-    font-size: 12px;
-}
-
-@media (min-width: 992px) {
-    .navbar-nav > li > a {
-        font-size: 14px;
-    }
-}
-
-.navbar{
-    background-color: white;
-    /*padding-bottom: 10px;*/
-    border-color: white;
-}
-
-.navbar .nav {
-    /*border-bottom-style: solid;*/
-    /*border-bottom-color: #bbb;*/
-    /*border-bottom-width: 1px;*/
-
-    /*border-top-style: solid;*/
-    /*border-top-color: #bbb;*/
-    /*border-top-width: 1px;*/
-
-    height: 30px;
-}
-
-hr {
-    margin: 0;
-    margin-left:-3%;
-    width:106%;
-}
-hr.grad-line  {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,0%,0)), color-stop(50%,hsla(0,0%,0%,.75)), color-stop(100%,hsla(0,0%,0%,0)));
-    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:    -moz-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:     -ms-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-}
-
-/*.navbar-inner {*/
-.navbar .container {
-    text-align:center;
-}
-
-.navbar-toggle {
-    /*float:right;*/
-    /*background-color:red;*/
-    z-index:99;
-    border: 1px solid black;
-}
-
-.nav img {
-    height:18px;
-    padding:0;
-    margin:-5px 0 0 0;
-    vertical-align: middle;
-}
-
-
-
-
-
-/*#footer .terms {*/
-    /*text-align:center;*/
-    /*border-right-style: solid;*/
-    /*border-right-color: #bbb;*/
-    /*border-right-width: 1px;*/
-    /*padding-right: 10px;*/
-    /*margin:0px;*/
-/*}*/
-
-/*#footer .privacy {*/
-    /*margin:0px;*/
-    /*padding-left: 5px;*/
-/*}*/
-
-/*@media (min-width: 768px) and (max-width: 991px) {*/
-    /*body { padding-top:175px; }*/
-    /*.navbar-inner {*/
-        /*height: 70px;*/
-    /*}*/
-/*}*/
-
-/*#view_dress_panel.col-md-5 {*/
-
-    /*padding-left:30px;*/
-    /*padding-right:15px;*/
-    /*margin-left:80px;*/
-    /*margin-right:30px;*/
-/*}*/
-
-
-/* custom inclusion of right, left and below tabs */
-/*http://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3*/
-/*http://www.bootply.com/74926*/
-
-
-/*.tabs-below > .nav-tabs,*/
-/*.tabs-right > .nav-tabs,*/
-/*.tabs-left > .nav-tabs {*/
-    /*border-bottom: 0;*/
-/*}*/
-
-/*.tab-content > .tab-pane,*/
-/*.pill-content > .pill-pane {*/
-    /*display: none;*/
-/*}*/
-
-/*.tab-content > .active,*/
-/*.pill-content > .active {*/
-    /*display: block;*/
-/*}*/
-
-/*.tabs-below > .nav-tabs {*/
-    /*border-top: 1px solid #ddd;*/
-/*}*/
-
-/*.tabs-below > .nav-tabs > li {*/
-    /*margin-top: -1px;*/
-    /*margin-bottom: 0;*/
-/*}*/
-
-/*.tabs-below > .nav-tabs > li > a {*/
-    /*-webkit-border-radius: 0 0 4px 4px;*/
-    /*-moz-border-radius: 0 0 4px 4px;*/
-    /*border-radius: 0 0 4px 4px;*/
-/*}*/
-
-/*.tabs-below > .nav-tabs > li > a:hover,*/
-/*.tabs-below > .nav-tabs > li > a:focus {*/
-    /*border-top-color: #ddd;*/
-    /*border-bottom-color: transparent;*/
-/*}*/
-
-/*.tabs-below > .nav-tabs > .active > a,*/
-/*.tabs-below > .nav-tabs > .active > a:hover,*/
-/*.tabs-below > .nav-tabs > .active > a:focus {*/
-    /*border-color: transparent #ddd #ddd #ddd;*/
-/*}*/
-
-/*.tabs-left > .nav-tabs > li,*/
-/*.tabs-right > .nav-tabs > li {*/
-    /*float: none;*/
-/*}*/
-
-/*.tabs-left > .nav-tabs > li > a,*/
-/*.tabs-right > .nav-tabs > li > a {*/
-    /*min-width: 74px;*/
-    /*margin-right: 0;*/
-    /*margin-bottom: 3px;*/
-/*}*/
-
-/*.tabs-left > .nav-tabs {*/
-    /*float: left;*/
-    /*margin-right: 19px;*/
-    /*border-right: 1px solid #ddd;*/
-/*}*/
-
-/*.tabs-left > .nav-tabs > li > a {*/
-    /*margin-right: -1px;*/
-    /*-webkit-border-radius: 4px 0 0 4px;*/
-    /*-moz-border-radius: 4px 0 0 4px;*/
-    /*border-radius: 4px 0 0 4px;*/
-/*}*/
-
-/*.tabs-left > .nav-tabs > li > a:hover,*/
-/*.tabs-left > .nav-tabs > li > a:focus {*/
-    /*border-color: #eeeeee #dddddd #eeeeee #eeeeee;*/
-/*}*/
-
-/*.tabs-left > .nav-tabs .active > a,*/
-/*.tabs-left > .nav-tabs .active > a:hover,*/
-/*.tabs-left > .nav-tabs .active > a:focus {*/
-    /*border-color: #ddd transparent #ddd #ddd;*/
-    /**border-right-color: #ffffff;*/
-/*}*/
-
-/*.tabs-right > .nav-tabs {*/
-    /*float: right;*/
-    /*margin-left: 19px;*/
-    /*border-left: 1px solid #ddd;*/
-/*}*/
-
-/*.tabs-right > .nav-tabs > li > a {*/
-    /*margin-left: -1px;*/
-    /*-webkit-border-radius: 0 4px 4px 0;*/
-    /*-moz-border-radius: 0 4px 4px 0;*/
-    /*border-radius: 0 4px 4px 0;*/
-/*}*/
-
-/*.tabs-right > .nav-tabs > li > a:hover,*/
-/*.tabs-right > .nav-tabs > li > a:focus {*/
-    /*border-color: #eeeeee #eeeeee #eeeeee #dddddd;*/
-/*}*/
-
-/*.tabs-right > .nav-tabs .active > a,*/
-/*.tabs-right > .nav-tabs .active > a:hover,*/
-/*.tabs-right > .nav-tabs .active > a:focus {*/
-    /*border-color: #ddd #ddd #ddd transparent;*/
-    /**border-left-color: #ffffff;*/
-/*}*/
-
-#header {
-    width:100%
-}
-
-#logo {
-    width:100%;
-}
-
-#bag {
-    /*float:right;*/
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*top: 10px;*/
-}
-
-@media (max-width: 500px) {
-    #logo {
-        /*width:90%;*/
-        /*position: absolute;*/
-        /*left: 0;*/
-        /*top: 10px;*/
-        z-index: -99;
-        text-align:left;
-        /*margin-right:100px;*/
-        margin-left:10px;
-
-    }
-    #logo img {
-
-        width:220px;
-    }
-    .navbar-header {
-        width: auto;
-    }
-
-
-}
-
-@media (min-width: 500px) {
-    #header {
-        position: relative;
-    }
-
-    #bag {
-        /*float:right;*/
-        position: absolute;
-        right: 0;
-        top: 10px;
-    }
-
-}
-
-
-@media (min-width: 768px) {
-    #bag {
-        /*float:right;*/
-        position: absolute;
-        right: 0;
-        top: 10px;
-    }
-
-    #logo {
-        position: static;
-        /*right: 0;*/
-        /*top: 10px;*/
-    }
-}
+/*
+HOME PAGE - SPLASH
+================================================ */
 
 
 #wow img {
-    /*position: absolute;*/
-    /*display: block;*/
     max-width: 100%;
-    /*max-height: 50%;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*margin: auto;*/
     padding: 0
-
 }
 
 #wow {
     text-align:center;
     border: solid 1px #bbb;
-    padding: 10px;
+    padding: 0;
     margin-bottom:20px;
 }
 
@@ -473,14 +86,12 @@ hr.grad-line  {
 }
 
 
-
 #home-splash aside img {
     width:100%;
     height:auto
 }
 
 #home-splash aside h1 {
-    /*position: absolute;*/
     bottom: 0;
     left:0;
     width:100%;
@@ -495,7 +106,6 @@ hr.grad-line  {
 
 
 #home-splash aside #craftmanship p {
-    /*background-color: black;*/
     position: absolute;
     top: 10px;
     left: 20px;
@@ -519,13 +129,10 @@ hr.grad-line  {
 }
 
 #home-splash aside #design p {
-    /*background-color: black;*/
-    /*position: absolute;*/
     top: 10px;
     left: 20px;
     width: 100%;
     color: grey;
-    /*font-size: 22px;*/
     padding: 10px 15px;
     text-align: left;
     margin:0;
@@ -605,18 +212,32 @@ hr.grad-line  {
     }
 }
 
+body .btn-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    background-color: #ff5200;
+    border-color: #ff5200;;
+}
+body .btn-primary:hover {
+    background-color: rgba(255, 83, 0, 0.82);
+    border-color: #dd4800;;
+}
+
+
+/*
+HOME PAGE - HOW IT WORKS
+================================================ */
+
 #how-it-works {
     margin-top: 20px;
     background-color: #eee;
-    /*padding: 20px;*/
-    border-style: solid;
-    border-color: #eee;
-    border-width: 10px;
+    border: 10px solid #eee;
     margin-bottom: 40px;
     position: relative;
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
 }
 
+/*http://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle*/
 #how-it-works h1 {
     text-align: center;
     overflow: hidden;
@@ -642,14 +263,9 @@ hr.grad-line  {
 
 #how-it-works section,
 #how-it-works aside {
-/*.info-box-item {*/
     background-color: #fff;
-    /*background-color: black;*/
     padding: 0px 15px;
-    border-style: solid;
-    border-color: #eee;
-    border-width: 10px;
-    /*height: 290px;*/
+    border: 10px solid #eee;
 }
 #how-it-works h1{
     font-size: 30px;
@@ -658,20 +274,14 @@ hr.grad-line  {
     margin-top: 10px;
 }
 
-#how-it-works section h2{
-/*.info-box-item > .title {*/
-    border-bottom-style: solid;
-    border-bottom-color: #bbb;
-    border-bottom-width: 1px;
-
-    /*height: 60px;*/
+#how-it-works section h2 {
+    border-bottom: 1px solid #bbb;
 
     color: #666;
     text-align: center;
     font-size:18px;
 
     padding: 10px 0px;
-    /*font-family: 'Nothing You Could Do', cursive;*/
 }
 
 #how-it-works section,
@@ -745,6 +355,15 @@ hr.grad-line  {
     font-size: 18px;
 }
 
+/*
+FOOTER
+================================================ */
+
+footer .navbar .nav > li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #copyright p {
     margin-bottom: 0;
     padding-bottom: 20px;
@@ -766,125 +385,9 @@ hr.grad-line  {
     font-size: 14px;
 }
 
-
-/*.box {*/
-    /*position: relative;*/
-    /*width: 60%;*/
-    /*background: #ddd;*/
-    /*-moz-border-radius: 4px;*/
-    /*border-radius: 4px;*/
-    /*padding: 2em 1.5em;*/
-    /*color: rgba(0,0,0, .8);*/
-    /*text-shadow: 0 1px 0 #fff;*/
-    /*line-height: 1.5;*/
-    /*margin: 60px auto;*/
-/*}*/
-
-
-/*.box:before, .box:after {*/
-    /*z-index: -1;*/
-    /*position: absolute;*/
-    /*content: "";*/
-    /*bottom: 15px;*/
-    /*left: 10px;*/
-    /*width: 50%;*/
-    /*top: 80%;*/
-    /*max-width:300px;*/
-    /*background: rgba(0, 0, 0, 0.7);*/
-    /*box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);*/
-    /*transform: rotate(-3deg);*/
-/*}*/
-
-/*.box:after {*/
-    /*transform: rotate(3deg);*/
-    /*right: 10px;*/
-    /*left: auto;*/
-/*}*/
-
-/*http://css-tricks.com/snippets/css/page-curl-shadows/*/
-
-/*.box {*/
-    /*position: relative;*/
-    /*z-index: 1; *//* prevent shadows falling behind containers with backgrounds */
-    /*overflow: hidden;*/
-    /*list-style: none;*/
-    /*margin: 0;*/
-    /*padding: 0; */
-/*}*/
-
-
-/*.box div.box-inner {*/
-    /*position: relative;*/
-    /*float: left;*/
-    /*width: 250px;*/
-    /*height: 150px;*/
-    /*padding: 0;*/
-    /*border: 1px solid #efefef;*/
-    /*margin: 0 30px 30px 0;*/
-    /*background: #fff;*/
-    /*-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;*/
-    /*-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;*/
-    /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; }*/
-
-
-/*.box div.box-inner:before,*/
-/*.box div.box-inner:after {*/
-    /*content: '';*/
-    /*z-index: -1;*/
-    /*position: absolute;*/
-    /*left: 10px;*/
-    /*bottom: 10px;*/
-    /*width: 70%;*/
-    /*max-width: 300px; *//* avoid rotation causing ugly appearance at large container widths */
-    /*max-height: 100px;*/
-    /*height: 55%;*/
-    /*-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
-    /*-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
-    /*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
-    /*-webkit-transform: skew(-15deg) rotate(-6deg);*/
-    /*-moz-transform: skew(-15deg) rotate(-6deg);*/
-    /*-ms-transform: skew(-15deg) rotate(-6deg);*/
-    /*-o-transform: skew(-15deg) rotate(-6deg);*/
-    /*transform: skew(-15deg) rotate(-6deg); }*/
-
-
-/*.box div.box-inner:after {*/
-    /*left: auto;*/
-    /*right: 10px;*/
-    /*-webkit-transform: skew(15deg) rotate(6deg);*/
-    /*-moz-transform: skew(15deg) rotate(6deg);*/
-    /*-ms-transform: skew(15deg) rotate(6deg);*/
-    /*-o-transform: skew(15deg) rotate(6deg);*/
-    /*transform: skew(15deg) rotate(6deg); }*/
-
-/*http://cssdeck.com/labs/page-curl-box-shadow*/
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);*/
-
-/*html {*/
-    /*background: #DEF;*/
-    /*background: -moz-linear-gradient(45deg, #EFF, #DEF);*/
-    /*background: -ms-linear-gradient(45deg, #EFF, #DEF);*/
-    /*background: -webkit-linear-gradient(45deg, #EFF, #DEF);*/
-    /*background: linear-gradient(45deg, #EFF, #DEF);*/
-    /*min-height: 100%;*/
-    /*font-family: "Open Sans", Helvetica, sans-serif;*/
-    /*font-weight: 300;*/
-/*}*/
-
-/*h1, h2 {*/
-    /*font-weight: 400;*/
-    /*text-shadow: 0 1px 0 #FFF;*/
-/*}*/
-
-/*h1 {*/
-    /*width: 800px;*/
-    /*margin: 0 auto;*/
-/*}*/
-
-/*p {*/
-    /*font: 300 13px/20px Arial,sans-serif;*/
-    /*color: #888;*/
-/*}*/
+/*
+GENERAL - CURL EFFECTS
+================================================ */
 
 .page-curl {
     background: #FFFFFF;
@@ -922,9 +425,6 @@ hr.grad-line  {
     transform: skew(-4deg) rotate(-4deg);
 }
 
-/*.page-curl.small:before, .page-curl.small:after {*/
-    /*width: 35%;*/
-/*}*/
 .page-curl.large:before, .page-curl.large:after {
     width: 30%;
 }
@@ -936,55 +436,3 @@ hr.grad-line  {
     left: auto;
     right: 12px;
 }
-
-/*.page-curl.shadow-left {*/
-    /*background: -moz-linear-gradient(0deg, #F5F5F5 0%, #FFF 50%) !important;*/
-    /*background: -ms-linear-gradient(0deg, #F5F5F5 0%, #FFF 50%) !important;*/
-    /*background: -webkit-linear-gradient(0deg, #F5F5F5 0%, #FFF 50%) !important;*/
-    /*background: linear-gradient(0deg, #F5F5F5 0%, #FFF 50%) !important;*/
-/*}*/
-
-/*.page-curl.shadow-right {*/
-    /*background: -moz-linear-gradient(0deg, #FFF 50%, #F5F5F5 100%) !important;*/
-    /*background: -ms-linear-gradient(0deg, #FFF 50%, #F5F5F5 100%) !important;*/
-    /*background: -webkit-linear-gradient(0deg, #FFF 50%, #F5F5F5 100%) !important;*/
-    /*background: linear-gradient(0deg, #FFF 50%, #F5F5F5 100%) !important;*/
-/*}*/
-
-/*.shadow-bottom:before, .shadow-bottom:after {*/
-    /*top: auto;*/
-    /*bottom: 12px;*/
-    /*-moz-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);*/
-    /*-webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);*/
-    /*box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);*/
-/*}*/
-
-/*.shadow-left:after {*/
-    /*display: none;*/
-/*}*/
-
-/*.shadow-right:before {*/
-    /*display: none;*/
-/*}*/
-
-/*.shadow-top-bottom.shadow-left:after {*/
-    /*display: block;*/
-    /*bottom: auto;*/
-    /*top: 15px;*/
-    /*right: auto;*/
-    /*left: 12px;*/
-    /*-moz-box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.5);*/
-    /*-webkit-box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.5);*/
-    /*box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.5);*/
-/*}*/
-
-/*.shadow-top-bottom.shadow-right:before {*/
-    /*display: block;*/
-    /*bottom: auto;*/
-    /*top: 15px;*/
-    /*right: 12px;*/
-    /*left: auto;*/
-    /*-moz-box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.5);*/
-    /*-webkit-box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.5);*/
-    /*box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.5);*/
-/*}*/
