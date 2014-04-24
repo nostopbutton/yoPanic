@@ -1,0 +1,69 @@
+{
+  "name": "panic",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nostopbutton/yoPanic"
+  },
+  "dependencies": {
+    "express": "*",
+    "connect": "*",
+    "colors": "*",
+    "lodash": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "bcrypt": "*",
+    "ejs": "*",
+    "gzippo": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-bower-install": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "*",
+    "jpegtran-bin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-google-cdn": "*",
+    "grunt-newer": "*",
+    "grunt-ngmin": "*",
+    "grunt-rev": "*",
+    "grunt-svgmin": "*",
+    "grunt-usemin": "*",
+    "jshint-stylish": "*",
+    "load-grunt-tasks": "*",
+    "time-grunt": "*",
+    "grunt-express-server": "*",
+    "grunt-open": "*",
+    "connect-livereload": "*",
+    "karma-ng-scenario": "*",
+    "grunt-karma": "*",
+    "karma-script-launcher": "*",
+    "karma-firefox-launcher": "*,
+    "karma-chrome-launcher": "*",
+    "karma-html2js-preprocessor": "*",
+    "karma-jasmine": "*",
+    "karma-requirejs": "*",
+    "karma-coffee-preprocessor": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma": "*",
+    "karma-ng-html2js-preprocessor": "*",
+    "grunt-install-dependencies": "*",
+    "grunt-imageoptim": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
