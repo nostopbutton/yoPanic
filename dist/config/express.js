@@ -7,6 +7,7 @@ var express           = require('express')
     , errorHandler    = require('errorhandler')
     , morgan          = require('morgan')
     , methodOverride  = require('method-override')
+    , favicon  = require('static-favicon')
     , cons            = require('consolidate')
     , colors = require('colors')    // node.js h5bp server-config
     , gzippo = require('gzippo')
