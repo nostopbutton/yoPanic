@@ -609,6 +609,9 @@ module.exports = function (grunt) {
 //            options: {
 //                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
 //            },
+            options: {
+                mangle: false
+            },
             // dist configuration is provided by useminPrepare
             dist: {}
         },
@@ -621,7 +624,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/public/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/public/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/public/images/*.{png,jpg,jpeg,gif,webp,svg}',
+//                        '<%= yeoman.dist %>/public/images/*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/public/fonts/*'
                     ]
                 }

@@ -44,13 +44,19 @@ module.exports = function(app) {
         app.use(errorHandler());
         app.set('views', config.root + '/app/views');
     }
+    else if ('test' == env) {
+        app.use(favicon(path.join(config.root, '/dist/public', 'favicon.ico')));
+        app.use(express.static(path.join(config.root, '/dist/public'))); // set the static files location /public/img will be /img for users
+        app.use(errorHandler());
+        app.set('views', config.root + '/dist/public/views');
+    }
     else if ('production' == env) {
 //    app.configure('production', function(){
 //        app.use(express.favicon(path.join(config.root, 'public', 'favicon.ico')));
         app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
         app.use(express.static(path.join(config.root, 'public'))); // set the static files location /public/img will be /img for users
         app.use(errorHandler());
-        app.set('views', config.root + '/public/views');
+        app.set('views', config.root + 'public/views');
     };
 
 //    app.configure(function(){
