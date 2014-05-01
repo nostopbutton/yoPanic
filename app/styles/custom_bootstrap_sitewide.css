@@ -1,0 +1,270 @@
+/*
+    FoxyCart-specific styles
+    The following styles replace the "X" image with a string of text (defaulting to "Continue Shopping >>").
+*/
+
+/*.fc_cbox #cboxClose {*/
+    /*background:none;*/
+    /*width:auto;*/
+    /*padding-left:1em;*/
+    /*text-indent:0;*/
+    /*font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;*/
+    /*color:#333;*/
+    /*left:0;*/
+    /*right:auto;*/
+/*}*/
+/*.fc_cbox #cboxClose span {*/
+    /*color:#900;*/
+    /*font-size:30px;*/
+    /*vertical-align:-23%;*/
+    /*line-height:.5;*/
+    /* And now for IE6 and IE7 */
+    /**line-height:1;*/
+    /**vertical-align:middle;*/
+    /**position:relative;*/
+    /**top:-5px;*/
+    /**zoom:1;*/
+/*}*/
+
+/*http://cssfontstack.com/*/
+/*font-family: "Lucida Bright", Georgia, serif;*/
+/*font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;*/
+
+/*font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;*/
+/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+
+/*http://www.erin-lawrence.com/webfonts/*/
+/*font-family: Baskerville, Cochin, , Gentium, "Times New Roman", serif ;*/
+
+/*font-family: Futura, "Gill Sans", "Century Gothic", "Dejavu Sans", "Trebuchet MS", sans-serif ;*/
+
+/*font-family: "Palatino Linotype", Palatino, "Book Antiqua", "Lucida Bright", Georgia, serif ;*/
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+body .btn-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    background-color: #ff5200;
+    border-color: #ff5200;;
+}
+
+body .btn-primary:hover {
+    background-color: rgba(255, 83, 0, 0.82);
+    border-color: #dd4800;;
+}
+
+/*
+GENERAL - CURL EFFECTS
+================================================ */
+
+.page-curl {
+    background: #FFFFFF;
+    /*background: -moz-linear-gradient(0deg, #F5F5F5 0%, #FFF 25%, #FFF 75%, #F5F5F5 100%);*/
+    /*background: -ms-linear-gradient(0deg, #F5F5F5 0%, #FFF 25%, #FFF 75%, #F5F5F5 100%);*/
+    /*background: -webkit-linear-gradient(0deg, #F5F5F5 0%, #FFF 25%, #FFF 75%, #F5F5F5 100%);*/
+    /*background: linear-gradient(0deg, #F5F5F5 0%, #FFF 25%, #FFF 75%, #F5F5F5 100%);*/
+    border: 1px solid #bbb;
+    /*-moz-border-radius: 6px 6px 6px 6px;*/
+    /*-webkit-border-radius: 6px 6px 6px 6px;*/
+    /*border-radius: 6px 6px 6px 6px;*/
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.12);
+    /*margin: 50px auto;*/
+    /*padding: 15px;*/
+    position: relative;
+    /*width: 800px;*/
+}
+
+.page-curl:before, .page-curl:after {
+    background: none;
+    bottom: 12px;
+    -moz-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    content: "";
+    height: 10px;
+    left: 12px;
+    position: absolute;
+    width: 40%;
+    z-index: -1;
+    -moz-transform: skew(-4deg) rotate(-4deg);
+    -webkit-transform: skew(-4deg) rotate(-4deg);
+    transform: skew(-4deg) rotate(-4deg);
+}
+
+.page-curl.large:before, .page-curl.large:after {
+    width: 30%;
+}
+
+.page-curl:after {
+    -moz-transform: skew(4deg) rotate(4deg);
+    -webkit-transform: skew(4deg) rotate(4deg);
+    transform: skew(4deg) rotate(4deg);
+    left: auto;
+    right: 12px;
+}
+
+/*
+GENERAL - BREADCRUMB EFFECTS
+================================================ */
+/* http://css-tricks.com/triangle-breadcrumbs/ */
+.breaded {
+    display: none;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    .breaded {
+        display: block;
+    }
+
+    .breaded > ul {
+        list-style: none;
+        overflow: hidden;
+        font: 12px Helvetica, Arial, Sans-Serif;
+        /*margin-top:0px;*/
+        margin-bottom: 20px;
+        margin-left: 0;
+        /*width: 100%;*/
+    }
+
+    .breaded > ul li {
+        float: left;
+
+    }
+
+    .breaded > ul li a {
+        color: #aaaaaa;
+        text-decoration: none;
+        text-align: center;
+        padding: 9px 10px 9px 10px;
+        background: #f1f1f1;
+        position: relative;
+        display: block;
+        float: left;
+        width: 100%; /*90px; */
+        min-width: 50px;
+        /*height:42px;*/
+        /*line-height:25px;*/
+        vertical-align: bottom;
+
+    }
+
+    .breaded > ul li.active a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 9px 10px 9px 10px;
+        margin: 0;
+        background: #222222;
+        position: relative;
+        display: block;
+        float: left;
+    }
+
+    /*@media (max-width: 550px) {*/
+    /*.breaded > ul li a {*/
+    /*padding: 9px 20px 9px 20px;*/
+    /*}*/
+    /*.breaded > ul li.active a  {*/
+    /*padding: 9px 20px 9px 20px;*/
+    /*}*/
+    /*}*/
+    /*@media (min-width: 550px) {*/
+    /*Add the triangles*/
+    .breaded > ul li a:after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent; /*Go big on the size, and let overflow hide*/
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 70%;
+        z-index: 2;
+    }
+
+    .breaded > ul li.active a:after {
+        border-left: 30px solid #222222;
+    }
+
+    /*Create second set of triangles to act as border*/
+    .breaded > ul li a:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid white;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        margin-left: 4px;
+        left: 70%;
+        z-index: 1;
+    }
+
+    .breaded > ul li:first-child a {
+        padding-left: 4px;
+    }
+
+    /*}*/
+    /*.breaded li a:hover { background: #444444; }*/
+    /*.breaded li a:hover:after { border-left-color: #444444 !important; }*/
+
+
+    .breaded > ul li a {
+        /*width: 100px;*/
+    }
+
+    .breaded > ul {
+        width: 400px;
+    }
+
+    .breaded > ul li a,
+    .breaded > ul li.active a {
+        padding: 9px 0 9px 50px;
+    }
+
+    .breaded > ul li a:after {
+        left: 100%;
+    }
+
+    .breaded > ul li a:before {
+        left: 100%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    .breaded > ul {
+        font: 14px Helvetica, Arial, Sans-Serif;
+    }
+    .breaded > ul li:first-child a {
+        padding-left: 14px;
+    }
+
+    .breaded > ul li a {
+        width: 120px;
+    }
+
+    .breaded > ul {
+        width: 530px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+    .breaded > ul {
+        width: 800px;
+    }
+}

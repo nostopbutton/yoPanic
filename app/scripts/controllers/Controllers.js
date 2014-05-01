@@ -3,7 +3,6 @@
 angular.module('panicApp.Controllers', [])
   .run(['$http', function($http) {
 
-    console.log("Controllers: run analytics");
     _gaq.push(['_setAccount', 'UA-42859790-2']);
     _gaq.push(['_setDomainName', '.aurza.com']);
     //	_gaq.push(['_trackPageview']);
@@ -16,29 +15,16 @@ angular.module('panicApp.Controllers', [])
 
 var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams){
   // Fire Google Analytics on Angular page load
-//  console.log("trackPageInGoogleAnalytics");
   $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
 }
 
 var track = function($window, $location, $routeParams) {
-//  console.log("$location=");
-//  console.log($location);
   var path = convertPathToQueryString($location.path(), $routeParams)
-  console.log("track: about to push: " + path);
+  console.log("Controllers: about to push: " + path);
   $window._gaq.push(['_trackPageview', path]);
-//  console.log("track: pushed ");
 };
 
 var convertPathToQueryString = function(locpath, $routeParams) {
-//  console.log("convertPathToQueryString");
-//  console.log("$routeParams=");
-//  console.log($routeParams);
-//  console.log("locpath=");
-//  console.log(locpath);
-//  console.log("path=");
-//  console.log(path);
-//  console.log("search=");
-//  console.log(search);
 
   for (var key in $routeParams) {
     var queryParam = '/' + $routeParams[key];
@@ -49,10 +35,10 @@ var convertPathToQueryString = function(locpath, $routeParams) {
 
 //  console.log("path NOW="+locpath);
 
-  for (key in $routeParams)
-  {
-    console.log("key="+key);
-  }
+//  for (key in $routeParams)
+//  {
+//    console.log("key="+key);
+//  }
   // TODO - FIX ME
 //  var querystring = decodeURIComponent($.param($routeParams));// querystring=pete=me&rangeId=sheath-new&itemId=fred
   var querystring = getAsUriParameters($routeParams);

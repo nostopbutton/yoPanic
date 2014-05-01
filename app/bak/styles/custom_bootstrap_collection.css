@@ -1,0 +1,265 @@
+/*
+SHOP THE COLLECTION PAGE - INTRO
+================================================ */
+
+#collection-intro p {
+    /*font-family: "Lucida Bright", Georgia, serif;*/
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.filter {
+    display:none;
+}
+.mobile-filter {
+    display:block;
+}
+
+.filter,
+.mobile-filter {
+    top: 230px;
+    padding:0;
+    border-color: #b2b2b2;
+    border-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    /*height:40px;*/
+    margin-bottom:10px;
+}
+
+.filter .header {
+    margin-top: 0;
+    padding: 0;
+
+    line-height: 35px;
+    text-align:center;
+}
+
+.filter select {
+    width: 123px;
+}
+
+/*
+SHOP THE COLLECTION PAGE - DRESSES
+================================================ */
+
+.item {
+    /*width: 200px;*/
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item .title {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.item .type {
+    font-size: 10px;
+    margin-bottom:3px;
+}
+
+.item .price {
+    font-size: 14px;
+}
+
+.item a:link ,      /* unvisited link */
+.item a:visited {color:#393939;}  /* visited link */
+.item a:hover {color:#393939;}  /* mouse over link */
+/*.item a:active {color:#0000FF;}  *//* selected link */
+
+.item a {text-decoration:none;}
+
+.item .image{
+    /*max-width: 80%;*/
+    height: 320px;
+    text-align: center;
+    /*display: block;*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /*margin:5px 0 10px 5px;*/
+    /*width:200px;*/
+    /*height:100px;*/
+    /*padding: 10px 0px 0px 0px;*/
+    background: white;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #efefef; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #efefef 0%, #f9f9f9 10%, #fefefe 20%, #fefefe 80%, #f9f9f9 90%, #efefef 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#efefef), color-stop(10%,#f9f9f9), color-stop(20%,#fefefe), color-stop(80%,#fefefe), color-stop(90%,#f9f9f9), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* Opera 11.10+ */
+    /*background: -ms-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); *//* IE10+ */
+    background: linear-gradient(to right,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#efefef',GradientType=1 ); /* IE6-8 */
+}
+
+
+
+.item  .image {
+    margin: 1em 0;
+    height: 294px;
+    width: 165px;
+    /*border: 1px solid red;*/
+    position: relative;
+}
+
+.item  .image img {
+    max-height: 294px;
+    max-width: 165px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*background: #3A6F9A;*/
+}
+
+.item  .image img {
+    /*background: #3A6F9A;*/
+    /*vertical-align: middle;*/
+    /*max-height: 25px;*/
+    /*max-width: 160px;*/
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    .filter {
+        display: block;
+    }
+    .mobile-filter {
+        display:none;
+    }
+    .item .image{
+        /*max-width: 165px;*/
+        /*height: 320px;*/
+        text-align: center;
+        /*display: block;*/
+        margin-left: auto;
+        margin-right: auto
+        /*margin-bottom: 100px;*/
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    #collection-intro p {
+        font-size: 20px;
+    }
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+    #collection-intro p {
+        font-size: 24px;
+    }
+}
+
+/*
+SHOP ITEM VIEW - INTRO
+================================================ */
+/*#dress_image_panel .image{*/
+    /*margin: auto;*/
+/*}*/
+#dress_image_panel .image img{
+    margin: auto;
+}
+
+#dress_image_panel .views img{
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+    /*bor*/
+}
+/*
+SHOP ITEM VIEW - STYLE PANEL
+================================================ */
+
+#style-panel .name {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+#style-panel .formal-name {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #808080;
+    text-align: center;
+}
+/*.price-label {*/
+    /*font-size: 14px;*/
+    /*color: #808080;*/
+    /*text-align: right;*/
+/*}*/
+#style-panel .price {
+    font-size: 24px;
+    text-align: center;
+}
+
+#style-panel .action {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+#style-panel .btn {
+    font-size: 16px;
+    text-align: center;
+    /*width:150px;*/
+    /*height:50px;*/
+}
+
+#style-panel .description {
+    padding:10px 0 10px 0;
+}
+
+#style-panel .description h2 {
+    font-size: 18px;
+}
+
+/*#style-panel .description ul{*/
+    /*padding-right:20px;*/
+    /*font-size: 20px;*/
+    /*text-align: center;*/
+/*}*/
+
+#not-perfect h4 {
+    /*margin-top: 20px;*/
+    font-size: 18px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    #style-panel .name ,
+    #style-panel .formal-name ,
+    #style-panel .price {
+        text-align: left;
+    }
+    #style-panel .action {
+        text-align: right;
+    }
+    #not-perfect  h4{
+        /*margin-top: 20px;*/
+        /*font-size: 14px;*/
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    #not-perfect h4 {
+        /*margin-top: 20px;*/
+        font-size: 18px;
+    }
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+
+}

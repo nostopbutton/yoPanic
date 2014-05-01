@@ -1,0 +1,220 @@
+.static h1 ,
+.static h2 ,
+.static .intro {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+}
+
+.static h1 {
+    color: #666666;
+    font-size:26px;
+}
+
+.static .intro {
+    font-size: 16px;
+    /*margin-bottom:24px;*/
+}
+
+.static h2 {
+    font-size:20px;
+}
+
+.static h3 {
+    font-size:18px;
+}
+
+.static h4 {
+    font-size:16px;
+}
+
+.static p {
+    /*font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;*/
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    /*font-family: Verdana, Geneva, sans-serif;*/
+}
+
+/*Center images*/
+.static img {
+    display: block;
+    margin: 10px auto;
+}
+.static hr {
+    margin-top:40px;
+
+}
+
+.signature {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    .static h1 {
+        font-size:36px;
+    }
+    .static .intro {
+        font-size: 18px;
+    }
+    .static h1 {
+        font-size:30px;
+    }
+    .static img {
+        display: block;
+        margin: 30px auto;
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    .static h1 {
+        font-size:36px;
+    }
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+
+}
+.about h1 {
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.about .intro,
+.party .book-party {
+    background-color: #ff5200;
+    display:inline-block;
+    padding: 0;
+}
+
+.about .intro-text,
+.party .booking-form {
+    color:#ffffff;
+    font-size: 17px;
+    /*margin:0px;*/
+    padding:20px;
+    /*height: 320px;*/
+    text-align: left;
+}
+.about .intro .video-panel,
+.party .party-img {
+    padding:0;
+
+    text-align:center
+}
+.about .intro .video-panel iframe,
+.party .party-img img {
+    display: block;
+    margin:  0 auto;
+}
+
+.about .video {
+    /*min-height: 200px;*/
+    /*height:100%;*/
+    width:100%;
+    /*max-height:100%;*/
+    /*margin-right:40px;*/
+    /*float:left;*/
+}
+
+.party {
+    margin-bottom: 40px;
+}
+
+/*.party .party-img {*/
+    /*margin:0px;*/
+    /*padding:0px;*/
+    /*text-align:center*/
+/*}*/
+
+/*.party .booking-form {*/
+    /*background-color: #e93629;*/
+    /*color:#ffffff;*/
+    /*margin:0px;*/
+    /*padding:20px;*/
+/*}*/
+
+.party .booking-form .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.party .booking-form .desc {
+    margin: 5px 0px 10px 0px;
+    font-size: 12px;
+}
+
+.party .booking-form label {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.party .booking-form button {
+    text-align:center;
+    font-size: 12px;
+    font-weight: normal;
+    color: #e93629;
+    width: 50%;
+    /*height: 30px;*/
+    margin:10px 0px 2px 0px;
+}
+
+.party img {
+    margin:0;
+}
+
+
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    .about h1 {
+        margin-bottom:40px;
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    .about .video {
+        height: 293px;
+        /*margin-right:40px;*/
+        /*float:left;*/
+    }
+    .about .intro-text {
+        font-size: 20px;
+    }
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+
+}
+
+.about .letter {
+    margin-top:20px;
+}
+
+.about .letter-text {
+    padding:0 20px;
+}
+
+.about hr ,
+.party hr {
+    margin: 20px 0;
+}
+
+.about .team {
+    margin-top: 10px;
+}
+
+.about .team .text{
+    /*margin: 0px;*/
+    /*padding: 0px;*/
+
+}
+
+.about .team .text h4{
+    margin-top: 0px;
+    padding: 0px;
+
+}

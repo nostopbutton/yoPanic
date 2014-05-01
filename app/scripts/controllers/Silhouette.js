@@ -13,8 +13,8 @@ angular.module('panicApp.Controllers')
       // Put Style Catalogue data into page scope
       $scope.styles = Range.styleCatalogue(
         function (data) {   //success
-          console.log("styles.length: "+$scope.styles.length);
-
+//          console.log("styles.length: "+$scope.styles.length);
+// TODO - promises
         }
       );
 
@@ -118,20 +118,11 @@ angular.module('panicApp.Controllers')
 
     }])
   .controller('appController',['$scope', '$location', '$anchorScroll' ,function($scope, $location, $anchorScroll){
-    if($location.path()=='/how-to-help')
-    {
-      $scope.headline = "How YOU can HELP..."
-    } else {
-      $scope.headline = "Send us YOUR design"
-    }
-
     $scope.scrollTo = function(id) {
       $location.hash(id);
       $anchorScroll();
     }
 
-//    console.log("Location.path is: ");
-//    console.log($location.path());
     $scope.$on('LOAD',function(){$scope.loading=true});
     $scope.$on('UNLOAD',function(){$scope.loading=false});
   }])

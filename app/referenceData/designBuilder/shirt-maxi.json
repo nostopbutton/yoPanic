@@ -5,15 +5,17 @@
         , "type": "silk"
         , "styleName": "Claudia"
         , "styleFormalName": "Maxi-Shirt Dress"
-        , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
-        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
-        , "Perfect with killer heels for a timeless show stopping look." ]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 3000
-        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Our maxi version of the shirt dress is effortless and flattering, whilst lengthening the body to create an elegant silhouette."
+        , "" ]
+        , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
+        , "For best results dry clean."]
+        , "price": 2900
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+           "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-203maxi-body"
-        , "defaultItemId": "shtm-1"
+        , "defaultItemId": "shirtmaxi-1"
         , "foxyImage": "pat-203maxi"
         , "fc_category": "category||31b15320b56008f194e77afe8c28be726e177d430cce844e8da42b190117c473"
         , "fc_code": "code||75e0afeb9c76fb83c4c861b263270e78708ad90baf142d2ae581e79981d243cc"
@@ -80,12 +82,38 @@
     , "collection":
     [
         {
-            "itemId": "shtm-1"
-            , "itemDesc": "Maxi-Shirt dress - Fuscia"
+            "itemId": "shirtmaxi-1"
+            , "itemDesc": "Maxi-Shirt - Coral"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "089", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "089", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "shirtmaxi-2"
+            , "itemDesc": "Maxi-Shirt - Hot pink"
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "088", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "088", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "shirtmaxi-3"
+            , "itemDesc": "Maxi-Shirt - Cobalt"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "087", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "087", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}

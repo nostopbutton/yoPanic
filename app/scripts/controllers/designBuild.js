@@ -2,7 +2,7 @@
 
 //angular.module('panicApp.Controllers', ['ngSocial'])
 angular.module('panicApp.Controllers')//, ['ngSocial'])
-    .controller('NewDesignBuildCtrl', ['$scope', '$routeParams', 'Range', 'ReferenceDataCache', 'DesignBuilder', 'CatalogueService',
+    .controller('DesignBuildCtrl', ['$scope', '$routeParams', 'Range', 'ReferenceDataCache', 'DesignBuilder', 'CatalogueService',
         '$rootScope', '$window', '$location',
         function ($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, CatalogueService, $rootScope, $window, $location) {
 
@@ -12,8 +12,11 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
                 styleId = $routeParams.styleId,
                 itemId = $routeParams.itemId,
                 designCode = $routeParams.designCode,
+                tab = $routeParams.tab,
                 allFabricSets = {},
                 range = {};
+
+//            alert(JSON.stringify($location));
 
             $scope.form = "";
             $scope.current_title = 'Test';
@@ -22,17 +25,26 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
 
             $scope.tabs = {"style":true, "design": false, "fit": false, "order": false};
 
+            if(tab){
+                $scope.tabs["style"] = false;
+                $scope.tabs[tab] = true;
+            }
+
+            $scope.view = "-lg-front.jpg";
+
             // Put Style data into page scope
 //      ReferenceDataCache.getStyleById($routeParams.styleId, $scope);
 //      ReferenceDataCache.getItemById($routeParams.itemId, $scope);
-            CatalogueService.getItemPromise($routeParams.styleId, $routeParams.itemId).then(function (result) {  // this is only run after $http completes
+            CatalogueService.getItemPromise($routeParams.styleId, $routeParams.itemId).then(function (result) {
+            // this is only run after $http completes
                 $scope.item = angular.copy(result);
-
+//                console.log("result  "+JSON.stringify(result));
                 if (_.isUndefined(designCode) ) {
                     master = angular.copy(result.itemDesign.itemDesign);
                 }
                 range = angular.copy(result);
                 $scope.master = master;     // so it can be viewed in debug screen
+//                console.log("master "+master)
                 $scope.params = $.param(master);
                 $scope.cancel();            // set form to master
             });
@@ -44,6 +56,15 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
             if (designCode) {
                 $scope.designCode = designCode;
                 $scope.deparam = angular.copy($.deparam(designCode))
+            }
+
+            $scope.sizing = {
+                "size": "",
+                "bust":"",
+                "waist":"",
+                "hips":"",
+                "hollowfloor":"",
+                "height":""
             }
 
 

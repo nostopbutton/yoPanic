@@ -1,0 +1,360 @@
+#home-splash h1 {
+    /*font-family: "Lucida Bright", Georgia, serif;*/
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+#wow h1 {
+    /*font-family: "Times New Roman", Times, serif;*/
+    /*font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;*/
+    /*font-family: Georgia, serif;*/
+}
+
+#wow h2 {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    /*font-family: Verdana, Geneva, sans-serif;*/
+}
+
+
+/*
+HOME PAGE - SPLASH
+================================================ */
+
+
+#wow img {
+    max-width: 100%;
+    padding: 0
+}
+
+#wow {
+    text-align:center;
+    border: solid 1px #bbb;
+    padding: 0;
+    margin-bottom:20px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    #wow h1 {
+        font-size: 40px;
+        margin: 20px 0 10px 0;
+    }
+    #wow p {
+        font-size: 18px;
+        margin: 24px 0;
+    }
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+    #wow h1 {
+        font-size: 48px;
+        margin: 80px 0 30px 0;
+    }
+    #wow p {
+        font-size: 18px;
+        margin: 30px 0;
+    }
+}
+
+#home-splash aside section {
+    border: solid 1px #bbb;
+    margin: 20px 0;
+}
+
+
+#home-splash aside img {
+    width:100%;
+    height:auto
+}
+
+#home-splash aside h1 {
+    bottom: 0;
+    left:0;
+    width:100%;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#home-splash aside #craftmanship p {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 40%;
+    color: grey;
+    font-size: 18px;
+    padding: 5px;
+    text-align: left;
+    margin:0;
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+#home-splash aside #design h1 {
+    display: none;
+}
+@media (max-width: 767px) {
+    #home-splash aside #design {
+        height: auto;
+        padding-bottom: 10px;
+    }
+}
+
+#home-splash aside #design p {
+    top: 10px;
+    left: 20px;
+    width: 100%;
+    color: grey;
+    padding: 10px 15px;
+    text-align: left;
+    margin:0;
+}
+
+#home-splash aside #design div {
+  text-align: center;
+}
+#home-splash aside #design a {
+    margin:5px;
+}
+
+
+#home-splash h1 {
+    margin-top:60px;
+    margin-bottom:5px;
+}
+
+#home-splash .sub {
+    margin-top:0;
+}
+
+#home-splash .btn {
+    margin-top:35px;
+    margin-bottom:35px;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    #home-splash aside section {
+        height:156px;
+        margin: 0;
+    }
+    #home-splash aside #craftmanship p {
+        font-size: 12px;
+    }
+    #home-splash aside #design .btn {
+        font-size: 12px;
+    }
+    #home-splash aside #design p {
+        font-size: 13px;
+       padding-bottom: 0;
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+
+    #home-splash aside h1 {
+        font-size: 14px;
+    }
+    #home-splash aside img {
+        height: 174px
+    }
+    #home-splash aside section {
+        height:204px;
+    }
+    #home-splash aside #craftmanship p {
+        font-size: 16px;
+    }
+    #home-splash aside #design p {
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+    #home-splash aside #design .btn {
+        font-size: 14px;
+    }
+    #home-splash aside h1 {
+        font-size: 18px;
+    }
+
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+    #home-splash aside img {
+        height: 214px
+    }
+
+    #home-splash aside section {
+        height:244px;
+    }
+    #home-splash aside #craftmanship p {
+        font-size: 18px;
+    }
+    #home-splash aside #design p {
+        font-size: 22px;
+    }
+    #home-splash aside #design .btn {
+        font-size: 18px;
+    }
+}
+
+/*
+HOME PAGE - HOW IT WORKS
+================================================ */
+
+#how-it-works {
+    margin-top: 20px;
+    background-color: #eee;
+    border: 10px solid #eee;
+    margin-bottom: 40px;
+    position: relative;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+/*http://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle*/
+#how-it-works h1 {
+    text-align: center;
+    overflow: hidden;
+}
+#how-it-works h1:before,
+#how-it-works h1:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+#how-it-works h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+#how-it-works h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+#how-it-works section,
+#how-it-works aside {
+    background-color: #fff;
+    padding: 0px 15px;
+    border: 10px solid #eee;
+}
+#how-it-works h1{
+    font-size: 30px;
+}
+#how-it-works h1{
+    margin-top: 10px;
+}
+
+#how-it-works section h2 {
+    border-bottom: 1px solid #bbb;
+
+    color: #666;
+    text-align: center;
+    font-size:18px;
+
+    padding: 10px 0px;
+}
+
+#how-it-works section,
+#how-it-works aside{
+    text-align: center;
+}
+
+#how-it-works section p{
+    text-align: left;
+}
+
+#how-it-works li {
+    text-align:left;
+}
+
+#how-it-works img {
+    width:auto;
+    height:auto;
+}
+
+#how-it-works aside img {
+    width:100%;
+    height:auto;
+}
+
+#how-it-works h3,
+#how-it-works p{
+    text-align: left;
+}
+
+#how-it-works h3{
+    font-size: 18px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    #how-it-works section {
+        height:340px;
+        /*margin: 0;*/
+    }
+    #how-it-works img,
+    #how-it-works aside img {
+        width:100%;
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    #how-it-works section {
+        height:316px;
+    }
+    #how-it-works img,
+    #how-it-works aside img {
+        width:auto;
+    }
+
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+    #how-it-works section {
+        height:296px;
+    }
+}
+
+#never-customised-before img{
+    width: 100%;
+}
+
+#never-customised-before{
+    text-align: center;
+}
+#never-customised-before .btn {
+    font-size: 18px;
+}
+
+
+.outer {
+    border: 2px solid #ddd;
+    padding: 5px;
+}
+
+.inner {
+    border: 2px dashed #bcc;
+    padding: 25px;
+
+    font-size:16px;
+}

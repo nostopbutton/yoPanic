@@ -12,7 +12,6 @@ var middleware = require('./middleware')
 module.exports = function(app) {
 
 //    var router = express.Router();
-
     // Server API Routes
 //    app.get('/api/awesomeThings', api.awesomeThings);
 //
@@ -31,11 +30,13 @@ module.exports = function(app) {
 //        res.render('index');
 //    });
     app.route('/').get(middleware.setUserCookie, index.index)
-    app.route('/shop/').get(middleware.setUserCookie, index.shop)
-    app.route('/how-it-works/').get(middleware.setUserCookie, index.howItWorks)
-    app.route('/craftmanship/').get(middleware.setUserCookie, index.craftmanship)
-    app.route('/party/').get(middleware.setUserCookie, index.party)
-    app.route('/about/').get(middleware.setUserCookie, index.about)
+//    app.route('/shop/').get(middleware.setUserCookie, index.shop)
+//    app.route('/how-it-works/').get(middleware.setUserCookie, index.howItWorks)
+//    app.route('/flatter-factor/').get(middleware.setUserCookie, index.flatterFactor)
+//    app.route('/craftmanship/').get(middleware.setUserCookie, index.craftmanship)
+//    app.route('/party/').get(middleware.setUserCookie, index.party)
+//    app.route('/about/').get(middleware.setUserCookie, index.about)
+//    app.route('/terms/').get(middleware.setUserCookie, index.terms)
 //        router.get('/', middleware.setUserCookie, index.index);
 //    router.get('/shop/', middleware.setUserCookie, index.shop);
 //    router.get('/how-it-works/', middleware.setUserCookie, index.howItWorks);
@@ -43,7 +44,7 @@ module.exports = function(app) {
 //    router.get('/party/', middleware.setUserCookie, index.party);
 //    router.get('/about/', middleware.setUserCookie, index.about);
     // Always keep this route last // node.js h5bp server-config
-//    router.get('*', index.index, function(req, res, next) {
+//    app.route('*').get(index.index, function(req, res, next) {
 //
 //        var url = req.url
 //            , ua = req.headers['user-agent'];

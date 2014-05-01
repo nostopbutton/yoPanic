@@ -1,0 +1,71 @@
+#how-view h1 ,
+#how-view h2 ,
+#how-view .intro {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+}
+
+#how-view h1 {
+    color: #666666;
+    font-size:26px;
+}
+
+#how-view .intro {
+    font-size: 16px;
+    /*margin-bottom:24px;*/
+}
+
+#how-view h2 {
+    font-size:20px;
+}
+
+#how-view p {
+    /*font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;*/
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    /*font-family: Verdana, Geneva, sans-serif;*/
+}
+
+/*Center images*/
+#how-view img {
+    display: block;
+    margin: 10px auto;
+}
+#how-view hr {
+    margin-top:20px;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    #how-view h1 {
+        font-size:36px;
+    }
+    #how-view .intro {
+        font-size: 18px;
+    }
+    #how-view h1 {
+        font-size:30px;
+    }
+    #how-view img {
+        display: block;
+        margin: 30px auto;
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    #how-view h1 {
+        font-size:36px;
+    }
+}
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+
+}
+
+#home-splash aside section {
+    border: solid 1px #bbb;
+    margin: 20px 0;
+}

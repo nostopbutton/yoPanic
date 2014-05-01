@@ -7,13 +7,16 @@
         , "styleFormalName": "Doloman Dress"
         , "shortDesc": "...."
         , "strapline": "..."
-        , "description": [ "..."
-        , "..." ]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 2000
-        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
+        , "description": [ "Perfect for curves whilst amazingly comfortable at the same time, the doloman top can be paired with any skirt."
+        , "Its pleated shoulders result in  beautiful draping lines and provide a looser fit.  Keep it simple with a straight pencil or add a killer kick with the ruffle at the back." ]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 2300
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-305-body"
-        , "defaultItemId": "do-1"
+        , "defaultItemId": "doloman-1"
         , "foxyImage": "pat-305"
         , "fc_category": "category||ec008c82b6ca16f76c1b95a875ceeb2905143aba73eef686cb46d48c8458aa5e"
         , "fc_code": "code||5cbe7dcfc1af859b34447d224b9c875b38d8f8b7bc828fd059db4c385243f233"
@@ -112,15 +115,15 @@
     , "collection":
     [
         {
-            "itemId": "do-1"
-            , "itemDesc": "Doloman dress - Midnight blue"
+            "itemId": "doloman-1"
+            , "itemDesc": "Doloman - Cream / Black"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "007", "size": "00", "fabric": "014", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "002", "size": "02", "fabric": "014", "trim": ""}
+                "neckline":   {"type": "nek", "id": "007", "size": "00", "fabric": "008", "trim": "120"}
+                , "skirt":    {"type": "skt", "id": "002", "size": "02", "fabric": "011", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "108", "code": "004-108"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }

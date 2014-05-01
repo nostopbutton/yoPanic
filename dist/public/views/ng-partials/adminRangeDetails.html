@@ -1,1 +1,58 @@
-<div id="adminRangeView" class="container"><br><br><div class="row"><div class="span12"><table border="1"><thead></thead><tbody><tr><td colspan="6">"title": {{range.title}}</td></tr><tr><td colspan="6">"price": {{range.price}}</td></tr><tr><td colspan="6">"strapline": {{range.strapline}}</td></tr><tr><td colspan="6">"sizes": {{range.sizes}}</td></tr><tr><td colspan="6">"views": {{range.views}}</td></tr><tr><td colspan="6">"default": {{range.default}}</td></tr><tr ng-repeat="bodice in range.bodice"><!--<td>"name": {{bodice.name}}</td><td>"views": {{bodice.type}}</td><td ng-repeat="bodice_fabric in range.bodice_fabric"><table><tr><td style="text-align: center">{{bodice_fabric.name}}:{{bodice_fabric.type}}: </td></tr><tr><td><img ng-src="img/dress/2.2-{{bodice.type}}-{{bodice_fabric.type}}.png"/></td></tr></table></td>--><td>"name": {{bodice.name}}</td><td>"views": {{bodice.type}}</td><td ng-repeat="bodice_fabric in range.bodice_fabric"><table><tr><td style="text-align: center">{{bodice_fabric.name}}:{{bodice_fabric.type}}:</td></tr><tr><td><span class="dress-sprite {{bodice.type}}-{{bodice_fabric.type}}"></span></td></tr></table></td></tr><tr ng-repeat="skirt in range.skirt"><td>"name": {{skirt.name}}</td><td>"views": {{skirt.type}}</td><td ng-repeat="skirt_fabric in range.skirt_fabric"><table><tr><td style="text-align: center">{{skirt_fabric.name}}:{{skirt_fabric.type}}:</td></tr><tr><td><span class="dress-sprite {{skirt.type}}-{{skirt_fabric.type}}"></span></td></tr></table></td></tr><tr ng-repeat="sleeves in range.sleeves"><td>"name": {{sleeves.name}}</td><td>"views": {{sleeves.type}}</td><td ng-repeat="sleeves_fabric in range.sleeves_fabric"><table><tr><td style="text-align: center">{{sleeves_fabric.name}}:{{sleeves_fabric.type}}:</td></tr><tr><td><span class="dress-sprite {{sleeves.type}}-{{sleeves_fabric.type}}"></span></td></tr></table></td></tr><tr ng-repeat="belt in range.belt"><td>"name": {{belt.name}}</td><td>"views": {{belt.type}}</td><td ng-repeat="belt_fabric in range.belt_fabric"><table><tr><td style="text-align: center">{{belt_fabric.name}}:{{belt_fabric.type}}:</td></tr><tr><td><span class="dress-sprite {{belt.type}}-{{belt_fabric.type}}"></span></td></tr></table></td></tr></tbody></table></div></div>Debug View:<pre>range={{range}}</pre></div><!-- /container -->
+<div id="adminRangeView"class="container">
+    <br><br>
+    <div class="row">
+        <div class="span12">
+            <table  border="1">
+                <thead></thead>
+                <tbody>
+                    <tr><td colspan="6">"title": {{range.title}}</td></tr>
+                    <tr><td colspan="6">"price": {{range.price}}</td></tr>
+                    <tr><td colspan="6">"strapline": {{range.strapline}}</td></tr>
+                    <tr><td colspan="6">"sizes": {{range.sizes}}</td></tr>
+                    <tr><td colspan="6">"views": {{range.views}}</td></tr>
+                    <tr><td colspan="6">"default": {{range.default}}</td></tr>
+                    <tr ng-repeat="bodice in range.bodice">
+                        <!--<td>"name": {{bodice.name}}</td><td>"views": {{bodice.type}}</td><td ng-repeat="bodice_fabric in range.bodice_fabric"><table><tr><td style="text-align: center">{{bodice_fabric.name}}:{{bodice_fabric.type}}: </td></tr><tr><td><img ng-src="img/dress/2.2-{{bodice.type}}-{{bodice_fabric.type}}.png"/></td></tr></table></td>-->
+                        <td>"name": {{bodice.name}}</td><td>"views": {{bodice.type}}</td>
+                        <td ng-repeat="bodice_fabric in range.bodice_fabric">
+                            <table>
+                                <tr><td style="text-align: center">{{bodice_fabric.name}}:{{bodice_fabric.type}}: </td></tr>
+                                <tr><td><span class="dress-sprite {{bodice.type}}-{{bodice_fabric.type}}"></span></td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="skirt in range.skirt">
+                        <td>"name": {{skirt.name}}</td><td>"views": {{skirt.type}}</td>
+                        <td ng-repeat="skirt_fabric in range.skirt_fabric">
+                            <table>
+                                <tr><td style="text-align: center">{{skirt_fabric.name}}:{{skirt_fabric.type}}: </td></tr>
+                                <tr><td><span class="dress-sprite {{skirt.type}}-{{skirt_fabric.type}}"></span></td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="sleeves in range.sleeves">
+                        <td>"name": {{sleeves.name}}</td><td>"views": {{sleeves.type}}</td>
+                        <td ng-repeat="sleeves_fabric in range.sleeves_fabric">
+                            <table>
+                                <tr><td style="text-align: center">{{sleeves_fabric.name}}:{{sleeves_fabric.type}}: </td></tr>
+                                <tr><td><span class="dress-sprite {{sleeves.type}}-{{sleeves_fabric.type}}"></span></td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="belt in range.belt">
+                        <td>"name": {{belt.name}}</td><td>"views": {{belt.type}}</td>
+                        <td ng-repeat="belt_fabric in range.belt_fabric">
+                            <table>
+                                <tr><td style="text-align: center">{{belt_fabric.name}}:{{belt_fabric.type}}: </td></tr>
+                                <tr><td><span class="dress-sprite {{belt.type}}-{{belt_fabric.type}}"></span></td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    Debug View:
+    <pre>range={{range}}</pre>
+</div> <!-- /container -->
+

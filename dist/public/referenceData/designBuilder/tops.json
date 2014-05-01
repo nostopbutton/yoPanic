@@ -11,7 +11,8 @@
         , "..." ]
         , "care": [ "Look after it, and it will last..."]
         , "price": 600
-        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-10-body"
         , "defaultItemId": "top-1"
         , "foxyImage": "pat-10-body"

@@ -15,14 +15,16 @@ module.exports = function (grunt) {
     // Load grunt tasks automatically
 //  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('assemble');
 
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
     // configurable paths
     var yeomanConfig = {
-        app: require('./bower.json').appPath || 'app',
-        dist: 'dist'
+        app: require('./bower.json').appPath || 'app'
+        , dist: 'dist'
+        , imagemin: 'imagemin'
 //        ,public_dist: 'dist/public'
     };
 
@@ -81,8 +83,17 @@ module.exports = function (grunt) {
             gruntfile: {
                 files: ['Gruntfile.js']
             },
+            assemble: {
+                files: ['<%= yeoman.app %>/templates/content/{,*//*}*.hbs',
+                    '<%= yeoman.app %>/templates/layouts/{,*//*}*.hbs',
+                    '<%= yeoman.app %>/templates/pages/{,*//*}*.hbs',
+                    '<%= yeoman.app %>/templates/partials/{,*//*}*.hbs'],
+                tasks: ['assemble:serverDesignBuilder'
+                         , 'assemble:serverDist']
+            },
             livereload: {
                 files: [
+                    '.tmp/html/{,*//*}*.html',
                     '<%= yeoman.app %>/*.{html, png, ico}',
                     '{.tmp,<%= yeoman.app %>}/views/{,*//*}*.{html,jade,ejs}',
                     '{.tmp,<%= yeoman.app %>}/styles/{,*//*}*.css',
@@ -111,6 +122,51 @@ module.exports = function (grunt) {
             }
         },
 
+
+        assemble: {
+            options: {
+                flatten: true,
+                layout: 'static.hbs',
+                layoutdir: '<%= yeoman.app %>/templates/layouts',
+                assets: 'dist/images',
+                partials: ['<%= yeoman.app %>/templates/partials/*.hbs']
+//                files: {
+//                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/static/*.hbs']
+//                }
+            },
+            designBuilder:
+            {
+                // override task-level layout
+                options: {
+                    layout: 'design-builder.hbs'
+                    , partials: ['.tmp/templates/partials/*.hbs']
+                } ,
+                files: {
+                    '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/design-builder/*.hbs']
+                }
+            },
+            dist: {
+                options: {
+                    partials: ['.tmp/templates/partials/*.hbs']
+                },
+                files: {
+                    '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/static/*.hbs']
+                }
+            },
+            serverDesignBuilder: {
+                options: {
+                    layout: 'design-builder.hbs'
+                } ,
+                files: {
+                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/design-builder/*.hbs']
+                }
+            },
+            serverDist: {
+                files: {
+                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/static/*.hbs']
+                }
+            }
+         },
 
 //        connect: {
 //            options: {
@@ -186,9 +242,10 @@ module.exports = function (grunt) {
                     {
                         dot: true,
                         src: [
-                            '.tmp',
-                            '<%= yeoman.dist %>/*',
-                            '!<%= yeoman.dist %>/.git*'
+                            '.tmp'
+                            , '<%= yeoman.imagemin %>/*'
+                            , '<%= yeoman.dist %>/*'
+                            , '!<%= yeoman.dist %>/.git*'
                         ]
                     }
                 ]
@@ -321,9 +378,12 @@ module.exports = function (grunt) {
         // concat, minify and revision files. Creates configurations in memory so
         // additional tasks can operate on them
         useminPrepare: {
-            html: '<%= yeoman.app %>/views/{,*/}*.html',
+//            html: '.tmp/html/{,*/}*.html',
+            html: '<%= yeoman.app %>/templates/{,*/}*.hbs',
             options: {
                 dest: '<%= yeoman.dist %>/public'
+                // This is the destination for the usemin tasks output (e.g. concat, cssmin, etc)
+//                dest: '.tmp/min'
             }
 
 //            }
@@ -339,8 +399,10 @@ module.exports = function (grunt) {
 
         concurrent: {
             server: [
-                'coffee:dist',
-                'compass:server'
+                'coffee:dist'
+                , 'compass:server'
+//                , 'assemble:server'
+//                , 'assemble:designBuilder'
             ],
             test: [
                 'coffee',
@@ -349,14 +411,18 @@ module.exports = function (grunt) {
             dist: [
                 'coffee',
                 'compass:dist',
-                'imagemin:dist',
+                'imagemin:dist'
 //               'svgmin',
-                'htmlmin:dist'
+//                'htmlmin:dist'
+//                , 'assemble:dist'
+//                , 'assemble:designBuilder'
             ],
             quick_dist: [
                 'coffee',
                 'compass:dist'
-                ,'htmlmin:dist'
+//                ,'htmlmin:dist'
+//                , 'assemble:dist'
+//                , 'assemble:designBuilder'
             ]
         },
         // The following *-min tasks produce minified files in the dist folder
@@ -366,7 +432,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.{png,jpg,jpeg,gif}',
-                    dest: '<%= yeoman.app %>/../imagemin'
+                    dest: '<%= yeoman.imagemin %>'
                 }]
             }
         },
@@ -401,8 +467,10 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>',
-                        src: ['*.html', 'views/{,*/}*.html'],
+//                        cwd: '<%= yeoman.app %>',
+//                        src: ['*.html', 'views/{,*/}*.html'],
+                        cwd: '.tmp/html',
+                        src: ['*.html'],
                         dest: '<%= yeoman.dist %>/public'
                     }
                 ]
@@ -468,13 +536,13 @@ module.exports = function (grunt) {
                             'components/**/*',
                             'referenceData/**/*',
                             'images/{,*/}*.{gif,webp}',
-                            'fonts/*'
-//                            , '*.html', 'views/{,*/}*.html'
+                            'fonts/*',
+                            'views/ng-partials/*'
                         ]
                     },
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>/../imagemin',
+                        cwd: '<%= yeoman.imagemin %>',
                         dest: '<%= yeoman.dist %>/public/images',
                         src: ['{,*/}*']
                     },
@@ -488,7 +556,7 @@ module.exports = function (grunt) {
                         expand: true,
                         dest: '<%= yeoman.dist %>',
                         cwd: 'lib',
-                        src: ['**/*', '.gitignore', '!bak'],
+                        src: ['{,*/}*',  '!bak{,*/}*'],
                         rename: function (dest, src) {
                             var path = require('path');
                             if (src === 'distpackage.json') {
@@ -545,6 +613,12 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            templates: {
+                expand: true,
+                cwd: '<%= yeoman.app %>/templates',
+                dest: '.tmp/templates/',
+                src: '{,**/}*.hbs'
             }
         },
 
@@ -561,6 +635,7 @@ module.exports = function (grunt) {
             options: {
                 report: 'gzip'
             },
+            // dist configuration is provided by useminPrepare
             dist: {
 //                files: {
 //                    '<%= yeoman.dist %>/public/styles/main.css': [
@@ -624,6 +699,9 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/public/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/public/styles/{,*/}*.css',
+//                        '.tmp/min/scripts/{,*/}*.js',
+//                        '.tmp/min/styles/{,*/}*.css',
+
 //                        '<%= yeoman.dist %>/public/images/*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/public/fonts/*'
                     ]
@@ -632,7 +710,9 @@ module.exports = function (grunt) {
         },
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
-            html: ['<%= yeoman.dist %>/public/views/{,*/}*.html'],
+            html: '.tmp/templates/{,*/}*.hbs',
+//            html: '.tmp/html/{,*/}*.html',
+//            html: ['<%= yeoman.dist %>/public/views/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/public/styles/{,*/}*.css'],
 //            html: ['<%= yeoman.dist %>/views/{,*/}*.html',
 //                '<%= yeoman.dist %>/views/{,*/}*.jade'],
@@ -712,9 +792,11 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
 //            'bower-install',
-            'concurrent:server',
-            'autoprefixer',
-            'express:dev',
+            'concurrent:server'
+            , 'assemble:serverDesignBuilder'
+            , 'assemble:serverDist'
+//            'autoprefixer',
+            , 'express:dev',
             'open',
             'watch'
         ]);
@@ -771,37 +853,49 @@ module.exports = function (grunt) {
     grunt.registerTask('new-build', [
         'clean:dist'
 //        ,'bower-install'
-        ,'useminPrepare'
+//        ,'useminPrepare'
         ,'concurrent:dist'
+        ,'useminPrepare'
+//        ,'htmlmin:dist'
         ,'autoprefixer'
         ,'concat'
 //        ,'ngmin'
         ,'copy:dist'
+        ,'copy:templates'
 //        ,'cdnify'
         ,'cssmin'
         ,'uglify'
         ,'rev'
         ,'usemin'
-        ,'htmlmin:deploy'
-        , 'install-dependencies'
+        , 'assemble:dist'
+        , 'assemble:designBuilder'
+//        ,'htmlmin:dist'
+//        ,'htmlmin:deploy'
+//        , 'install-dependencies'
     ]);
 
     grunt.registerTask('quick', [
         'clean:quick_dist'
 //        ,'bower-install'
-        ,'useminPrepare'
+//        ,'useminPrepare'
         ,'concurrent:quick_dist'
+        ,'useminPrepare'
+//        ,'htmlmin:dist'
 //        ,'autoprefixer'
        , 'concat'
 //       , 'ngmin'
         ,'copy:dist'
+        ,'copy:templates'
 //        ,'cdnify'
         ,'cssmin'
         ,'uglify'
         ,'rev'
         ,'usemin'
-        ,'htmlmin:deploy'
-        , 'install-dependencies'
+        , 'assemble:dist'
+        , 'assemble:designBuilder'
+//        ,'htmlmin:dist'
+////        ,'htmlmin:deploy'
+////        , 'install-dependencies'
     ]);
 
     grunt.registerTask('default', [

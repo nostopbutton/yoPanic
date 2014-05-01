@@ -1,0 +1,151 @@
+<div id="review-panel">
+    <div class="container-fluid ">
+        <div id="style-panel" class="row">
+            <div class="intro col-sm-5">
+                <div class="name">{{item.style.styleName}}</div>
+                <div class="formal-name">{{item.style.styleFormalName}}</div>
+                <div class="price">HKD {{item.style.price | number:0}}</div>
+            </div>
+            <div class="action col-sm-7">
+                <!--<a class="btn btn-primary"-->
+                   <!--href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit" data-toggle="tab"-->
+                   <!--ng-click="tabs.fit = true">Buy It Now!</a>-->
+                <input type="submit" class="btn btn-primary" value="Buy It Now!"
+                       form="foxyForm"/>
+            </div>
+        </div>
+        <hr class="grad-line">
+        <h1>REVIEW YOUR DESIGN</h1>
+        <hr class="grad-line">
+        <div class="">
+
+            <form id="foxyForm" action="https://aurza.foxycart.com/cart" method="post"
+                  accept-charset="utf-8">
+                <!-- https://wiki.foxycart.com/v/1.1/products -->
+                <input type="hidden" name="{{item.style.fc_category}}" value="{{item.style.type}}"/>
+                <input type="hidden" name="{{item.style.fc_code}}" value="{{item.style.styleId}}"/>
+                <input type="hidden" name="{{item.style.fc_name}}"
+                       value="{{item.style.styleName}} ({{item.style.styleFormalName}})"/>
+                <input type="hidden" name="{{item.style.fc_price}}" value="{{item.style.price}}"/>
+                <input type="hidden" name="{{item.style.fc_image}}"
+                       value="images/silhouettes/{{item.style.foxyImage}}.png"/>
+                <input type="hidden" name="{{item.style.fc_url}}"
+                       value="#!/review/{{item.style.styleId}}/{{param(form)}}"/>
+                <!-- Custom Product Options -->
+                <input type="hidden" name="{{item.style.fc_neckline}}"
+                       value="{{form.design.neckline.type}}-{{form.design.neckline.id}}-{{form.design.neckline.size}}-{{form.design.neckline.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_sleeves}}"
+                       value="{{form.design.sleeves.type}}-{{form.design.sleeves.id}}-{{form.design.sleeves.size}}-{{form.design.sleeves.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_skirt}}"
+                       value="{{form.design.skirt.type}}-{{form.design.skirt.id}}-{{form.design.skirt.size}}-{{form.design.skirt.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_peplum}}"
+                       value="{{form.extras.peplum.type}}-{{form.extras.peplum.id}}-{{form.extras.peplum.size}}-{{form.extras.peplum.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_rosetta}}"
+                       value="{{form.extras.rosetta.type}}-{{form.extras.rosetta.id}}-{{form.extras.rosetta.size}}-{{form.extras.rosetta.fabric}}"/>
+                <input type="hidden" name="{{item.style.fc_belt}}"
+                       value="{{form.extras.belt.type}}-{{form.extras.belt.id}}-{{form.extras.belt.size}}-{{form.extras.belt.fabric}}"/>
+
+                <input type="hidden" name="{{item.style.fc_size}}"
+                       value="{{sizing.size}}"/>
+                <input type="hidden" name="{{item.style.fc_bust}}"
+                       value="{{sizing.bust}}"/>
+                <input type="hidden" name="{{item.style.fc_waist}}"
+                       value="{{sizing.waist}}"/>
+                <input type="hidden" name="{{item.style.fc_hips}}"
+                       value="{{sizing.hips}}"/>
+                <input type="hidden" name="{{item.style.fc_height}}"
+                       value="{{sizing.height}}"/>
+            </form>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <table class="table table-striped table-condensed">
+                    <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Style</th>
+                        <th>Size</th>
+                        <th>Fabric</th>
+                        <th>Trim</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="design in form.design" ng-class-even="'alt'">
+                        <td class="bold">{{design.type}}</td>
+                        <td>{{design.id}}</td>
+                        <td>{{design.size}}</td>
+                        <td>{{design.fabric}}</td>
+                        <td>{{design.trim}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"> &nbsp</td>
+                    </tr>
+                    </tbody>
+                    <thead>
+                    <tr>
+                        <th>Accessory</th>
+                        <th>Style</th>
+                        <th>Size</th>
+                        <th>Fabric</th>
+                        <th>Trim</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="design in form.extras" ng-class-even="'alt'">
+                        <td class="bold">{{design.type}}</td>
+                        <td>{{design.id}}</td>
+                        <td>{{design.size}}</td>
+                        <td>{{design.fabric}}</td>
+                        <td>{{design.trim}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"> &nbsp</td>
+                    </tr>
+                    </tbody>
+
+                    <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th colspan="4">Measurement</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Dress size</td>
+                        <td colspan="4">{{sizing.size}}</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Bust</td>
+                        <td colspan="4">{{sizing.bust}} cm</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Waist</td>
+                        <td colspan="4">{{sizing.waist}} cm</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Hips</td>
+                        <td colspan="4">{{sizing.hips}} cm</td>
+                    </tr>
+                    <tr ng-class-even="'alt'">
+                        <td class="bold">Height</td>
+                        <td colspan="4">{{sizing.height}} cm</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+        <div id="action" class="row ">
+            <div class="col-sm-12 main-action">
+                <!--<div class="align-right">-->
+                <input type="submit" class="btn btn-primary" value="Buy It Now!"
+                       form="foxyForm"/>
+            </div>
+        </div>
+    </div>
+</div>

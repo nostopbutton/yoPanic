@@ -1,16 +1,13 @@
 <div id="collection-view" class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 strap-line">
-        <span class="small">
-          Be inspired by the dresses we love. Choose to buy from the collection below
-          or modify something you see. It's really that simple.
-        </span>
-
+    <div id="collection-intro" class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1">
+          <p>Be inspired by the dresses we love. Choose to buy from the collection below
+          or modify something you see. It's really that simple.</p>
         </div>
     </div>
     <div class="row filter">
-        <div class="col-sm-1 col-sm-offset-1 header">
-            <span class="glyphicon glyphicon-chevron-down">​</span><span class=""> Filters</span>
+        <div class="col-md-1 col-md-offset-1 col-sm-2 header">
+            <span class="glyphicon glyphicon-chevron-down">​</span><span>&nbsp Filters</span>
         </div>
         <div class="col-sm-2 header">
 
@@ -32,28 +29,69 @@
             </select>
         </div>
         <div class="col-sm-1 header">
-            <a class="" ng-click="reset()">Reset</a>
+            <a class="btn btn-xs btn-default" ng-click="reset()">Reset</a>
         </div>
     </div>
+
+    <!--<div class="row mobile-filter">-->
+        <!--<div class="col-md-1 col-md-offset-1 col-sm-2 header">-->
+            <!--<span class="glyphicon glyphicon-chevron-down">​</span><span>&nbsp Filters</span>-->
+        <!--</div>-->
+        <!--<div class="col-sm-2 header">-->
+
+            <!--<select ng-model="silhouetteFilter" ng-options="sil.id as sil.label for sil in silhouettes">-->
+            <!--</select>-->
+        <!--</div>-->
+        <!--<div class="col-sm-2 header">-->
+            <!--<select ng-model="typeFilter" ng-options="type.id as type.label for type in types">-->
+            <!--</select>-->
+        <!--</div>-->
+        <!--<div class="col-sm-2 header">-->
+            <!--<select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">-->
+            <!--</select>-->
+        <!--</div>-->
+
+        <!--<div class="col-sm-2 header">-->
+
+            <!--<select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">-->
+            <!--</select>-->
+        <!--</div>-->
+        <!--<div class="col-sm-1 header">-->
+            <!--<a class="btn btn-xs btn-default" ng-click="reset()">Reset</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class=frame>-->
+        <!--&lt;!&ndash;<span class="helper"></span>&ndash;&gt;-->
+        <!--<img src="/images/collection/sheath-2-md-dress.png"  />-->
+    <!--</div>-->
+
+
     <div class="row">
 
-        <div class="col-sm-11 col-sm-offset-1 ">
-            <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 ">
+            <!--<div class="row">-->
 
-            </div>
+            <!--</div>-->
             <div class="row">
                 <div ng-repeat="dress in dresses
                                     | filter:{styleId: silhouetteFilter}
                                     | filter:{type: typeFilter}
                                     | filter:{itemDesc: colourFilter}">
-                    <div class="col-sm-2 item">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="item">
 
-                        <a ng-href="#!/design/{{dress.styleId}}/{{dress.itemId}}"
-                           onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
-                            <div class="row image">
-                                <img ng-src="/images/items/{{dress.itemId}}.png" class="">
-                                <!--<img ng-mouseenter="dress.img = dress.img+'_bk'" ng-mouseleave="dress.img = (dress.img | rollover)"-->
-                                <!--ng-src="images/dresses/{{dress.img}}.png" class="">-->
+                        <a ng-href="#!/item/{{dress.styleId}}/{{dress.itemId}}"
+                           ng-click="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
+                            <div class="row">
+                                <div class=" image page-curl">
+                                    <!--<img ng-src="/images/collection/{{dress.itemId}}-lg-dress.jpg"-->
+                                <img ng-src="/images/collection/{{dress.itemId}}-lg-{{dress.img}}"
+                                     alt="{{dress.styleName}} - {{dress.itemDesc}}"
+                                     ng-init="dress.img = imageFilename"
+                                     ng-mouseenter="dress.img = rolloverFilename"
+                                     ng-mouseleave="dress.img = imageFilename"
+                                     class="">
+                                </div>
                             </div>
                             <div class="row title">
                                 {{dress.styleName}}
@@ -65,6 +103,7 @@
                                 <span class="glyphicon glyphicon-tags"></span>&nbsp HKD {{dress.price | number:0}}
                             </div>
                         </a>
+                        </div>
 
                     </div>
                 </div>

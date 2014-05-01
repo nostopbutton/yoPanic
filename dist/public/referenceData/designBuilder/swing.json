@@ -11,7 +11,8 @@
         , "Perfect with killer heels for a timeless show stopping look."]
         , "care": [ "Look after it, and it will last..."]
         , "price": 2000
-        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+                            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-304-body"
         , "defaultItemId": "sw-1"
         , "foxyImage": "pat-304"
@@ -123,7 +124,7 @@
     , "collection":
     [
         {
-            "itemId": "sw-1"
+            "itemId": "swing-1"
             , "itemDesc": "Swing dress - Midnight Blue"
             , "itemDesign": {
             "design": {
@@ -139,7 +140,7 @@
         }
         }
         , {
-        "itemId": "sw-2"
+        "itemId": "swing-2"
         , "itemDesc": "Swing dress - Aubergine"
         , "itemDesign": {
             "design": {
@@ -157,7 +158,7 @@
         ,
 
         {
-            "itemId": "sw-3"
+            "itemId": "swing-3"
             , "itemDesc": "Swing dress - Red"
             , "itemDesign": {
             "design": {

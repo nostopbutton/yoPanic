@@ -1,1 +1,290 @@
-<div ng-controller="SizingCtrl"><div class="modal fade" id="sizeChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header row"><div class="col-md-6"><h3>SizeChart</h3></div><div class="col-md-6 align-right"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div><div class="modal-body"><p>Our dresses are designed to fit the following size bodies perfectly.</p><p class="centeredImage"><img src="images/sizing/sizeChart.png" class="img-polaroid"></p><p>Plus – thanks to some clever designs and fabric choices all of our sizes have a little stretch and so for further guidance on picking the best size for you please see the range of body measurements below that we think each size flatters the most.</p><p class="centeredImage"><img src="images/sizing/bodyMeasurements.png" class="img-polaroid"></p><p>However please don’t despair if you measure yourself and you don’t fall any one size – remember at BRAZEN you can mix and match sizes for the top and bottom on many of our dresses or provide key body measurements and 400 HKD for a fully customized size (see how to measure)</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div><!--<div id="sizeChartModal" class="modal hide fade smallModal">--><!--<form id="login-form" action="/login" method="post" class="form-horizontal">--><!--<div class="modal-header">--><!--<a data-dismiss="modal" class="close"></a>--><!--<h3>Sizing Chart</h3>--><!--</div>--><!--<div class="modal-body">--><!--&lt;!&ndash;<fieldset>&ndash;&gt;--><!--&lt;!&ndash;<div class="control-group">&ndash;&gt;--><!--&lt;!&ndash;<input type="text" name="username" placeholder="Username" class="input-xlarge uname"/>&ndash;&gt;--><!--&lt;!&ndash;&lt;!&ndash;<span id="imagePlaceHolder"></span>&ndash;&gt;&ndash;&gt;--><!--&lt;!&ndash;</div>&ndash;&gt;--><!--&lt;!&ndash;<div class="control-group">&ndash;&gt;--><!--&lt;!&ndash;<input type="password" name="password" placeholder="Password" class="input-xlarge"/>&ndash;&gt;--><!--&lt;!&ndash;</div>&ndash;&gt;--><!--&lt;!&ndash;</fieldset>&ndash;&gt;--><!--<div class="row-fluid">--><!--<div class="span12">--><!--<h4>Size Chart</h4>--><!--<p>Our dresses are designed to fit the following size bodies perfectly.</p>--><!--<p class="centeredImage">--><!--<img src="images/sizing/sizeChart.png" class="img-polaroid">--><!--</p>--><!--<p>Plus – thanks to some clever designs and fabric choices all of our sizes have a--><!--little stretch and so for further guidance on picking the best size for you please--><!--see the range of body measurements below that we think each size flatters the most. </p>--><!--<p class="centeredImage">--><!--<img src="images/sizing/bodyMeasurements.png" class="img-polaroid">--><!--</p>--><!--<p>However please don’t despair if you measure yourself and you don’t fall any one size--><!--– remember at BRAZEN you can mix and match sizes for the top and bottom on many of--><!--our dresses or provide key body measurements and 400 HKD for a fully customized size--><!--(see how to measure)</p>--><!--</div>--><!--</div>--><!--</div>--><!--<div class="modal-footer">--><!--<a href="#" data-dismiss="modal" class="btn">Close</a>--><!--</div>--><!--</form>--><!--</div>--><div id="sizingView" class="container"><div class="container-fluid"><div class="row-fluid"><!--<div class="span6">--><!--Size Selector--><!--</div>--><!--<div class="span6 pull-right builder price">--><!--<b>HKD {{design.price}}</b>--><!--</div>--><!--</div>--><!--<div class="row-fluid top-border">--><div class="span12"><tabs class="tabbable"><pane heading="Standard Sizing" active="true"><div class="row-fluid"><div class="span6"><h3>a. Select your dress size:</h3><select><option>UK 12 / FR 40</option><option>2</option><option>3</option><option>4</option><option>5</option></select><p>For help in choosing the right size for you please refer to our <!--<a data-toggle="modal" ng-click="open()">size chart</a>--><a data-toggle="modal" data-target="#sizeChartModal">size chart</a></p></div><div class="span6"><h3>b. Adjust for your height:</h3><p>Select your bust and height measurements to help our pattern makers get the right waist, sleeve and body length</p><!-- TODO: the input disappears in responsive mode --><div class="input-prepend input-append offset1"><span class="add-on span2">Bust :</span><input class="span5" id="bustInput"><span class="add-on">in</span></div><div class="input-prepend input-append offset1"><span class="add-on span2">Height :</span><input class="span5" id="heightInput"><span class="add-on">in</span></div></div></div></pane><!--<pane class="" heading="Mix and Match">--><!--<div class="row-fluid">--><!--<div class="span6">--><!--<h3>a. Select size for your top:</h3>--><!--<select>--><!--<option>UK 12 / FR 40</option>--><!--<option>2</option>--><!--<option>3</option>--><!--<option>4</option>--><!--<option>5</option>--><!--</select>--><!--<h3>b. Select size for your skirt:</h3>--><!--<select>--><!--<option>UK 12 / FR 40</option>--><!--<option>2</option>--><!--<option>3</option>--><!--<option>4</option>--><!--<option>5</option>--><!--</select>--><!--<p>For help in choosing the right size for you please refer to our <a--><!--data-toggle="modal" ng-click="open()">size chart</a></p>--><!--</div>--><!--<div class="span6">--><!--<h3>c. Adjust for your height:</h3>--><!--<p>Select your bust and height measurements to help our pattern makers get the right--><!--waist, sleeve and body length</p>--><!--&lt;!&ndash; TODO: the input disappears in responsive mode &ndash;&gt;--><!--<div class="input-prepend input-append offset1">--><!--<span class="add-on span2">Bust :</span>--><!--<input class="span5" id="bustMixInput" type="text">--><!--<span class="add-on">in</span>--><!--</div>--><!--<div class="input-prepend input-append offset1">--><!--<span class="add-on span2">Height :</span>--><!--<input class="span5" id="heightMixInput" type="text">--><!--<span class="add-on">in</span>--><!--</div>--><!--</div>--><!--</div>--><!--</pane>--><pane heading="Custom Sizing"><div class="row-fluid"><div class="span12"><p>For just 400 HKD our tailors will use your body measurements to create your perfect dress</p></div></div><div class="row-fluid"><div class="span6"><div class="row-fluid"><div class="control-group offset2"><label class="control-label" for="inputBust">Bust (Inches):</label><div class="controls"><select class="span4" id="inputBust"><option selected="selected" disabled="disabled" class="optionHelp">Please Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div></div><div class="row-fluid"><div class="control-group offset2"><label class="control-label" for="inputWaist">Waist (Inches):</label><div class="controls"><select class="span4" id="inputWaist"><option selected="selected" disabled="disabled" class="optionHelp">Please Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div></div><div class="row-fluid"><div class="control-group offset2"><label class="control-label" for="inputHips">Hips (Inches):</label><div class="controls"><select class="span4" id="inputHips"><option selected="selected" disabled="disabled" class="optionHelp">Please Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div></div><div class="row-fluid"><div class="control-group offset2"><label class="control-label" for="inputHollow">Hollow to Floor (Inches):</label><div class="controls"><select class="span4" id="inputHollow"><option selected="selected" disabled="disabled" class="optionHelp">Please Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div></div><div class="row-fluid"><div class="control-group offset2"><label class="control-label" for="inputHeight">Height (Inches):</label><div class="controls"><select class="span4" id="inputHeight"><option selected="selected" disabled="disabled" class="optionHelp">Please Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div></div></div><div class="span6"><p class="centeredImage"><img src="images/sizing/customMeasure.png" class="img-polaroid"></p></div></div></pane></tabs></div></div></div></div></div>
+<div ng-controller="SizingCtrl">
+
+<div class="modal fade" id="sizeChartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header row">
+                <div class="col-md-6">
+                    <h3>SizeChart</h3>
+                </div>
+                <div class="col-md-6 align-right">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <div class="modal-body">
+
+                <p>Our dresses are designed to fit the following size bodies perfectly.</p>
+
+                <p class="centeredImage">
+                    <img src="images/sizing/sizeChart.png" class="img-polaroid">
+                </p>
+
+                <p>Plus – thanks to some clever designs and fabric choices all of our sizes have a
+                    little stretch and so for further guidance on picking the best size for you please
+                    see the range of body measurements below that we think each size flatters the most. </p>
+
+                <p class="centeredImage">
+                    <img src="images/sizing/bodyMeasurements.png" class="img-polaroid">
+                </p>
+
+                <p>However please don’t despair if you measure yourself and you don’t fall any one size
+                    – remember at BRAZEN you can mix and match sizes for the top and bottom on many of
+                    our dresses or provide key body measurements and 400 HKD for a fully customized size
+                    (see how to measure)</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div id="sizeChartModal" class="modal hide fade smallModal">-->
+<!--<form id="login-form" action="/login" method="post" class="form-horizontal">-->
+<!--<div class="modal-header">-->
+<!--<a data-dismiss="modal" class="close"></a>-->
+<!--<h3>Sizing Chart</h3>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--&lt;!&ndash;<fieldset>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="control-group">&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="text" name="username" placeholder="Username" class="input-xlarge uname"/>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<span id="imagePlaceHolder"></span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="control-group">&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="password" name="password" placeholder="Password" class="input-xlarge"/>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</fieldset>&ndash;&gt;-->
+<!--<div class="row-fluid">-->
+<!--<div class="span12">-->
+<!--<h4>Size Chart</h4>-->
+<!--<p>Our dresses are designed to fit the following size bodies perfectly.</p>-->
+<!--<p class="centeredImage">-->
+<!--<img src="images/sizing/sizeChart.png" class="img-polaroid">-->
+<!--</p>-->
+<!--<p>Plus – thanks to some clever designs and fabric choices all of our sizes have a-->
+<!--little stretch and so for further guidance on picking the best size for you please-->
+<!--see the range of body measurements below that we think each size flatters the most. </p>-->
+<!--<p class="centeredImage">-->
+<!--<img src="images/sizing/bodyMeasurements.png" class="img-polaroid">-->
+<!--</p>-->
+<!--<p>However please don’t despair if you measure yourself and you don’t fall any one size-->
+<!--– remember at BRAZEN you can mix and match sizes for the top and bottom on many of-->
+<!--our dresses or provide key body measurements and 400 HKD for a fully customized size-->
+<!--(see how to measure)</p>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--<a href="#" data-dismiss="modal" class="btn">Close</a>-->
+<!--</div>-->
+<!--</form>-->
+<!--</div>-->
+
+<div id="sizingView" class="container">
+
+    <div class=" container-fluid">
+        <div class="row-fluid">
+            <!--<div class="span6">-->
+            <!--Size Selector-->
+            <!--</div>-->
+            <!--<div class="span6 pull-right builder price">-->
+            <!--<b>HKD {{design.price}}</b>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row-fluid top-border">-->
+            <div class="span12">
+                <tabs class="tabbable ">
+                    <pane class="" heading="Standard Sizing" active="true">
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <h3>a. Select your dress size:</h3>
+
+                                <select>
+                                    <option>UK 12 / FR 40</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+
+                                <p>For help in choosing the right size for you please refer to our
+                                    <!--<a data-toggle="modal" ng-click="open()">size chart</a>-->
+                                    <a data-toggle="modal" data-target="#sizeChartModal">size chart</a>
+                                </p>
+                            </div>
+                            <div class="span6">
+                                <h3>b. Adjust for your height:</h3>
+
+                                <p>Select your bust and height measurements to help our pattern makers get the right
+                                    waist, sleeve and body length</p>
+                                <!-- TODO: the input disappears in responsive mode -->
+                                <div class="input-prepend input-append offset1">
+                                    <span class="add-on span2">Bust :</span>
+                                    <input class="span5" id="bustInput" type="text">
+                                    <span class="add-on">in</span>
+                                </div>
+                                <div class="input-prepend input-append offset1">
+                                    <span class="add-on span2">Height :</span>
+                                    <input class="span5" id="heightInput" type="text">
+                                    <span class="add-on">in</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </pane>
+                    <!--<pane class="" heading="Mix and Match">-->
+                        <!--<div class="row-fluid">-->
+                            <!--<div class="span6">-->
+                                <!--<h3>a. Select size for your top:</h3>-->
+
+                                <!--<select>-->
+                                    <!--<option>UK 12 / FR 40</option>-->
+                                    <!--<option>2</option>-->
+                                    <!--<option>3</option>-->
+                                    <!--<option>4</option>-->
+                                    <!--<option>5</option>-->
+                                <!--</select>-->
+
+                                <!--<h3>b. Select size for your skirt:</h3>-->
+
+                                <!--<select>-->
+                                    <!--<option>UK 12 / FR 40</option>-->
+                                    <!--<option>2</option>-->
+                                    <!--<option>3</option>-->
+                                    <!--<option>4</option>-->
+                                    <!--<option>5</option>-->
+                                <!--</select>-->
+
+                                <!--<p>For help in choosing the right size for you please refer to our <a-->
+                                        <!--data-toggle="modal" ng-click="open()">size chart</a></p>-->
+                            <!--</div>-->
+                            <!--<div class="span6">-->
+                                <!--<h3>c. Adjust for your height:</h3>-->
+
+                                <!--<p>Select your bust and height measurements to help our pattern makers get the right-->
+                                    <!--waist, sleeve and body length</p>-->
+                                <!--&lt;!&ndash; TODO: the input disappears in responsive mode &ndash;&gt;-->
+                                <!--<div class="input-prepend input-append offset1">-->
+                                    <!--<span class="add-on span2">Bust :</span>-->
+                                    <!--<input class="span5" id="bustMixInput" type="text">-->
+                                    <!--<span class="add-on">in</span>-->
+                                <!--</div>-->
+                                <!--<div class="input-prepend input-append offset1">-->
+                                    <!--<span class="add-on span2">Height :</span>-->
+                                    <!--<input class="span5" id="heightMixInput" type="text">-->
+                                    <!--<span class="add-on">in</span>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</pane>-->
+                    <pane class="" heading="Custom Sizing">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <p>For just 400 HKD our tailors will use your body measurements to create your
+                                    perfect dress</p>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <div class="row-fluid">
+
+                                    <div class="control-group offset2">
+                                        <label class="control-label" for="inputBust">Bust (Inches): </label>
+
+                                        <div class="controls">
+                                            <select class="span4" id="inputBust">
+                                                <option selected disabled class="optionHelp">Please Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="control-group offset2">
+                                        <label class="control-label" for="inputWaist">Waist (Inches): </label>
+
+                                        <div class="controls">
+                                            <select class="span4" id="inputWaist">
+                                                <option selected disabled class="optionHelp">Please Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row-fluid">
+                                    <div class="control-group offset2">
+                                        <label class="control-label" for="inputHips">Hips (Inches): </label>
+
+                                        <div class="controls">
+                                            <select class="span4" id="inputHips">
+                                                <option selected disabled class="optionHelp">Please Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="control-group offset2">
+                                        <label class="control-label" for="inputHollow">Hollow to Floor
+                                            (Inches): </label>
+
+                                        <div class="controls">
+                                            <select class="span4" id="inputHollow">
+                                                <option selected disabled class="optionHelp">Please Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="control-group offset2">
+                                        <label class="control-label" for="inputHeight">Height (Inches): </label>
+
+                                        <div class="controls">
+                                            <select class="span4" id="inputHeight">
+                                                <option selected disabled class="optionHelp">Please Select</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span6">
+                                <p class="centeredImage">
+                                    <img src="images/sizing/customMeasure.png" class="img-polaroid">
+                                </p>
+                            </div>
+                        </div>
+                    </pane>
+                </tabs>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

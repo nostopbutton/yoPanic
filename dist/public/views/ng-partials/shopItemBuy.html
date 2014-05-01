@@ -1,0 +1,60 @@
+<div id="shopItemView" class="container">
+
+    <div class="row">
+        <div class="col-sm-5">
+            <div id="dress_image_panel" class="row">
+                <div class="image col-sm-8 col-sm-push-3">
+                    <!--class="col-lg-3 col-md-4 col-sm-5 col-sm-pull-1">-->
+                    <!--style="border-style: solid; border-width:2px;border-color: black">-->
+                    <!--<div class="dress_image_panel">-->
+                    <!--style="border-style: solid; border-width:2px;border-color: red">-->
+                    <!--<div draw-design model="item.design_builder.model" design="form"></div>-->
+                    <!--<div draw-collection item="item" view="'model.jpg'"></div>  &lt;!&ndash; model.jpg   dress.png &ndash;&gt;
+                    -->
+                    <!--<div class="image">-->
+                    <img ng-src="/images/collection/{{item.itemDesign.itemId}}-{{view}}"
+                         alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                         class="img-responsive">
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <div class="views col-sm-3 col-sm-pull-8">
+                    <div class="row">
+                        <div id="front" class="col-xs-4 col-sm-12">
+                            <img ng-src="/images/collection/{{item.itemDesign.itemId}}-lg-front.jpg"
+                                 alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                                 ng-click="view='lg-front.jpg'"
+                                 class="img-responsive img-thumbnail">
+                        </div>
+                        <div id="back" class="col-xs-4  col-sm-12">
+                            <img ng-src="/images/collection/{{item.itemDesign.itemId}}-md-front.jpg"
+                                 alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                                 ng-click="view='lg-back.jpg'"
+                                 class="img-responsive img-thumbnail">
+                        </div>
+                        <div id="dress" class="col-xs-4  col-sm-12">
+                            <img ng-src="/images/collection/{{item.itemDesign.itemId}}-lg-dress.png"
+                                 alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                                 ng-click="view='lg-dress.jpg'"
+                                 class="img-responsive img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="builder_controls_panel" class="col-lg-7 col-md-8 col-sm-7">
+            <tabset class="breaded" type="pills">
+                <tab heading="Style" active="tabs.style">
+                    <div ng-include="'/views/ng-partials/partial-style.html'"></div>
+                </tab>
+                <tab heading="Fit" active="tabs.fit">
+                    <div ng-include="'/views/ng-partials/partial-fit.html'"></div>
+                </tab>
+                <tab heading="Review" active="tabs.order">
+                    <div ng-include="'/views/ng-partials/partial-review.html'"></div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>
+<!-- /designBuildView -->

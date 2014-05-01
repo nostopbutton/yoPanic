@@ -11,7 +11,8 @@
         , "Perfect with killer heels for a timeless show stopping look." ]
         , "care": [ "Look after it, and it will last..."]
         , "price": 2000
-        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-303-body"
         , "defaultItemId": "swo-1"
         , "foxyImage": "pat-303"
@@ -108,7 +109,127 @@
     , "collection":
     [
         {
-            "itemId": "swo-1"
+            "itemId": "swoosh-1"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-2"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-3"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-4"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-5"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-6"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-7"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-8"
+            , "itemDesc": "Swoosh dress - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-9"
             , "itemDesc": "Swoosh dress - Red"
             , "itemDesign": {
             "design": {

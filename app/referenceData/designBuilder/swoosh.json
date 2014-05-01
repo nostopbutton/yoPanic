@@ -7,13 +7,16 @@
         , "styleFormalName": "Swoosh Dress"
         , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
         , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
-        , "Perfect with killer heels for a timeless show stopping look." ]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 2000
-        , "dressSizes": ["UK 8" ,"UK 10" ,"UK 12" ,"UK 14" ,"UK 16" ,"UK 18", "UK 20"]
+        , "description": [ "Understanding the wants of the modern woman, the Kate will make you feel a million dollars."
+        , "Our classic sheath with a twist has perfectly positioned ruffles along the bodice to draw the eyes to all the right places and flatter your middle area. A tight fit for a sassy silouette." ]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 2300
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-303-body"
-        , "defaultItemId": "swo-1"
+        , "defaultItemId": "swoosh-1"
         , "foxyImage": "pat-303"
         , "fc_category": "category||0dd168ade866df18c6e9e555bba44944b320a059c8773f7a987b6e41675908c8"
         , "fc_code": "code||0e5144a4446cb08ee455d1c5d367b0d1266213390dc58106ef2b685938b36aa0"
@@ -108,12 +111,102 @@
     , "collection":
     [
         {
-            "itemId": "swo-1"
-            , "itemDesc": "Swoosh dress - Red"
+            "itemId": "swoosh-1"
+            , "itemDesc": "Swoosh - Aubergine"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "003", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "013", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-2"
+            , "itemDesc": "Swoosh - Midnight blue"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "014", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "014", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-4"
+            , "itemDesc": "Swoosh - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-5"
+            , "itemDesc": "Swoosh - Black"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "011", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "011", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-7"
+            , "itemDesc": "Swoosh - Auberine"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "013", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-8"
+            , "itemDesc": "Swoosh - Black"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "011", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "011", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "swoosh-9"
+            , "itemDesc": "Swoosh - Midnight blue"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "014", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "014", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},

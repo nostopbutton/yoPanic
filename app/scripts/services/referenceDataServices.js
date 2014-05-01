@@ -103,10 +103,11 @@ referenceDataServices
                 DesignBuilder.get({fileId: styleId}).$promise.then(function (result) {
                     if (!itemId) itemId = result.style.defaultItemId;
                     angular.forEach(result.collection, function (item) {
-                        if (item.itemId == itemId) {
+                        if (itemId == item.itemId) {
                             itemData.itemDesign = angular.copy(item);
                         }
                     })
+//                    console.log("itemData: "+ JSON.stringify(itemData));
                     designConfig = _.extend({}, result, itemData)
 
                     deferred.resolve(designConfig);

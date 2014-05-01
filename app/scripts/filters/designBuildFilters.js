@@ -23,6 +23,7 @@ designBuildFilter.filter('filterSets', function () {
 
 designBuildFilter.filter('rollover', function () {
   return function(img) {
+      alert('rollover: ' +  img.replace(/_bk$/, ""));
     return img.replace(/_bk$/, "");
   };
 });
@@ -37,4 +38,11 @@ designBuildFilter.filter('designString', function () {
     console.log("Returning---: "+returnString);
     return returnString;
   };
+});
+
+designBuildFilter.filter('path', function () {
+    return function(name, pre, post) {
+        return (name && pre+name+post|| '');
+//        return img.replace(/_bk$/, "");
+    };
 });

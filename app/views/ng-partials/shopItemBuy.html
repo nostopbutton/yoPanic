@@ -1,0 +1,50 @@
+<div id="shopItemView" class="container">
+
+    <div class="row">
+        <div class="col-sm-5">
+            <div id="dress_image_panel" class="row">
+                <div class="image col-sm-8 col-sm-push-3">
+                    <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : view}}"
+                         alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                         class="img-responsive">
+                </div>
+                <div class="views col-sm-3 col-sm-pull-8">
+                    <div class="row">
+                        <div id="front" class="col-xs-4 col-sm-12">
+                            <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-front.jpg'}}"
+                                 alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                                 ng-click="view='lg-front.jpg'"
+                                 class="img-responsive img-thumbnail">
+                        </div>
+                        <div id="back" class="col-xs-4  col-sm-12">
+                            <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-back.jpg'}}"
+                                 alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                                 ng-click="view='lg-back.jpg'"
+                                 class="img-responsive img-thumbnail">
+                        </div>
+                        <div id="dress" class="col-xs-4  col-sm-12">
+                            <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-dress.jpg'}}"
+                                 alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
+                                 ng-click="view='lg-dress.jpg'"
+                                 class="img-responsive img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="builder_controls_panel" class="col-lg-7 col-md-8 col-sm-7">
+            <tabset class="breaded" type="pills">
+                <tab heading="Style" active="tabs.style">
+                    <div ng-include="'/views/ng-partials/partial-style.html'"></div>
+                </tab>
+                <tab heading="Fit" active="tabs.fit">
+                    <div ng-include="'/views/ng-partials/partial-fit.html'"></div>
+                </tab>
+                <tab heading="Review" active="tabs.order">
+                    <div ng-include="'/views/ng-partials/partial-review.html'"></div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>
+<!-- /designBuildView -->

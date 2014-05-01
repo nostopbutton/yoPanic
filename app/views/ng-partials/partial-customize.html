@@ -1,0 +1,196 @@
+<div class="row">
+    <tabset class="tabs-left db-options">
+        <tab ng-repeat="part in item.design_builder.options[0].parts" heading="{{part.label}}">
+
+            <div class="container-fluid opt-parts">
+                <div class="col-xs-7">
+                    <part-selector part="part"
+                                   selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+                </div>
+                <div class="col-xs-5">
+                    <fabric-selector ng-repeat="set in fabricSets | filterSets:part.fabricSets" fabric-set="set"
+                                     attrib="'fabric'"
+                                     selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+
+                </div>
+            </div>
+            <div class="container-fluid opt-length db-options-divider" ng-show="part.size">
+                <div class="col-xs-6">
+                    Length:
+                </div>
+                <div class="col-xs-6">
+                    <size-selector part="part"
+                                   selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+                </div>
+            </div>
+            <div class="container-fluid opt-trim db-options-divider" ng-show="part.trim">
+                <div class="col-sm-7">
+                    <div class="row fabric-header">
+                        Trim:
+                    </div>
+                    <div class="row">
+
+                        <button type="button" class="btn fabric-selector fabric-none"
+                                ng-model="form[item.design_builder.options[0].option_name][part.part_name]['trim']"
+                                btn-radio="fabric.fabId">
+                            None
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-sm-5 ">
+                    <fabric-selector ng-repeat="set in fabricSets | filterSets:part.trimFabricSets" fabric-set="set"
+                                     attrib="'trim'"
+                                     ng-checked="form[item.design_builder.options[0].option_name][part.part_name]['trim']"
+                                     selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+
+
+                </div>
+            </div>
+        </tab>
+
+        <tab ng-repeat="part in item.design_builder.extras[0].parts" heading="{{part.label}}">
+
+            <div class="container-fluid" ng-repeat="value in part.values">
+                <div class="col-xs-4">
+
+                    <div data-toggle="buttons">
+                        <!--https://github.com/angular-ui/bootstrap/issues/233-->
+                        <div class="option-button">
+                            <button type="button" class="btn btn-default option"
+                                    ng-model="form[item.design_builder.extras[0].name][part.part_name]['id']"
+                                    btn-radio="value.id"
+                                    ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = value.defaultFabric; form[item.design_builder.extras[0].name][part.part_name]['code']=value.id + '-' +value.defaultFabric"
+                                    ng-class="{highlight: form[item.design_builder.extras[0].name][part.part_name]['id']==value.id }">
+                                <div class="db-icons-sprite {{part.type}}-{{value.id}}">
+                                    <!--tooltip="{{value.name}}">    -->
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3" style="vertical-align: middle">
+                    <div>
+                        <div class="fabric-group middle-inner">
+                            <div class="row extras-fabric-header">
+                                None
+                            </div>
+                            <div class="row">
+
+                                <button type="button"
+                                        class="btn fabric-selector fabric000"
+
+                                        ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = 000; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
+                                        ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
+                                        btn-radio="value.id +'-'+000"
+                                        ng-class="{active: form[item.design_builder.extras[0].name][part.part_name]['code']==value.id +'-'+000 }">
+                                    <!--tooltip="None">-->
+                                    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '000' ]);">-->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-5" style="vertical-align: middle">
+                    <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
+                        <div class="fabric-group middle-inner">
+                            <div class="row extras-fabric-header">
+                                {{set.setName}}
+                            </div>
+                            <div class="row">
+
+                                <button ng-repeat="fabric in set.fabrics" type="button"
+                                        class="btn fabric-selector fabric{{fabric.fabId}}"
+
+                                        ng-click="form[item.design_builder.extras[0].name][part.part_name]['fabric'] = fabric.fabId; form[item.design_builder.extras[0].name][part.part_name]['id'] = value.id"
+                                        ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
+                                        btn-radio="value.id +'-'+fabric.fabId"
+                                        ng-class="{active: form[item.design.extras[0].name][part.part_name]['code']==value.id +'-'+fabric.fabId }">
+                                    <!--tooltip="{{fabric.fabName}}">-->
+                                    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'select fabric', '{{form[item.design_builder.extras[0].name][part.part_name].type}}-{{form[item.design_builder.extras[0].name][part.part_name].id}}', '{{fabric.fabId}}' ]);">-->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </tab>
+
+        <div class="col-md-3 col-sm-3 align-center" style="margin-top:60px">
+            <a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"
+               style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
+                <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
+                Reset</a>
+        </div>
+    </tabset>
+
+    <div id="action" class="row divider">
+        <div class="divider"></div>
+        <!--<div class="col-md-3 col-sm-3 align-center" style="margin-top:60px">-->
+        <!--<a class="btn btn-default design-buttons" id="reset-design" ng-click="cancel()" ng-disabled="isCancelDisabled()"-->
+        <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;"-->
+        <!-->
+        <!--&lt;!&ndash;onClick="_gaq.push([
+    '_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+        <!--Reset</a>-->
+        <!--</div>-->
+        <div class="col-md-8 col-sm-8 alternate-action">
+            <a class="btn btn-default" href="#!/design"
+               style="">
+                <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'buy-sml-btn', 'design-build/different-style']);">-->
+
+                try a different style</a>
+        </div>
+        <div class="col-sm-4 main-action">
+            <a class="btn btn-primary"
+               href="#fit" data-toggle="tab"
+               ng-click="tabs.fit = true">Fit me</a>
+            <!--</div>-->
+
+        </div>
+    </div>
+
+
+    <!--<div class="row">-->
+    <!--<div class="col-sm-4 align-left">-->
+    <!--<a class="btn btn-default igg-design-buttons" id="reset-design" ng-click="cancel()"-->
+    <!--ng-disabled="isCancelDisabled()"-->
+    <!--onClick="_gaq.push(['_trackEvent', 'Design Build', 'reset-design', '{{dress.silId}}/{{dress.itemId}}']);">-->
+    <!--Reset design</a>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash;<div class="col-sm-4 col-md-offset- align-left" style="margin-bottom:50px">&ndash;&gt;-->
+    <!--&lt;!&ndash;<a class="btn btn-danger design-buttons" href="#/purchase"&ndash;&gt;-->
+    <!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+    <!--&lt;!&ndash;Change silhouette</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--<div class="col-sm-4 col-md-offset-4 align-right">-->
+    <!--&lt;!&ndash;<a class="btn btn-default igg-design-buttons"&ndash;&gt;-->
+    <!--&lt;!&ndash;href="https://www.facebook.com/dialog/feed?picture=http://img.aurza.com/skt-001-02-013-slv-009-00-013-nek-001-00-003-blt-002-00-000-ext-002-00-000-ext-003-00-000.png&description=For more details on this dress...&app_id=153275411536544&redirect_uri=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&link=http://indiegogo-prototype-designer.aurza.com/#!/design/sheath&name=Check+out+the+dress+I+designed+-+what+do+you+think%3F"&ndash;&gt;
+    -->
+    <!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+    <!--&lt;!&ndash;Facebook</a>&ndash;&gt;-->
+    <!--<div facebook design="form"></div>-->
+    <!--</div>-->
+
+
+    <!--</div>-->
+    <!--<div class="row align-center">-->
+    <!--&lt;!&ndash;<div class="col-sm-12 align-center" style="margin-bottom:50px">&ndash;&gt;-->
+    <!--&lt;!&ndash;<a class="btn btn-danger" href="#/purchase"&ndash;&gt;-->
+    <!--&lt;!&ndash;style="font-family: 'Nothing You Could Do', cursive;font-size: 30px;"&ndash;&gt;-->
+    <!--&lt;!&ndash;onClick="_gaq.push([
+'_trackEvent', 'Design Build', 'buy-sml-btn', '{{dress.silId}}/{{dress.itemId}}']);">&ndash;&gt;-->
+    <!--&lt;!&ndash;back to indiegogo</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--<div facebook design="form"></div>-->
+    <!--</div>-->
+
+</div>
