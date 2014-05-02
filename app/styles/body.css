@@ -1,26 +1,50 @@
 /**
  * Created with TexturePacker http://www.codeandweb.com/texturepacker
  *
- * SmartUpdateHash: $TexturePacker:SmartUpdate:24c903fe0aa3f1df6d7c3a5608c49160:1/1$ 
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:65193879ad4aa9a17291fc3da090828e:1/1$ 
  * 
- * .body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('body.png?$TexturePacker:SmartUpdate:24c903fe0aa3f1df6d7c3a5608c49160:1/1$');}
+ * .body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('body.png?$TexturePacker:SmartUpdate:65193879ad4aa9a17291fc3da090828e:1/1$');}
  */
 
 .sprite-body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/body.png');}
 .whole-body {width:200px;height:501px; background-position: -0px -0px}
-.tshirt-whole-body {width:200px;height:501px; background-position: -0px -502px}
-.strap-whole-body {width:200px;height:501px; background-position: -201px -0px}
-.skirt-whole-body {width:200px;height:501px; background-position: -201px -502px}
-.pat-304-body {width:118px;height:293px; background-position: -402px -0px}
-.pat-102-body {width:119px;height:291px; background-position: -521px -0px}
-.pat-301-body {width:118px;height:292px; background-position: -402px -294px}
-.pat-103-body {width:118px;height:292px; background-position: -521px -292px}
-.pat-203-body {width:117px;height:292px; background-position: -402px -587px}
-.pat-203maxi-body {width:117px;height:291px; background-position: -641px -0px}
-.pat-202-body {width:117px;height:292px; background-position: -640px -292px}
-.pat-302-body {width:97px;height:292px; background-position: -758px -292px}
-.pat-101-body {width:95px;height:291px; background-position: -759px -0px}
-.pat-305-body {width:105px;height:293px; background-position: -520px -587px}
-.pat-10-body {width:117px;height:291px; background-position: -626px -585px}
-.pat-303-body {width:99px;height:291px; background-position: -744px -585px}
+.pat-213 {width:165px;height:335px; background-position: -0px -502px}
+.pat-203 {width:165px;height:335px; background-position: -166px -502px}
+.tshirt-whole-body {width:200px;height:501px; background-position: -201px -0px}
+.pat-301 {width:165px;height:269px; background-position: -332px -502px}
+.strap-whole-body {width:200px;height:501px; background-position: -402px -0px}
+.pat-313 {width:165px;height:255px; background-position: -498px -502px}
+.skirt-whole-body {width:200px;height:501px; background-position: -603px -0px}
+.pat-302 {width:165px;height:248px; background-position: -664px -502px}
+.pat-104a {width:165px;height:96px; background-position: -664px -751px}
+.pat-203b {width:165px;height:435px; background-position: -804px -0px}
+.pat-315 {width:165px;height:242px; background-position: -830px -436px}
+.pat-103 {width:165px;height:166px; background-position: -830px -679px}
+.pat-314 {width:165px;height:242px; background-position: -970px -0px}
+.pat-111 {width:165px;height:177px; background-position: -970px -243px}
+.pat-303 {width:165px;height:241px; background-position: -996px -421px}
+.pat-101 {width:165px;height:174px; background-position: -996px -663px}
+.shirt202b {width:165px;height:240px; background-position: -1136px -0px}
+.pat-113 {width:165px;height:162px; background-position: -1136px -241px}
+.pat-213b {width:165px;height:240px; background-position: -1162px -404px}
+.pat-102 {width:165px;height:159px; background-position: -1162px -645px}
+.pat-304 {width:165px;height:239px; background-position: -1302px -0px}
+.pat-112 {width:165px;height:158px; background-position: -1302px -240px}
+.pat-316 {width:165px;height:230px; background-position: -1328px -399px}
+.pat-202 {width:165px;height:217px; background-position: -1328px -630px}
+.pat-202b {width:165px;height:229px; background-position: -1468px -0px}
+.pat114e {width:165px;height:120px; background-position: -1468px -230px}
+.pat-316b {width:165px;height:227px; background-position: -1494px -351px}
+.pat-212b {width:165px;height:227px; background-position: -1634px -0px}
+.pat-114c {width:165px;height:117px; background-position: -1634px -228px}
+.pat-306 {width:165px;height:221px; background-position: -1494px -579px}
+.pat-212 {width:165px;height:216px; background-position: -1660px -346px}
+.pat-305 {width:165px;height:208px; background-position: -1800px -0px}
+.pat-104e {width:165px;height:117px; background-position: -1800px -209px}
+.pat-104d {width:165px;height:113px; background-position: -1826px -327px}
+.pat114d {width:165px;height:111px; background-position: -1826px -441px}
+.pat-114b {width:165px;height:108px; background-position: -1826px -553px}
+.pat-104b {width:165px;height:108px; background-position: -1660px -563px}
+.pat-104c {width:165px;height:107px; background-position: -1826px -662px}
+.pat-114a {width:165px;height:104px; background-position: -1660px -672px}
 

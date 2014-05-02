@@ -5,16 +5,19 @@
         , "type": "dress"
         , "styleName": "Audrey"
         , "styleFormalName": "Swing Dress"
-        , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
-        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
-        , "Perfect with killer heels for a timeless show stopping look."]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 2000
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Our classic bodice with a full swing skirt for a dramatic Audrey Hepburn effect gives you curves in all the right places."
+        , "The skirt includes perfectly positioned pockets on either side for added functionality."]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+
+        , "price": 2300
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
                             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-304-body"
-        , "defaultItemId": "sw-1"
+        , "defaultItemId": "swing-1"
         , "foxyImage": "pat-304"
         , "fc_category": "category||05be67359dd9dfc344935dd39b55945810a66efe99555234f7153ad1084b5f17"
         , "fc_code": "code||ae669290b7afe449027d32791d0de6ac732125ac615bce0db30c8fd5ea0157cf"
@@ -125,15 +128,15 @@
     [
         {
             "itemId": "swing-1"
-            , "itemDesc": "Swing dress - Midnight Blue"
+            , "itemDesc": "Swing - Aubergine"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "002", "size": "00", "fabric": "014", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "014", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "014", "trim": ""}
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "013", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "013", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "121", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "108", "code": "004-108"},
                 "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -141,15 +144,15 @@
         }
         , {
         "itemId": "swing-2"
-        , "itemDesc": "Swing dress - Aubergine"
+        , "itemDesc": "Swing - Midnight blue"
         , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "002", "size": "00", "fabric": "013", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "013", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "013", "trim": ""}
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "014", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "014", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "014", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "121", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "108", "code": "004-108"},
                 "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -159,15 +162,15 @@
 
         {
             "itemId": "swing-3"
-            , "itemDesc": "Swing dress - Red"
+            , "itemDesc": "Swing - Red"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "003", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "003", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "003", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "108", "code": "004-108"},
                 "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
             }

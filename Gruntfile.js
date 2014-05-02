@@ -744,7 +744,7 @@ module.exports = function (grunt) {
                     imageAlpha: true,
                     quitAfter: true
                 },
-                src: ['/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt']
+                src: ['/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/body.png']
             }
         },
 

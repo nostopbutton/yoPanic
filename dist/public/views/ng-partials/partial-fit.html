@@ -1,4 +1,4 @@
-<div id="style-panel">
+<div id="fit-panel">
     <div class="container-fluid ">
         <div class="row">
             <div class="col-sm-12">
@@ -9,11 +9,10 @@
                     the price.
                 </p>
 
-
                 <form name="sizingForm" class="" role="form">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h4>Select your size for your DRESS:</h4>
+                            <h4>Select the size of your DRESS:</h4>
                         </div>
                         <div class="col-sm-6">
                             <select ng-model="sizing.size" name="sizingForm" class="form-control"
@@ -25,19 +24,27 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <p>For help in choosing the right size for you please refer to our
-                                <!--<a data-toggle="modal" ng-click="open()">size chart</a>-->
-                                <a data-toggle="modal" data-target="#sizeChartModal">size chart</a>
+                            <p style="text-align:right">
+                                <a data-toggle="modal" data-target="#sizeChartModal">Size chart</a>
                             </p>
                         </div>
                     </div>
-                    <!--</div>-->
-                    <!--<div class="row">-->
-                    <h4>Tell us your key measurements (in CM):</h4>
 
-                    <p>Use our <a data-toggle="modal" data-target="#measureGuide">how to measure guide</a> to help you
-                        measure your body accurately</p>
+                    <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Tell us your key measurements:</h4>
 
+                        <p>Use our <a data-toggle="modal" data-target="#measureGuide">how to measure guide</a></p>
+
+                        <p class="note">
+                            * Please note, from our extensive testing, simply providing 4 key measurements significantly
+                            improves our ability to perfect your dress. It takes only 5 minutes, is really easy to do and
+                            guidance on how to
+                            measure can be found <a data-toggle="modal" data-target="#measureGuide">here</a>.
+                            If once you have submitted your measurements we feel we need any additional information,
+                            we will contact you immediately.
+                        </p>
+                    </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="bustInput" class="control-label">Bust:</label>
@@ -52,33 +59,18 @@
                             <label for="waistInput" class="control-label">Waist:</label>
 
                             <div class="input-group">
-                                <!--<span class="input-group-addon">Bust:</span>-->
                                 <input type="text" class="form-control" id="waistInput" ng-model="sizing.waist">
                                 <span class="input-group-addon">cm</span>
-
-                                <!--{{sizing.waist}}-->
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
                         <div class="form-group">
                             <label for="hipsInput" class="control-label">Hips:</label>
 
                             <div class="input-group">
-                                <!--<span class="input-group-addon">Bust:</span>-->
                                 <input type="text" class="form-control" id="hipsInput" ng-model="sizing.hips">
                                 <span class="input-group-addon">cm</span>
                             </div>
                         </div>
-                        <!--<div class="form-group">-->
-                        <!--<label for="hollowInput" class="control-label">Hollow-to-Floor:</label>-->
-
-                        <!--<div class="input-group">-->
-                        <!--&lt;!&ndash;<span class="input-group-addon">Bust:</span>&ndash;&gt;-->
-                        <!--<input type="text" class="form-control" id="hollowInput" ng-model="sizing.hollowfloor">-->
-                        <!--<span class="input-group-addon">cm</span>-->
-                        <!--</div>-->
-                        <!--</div>-->
                         <div class="form-group">
                             <label for="heightInput" class="control-label">Height:</label>
 
@@ -89,26 +81,19 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-sm-offset-">
 
-                    <p>
-                        * Please note, from our extensive testing, simply providing 4 key measurements significantly
-                        improves our ability to perfect your dress. It takes only 5 minutes, is really easy to do and
-                        guidance on how to
-                        measure can be found <a data-toggle="modal" data-target="#measureGuide">here</a>.
-                        If once you have submitted your measurements we feel we need any additional information,
-                        we will contact you immediately.
-                    </p>
-
-                    <!--</div>-->
+                    </div>
+                 </div>
                 </form>
             </div>
             <div id="action" class="row">
                 <div class="col-sm-12 main-action">
-                    <!--<div id="action" class="col-md-12">-->
                     <a class="btn btn-primary"
-
                        href="" data-toggle="tab"
-                       ng-click="tabs.order = true">Review and Place Order</a>
+                       ng-click="tabs.order = true">Place Order</a>
                 </div>
             </div>
         </div>

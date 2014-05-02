@@ -5,16 +5,17 @@
         , "type": "silk"
         , "styleName": "Eddie"
         , "styleFormalName": "Shift Dress"
-        , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
-        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
-        , "Perfect with killer heels for a timeless show stopping look." ]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 2500
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "This lightweight piece is a chic investment for any woman’s wardrobe."
+        , "Cut for maximum style the shift skims the top of your body whilst flaring out to the thighs. Added detailing at the hem and sides gives an extra charm to this modern classic." ]
+        , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
+        , "For best results dry clean."]
+        , "price": 2100
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-202-body"
-        , "defaultItemId": "sft-1"
+        , "defaultItemId": "shift-1"
         , "foxyImage": "pat-202"
         , "fc_category": "category||31b898ce8f01d294f0dbe505e3a523b37c10223e610e593dae34fec8b9120c30"
         , "fc_code": "code||5cda5cff0cd0b28c96b4e802c07d9dded79760e559d22b44ed163e179cb2d5d1"
@@ -99,11 +100,11 @@
     [
         {
             "itemId": "shift-1"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Hot pink"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "088", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "088", "trim": ""}
 
             }
             , "extras": {
@@ -113,11 +114,11 @@
         },
         {
             "itemId": "shift-2"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Teal"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "085", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "085", "trim": ""}
 
             }
             , "extras": {
@@ -127,53 +128,11 @@
         },
         {
             "itemId": "shift-3"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Coral"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
-
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shift-4"
-            , "itemDesc": "Shift dress - Midnight blue"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
-
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shift-5"
-            , "itemDesc": "Shift dress - Midnight blue"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
-
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shift-6"
-            , "itemDesc": "Shift dress - Midnight blue"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "089", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "089", "trim": ""}
 
             }
             , "extras": {
@@ -183,54 +142,53 @@
         },
         {
             "itemId": "shift-7"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Hot pink"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "088", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "088", "trim": ""}
 
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "003", "size": "00", "fabric": "088", "code": "003-088"}
             }
         }
         },
         {
             "itemId": "shift-8"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Coral"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "089", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "089", "trim": ""}
 
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "003", "size": "00", "fabric": "089", "code": "003-089"}
             }
         }
         },
         {
             "itemId": "shift-9"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Teal"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "085", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "085", "trim": ""}
 
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "003", "size": "00", "fabric": "085", "code": "003-085"}
             }
         }
         },
         {
             "itemId": "shift-10"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Hot pink"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
-
+                "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "088", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "088", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
@@ -239,25 +197,11 @@
         },
         {
             "itemId": "shift-11"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Teal"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
-
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shift-12"
-            , "itemDesc": "Shift dress - Midnight blue"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "085", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "085", "trim": ""}
 
             }
             , "extras": {
@@ -267,39 +211,11 @@
         },
         {
             "itemId": "shift-13"
-            , "itemDesc": "Shift dress - Midnight blue"
+            , "itemDesc": "Shift - Coral"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
-
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shift-14"
-            , "itemDesc": "Shift dress - Midnight blue"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
-
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shift-15"
-            , "itemDesc": "Shift dress - Midnight blue"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "008", "size": "00", "fabric": "087", "trim": ""}
+                "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "089", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "089", "trim": ""}
 
             }
             , "extras": {

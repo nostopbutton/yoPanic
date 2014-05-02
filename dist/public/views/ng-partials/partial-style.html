@@ -8,9 +8,9 @@
             </div>
             <div class="action col-sm-7">
                 <div class="row">
-                <a class="btn btn-primary"
+                <a class="btn btn-primary" style="width:110px;"
                    href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit" data-toggle="tab"
-                   ng-click="tabs.fit = true">Choose Size and Buy</a>
+                   ng-click="tabs.fit = true">Buy</a>
                 </div>
                 <div class="row">
                     or
@@ -21,49 +21,28 @@
                        href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"
                        ng-click="tabs.design = true"
                        style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
-                        Customise it</a>
+                        Customise</a>
 
                 </div>
             </div>
         </div>
         <hr class="grad-line">
-        <div class="row ">
+        <div class="row">
             <div class="description col-sm-12">
-                <ul class="">
-                    <li>{{item.style.strapline}}</li>
-                    <li ng-repeat="para in item.style.description">{{para}}</li>
-                </ul>
+                <!--<h2>Description</h2>-->
+                <p ng-repeat="para in item.style.description">{{para}}</p>
             </div>
         </div>
 
         <hr class="grad-line">
         <div class="row">
-            <div class="col-sm-12">
-                <h4>Info</h4>
+            <div class="care col-sm-12">
+                <h2>Fabric & Care</h2>
 
                 <p ng-repeat="para in item.style.care">{{para}}</p>
             </div>
         </div>
-        <hr class="grad-line">
-
-        <!--<div id="not-perfect" class="row">-->
-            <!--<div class="col-sm-7 align-left">-->
-                <!--<h4>Not your perfect dress?</h4>-->
-            <!--</div>-->
-            <!--<div class="action col-sm-5  align-right">-->
-                <!--<a class="btn btn-default"-->
-                   <!--href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"-->
-                   <!--ng-click="tabs.design = true"-->
-                   <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">-->
-                    <!--Customise it</a>-->
-                <!--<div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">-->
-                <!--<a class="btn btn-default  igg-design-buttons" href="#!/collection"-->
-                <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">-->
-                <!--onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">-->
-                <!--Try a different style</a>-->
-                <!--</div>-->
-            <!--</div>-->
-
+        <!--<hr class="grad-line">-->
         </div>
     </div>
 </div>

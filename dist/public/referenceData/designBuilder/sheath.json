@@ -5,16 +5,18 @@
         , "type": "dress"
         , "styleName": "Coco"
         , "styleFormalName": "Sheath Dress"
-        , "shortDesc": "Our signature dress impeccably tailored cut of the sheath dress flatters your curves by defining your waist and highlighting your calves to give you a perfect hourglass shape. "
-        , "strapline": "Turn heads in this classic tailored dress."
-        , "description": [ "Whether you choose dark colours or bold colours. our crepe fabric will give you a sophisticated day look.  Add glamour with leather trim or sequin detail for a sassy nighttime vibe. "
-        , "Highlight your striking silhouette with killer heels and contrasting obi belt."]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 2000
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "The Coco is the ultimate sheath dress – impeccably tailored in stretch crepe for a figure hugging but comfortable fit."
+        , "It features classic tailoring alongside modern pattern development to give you a sassy edge to a timeless classic."]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 2300
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
-        , "silhouetteImage": "pat-301-body"
-        , "defaultItemId": "sh-1"
+        , "silhouetteImage": "pat-301"
+        , "defaultItemId": "sheath-1"
         , "foxyImage": "pat-301"
         , "fc_category": "category||f0413cfa2afa3244e16b1d1893e138c9669316c8a3597fb9c34b6ab99826ab54"
         , "fc_code": "code||2a36651dbfd988e00f18a02e5cbdee7dd867168bb305909c496517204d25ae31"
@@ -133,13 +135,13 @@
     , "collection":
     [
         {
-            "itemId": "sheath-2"
-            , "itemDesc": "Sheath dress - Red"
+            "itemId": "sheath-1"
+            , "itemDesc": "Sheath - Black"
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "011", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "002", "size": "02", "fabric": "011", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "011", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
@@ -149,13 +151,13 @@
         }
         }
         , {
-        "itemId": "swoosh-1"
-        , "itemDesc": "Sheath dress - Teal"
+        "itemId": "sheath-2"
+        , "itemDesc": "Wrap sheath - Cream / Black"
         , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "010", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "010", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "010", "trim": ""}
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": "120"}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "008", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "011", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "121", "code": "000-000"},
@@ -165,16 +167,16 @@
         }
     }
         , {
-        "itemId": "sheath-1"
-        , "itemDesc": "Sheath dress - Aubergine"
+        "itemId": "sheath-3"
+        , "itemDesc": "Wrap sheath - Cream"
         , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "013", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "013", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "013", "trim": ""}
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "013", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "01", "fabric": "008", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "121", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "111", "code": "004-111"},
                 "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
             }

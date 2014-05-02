@@ -81,9 +81,10 @@
                         <div class="item">
 
                         <a ng-href="#!/item/{{dress.styleId}}/{{dress.itemId}}"
-                           onClick="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
+                           ng-click="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
                             <div class="row">
                                 <div class=" image page-curl">
+                                    <!--<img ng-src="/images/collection/{{dress.itemId}}-lg-dress.jpg"-->
                                 <img ng-src="/images/collection/{{dress.itemId}}-lg-{{dress.img}}"
                                      alt="{{dress.styleName}} - {{dress.itemDesc}}"
                                      ng-init="dress.img = imageFilename"

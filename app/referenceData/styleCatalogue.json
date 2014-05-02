@@ -12,7 +12,7 @@
       , "And it will last" ]
     , "price": 2000
       , "dressSizes": [10,12,14,16,18]
-    , "silhouetteImage": "pat-301-body"
+    , "silhouetteImage": "pat-301"
     , "foxyImage": "pat-301"
     , "fc_category": "category||f0413cfa2afa3244e16b1d1893e138c9669316c8a3597fb9c34b6ab99826ab54"
     , "fc_code": "code||2a36651dbfd988e00f18a02e5cbdee7dd867168bb305909c496517204d25ae31"
@@ -41,7 +41,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 2000
-    , "silhouetteImage": "pat-304-body"
+    , "silhouetteImage": "pat-304"
     , "foxyImage": "pat-304"
     , "fc_category": "category||05be67359dd9dfc344935dd39b55945810a66efe99555234f7153ad1084b5f17"
     , "fc_code": "code||ae669290b7afe449027d32791d0de6ac732125ac615bce0db30c8fd5ea0157cf"
@@ -68,7 +68,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
   , "price": 2000
-    , "silhouetteImage": "pat-302-body"
+    , "silhouetteImage": "pat-302"
     , "foxyImage": "pat-302"
     , "fc_category": ""
     , "fc_code": ""
@@ -95,7 +95,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 2000
-    , "silhouetteImage": "pat-305-body"
+    , "silhouetteImage": "pat-305"
     , "foxyImage": "pat-305"
     , "fc_category": ""
     , "fc_code": ""
@@ -122,7 +122,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 2000
-    , "silhouetteImage": "pat-303-body"
+    , "silhouetteImage": "pat-303"
     , "foxyImage": "pat-303"
     , "fc_category": ""
     , "fc_code": ""
@@ -149,7 +149,7 @@
   , "care": [ "Look after it"
     , "And it will last" ]
   , "price": 2500
-  , "silhouetteImage": "pat-202-body"
+  , "silhouetteImage": "pat-202"
     , "foxyImage": "pat-202"
     , "fc_category": ""
     , "fc_code": ""
@@ -176,7 +176,7 @@
   , "care": [ "Look after it"
     , "And it will last" ]
   , "price": 2500
-  , "silhouetteImage": "pat-203-body"
+  , "silhouetteImage": "pat-203"
     , "foxyImage": "pat-203"
     , "fc_category": ""
     , "fc_code": ""
@@ -203,7 +203,7 @@
   , "care": [ "Look after it"
     , "And it will last" ]
   , "price": 3000
-  , "silhouetteImage": "pat-203maxi-body"
+  , "silhouetteImage": "pat-203b"
     , "foxyImage": "pat-203maxi"
     , "fc_category": ""
     , "fc_code": ""
@@ -230,7 +230,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 800
-    , "silhouetteImage": "pat-101-body"
+    , "silhouetteImage": "pat-101"
     , "foxyImage": "pat-101"
     , "fc_category": ""
     , "fc_code": ""
@@ -257,7 +257,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 800
-    , "silhouetteImage": "pat-102-body"
+    , "silhouetteImage": "pat-102"
     , "foxyImage": "pat-102"
     , "fc_category": ""
     , "fc_code": ""
@@ -284,7 +284,7 @@
     , "care": [ "Look after it"
       , "And it will last" ]
     , "price": 800
-    , "silhouetteImage": "pat-103-body"
+    , "silhouetteImage": "pat-103"
     , "foxyImage": "pat-103"
     , "fc_category": ""
     , "fc_code": ""

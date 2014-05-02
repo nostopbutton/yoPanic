@@ -5,16 +5,17 @@
         , "type": "silk"
         , "styleName": "Elle"
         , "styleFormalName": "Shirt Dress"
-        , "shortDesc": "Perfectly tailored around the chest and waist to drape beautifully"
-        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
-        , "Perfect with killer heels for a timeless show stopping look." ]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 2500
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Effortless and wonderfully flattering, the shirt dress is a hardworking and versatile addition to your wardrobe."
+        , "It has a lightly asymmetric hem and clever buttoned tabs to roll up cuff sleeves on the those hotter days." ]
+        , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
+        , "For best results dry clean."]
+        , "price": 2100
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-203-body"
-        , "defaultItemId": "sht-1"
+        , "defaultItemId": "shirt-1"
         , "foxyImage": "pat-203"
         , "fc_category": "category||72beeb4cc408897d7fcb919d54c1812e5dec24c50a580cb2b309c7f281ea19aa"
         , "fc_code": "code||62ff1f2c43d7a566d28218bf5166c1016d273dac30e440060a840a38ccc49101"
@@ -81,11 +82,11 @@
     [
         {
             "itemId": "shirt-1"
-            , "itemDesc": "Shirt dress - Jade"
+            , "itemDesc": "Shirt - Cobalt"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
+                "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "087", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "087", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
@@ -94,36 +95,10 @@
         },
         {
             "itemId": "shirt-2"
-            , "itemDesc": "Shirt dress - Jade"
+            , "itemDesc": "Shirt - Teal"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shirt-3"
-            , "itemDesc": "Shirt dress - Jade"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shirt-4"
-            , "itemDesc": "Shirt dress - Jade"
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "02", "fabric": "085", "trim": ""}
+                "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "085", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
             }
             , "extras": {

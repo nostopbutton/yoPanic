@@ -4,38 +4,28 @@
         <div class="col-sm-5">
             <div id="dress_image_panel" class="row">
                 <div class="image col-sm-8 col-sm-push-3">
-                    <!--class="col-lg-3 col-md-4 col-sm-5 col-sm-pull-1">-->
-                    <!--style="border-style: solid; border-width:2px;border-color: black">-->
-                    <!--<div class="dress_image_panel">-->
-                    <!--style="border-style: solid; border-width:2px;border-color: red">-->
-                    <!--<div draw-design model="item.design_builder.model" design="form"></div>-->
-                    <!--<div draw-collection item="item" view="'model.jpg'"></div>  &lt;!&ndash; model.jpg   dress.png &ndash;&gt;
-                    -->
-                    <!--<div class="image">-->
-                    <img ng-src="/images/collection/{{item.itemDesign.itemId}}-{{view}}"
+                    <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : view}}"
                          alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
                          class="img-responsive">
-                    <!--</div>-->
-                    <!--</div>-->
                 </div>
                 <div class="views col-sm-3 col-sm-pull-8">
                     <div class="row">
                         <div id="front" class="col-xs-4 col-sm-12">
-                            <img ng-src="/images/collection/{{item.itemDesign.itemId}}-lg-front.jpg"
+                            <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-front.jpg'}}"
                                  alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
-                                 ng-click="view='lg-front.jpg'"
+                                 ng-click="view='-lg-front.jpg'"
                                  class="img-responsive img-thumbnail">
                         </div>
                         <div id="back" class="col-xs-4  col-sm-12">
-                            <img ng-src="/images/collection/{{item.itemDesign.itemId}}-md-front.jpg"
+                            <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-back.jpg'}}"
                                  alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
-                                 ng-click="view='lg-back.jpg'"
+                                 ng-click="view='-lg-back.jpg'"
                                  class="img-responsive img-thumbnail">
                         </div>
                         <div id="dress" class="col-xs-4  col-sm-12">
-                            <img ng-src="/images/collection/{{item.itemDesign.itemId}}-lg-dress.png"
+                            <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-dress.jpg'}}"
                                  alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
-                                 ng-click="view='lg-dress.jpg'"
+                                 ng-click="view='-lg-dress.jpg'"
                                  class="img-responsive img-thumbnail">
                         </div>
                     </div>
@@ -43,15 +33,11 @@
             </div>
         </div>
         <div class="col-sm-7 .hidden-xs">
-            <!--<div id="builder_controls_panel" class="col-lg-7 col-md-8 col-sm-7">-->
             <div class="breaded">
                 <ul class="nav" id="options">
                     <li ng-class="{active: true}">
                         <a href="#">Style</a>
                     </li>
-                    <!--<li ng-class="{active: false}">-->
-                        <!--<a href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design">Customize</a>-->
-                    <!--</li>-->
                     <li ng-class="{active: false}">
                         <a href="#!/item/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit">Fit</a>
                     </li>
@@ -61,61 +47,6 @@
                 </ul>
             </div>
             <div ng-include="'/views/ng-partials/partial-style.html'"></div>
-            <!--<div id="style-panel">-->
-                <!--<div class="container-fluid ">-->
-                    <!--<div class="row">-->
-                        <!--<div class="intro col-sm-5">-->
-                            <!--<div class="name">{{item.style.styleName}}</div>-->
-                            <!--<div class="formal-name">{{item.style.styleFormalName}}</div>-->
-                            <!--<div class="price">HKD {{item.style.price | number:0}}</div>-->
-                        <!--</div>-->
-                        <!--<div class="action col-sm-7">-->
-                            <!--<a class="btn btn-primary"-->
-                               <!--href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit" data-toggle="tab"-->
-                               <!--ng-click="tabs.fit = true">Fit size and check out</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<hr class="grad-line">-->
-                    <!--<div class="row ">-->
-                        <!--<div class="description col-sm-12">-->
-                            <!--<ul class="">-->
-                                <!--<li>{{item.style.strapline}}</li>-->
-                                <!--<li ng-repeat="para in item.style.description">{{para}}</li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<hr class="grad-line">-->
-                    <!--<div class="row">-->
-                        <!--<div class="col-sm-12">-->
-                            <!--<h4>Info</h4>-->
-
-                            <!--<p ng-repeat="para in item.style.care">{{para}}</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<hr class="grad-line">-->
-
-                    <!--<div id="not-perfect" class="row">-->
-                            <!--<div class="col-sm-7 align-left">-->
-                                <!--<h4>Not your perfect dress?</h4>-->
-                            <!--</div>-->
-                            <!--<div class="action col-sm-5  align-right">-->
-                                <!--<a class="btn btn-default  igg-design-buttons" id="customize"-->
-                                   <!--href="#design" data-toggle="tab"-->
-                                   <!--ng-click="tabs.design = true"-->
-                                   <!--style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">-->
-                                    <!--Customise it</a>-->
-                                <!--&lt;!&ndash;<div class="col-md-5 col-sm-5 align-center" style="margin-bottom:10px">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<a class="btn btn-default  igg-design-buttons" href="#!/collection"&ndash;&gt;-->
-                                   <!--&lt;!&ndash;style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;onClick="_gaq.push(['_trackEvent', 'Shop Item', 'buy-sml-btn', 'collection/different-style']);">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;Try a different style</a>&ndash;&gt;-->
-                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                            <!--</div>-->
-
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
         </div>
     </div>
 </div>

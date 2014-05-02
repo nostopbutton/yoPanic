@@ -15,7 +15,7 @@
         , "price": 2300
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
-        , "silhouetteImage": "pat-301-body"
+        , "silhouetteImage": "pat-301"
         , "defaultItemId": "sheath-1"
         , "foxyImage": "pat-301"
         , "fc_category": "category||f0413cfa2afa3244e16b1d1893e138c9669316c8a3597fb9c34b6ab99826ab54"

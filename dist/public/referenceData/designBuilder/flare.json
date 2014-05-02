@@ -7,14 +7,16 @@
         , "styleFormalName": "Flare Dress"
         , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
         , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
-        , "description": [ "Experiment with colours and trims to define your style and add a belt to really enhance your waist."
-        , "Perfect with killer heels for a timeless show stopping look." ]
-        , "care": [ "Look after it, and it will last..."]
-        , "price": 2000
+        , "description": [ "Simplicity and elegance."
+        , "The hip skimming Alexa skirt provides maximum curves and comfort." ]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 2300
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-302-body"
-        , "defaultItemId": "fl-1"
+        , "defaultItemId": "flare-1"
         , "foxyImage": "pat-302"
         , "fc_category": "category||084c3562f2f4da8d33156b49d07d2b78fef9f289f725d88106e0c4d536062c69"
         , "fc_code": "code||1a0792dacc4f27dbe740f0e1f7c60085988a5473f073ae30d8278728a652e346"
@@ -132,15 +134,15 @@
     [
         {
             "itemId": "flare-1"
-            , "itemDesc": "Fit and Flare dress - Teal"
+            , "itemDesc": "Wrap Flare - Red"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "010", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "010", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "010", "trim": ""}
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "003", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "003", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "168", "code": "002-168"},
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -148,15 +150,15 @@
         },
         {
             "itemId": "flare-2"
-            , "itemDesc": "Fit and Flare dress - Teal"
+            , "itemDesc": "Wrap Flare - Midnight blue"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "010", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "010", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "010", "trim": ""}
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "014", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "014", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "014", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "168", "code": "002-168"},
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -164,15 +166,15 @@
         },
         {
             "itemId": "flare-3"
-            , "itemDesc": "Fit and Flare dress - Teal"
+            , "itemDesc": "Wrap Flare - Aubergine"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "010", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "010", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "010", "trim": ""}
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "013", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "013", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "168", "code": "002-168"},
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -180,15 +182,15 @@
         },
         {
             "itemId": "flare-4"
-            , "itemDesc": "Fit and Flare dress - Teal"
+            , "itemDesc": "Wrap Flare -  Teal"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "003", "size": "00", "fabric": "010", "trim": ""}
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "010", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "010", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "010", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "168", "code": "002-168"},
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
