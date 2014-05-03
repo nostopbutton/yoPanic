@@ -1,19 +1,41 @@
 <div id="designBuildView" class="container">
 
-<div ng-include="'/views/ng-partials/partial-sizingmodal.html'"></div>
+<div ng-include="'/views/ng-partials/partial-sizing-modal.html'"></div>
 <div class="row">
 
-    <div id="view_dress_image_panel" class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-5">
+    <div class="col-lg-2">
+        <ul>
+            <li ng-repeat="design in form.design" ng-class-even="'alt'">
+                {{design.type+"-"+design.id+"-"+design.size}} ({{design.fabric}})
+                <br><br>
+                {{design | lookup}} <br>({{design|fablookup}} {{design.trim|trimlookup}})
+                <br><br>
+            </li>
+            <hr class="gradient">
+            <li ng-repeat="design in form.extras" ng-class-even="'alt'">
+                {{design.type+"-"+design.id+"-"+design.size}} ({{design.fabric}})
+                <br><br>
+                {{design | lookup}} <br>({{design|fablookup}} {{design.trim|trimlookup}})
+                <br><br>
+            </li>
+        </ul>
+    </div>
+
+    <div id="view_dress_image_panel" class="col-lg-3 col-lg-offse-1 col-md-4 col-sm-5">
         <div class="dress_image_panel"> <!--style="border-style: solid; border-width:2px;border-color: red">-->
             <div draw-design model="item.design_builder.model" design="form"></div>
         </div>
     </div>
 
 
+
+    <form name="foxyForm" class="form-horizontal" role="form"
+          action="https://aurza.foxycart.com/cart" method="post"
+          accept-charset="utf-8">
     <div id="builder_controls_panel" class="col-lg-7 col-md-8 col-sm-7">
         <tabset class="breaded" type="pills">
             <tab heading="Style" active="tabs.style">
-                <div ng-include="'/views/ng-partials/partial-style.html'"></div>
+                <div ng-include="'/views/ng-partials/partial-style-builder.html'"></div>
             </tab>
             <tab heading="Customize" active="tabs.design" ng-hide="">
                 <div ng-include="'/views/ng-partials/partial-customize.html'"></div>
@@ -21,15 +43,14 @@
             <tab heading="Fit" active="tabs.fit">
                 <div ng-include="'/views/ng-partials/partial-fit.html'"></div>
             </tab>
-            <tab heading="Review" active="tabs.order">
+
+            <tab heading="Review" active="tabs.order" disabled="!foxyForm.$valid">
                 <div ng-include="'/views/ng-partials/partial-review.html'"></div>
             </tab>
-            <!--<input type="submit" class="btn btn-danger igg-design-buttons breadcrumb-buy-button" value="Buy It Now!"-->
-                   <!--ng-show="tabs.order"-->
-                   <!--form="foxyForm"/>-->
+
         </tabset>
     </div>
-
+    </form>
 </div>
 
 

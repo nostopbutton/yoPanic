@@ -8,7 +8,7 @@
     <meta name="google-site-verification" content="pUkTUYdu_NIAmwwQJcRay-D7ctXNv0hB-viL6HFOrhw"/>
     <!--TODO - add description -->
     <meta name="description" content="AURZA - utterly fabulous custom-made dresses">
-    <meta name="author" content="NoStopButton">
+    <meta name="author" content="pete@nostopbutton.com">
     <title>AURZA - how it works</title>
     <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -32,7 +32,7 @@
     <!-- END FOXYCART FILES -->
 
 
-    <link rel="stylesheet" href="/styles/1836a342.aurza-static.css"/>
+    <link rel="stylesheet" href="/styles/391c770c.aurza-static.css"/>
 
 
 
@@ -76,7 +76,7 @@
                 </button>
                 <div id="header">
                     <div id="logo">
-                        <a class="" href="/"><img src="/images/home/AURZAlogo.png" alt="AURZA - utterly fabulous custom-made dresses"></a>
+                        <a class="" href="/"><img src="/images/home/aurza-logo.png" alt="AURZA - utterly fabulous custom-made dresses"></a>
                     </div>
 
                     <div id="bag" class="collapse navbar-collapse header-collapse">
@@ -84,7 +84,8 @@
                         <div class="cart fc_minicart" id="foxy_mincart">
                             <!-- Add #fc_minicart or .fc_minicart to hide cart when zero items -->
                             <a href="https://aurza.foxycart.com/cart?cart=view">
-                                <img src="/images/home/shopping_bag.png" >
+                                <div class="sprite-icons shopping_bag"></div>
+                                <!--<img src="/images/home/shopping_bag.png" >-->
                                 <span id="fc_quantity">0</span>
                                 <span id="fc_singular"> item </span>
                                 <span id="fc_plural"> items </span> in bag
@@ -98,7 +99,10 @@
             <div class="collapse navbar-collapse header-collapse">
 
                 <ul class="nav navbar-nav">
-                    <li><a href="/shop.html#!/collection">LOOKS WE LOVE <img src="/images/home/heart.png"></a></li>
+                    <li><a href="/shop.html#!/collection">LOOKS WE LOVE
+                        <div class="sprite-icons heart"></div>
+                        <!--<img src="/images/home/heart.png">-->
+                        </a></li>
                     <li><a href="/shop.html#!/design">DESIGN YOUR OWN</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">HOW IT WORKS <b class="caret"></b></a>
@@ -128,7 +132,7 @@
             <h1>CREATE YOUR PERFECT DRESS</h1>
 
             <p class="intro">no more compromising style or fit</p>
-            <img class="img-responsive" width="600px" src="./images/about/how-it-works-design-builder.jpg" alt=""/>
+            <img class="img-responsive" width="600px" src="./images/about/how-aurza-works-design-builder.jpg" alt=""/>
 
             <p>Choose your favourite silhouette, change the neckline, sleeves or skirt.
                 Choose the colour of the fabric and details like a belt or faux-leather trim.</p>
@@ -141,7 +145,8 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2>CHOOSE YOUR FAVOURITE SILHOUETTE</h2>
-            <img class="img-responsive" width="750px" src="./images/about/how-it-works-choose-silhouette.jpg" alt=""/>
+            <img class="img-responsive" width="750px" src="./images/about/how-aurza-works-choose-silhouette.jpg"
+                 alt=""/>
 
         </div>
     </div>
@@ -151,7 +156,7 @@
         <div class="col-md-8 col-md-offset-2">
             <h2>CHANGE THE COLOUR</h2>
 
-            <img class="img-responsive" width="700px" src="./images/about/how-it-works-choose-fabric-colours.jpg"
+            <img class="img-responsive" width="700px" src="./images/about/how-aurza-works-choose-fabric-colours.jpg"
                  alt=""/>
         </div>
     </div>
@@ -160,25 +165,26 @@
         <div class="col-md-8 col-md-offset-2">
             <h2>CHANGE THE STYLING</h2>
 
-            <img class="img-responsive" width="700px" src="./images/about/how-it-works-change-the-style.jpg" alt=""/>
+            <img class="img-responsive" width="700px" src="./images/about/how-aurza-works-change-the-style.jpg" alt=""/>
         </div>
     </div>
     <hr class="grad-line">
     <div class="row">
 
         <div class="col-md-8 col-md-offset-2">
-            <h2>CHOOSE ONE OF 3 SIZE OPTIONS</h2>
+            <h2>CHOOSE 1 OF 3 SIZE OPTIONS</h2>
             <ol>
-                <li>AURZA standard sizes – an amazing fit due to the fact we have created our patterns in 3D and based
-                    on a body that reflects a real women (having used 3D body scanning). We also we have added just the
-                    right amount of stretch into our fabrics to ensure a comfort / flexibility of fit for different body
-                    shapes.
+                <li>AURZA standard sizes provide a fabulous fit due to the fact we have created our patterns in 3D and
+                    based them on a body that reflects real women (having used 3D body scanning). We have also added
+                    just the right amount of stretch into our fabrics to maximise comfort and ensure a flexibility of
+                    fit for different body shapes. For these reasons we do not use a typical country specific size chart
+                    but have labelled our sizes 1-8 as our sizes are unique to us.
                 </li>
-                <li>Mix and match top and bottoms for those that want a separates look or have very different top and
+                <li>Mix and match tops and skirts for those that want a separates look or have very different top and
                     bottom body shapes.
                 </li>
-                <li>Custom sizing – provide your measurements (with our guidance) and we will make you a unique size
-                    dress.
+                <li>Custom sizing where you provide your measurements (with our guidance) and we will adapt our patterns
+                    or make a bespoke pattern just for you depending on the information you give us.
                 </li>
             </ol>
         </div>
@@ -196,32 +202,41 @@
         <section id="signup" class="col-md-5 col-md-offset-1 col-sm-6">
             <p>Exclusive Offers & Customising Tips from our Experts</p>
 
-            <form class="form-inline">
-                <input id="email" type="text" class="form-control" placeholder="Enter your email...">
-                <button type="submit" class="btn btn-default">Sign up</button>
-            </form>
+            <!--<form class="form-inline">-->
+                <!--<input id="email" type="text" class="form-control" placeholder="Enter your email...">-->
+                <!--<button type="submit" class="btn btn-default">Sign up</button>-->
+            <!--</form>-->
+            <a class="btn btn-default"
+               href="mailto:info@aurza.com?subject=Sign Me Up&body=I would like to be kept informed of your exclusive offers.">
+                Contact us</a>
         </section>
         <section id="community" class="col-sm-6">
             <p>Join the AURZA community:</p>
 
             <div class=" social">
                 <a href="http://www.facebook.com/AURZAcustom" target="_blank">
-                    <image src="/images/somicro-borderless/facebook.png"></image>
+                    <div class="sprite-icons facebook"></div>
+                    <!--<image src="/images/somicro-borderless/facebook.png"></image>-->
                 </a>
                 <a href="http://letsgetfabulous.com/" target="_blank">
-                    <image src="/images/somicro-borderless/wordpress.png"></image>
+                    <div class="sprite-icons wordpress"></div>
+                    <!--<image src="/images/somicro-borderless/wordpress.png"></image>-->
                 </a>
                 <a href="http://twitter.com/AURZAcustom" target="_blank">
-                    <image src="/images/somicro-borderless/twitter.png"></image>
+                    <div class="sprite-icons twitter"></div>
+                    <!--<image src="/images/somicro-borderless/twitter.png"></image>-->
                 </a>
                 <a href="   http://www.pinterest.com/aurza/" target="_blank">
-                    <image src="/images/somicro-borderless/pinterest.png"></image>
+                    <div class="sprite-icons pinterest"></div>
+                    <!--<image src="/images/somicro-borderless/pinterest.png"></image>-->
                 </a>
                 <a href="http://instagram.com/aurzacustom" target="_blank">
-                    <image src="/images/somicro-borderless/instagram.png"></image>
+                    <div class="sprite-icons instagram"></div>
+                    <!--<image src="/images/somicro-borderless/instagram.png"></image>-->
                 </a>
                 <a href="mailto:info@aurza.com" target="_blank">
-                    <image src="/images/somicro-borderless/email.png"></image>
+                    <div class="sprite-icons email"></div>
+                    <!--<image src="/images/somicro-borderless/email.png"></image>-->
                 </a>
 
             </div>
@@ -232,8 +247,8 @@
 
         <div class="container">
             <ul class="nav navbar-nav">
-                <li><a href="/terms/">Terms of use</a></li>
-                <li><a href="/terms/#privacy">Privacy policy </a></li>
+                <li><a href="/terms.html">Terms of use</a></li>
+                <li><a href="/privacy.html">Privacy policy </a></li>
             </ul>
         </div>
     </nav>

@@ -12,7 +12,7 @@
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
         , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
         , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
-        , "price": 2300
+        , "price": 2200
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-301"
@@ -20,8 +20,8 @@
         , "foxyImage": "pat-301"
         , "fc_category": "category||f0413cfa2afa3244e16b1d1893e138c9669316c8a3597fb9c34b6ab99826ab54"
         , "fc_code": "code||2a36651dbfd988e00f18a02e5cbdee7dd867168bb305909c496517204d25ae31"
-        , "fc_name": "name||1ed77a1b465d0eaddf3698675b57a2dc8e68696dfe4cf49c551c0d996627c68d"
-        , "fc_price": "price||4532e694c6ddc3eee9c7e0ee4acc44f217e18c0ff770697b3bd8e3ec63245fc8"
+        , "fc_name": "name||7aff6915f6e588c9e348a8841d741ad0564c75b5ff6b2750eb989c3f04be1a6d||open"
+        , "fc_price": "price||d8436f82703deab6c45741deb74e2721d823a06e01901080dd7d60b1ab533412"
         , "fc_image": "image||df0c77da9365f3d26c8a2d802c694dfb8eeb89cd5425e9b7e72e1fbf4ea3aeb8||open"
         , "fc_url": "url||2ab1d7cf48d9afe991ac5769fbb34300fd3280c48e55055251d58f8a24921f8d||open"
 
@@ -124,7 +124,7 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "161", "fabricSets": [ {"setId": "x-pt"}]}
+                {"id": "002", "name": "Ribbon belt", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
                 , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
 
             ]
@@ -160,7 +160,7 @@
                 , "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "011", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "121", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "111", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
             }

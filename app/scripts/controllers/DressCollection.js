@@ -32,14 +32,17 @@ angular.module('panicApp.Controllers')
 
             $scope.silhouettes = [
                 { id: '', label: '-- All silhouettes --'},
-                { id: 'sheath', label: 'COCO (Sheath)'},
-                { id: 'swing', label: 'AUDREY (Swing)'},
-                { id: 'flare', label: 'ALEXA (Flare)'},
-                { id: 'doloman', label: 'CHRISTINA (Doloman)'},
-                { id: 'swoosh', label: 'KATE (Swoosh)'},
-                { id: 'shift', label: 'EDDIE (Shift)'},
-                { id: 'shirt', label: 'ELLE (Shirt)'},
-                { id: 'maxi-shirt', label: 'CLAUDIA (Maxi-shirt)'}
+
+                { id: 'sheath', label: 'Sheath'},
+                { id: 'swing', label: 'Swing'},
+                { id: 'swoosh', label: 'Swoosh'},
+                { id: 'doloman', label: 'Doloman'},
+                { id: 'flare', label: 'Flare'},
+                { id: 'bustier', label: 'Bustier'},
+                { id: 'shirt', label: 'Shirt'},
+                { id: 'shift', label: 'Shift'},
+                { id: 'Top', label: 'Tops'}
+
             ];
 
             $scope.types = [
@@ -49,15 +52,34 @@ angular.module('panicApp.Controllers')
                 { id: 'top', label: 'Top'}
             ];
 
+            $scope.fabricTypes = [
+                { id: '', label: '-- All fabrics --'},
+                { id: 'dress', label: 'Crepe'},
+                { id: 'skirt', label: 'Silk'},
+                { id: 'faux-leather', label: 'Leather'},
+                { id: 'sheer-silk', label: 'Sheer Silk'},
+                { id: 'cotton', label: 'Stretch Cotton'},
+                { id: 'floral-prints', label: 'Floral prints'},
+                { id: 'zebra-prints', label: 'Zebra prints'}
+
+            ];
+
             $scope.colours = [
                 { id: '', label: '-- All colours --'},
                 { id: 'red', label: 'Red'},
                 { id: 'blue', label: 'Blue'},
-                { id: 'black', label: 'Black'}
+                { id: 'black', label: 'Black'},
+                { id: 'cream', label: 'Cream'},
+                { id: 'aubergine', label: 'Aubergine'},
+                { id: 'pink', label: 'Pink'},
+                { id: 'teal', label: 'Teal'},
+                { id: 'coral', label: 'Coral'},
+                { id: 'cobalt', label: 'Cobalt'}
             ];
 
             $scope.silhouetteFilter = $scope.silhouettes[0].id;
             $scope.typeFilter = $scope.types[0].id;
+            $scope.fabricTypeFilter = $scope.types[0].id;
             $scope.colourFilter = $scope.colours[0].id;
 
 //            $scope.silFilter = { id: '', label: 'All'};
@@ -91,6 +113,7 @@ angular.module('panicApp.Controllers')
             $scope.reset = function () {
                 $scope.silhouetteFilter = $scope.silhouettes[0].id;
                 $scope.typeFilter = $scope.types[0].id;
+                $scope.fabricTypeFilter = $scope.types[0].id;
                 $scope.colourFilter = $scope.colours[0].id;
             }
 

@@ -11,7 +11,7 @@
         , "" ]
         , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
         , "For best results dry clean."]
-        , "price": 2900
+        , "price": 2600
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-203maxi-body"
@@ -19,8 +19,8 @@
         , "foxyImage": "pat-203maxi"
         , "fc_category": "category||31b15320b56008f194e77afe8c28be726e177d430cce844e8da42b190117c473"
         , "fc_code": "code||75e0afeb9c76fb83c4c861b263270e78708ad90baf142d2ae581e79981d243cc"
-        , "fc_name": "name||3da6a5a214509515248482ab6230d0db4a076a06b9f2e855b7fdc5a624756d33"
-        , "fc_price": "price||66473807db29ab3df734243eba835f124ac389a01d0ed601ee5b31034afbb6eb"
+        , "fc_name": "name||29897db259209ccab2588e0bb822a5438a27d3f4dcd941e3f5d0b6171353ef6c||open"
+        , "fc_price": "price||4ae2f0820a2901b2d58a53cc3e717bff27c22f1077e4bc6d3b28cd6b04df0311"
         , "fc_image": "image||a27938bda721943f0e0123bfb404a0a9b39ea02ec1a3f3d89bce1f68c5705d99||open"
         , "fc_url": "url||b0172aafe74d1272a742ea1fca86c65083dfe9d69b1e7b4b574da4ab34065e35||open"
 
@@ -59,8 +59,7 @@
         ]
             , "size": true
             , "sizes": [
-            {"id": "02", "name": "knee"}
-            , {"id": "05", "name": "maxi"}
+             {"id": "05", "name": "maxi"}
         ]
             , "trim": true
             , "trimFabricSets": [{"setId": "p-sk"}]
@@ -89,9 +88,6 @@
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "089", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "089", "trim": ""}
             }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
         }
         },
         {
@@ -102,9 +98,6 @@
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "088", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "088", "trim": ""}
             }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
         }
         },
         {
@@ -114,9 +107,6 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "087", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "087", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }

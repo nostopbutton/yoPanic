@@ -9,25 +9,25 @@
         <div class="col-md-1 col-md-offset-1 col-sm-2 header">
             <span class="glyphicon glyphicon-chevron-down">​</span><span>&nbsp Filters</span>
         </div>
-        <div class="col-sm-2 header">
+        <div class="col-sm-3 header">
 
             <select ng-model="silhouetteFilter" ng-options="sil.id as sil.label for sil in silhouettes">
             </select>
         </div>
-        <div class="col-sm-2 header">
+        <div class="col-sm-3 header">
             <select ng-model="typeFilter" ng-options="type.id as type.label for type in types">
             </select>
         </div>
-        <div class="col-sm-2 header">
+        <div class="col-sm-3 header">
             <select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">
             </select>
         </div>
 
-        <div class="col-sm-2 header">
+        <!--<div class="col-sm-2 header">-->
 
-            <select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">
-            </select>
-        </div>
+            <!--<select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">-->
+            <!--</select>-->
+        <!--</div>-->
         <div class="col-sm-1 header">
             <a class="btn btn-xs btn-default" ng-click="reset()">Reset</a>
         </div>
@@ -85,7 +85,7 @@
                             <div class="row">
                                 <div class=" image page-curl">
                                     <!--<img ng-src="/images/collection/{{dress.itemId}}-lg-dress.jpg"-->
-                                <img ng-src="/images/collection/{{dress.itemId}}-lg-{{dress.img}}"
+                                    <img ng-src="/images/collection/{{dress.itemId}}-lg-{{dress.img}}"
                                      alt="{{dress.styleName}} - {{dress.itemDesc}}"
                                      ng-init="dress.img = imageFilename"
                                      ng-mouseenter="dress.img = rolloverFilename"

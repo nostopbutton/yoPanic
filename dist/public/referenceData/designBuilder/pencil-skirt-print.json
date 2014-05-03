@@ -1,0 +1,153 @@
+{
+    "style":
+    {
+        "styleId": "pencil-skirt-print"
+        , "type": "separate"
+        , "styleName": "Sophia Pencil"
+        , "styleFormalName": "Printed Pencil Skirt"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Turn heads in our classic pencil served up in contemporary floral prints."
+        , ""]
+        , "care": [ "Our stretch cotton option provides a lightweight fabric alternative. Digitally printed with the latest techniques allowing for a fabulous colour palette."
+        , "Machine washable "]
+        , "price":1300
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+        "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-111"
+        , "defaultItemId": "skirt-pencil-print-1"
+        , "foxyImage": "pat-111"
+        , "fc_category":""
+        , "fc_code":""
+        , "fc_name":""
+        , "fc_price":""
+        , "fc_image":""
+        , "fc_url":""
+
+        , "fc_neckline":""
+        , "fc_sleeves":""
+        , "fc_skirt":""
+        , "fc_peplum":""
+        , "fc_rosetta":""
+        , "fc_belt":""
+
+        , "fc_size":""
+        , "fc_bust":""
+        , "fc_waist":""
+        , "fc_hips":""
+        , "fc_hollowfloor":""
+        , "fc_height":""
+    }
+    , "design_builder":
+{
+    "model": "strap-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [ {"setId": "s-vc"}]
+            , "values": [
+            {"id": "001", "name": "bateau"}
+            , {"id": "002", "name": "scoop"}
+            , {"id": "003", "name": "v-slit"}
+            , {"id": "004", "name": "wrap"}
+        ]
+            , "size": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "000", "name": "none"}
+                , {"id": "002", "name": "cap"}
+                , {"id": "006", "name": "elbow"}
+                , {"id": "009", "name": "flared"}
+            ]
+        }
+        ,{
+            "part_name": "skirt"
+            , "type": "skt"
+            , "label": "Skirt"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "001", "name": "pencil"}
+                , {"id": "002", "name": "ruffle"}
+            ]
+            , "size": true
+            , "sizes": [
+                {"id": "01", "name": "short"}
+                , {"id": "02", "name": "knee"}
+                , {"id": "04", "name": "long"}
+            ]
+            , "trim": false
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "peplum"
+            , "type": "ext"
+            , "label": "Peplum"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+        , {
+            "part_name": "rosetta"
+            , "type": "ext"
+            , "label": "Rosetta"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+            ]
+        }
+        , {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "002", "name": "Ribbon belt", "defaultFabric": "161", "fabricSets": [ {"setId": "x-pt"}]}
+                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+
+            ]
+        }
+    ]}
+]
+}
+    , "collection":
+    [
+        {
+            "itemId": "skirt-pencil-print-1"
+            , "itemDesc": "Test - Empress"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "011", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "011", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
+}

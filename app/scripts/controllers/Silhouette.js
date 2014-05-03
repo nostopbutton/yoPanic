@@ -33,6 +33,46 @@ angular.module('panicApp.Controllers')
 
       $scope.perkValues = "";
 
+        $scope.filterStyles = [
+            { id: '', label: '-- All styles --'},
+            { id: 'sheath', label: 'Sheath'},
+            { id: 'swing', label: 'Swing'},
+            { id: 'swoosh', label: 'Swoosh'},
+            { id: 'doloman', label: 'Doloman'},
+            { id: 'flare', label: 'Flare'},
+            { id: 'bustier', label: 'Bustier'},
+            { id: 'shirt', label: 'Shirt'},
+            { id: 'shift', label: 'Shift'},
+            { id: 'Top', label: 'Tops'}
+
+        ];
+
+        $scope.filterTypes = [
+            { id: '', label: '-- All types --'},
+            { id: 'dress', label: 'Dress'},
+            { id: 'skirt', label: 'Skirt'},
+            { id: 'top', label: 'Top'}
+        ];
+
+        $scope.filterFabrics = [
+            { id: '', label: '-- All fabric groups --'},
+            { id: 'silk', label: 'Silks'},
+            { id: 'crepe', label: 'Crepe'},
+            { id: 'cotton', label: 'Stretch cotton'}
+
+        ];
+
+//        $scope.styleFilter = $scope.filterStyles[0].id;
+//        $scope.typeFilter = $scope.filterTypes[0].id;
+//        $scope.fabricFilter = $scope.filterFabrics[0].id;
+//        $scope.fabricFilter = $scope.filterFabrics[0].id;
+
+        $scope.reset = function () {
+            $scope.styleFilter = $scope.filterStyles[0].id;
+            $scope.typeFilter = $scope.filterTypes[0].id;
+            $scope.fabricFilter = $scope.filterFabrics[0].id;
+            $scope.fabricFilter = $scope.filterFabrics[0].id;
+        }
 
 //      $scope.search = function (item){
 //        var found = false;
@@ -77,12 +117,12 @@ angular.module('panicApp.Controllers')
         return found;
       };
 
-      $scope.reset = function (){
-//        $scope.perkChecked = angular.copy(perks_reset[0].id);
-        $scope.perkValues = angular.copy(perks_reset[0].values);
-        $scope.perks = angular.copy(perks_reset);
-//        $scope.types = angular.copy(types_reset);
-      }
+//      $scope.reset = function (){
+////        $scope.perkChecked = angular.copy(perks_reset[0].id);
+//        $scope.perkValues = angular.copy(perks_reset[0].values);
+//        $scope.perks = angular.copy(perks_reset);
+////        $scope.types = angular.copy(types_reset);
+//      }
 
       $scope.reset();
 

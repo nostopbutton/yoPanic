@@ -7,6 +7,35 @@
         </div>
     </div>
 
+
+    <div class="row filter">
+        <div class="col-md-1 col-md-offset-1 col-sm-2 header">
+            <span class="glyphicon glyphicon-chevron-down">​</span><span>&nbsp Filters</span>
+        </div>
+        <div class="col-sm-3 header">
+
+            <select ng-model="styleFilter" ng-options="style.id as style.label for style in filterStyles">
+            </select>
+        </div>
+        <div class="col-sm-3 header">
+            <select ng-model="typeFilter" ng-options="type.id as type.label for type in filterTypes">
+            </select>
+        </div>
+        <div class="col-sm-3 header">
+            <select ng-model="fabricFilter" ng-options="fabric.id as fabric.label for fabric in filterFabrics">
+            </select>
+        </div>
+
+        <!--<div class="col-sm-2 header">-->
+
+            <!--<select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">-->
+            <!--</select>-->
+        <!--</div>-->
+        <div class="col-sm-1 header">
+            <a class="btn btn-xs btn-default" ng-click="reset()">Reset</a>
+        </div>
+    </div>
+
   <div class="row">
 
     <!--<div class="col-xs-3">-->
@@ -38,7 +67,10 @@
 
     <div class="col-xs-10 col-xs-offset-1">
         <div class="row">
-            <div ng-repeat="design in styles"> <!-- | filter: search">-->
+            <div ng-repeat="design in styles
+                | filter:{styleId: styleFilter}
+                | filter:{type: typeFilter}
+                | filter:{shortDesc: fabricFilter}">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <div class="item">
                         <!--<div silhouette design="design"></div>-->
@@ -55,6 +87,7 @@
                         <div class="row type handwriting">({{design.styleFormalName}})</span></div>
                         <div class="row price"><span class="glyphicon glyphicon-tags"></span>&nbsp HKD {{design.price | number:0}}</div>
                         </a>
+                        <!--{{design}}-->
                     </div>
                 </div>
             </div>

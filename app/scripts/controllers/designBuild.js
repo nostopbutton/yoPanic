@@ -18,6 +18,8 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
 
 //            alert(JSON.stringify($location));
 
+
+//            $scope.
             $scope.form = "";
             $scope.current_title = 'Test';
             $scope.current_description = 'Test description';

@@ -109,7 +109,8 @@ SHOP THE COLLECTION PAGE - DRESSES
     position: relative;
 }
 
-.item  .image img {
+.item  .image img,
+.item  .image .sprite-body {
     max-height: 294px;
     max-width: 165px;
     position: absolute;
@@ -208,7 +209,7 @@ SHOP ITEM VIEW - STYLE PANEL
     margin: 0 0 20px 0;
 }
 
-#style-panel .btn {
+#builder_controls_panel .btn {
     font-size: 16px;
     text-align: center;
     /*width:150px;*/
@@ -243,11 +244,24 @@ SHOP ITEM VIEW - STYLE PANEL
 
 #fit-panel .note {
    font-size: 12px;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
-#fit-panel {
+#measure-guide .intro {
+    margin-bottom: 20px;
+}
 
+#measure-guide .modal-footer {
+    margin-top: 0;
+}
+
+.order-button {
+    margin-top: 30px;
+}
+
+
+.modal-button {
+    text-align: right;
 }
 
 /* Extra small devices (phones, less than 768px) */

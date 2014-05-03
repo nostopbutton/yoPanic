@@ -12,8 +12,7 @@
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
         , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
         , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
-
-        , "price": 2300
+        , "price": 2200
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
                             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-304-body"
@@ -21,8 +20,8 @@
         , "foxyImage": "pat-304"
         , "fc_category": "category||05be67359dd9dfc344935dd39b55945810a66efe99555234f7153ad1084b5f17"
         , "fc_code": "code||ae669290b7afe449027d32791d0de6ac732125ac615bce0db30c8fd5ea0157cf"
-        , "fc_name": "name||adbb1f7b19be2e806ee7732ecb290dc54205abaf0a02809cb74c1e95c264cb87"
-        , "fc_price": "price||aaad0f9617d3549a8aa950dd152eecae2811078c0806bdec110e201c0dd3ee5b"
+        , "fc_name": "name||05f24b6e6703074170ef6900244e809d53b8b7889f9c004a4cf14adc74dde6fd||open"
+        , "fc_price": "price||f677a539eed0fc267b89dd49055b8ebb6ef8c7a29b4b47049b561c332cdc4fe1"
         , "fc_image": "image||80c38c433856f7b1e23fb4ffe6e9819d0a5561266d0b971d5302c3d10c617e6a||open"
         , "fc_url": "url||95d7696a8bb8f60541a0e5f4651f5960dd3493633203c6039efd8bc2183e9255||open"
 
@@ -116,7 +115,7 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
+                {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
                 , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
             ]
         }

@@ -137,22 +137,22 @@
     /*padding:20px;*/
 /*}*/
 
-.party .booking-form .title {
-    font-size: 16px;
-    font-weight: bold;
-}
+/*.party .booking-form .title {*/
+    /*font-size: 16px;*/
+    /*font-weight: bold;*/
+/*}*/
 
-.party .booking-form .desc {
-    margin: 5px 0px 10px 0px;
-    font-size: 12px;
-}
+/*.party .booking-form .desc {*/
+    /*margin: 5px 0px 10px 0px;*/
+    /*font-size: 12px;*/
+/*}*/
 
-.party .booking-form label {
-    font-size: 12px;
-    font-weight: normal;
-}
+/*.party .booking-form label {*/
+    /*font-size: 12px;*/
+    /*font-weight: normal;*/
+/*}*/
 
-.party .booking-form button {
+.party .booking-form .btn {
     text-align:center;
     font-size: 12px;
     font-weight: normal;
@@ -177,7 +177,7 @@
 /* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
 @media (min-width: 992px) {
     .about .video {
-        height: 293px;
+        /*height: 293px;*/
         /*margin-right:40px;*/
         /*float:left;*/
     }
@@ -210,11 +210,95 @@
 .about .team .text{
     /*margin: 0px;*/
     /*padding: 0px;*/
-
 }
 
 .about .team .text h4{
     margin-top: 0px;
     padding: 0px;
 
+}
+
+
+.fabric-desc{
+    /*margin: 0 -1em;*/
+    /*max-width: 80%;*/
+    height: 515px;
+    text-align: left;
+    /*display: block;*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /*margin:5px 0 10px 5px;*/
+    /*width:200px;*/
+    /*height:100px;*/
+    /*padding: 10px 0px 0px 0px;*/
+    background: white;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #efefef; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #efefef 0%, #f9f9f9 10%, #fefefe 20%, #fefefe 80%, #f9f9f9 90%, #efefef 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#efefef), color-stop(10%,#f9f9f9), color-stop(20%,#fefefe), color-stop(80%,#fefefe), color-stop(90%,#f9f9f9), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* Opera 11.10+ */
+    /*background: -ms-linear-gradient(left,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); *//* IE10+ */
+    background: linear-gradient(to right,  #efefef 0%,#f9f9f9 10%,#fefefe 20%,#fefefe 80%,#f9f9f9 90%,#efefef 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#efefef',GradientType=1 ); /* IE6-8 */
+}
+
+
+
+/*.fabric-desc {*/
+    /*margin: 1em auto;*/
+    /*height: 294px;*/
+    /*width: 165px;*/
+    /*width: 90%;*/
+    /*position: relative;*/
+/*}*/
+
+.fabric-desc img {
+    /*max-height: 294px;*/
+    /*max-width: 165px;*/
+    /*position: absolute;*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*background: #3A6F9A;*/
+}
+
+.fabric {
+    margin-bottom: 40px;
+}
+
+.fabric h2 {
+    margin-top: 20px;
+    font-size: 16px;
+    /*font-weight: bold;*/
+}
+
+.fabric .desc {
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 0.5em;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+
+    .fabric-desc{
+        width: 165px;
+        /*height: 320px;*/
+        /*text-align: center;*/
+        /*display: block;*/
+        margin-left: auto;
+        margin-right: auto
+        /*margin-bottom: 100px;*/
+    }
 }

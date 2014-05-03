@@ -384,6 +384,7 @@ input[type="checkbox"].hidden {
 
 #action .main-action {
     text-align:right;
+    padding-right:0;
 }
 
 #action .main-action a {

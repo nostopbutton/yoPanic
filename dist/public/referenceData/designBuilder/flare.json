@@ -5,14 +5,14 @@
         , "type": "dress"
         , "styleName": "Alexa"
         , "styleFormalName": "Flare Dress"
-        , "shortDesc": "Our classic sheath with perfectly positioned ruffles to draw the eyes to all the right places."
-        , "strapline": "Your ultimate wardrobe essential, now impeccably tailored using a classic haute couture cut. "
+        , "shortDesc": ""
+        , "strapline": ""
         , "description": [ "Simplicity and elegance."
         , "The hip skimming Alexa skirt provides maximum curves and comfort." ]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
         , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
         , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
-        , "price": 2300
+        , "price": 2200
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-302-body"
@@ -20,8 +20,8 @@
         , "foxyImage": "pat-302"
         , "fc_category": "category||084c3562f2f4da8d33156b49d07d2b78fef9f289f725d88106e0c4d536062c69"
         , "fc_code": "code||1a0792dacc4f27dbe740f0e1f7c60085988a5473f073ae30d8278728a652e346"
-        , "fc_name": "name||56a3acdce15eca2ac7b14f9849ec5fc6bf898b26861eb3c6651568491288d216"
-        , "fc_price": "price||f771f8ea896a266c8270ca3ac12f584f6ef6cb0d647891ed99bd575610c5141b"
+        , "fc_name": "name||76b74b3e2180af48411ade10415b0cd832bbb1313ca7df450cc7e257bf998f6e||open"
+        , "fc_price": "price||49b2528a44422f55fb1ae394b908e424c97f187144f2e224675ef49e983a43f2"
         , "fc_image": "image||c3d573d5f97ff6c56be35a91ec269c88f3f8fa7babe52915732b7c67c6f446ac||open"
         , "fc_url": "url||7760c12bd1d06b59499eb72076aaba30edac498c5fd3fa5590a8619dc85a3d7c||open"
 
@@ -122,7 +122,7 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
+                {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
                 , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
             ]
         }

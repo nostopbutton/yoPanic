@@ -19,8 +19,8 @@
         , "foxyImage": "pat-203"
         , "fc_category": "category||72beeb4cc408897d7fcb919d54c1812e5dec24c50a580cb2b309c7f281ea19aa"
         , "fc_code": "code||62ff1f2c43d7a566d28218bf5166c1016d273dac30e440060a840a38ccc49101"
-        , "fc_name": "name||9db9b5187580f5193da4fba88bee46ce68a780b29c44c784199dfe8f3c41f900"
-        , "fc_price": "price||43f5255f369520397c9b2710fddca428c2976f31bbedc079ff6af83add3763b2"
+        , "fc_name": "name||91244e042279809a7afba196b0a5f49f4f4752de57abd74770cb04d5f595e70e||open"
+        , "fc_price": "price||f6e61cc9d8d98d0a3a8d8e8783cabe218e2f066c2c487d1be9c5317ccf9cf36c"
         , "fc_image": "image||dbc7c8192e448ed1223f8c148e1fc670548ef829eb3216a34d2d480a7a142b8c||open"
         , "fc_url": "url||2ec82db98b42e7e341135a11f3b60afc7ec38cc767ea24f53ad700aacce8b016||open"
 
@@ -58,7 +58,7 @@
             , "size": true
             , "sizes": [
             {"id": "02", "name": "knee"}
-            , {"id": "05", "name": "maxi"}
+
         ]
             , "trim": true
             , "trimFabricSets": [{"setId": "p-sk"}]
@@ -88,9 +88,6 @@
                 "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "087", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "087", "trim": ""}
             }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
         }
         },
         {
@@ -100,9 +97,6 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "085", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }
