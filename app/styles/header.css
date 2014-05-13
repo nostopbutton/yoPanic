@@ -59,7 +59,7 @@ body { padding-top: 70px;}
         *zoom:1; /* hasLayout ie7 trigger */
         vertical-align: top;
 
-        padding: 0 4px;
+        padding: 0;
     }
 
     .navbar-nav > li > a {

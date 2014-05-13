@@ -72,9 +72,9 @@ angular.module('panicApp',
 //            })
 
 
-//      .when('/designAdmin/:styleId', {
-//        templateUrl: 'views/designBuildAdmin.html', controller: 'NewDesignBuildCtrl'
-//      })
+      .when('/admin/:styleId', {
+        templateUrl: 'views/ng-partials/dbAdmin.html', controller: 'DesignBuildCtrl'
+      })
             // Admin Page routes
 //      .when('/adminCollection', {
 //        templateUrl: 'views/adminCollection.html', controller: 'CollectionCtrl'

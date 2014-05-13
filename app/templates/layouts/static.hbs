@@ -4,6 +4,9 @@
 <!-- Meta data and css links-->
 {{>static-head}}
 {{>shims}}
+<!-- Include GA script (just before </head> as rec by Google -->
+{{>static-google-analytics}}
+{{>foxy-track}}
 </head>
 <body>
 <!-- Header Navigation -->
@@ -14,6 +17,7 @@
 
 <!-- Footer Navigation -->
 {{>footer}}
+
 
 <!-- Include JS scripts -->
 {{>static-scripts}}

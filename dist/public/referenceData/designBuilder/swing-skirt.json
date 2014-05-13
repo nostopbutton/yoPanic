@@ -2,7 +2,7 @@
     "style":
     {
         "styleId": "swing-skirt"
-        , "type": "separates"
+        , "type": "skirt"
         , "styleName": "Audrey Swing"
         , "styleFormalName": "Swing Skirt"
         , "shortDesc": ""
@@ -18,26 +18,26 @@
         , "silhouetteImage": "pat-102"
         , "defaultItemId": "skt-sw-1"
         , "foxyImage": "pat-102"
-        , "fc_category": "category||b63b2ff30305ada01ee46f54229cf3c2083dcf8a5b7f50971f830ff9e0a1ed5a"
-        , "fc_code": "code||6d2904a48442f5803348da344fa26b3b97285b5d6444ac335659f0184e484031"
-        , "fc_name": "name||4d4867c2b7dd567a09655efd75cb46a00ee5136f38d7bb72c7c65c8e307718fb||open"
-        , "fc_price": "price||852b23a72eaa427c89e7da137da9988ae264f9f33d875965bfdbbecb9eddb1d1"
-        , "fc_image": "image||89fe663c11c8320d303228610e93b1412cfa18ea0ad5f7ecb97aefe3b9f1dd70||open"
-        , "fc_url": "url||b0d970ac1f2175a23aaff64a20b1bb1ad3e34f7630e81646aa49d882ebfa6a0d||open"
+        , "fc_category":"category||d5ff368308af98f4d883153194d61e6e14179b12ab11b3c91d5a050304e10134"
+        , "fc_code":"code||2b7179e687ea0ccb226c54cc0de3a17ee256577cdb015fb76d33fc841a1d65bb"
+        , "fc_name":"name||3aa1a0386642b736df3a11f7640c9c87085a4969fbd09a055bf24ef79692cbb2||open"
+        , "fc_price":"price||f142afd7e795f24b66dd81cedc3503c34e88e309b23bffdcc45d1e1460ffa3a4"
+        , "fc_image":"image||82b35df7754b01ef57c6fbd75eaf29b527c2a3bb5126208ab64feacaa4a0961f||open"
+        , "fc_url":"url||e875d43c8fc3ed7cdd7b7d77c6660af00470e2b08df25b8592c794fe3e027494||open"
 
-        , "fc_neckline": "neckline||1102310d78466cd5e6e1ddc44e396dda2c33ec525bbce6e16dda73292fbaa343||open"
-        , "fc_sleeves": "sleeves||68057478e3b6cec4cdae2ce6e86ba6f485dd78c1aa5b69d0499012231d51a9de||open"
-        , "fc_skirt": "skirt||13b61c0730d8302fd2e6c171adf15cfaee1d9473c028a572a8427e12983bb419||open"
-        , "fc_peplum": "peplum||3f3cc1fcf0f0797d0b665a17cde28a76e9e60e8f6818e0d914c8a03056ddcee8||open"
-        , "fc_rosetta": "rosetta||758bba4270e3526a91cb41cbf327061939095e089a2261a088055867a88120bc||open"
-        , "fc_belt": "belt||0e96af8b57cb01b3cc69120acb6bd66ac9376e9e2baad35fe553fd8a4be0d90e||open"
+        , "fc_neckline":"neckline||1d8dc61db4c85a55a5f3f1c52a4849e0223530cdc1f6e7ad844e59c2bb35779a||open"
+        , "fc_sleeves":"sleeves||ff1d259d8898d84d3a84904f1a5080a6f895982c5f12c3ed5f1b01c6c4d29302||open"
+        , "fc_skirt":"skirt||62131d4385500f01d69b6ab746f13ef6b89d7fceb9716e1bc016b98a6261b0b1||open"
+        , "fc_peplum":"peplum||954acfb07ff5835c5215db5f1913cb2c59ad59e8c78ba886c93e147711edfc4f||open"
+        , "fc_rosetta":"rosetta||f3e43fc4d355bbe98de0276676d7fa4bb04f6c65ddb41b6067004cbd576c5f61||open"
+        , "fc_belt":"belt||6032e2572c2de9b0fa311aa61681c6b5be9c27ef1b05a80a9291052c780689ce||open"
 
-        , "fc_size": "size||df2071fc6f0528df7921a2da86ba9b1b4ff5fe7ba2eedf77f8577e6f3ec16106||open"
-        , "fc_bust": "bust||316a91a45911721964b41b01e289decfa40d8944814d275acce348e6f5271445||open"
-        , "fc_waist": "waist||562ee013784ad09a681b8936a17a7d66ab7ab741ff297d7cc6a9e385e5b7e32f||open"
-        , "fc_hips": "hips||4d085a802e0791b390a57e26ee3d4cd44c407416335a156a71fc9ab1f7e0c2fb||open"
-        , "fc_hollowfloor": "hollow_to_floor||7487eaca79c043913540468862202cc0b1436ca0f20c48b76449766a07bd3af7||open"
-        , "fc_height": "my_height||a429fa7fd2b3ef51be0d5adcb9b1d6e1a2dd0655c9d714e6b0f043dfaff1ee42||open"
+        , "fc_size":"size||d6009c8a82361de74129c5507d3b294a430167bdd32110ce80e377c7b17421f8||open"
+        , "fc_bust":"bust||dfe02a8c64e810cafba753825b0ccf5d8e351481c86fba24c9a8a1c7fc400b14||open"
+        , "fc_waist":"waist||5b9012f776556ff8eccf9690b1758a86ed0bf8557189e1c4d7bd77e0c6b49215||open"
+        , "fc_hips":"hips||08d204de487cbf608a886427931b5f4d6b77e900fbf8b7635df84c6fac0d5350||open"
+        , "fc_hollowfloor":"hollow_to_floor||5796826e23f6594e00e71590972dd057b5c1d369e7548e0a9b0890555c5f4689||open"
+        , "fc_height":"my_height||a8d4bf4af588a8db511dc8855b587acffbe30398f217238ced9852e4f1d97a2e||open"
     }
 
     , "design_builder":
@@ -55,13 +55,12 @@
             , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
             , "values": [
             {"id": "005", "name": "swing"}
-            , {"id": "007", "name": "flare"}
         ]
             , "size": true
             , "sizes": [
-            {"id": "01", "name": "short"}
-            , {"id": "02", "name": "knee"}
-            , {"id": "04", "name": "long"}
+            {"id": "01", "name": "Short (48cm)"}
+            , {"id": "02", "name": "Knee (58cm)"}
+            , {"id": "04", "name": "Long (68cm)"}
         ]
             , "trim": false
         }
@@ -79,8 +78,8 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-            {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
-            , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+                 , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
         ]
         }
     ]}
@@ -92,10 +91,15 @@
             , "itemDesc": "Swing skirt - Black Leather"
             , "itemDesign": {
             "design": {
-                "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "120", "trim": ""}
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "120", "trim": ""}
+
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "002-000"}
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000eg-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }

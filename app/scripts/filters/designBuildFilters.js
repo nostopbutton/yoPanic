@@ -51,7 +51,7 @@ designBuildFilter.filter('lookup', function () {
     return function (design) {
 
         var code = design.type+"-"+design.id+"-"+design.size;
-        console.log("design.fabric: " + design.fabric);
+//        console.log("design.fabric: " + design.fabric);
         if("000" === design.fabric)
         {
             if("blt" === design.type){
@@ -64,6 +64,9 @@ designBuildFilter.filter('lookup', function () {
 
         }
         var codes = [{"id":"nek-001-00","label":"Bateau neck"},
+            {"id":"nek-001-01","label":"Short bateau neck swing dress"},
+            {"id":"nek-001-02","label":"Knee length bateau neck swing dress"},
+            {"id":"nek-001-04","label":"Long bateau neck swing dress"},
             {"id":"nek-001-10","label":"Top with bateau neck"},
             {"id":"nek-002-00","label":"Scoop neck"},
             {"id":"nek-002-10","label":"Top with scoop neck"},
@@ -72,11 +75,17 @@ designBuildFilter.filter('lookup', function () {
             {"id":"nek-004-00","label":"Tailored wrap"},
             {"id":"nek-004-10","label":"Tailored wrap top"},
             {"id":"nek-005-00","label":"V neck"},
+            {"id":"nek-005-01","label":"Short V neck swing dress"},
+            {"id":"nek-005-02","label":"Knee length V neck swing dress"},
+            {"id":"nek-005-04","label":"Long V neck swing dress"},
             {"id":"nek-005-10","label":"Top with V neck"},
             {"id":"nek-006-00","label":"Dolomon top"},
             {"id":"nek-007-00","label":"V neck Dolomon top"},
             {"id":"nek-008-00","label":"Bustier top"},
-            {"id":"nek-009-00","label":"Asymetrical neckline"},
+            {"id":"nek-008-01","label":"Short bustier dress"},
+            {"id":"nek-008-02","label":"Knee length bustier dress"},
+            {"id":"nek-008-04","label":"long bustier dress"},
+            {"id":"nek-009-00","label":"Asymmetrical neckline"},
             {"id":"nek-010-00","label":"Scoop neckline"},
             {"id":"nek-011-00","label":"Low scoop neckline"},
             {"id":"nek-009-01","label":"Short swoosh dress with an asymmetrical neckline"},
@@ -90,14 +99,14 @@ designBuildFilter.filter('lookup', function () {
             {"id":"nek-011-04","label":"Long swoosh dress with a low scoop neckline"},
             {"id":"nek-014-00","label":"Shift dress with scoop neckline"},
             {"id":"nek-015-00","label":"Shift dress with kaftan style neckline"},
-            {"id":"nek-014-02","label":"Short length shift dress with scoop neckline"},
-            {"id":"nek-015-02","label":"Short length Shift dress with kaftan style neckline"},
-            {"id":"nek-017-02","label":"Knee Length Shirt dress with collar"},
-            {"id":"nek-018-02","label":"Knee Length Collarless Shirt dress "},
             {"id":"nek-014-03","label":"Mid length shift dress with scoop neckline"},
             {"id":"nek-015-03","label":"Mid length shift dress with kaftan style neckline"},
-            {"id":"nek-017-05","label":"Maxi Shirt dress with collar"},
-            {"id":"nek-018-05","label":"Maxi Collarless Shirt dress  "},
+            {"id":"nek-017-02","label":"Knee Length Shirt dress with collar"},
+            {"id":"nek-018-02","label":"Knee Length Collarless Shirt dress "},
+            {"id":"nek-014-02","label":"Knee length shift dress with scoop neckline"},
+            {"id":"nek-015-02","label":"Knee length shift dress with kaftan style neckline"},
+            {"id":"nek-017-05","label":"Maxi shirt dress with collar"},
+            {"id":"nek-018-05","label":"Maxi collarless Shirt dress  "},
             {"id":"slv-000-00","label":"Sleeveless"},
             {"id":"slv-002-00","label":"Cap sleeves"},
             {"id":"slv-006-00","label":"Elbow length sleeves"},
@@ -129,12 +138,12 @@ designBuildFilter.filter('lookup', function () {
             {"id":"blt-002-00","label":"Ribbon belt"},
             {"id":"blt-004-00","label":"Obi belt"},
             {"id":"blt-003-00","label":"Silk belt"}]
-        console.log("code: " + code);
+//        console.log("code: " + code);
         var result = _.find(codes, function (item) {
             return item.id == code;
         })
-        console.log("result: " + result);
-        console.log("result && result.label: " + (result && result.label));
+//        console.log("result: " + result);
+//        console.log("result && result.label: " + (result && result.label));
         return (result && result.label ? result.label : code);
     };
 });
@@ -145,7 +154,7 @@ designBuildFilter.filter('fablookup', function () {
     return function (design) {
 
         var code = design.fabric;
-        console.log("design.fabric: " + design.fabric);
+//        console.log("design.fabric: " + design.fabric);
         if("000" === design.fabric)
         {
             return " ";
@@ -159,50 +168,51 @@ designBuildFilter.filter('fablookup', function () {
             {"id":"085","label":"Turquoise silk"},
             {"id":"087","label":"Cobalt blue silk"},
             {"id":"088","label":"Hot pink silk"},
-            {"id":"089","label":"Coral sllk"},
+            {"id":"089","label":"Coral silk"},
+            {"id":"091","label":"Pewter"},
             {"id":"103","label":"Red leather"},
             {"id":"108","label":"Cream leather"},
             {"id":"111","label":"Black leather"},
-            {"id":"112","label":"Metallic leather"},
-            {"id":"113","label":"Aubergine leather"},
-            {"id":"114","label":"Cobalt blue leather"},
+            {"id":"112","label":"Metallic slate leather"},
+            {"id":'113',"label":"Aubergine leather"},
+            {"id":'114',"label":"Cobalt blue leather"},
             {"id":"115","label":"Navy leather"},
             {"id":"116","label":"Hot pink leather"},
-            {"id":"118","label":"Taupe leather"},
-            {"id":'120',"label":"Black faux leather"},
+            {"id":"118","label":"Stone leather"},
+            {"id":"120","label":"Black faux-leather"},
             {"id":"300","label":"Printed cotton rose blue"},
             {"id":"301","label":"Printed cotton rose red"},
-            {"id":'302',"label":"Printed cotton rose teal"},
+            {"id":"302","label":"Printed cotton rose teal"},
             {"id":"303","label":"Printed cotton rose pink"},
             {"id":"304","label":"Printed cotton rose monochrome"},
             {"id":"305","label":"Printed cotton rose yellow"},
-            {"id":'306',"label":"Printed cotton zebra blue"},
+            {"id":"306","label":"Printed cotton zebra blue"},
             {"id":"307","label":"Printed cotton zebra red & yellow"},
             {"id":"308","label":"Printed cotton zebra teal"},
             {"id":"309","label":"Printed cotton zebra pink"},
             {"id":"310","label":"Printed cotton zebra black"},
             {"id":"311","label":"Printed cotton zebra grey"},
             {"id":"312","label":"Printed cotton zebra yellow"},
-            {"id":"400","label":"Printed cotton rose blue"},
-            {"id":"401","label":"Printed cotton rose red"},
-            {"id":"402","label":"Printed cotton rose teal"},
-            {"id":"403","label":"Printed cotton rose pink"},
-            {"id":"404","label":"Printed cotton rose monochrome"},
-            {"id":'405',"label":"Printed cotton rose yellow"},
-            {"id":"406","label":"Printed cotton zebra blue"},
-            {"id":"407","label":"Printed cotton zebra red & yellow"},
-            {"id":"408","label":"Printed cotton zebra teal"},
-            {"id":"409","label":"Printed cotton zebra pink"},
-            {"id":"410","label":"Printed cotton zebra black"},
-            {"id":"411","label":"Printed cotton zebra grey"},
-            {"id":"412","label":"Printed cotton zebra yellow"}]
+            {"id":"400","label":"Printed silk rose blue"},
+            {"id":'401',"label":"Printed silk rose red"},
+            {"id":"402","label":"Printed silk rose teal"},
+            {"id":'403',"label":"Printed silk rose pink"},
+            {"id":"404","label":"Printed silk rose monochrome"},
+            {"id":"405","label":"Printed silk rose yellow"},
+            {"id":"406","label":"Printed silk zebra blue"},
+            {"id":"407","label":"Printed silk zebra red & yellow"},
+            {"id":"408","label":"Printed silk zebra teal"},
+            {"id":'409',"label":"Printed silk zebra pink"},
+            {"id":"410","label":"Printed silk zebra black"},
+            {"id":"411","label":"Printed silk zebra grey"},
+            {"id":"412","label":"Printed silk zebra yellow"}]
 
-        console.log("code: " + code);
+//        console.log("code: " + code);
         var result = _.find(codes, function (item) {
             return item.id == code;
         })
-        console.log("result: " + result);
-        console.log("result && result.label: " + (result && result.label));
+//        console.log("result: " + result);
+//        console.log("result && result.label: " + (result && result.label));
         return (result && result.label ? result.label : code);
     };
 });
@@ -211,7 +221,7 @@ designBuildFilter.filter('trimlookup', function () {
     return function (trim) {
 
 //        var code = design.trim;
-        console.log("trim: " + trim);
+//        console.log("trim: " + trim);
         if("120" === trim) {
             return " with black faux-leather trim";
         } else {

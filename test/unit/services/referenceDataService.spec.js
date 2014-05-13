@@ -326,7 +326,7 @@ var styleCatalogueJSON =         [
                 , "active": "true"
                 , "label": "Belt"
                 , "values": [
-                    {"id": "002", "name": "Ribbon belt", "defaultFabric": "161", "fabricSets": [ {"setId": "x-pt"}]}
+                    {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
                     , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
 
                 ]

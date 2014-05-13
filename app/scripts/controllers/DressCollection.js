@@ -5,7 +5,7 @@ angular.module('panicApp.Controllers')
         '$rootScope', '$window', '$location', '$routeParams',
         function ($scope, Range, CatalogueService, $rootScope, $window, $location, $routeParams) {
 
-            trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
+            trackPageInGoogleAnalytics($rootScope,  $scope, $window, $location, $routeParams);
 
             // Put Dress Collection data into page scope
             var stylesPromise = CatalogueService.getStyleListPromise();
@@ -15,16 +15,20 @@ angular.module('panicApp.Controllers')
                 styles = result;
 
                 var itemsPromise = CatalogueService.getItemCollectionWithStyleDataPromiseForStyles(
-                    ['sheath', 'swing', 'flare', 'doloman', 'swoosh'
-                        , 'shift', 'shirt', 'shirt-maxi']);
+                    ['sheath', 'doloman', 'swing', 'swoosh'
+                        , 'shift', 'shirt', 'shirt-maxi', 'flare']);
                 var items = [], itemIds = [];
 
                 itemsPromise.then(function (result) {  // this is only run after $http completes
-                    $scope.dresses = angular.copy(result);
+                    $scope.dresses = angular.copy(_.shuffle(result));
+                    $scope.dresses_string =   JSON.stringify(result, undefined , 3);
                     ;
                 });
 
             });
+            $scope.gaEvent = function(category, action, label) {
+                $window.ga('send', 'event', category, action, label);
+            }
 
             $scope.imageFilename = "dress.png";
             $scope.rolloverFilename = "front.jpg";

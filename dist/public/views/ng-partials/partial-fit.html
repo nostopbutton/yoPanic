@@ -29,7 +29,8 @@
                                     </select>
 
                                     <p style="text-align:right">
-                                        <a data-toggle="modal" data-target="#size-chart-modal">Size chart</a>
+                                        <a data-toggle="modal" data-target="#size-chart-modal"
+                                           ng-click="gaEvent('link', 'click', 'builder-fit-size-chart')">Size chart</a>
                                     </p>
 
 
@@ -44,21 +45,22 @@
                         <div class="col-sm-6">
                             <h4>Tell us your key measurements:</h4>
 
-                            <p>Use our <a data-toggle="modal" data-target="#measure-guide-modal">how to measure
+                            <p>Use our <a data-toggle="modal" data-target="#measure-guide-modal"
+                                          ng-click="gaEvent('link', 'click', 'builder-fit-measure-guide-1')">how to measure
                                 guide</a></p>
 
                             <p class="note">
                                 * Please note, from our extensive testing, simply providing 4 key measurements
                                 significantly
                                 improves our ability to perfect your dress. It takes only 5 minutes, is really easy to
-                                do and
-                                guidance on how to
-                                measure can be found <a data-toggle="modal" data-target="#measure-guide-modal">here</a>.
+                                do and guidance on how to measure can be found
+                                <a data-toggle="modal" data-target="#measure-guide-modal"
+                                        ng-click="gaEvent('link', 'click', 'builder-fit-measure-guide-2')">here</a>.
                                 If once you have submitted your measurements we feel we need any additional information,
                                 we will contact you immediately.
                             </p>
                             <p class="note">
-                                ** Creating garments with measurements greater or smaller than our current siZe chart may still be possible depending on the design chosen however please email us directly for information at info@aurza.com
+                                ** Creating garments with measurements greater or smaller than our current size chart may still be possible depending on the design chosen however please email us directly for information at info@aurza.com
                             </p>
                         </div>
                         <div class="col-sm-6">
@@ -137,7 +139,8 @@
                                 <!--<div class="col-sm-6 input-group">-->
                                 <button class="btn btn-primary col-sm-6 input-group" id="order-button"
                                         href="" data-toggle="tab" ng-disabled="!subform.$valid"
-                                        ng-click="tabs.order = true">Review Order
+                                        ng-click="tabs.order = true; gaEvent('button', 'click', 'builder-fit-buy')">
+                                    Buy
                                 </button>
                             </div>
                         </div>

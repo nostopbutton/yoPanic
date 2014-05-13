@@ -2,7 +2,7 @@
     "style":
     {
         "styleId": "pencil-skirt"
-        , "type": "separate"
+        , "type": "skirt"
         , "styleName": "Coco Pencil"
         , "styleFormalName": "Pencil Skirt"
         , "shortDesc": ""
@@ -18,26 +18,26 @@
         , "silhouetteImage": "pat-101-body"
         , "defaultItemId": "skt-pen-1"
         , "foxyImage": "pat-101"
-        , "fc_category": "category||6b91c9b8277c5fc82d56ab74b5395062ed3d20d597558bf0d1fefff8c085edb0"
-        , "fc_code": "code||a6bb2224352cdd8c7cf8c241ac56cc9b63a4aed6c7c9972d812905a25c8ed8b5"
-        , "fc_name": "name||2a329c6e9c96f07161ec21722584dab201393281d9f00be6b77b1d233dc46f56||open"
-        , "fc_price": "price||2396d9719efedd33b28f21cadd4a3bd312a79d25cc462dda517e7e70d89c0dd0"
-        , "fc_image": "image||7862b89674db25c60f9170d765cb7e9a93a20c2812926cd0dc8dc220cf3a80b6||open"
-        , "fc_url": "url||6b5b325b49e9ed4d98a6f5a495f5dd08c4318fe6e9ee8175f2bdeeea9b91c078||open"
+        , "fc_category":"category||a19086836292048c192cb45b16a25ef158b36ee8b8439dd83c3330263a0bf8dc"
+        , "fc_code":"code||bf0142736e27054c7a9b2c1ffaf3fdaffb85e86b9b1d1791ca5ce7e58f1cb519"
+        , "fc_name":"name||a5b4399194ad7e7234536fb3fd0f8cef46c790cb4344fb9a24a58a7320e44aeb||open"
+        , "fc_price":"price||529c7be23b3d6db3373edca4793eb914437ca123f73c1d4239b5611420262240"
+        , "fc_image":"image||3462590ca61f935516899b22c733941b852d5500f4b6ad829d025724b6303604||open"
+        , "fc_url":"url||6aa39923edd14ed99989bfd4f86becbbb1dce9b7a0acc34fafe0a81aee24a9f3||open"
 
-        , "fc_neckline": "neckline||86571676577d3299f5045ef58a7cba22e796778120c888046d6ae2b7f8de97b0||open"
-        , "fc_sleeves": "sleeves||eb64005e261657eed3b4789836652a7e7cc9748d1fe2bbd7037a65ed2f24163f||open"
-        , "fc_skirt": "skirt||7bae39780e562586994da2bd15a1cccdcbc61d3a45d520eac6fa25835f1eb61e||open"
-        , "fc_peplum": "peplum||ee45d95cc6a286f80fd591649c3288a0fdad59f524add8f9dfd429df038a74f4||open"
-        , "fc_rosetta": "rosetta||b1a62afaa15a942e0b1edb9a9caca7ab679f3f5075e4e49882da2e98ba17d5bc||open"
-        , "fc_belt": "belt||ee95766b79387fe2a7dd13204d11b5dcc27105c1e455515b387fa78ee6f59d2c||open"
+        , "fc_neckline":"neckline||b52696d9118638cb4806cee1b0c273feb1a5ddaea788c5ede43838cf1949b9e4||open"
+        , "fc_sleeves":"sleeves||ba42048007e7d164e1d0bbb521a285b4ed6e01f846c9fd6a47756ca4ed9826ce||open"
+        , "fc_skirt":"skirt||8fdfcb81f006a6d5c33400d3eff13a0d4f2cb4ceaa4f32f6b5be96c7c481bc38||open"
+        , "fc_peplum":"peplum||6ddecf20288585bcc452f491c14883667905424c69dd875fc912ad3714c58745||open"
+        , "fc_rosetta":"rosetta||24a17cf3fb137c9182d265d7facb4e5efccf9a36df9525c02b383d8a00f0949f||open"
+        , "fc_belt":"belt||2000c4d314174d315422e0a00bb0ee15a8cefd7b704592f18a6c9c764c127ced||open"
 
-        , "fc_size": "size||6231044474db4656af4662175a7804730e3e88bb6633b7614938ca436ff33959||open"
-        , "fc_bust": "bust||00b223d52d4047a0390e41e2ac8bff95ba75fd717756dbb2f672285aedc610ee||open"
-        , "fc_waist": "waist||98e365c071a11c1819d2bd4833190f52025657969a9ef70530519a1e82a70536||open"
-        , "fc_hips": "hips||3a44a5072e04dae6433b1ab1348870140182e50435f305a47150551cd95ed0ec||open"
-        , "fc_hollowfloor": "hollow_to_floor||2adf1033ae74d0db6456260b1ed28996271a1a87ce25b39be436827e35b2d2ee||open"
-        , "fc_height": "my_height||6fd6013999099f2e94687b9e8ac7f10a05d5e008bd9ba434e6452d277f3761b5||open"
+        , "fc_size":"size||c99a82e1213377989ed6c645a42af88c203fdb3742cbefc9f67e5e10398fbef8||open"
+        , "fc_bust":"bust||1680c4a1189445c714ce6cb83a18ef3412f759a31d52e60ce17d30f89bc00171||open"
+        , "fc_waist":"waist||04f5b910bd63fb61e100f876f4b71bc9081a10acd307c234413baed66e047e3d||open"
+        , "fc_hips":"hips||d6fa2e3b06f6cda31873f5e33cef4ece2a250b17c1928beebc2e3ef8bb20e227||open"
+        , "fc_hollowfloor":"hollow_to_floor||38eccbb55e6e95751357b1f9cc1bf75d03bed4443f54f7b0748e07d12b2b4db0||open"
+        , "fc_height":"my_height||34feb10bbf9b8e79f1375dd22dcad016c9642e0ba1d0ab236fd19812102caf28||open"
     }
 
     , "design_builder":
@@ -59,9 +59,9 @@
         ]
             , "size": true
             , "sizes": [
-            {"id": "01", "name": "short"}
-            , {"id": "02", "name": "knee"}
-            , {"id": "04", "name": "long"}
+            {"id": "01", "name": "Short (48cm)"}
+            , {"id": "02", "name": "Knee (58cm)"}
+            , {"id": "04", "name": "Long (68cm)"}
         ]
             , "trim": false
         }
@@ -79,8 +79,8 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-            {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
-            , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+            , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
         ]
         }
     ]}
@@ -92,10 +92,14 @@
             , "itemDesc": "Pencil skirt - Aubergine"
             , "itemDesign": {
             "design": {
-                "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "013", "trim": ""}
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "013", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }

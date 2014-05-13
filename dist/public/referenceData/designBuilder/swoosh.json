@@ -62,8 +62,7 @@
             , {"id": "02", "name": "knee"}
             , {"id": "04", "name": "long"}
         ]
-            , "trim": true
-            , "trimFabricSets": [{"setId": "x-fl"}]
+            , "trim": false
         }
         ,{
             "part_name": "sleeves"
@@ -101,8 +100,8 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
-                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
             ]
         }
     ]}
@@ -117,6 +116,7 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "013", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "013", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
@@ -132,6 +132,7 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "014", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "014", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
@@ -147,6 +148,7 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "003", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "003", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
@@ -162,6 +164,7 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "011", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "011", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
@@ -177,6 +180,7 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "013", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "013", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
@@ -192,6 +196,7 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "011", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "011", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
@@ -207,6 +212,7 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "014", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "014", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},

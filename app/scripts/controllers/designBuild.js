@@ -6,7 +6,7 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
         '$rootScope', '$window', '$location',
         function ($scope, $routeParams, Range, ReferenceDataCache, DesignBuilder, CatalogueService, $rootScope, $window, $location) {
 
-            trackPageInGoogleAnalytics($rootScope, $window, $location, $routeParams);
+            trackPageInGoogleAnalytics($rootScope, $scope, $window, $location, $routeParams);
             var master = "",
                 categoryId = "dresses",//$routeParams.categoryId;
                 styleId = $routeParams.styleId,
@@ -24,6 +24,14 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
             $scope.current_title = 'Test';
             $scope.current_description = 'Test description';
             $scope.headline = "test";
+
+            $scope.gaEvent = function(category, action, label) {
+                $window.ga('send', 'event', category, action, label);
+            }
+            $scope.tab = function(tab) {
+                var path = convertPathToQueryString($location.path(), $routeParams)+'&tab='+tab;
+                $window.ga('send', 'pageview', { page: path });
+            }
 
             $scope.tabs = {"style":true, "design": false, "fit": false, "order": false};
 
@@ -80,6 +88,34 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
                 return selection.type + "-"
                     + selection.id + selection.length + "-"
                     + selection.fabric
+            }
+
+
+            $scope.toggleExtraButton = function (part, value) {
+                if(value.id === part.id) {
+                    part.id = '000';
+                    part.fabric = '000';
+                    part.code = '000-000';
+                } else {
+                    part.id = value.id;
+                    part.fabric = value.defaultFabric;
+                    part.code = value.id + '-' + value.defaultFabric;
+                }
+            }
+
+            $scope.toggleExtra = function (part, fabric, value) {
+                part.id = value.id;
+                part.fabric = fabric.fabId;
+                part.code = value.id + '-' + fabric.fabId;
+            }
+
+            $scope.toggleTrim = function (part, fabric, value) {
+                if(part.trim === fabric.fabId) {
+                    part.trim = '000';
+                } else {
+                    part.trim = fabric.fabId;
+                }
+
             }
 
 

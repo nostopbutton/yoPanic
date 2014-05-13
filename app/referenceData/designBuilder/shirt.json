@@ -50,7 +50,7 @@
             , "type": "nek"
             , "active": "true"
             , "label": "Neckline"
-            , "fabricSets": [{"setId": "p-sk"}]
+            , "fabricSets": [{"setId": "p-sk"}, {"setId": "pr-sk"}]
             , "values": [
             {"id": "017", "name": "shirt collar"}
             , {"id": "018", "name": "shirt no collar"}
@@ -58,16 +58,14 @@
             , "size": true
             , "sizes": [
             {"id": "02", "name": "knee"}
-
         ]
-            , "trim": true
-            , "trimFabricSets": [{"setId": "p-sk"}]
+            , "trim": false
         }
         ,{
             "part_name": "sleeves"
             , "type": "slv"
             , "label": "Sleeves"
-            , "fabricSets": [ {"setId": "p-sk"}]
+            , "fabricSets": [ {"setId": "p-sk"}, {"setId": "pr-sk"}]
             , "null_value": "000"
             , "values": [
                 {"id": "016", "name": "shirt short"}
@@ -87,6 +85,12 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "087", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "087", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         },
@@ -97,6 +101,12 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "085", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }

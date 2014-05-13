@@ -18,26 +18,27 @@
         , "silhouetteImage": "pat-"
         , "defaultItemId": "-1"
         , "foxyImage": "pat-"
-        , "fc_category":
-        , "fc_code":
-        , "fc_name":
-        , "fc_price":
-        , "fc_image":
-        , "fc_url":
+        , "fc_category":"category||"
+        , "fc_code":"code||"
+        , "fc_name":"name||||open"
+        , "fc_price":"price||"
+        , "fc_image":"image||||open"
+        , "fc_url":"url||||open"
 
-        , "fc_neckline":
-        , "fc_sleeves":
-        , "fc_skirt":
-        , "fc_peplum":
-        , "fc_rosetta":
-        , "fc_belt":
+        , "fc_neckline":"neckline||||open"
+        , "fc_sleeves":"sleeves||||open"
+        , "fc_skirt":"skirt||||open"
+        , "fc_peplum":"peplum||||open"
+        , "fc_rosetta":"rosetta||||open"
+        , "fc_belt":"belt||||open"
 
-        , "fc_size":
-        , "fc_bust":
-        , "fc_waist":
-        , "fc_hips":
-        , "fc_hollowfloor":
-        , "fc_height":
+        , "fc_size":"size||||open"
+        , "fc_bust":"bust||||open"
+        , "fc_waist":"waist||||open"
+        , "fc_hips":"hips||||open"
+        , "fc_hollowfloor":"hollow_to_floor||||open"
+        , "fc_height":"my_height||||open"
+
     }
     , "design_builder":
 {
@@ -124,9 +125,8 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "161", "fabricSets": [ {"setId": "x-pt"}]}
-                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
-
+                {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
             ]
         }
     ]}
@@ -139,14 +139,14 @@
             , "itemDesc": "Test - Empress"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "011", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "011", "trim": ""}
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }

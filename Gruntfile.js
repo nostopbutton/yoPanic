@@ -89,6 +89,7 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/templates/pages/{,*//*}*.hbs',
                     '<%= yeoman.app %>/templates/partials/{,*//*}*.hbs'],
                 tasks: ['assemble:serverDesignBuilder'
+                        , 'assemble:serverMaintenance'
                          , 'assemble:serverDist']
             },
             livereload: {
@@ -145,6 +146,17 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/design-builder/*.hbs']
                 }
             },
+            maintenance:
+            {
+                // override task-level layout
+                options: {
+                    layout: 'maintenance.hbs'
+                    , partials: ['.tmp/templates/partials/*.hbs']
+                } ,
+                files: {
+                    '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/maintenance/*.hbs']
+                }
+            },
             dist: {
                 options: {
                     partials: ['.tmp/templates/partials/*.hbs']
@@ -159,6 +171,14 @@ module.exports = function (grunt) {
                 } ,
                 files: {
                     '.tmp/html/': ['<%= yeoman.app %>/templates/pages/design-builder/*.hbs']
+                }
+            },
+            serverMaintenance: {
+                options: {
+                    layout: 'maintenance.hbs'
+                } ,
+                files: {
+                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/maintenance/*.hbs']
                 }
             },
             serverDist: {
@@ -410,8 +430,8 @@ module.exports = function (grunt) {
             ],
             dist: [
                 'coffee',
-                'compass:dist',
-                'imagemin:dist'
+                'compass:dist'
+//                'imagemin:dist'
 //               'svgmin',
 //                'htmlmin:dist'
 //                , 'assemble:dist'
@@ -744,7 +764,42 @@ module.exports = function (grunt) {
                     imageAlpha: true,
                     quitAfter: true
                 },
-                src: ['/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/icons.png']
+                src: [
+//                      '/Users/Pete/dev/WebstormProjects/yoPanic/app/images/about/a-better-fit-the-aurza-flatter-factor.jpg'
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/000.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/120.png',
+
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/008.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/010.png',
+
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/085.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/087.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/088.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/089.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/091.png',
+
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/114.png'
+
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/300.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/301.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/302.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/303.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/304.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/305.png',
+
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/406.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/407.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/408.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/410.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/411.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/412.png',
+
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/icons.png',
+
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/body.png'
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt'
+
+                ]
             }
         },
 
@@ -794,6 +849,7 @@ module.exports = function (grunt) {
 //            'bower-install',
             'concurrent:server'
             , 'assemble:serverDesignBuilder'
+            , 'assemble:serverMaintenance'
             , 'assemble:serverDist'
 //            'autoprefixer',
             , 'express:dev',

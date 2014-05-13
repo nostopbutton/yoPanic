@@ -1,0 +1,79 @@
+{
+    "style":
+    {
+        "styleId": "obi"
+        , "type": "belt"
+        , "styleName": "Obi"
+        , "styleFormalName": "Leather Obi Belt"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "The soft leather obi belt is incredibly flattering, perfect for accentuating the waist and a gorgeous addition to your wardrobe."
+        , "With a small slit at the side it is easy to tie and adjust and comes in 2 sizes for optimum comfort." ]
+        , "care": ["100% leather, do not clean and avoid contact with liquids."]
+        , "price": 650
+        , "dressSizes": ["AURZA Size 1 - 5", "AURZA Size 6 - 8" ]
+        , "silhouetteImage": "pat-401"
+        , "defaultItemId": "obi-1"
+        , "foxyImage": "pat-401"
+        , "fc_category":"category||e3c8a0bd603c0fa4886e3f833677279f9fd7b50cc23f642dfa30844edfe49896"
+        , "fc_code":"code||02792fa86973c71335d7f9bd29e7ed014d4a4e303ca6e1ce98f483d1a5ba99f2"
+        , "fc_name":"name||84c52bf6a270241e176547b2f5b7a56679e6c2369b021b918d660845d25beea9||open"
+        , "fc_price":"price||c1acd92502d8d2db8225bdb18af9873a1665b19521697357dd40355d74adc8e8"
+        , "fc_image":"image||81bc834c1aa540a88ccd3aa4bae3ad17c33c50e5f2a2ad2efce6e7a59b5f529b||open"
+        , "fc_url":"url||52693139736b116cba30d786d732693cb92a7c3279017654a4f2126ad82d32b2||open"
+
+        , "fc_neckline":""
+        , "fc_sleeves":""
+        , "fc_skirt":""
+        , "fc_peplum":""
+        , "fc_rosetta":""
+        , "fc_belt":"belt||ceaf82467f55a4f527f710177ee2eaa6952f05278595a478560e0b1c8edaaeef||open"
+
+        , "fc_size":"size||960b32050389785d6c023acb6ed6334ae5dec0bcc1c0a25122c4e002f0ddbd95||open"
+        , "fc_bust":""
+        , "fc_waist":""
+        , "fc_hips":""
+        , "fc_hollowfloor":""
+        , "fc_height":""
+    }
+    , "design_builder":
+{
+    "model": "whole-body-dressed"
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+
+        {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                 {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+            ]
+        }
+    ]}
+]
+}    , "collection":
+    [
+        {
+            "itemId": "obi-1"
+            , "itemDesc": "Obi Belt - "
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            ,"extras": {
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "118", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
+}

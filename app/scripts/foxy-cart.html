@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>^^store_name^^</title>
+    <link rel="stylesheet" href="https://^^store_domain^^/themes/standard/styles.css" type="text/css" media="screen" charset="utf-8" />
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42859790-4', 'auto', {
+            'clientId': fc_json.custom_fields['ga'],
+            'storage': 'none'
+        });
+        ga('set', 'page', '/cart');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        jQuery(function($){
+            if ($('a.fc_cart_checkout_paypal').length > 0) {
+                $.getJSON('https://' + document.domain + '/cart?fcsid=' + jQuery("input[name='fcsid']").val() + '&h:_fcpm=&output=json&callback=?', function(cart) { fc_json = cart; });
+            }
+            $('a.fc_cart_checkout_paypal').click(function(e){
+                e.preventDefault();
+                var link_url = jQuery(this).attr("href");
+                var gateway = (jQuery(this).hasClass("fc_cart_checkout_amazon")) ? "amazon_fps" : "paypal";
+                ga('send', 'pageview', '/' + gateway + '_checkout', {
+                    'hitCallback': function() {
+                        $form = jQuery('<form method="post" target="_top"></form>').attr("action", link_url).appendTo("body");
+                        jQuery.getJSON('https://' + document.domain + '/cart?fcsid=' + jQuery("input[name='fcsid']").first().val() + '&h:_fcpm=' + gateway + '|cart&output=json&callback=?', function(cart) {
+                            $form.submit();
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+^^cart^^
+</body>
+</html>

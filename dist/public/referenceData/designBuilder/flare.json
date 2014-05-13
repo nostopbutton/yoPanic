@@ -99,15 +99,7 @@
         , "label": "Extras"
         , "active": "true"
         , "parts": [
-        {
-            "part_name": "peplum"
-            , "type": "ext"
-            , "label": "Peplum"
-            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-            , "values": [
-            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]
-            }]}
-        , {
+         {
             "part_name": "rosetta"
             , "type": "ext"
             , "label": "Rosetta"
@@ -122,8 +114,8 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
-                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
             ]
         }
     ]}
@@ -138,7 +130,7 @@
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "003", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "003", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "003", "trim": ""}
             }
             , "extras": {

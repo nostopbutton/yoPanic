@@ -3,29 +3,37 @@
 angular.module('panicApp.Controllers', [])
   .run(['$http', function($http) {
 
-    _gaq.push(['_setAccount', 'UA-42859790-2']);
-    _gaq.push(['_setDomainName', '.aurza.com']);
+
+//    console.log("Controllers.js: $http - setting UA-42859790-4")
+//    _gaq.push(['_setAccount', 'UA-42859790-4']);
+//    _gaq.push(['_setDomainName', '.aurza.com']);
     //	_gaq.push(['_trackPageview']);
 
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(ga, s);
+//    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//    var s = document.getElementsByTagName('script')[0];
+//    s.parentNode.insertBefore(ga, s);
   }])
 
-var trackPageInGoogleAnalytics = function($rootScope, $window, $location, $routeParams){
+var trackPageInGoogleAnalytics = function($rootScope, $scope, $window, $location, $routeParams){
   // Fire Google Analytics on Angular page load
-  $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+//    console.log("Controllers.js: trackPageInGoogleAnalytics - setting $viewContentLoaded")
+  $scope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+//    $scope.ga = $window.ga;
 }
 
 var track = function($window, $location, $routeParams) {
   var path = convertPathToQueryString($location.path(), $routeParams)
-  console.log("Controllers: about to push: " + path);
-  $window._gaq.push(['_trackPageview', path]);
+//  console.log("Controllers.js:: about to push: " + path);
+//    console.log("Controllers.js:: $location.path(): " + $location.path());
+//    console.log("Controllers.js:: path: " + path);
+//  $window._gaq.push(['_trackPageview', path]);
+
+    $window.ga('send', 'pageview', { page: path });
 };
 
 var convertPathToQueryString = function(locpath, $routeParams) {
-
+//    console.log("Controllers.js:: convertPathToQueryString");
   for (var key in $routeParams) {
     var queryParam = '/' + $routeParams[key];
 //    console.log("queryParam="+queryParam);

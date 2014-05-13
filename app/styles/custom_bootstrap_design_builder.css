@@ -190,7 +190,7 @@ SHOP THE COLLECTION PAGE - INTRO
     min-height:370px;
     float: left;
     /*background-color: blue;*/
-    width: 520px;
+    max-width: 520px;
 }
 
 .db-options .opt-parts{
@@ -295,10 +295,13 @@ input[type="checkbox"].hidden {
 .fabric-selector.fabric089{
     background: #e04854;
 }
+.fabric-selector.fabric091{
+    background: #505050;
+}
 
 /* s-vc: viscose crepe */
 .fabric-selector.fabric103{
-    background: #ca0019;
+    background: #bb4635;
 }
 .fabric-selector.fabric108{
     background: #d6c2a7;
@@ -307,16 +310,23 @@ input[type="checkbox"].hidden {
     background: #007c8d;
 }
 .fabric-selector.fabric111{
-    background: #101010;
+    background: #292929;
 }
 .fabric-selector.fabric112{
-    background: #7e7e7e;
+    background: #6b5952;
 }
 .fabric-selector.fabric113{
     background:#5f203d;
 }
 .fabric-selector.fabric114{
-    background:#111461;
+    background:#2d308e;
+}
+
+.fabric-selector.fabric116{
+    background:#bc3079;
+}
+.fabric-selector.fabric118{
+    background:#cfc7b0;
 }
 
 /* x-fl: faux-leather */
@@ -368,6 +378,125 @@ input[type="checkbox"].hidden {
     background: #111461;
 }
 
+.fabric-selector.fabric300,
+.fabric-selector.fabric301,
+.fabric-selector.fabric302,
+.fabric-selector.fabric303,
+.fabric-selector.fabric304,
+.fabric-selector.fabric305,
+.fabric-selector.fabric406,
+.fabric-selector.fabric407,
+.fabric-selector.fabric408,
+.fabric-selector.fabric410,
+.fabric-selector.fabric411,
+.fabric-selector.fabric412 {
+    display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/fabrics.png');
+}
+.fabric-selector.fabric412 {width:70px;height:35px; background-position: -0px -0px}
+.fabric-selector.fabric411 {width:70px;height:35px; background-position: -71px -0px}
+.fabric-selector.fabric410 {width:70px;height:35px; background-position: -0px -36px}
+.fabric-selector.fabric408 {width:70px;height:35px; background-position: -71px -36px}
+.fabric-selector.fabric407 {width:70px;height:35px; background-position: -0px -72px}
+.fabric-selector.fabric406 {width:70px;height:35px; background-position: -71px -72px}
+.fabric-selector.fabric305 {width:70px;height:35px; background-position: -0px -108px}
+.fabric-selector.fabric304 {width:70px;height:35px; background-position: -71px -108px}
+.fabric-selector.fabric303{width:70px;height:35px; background-position: -0px -144px}
+.fabric-selector.fabric302 {width:70px;height:35px; background-position: -71px -144px}
+.fabric-selector.fabric301{width:70px;height:35px; background-position: -0px -180px}
+.fabric-selector.fabric300 {width:70px;height:35px; background-position: -71px -180px}
+
+.obi-warn{
+    margin:20px 20px -40px 0;
+    text-align:center;
+}
+
+/*.fabric-selector.fabric300*/
+/*.fabric-selector.fabric301*/
+/*.fabric-selector.fabric302*/
+/*.fabric-selector.fabric303*/
+/*.fabric-selector.fabric304*/
+/*.fabric-selector.fabric305*/
+/*.fabric-selector.fabric406*/
+/*.fabric-selector.fabric407*/
+/*.fabric-selector.fabric408*/
+/*.fabric-selector.fabric410*/
+/*.fabric-selector.fabric411*/
+/*.fabric-selector.fabric412*/
+
+/*.fabric-selector.fabric300{*/
+    /*background-image: url('../images/fabrics/300.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+ /*}*/
+/*.fabric-selector.fabric301{*/
+    /*background-image: url('../images/fabrics/301.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric302{*/
+    /*background-image: url('../images/fabrics/302.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric303{*/
+    /*background-image: url('../images/fabrics/303.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric304{*/
+    /*background-image: url('../images/fabrics/304.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric305{*/
+    /*background-image: url('../images/fabrics/305.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric406{*/
+    /*background-image: url('../images/fabrics/406.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric407{*/
+    /*background-image: url('../images/fabrics/407.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric408{*/
+    /*background-image: url('../images/fabrics/408.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric410{*/
+    /*background-image: url('../images/fabrics/410.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric411{*/
+    /*background-image: url('../images/fabrics/411.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*.fabric-selector.fabric412{*/
+    /*background-image: url('../images/fabrics/412.jpeg');*/
+    /*width:70px;height:35px;*/
+    /*background-size:   cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+
+
 #action .divider{
     padding-top:60px;
 }
@@ -383,8 +512,8 @@ input[type="checkbox"].hidden {
 }
 
 #action .main-action {
-    text-align:right;
-    padding-right:0;
+    text-align:center;
+    /*padding-right:0;*/
 }
 
 #action .main-action a {
@@ -411,7 +540,10 @@ SHOP THE COLLECTION PAGE - DRESSES
 
 /* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
 @media (min-width: 768px) {
-
+    #action .main-action {
+        text-align:right;
+        padding-right:0;
+    }
 }
 /* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
 @media (min-width: 992px) {

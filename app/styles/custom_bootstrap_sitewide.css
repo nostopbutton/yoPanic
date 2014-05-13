@@ -107,11 +107,13 @@ GENERAL - CURL EFFECTS
     right: 12px;
 }
 
+
+
 /*
 GENERAL - BREADCRUMB EFFECTS
 ================================================ */
 /* http://css-tricks.com/triangle-breadcrumbs/ */
-.breaded {
+.breaded > ul {
     display: none;
 }
 
@@ -120,11 +122,17 @@ GENERAL - BREADCRUMB EFFECTS
 
 /* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
 @media (min-width: 768px) {
-    .breaded {
-        display: block;
+
+    .mobile-only  {
+        display:none;
     }
 
+    /*.breaded {*/
+        /*display: block;*/
+    /*}*/
+
     .breaded > ul {
+        display: block;
         list-style: none;
         overflow: hidden;
         font: 12px Helvetica, Arial, Sans-Serif;

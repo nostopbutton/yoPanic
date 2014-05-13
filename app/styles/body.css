@@ -1,35 +1,35 @@
 /**
  * Created with TexturePacker http://www.codeandweb.com/texturepacker
  *
- * SmartUpdateHash: $TexturePacker:SmartUpdate:38c11719a2b8ce75fb008c32407057f5:1/1$ 
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:fef5f36189c56fa5ce440718ef66b458:1/1$ 
  * 
- * .body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('body.png?$TexturePacker:SmartUpdate:38c11719a2b8ce75fb008c32407057f5:1/1$');}
+ * .body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('body.png?$TexturePacker:SmartUpdate:fef5f36189c56fa5ce440718ef66b458:1/1$');}
  */
 
 .sprite-body {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/body.png');}
-.whole-body {width:200px;height:501px; background-position: -0px -0px}
-.pat-301 {width:165px;height:269px; background-position: -0px -502px}
-.pat-316 {width:165px;height:227px; background-position: -0px -772px}
-.pat-313 {width:165px;height:255px; background-position: -166px -502px}
-.pat-303 {width:165px;height:241px; background-position: -166px -758px}
-.tshirt-whole-body {width:200px;height:501px; background-position: -201px -0px}
-.pat-203b {width:143px;height:290px; background-position: -332px -502px}
-.pat-111 {width:165px;height:177px; background-position: -332px -793px}
-.strap-whole-body {width:200px;height:501px; background-position: -402px -0px}
-.pat-302 {width:165px;height:248px; background-position: -476px -502px}
-.pat-314 {width:165px;height:242px; background-position: -498px -751px}
-.skirt-whole-body {width:200px;height:501px; background-position: -603px -0px}
-.pat-315 {width:165px;height:240px; background-position: -642px -502px}
-.pat-203 {width:165px;height:240px; background-position: -664px -743px}
-.pat-304 {width:165px;height:239px; background-position: -804px -0px}
-.pat-202 {width:165px;height:229px; background-position: -804px -240px}
-.pat-306 {width:165px;height:221px; background-position: -808px -470px}
-.pat-305 {width:165px;height:208px; background-position: -970px -0px}
-.pat-101 {width:165px;height:174px; background-position: -970px -209px}
-.pat-103 {width:165px;height:168px; background-position: -830px -692px}
-.pat-104 {width:165px;height:117px; background-position: -830px -861px}
-.pat-122 {width:165px;height:166px; background-position: -974px -384px}
-.pat-114 {width:165px;height:104px; background-position: -974px -551px}
-.pat-102 {width:165px;height:159px; background-position: -996px -656px}
-.pat-112 {width:165px;height:158px; background-position: -996px -816px}
+.tshirt-whole-body {width:200px;height:502px; background-position: -0px -0px}
+.whole-body {width:200px;height:501px; background-position: -0px -503px}
+.strap-whole-body {width:200px;height:502px; background-position: -201px -0px}
+.skirt-whole-body {width:200px;height:501px; background-position: -201px -503px}
+.dressed-whole-body {width:200px;height:501px; background-position: -402px -0px}
+.pat-301 {width:165px;height:269px; background-position: -402px -502px}
+.pat-202 {width:165px;height:229px; background-position: -402px -772px}
+.pat-401 {width:165px;height:264px; background-position: -568px -502px}
+.pat-203 {width:165px;height:237px; background-position: -568px -767px}
+.pat-302 {width:165px;height:248px; background-position: -603px -0px}
+.pat-314 {width:165px;height:242px; background-position: -603px -249px}
+.pat-203b {width:141px;height:285px; background-position: -734px -492px}
+.pat-316 {width:165px;height:225px; background-position: -734px -778px}
+.pat-303 {width:165px;height:241px; background-position: -769px -0px}
+.pat-315 {width:165px;height:240px; background-position: -769px -242px}
+.pat-304 {width:165px;height:239px; background-position: -876px -483px}
+.pat-306 {width:165px;height:221px; background-position: -900px -723px}
+.pat-305 {width:165px;height:208px; background-position: -935px -0px}
+.pat-101 {width:165px;height:174px; background-position: -935px -209px}
+.pat-111 {width:165px;height:173px; background-position: -1042px -384px}
+.pat-102 {width:165px;height:159px; background-position: -1042px -558px}
+.pat-103 {width:165px;height:168px; background-position: -1066px -718px}
+.pat-104 {width:165px;height:117px; background-position: -1066px -887px}
+.pat-122 {width:165px;height:166px; background-position: -1101px -0px}
+.pat-112 {width:165px;height:158px; background-position: -1101px -167px}
 

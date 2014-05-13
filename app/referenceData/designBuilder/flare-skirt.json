@@ -2,7 +2,7 @@
     "style":
     {
         "styleId": "flare-skirt"
-        , "type": "separate"
+        , "type": "skirt"
         , "styleName": "Alexa Flare"
         , "styleFormalName": "Flare Skirt"
         , "shortDesc": ""
@@ -18,26 +18,26 @@
         , "silhouetteImage": "pat-103-body"
         , "defaultItemId": "skt-fl-1"
         , "foxyImage": "pat-103"
-        , "fc_category": "category||67053139b2c69ceb63fcb2f7e1024b79110fe64bfc318d3c761e2a426c577a87"
-        , "fc_code": "code||a00837ccd66cef6e95a1ae9493965d7a869a37d7a75ce2a7c574607c40320d82"
-        , "fc_name": "name||9869d4808efa4db13630a4de103cb4cbc403e2eb9b2b664fed73e8b938883b56||open"
-        , "fc_price": "price||31746c03e9eef4400e9503b89e435b1fe058f1cf901500b81f54c0fd5a0102ae"
-        , "fc_image": "image||f0a878b2132f403ccc0e3518929879a2b05b34ea2bbf0955c65747b70c28a2be||open"
-        , "fc_url": "url||02a67a510f163455138a99be5e8b31ac2af793162aecc653c58d2564d7cd4b52||open"
+        , "fc_category": "category||9114c02b8348368d71020b201273d74fdf6cc56a54ae04d03635f09324268b44"
+        , "fc_code": "code||1415c79e9a1c8c9645a70bc7eec8cc0620757547483c11a7d9c6eabe35cc7bf9"
+        , "fc_name": "name||7d5684366fc028fab1377fdeaa52f4474846f4b0fac0738e9703c6bb9303209f||open"
+        , "fc_price": "price||0a4ae521ac58959b5d512e3679e6b389a9f2ca67470b8cbd1b6586499c7b7714"
+        , "fc_image": "image||818480f4f69ecf4e619c3d473f7e6fbed8b08e4fcc5a1f44e7d3af78dc7da37e||open"
+        , "fc_url": "url||465eda9ac45009259f5c6afdac3e11ab4f1a35323249ff54bfd1cfcfea87f3d3||open"
 
-        , "fc_neckline": "neckline||045fc9ccdb85b5914563b8481297ffb1c9bb968b505e72c4e95179f9f783f765||open"
-        , "fc_sleeves": "sleeves||969893861c7e8a9d8a6bedc8fd848c5838613cb92aaa41add47d67f3de5a6327||open"
-        , "fc_skirt": "skirt||396be21674bac31d29e73f3689a262c99ae731f62f77f82f67425c4fa3fc2a95||open"
-        , "fc_peplum": "peplum||ab00617880d66e71510e1f44a0a1d8275e7c06ff0be3740b00c4ed77e09d65b5||open"
-        , "fc_rosetta": "rosetta||2f00978a64139ee721b031bc7a7ddc7709a3455021ac4beea51bf0e1f52a5e80||open"
-        , "fc_belt": "belt||2062b11c9fb66d2d8c4a961136dcd0504d6118ade487f42c3d3bd0fd5f4989db||open"
+        , "fc_neckline": "neckline||8f05bf1b4bfad546e709f5e64558c6bc1704b671b876f2781f8bcf44cde6c116||open"
+        , "fc_sleeves": "sleeves||ff65e7cfbcc64e4b142018c167acb6ce6c54a643e5491802fed0009734875cd9||open"
+        , "fc_skirt": "skirt||48c8ea98418371594a79f65962326f0de6f83cba778e2b23f26ea0744f11324f||open"
+        , "fc_peplum": "peplum||c56326f346a2bc7b5907fb32f62b799440150d25bd70fec107b7387ffe304997||open"
+        , "fc_rosetta": "rosetta||3a45128f9befb817e8fd7afbf27614b4faaeb8f3bde130d75c9b2a67251fee45||open"
+        , "fc_belt": "belt||713e8ae644dde9e61763916983d390cb97d31fd7a572f38438b8efd1f97e3df0||open"
 
-        , "fc_size": "size||c386fc94e70c83167dccdf7eaccbe971a9d92f1725982bab18e44800b244b9c2||open"
-        , "fc_bust": "bust||4f49aa7fb46d70b35e9538e486f9c7dd19f70a1863c21677c12f34ffc0709e19||open"
-        , "fc_waist": "waist||17dfa9f1be83708eb01a51b618f96a86eff7524789aeaa73ce7b9fcebc94fdad||open"
-        , "fc_hips": "hips||b2a95882ca5bfc523bfe6109497d13e997b3e277ed4435bf295d9f4d497c6869||open"
-        , "fc_hollowfloor": "hollow_to_floor||123ce29c2f145addd210553e24e94c7588daf638e3ac6ecbcf737026d48e1ff0||open"
-        , "fc_height": "my_height||e569d773838d697cee101c40cfe95c2b80f343c2685cae6637ee551362e4d4f2||open"
+        , "fc_size": "size||e495f205aae40cd7a1454c0d258c4a5f9ffcf77f28e706114a503639ef11feb5||open"
+        , "fc_bust": "bust||c4384db92d7deaa0d8b4c75b491b9d834ee63692e41fa134515193adde82823f||open"
+        , "fc_waist": "waist||317947428a2a590a60d84b5f28b44f7715e9587ff70b229016591a51b24e8390||open"
+        , "fc_hips": "hips||be4014b22662fbb866bfb685fede2a19f4117adb1ebf29b38ad1002202684c7c||open"
+        , "fc_hollowfloor": "hollow_to_floor||03f154cde8b3fcf70a02f6063ed8d85e318b9096cb5531dd026de095f6f6bafd||open"
+        , "fc_height": "my_height||15b0844058f1ed0a417b94ed80f3d8af9c688558f4982f44ce45258da83c9bb9||open"
     }
     , "design_builder":
 {
@@ -53,14 +53,13 @@
             , "active": true
             , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
             , "values": [
-            {"id": "005", "name": "swing"}
-            , {"id": "007", "name": "flare"}
+                {"id": "007", "name": "flare"}
         ]
             , "size": true
             , "sizes": [
-            {"id": "01", "name": "short"}
-            , {"id": "02", "name": "knee"}
-            , {"id": "04", "name": "long"}
+            {"id": "01", "name": "Short (48cm)"}
+            , {"id": "02", "name": "Knee (58cm)"}
+            , {"id": "04", "name": "Long (68cm)"}
         ]
             , "trim": false
         }
@@ -78,8 +77,8 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-            {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
-            , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
         ]
         }
     ]}
@@ -87,16 +86,20 @@
 }    , "collection":
     [
         {
-            "itemId": "skt-fl-1"
-            , "itemDesc": "Flare skirt - Teal"
-            , "itemDesign": {
-            "design": {
-                "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "010", "trim": ""}
+            "itemId": "skt-fl-1",
+            "itemDesc": "Flare skirt - Teal",
+            "itemDesign": {
+                "design": {
+                    "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                    , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                    , "skirt": {"type": "skt","id": "007","size": "02","fabric": "010","trim": ""}
+                },
+                "extras": {
+                    "belt": {"type": "blt","id": "000", "size": "00","fabric": "000","code": "000-000"},
+                    "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                    "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+                }
             }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "002-000"}
-            }
-        }
         }
     ]
 }

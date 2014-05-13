@@ -9,8 +9,13 @@
             <div class="action col-sm-7">
                 <div class="row">
                 <a class="btn btn-primary" style="width:180px;"
-                   href="#!/item/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit" data-toggle="tab"
-                   ng-click="tabs.fit = true">Choose your size</a>
+                        href="#!/item/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit"
+                        ng-click="gaEvent('button', 'click', 'collection-item-buy');">
+
+                   <!--ng-click="test=123432453425">-->
+                    <!--data-toggle="tab"-->
+                   <!--;ga.push('send', 'collectionItem', 'buy-button', '{{item.style.styleId}}/{{item.itemDesign.itemId}}');  tabs.fit = true">-->
+                    Buy</a>
                 </div>
                 <div class="row">
                     or
@@ -19,7 +24,7 @@
                 <!--<div class="action col-sm-5  align-right">-->
                     <a class="btn btn-default" style="width:180px;"
                        href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"
-                       ng-click="tabs.design = true"
+                       ng-click="gaEvent('button', 'click', 'collection-item-customize');"
                        style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
                         Customize</a>
 
@@ -40,6 +45,15 @@
                 <h2>Fabric & Care</h2>
 
                 <p ng-repeat="para in item.style.care">{{para}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="care col-sm-12">
+                <h2>Accessories</h2>
+
+                <p>Accessories not included by default, to add a belt please
+                    <a href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"
+                       ng-click="gaEvent('link', 'click', 'collection-item-fit');">customize this dress</a></p>
             </div>
         </div>
         <!--<hr class="grad-line">-->

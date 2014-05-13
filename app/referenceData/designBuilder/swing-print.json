@@ -17,26 +17,27 @@
         , "silhouetteImage": "pat-314"
         , "defaultItemId": "swing-print-1"
         , "foxyImage": "pat-314"
-        , "fc_category":""
-        , "fc_code":""
-        , "fc_name":""
-        , "fc_price":""
-        , "fc_image":""
-        , "fc_url":""
 
-        , "fc_neckline":""
-        , "fc_sleeves":""
-        , "fc_skirt":""
-        , "fc_peplum":""
-        , "fc_rosetta":""
-        , "fc_belt":""
+        , "fc_category":"category||b236f16fc965cfa7a1692372b964ee179e90536b0ca0b55b86f27259947ba27b"
+        , "fc_code":"code||0030aa0c5f439d0a8537d9b098dde6b49c1fb6593efe71bc83bd893c2fcc6865"
+        , "fc_name":"name||bbe2774b6eaa9e80f84b8452621f9740dedb9eb97e41ec9aff4aca4ca05c34b4||open"
+        , "fc_price":"price||0418d9a7f8c7ed52b11cfa12cfcd03815ab237d0e7eedaee0b6f0396ea5ab0ac"
+        , "fc_image":"image||78bb364a46d04166b01d8e709f552bf22dbdec2990481502e560eac3ae3edc30||open"
+        , "fc_url":"url||8072d939569dba6b0c11fe191b5604562572fc0304e40ab546b72193400c2182||open"
 
-        , "fc_size":""
-        , "fc_bust":""
-        , "fc_waist":""
-        , "fc_hips":""
-        , "fc_hollowfloor":""
-        , "fc_height":""
+        , "fc_neckline":"neckline||26e4413ff4433517a9e8ca2293c3cb155b6564d8c37e117361e65f8e4e9418a7||open"
+        , "fc_sleeves":"sleeves||ba32e5f654f56c8319f958d1d8a516a8771170403c6ea01afb3d063d4fd23d7c||open"
+        , "fc_skirt":"skirt||7526a2ae5fe4872e98f707b7746a279b00f8266d1f01b72b2f3d37334ebe3742||open"
+        , "fc_peplum":"peplum||55963f8c56b8f6ff6c6ee5f8317b4523b0dd6d8e577f56140283a02a8380adb9||open"
+        , "fc_rosetta":"rosetta||c0ca49dec76253f2f23eeab7fd22caced922e7c2f14c34c9e564686e1406405b||open"
+        , "fc_belt":"belt||54219059fe646d781fa74d1773816e3be0047345a51b98c2e303e0441850c26d||open"
+
+        , "fc_size":"size||ada94d48c61106c1e8dfc6088067f543fc5a1c1e93abf3d331ea48d26659ecd1||open"
+        , "fc_bust":"bust||384292fbcdb6db4f60390bede9e4a10e04c6d33a7202ec2a6b3ba2a714235dfe||open"
+        , "fc_waist":"waist||c2aeb802304c26cb73bc3f3c3cc21c772899ed38c8be02ed21c7c8fea93612e6||open"
+        , "fc_hips":"hips||b375e7462cca6b13a6e201d699ee3ec7575699a08fdd0879eb5e851f811680e5||open"
+        , "fc_hollowfloor":"hollow_to_floor||88b0b6dead5a309ee250654a1ea47186fb0062c30417aff2762ef7132168a428||open"
+        , "fc_height":"my_height||15652aafd53be0e5dda5a564309edcd12ba5fd36e73f536f29b5408404509b1f||open"
     }
     , "design_builder":
 {
@@ -50,46 +51,19 @@
             , "type": "nek"
             , "active": "true"
             , "label": "Neckline"
-            , "fabricSets": [ {"setId": "s-vc"}]
+            , "fabricSets": [ {"setId": "pc-fl"}]
             , "values": [
             {"id": "001", "name": "bateau"}
-            , {"id": "002", "name": "scoop"}
-            , {"id": "003", "name": "v-slit"}
-            , {"id": "004", "name": "wrap"}
+            , {"id": "005", "name": "V-neck"}
         ]
-            , "size": false
-            , "trim": true
-            , "trimFabricSets": [{"setId": "x-fl"}]
-        }
-        ,{
-            "part_name": "sleeves"
-            , "type": "slv"
-            , "label": "Sleeves"
-            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-            , "null_value": "000"
-            , "values": [
-                {"id": "000", "name": "none"}
-                , {"id": "002", "name": "cap"}
-                , {"id": "006", "name": "elbow"}
-                , {"id": "009", "name": "flared"}
-            ]
-        }
-        ,{
-            "part_name": "skirt"
-            , "type": "skt"
-            , "label": "Skirt"
-            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-            , "values": [
-                {"id": "001", "name": "pencil"}
-                , {"id": "002", "name": "ruffle"}
-            ]
             , "size": true
             , "sizes": [
-                {"id": "01", "name": "short"}
-                , {"id": "02", "name": "knee"}
-                , {"id": "04", "name": "long"}
-            ]
-            , "trim": false
+            {"id": "01", "name": "short"}
+            , {"id": "02", "name": "knee"}
+            , {"id": "04", "name": "long"}
+        ]
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
         }
     ]
     }]
@@ -99,33 +73,13 @@
         , "label": "Extras"
         , "active": "true"
         , "parts": [
-        {
-            "part_name": "peplum"
-            , "type": "ext"
-            , "label": "Peplum"
-            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-            , "values": [
-            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-        ]
-        }
-        , {
-            "part_name": "rosetta"
-            , "type": "ext"
-            , "label": "Rosetta"
-            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
-            , "values": [
-                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-            ]
-        }
-        , {
+      {
             "part_name": "belt"
             , "type": "blt"
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "161", "fabricSets": [ {"setId": "x-pt"}]}
-                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
-
+                {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
             ]
         }
     ]}
@@ -135,17 +89,17 @@
     [
         {
             "itemId": "swing-print-1"
-            , "itemDesc": "Test - Empress"
+            , "itemDesc": "Adele dress"
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "011", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "011", "trim": ""}
+                "neckline":   {"type": "nek", "id": "001", "size": "01", "fabric": "301", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }

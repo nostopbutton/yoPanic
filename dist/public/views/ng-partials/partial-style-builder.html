@@ -8,11 +8,16 @@
             </div>
             <div class="action col-sm-7">
                 <div class="row">
+                    <!--href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"-->
                     <a class="btn btn-primary" style="width:150px;"
-                       href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"
-                       ng-click="tabs.fit = true">Customize</a>
+                       href="" data-toggle="tab"
+                       ng-click="tabs.design = true; gaEvent('button', 'click', 'builder-style-customize');">Customize</a>
+                    <a class="btn btn-default visible-xs" style="width:150px;"
+                       href="" data-toggle="tab"
+                       ng-click="tabs.fit = true; gaEvent('button', 'click', 'builder-style-fit');">Choose Size</a>
                 </div>
                 <div class="row">
+                </div>
             </div>
         </div>
         <hr class="grad-line">
@@ -33,5 +38,4 @@
         </div>
         <!--<hr class="grad-line">-->
     </div>
-</div>
 </div>

@@ -124,9 +124,8 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-                {"id": "002", "name": "Ribbon belt", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
-                , {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
-
+                {"id": "004", "name": "Obi belt", "defaultFabric": "103", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
             ]
         }
     ]}
@@ -144,9 +143,9 @@
                 , "skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "011", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
         }
@@ -160,9 +159,9 @@
                 , "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "011", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "111", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
     }
@@ -172,13 +171,13 @@
         , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "001", "size": "01", "fabric": "008", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "111", "code": "004-111"},
-                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
     }

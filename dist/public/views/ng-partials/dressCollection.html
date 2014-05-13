@@ -22,49 +22,10 @@
             <select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">
             </select>
         </div>
-
-        <!--<div class="col-sm-2 header">-->
-
-            <!--<select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">-->
-            <!--</select>-->
-        <!--</div>-->
         <div class="col-sm-1 header">
-            <a class="btn btn-xs btn-default" ng-click="reset()">Reset</a>
+            <a class="btn btn-xs btn-default" ng-click="reset(); gaEvent('button', 'click', 'collection-filter-reset')">Reset</a>
         </div>
     </div>
-
-    <!--<div class="row mobile-filter">-->
-        <!--<div class="col-md-1 col-md-offset-1 col-sm-2 header">-->
-            <!--<span class="glyphicon glyphicon-chevron-down">​</span><span>&nbsp Filters</span>-->
-        <!--</div>-->
-        <!--<div class="col-sm-2 header">-->
-
-            <!--<select ng-model="silhouetteFilter" ng-options="sil.id as sil.label for sil in silhouettes">-->
-            <!--</select>-->
-        <!--</div>-->
-        <!--<div class="col-sm-2 header">-->
-            <!--<select ng-model="typeFilter" ng-options="type.id as type.label for type in types">-->
-            <!--</select>-->
-        <!--</div>-->
-        <!--<div class="col-sm-2 header">-->
-            <!--<select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">-->
-            <!--</select>-->
-        <!--</div>-->
-
-        <!--<div class="col-sm-2 header">-->
-
-            <!--<select ng-model="colourFilter" ng-options="colour.id as colour.label for colour in colours">-->
-            <!--</select>-->
-        <!--</div>-->
-        <!--<div class="col-sm-1 header">-->
-            <!--<a class="btn btn-xs btn-default" ng-click="reset()">Reset</a>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class=frame>-->
-        <!--&lt;!&ndash;<span class="helper"></span>&ndash;&gt;-->
-        <!--<img src="/images/collection/sheath-2-md-dress.png"  />-->
-    <!--</div>-->
-
 
     <div class="row">
 

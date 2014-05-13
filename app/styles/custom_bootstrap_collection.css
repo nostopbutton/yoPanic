@@ -37,7 +37,9 @@ SHOP THE COLLECTION PAGE - INTRO
 }
 
 .filter select {
-    width: 123px;
+    width: 150px;
+    text-align:center;
+    margin-bottom: 10px;
 }
 
 /*
@@ -219,7 +221,7 @@ SHOP ITEM VIEW - STYLE PANEL
 #style-panel .description,
 #style-panel .care {
     padding-top:20px;
-    padding-bottom:20px;
+    padding-bottom:10px;
 }
 
 #style-panel .care{
@@ -227,7 +229,7 @@ SHOP ITEM VIEW - STYLE PANEL
 }
 #style-panel .care h2{
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-weight: bold;
 }
 
