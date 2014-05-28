@@ -1,6 +1,2 @@
 User-agent: *
-Disallow: /components/
-Disallow: /referenceData/
-Disallow: /scripts/
-Disallow: /styles/
-Disallow: /views/ng-partials/
+

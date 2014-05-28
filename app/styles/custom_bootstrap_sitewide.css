@@ -55,6 +55,10 @@ body .btn-primary:hover {
     border-color: #dd4800;;
 }
 
+.center {
+    text-align: center;
+}
+
 /*
 GENERAL - CURL EFFECTS
 ================================================ */
@@ -107,7 +111,9 @@ GENERAL - CURL EFFECTS
     right: 12px;
 }
 
-
+.modal-button {
+    text-align: right;
+}
 
 /*
 GENERAL - BREADCRUMB EFFECTS

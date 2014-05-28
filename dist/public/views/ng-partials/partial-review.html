@@ -228,10 +228,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="design in form.design" ng-class-even="'alt'">
-                        <td colspan="2"><span
-                                title={{design.type+"-"+design.id+"-"+design.size}}>{{design | lookup}}</span></td>
-                        <td colspan="3"><span ng-hide="'000'=== design.id"> {{design|fablookup}} {{design.trim|trimlookup}}</span></td>
+                    <tr ng-repeat="design in form.design" ng-class-even="'alt'" ng-hide="'000'=== design.id">
+                        <td colspan="2">
+                            <span title={{design.type+"-"+design.id+"-"+design.size}}>{{design | lookup}}test</span></td>
+                        <td colspan="3"><span> {{design|fablookup}} {{design.trim|trimlookup}}</span></td>
                     </tr>
                     <!--<tr>-->
                     <!--<td colspan="5"> &nbsp</td>-->
@@ -244,10 +244,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="design in form.extras" ng-class-even="'alt'">
+                    <tr ng-repeat="design in form.extras" ng-class-even="'alt'" ng-hide="'000'=== design.id">
                         <td colspan="2">
-                            <span ng-hide="'000'=== design.id" title={{design.type+"-"+design.id+"-"+design.size}}>
-                                {{design | lookup}}</span></td>
+                            <span title={{design.type+"-"+design.id+"-"+design.size}}>{{design | lookup}}</span>
+                        </td>
                         <td colspan="3">{{design|fablookup}} {{design|trimlookup}}</td>
 
                     </tr>
@@ -281,10 +281,9 @@
                     </tr>
                     </tbody>
                 </table>
-                <div class="row" style="text-align: center">
-                    <a data-toggle="modal" data-target="#spec-sheet-modal">Detailed Spec Sheet</a>
-
-                </div>
+                <!--<div class="row" style="text-align: center">-->
+                    <!--<a data-toggle="modal" data-target="#spec-sheet-modal">Detailed Spec Sheet</a>-->
+                <!--</div>-->
             </div>
         </div>
     </div>

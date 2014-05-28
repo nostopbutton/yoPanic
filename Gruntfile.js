@@ -430,8 +430,8 @@ module.exports = function (grunt) {
             ],
             dist: [
                 'coffee',
-                'compass:dist'
-//                'imagemin:dist'
+                'compass:dist',
+                'imagemin:dist'
 //               'svgmin',
 //                'htmlmin:dist'
 //                , 'assemble:dist'
@@ -566,12 +566,12 @@ module.exports = function (grunt) {
                         dest: '<%= yeoman.dist %>/public/images',
                         src: ['{,*/}*']
                     },
-                    {
-                        expand: true,
-                        cwd: '.tmp/images',
-                        dest: '<%= yeoman.dist %>/public/images',
-                        src: ['generated/*']
-                    },
+//                    {
+//                        expand: true,
+//                        cwd: '.tmp/images',
+//                        dest: '<%= yeoman.dist %>/public/images',
+//                        src: ['generated/*']
+//                    },
                     {
                         expand: true,
                         dest: '<%= yeoman.dist %>',

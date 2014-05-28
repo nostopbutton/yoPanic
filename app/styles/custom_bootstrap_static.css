@@ -84,14 +84,14 @@
     margin-bottom:20px;
 }
 .about .intro,
-.party .book-party {
+.party .info-panel {
     background-color: #ff5200;
     display:inline-block;
     padding: 0;
 }
 
 .about .intro-text,
-.party .booking-form {
+.party .form {
     color:#ffffff;
     font-size: 17px;
     /*margin:0px;*/
@@ -100,15 +100,19 @@
     text-align: left;
 }
 .about .intro .video-panel,
-.party .party-img {
+.party .image{
     padding:0;
 
     text-align:center
 }
 .about .intro .video-panel iframe,
-.party .party-img img {
+.party .image img {
     display: block;
     margin:  0 auto;
+}
+
+.gift-btn {
+    margin-top:20px;
 }
 
 .about .video {
@@ -124,7 +128,7 @@
     margin-bottom: 40px;
 }
 
-/*.party .party-img {*/
+/*.party .image {*/
     /*margin:0px;*/
     /*padding:0px;*/
     /*text-align:center*/

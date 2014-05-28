@@ -289,9 +289,19 @@ HOME PAGE - HOW IT WORKS
     height:auto;
 }
 
-#how-it-works aside img {
+
+#how-it-works aside img{
     width:100%;
     height:auto;
+}
+.how-img{
+    margin: 20px 0;
+    height:100px;
+
+}
+#how-it-works section img{
+    margin:auto;
+
 }
 
 #how-it-works h3,
@@ -357,4 +367,9 @@ HOME PAGE - HOW IT WORKS
     padding: 25px;
 
     font-size:16px;
+}
+
+.hidden-from-view {
+    left: -5000px;
+    position: absolute;
 }
