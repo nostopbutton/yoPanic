@@ -9,6 +9,9 @@ SHOP THE COLLECTION PAGE - INTRO
     /*margin-right:30px;*/
 /*}*/
 
+#size-input {
+    margin-bottom:0;
+}
 
 /* Creates a gradient background box for the dress image */
 .dress_image_panel {
@@ -43,6 +46,15 @@ SHOP THE COLLECTION PAGE - INTRO
     left:30px; /* (DressImagePanelWidth - ImageWidth) / 2 */
     opacity:1;
 }
+
+/*@media (max-width: 768px) {*/
+    /*.db-image {*/
+        /*background-size:100% 100%;*/
+/*}*/
+/*}*/
+
+
+
 /* Set the layer order of dress parts */
 .body { z-index:0; overflow: hidden; }
 .slv { z-index:1; }
@@ -554,4 +566,19 @@ SHOP THE COLLECTION PAGE - DRESSES
 
 }
 
+@media (max-width: 768px) {
+    /*http://stackoverflow.com/questions/16918094/html-table-with-vertical-rows*/
+    table .measurements{
+        border-collapse: collapse;
+    }
 
+    .measurements tr {
+        display: block;
+        float: left;
+    }
+
+    .measurements th, .measurements td {
+        display: block;
+        border: 1px solid black;
+    }
+}

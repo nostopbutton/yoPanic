@@ -1,0 +1,18 @@
+---
+title: AURZA - Design Builder
+---
+
+<!--data-description="current_description"-->
+<div ng-controller="appController" id="top">
+    <div class="alert alert-warning alert-dismissable visible-xs">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <p><strong>Please Note:</strong> Our Design Builder has not yet been optimised for use on a small screen, such as a mobile phone.</p>
+        <p>For best results, please use a tablet held in landscape (horizontal) mode, a laptop or a desktop computer and stayed tuned for news on our mobile update very soon...</p>
+    </div>
+    <!--<div ng-include="'views/modal.html'"></div>-->
+    <!--<div ng-include="'views/idggHeader.html'"></div>-->
+    <!--<div ng-include="'/views/partials/header.html'"></div>-->
+    <div class="alert alert-info" ng-show="loading">Loading</div>
+    <div ng-view></div>
+    <!--<div ng-include="'/views/partials/footer.html'"></div>-->
+</div>

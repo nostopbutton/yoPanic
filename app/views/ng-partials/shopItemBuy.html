@@ -1,7 +1,7 @@
 <div ng-include="'/views/ng-partials/partial-sizing-modal.html'"></div>
 <div id="shopItemView" class="container">
     <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-5 hidden-xs">
             <div ng-include="'/views/ng-partials/partial-item-images.html'"></div>
         </div>
 
@@ -21,7 +21,7 @@
                      ng-click="gaEvent('nav', 'click', 'collection-item-fit');tab('fit')" >
                     <div ng-include="'/views/ng-partials/partial-fit.html'"></div>
                 </tab>
-                <tab heading="Review" active="tabs.order"
+                <tab heading="Checkout" active="tabs.order"
                      disabled="!foxyForm.$valid"
                      ng-click="gaEvent('nav', 'click', 'collection-item-review');tab('review')" >
                     <div ng-include="'/views/ng-partials/partial-review.html'"></div>
