@@ -1,0 +1,192 @@
+{
+    "style":
+    {
+        "styleId": "flare"
+        , "type": "dress"
+        , "styleName": "Alexa"
+        , "styleFormalName": "Flare Dress"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Simplicity and elegance."
+        , "The hip skimming Alexa skirt provides maximum curves and comfort." ]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 2200
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-302-body"
+        , "defaultItemId": "flare-1"
+        , "foxyImage": "pat-302"
+        , "fc_category": "category||084c3562f2f4da8d33156b49d07d2b78fef9f289f725d88106e0c4d536062c69"
+        , "fc_code": "code||1a0792dacc4f27dbe740f0e1f7c60085988a5473f073ae30d8278728a652e346"
+        , "fc_name": "name||76b74b3e2180af48411ade10415b0cd832bbb1313ca7df450cc7e257bf998f6e||open"
+        , "fc_price": "price||49b2528a44422f55fb1ae394b908e424c97f187144f2e224675ef49e983a43f2"
+        , "fc_image": "image||c3d573d5f97ff6c56be35a91ec269c88f3f8fa7babe52915732b7c67c6f446ac||open"
+        , "fc_url": "url||7760c12bd1d06b59499eb72076aaba30edac498c5fd3fa5590a8619dc85a3d7c||open"
+
+        , "fc_neckline": "neckline||4302266789e4dc8c8cc95bead7e202890c6f45105c900e30b03d0b8dbee91237||open"
+        , "fc_sleeves": "sleeves||0df7abe1051e4f2d065da9e6016c7a74805368d41f5340f4b46c16bdb5e10c2d||open"
+        , "fc_skirt": "skirt||e2439825468855f2bf39d0bf98c5210fd7772d6f56cf378e482b5da501671909||open"
+        , "fc_peplum": "peplum||9d560d7c7a1e86d016f3cae3571ca17f74de8bddd9e434aa2931dc2dcc0af7d5||open"
+        , "fc_rosetta": "rosetta||ce6de300644637696c8b970ff26fd4343470ce4ba2b8dcaa1b3bd32ace2c39f7||open"
+        , "fc_belt": "belt||3cfab66dd143355c86659854b63f954d318a094a76aa0b769c210b27fb5e8de8||open"
+
+        , "fc_size": "size||50aba08c1f61aa1f7f04a904d2ce0a81ecf2005afa7c300d068f8ded17edd9fe||open"
+        , "fc_bust": "bust||f7035d1a5f1048d337b20348dd99ba00436ab582a6fc9e34d5deca3f082227e4||open"
+        , "fc_waist": "waist||a10b3bb19c576a3916fd82cf557d76c26bcf299ac8ffaa2bacf32136bd65aba0||open"
+        , "fc_hips": "hips||710693127aefb28e78a4fd62921e2f7393afd621549b7c17e448a4784188b83c||open"
+        , "fc_hollowfloor": "hollow_to_floor||70caacd416bea4344d1a7f85949a487b22c38bb440e5a102e7757c12e57c9938||open"
+        , "fc_height": "my_height||00d222e43eebbbdc1c911b07658430f2448b8a4a7dc6d5d3b40bb10f174ef136||open"
+    }
+    , "design_builder":
+{
+    "model": "strap-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [{"setId": "s-vc"}]
+            , "values": [
+            {"id": "001", "name": "bateau"}
+            , {"id": "002", "name": "scoop"}
+            , {"id": "003", "name": "v-slit"}
+            , {"id": "004", "name": "wrap"}
+        ]
+            , "size": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "000", "name": "none"}
+                , {"id": "002", "name": "cap"}
+                , {"id": "006", "name": "elbow"}
+                , {"id": "009", "name": "flared"}
+            ]
+        }
+        ,{
+            "part_name": "skirt"
+            , "type": "skt"
+            , "label": "Skirt"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "007", "name": "fit-and-flare"}
+            ]
+            , "size": true
+            , "sizes": [
+                {"id": "01", "name": "short"}
+                , {"id": "02", "name": "knee"}
+                , {"id": "04", "name": "long"}
+            ]
+            , "trim": false
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+         {
+            "part_name": "rosetta"
+            , "type": "ext"
+            , "label": "Rosetta"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]
+                }]}
+
+        , {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+            ]
+        }
+    ]}
+]
+
+}
+    , "collection":
+    [
+        {
+            "itemId": "flare-1"
+            , "itemDesc": "Wrap Flare - Red"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "003", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "flare-2"
+            , "itemDesc": "Wrap Flare - Midnight blue"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "014", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "014", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "014", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "flare-3"
+            , "itemDesc": "Wrap Flare - Aubergine"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "013", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "013", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "flare-4"
+            , "itemDesc": "Wrap Flare -  Teal"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "010", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "010", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "007", "size": "02", "fabric": "010", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
+}

@@ -1,0 +1,153 @@
+[
+  { "setId": "0x0"
+    , "setName": "None"
+    , "type": "Standard"
+    , "description": "blurb about Viscose Crepe"
+    , "fabrics":
+    [
+      { "fabId": "000", "fabName" : "None"}
+    ]
+  }
+  ,{ "setId": "s-vc"
+    , "setName": "Viscose Crepe"
+    , "type": "Standard"
+    , "description": "blurb about Viscose Crepe"
+    , "fabrics":
+      [
+        { "fabId": "003", "fabName" : "red"}
+        , { "fabId": "011", "fabName" : "black"}
+        , { "fabId": "013", "fabName" : "aubergine"}
+        , { "fabId": "010", "fabName" : "teal"}
+        , { "fabId": "008", "fabName" : "cream/champagne"}
+        , { "fabId": "014", "fabName" : "midnight blue"}
+      ]
+  }
+  ,{ "setId": "s-tr"
+    , "setName": "Trim Fabric"
+    , "type": "Standard"
+    , "description": "blurb about Viscose Crepe"
+    , "fabrics":
+    [
+      { "fabId": "011", "fabName" : "black beads"}
+      ,{ "fabId": "120", "fabName" : "black faux leather"}
+      , { "fabId": "135", "fabName" : "black sequins"}
+    ]
+  }
+  ,{ "setId": "trm2"
+  , "setName": "Viscose Crepe"
+  , "type": "Standard"
+  , "description": "blurb about Viscose Crepe"
+  , "fabrics":
+    [
+      { "fabId": "003", "fabName" : "red"}
+      , { "fabId": "004", "fabName" : "violet"}
+      , { "fabId": "005", "fabName" : "dirty blue"}
+      , { "fabId": "007", "fabName" : "taupe"}
+      , { "fabId": "008", "fabName" : "cream/champagne"}
+      , { "fabId": "010", "fabName" : "mint"}
+      , { "fabId": "011", "fabName" : "black"}
+      , { "fabId": "012", "fabName" : "grey"}
+    ]
+}
+  , { "setId": "p-sk"
+    , "setName": "Silk"
+    , "type": "Premium"
+    , "fabrics":
+    [
+      { "fabId": "085", "fabName" : "jade"}
+      , { "fabId": "087", "fabName" : "midnight blue"}
+      , { "fabId": "088", "fabName" : "fuscia"}
+      , { "fabId": "089", "fabName" : "red"}
+     , { "fabId": "091", "fabName" : "pewter"}
+
+
+    ]
+  }
+  , { "setId": "x-fl"
+    , "setName": "Faux leather"
+    , "type": "Special"
+    , "fabrics":
+      [
+        { "fabId": "120", "fabName" : "black"}
+
+      ]
+  }
+  , { "setId": "x-l"
+  , "setName": "Leather"
+  , "type": "Special"
+  , "fabrics":
+    [
+      { "fabId": "103", "fabName" : "red"}
+      , { "fabId": "112", "fabName" : "slate"}
+      , { "fabId": "111", "fabName" : "black"}
+      , { "fabId": "114", "fabName" : "cobalt blue"}
+        , { "fabId": "116", "fabName" : "hot pink"}
+        , { "fabId": "118", "fabName" : "stone"}
+    ]
+}
+  , { "setId": "x-sq"
+    , "setName": "Sequins"
+    , "type": "Special"
+    , "fabrics":
+      [
+        { "fabId": "135", "fabName" : "black matt"}
+        , { "fabId": "136", "fabName" : "coffee sparkle"}
+        , { "fabId": "137", "fabName" : "snow blizzard"}
+        , { "fabId": "138", "fabName" : "white matt"}
+      ]
+  }
+  , { "setId": "x-pt"
+  , "setName": "Polyester Trim"
+  , "type": "Special"
+  , "fabrics":
+    [
+      { "fabId": "160", "fabName" : "red"}
+      , { "fabId": "161", "fabName" : "aubergine"}
+      , { "fabId": "165", "fabName" : "cream/champagne"}
+      , { "fabId": "166", "fabName" : "teal"}
+      , { "fabId": "168", "fabName" : "black"}
+      , { "fabId": "170", "fabName" : "midnight blue"}
+    ]
+}
+    , { "setId": "pc-fl"
+    , "setName": "Printed Floral"
+    , "type": "Printed Cotton"
+    , "fabrics":
+        [
+            { "fabId": "300", "fabName" : "roseblue"}
+            , { "fabId": "301", "fabName" : "rosered"}
+            , { "fabId": "302", "fabName" : "roseteal"}
+            , { "fabId": "303", "fabName" : "rosepink"}
+            , { "fabId": "304", "fabName" : "rosemonochrome"}
+            , { "fabId": "305", "fabName" : "roseyellow"}
+        ]
+}
+
+    , { "setId": "pc-ze"
+    , "setName": "Printed Zebra"
+    , "type": "Printed Cotton"
+    , "fabrics":
+        [
+            { "fabId": "306", "fabName" : "zebrablue"}
+            , { "fabId": "307", "fabName" : "zebraredYellow"}
+            , { "fabId": "308", "fabName" : "zebrateal"}
+            , { "fabId": "309", "fabName" : "zebrapink"}
+            , { "fabId": "310", "fabName" : "zebrablack"}
+            , { "fabId": "311", "fabName" : "zebragrey"}
+            , { "fabId": "312", "fabName" : "zebrayellow"}
+        ]
+}
+    , { "setId": "pr-sk"
+    , "setName": "Printed Silk"
+    , "type": "Printed Cotton"
+    , "fabrics":
+        [
+            { "fabId": "406", "fabName" : "zebrablue"}
+            , { "fabId": "407", "fabName" : "zebraredYellow"}
+            , { "fabId": "408", "fabName" : "zebrateal"}
+            , { "fabId": "410", "fabName" : "zebrablack"}
+            , { "fabId": "411", "fabName" : "zebragrey"}
+            , { "fabId": "412", "fabName" : "zebrayellow"}
+        ]
+}
+]

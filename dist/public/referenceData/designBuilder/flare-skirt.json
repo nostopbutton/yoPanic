@@ -1,0 +1,105 @@
+{
+    "style":
+    {
+        "styleId": "flare-skirt"
+        , "type": "skirt"
+        , "styleName": "Alexa Flare"
+        , "styleFormalName": "Flare Skirt"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Both flattering and easy to wear the flare skirt allows elegant movement and a sense of delicate femininity."
+        , "" ]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 1400
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-103-body"
+        , "defaultItemId": "skt-fl-1"
+        , "foxyImage": "pat-103"
+        , "fc_category": "category||9114c02b8348368d71020b201273d74fdf6cc56a54ae04d03635f09324268b44"
+        , "fc_code": "code||1415c79e9a1c8c9645a70bc7eec8cc0620757547483c11a7d9c6eabe35cc7bf9"
+        , "fc_name": "name||7d5684366fc028fab1377fdeaa52f4474846f4b0fac0738e9703c6bb9303209f||open"
+        , "fc_price": "price||0a4ae521ac58959b5d512e3679e6b389a9f2ca67470b8cbd1b6586499c7b7714"
+        , "fc_image": "image||818480f4f69ecf4e619c3d473f7e6fbed8b08e4fcc5a1f44e7d3af78dc7da37e||open"
+        , "fc_url": "url||465eda9ac45009259f5c6afdac3e11ab4f1a35323249ff54bfd1cfcfea87f3d3||open"
+
+        , "fc_neckline": "neckline||8f05bf1b4bfad546e709f5e64558c6bc1704b671b876f2781f8bcf44cde6c116||open"
+        , "fc_sleeves": "sleeves||ff65e7cfbcc64e4b142018c167acb6ce6c54a643e5491802fed0009734875cd9||open"
+        , "fc_skirt": "skirt||48c8ea98418371594a79f65962326f0de6f83cba778e2b23f26ea0744f11324f||open"
+        , "fc_peplum": "peplum||c56326f346a2bc7b5907fb32f62b799440150d25bd70fec107b7387ffe304997||open"
+        , "fc_rosetta": "rosetta||3a45128f9befb817e8fd7afbf27614b4faaeb8f3bde130d75c9b2a67251fee45||open"
+        , "fc_belt": "belt||713e8ae644dde9e61763916983d390cb97d31fd7a572f38438b8efd1f97e3df0||open"
+
+        , "fc_size": "size||e495f205aae40cd7a1454c0d258c4a5f9ffcf77f28e706114a503639ef11feb5||open"
+        , "fc_bust": "bust||c4384db92d7deaa0d8b4c75b491b9d834ee63692e41fa134515193adde82823f||open"
+        , "fc_waist": "waist||317947428a2a590a60d84b5f28b44f7715e9587ff70b229016591a51b24e8390||open"
+        , "fc_hips": "hips||be4014b22662fbb866bfb685fede2a19f4117adb1ebf29b38ad1002202684c7c||open"
+        , "fc_hollowfloor": "hollow_to_floor||03f154cde8b3fcf70a02f6063ed8d85e318b9096cb5531dd026de095f6f6bafd||open"
+        , "fc_height": "my_height||15b0844058f1ed0a417b94ed80f3d8af9c688558f4982f44ce45258da83c9bb9||open"
+    }
+    , "design_builder":
+{
+    "model": "tshirt-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "skirt"
+            , "type": "skt"
+            , "label": "Skirt"
+            , "active": true
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "007", "name": "flare"}
+        ]
+            , "size": true
+            , "sizes": [
+            {"id": "01", "name": "Short (48cm)"}
+            , {"id": "02", "name": "Knee (58cm)"}
+            , {"id": "04", "name": "Long (68cm)"}
+        ]
+            , "trim": false
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+    ]}
+]
+}    , "collection":
+    [
+        {
+            "itemId": "skt-fl-1",
+            "itemDesc": "Flare skirt - Teal",
+            "itemDesign": {
+                "design": {
+                    "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                    , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                    , "skirt": {"type": "skt","id": "007","size": "02","fabric": "010","trim": ""}
+                },
+                "extras": {
+                    "belt": {"type": "blt","id": "000", "size": "00","fabric": "000","code": "000-000"},
+                    "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                    "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+                }
+            }
+        }
+    ]
+}

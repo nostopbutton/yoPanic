@@ -1,0 +1,106 @@
+{
+    "style":
+    {
+        "styleId": "pencil-skirt-print"
+        , "type": "skirt"
+        , "styleName": "Sophia Pencil"
+        , "styleFormalName": "Printed Pencil Skirt"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Turn heads in our classic pencil served up in contemporary floral prints."
+        , ""]
+        , "care": [ "Our stretch cotton option provides a lightweight fabric alternative. Digitally printed with the latest techniques allowing for a fabulous colour palette."
+        , "Machine washable "]
+        , "price":1300
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+        "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-111"
+        , "defaultItemId": "skirt-pencil-print-1"
+        , "foxyImage": "pat-111"
+
+        , "fc_category":"category||73d2e3878b2c94a7c1873e306c167a9a99569c25dddf60ee5bec3f74f9b32a3d"
+        , "fc_code":"code||4ad6008976d6d30932a775faf8e03c35ae2d11680db2bb214c256b8470f824ad"
+        , "fc_name":"name||d24a80fed5727ef331790f91ba2490dfcbab952cafbb1de5ae95a90e745fe14d||open"
+        , "fc_price":"price||c270fc1b00fc15d853295a0070959a7dc28e977da4379e6fd32a996c78afb7ad"
+        , "fc_image":"image||6638b9b9a371dfb2a0499f23d9e1061268c7ba846c2a32d7f3f559b03b2f5bb7||open"
+        , "fc_url":"url||472f845458940a7562b03639c42ad89eb28dbd49a07fb4b93f248136351ed8fd||open"
+
+        , "fc_neckline":"neckline||152ca3db296052268835152a93c2e81450ccdb60d67a0ceadee5eb43fec825ba||open"
+        , "fc_sleeves":"sleeves||1f46bb0f2b8cb02bdd05b313d80f3171efcf1d85dbfc3744c4f811bfbc0810db||open"
+        , "fc_skirt":"skirt||711b3726ae3e114785ff8c5ccb3764ca599bfade3496a64badca55759369e446||open"
+        , "fc_peplum":"peplum||f48e5b4a2891fdf94394b9fe084376a076d7131e2dd0a971feb763e5de3a0e4a||open"
+        , "fc_rosetta":"rosetta||a1218ba6da0f2b3701575aa2088b8a3971a5adc0c1609d5f4c7bb0dc21ec16ae||open"
+        , "fc_belt":"belt||82acb9c6d88167d8632b1da91627caf260d3680a690560d0150ce6c3c9e97257||open"
+
+        , "fc_size":"size||2dc4412a2a867f9b75869c0cd17338a7d0eb1c6692d05b4f72addc5ede1fe860||open"
+        , "fc_bust":"bust||ec05ccaf05ed628fe18a81e4e377b693dbc2fbbbf8a9a72dd39aed94a02e53eb||open"
+        , "fc_waist":"waist||ecdd35d82f75a517c208342e5ad628c6d9c87e1acf81d374f55c5783dc0871fc||open"
+        , "fc_hips":"hips||2f94505cc9f13c8161760cd8ce6ff386949de4170849aaa28d860ece1e8ada20||open"
+        , "fc_hollowfloor":"hollow_to_floor||02b6b58c398a75b24f38079b6e6ab487c1c9d981e61deeae20709171703211b6||open"
+        , "fc_height":"my_height||42d5065af847ad566c0e674aa37bbe06378cf81dbfe90747aeb8b68abe4993cc||open"
+    }
+    , "design_builder":
+{
+    "model": "tshirt-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "skirt"
+            , "type": "skt"
+            , "label": "Skirt"
+            , "fabricSets": [ {"setId": "pc-fl"}]
+            , "values": [
+                {"id": "001", "name": "pencil"}
+            ]
+            , "size": true
+            , "sizes": [
+            {"id": "01", "name": "Short (48cm)"}
+            , {"id": "02", "name": "Knee (58cm)"}
+            , {"id": "04", "name": "Long (68cm)"}
+            ]
+            , "trim": false
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+      {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "004", "name": "Obi belt", "defaultFabric": "103", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+            ]
+        }
+    ]}
+]
+}
+    , "collection":
+    [
+        {
+            "itemId": "skirt-pencil-print-1"
+            , "itemDesc": "Test - Empress"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "304", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+
+            }
+        }
+        }
+    ]
+}

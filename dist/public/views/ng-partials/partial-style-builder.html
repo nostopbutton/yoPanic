@@ -1,0 +1,41 @@
+<div id="style-panel">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="intro col-sm-5">
+                <div class="name">{{item.style.styleName}}</div>
+                <div class="formal-name">{{item.style.styleFormalName}}</div>
+                <div class="price">HKD {{item.style.price | number:0}}</div>
+            </div>
+            <div class="action col-sm-7">
+                <div class="row">
+                    <!--href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"-->
+                    <a class="btn btn-primary" style="width:150px;"
+                       href="" data-toggle="tab"
+                       ng-click="tabs.design = true; gaEvent('button', 'click', 'builder-style-customize');">Customize</a>
+                    <a class="btn btn-default visible-xs" style="width:150px;"
+                       href="" data-toggle="tab"
+                       ng-click="tabs.fit = true; gaEvent('button', 'click', 'builder-style-fit');">Choose Size</a>
+                </div>
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        <hr class="grad-line">
+        <div class="row">
+            <div class="description col-sm-12">
+                <!--<h2>Description</h2>-->
+                <p ng-repeat="para in item.style.description">{{para}}</p>
+            </div>
+        </div>
+
+        <hr class="grad-line">
+        <div class="row">
+            <div class="care col-sm-12">
+                <h2>Fabric & Care</h2>
+
+                <p ng-repeat="para in item.style.care">{{para}}</p>
+            </div>
+        </div>
+        <!--<hr class="grad-line">-->
+    </div>
+</div>

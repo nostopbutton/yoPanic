@@ -1,0 +1,107 @@
+{
+    "style":
+    {
+        "styleId": "pencil-skirt"
+        , "type": "skirt"
+        , "styleName": "Coco Pencil"
+        , "styleFormalName": "Pencil Skirt"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Tailored for a closer fit this skirt is designed to flaunt your curves."
+        , "It accentuates all the right bits whilst visually flattering your stomach area. The simple lines are chic and glamorous and never out of style. Killer heels a must." ]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 1400
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-101-body"
+        , "defaultItemId": "skt-pen-1"
+        , "foxyImage": "pat-101"
+        , "fc_category":"category||a19086836292048c192cb45b16a25ef158b36ee8b8439dd83c3330263a0bf8dc"
+        , "fc_code":"code||bf0142736e27054c7a9b2c1ffaf3fdaffb85e86b9b1d1791ca5ce7e58f1cb519"
+        , "fc_name":"name||a5b4399194ad7e7234536fb3fd0f8cef46c790cb4344fb9a24a58a7320e44aeb||open"
+        , "fc_price":"price||529c7be23b3d6db3373edca4793eb914437ca123f73c1d4239b5611420262240"
+        , "fc_image":"image||3462590ca61f935516899b22c733941b852d5500f4b6ad829d025724b6303604||open"
+        , "fc_url":"url||6aa39923edd14ed99989bfd4f86becbbb1dce9b7a0acc34fafe0a81aee24a9f3||open"
+
+        , "fc_neckline":"neckline||b52696d9118638cb4806cee1b0c273feb1a5ddaea788c5ede43838cf1949b9e4||open"
+        , "fc_sleeves":"sleeves||ba42048007e7d164e1d0bbb521a285b4ed6e01f846c9fd6a47756ca4ed9826ce||open"
+        , "fc_skirt":"skirt||8fdfcb81f006a6d5c33400d3eff13a0d4f2cb4ceaa4f32f6b5be96c7c481bc38||open"
+        , "fc_peplum":"peplum||6ddecf20288585bcc452f491c14883667905424c69dd875fc912ad3714c58745||open"
+        , "fc_rosetta":"rosetta||24a17cf3fb137c9182d265d7facb4e5efccf9a36df9525c02b383d8a00f0949f||open"
+        , "fc_belt":"belt||2000c4d314174d315422e0a00bb0ee15a8cefd7b704592f18a6c9c764c127ced||open"
+
+        , "fc_size":"size||c99a82e1213377989ed6c645a42af88c203fdb3742cbefc9f67e5e10398fbef8||open"
+        , "fc_bust":"bust||1680c4a1189445c714ce6cb83a18ef3412f759a31d52e60ce17d30f89bc00171||open"
+        , "fc_waist":"waist||04f5b910bd63fb61e100f876f4b71bc9081a10acd307c234413baed66e047e3d||open"
+        , "fc_hips":"hips||d6fa2e3b06f6cda31873f5e33cef4ece2a250b17c1928beebc2e3ef8bb20e227||open"
+        , "fc_hollowfloor":"hollow_to_floor||38eccbb55e6e95751357b1f9cc1bf75d03bed4443f54f7b0748e07d12b2b4db0||open"
+        , "fc_height":"my_height||34feb10bbf9b8e79f1375dd22dcad016c9642e0ba1d0ab236fd19812102caf28||open"
+    }
+
+    , "design_builder":
+{
+    "model": "tshirt-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "skirt"
+            , "type": "skt"
+            , "label": "Skirt"
+            , "active": true
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+            {"id": "001", "name": "pencil"}
+            , {"id": "002", "name": "ruffle"}
+        ]
+            , "size": true
+            , "sizes": [
+            {"id": "01", "name": "Short (48cm)"}
+            , {"id": "02", "name": "Knee (58cm)"}
+            , {"id": "04", "name": "Long (68cm)"}
+        ]
+            , "trim": false
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+            , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+    ]}
+]
+}    , "collection":
+    [
+        {
+            "itemId": "skt-pen-1"
+            , "itemDesc": "Pencil skirt - Aubergine"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "013", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
+}

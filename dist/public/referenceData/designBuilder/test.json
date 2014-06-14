@@ -1,0 +1,152 @@
+{
+    "style":
+    {
+        "styleId": "test"
+        , "type": "dress"
+        , "styleName": "Test"
+        , "styleFormalName": "Test Dress"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Old mother hubbard"
+        , "... and the cupboard was bear!"]
+        , "care": [ "Wash it!"
+        , ""
+        , ""]
+        , "price": 1
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-000"
+        , "defaultItemId": "test-1"
+        , "foxyImage": "pat-000"
+        , "fc_category": "category||f1e17b3d532b1ce5895c19d6592612e60fad295cca9600ebc3ae7930c1e7f535"
+        , "fc_code": "code||fd0e05f12bb5f99a452ae9edb849c24e7c6829298ac68b14e70f828632e3f6bf"
+        , "fc_name": "name||d05d5633cd837fc0834fe0cbb69bd72a47283097fb6313214d9df15ffab052c3||open"
+        , "fc_price": "price||64cfda8c46aa21ea65354a90dd1bb4ef4c327d4997d34d29174aabd6db3ec849"
+        , "fc_image":"image||8fda3f239a272b088d0a6719a46d17f93f74969dbb15a75bb3861225143174af||open"
+        , "fc_url": "url||ba412e2b2980eb03f7b4e05686c00365c16cf8c96b4bfc243585c508f57d84fb||open"
+
+        , "fc_neckline":"neckline||96122d0b14d8d40715ee2ada03fe00291aac610f0616a27723323ac1c73d4819||open"
+        , "fc_sleeves":"sleeves||5e1834dd3fed00311322430d4451bdec965f91de96b1c97e5e75bbd3f4fcf27c||open"
+        , "fc_skirt":"skirt||ba6cbb428bb8a8b76dd75151fd8005d8cca6972b329124a53e7b13cfda1a80b4||open"
+        , "fc_peplum":"peplum||cc790a8f285e1b09ee31c028c92518841018ee61031fcda3b2a2ca167a868bc3||open"
+        , "fc_rosetta":"rosetta||269f1a64881e31a0983e1cd8b8899d85b5310cd68918d3edfffc4a28c7f0ba93||open"
+        , "fc_belt":"belt||fdfa2ed5d2d55391e3cf2221a6a2e1c3af1a2cf1b1a188efa9364682d05b22cd||open"
+        , "fc_size":"size||50044d71f1d0c96eb0e1e813949506322813805765a4f11591c1ff40ef5501f9||open"
+        , "fc_bust":"bust||fe6cff3f9a9c3e540d3ce2744aa34cc69a35d8b16db93a69345bd0d2b130bdd3||open"
+        , "fc_waist":"waist||e52e5255411b8e73adadcb7244c26e7322466d0a144b65642183c930431edda0||open"
+        , "fc_hips":"hips||0a81f33d69a23baca0d14d613d96a101906999d4a2b339ff21a0f147c3330368||open"
+        , "fc_hollowfloor":"hollow_to_floor||8c7a971b3b68bec325240265b9638ee9b4c59bfbaf25a4315ee5dc6d2bbd5c16||open"
+        , "fc_height":"my_height||8de394e388497a11eadce3e7b9292ed716c67d657357dae7d55bed0e24568275||open"
+    }
+    , "design_builder":
+{
+    "model": "strap-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [ {"setId": "s-vc"}]
+            , "values": [
+            {"id": "001", "name": "bateau"}
+            , {"id": "002", "name": "scoop"}
+            , {"id": "003", "name": "v-slit"}
+            , {"id": "004", "name": "wrap"}
+        ]
+            , "size": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "000", "name": "none"}
+                , {"id": "002", "name": "cap"}
+                , {"id": "006", "name": "elbow"}
+                , {"id": "009", "name": "flared"}
+            ]
+        }
+        ,{
+            "part_name": "skirt"
+            , "type": "skt"
+            , "label": "Skirt"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "001", "name": "pencil"}
+                , {"id": "002", "name": "ruffle"}
+            ]
+            , "size": true
+            , "sizes": [
+                {"id": "01", "name": "short"}
+                , {"id": "02", "name": "knee"}
+                , {"id": "04", "name": "long"}
+            ]
+            , "trim": false
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "peplum"
+            , "type": "ext"
+            , "label": "Peplum"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+        , {
+            "part_name": "rosetta"
+            , "type": "ext"
+            , "label": "Rosetta"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+            ]
+        }
+        , {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "004", "name": "Obi belt", "defaultFabric": "111", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "x-pt"}]}
+            ]
+        }
+    ]}
+]
+}
+    , "collection":
+    [
+        {
+            "itemId": "test-1"
+            , "itemDesc": "Test - Empress"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "011", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "011", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
+}

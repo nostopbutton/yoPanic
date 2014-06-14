@@ -1,0 +1,137 @@
+{
+    "style":
+    {
+        "styleId": "top-classic"
+        , "type": "top"
+        , "styleName": "Classic Top"
+        , "styleFormalName": "Top"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "The ultimate range of all our bodice styles available here separately to mix and match with your perfect skirt."
+        , "" ]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 1400
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-104"
+        , "defaultItemId": "top-1"
+        , "foxyImage": "pat-104"
+        , "fc_category":"category||d5a3cbb96144f1e84e1176dbdbb53edc4587b28bc093aab9508ee32621ea4fab"
+        , "fc_code":"code||ac719b96ebc93f54dbd527d255e3ecf865248134e4b9290c7ada1a17da35c024"
+        , "fc_name":"name||d5c0a7ecf4bebac0ed05320069241ba5d4807ce3d05353cbefc9afd0a415bda3||open"
+        , "fc_price":"price||5bde7c879ebb282f87cd01b42a709831707e61cf9fc2f6e01018de86b0a18ceb"
+        , "fc_image":"image||404dd7a6903ed1e7a2cb6b43fcee5e0fb29332a0dd2b83c754943aba87ed2c3b||open"
+        , "fc_url":"url||30614cb1ade285294fe2d276e0f1ef7c04373ceb6d235df89789db84cc845f8d||open"
+
+        , "fc_neckline":"neckline||0a168ce5a99106f7126c4a526822b783b9c1668a8fb3acf5844ae6d73b8cf191||open"
+        , "fc_sleeves":"sleeves||5c97be25664374ef2fe4487d87862d27e5efb0015abbc5e94ac8a5a219f0ffc1||open"
+        , "fc_skirt":"skirt||5d7ba2ca9ebb0d67e1771724c4156c38cd14c3746168db93fd79a0f54760953b||open"
+        , "fc_peplum":"peplum||9d00f75d71b7bb2798d1a362e12cdac840295c56b3a1c8df90bebcee7d6ed34d||open"
+        , "fc_rosetta":"rosetta||3244cb70763342043a5bf5538c5865ece6931ccfe21d223605880fe69873dc36||open"
+        , "fc_belt":"belt||f753f7cd41400a5fa6bca311861d082a27716caa71a7c16490a41f5aa21fea28||open"
+
+        , "fc_size":"size||2592dd44f81d9f8c87756b2b1a8a91d0d46c6309478a15d28da2c8d893ebcad7||open"
+        , "fc_bust":"bust||19d64d0c18c0ffb3980ee8a1429de56ac9bb2ac08462142887d26d36499bcf68||open"
+        , "fc_waist":"waist||8c712a94462c8c752556e1c95a33f8b1c0b1ab9d33484bbd6490beabd2723870||open"
+        , "fc_hips":"hips||deb290f1157fd8efed50dafab3a7e8d72ec7f9c677a282345757c262e7db278f||open"
+        , "fc_hollowfloor":"hollow_to_floor||30c0620d84c46f3d27e0bad1a8baafc7b983c79fab2b0abbed6d6cf76b6df319||open"
+        , "fc_height":"my_height||f9783a41d168565611779c628d062239ca2bbafb57332437bdae90a4b974cd46||open"
+    }
+    , "design_builder":
+{
+    "model": "skirt-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [{"setId": "s-vc"}]
+            , "values": [
+            {"id": "001", "name": "bateau"}
+            , {"id": "002", "name": "scoop"}
+            , {"id": "003", "name": "v-slit"}
+            , {"id": "004", "name": "wrap"}
+        ]
+            , "size": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "000", "name": "none"}
+                , {"id": "002", "name": "cap"}
+                , {"id": "006", "name": "elbow"}
+                , {"id": "009", "name": "flared"}
+            ]
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "peplum"
+            , "type": "ext"
+            , "label": "Peplum"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+        , {
+            "part_name": "rosetta"
+            , "type": "ext"
+            , "label": "Rosetta"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+            ]
+        }
+        , {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "004", "name": "Obi belt", "defaultFabric": "118", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+
+            ]
+        }
+    ]}
+]
+}    , "collection":
+    [
+        {
+            "itemId": "top-1"
+            , "itemDesc": "Top - Aubergine"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "10", "fabric": "013", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "013", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
+}

@@ -1,0 +1,185 @@
+{
+    "style":
+    {
+        "styleId": "sheath"
+        , "type": "dress"
+        , "styleName": "Coco"
+        , "styleFormalName": "Sheath Dress"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "The Coco is the ultimate sheath dress – impeccably tailored in stretch crepe for a figure hugging but comfortable fit."
+        , "It features classic tailoring alongside modern pattern development to give you a sassy edge to a timeless classic."]
+        , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
+        , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
+        , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
+        , "price": 2200
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-301"
+        , "defaultItemId": "sheath-1"
+        , "foxyImage": "pat-301"
+        , "fc_category": "category||f0413cfa2afa3244e16b1d1893e138c9669316c8a3597fb9c34b6ab99826ab54"
+        , "fc_code": "code||2a36651dbfd988e00f18a02e5cbdee7dd867168bb305909c496517204d25ae31"
+        , "fc_name": "name||7aff6915f6e588c9e348a8841d741ad0564c75b5ff6b2750eb989c3f04be1a6d||open"
+        , "fc_price": "price||d8436f82703deab6c45741deb74e2721d823a06e01901080dd7d60b1ab533412"
+        , "fc_image": "image||df0c77da9365f3d26c8a2d802c694dfb8eeb89cd5425e9b7e72e1fbf4ea3aeb8||open"
+        , "fc_url": "url||2ab1d7cf48d9afe991ac5769fbb34300fd3280c48e55055251d58f8a24921f8d||open"
+
+        , "fc_neckline": "neckline||df5b3e809f1583f528a7b49cc219475db6da209ddbe94767b39f705ef9f4d4b1||open"
+        , "fc_sleeves": "sleeves||0a23da813c947351c1edca32042b6d495e21f6f96f35fd907b91480ed64770a9||open"
+        , "fc_skirt": "skirt||15dc71987ad145e53fe8364dc4a6b55f079d3e99f8212abcf5c44a4ed2f977f4||open"
+        , "fc_peplum": "peplum||bc1407ab12dd24e1862c177e9424492dd11fdf11cd0f50a29359992de726f4ab||open"
+        , "fc_rosetta": "rosetta||fb4acd6b327a36b8340ee8b97d25231d441ba0602c703de4f93ed620dd0414eb||open"
+        , "fc_belt": "belt||34062ce199df92f8e205c6b1aaef4c7b7e399b92f185cf1466d89e225928a8ac||open"
+
+        , "fc_size": "size||2f7c598d5a3111210e3c29417f1057dec4a8b4230ad9b7af857d720508078702||open"
+        , "fc_bust": "bust||9a2319c3c304dcb5f997ea4088a4f138d0b92ef5fc2c8d0ad32d56bcb94e20d1||open"
+        , "fc_waist": "waist||f18457a4bf5fe366f6cbbb077f6d4698d4a117933536c602161b76bffc86173b||open"
+        , "fc_hips": "hips||7881033f483d89dce21fb4da2b8deafe2fd7cb29a875966dbcaf6e9364c30016||open"
+        , "fc_hollowfloor": "hollow_to_floor||f216d4c6f87170c05f6040636b056ac9e704f0d83f298139172f84f00e355616||open"
+        , "fc_height": "my_height||4ddb443add82cc59378a3e7fcfae0f4f945c5470714998d0ad91da6801c6d9c5||open"
+    }
+    , "design_builder":
+{
+    "model": "strap-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [ {"setId": "s-vc"}]
+            , "values": [
+            {"id": "001", "name": "bateau"}
+            , {"id": "002", "name": "scoop"}
+            , {"id": "003", "name": "v-slit"}
+            , {"id": "004", "name": "wrap"}
+        ]
+            , "size": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "x-fl"}]
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "000", "name": "none"}
+                , {"id": "002", "name": "cap"}
+                , {"id": "006", "name": "elbow"}
+                , {"id": "009", "name": "flared"}
+            ]
+        }
+        ,{
+            "part_name": "skirt"
+            , "type": "skt"
+            , "label": "Skirt"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "001", "name": "pencil"}
+                , {"id": "002", "name": "ruffle"}
+            ]
+            , "size": true
+            , "sizes": [
+                {"id": "01", "name": "short"}
+                , {"id": "02", "name": "knee"}
+                , {"id": "04", "name": "long"}
+            ]
+            , "trim": false
+        }
+    ]
+    }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "peplum"
+            , "type": "ext"
+            , "label": "Peplum"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+            {"id": "002", "name": "peplum", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+        ]
+        }
+        , {
+            "part_name": "rosetta"
+            , "type": "ext"
+            , "label": "Rosetta"
+            , "fabricSets": [ {"setId": "s-vc"}, {"setId": "x-fl"}]
+            , "values": [
+                {"id": "003", "name": "rosetta", "defaultFabric": "011", "fabricSets": [ {"setId": "s-vc"}]}
+            ]
+        }
+        , {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+                {"id": "004", "name": "Obi belt", "defaultFabric": "103", "fabricSets": [ {"setId": "x-l"}]}
+                , {"id": "002", "name": "Ribbon belt", "defaultFabric": "008", "fabricSets": [ {"setId": "s-vc"}]}
+            ]
+        }
+    ]}
+]
+}
+    , "collection":
+    [
+        {
+            "itemId": "sheath-1"
+            , "itemDesc": "Sheath - Black"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "009", "size": "00", "fabric": "011", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "011", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+        , {
+        "itemId": "sheath-2"
+        , "itemDesc": "Wrap sheath - Cream / Black"
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": "120"}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "008", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "011", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    }
+        , {
+        "itemId": "sheath-3"
+        , "itemDesc": "Wrap sheath - Cream"
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "01", "fabric": "008", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    }
+    ]
+}

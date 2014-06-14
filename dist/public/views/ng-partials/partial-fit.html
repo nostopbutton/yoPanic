@@ -1,0 +1,149 @@
+<div id="fit-panel">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+
+
+                <!--<div> Whole foxyForm valid? {{foxyForm.$valid}}</div>-->
+                <!--<div> subform valid? {{subform.$valid}}</div>-->
+
+                <div ng-form='subform'>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Select the size of your DRESS:</h4>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div id="size-input" class="form-group">
+                                <div class="col-sm-9 col-xs-10 col-xs-offset-1 input-group">
+                                    <select ng-model="sizing.size"
+                                            class="form-control input-sm"
+                                            ng-options="size for size in item.style.dressSizes">
+                                        <!--<option value="" disabled selected>required</option>-->
+                                    </select>
+
+                                    <p style="text-align:right">
+                                        <a data-toggle="modal" data-target="#size-chart-modal"
+                                           ng-click="gaEvent('link', 'click', 'builder-fit-size-chart')">Size chart</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="hidden-xs">
+                        At AURZA we use our expertise to combine our 3D developed patterns and YOUR measurements to
+                        give you a superior fit. All you need to do is provide 4 basic measurements and / or choose
+                        the size* that you think is best for you. All size and design customisations are included in
+                        the price.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Tell us your measurements:</h4>
+
+                            <p>Use our <a data-toggle="modal" data-target="#measure-guide-modal"
+                                          ng-click="gaEvent('link', 'click', 'builder-fit-measure-guide-1')">how to measure
+                                guide</a></p>
+
+                            <p class="note hidden-xs">
+                                * Please note, from our extensive testing, simply providing 4 key measurements
+                                significantly
+                                improves our ability to perfect your dress. It takes only 5 minutes, is really easy to
+                                do and guidance on how to measure can be found
+                                <a data-toggle="modal" data-target="#measure-guide-modal"
+                                        ng-click="gaEvent('link', 'click', 'builder-fit-measure-guide-2')">here</a>.
+                                If once you have submitted your measurements we feel we need any additional information,
+                                we will contact you immediately.
+                            </p>
+                            <p class="note hidden-xs">
+                                ** Creating garments with measurements greater or smaller than our current size chart may still be possible depending on the design chosen however please email us directly for information at info@aurza.com
+                            </p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 ">
+                            <div class="form-group">
+
+                                <label for="bustInput" class="col-xs-3 control-label">Bust:</label>
+
+                                <div class="col-sm-6 col-xs-9 input-group">
+                                    <input type="number" class="form-control input-sm" placeholder="optional"
+                                           id="bustInput" ng-model="sizing.bust" name="bust"
+                                           min="80" max="123" integer
+                                           ng-disabled="!tabs.fit"/>
+                                    <span class="input-group-addon">cm</span>
+                                </div>
+                                <div class="col-sm-offset-3">
+                                    <span ng-show="subform.bust.$error.number">
+                                        This is not valid number!</span>
+                                    <span ng-show="subform.bust.$error.min || subform.bust.$error.max">
+                                        ** Must be in range 80 to 123 cm</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="waistInput" class="col-xs-3 control-label">Waist:</label>
+
+                                <div class="col-sm-6 col-xs-9 input-group">
+                                    <input type="number" class="form-control input-sm" placeholder="optional"
+                                           id="waistInput" ng-model="sizing.waist" name="waist"
+                                           min="63" max="109" integer
+                                           ng-disabled="!tabs.fit" />
+                                    <span class="input-group-addon">cm</span>
+                                </div>
+                                <div class="col-sm-offset-3">
+                                    <span ng-show="subform.waist.$error.number">
+                                        This is not valid number!</span>
+                                    <span ng-show="subform.waist.$error.min || subform.waist.$error.max">
+                                        ** Must be in range 63 to 109 cm</span>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="hipsInput" class="col-xs-3 control-label">Hips:</label>
+
+                                <div class="col-sm-6 col-xs-9 input-group">
+                                    <input type="number" class="form-control input-sm" placeholder="optional"
+                                           id="hipsInput" ng-model="sizing.hips" name="hips"
+                                           min="85" max="131" integer
+                                           ng-disabled="!tabs.fit"/>
+                                    <span class="input-group-addon">cm</span>
+                                </div>
+                                <div class="col-sm-offset-3">
+                                    <span ng-show="subform.hips.$error.number">
+                                        This is not valid number!</span>
+                                    <span ng-show="subform.hips.$error.min || subform.hips.$error.max">
+                                        ** Must be in range 85 to 131 cm</span>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="heightInput" class="col-xs-3 control-label">Height:</label>
+
+                                <div class="col-sm-6 col-xs-9 input-group">
+                                    <input type="number" class="form-control input-sm" placeholder="optional"
+                                           id="heightInput" ng-model="sizing.height" name="height"
+                                           integer
+                                           ng-disabled="!tabs.fit"/>
+                                    <span class="input-group-addon">cm</span>
+                                </div>
+                                <div class="col-sm-offset-3">
+                                    <span ng-show="subform.height.$error.number">
+                                        This is not valid number!</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group order-button">
+                                <label for="order-button" class="col-sm-3 col-xs-0 control-label hidden-xs"></label>
+                                <!--<div class="col-sm-6 input-group">-->
+                                <button class="btn btn-primary col-sm-6 col-xs-12 input-group" id="order-button"
+                                        href="" data-toggle="tab" ng-disabled="!subform.$valid"
+                                        ng-click="tabs.order = true; gaEvent('button', 'click', 'builder-fit-buy')">
+                                    Buy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

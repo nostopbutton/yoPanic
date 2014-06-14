@@ -1,0 +1,114 @@
+{
+    "style":
+    {
+        "styleId": "shirt"
+        , "type": "silk"
+        , "styleName": "Elle"
+        , "styleFormalName": "Shirt Dress"
+        , "shortDesc": ""
+        , "strapline": ""
+        , "description": [ "Effortless and wonderfully flattering, the shirt dress is a hardworking and versatile addition to your wardrobe."
+        , "It has a lightly asymmetric hem and clever buttoned tabs to roll up cuff sleeves on the those hotter days." ]
+        , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
+        , "For best results dry clean."]
+        , "price": 2100
+        , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
+            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
+        , "silhouetteImage": "pat-203-body"
+        , "defaultItemId": "shirt-1"
+        , "foxyImage": "pat-203"
+        , "fc_category": "category||72beeb4cc408897d7fcb919d54c1812e5dec24c50a580cb2b309c7f281ea19aa"
+        , "fc_code": "code||62ff1f2c43d7a566d28218bf5166c1016d273dac30e440060a840a38ccc49101"
+        , "fc_name": "name||91244e042279809a7afba196b0a5f49f4f4752de57abd74770cb04d5f595e70e||open"
+        , "fc_price": "price||f6e61cc9d8d98d0a3a8d8e8783cabe218e2f066c2c487d1be9c5317ccf9cf36c"
+        , "fc_image": "image||dbc7c8192e448ed1223f8c148e1fc670548ef829eb3216a34d2d480a7a142b8c||open"
+        , "fc_url": "url||2ec82db98b42e7e341135a11f3b60afc7ec38cc767ea24f53ad700aacce8b016||open"
+
+        , "fc_neckline": "neckline||3556a98b2e5c669b1fc458ebf900d8cec5625637f6144f3c94a90003cf26ff6d||open"
+        , "fc_sleeves": "sleeves||f9bfd8cd37a7e0d821a2ae1da4f3f77fcef4b5546ce790e9e61cc416414884e7||open"
+        , "fc_skirt": "skirt||3cd60b1802ebff39a5b101e76d3a7edb26259c63865ad0b17467da890b055bb9||open"
+        , "fc_peplum": "peplum||a43d6711f138d2df132684601f6785d5b4b4a2838017a2667876276b86ef9f10||open"
+        , "fc_rosetta": "rosetta||470b882c51c0ec7eb807eb93876f4143318868678000d1da0d56bc98a9a74ad9||open"
+        , "fc_belt": "belt||5f3397b789ce2643dd012bdef7ae12fd6edd3a856eb6746554663f90370e4fdc||open"
+
+        , "fc_size": "size||4e27352d4a40f1b9cb0bd9625520df3c7c7457665e557db5e7140cbf0da1f638||open"
+        , "fc_bust": "bust||ef7418e9d049bf15f088c5eccea9c8b1f2cb9e065954a1fcf6671f569c413f42||open"
+        , "fc_waist": "waist||e99a545c63502918bed32daee587d9b2ae52d37a28e8e537d049c5bd2bc0afdc||open"
+        , "fc_hips": "hips||b481c9254503874d153d02a485d37bf7f200f3a03856c80a8f4dba78fb75b77a||open"
+        , "fc_hollowfloor": "hollow_to_floor||acde7b03fc566521acb33ed2104b333cd800a2f88deb822b9841a5dfb538303a||open"
+        , "fc_height": "my_height||466fb0cd295f0cf01d9ee740c82a3df5f4da9235596663421bd6ccc2b8a05952||open"
+    }
+    , "design_builder":
+{
+    "model": "strap-whole-body"
+    , "options": [
+    {
+        "option_name": "design"
+        , "parts": [
+        {
+            "part_name": "neckline"
+            , "type": "nek"
+            , "active": "true"
+            , "label": "Neckline"
+            , "fabricSets": [{"setId": "p-sk"}, {"setId": "pr-sk"}]
+            , "values": [
+            {"id": "017", "name": "shirt collar"}
+            , {"id": "018", "name": "shirt no collar"}
+        ]
+            , "size": true
+            , "sizes": [
+            {"id": "02", "name": "knee"}
+        ]
+            , "trim": false
+        }
+        ,{
+            "part_name": "sleeves"
+            , "type": "slv"
+            , "label": "Sleeves"
+            , "fabricSets": [ {"setId": "p-sk"}, {"setId": "pr-sk"}]
+            , "null_value": "000"
+            , "values": [
+                {"id": "016", "name": "shirt short"}
+                , {"id": "011", "name": "shirt long tab"}
+            ]
+        }
+    ]
+    }]
+
+}
+    , "collection":
+    [
+        {
+            "itemId": "shirt-1"
+            , "itemDesc": "Shirt - Cobalt"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "087", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "087", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "shirt-2"
+            , "itemDesc": "Shirt - Teal"
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "085", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+    ]
+}
