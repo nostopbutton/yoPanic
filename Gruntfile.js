@@ -90,6 +90,7 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/templates/partials/{,*//*}*.hbs'],
                 tasks: ['assemble:serverDesignBuilder'
                         , 'assemble:serverMaintenance'
+                        , 'assemble:serverProduct'
                          , 'assemble:serverDist']
             },
             livereload: {
@@ -157,6 +158,17 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/maintenance/*.hbs']
                 }
             },
+            product:
+            {
+                // override task-level layout
+                options: {
+                    layout: 'product.hbs'
+                    , partials: ['.tmp/templates/partials/*.hbs']
+                } ,
+                files: {
+                    '<%= yeoman.dist %>/public/': ['<%= yeoman.app %>/templates/pages/products/*.hbs']
+                }
+            },
             dist: {
                 options: {
                     partials: ['.tmp/templates/partials/*.hbs']
@@ -179,6 +191,16 @@ module.exports = function (grunt) {
                 } ,
                 files: {
                     '.tmp/html/': ['<%= yeoman.app %>/templates/pages/maintenance/*.hbs']
+                }
+            },
+            serverProduct:
+            {
+                // override task-level layout
+                options: {
+                    layout: 'product.hbs'
+                } ,
+                files: {
+                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/products/*.hbs']
                 }
             },
             serverDist: {
@@ -850,6 +872,7 @@ module.exports = function (grunt) {
             'concurrent:server'
             , 'assemble:serverDesignBuilder'
             , 'assemble:serverMaintenance'
+            , 'assemble:serverProduct'
             , 'assemble:serverDist'
 //            'autoprefixer',
             , 'express:dev',
@@ -925,6 +948,8 @@ module.exports = function (grunt) {
         ,'usemin'
         , 'assemble:dist'
         , 'assemble:designBuilder'
+        , 'assemble:maintenance'
+        , 'assemble:product'
 //        ,'htmlmin:dist'
 //        ,'htmlmin:deploy'
 //        , 'install-dependencies'
@@ -949,6 +974,8 @@ module.exports = function (grunt) {
         ,'usemin'
         , 'assemble:dist'
         , 'assemble:designBuilder'
+        , 'assemble:maintenance'
+        , 'assemble:product'
 //        ,'htmlmin:dist'
 ////        ,'htmlmin:deploy'
 ////        , 'install-dependencies'

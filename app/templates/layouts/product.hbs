@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- Updated html tag to include the itemscope and itemtype attributes. -->
+<html itemscope itemtype="http://schema.org/Product" ng-app="productApp" class="no-js" lang="en">
+<head>
+    <!-- Meta data and css links-->
+    {{>product-head}}
+    {{>design-builder-head}}
+    {{>shims}}
+
+    <!-- Include GA script (just before </head> as rec by Google -->
+    {{>foxy-track}}
+    {{>google-analytics}}
+</head>
+<body>
+<!-- Header Navigation -->
+{{>header}}
+
+<!-- The body of the page -->
+{{>body}}
+
+<!-- Footer Navigation -->
+{{>footer}}
+
+<!-- Include JS scripts -->
+{{>static-scripts}}
+{{>design-builder-scripts}}
+</body>
+</html>

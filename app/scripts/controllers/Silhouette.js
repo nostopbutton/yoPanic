@@ -186,9 +186,23 @@ angular.module('panicApp.Controllers')
             $scope.loading = false
         });
     }])
+    .controller('productController', ['$scope', '$location', '$anchorScroll' , function ($scope, $location, $anchorScroll) {
+        $scope.scrollTo = function (id) {
+            $location.hash(id);
+            $anchorScroll();
+        }
+
+        $scope.$on('LOAD', function () {
+            $scope.loading = true
+        });
+        $scope.$on('UNLOAD', function () {
+            $scope.loading = false
+        });
+    }])
     .controller('MetaCtrl', ['$scope', 'MetaData', function ($scope, MetaData) {
         $scope.data = MetaData;
     }])
     .controller('MetaCtrlInput', ['$scope', 'MetaData', function ($scope, MetaData) {
         $scope.data = MetaData;
     }]);
+
