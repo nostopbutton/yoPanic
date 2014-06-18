@@ -15,7 +15,7 @@ angular.module('panicApp.Controllers')
                 styles = result;
 
                 var itemsPromise = CatalogueService.getItemCollectionWithStyleDataPromiseForStyles(
-                    ['sheath', 'doloman', 'swing', 'swoosh'
+                    ['sheath', 'doloman', 'swing', 'swoosh', 'bustier', 'pencil-skirt'
                         , 'shift', 'shirt', 'shirt-maxi', 'flare']);
                 var items = [], itemIds = [];
 

@@ -89,12 +89,65 @@
     [
         {
             "itemId": "skt-pen-1"
-            , "itemDesc": "Pencil skirt - Aubergine"
+            , "itemDesc": "Pencil skirt - Teal"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-                ,"skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "013", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "010", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+        ,        {
+        "itemId": "skt-pen-2"
+        , "itemDesc": "Pencil skirt with ruffle - Creme"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "back.png"
+            }
+            , "product": ["dress", "back"]
+        }
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "008", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    },
+        {
+            "itemId": "skt-pen-3"
+            , "itemDesc": "Pencil skirt - Midnight blue"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "014", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},

@@ -220,6 +220,29 @@
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
         }
+        },
+        {
+            "itemId": "swoosh-10"
+            , "itemDesc": "Swoosh - Cream"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "010", "size": "02", "fabric": "008", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "008", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
         }
     ]
 }

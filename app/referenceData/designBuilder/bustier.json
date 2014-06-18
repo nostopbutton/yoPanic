@@ -112,15 +112,22 @@
     [
         {
             "itemId": "bustier-1"
-            , "itemDesc": "Bustier"
+            , "itemDesc": "Bustier - Cream"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "008", "size": "00", "fabric": "011", "trim": ""}
+                "neckline":   {"type": "nek", "id": "008", "size": "00", "fabric": "008", "trim": "120"}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "011", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "008", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "011", "code": "002-011"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
