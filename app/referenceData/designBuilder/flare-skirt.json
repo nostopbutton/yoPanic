@@ -87,8 +87,15 @@
     [
         {
             "itemId": "skt-fl-1",
-            "itemDesc": "Flare skirt - Teal",
-            "itemDesign": {
+            "itemDesc": "Flare skirt - Teal"
+            , "images": {
+"               collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+            , "product": ["front", "back", "dress"]
+            }
+            , "itemDesign": {
                 "design": {
                     "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                     , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}

@@ -40,7 +40,8 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
                 $scope.tabs[tab] = true;
             }
 
-            $scope.view = "-lg-front.jpg";
+            $scope.image= {"default":  "-lg-dress.jpg"};
+//                "view":  "-lg-frodnt.jpg"};
 
             // Put Style data into page scope
 //      ReferenceDataCache.getStyleById($routeParams.styleId, $scope);
@@ -53,11 +54,16 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
                     master = angular.copy(result.itemDesign.itemDesign);
                 }
                 range = angular.copy(result);
+
+                $scope.image.view = ($scope.item.itemDesign.hasOwnProperty('images') ? '-lg-' + $scope.item.itemDesign.images.product[0] + '.jpg': $scope.image.default);
+
                 $scope.master = master;     // so it can be viewed in debug screen
 //                console.log("master "+master)
                 $scope.params = $.param(master);
                 $scope.cancel();            // set form to master
             });
+
+
 
             $scope.isDebugCollapsed = true;
             $scope.styleId = styleId;

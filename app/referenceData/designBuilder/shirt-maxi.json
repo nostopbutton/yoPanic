@@ -82,10 +82,17 @@
         {
             "itemId": "shirtmaxi-1"
             , "itemDesc": "Maxi-Shirt - Coral"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "089", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "089", "trim": ""}
+                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "085", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
@@ -98,6 +105,13 @@
         {
             "itemId": "shirtmaxi-2"
             , "itemDesc": "Maxi-Shirt - Hot pink"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "088", "trim": ""}
@@ -114,6 +128,13 @@
         {
             "itemId": "shirtmaxi-3"
             , "itemDesc": "Maxi-Shirt - Cobalt"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "087", "trim": ""}

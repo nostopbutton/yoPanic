@@ -112,6 +112,13 @@
         {
             "itemId": "swoosh-1"
             , "itemDesc": "Swoosh - Aubergine"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "013", "trim": ""}
@@ -128,6 +135,13 @@
         {
             "itemId": "swoosh-2"
             , "itemDesc": "Swoosh - Midnight blue"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "014", "trim": ""}
@@ -144,6 +158,13 @@
         {
             "itemId": "swoosh-4"
             , "itemDesc": "Swoosh - Red"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "003", "trim": ""}
@@ -160,6 +181,13 @@
         {
             "itemId": "swoosh-5"
             , "itemDesc": "Swoosh - Black"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "011", "trim": ""}
@@ -176,6 +204,13 @@
         {
             "itemId": "swoosh-7"
             , "itemDesc": "Swoosh - Auberine"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "013", "trim": ""}
@@ -192,6 +227,13 @@
         {
             "itemId": "swoosh-8"
             , "itemDesc": "Swoosh - Black"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "011", "trim": ""}
@@ -208,6 +250,13 @@
         {
             "itemId": "swoosh-9"
             , "itemDesc": "Swoosh - Midnight blue"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "014", "trim": ""}

@@ -90,6 +90,13 @@
         {
             "itemId": "swing-print-1"
             , "itemDesc": "Adele dress"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "001", "size": "01", "fabric": "301", "trim": ""}

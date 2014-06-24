@@ -88,7 +88,14 @@
     [
         {
             "itemId": "swing-silk-1"
-            , "itemDesc": "Carroe dress"
+            , "itemDesc": "Carrie dress"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "001", "size": "02", "fabric": "410", "trim": ""}

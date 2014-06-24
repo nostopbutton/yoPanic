@@ -117,6 +117,13 @@
         {
             "itemId": "doloman-1"
             , "itemDesc": "Doloman - Cream / Black"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "007", "size": "00", "fabric": "008", "trim": "120"}

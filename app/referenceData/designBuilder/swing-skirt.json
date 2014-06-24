@@ -89,6 +89,13 @@
         {
             "itemId": "skt-sw-1"
             , "itemDesc": "Swing skirt - Black Leather"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}

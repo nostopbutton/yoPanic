@@ -136,6 +136,13 @@
         {
             "itemId": "sheath-1"
             , "itemDesc": "Sheath - Black"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
@@ -152,6 +159,13 @@
         , {
         "itemId": "sheath-2"
         , "itemDesc": "Wrap sheath - Cream / Black"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
         , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": "120"}
@@ -168,6 +182,13 @@
         , {
         "itemId": "sheath-3"
         , "itemDesc": "Wrap sheath - Cream"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
         , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": ""}
