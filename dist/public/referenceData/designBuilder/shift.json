@@ -101,6 +101,13 @@
         {
             "itemId": "shift-1"
             , "itemDesc": "Shift - Hot pink"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "088", "trim": ""}
@@ -117,6 +124,13 @@
         {
             "itemId": "shift-2"
             , "itemDesc": "Shift - Teal"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                    }
+                    , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "085", "trim": ""}
@@ -133,6 +147,13 @@
         {
             "itemId": "shift-3"
             , "itemDesc": "Shift - Coral"
+            , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "089", "trim": ""}
@@ -149,6 +170,13 @@
         {
             "itemId": "shift-7"
             , "itemDesc": "Shift - Hot pink"
+            , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "088", "trim": ""}
@@ -165,6 +193,13 @@
         {
             "itemId": "shift-8"
             , "itemDesc": "Shift - Coral"
+            , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "089", "trim": ""}
@@ -181,6 +216,13 @@
         {
             "itemId": "shift-9"
             , "itemDesc": "Shift - Teal"
+            , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "085", "trim": ""}
@@ -197,6 +239,13 @@
         {
             "itemId": "shift-10"
             , "itemDesc": "Shift - Hot pink"
+            , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "088", "trim": ""}
@@ -213,6 +262,13 @@
         {
             "itemId": "shift-11"
             , "itemDesc": "Shift - Teal"
+            , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "085", "trim": ""}
@@ -229,6 +285,13 @@
         {
             "itemId": "shift-13"
             , "itemDesc": "Shift - Coral"
+            , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "014", "size": "02", "fabric": "089", "trim": ""}

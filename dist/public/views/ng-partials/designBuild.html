@@ -3,23 +3,23 @@
     <div ng-include="'/views/ng-partials/partial-sizing-modal.html'"></div>
     <div class="row">
 
-        <div class="col-lg-3" ng-show="!isDebugCollapsed" style="margin: 0 0 0 -120px">
-            <ul>
-                <li ng-repeat="design in form.design" ng-class-even="'alt'">
-                    {{design.type+"-"+design.id+"-"+design.size}} ({{design.fabric}})
-                    <br><br>
-                    {{design | lookup}} <br>({{design|fablookup}} {{design.trim|trimlookup}})
-                    <br><br>
-                </li>
-                <hr class="gradient">
-                <li ng-repeat="design in form.extras" ng-class-even="'alt'">
-                    {{design.type+"-"+design.id+"-"+design.size}} ({{design.fabric}})
-                    <br><br>
-                    {{design | lookup}} <br>({{design|fablookup}} {{design.trim|trimlookup}})
-                    <br><br>
-                </li>
-            </ul>
-        </div>
+        <!--<div class="col-lg-2" ng-show="!isDebugCollapsed" style="margin: 0 0 0 -120px">-->
+            <!--<ul>-->
+                <!--<li ng-repeat="design in form.design" ng-class-even="'alt'">-->
+                    <!--{{design.type+"-"+design.id+"-"+design.size}} ({{design.fabric}})-->
+                    <!--<br><br>-->
+                    <!--{{design | lookup}} <br>({{design|fablookup}} {{design.trim|trimlookup}})-->
+                    <!--<br><br>-->
+                <!--</li>-->
+                <!--<hr class="gradient">-->
+                <!--<li ng-repeat="design in form.extras" ng-class-even="'alt'">-->
+                    <!--{{design.type+"-"+design.id+"-"+design.size}} ({{design.fabric}})-->
+                    <!--<br><br>-->
+                    <!--{{design | lookup}} <br>({{design|fablookup}} {{design.trim|trimlookup}})-->
+                    <!--<br><br>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
 
         <div id="view_dress_image_panel" class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-5 col-xs-5">
             <div class="dress_image_panel">

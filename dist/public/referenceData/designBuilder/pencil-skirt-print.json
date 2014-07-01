@@ -15,7 +15,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
         "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-111"
-        , "defaultItemId": "skirt-pencil-print-1"
+        , "defaultItemId": "pencil-skirt-print-1"
         , "foxyImage": "pat-111"
 
         , "fc_category":"category||73d2e3878b2c94a7c1873e306c167a9a99569c25dddf60ee5bec3f74f9b32a3d"
@@ -86,8 +86,15 @@
     , "collection":
     [
         {
-            "itemId": "skirt-pencil-print-1"
+            "itemId": "pencil-skirt-print-1"
             , "itemDesc": "Test - Empress"
+            , "images": {
+               "collection": {
+                    "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}

@@ -15,7 +15,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
         "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-112"
-        , "defaultItemId": "skirt-swing-print-1"
+        , "defaultItemId": "swing-skirt-print-1"
         , "foxyImage": "pat-112"
         , "fc_category":"category||a579d3ec892f5c6da8e34bf268b4d75c6f7d2e26a4aba40954445dba0a5d4a5a"
         , "fc_code":"code||bba114c9b0be01dedeb24ac167ba9243c49bc1c3725710469485c6e44bb8efe3"
@@ -86,8 +86,15 @@
     , "collection":
     [
         {
-            "itemId": "skirt-swing-print-1"
+            "itemId": "swing-skirt-print-1"
             , "itemDesc": "Print swing skirt"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}

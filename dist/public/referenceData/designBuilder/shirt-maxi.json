@@ -15,7 +15,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
            "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-203maxi-body"
-        , "defaultItemId": "shirtmaxi-1"
+        , "defaultItemId": "shirt-maxi-1"
         , "foxyImage": "pat-203maxi"
         , "fc_category": "category||31b15320b56008f194e77afe8c28be726e177d430cce844e8da42b190117c473"
         , "fc_code": "code||75e0afeb9c76fb83c4c861b263270e78708ad90baf142d2ae581e79981d243cc"
@@ -80,12 +80,19 @@
     , "collection":
     [
         {
-            "itemId": "shirtmaxi-1"
+            "itemId": "shirt-maxi-1"
             , "itemDesc": "Maxi-Shirt - Coral"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "089", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "089", "trim": ""}
+                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "085", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "085", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
@@ -96,8 +103,15 @@
         }
         },
         {
-            "itemId": "shirtmaxi-2"
+            "itemId": "shirt-maxi-2"
             , "itemDesc": "Maxi-Shirt - Hot pink"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "088", "trim": ""}
@@ -112,8 +126,15 @@
         }
         },
         {
-            "itemId": "shirtmaxi-3"
+            "itemId": "shirt-maxi-3"
             , "itemDesc": "Maxi-Shirt - Cobalt"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "087", "trim": ""}

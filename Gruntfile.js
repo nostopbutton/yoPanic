@@ -16,6 +16,7 @@ module.exports = function (grunt) {
 //  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     require('load-grunt-tasks')(grunt);
     grunt.loadNpmTasks('assemble');
+//    grunt.loadNpmTasks('grunt-html-snapshot');
 
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
@@ -43,8 +44,9 @@ module.exports = function (grunt) {
                     debug: true
                 }
             },
-            prod: {
+            dist: {
                 options: {
+                    port: 9001,
                     script: 'dist/server.js',
                     node_env: 'production'
                 }
@@ -53,6 +55,9 @@ module.exports = function (grunt) {
         open: {
             server: {
                 url: 'http://localhost:<%= express.options.port %>'
+            },
+            dist: {
+                url: 'http://localhost:9001'
             }
         },
         watch: {
@@ -89,6 +94,7 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/templates/pages/{,*//*}*.hbs',
                     '<%= yeoman.app %>/templates/partials/{,*//*}*.hbs'],
                 tasks: ['assemble:serverDesignBuilder'
+                        , 'assemble:serverShop'
                         , 'assemble:serverMaintenance'
                         , 'assemble:serverProduct'
                          , 'assemble:serverDist']
@@ -124,6 +130,211 @@ module.exports = function (grunt) {
             }
         },
 
+//        htmlSnapshot: {
+//            all: {
+//                options: {
+//                    snapshotPath: 'dist/public/',
+//                    sitePath: 'http://127.0.0.1:9000/',
+//                    msWaitForPages: 1000,
+//                    urls: [
+//                        'design.html#!/design',
+//                        'shop.html#!/collection'
+//                    ]
+//                }
+//            }
+//        },
+
+        htmlSnapshot: {
+            options: {
+                //that's the path where the snapshots should be placed
+                //it's empty by default which means they will go into the directory
+                //where your Gruntfile.js is placed
+//                    snapshotPath: '.tmp/html/prerender/',
+                //This should be either the base path to your index.html file
+                //or your base URL. Currently the task does not use it's own
+                //webserver. So if your site needs a webserver to be fully
+                //functional configure it here.
+//                sitePath: 'http://127.0.0.1:9000/',
+                //you can choose a prefix for your snapshots
+                //by default it's 'snapshot_'
+                fileNamePrefix: '',
+                //by default the task waits 500ms before fetching the html.
+                //this is to give the page enough time to to assemble itself.
+                //if your page needs more time, tweak here.
+                msWaitForPages: 1000,
+                //sanitize function to be used for filenames. Converts '#!/' to '_' as default
+                //has a filename argument, must have a return that is a sanitized string
+                sanitize: function (requestUri) {
+                    console.log("requestUri:" +requestUri);
+
+                    //returns 'index.html' if the url is '/', otherwise a prefix
+                    if (/\/$/.test(requestUri)) {
+                        return 'index.html';
+                    } else {
+//                        return requestUri.replace(/.html#!\//g, '_').replace(/\//g, '_');
+//                        return requestUri.replace(/\/#!\//g, '_').replace(/\//g, '_');
+                        return requestUri.replace(/\/#!\//g, '_');
+                    }
+                },
+                //if you would rather not keep the script tags in the html snapshots
+                //set `removeScripts` to true. It's false by default
+                removeScripts: false,
+                //set `removeLinkTags` to true. It's false by default
+                removeLinkTags: false,
+                //set `removeMetaTags` to true. It's false by default
+                removeMetaTags: false,
+                //Replace arbitrary parts of the html
+                replaceStrings:[
+//                        {'this': 'will get replaced by this'},
+//                        {'/old/path/': '/new/path'}
+                    {'alert alert-info': 'hidden'}
+                    , {'"/shop/#!/': '"http://aurza.com/shop/#!/'}
+                    , {'"#!/': '"http://aurza.com/shop/#!/'}
+                    , {'ng-app="panicApp"': ''}
+                    , {'ng-controller="appController"': ''}
+                    , {'ng-view': ''}
+
+                ],
+                // allow to add a custom attribute to the body
+                bodyAttr: 'data-prerendered',
+//                input: "sitemap",
+//                source: "./sitemap-prerender.xml",
+//                //here goes the list of all urls that should be fetched
+                urls: [
+                    'shop/#!/collection',
+                    'shop/#!/design',
+                    'shop/#!/design/sheath',
+                    'shop/#!/item/sheath/sheath-1',
+                    'shop/#!/item/sheath/sheath-2',
+                    'shop/#!/item/sheath/sheath-3',
+                    'shop/#!/item/sheath/sheath-4',
+                    'shop/#!/item/sheath/sheath-5',
+                    'shop/#!/item/sheath/sheath-6',
+                    'shop/#!/item/sheath/sheath-7',
+                    'shop/#!/item/sheath/sheath-8',
+
+                    'shop/#!/design/doloman',
+                    'shop/#!/item/doloman/doloman-1',
+
+                    'shop/#!/design/swoosh',
+                    'shop/#!/item/swoosh/swoosh-1',
+                    'shop/#!/item/swoosh/swoosh-2',
+                    'shop/#!/item/swoosh/swoosh-4',
+                    'shop/#!/item/swoosh/swoosh-5',
+                    'shop/#!/item/swoosh/swoosh-7',
+                    'shop/#!/item/swoosh/swoosh-8',
+                    'shop/#!/item/swoosh/swoosh-9',
+                    'shop/#!/item/swoosh/swoosh-10',
+
+                    'shop/#!/design/flare',
+                    'shop/#!/item/flare/flare-1',
+                    'shop/#!/item/flare/flare-2',
+                    'shop/#!/item/flare/flare-3',
+                    'shop/#!/item/flare/flare-4',
+
+                    'shop/#!/design/bustier',
+                    'shop/#!/item/bustier/bustier-1',
+
+                    'shop/#!/design/swing',
+                    'shop/#!/item/swing/swing-1',
+                    'shop/#!/item/swing/swing-2',
+                    'shop/#!/item/swing/swing-3',
+
+                    'shop/#!/design/shift',
+                    'shop/#!/item/shift/shift-1',
+                    'shop/#!/item/shift/shift-2',
+                    'shop/#!/item/shift/shift-3',
+                    'shop/#!/item/shift/shift-7',
+                    'shop/#!/item/shift/shift-8',
+                    'shop/#!/item/shift/shift-9',
+                    'shop/#!/item/shift/shift-10',
+                    'shop/#!/item/shift/shift-11',
+                    'shop/#!/item/shift/shift-13',
+
+                    'shop/#!/design/bustier-print',
+//                    'shop/#!/item/bustier-print/bustier-print-1',
+
+                    'shop/#!/design/swing-print',
+//                    'shop/#!/item/swing-print/swing-print-1',
+
+                    'shop/#!/design/shirt-maxi',
+                    'shop/#!/item/shirt-maxi/shirt-maxi-1',
+                    'shop/#!/item/shirt-maxi/shirt-maxi-2',
+                    'shop/#!/item/shirt-maxi/shirt-maxi-3',
+
+                    'shop/#!/design/shirt',
+                    'shop/#!/item/shirt/shirt-1',
+                    'shop/#!/item/shirt/shirt-2',
+
+                    'shop/#!/design/swing-silk',
+//                    'shop/#!/item/swing-silk/swing-silk-1',
+
+                    'shop/#!/design/flare-skirt',
+//                    'shop/#!/item/flare-skirt/flare-skirt-1',
+
+                    'shop/#!/design/pencil-skirt',
+                    'shop/#!/item/pencil-skirt/pencil-skirt-1',
+                    'shop/#!/item/pencil-skirt/pencil-skirt-2',
+                    'shop/#!/item/pencil-skirt/pencil-skirt-3',
+
+                    'shop/#!/design/swing-skirt',
+//                    'shop/#!/item/swing-skirt/swing-skirt-1',
+
+                    'shop/#!/design/swing-skirt-print',
+//                    'shop/#!/item/swing-skirt-print/swing-skirt-print-1',
+
+                    'shop/#!/design/pencil-skirt-print',
+//                    'shop/#!/item/pencil-skirt-print/pencil-skirt-print-1',
+
+                    'shop/#!/design/swing-skirt-silk',
+//                    'shop/#!/item/swing-skirt-silk/swing-skirt-silk-1',
+
+                    'shop/#!/design/top-classic'
+//                    'shop/#!/item/top-classic/top-classic-1'
+                ],
+
+//http://aurza.com/shop/#!/collection
+//http://aurza.com/shop/?_escaped_fragment_=/collection
+//http://dontpanicthecat.com/shop/#!/collection
+//http://dontpanicthecat.com/shop/?_escaped_fragment_=/collection
+//
+//http://aurza.com/shop/#!/item/sheath/sheath-1
+//http://aurza.com/shop/?_escaped_fragment_=/item/sheath/sheath-1
+//http://dontpanicthecat.com/shop/#!/sheath/sheath-1
+//http://dontpanicthecat.com/shop/?_escaped_fragment_=/item/sheath/sheath-1
+
+//
+//http://aurza.com//shop/#!/design
+//http://aurza.com//shop/?_escaped_fragment_=/design
+//http://dontpanicthecat.com/shop/#!/design
+//http://dontpanicthecat.com/shop/?_escaped_fragment_=/design
+
+//
+//http://aurza.com/shop/#!/design/sheath
+//http://aurza.com/shop/?_escaped_fragment_=/design/sheath
+//http://dontpanicthecat.com/shop/#!/design/sheath
+//http://dontpanicthecat.com/shop/?_escaped_fragment_=/design/sheath
+
+                // a list of cookies to be put into the phantomjs cookies jar for the visited page
+                cookies: [
+                    {"path": "/", "domain": "localhost", "name": "lang", "value": "en-gb"}
+                ]
+            },
+            server:{
+                options: {
+                    sitePath: 'http://127.0.0.1:9000/',
+                    snapshotPath: '.tmp/html/snapshot/'
+                }
+            },
+            dist:{
+                options: {
+                    sitePath: 'http://127.0.0.1:9001/',
+                    snapshotPath: 'dist/public/snapshot/'
+                }
+            }
+
+        },
+
 
         assemble: {
             options: {
@@ -145,6 +356,17 @@ module.exports = function (grunt) {
                 } ,
                 files: {
                     '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/design-builder/*.hbs']
+                }
+            },
+            shop:
+            {
+                // override task-level layout
+                options: {
+                    layout: 'design-builder.hbs'
+                    , partials: ['.tmp/templates/partials/*.hbs']
+                } ,
+                files: {
+                    '<%= yeoman.dist %>/public/shop/': ['.tmp/templates/pages/shop/*.hbs']
                 }
             },
             maintenance:
@@ -183,6 +405,14 @@ module.exports = function (grunt) {
                 } ,
                 files: {
                     '.tmp/html/': ['<%= yeoman.app %>/templates/pages/design-builder/*.hbs']
+                }
+            },
+            serverShop: {
+                options: {
+                    layout: 'design-builder.hbs'
+                } ,
+                files: {
+                    '.tmp/html/shop/': ['<%= yeoman.app %>/templates/pages/shop/*.hbs']
                 }
             },
             serverMaintenance: {
@@ -598,7 +828,7 @@ module.exports = function (grunt) {
                         expand: true,
                         dest: '<%= yeoman.dist %>',
                         cwd: 'lib',
-                        src: ['{,*/}*',  '!bak{,*/}*'],
+                        src: ['{,**/}*',  '!bak{,*/}*'],
                         rename: function (dest, src) {
                             var path = require('path');
                             if (src === 'distpackage.json') {
@@ -863,21 +1093,27 @@ module.exports = function (grunt) {
 
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
-            return grunt.task.run(['build', 'express:prod', 'open', 'express-keepalive']);
+            return grunt.task.run([ 'express:dist', 'open:dist', 'express-keepalive']);
         }
 
+        if (target === 'new-dist') {
+            return grunt.task.run(['new-build', 'express:dist', 'open:dist', 'express-keepalive']);
+        }
         grunt.task.run([
             'clean:server',
 //            'bower-install',
             'concurrent:server'
             , 'assemble:serverDesignBuilder'
+            , 'assemble:serverShop'
             , 'assemble:serverMaintenance'
             , 'assemble:serverProduct'
             , 'assemble:serverDist'
+
 //            'autoprefixer',
-            , 'express:dev',
-            'open',
-            'watch'
+            , 'express:dev'
+            ,'open:server'
+//            , 'htmlSnapshot:server'
+            , 'watch'
         ]);
     });
 
@@ -948,8 +1184,13 @@ module.exports = function (grunt) {
         ,'usemin'
         , 'assemble:dist'
         , 'assemble:designBuilder'
+        , 'assemble:shop'
         , 'assemble:maintenance'
         , 'assemble:product'
+        , 'express:dist'
+        , 'open:dist'
+//        , 'express-keepalive'
+        , 'htmlSnapshot:dist'
 //        ,'htmlmin:dist'
 //        ,'htmlmin:deploy'
 //        , 'install-dependencies'
@@ -974,8 +1215,12 @@ module.exports = function (grunt) {
         ,'usemin'
         , 'assemble:dist'
         , 'assemble:designBuilder'
+        , 'assemble:shop'
         , 'assemble:maintenance'
         , 'assemble:product'
+        , 'express:dist'
+        , 'open:dist'
+        , 'htmlSnapshot:dist'
 //        ,'htmlmin:dist'
 ////        ,'htmlmin:deploy'
 ////        , 'install-dependencies'
@@ -995,6 +1240,10 @@ module.exports = function (grunt) {
     grunt.registerTask('optim_sprites', [
         'imageoptim:sprite_png'
     ]);
+
+//    grunt.registerTask('htmlSnapshot', [
+//        'htmlSnapshot'
+//    ]);
 
 //  grunt.registerTask('inst', ['install-dependencies']);
 };

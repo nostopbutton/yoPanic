@@ -16,7 +16,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-102"
-        , "defaultItemId": "skt-sw-1"
+        , "defaultItemId": "swing-skirt-1"
         , "foxyImage": "pat-102"
         , "fc_category":"category||d5ff368308af98f4d883153194d61e6e14179b12ab11b3c91d5a050304e10134"
         , "fc_code":"code||2b7179e687ea0ccb226c54cc0de3a17ee256577cdb015fb76d33fc841a1d65bb"
@@ -87,7 +87,7 @@
 }    , "collection":
     [
         {
-            "itemId": "skt-sw-1"
+            "itemId": "swing-skirt-1"
             , "itemDesc": "Swing skirt - Black Leather"
             , "images": {
                 "collection": {

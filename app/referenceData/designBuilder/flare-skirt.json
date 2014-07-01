@@ -16,7 +16,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-103-body"
-        , "defaultItemId": "skt-fl-1"
+        , "defaultItemId": "flare-skirt-1"
         , "foxyImage": "pat-103"
         , "fc_category": "category||9114c02b8348368d71020b201273d74fdf6cc56a54ae04d03635f09324268b44"
         , "fc_code": "code||1415c79e9a1c8c9645a70bc7eec8cc0620757547483c11a7d9c6eabe35cc7bf9"
@@ -86,7 +86,7 @@
 }    , "collection":
     [
         {
-            "itemId": "skt-fl-1",
+            "itemId": "flare-skirt-1",
             "itemDesc": "Flare skirt - Teal"
             , "images": {
 "               collection": {

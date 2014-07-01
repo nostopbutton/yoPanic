@@ -38,7 +38,7 @@
     }
     , "design_builder":
 {
-    "model": "whole-body-dressed"
+    "model": "dressed-whole-body"
     , "extras": [
     {
         "name": "extras"
@@ -62,6 +62,13 @@
         {
             "itemId": "obi-1"
             , "itemDesc": "Obi Belt - "
+            , "images": {
+               "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}

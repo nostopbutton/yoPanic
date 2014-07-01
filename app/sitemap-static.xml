@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+    <url>
+        <loc>http://aurza.com/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+        <image:image>
+            <image:loc>http://aurza.com/images/home/aurza-lady-in-fabulous-dress-banner.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://aurza.com/images/home/summer-luxe.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://aurza.com/images/home/summer-monochrome.jpg</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>http://aurza.com/images/home/aurza-dress-collection.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>http://aurza.com/how-it-works.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+        <image:image>
+            <image:loc>http://aurza.com/images/about/how-aurza-works-design-builder.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>http://aurza.com/flatter-factor.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+        <image:image>
+            <image:loc>http://aurza.com/images/about/a-better-fit-the-aurza-flatter-factor.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>http://aurza.com/craftmanship.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+        <image:image>
+            <image:loc>http://aurza.com/images/about/craftmanship-at-aurza.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>http://aurza.com/fabrics.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+
+    </url>
+    <url>
+        <loc>http://aurza.com/party.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+        <image:image>
+            <image:loc>http://aurza.com/images/about/aurza-party-girls-night-in.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>http://aurza.com/gifts.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+        <image:image>
+            <image:loc>http://aurza.com/images/gifts/aurza-gift-box.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>http://aurza.com/about.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.50</priority>
+        <image:image>
+            <image:loc>http://aurza.com/images/about/the-aurza-team.jpg</image:loc>
+        </image:image>
+        <video:video>
+            <video:title>AURZA - utterly fabulous custom-made dresses</video:title>
+            <video:player_loc allow_embed="yes" autoplay="ap=1">
+                www.youtube.com/embed/ETUcf5li_eE
+            </video:player_loc>
+            <video:description>
+                IDEA BEHIND AURZA
+            </video:description>
+        </video:video>
+    </url>
+    <url>
+        <loc>http://aurza.com/across-the-web.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>http://aurza.com/terms.html</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.10</priority>
+    </url>
+    <url>
+        <loc>http://aurza.com/privacy.html</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.10</priority>
+    </url>
+</urlset>

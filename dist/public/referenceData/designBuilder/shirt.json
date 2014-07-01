@@ -81,6 +81,13 @@
         {
             "itemId": "shirt-1"
             , "itemDesc": "Shirt - Cobalt"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "087", "trim": ""}
@@ -97,6 +104,13 @@
         {
             "itemId": "shirt-2"
             , "itemDesc": "Shirt - Teal"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "018", "size": "02", "fabric": "085", "trim": ""}

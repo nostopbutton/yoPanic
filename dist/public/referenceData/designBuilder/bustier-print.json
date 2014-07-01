@@ -91,6 +91,13 @@
         {
             "itemId": "bustier-print-1"
             , "itemDesc": "Sophia dress"
+            , "images": {
+                "collection": {
+                "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "008", "size": "01", "fabric": "300", "trim": ""}

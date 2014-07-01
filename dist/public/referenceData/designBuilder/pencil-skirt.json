@@ -16,7 +16,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-101-body"
-        , "defaultItemId": "skt-pen-1"
+        , "defaultItemId": "pencil-skirt-1"
         , "foxyImage": "pat-101"
         , "fc_category":"category||a19086836292048c192cb45b16a25ef158b36ee8b8439dd83c3330263a0bf8dc"
         , "fc_code":"code||bf0142736e27054c7a9b2c1ffaf3fdaffb85e86b9b1d1791ca5ce7e58f1cb519"
@@ -88,13 +88,66 @@
 }    , "collection":
     [
         {
-            "itemId": "skt-pen-1"
-            , "itemDesc": "Pencil skirt - Aubergine"
+            "itemId": "pencil-skirt-1"
+            , "itemDesc": "Pencil skirt - Teal"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-                ,"skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "013", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "010", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        }
+        ,        {
+        "itemId": "pencil-skirt-2"
+        , "itemDesc": "Pencil skirt with ruffle - Creme"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "back.png"
+            }
+            , "product": ["dress", "back"]
+        }
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "002", "size": "04", "fabric": "008", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    },
+        {
+            "itemId": "pencil-skirt-3"
+            , "itemDesc": "Pencil skirt - Midnight blue"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "back.png"
+                }
+                , "product": ["dress", "back"]
+            }
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                ,"skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "014", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},

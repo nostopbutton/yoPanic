@@ -16,7 +16,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-101-body"
-        , "defaultItemId": "skt-pen-1"
+        , "defaultItemId": "pencil-skirt-1"
         , "foxyImage": "pat-101"
         , "fc_category":"category||a19086836292048c192cb45b16a25ef158b36ee8b8439dd83c3330263a0bf8dc"
         , "fc_code":"code||bf0142736e27054c7a9b2c1ffaf3fdaffb85e86b9b1d1791ca5ce7e58f1cb519"
@@ -88,7 +88,7 @@
 }    , "collection":
     [
         {
-            "itemId": "skt-pen-1"
+            "itemId": "pencil-skirt-1"
             , "itemDesc": "Pencil skirt - Teal"
             , "images": {
                 "collection": {
@@ -111,7 +111,7 @@
         }
         }
         ,        {
-        "itemId": "skt-pen-2"
+        "itemId": "pencil-skirt-2"
         , "itemDesc": "Pencil skirt with ruffle - Creme"
         , "images": {
             "collection": {
@@ -134,7 +134,7 @@
         }
     },
         {
-            "itemId": "skt-pen-3"
+            "itemId": "pencil-skirt-3"
             , "itemDesc": "Pencil skirt - Midnight blue"
             , "images": {
                 "collection": {

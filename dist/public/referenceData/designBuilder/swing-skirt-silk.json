@@ -15,7 +15,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
         "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-122"
-        , "defaultItemId": "skirt-swing-silk-1"
+        , "defaultItemId": "swing-skirt-silk-1"
         , "foxyImage": "pat-122"
         , "fc_category":"category||d4903268a93d418a82537e327f1c84613c12ad47db217e78767dbd24e5531245"
         , "fc_code":"code||8529f22c6d9f39338621c998b8750b421a905c1f445f9aecc2913fc62405d02d"
@@ -85,8 +85,15 @@
     , "collection":
     [
         {
-            "itemId": "skirt-swing-silk-1"
+            "itemId": "swing-skirt-silk-1"
             , "itemDesc": "Test - Empress"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}

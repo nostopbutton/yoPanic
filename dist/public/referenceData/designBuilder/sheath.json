@@ -136,6 +136,13 @@
         {
             "itemId": "sheath-1"
             , "itemDesc": "Sheath - Black"
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
@@ -152,6 +159,13 @@
         , {
         "itemId": "sheath-2"
         , "itemDesc": "Wrap sheath - Cream / Black"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
         , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": "120"}
@@ -168,6 +182,13 @@
         , {
         "itemId": "sheath-3"
         , "itemDesc": "Wrap sheath - Cream"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "front.jpg"
+            }
+            , "product": ["front", "back", "dress"]
+        }
         , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": ""}
@@ -176,6 +197,121 @@
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    }
+        , {
+        "itemId": "sheath-4"
+        , "itemDesc": "Sheath (Teal / Cream) + Obi"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "back.png"
+            }
+            , "product": ["dress", "back"]
+        }
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "010", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "008", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "112", "code": "004-112"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    }
+        , {
+        "itemId": "sheath-5"
+        , "itemDesc": "Sheath (Cream / Red) + Obi"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "back.png"
+            }
+            , "product": ["dress", "back"]
+        }
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "008", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "004", "size": "00", "fabric": "111", "code": "004-111"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    }
+        , {
+        "itemId": "sheath-6"
+        , "itemDesc": "Sheath - Black"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "back.png"
+            }
+            , "product": ["dress", "back"]
+        }
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "011", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "011", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "011", "code": "002-011"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    }
+        , {
+        "itemId": "sheath-7"
+        , "itemDesc": "Sheath - Red"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "back.png"
+            }
+            , "product": ["dress", "back"]
+        }
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "003", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "003", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "04", "fabric": "003", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "011", "code": "002-011"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+    }
+        , {
+        "itemId": "sheath-8"
+        , "itemDesc": "Wrap sheath - Teal"
+        , "images": {
+            "collection": {
+                "main": "dress.png"
+                , "rollover": "back.png"
+            }
+            , "product": ["dress", "back"]
+        }
+        , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "010", "trim": "120"}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "001", "size": "02", "fabric": "010", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "002", "size": "00", "fabric": "011", "code": "002-011"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }

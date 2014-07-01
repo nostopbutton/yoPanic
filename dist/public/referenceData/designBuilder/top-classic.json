@@ -16,7 +16,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-104"
-        , "defaultItemId": "top-1"
+        , "defaultItemId": "top-classic-1"
         , "foxyImage": "pat-104"
         , "fc_category":"category||d5a3cbb96144f1e84e1176dbdbb53edc4587b28bc093aab9508ee32621ea4fab"
         , "fc_code":"code||ac719b96ebc93f54dbd527d255e3ecf865248134e4b9290c7ada1a17da35c024"
@@ -118,7 +118,7 @@
 }    , "collection":
     [
         {
-            "itemId": "top-1"
+            "itemId": "top-classic-1"
             , "itemDesc": "Top - Aubergine"
             , "itemDesign": {
             "design": {

@@ -48,9 +48,9 @@
                                     <!--<img ng-src="/images/collection/{{dress.itemId}}-lg-dress.jpg"-->
                                     <img ng-src="/images/collection/{{dress.itemId}}-lg-{{dress.img}}"
                                      alt="{{dress.styleName}} - {{dress.itemDesc}}"
-                                     ng-init="dress.img = imageFilename"
-                                     ng-mouseenter="dress.img = rolloverFilename"
-                                     ng-mouseleave="dress.img = imageFilename"
+                                     ng-init="dress.img = (dress.hasOwnProperty('images') ? dress.images.collection.main: imageFilename)"
+                                     ng-mouseenter="dress.img = (dress.hasOwnProperty('images') ? dress.images.collection.rollover: rolloverFilename)"
+                                     ng-mouseleave="dress.img = (dress.hasOwnProperty('images') ? dress.images.collection.main: imageFilename)"
                                      class="">
                                 </div>
                             </div>
