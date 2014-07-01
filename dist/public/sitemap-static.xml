@@ -81,8 +81,11 @@
         <video:video>
             <video:title>AURZA - utterly fabulous custom-made dresses</video:title>
             <video:player_loc allow_embed="yes" autoplay="ap=1">
-                www.youtube.com/embed/ETUcf5li_eE
+                https://www.youtube.com/embed/ETUcf5li_eE
             </video:player_loc>
+            <video:thumbnail_loc>
+                http://aurza.com/images/about/about-aurza-thumb.jpg
+            </video:thumbnail_loc>
             <video:description>
                 IDEA BEHIND AURZA
             </video:description>
