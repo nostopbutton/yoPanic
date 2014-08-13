@@ -3,6 +3,7 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
@@ -12,6 +13,7 @@
         <loc>http://aurza.com/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
+        <mobile:mobile/>
         <image:image>
             <image:loc>http://aurza.com/images/home/aurza-lady-in-fabulous-dress-banner.jpg</image:loc>
         </image:image>
@@ -29,6 +31,7 @@
         <loc>http://aurza.com/how-it-works.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
+        <mobile:mobile/>
         <image:image>
             <image:loc>http://aurza.com/images/about/how-aurza-works-design-builder.jpg</image:loc>
         </image:image>
@@ -37,6 +40,7 @@
         <loc>http://aurza.com/flatter-factor.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
+        <mobile:mobile/>
         <image:image>
             <image:loc>http://aurza.com/images/about/a-better-fit-the-aurza-flatter-factor.jpg</image:loc>
         </image:image>
@@ -45,6 +49,7 @@
         <loc>http://aurza.com/craftmanship.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
+        <mobile:mobile/>
         <image:image>
             <image:loc>http://aurza.com/images/about/craftmanship-at-aurza.jpg</image:loc>
         </image:image>
@@ -53,12 +58,13 @@
         <loc>http://aurza.com/fabrics.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
-
+        <mobile:mobile/>
     </url>
     <url>
         <loc>http://aurza.com/party.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
+        <mobile:mobile/>
         <image:image>
             <image:loc>http://aurza.com/images/about/aurza-party-girls-night-in.jpg</image:loc>
         </image:image>
@@ -67,6 +73,7 @@
         <loc>http://aurza.com/gifts.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
+        <mobile:mobile/>
         <image:image>
             <image:loc>http://aurza.com/images/gifts/aurza-gift-box.jpg</image:loc>
         </image:image>
@@ -75,6 +82,7 @@
         <loc>http://aurza.com/about.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.50</priority>
+        <mobile:mobile/>
         <image:image>
             <image:loc>http://aurza.com/images/about/the-aurza-team.jpg</image:loc>
         </image:image>
@@ -95,15 +103,24 @@
         <loc>http://aurza.com/across-the-web.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.80</priority>
+        <mobile:mobile/>
     </url>
     <url>
         <loc>http://aurza.com/terms.html</loc>
         <changefreq>yearly</changefreq>
         <priority>0.10</priority>
+        <mobile:mobile/>
     </url>
     <url>
         <loc>http://aurza.com/privacy.html</loc>
         <changefreq>yearly</changefreq>
         <priority>0.10</priority>
+        <mobile:mobile/>
+    </url>
+    <url>
+        <loc>http://blog.aurza.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.00</priority>
+        <mobile:mobile/>
     </url>
 </urlset>

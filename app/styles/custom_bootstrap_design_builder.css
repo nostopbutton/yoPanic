@@ -295,6 +295,9 @@ input[type="checkbox"].hidden {
 }
 
 /* p-sk: Silk */
+.fabric-selector.fabric083{
+    background: #ddddd3;
+}
 .fabric-selector.fabric085{
     background: #56c1bb;
 }

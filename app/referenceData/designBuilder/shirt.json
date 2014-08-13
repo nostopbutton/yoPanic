@@ -5,8 +5,8 @@
         , "type": "silk"
         , "styleName": "Elle"
         , "styleFormalName": "Shirt Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Eddie - Silk Shirt Dress: Custom-Made"
+        , "strapline": "Design Your Own Luxurious Silk Eddie Shirt Dress, Customised To Suit You"
         , "description": [ "Effortless and wonderfully flattering, the shirt dress is a hardworking and versatile addition to your wardrobe."
         , "It has a lightly asymmetric hem and clever buttoned tabs to roll up cuff sleeves on the those hotter days." ]
         , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
@@ -59,7 +59,8 @@
             , "sizes": [
             {"id": "02", "name": "knee"}
         ]
-            , "trim": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "p-sk-tr"}]
         }
         ,{
             "part_name": "sleeves"
@@ -74,13 +75,34 @@
         }
     ]
     }]
-
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+            {"id": "005", "name": "Silk belt", "defaultFabric": "085", "fabricSets": [ {"setId": "p-sk-blt"}, {"setId": "pr-sk"}]}
+        ]
+        }
+    ]}
+]
 }
     , "collection":
     [
         {
             "itemId": "shirt-1"
+            , "collections": ""
             , "itemDesc": "Shirt - Cobalt"
+            , "itemUrl": ""
+            , "title": "Eddie Shirt Dress With Long Sleeves in Cobalt Blue Silk"
+            , "strapline": "Buy A Luxurious Cobalt Blue Silk Long Sleeved Eddie Shirt Dress, Made To Your Own Custom Specification"
+            , "colours": "COBALT BLUE"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -95,7 +117,7 @@
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -103,7 +125,12 @@
         },
         {
             "itemId": "shirt-2"
+            , "collections": ""
             , "itemDesc": "Shirt - Teal"
+            , "itemUrl": ""
+            , "title": "Eddie Shirt Dress With Long Sleeves in Turquoise Silk"
+            , "strapline": "Buy A Luxurious Turquoise Silk Long sSeeved Eddie Shirt Dress, Made To Your Own Custom Specification"
+            , "colours": "TURQUOISE"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -118,7 +145,7 @@
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }

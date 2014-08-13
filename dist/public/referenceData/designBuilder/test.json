@@ -134,6 +134,7 @@
     [
         {
             "itemId": "test-1"
+            , "collections": ""
             , "itemDesc": "Test - Empress"
             , "itemDesign": {
             "design": {

@@ -1,18 +1,21 @@
 <!doctype html>
-<html  ng-app="panicApp" class="no-js" lang="en">
+<html  ng-app="panicApp" class="no-js" lang="en" itemscope itemtype="http://schema.org/Product">
 <head>
 <!-- Meta data and css links-->
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="pUkTUYdu_NIAmwwQJcRay-D7ctXNv0hB-viL6HFOrhw"/>
-<meta name="description" content="AURZA - utterly fabulous custom-made dresses">
-<meta name="author" content="info@aurza.com">
-<title>AURZA - Design Builder</title>
-<!--<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>-->
-<!--<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>-->
+<link rel=”publisher” href=”https://plus.google.com/+Aurza/“/>
+
 <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Montserrat' rel='stylesheet' type='text/css'>
+
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png" />
 <!-- Standard iPhone -->
 <!--<link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone-114.png" />-->
 <!-- Retina iPhone -->
@@ -22,7 +25,6 @@
 <!-- Retina iPad -->
 <!--<link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png" />-->
 
-
 <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css">
 <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
 
@@ -31,12 +33,76 @@
 <!--<link rel="stylesheet" href="//aurza.foxycart.com/themes/text/styles.css" type="text/css" media="screen" charset="utf-8" />-->
 <!-- END FOXYCART FILES -->
 
-
 <link rel="stylesheet" href="/styles/6f7fe0b6.aurza-static.css"/>
+<script type="text/javascript" async="" src="//assets.pinterest.com/js/pinit_main.js"></script>
+<link rel="canonical" href="http://aurza.com/shop{{page.canonical}}" />
+<!-- http://moz.com/blog/meta-data-templates-123-->
+<!-- Place this data between the <head> tags of your website -->
+<title ng-bind="page.title">AURZA - Design Builder</title><!-- Page Title. Maximum length 60-70 characters -->
+<meta name="description" content="{{page.description}}"><!--Page description. No longer than 155 characters.-->
+
+<!-- Schema.org markup for Google+ -->
+<!--<meta itemprop="name" content="{{page.title}}"> The Name or Title Here &ndash-->
+<!--<meta itemprop="description" content="{{page.description}}">-->
+<!--<meta itemprop="url" content="" />-->
+<!--<meta itemprop="image" content="{{page.image}}">-->
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="{{page.twitterCard}}">
+<!-- Twitter summary card with large image must be at least 280x150px -->
+<!--<meta name="twitter:image:src" content=" http://www.example.com/image.html">-->
+<meta name="twitter:site" content="@AURZAcustom">
+<meta name="twitter:title" content="{{page.title}}">
+<meta name="twitter:description" content="{{page.description}}">
+<meta name="twitter:creator" content="@AURZAcustom">
+<meta name="twitter:image" content="{{page.image}}">      <!-- content=" http://www.example.com/image.html"-->
+<meta name="twitter:data1" content="{{product.currency}} {{product.price}}">    <!-- content="$3" -->
+<meta name="twitter:label1" content="Price">                <!-- content="Price"-->
+<meta name="twitter:data2" content="{{product.color}}">     <!-- content="Black"-->
+<meta name="twitter:label2" content="Colour">               <!-- content="Color"-->
+<meta name="twitter:url" content="{{page.url}}">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="{{page.title}} by AURZA" />
+<!--<meta property="og:type" content="article" />-->
+<meta property="og:type" content="product" />
+<meta property="og:url" content="{{page.snapshotUrl}}" />
+<meta property="og:image" content="{{page.image}}" />
+<meta property="og:image" content="{{product.image1}}" />
+<meta property="og:image" content="{{product.image2}}" />
+<meta property="og:description" content="{{page.description}}" />
+<meta property="og:site_name" content="AURZA" />
+<meta property="og:brand" content="AURZA" />
+<!--http://stackoverflow.com/questions/10836135/when-do-i-need-a-fbapp-id-or-fbadmins-->
+<meta property="fb:page_id" content="213657758786138" />
+<meta property="fb:app_id" content="153275411536544" />
+<meta property="fb:admins" content="762528798,539947125,100003106574448" />
+<!--<meta property="og:upc" content="{{product.code}}" />-->
+<meta property="og:price:amount" content="{{product.price}}" />
+<meta property="og:price:currency" content="{{product.currency}}" />
+<meta property="og:availability" content="instock" />
+<meta property="og:availability:destinations" content="{{product.destinations}}" />
+<!--<meta property="product:color" content="{{product.color}}" />-->
+<meta property="product:gender" content="{{product.gender}}" >
+
+<base href="/shop/" />
+<meta name="fragment" content="!">
+
+<link rel="stylesheet" href="/styles/91f63691.main.css"/>
+
+<!--<link rel="stylesheet" href="../../styles/092.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/108.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/110.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/113.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/302.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/303.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/305.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/407.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/409.css"/>-->
+<!--<link rel="stylesheet" href="../../styles/410.css"/>-->
 
 
-<link rel="stylesheet" href="/styles/01a9ad4d.main.css"/>
-<!--[if lt IE 7]>
+<!--[if lt IE 8]>
 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
     today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
     experience this site.</p>
@@ -85,7 +151,7 @@
                 </button>
                 <div id="header">
                     <div id="logo">
-                        <a class="" href="/"><img src="/images/home/aurza-logo.png" alt="AURZA - utterly fabulous custom-made dresses"></a>
+                        <a class="" href="/" target="_self"><img itemprop="logo" src="/images/home/aurza-logo.png" alt="AURZA - utterly fabulous custom-made dresses"></a>
                     </div>
 
                     <div id="bag" class="collapse navbar-collapse header-collapse">
@@ -108,33 +174,33 @@
             <div class="collapse navbar-collapse header-collapse">
 
                 <ul class="nav navbar-nav">
-                    <li><a href="/shop/#!/collection" data-toggle="collapse" data-target=".header-collapse">LOOKS WE LOVE
+                    <li><a href="/shop/collection" data-toggle="collapse" data-target=".header-collapse">LOOKS WE LOVE
                         <div class="sprite-icons heart"></div>
                         <!--<img src="/images/home/heart.png">-->
                         </a></li>
-                    <li><a href="/shop/#!/design" data-toggle="collapse" data-target=".header-collapse">DESIGN YOUR OWN</a></li>
+                    <li><a href="/shop/design" data-toggle="collapse" data-target=".header-collapse">DESIGN YOUR OWN</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">HOW IT WORKS <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/how-it-works.html">HOW IT WORKS</a></li>
-                            <li><a href="/flatter-factor.html">THE FLATTER FACTOR</a></li>
-                            <li><a href="/craftmanship.html">CRAFTMANSHIP</a></li>
-                            <li><a href="/fabrics.html">FABRICS</a></li>
+                            <li><a href="/how-it-works.html" target="_self">HOW IT WORKS</a></li>
+                            <li><a href="/flatter-factor.html" target="_self">THE FLATTER FACTOR</a></li>
+                            <li><a href="/craftmanship.html" target="_self">CRAFTMANSHIP</a></li>
+                            <li><a href="/fabrics.html" target="_self">FABRICS</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">PARTIES / GIFTS <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/party.html">BOOK A PARTY</a></li>
-                            <li><a href="/gifts.html">GIFT BOXES</a></li>
+                            <li><a href="/party.html" target="_self">BOOK A PARTY</a></li>
+                            <li><a href="/gifts.html" target="_self">GIFT BOXES</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT AURZA <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/about.html">ABOUT AURZA</a></li>
-                            <li><a href="/across-the-web.html">ACROSS THE WEB</a></li>
-                            <li><a href="http://letsgetfabulous.com" target="_blank">BLOG - LetsGetFabulous</a></li>
+                            <li><a href="/about.html" target="_self">ABOUT AURZA</a></li>
+                            <li><a href="/across-the-web.html" target="_self">ACROSS THE WEB</a></li>
+                            <li><a href="http://blog.aurza.com" target="_blank">LetsGetFabulous - The AURZA Blog</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -149,12 +215,9 @@
 
 <!--data-description="current_description"-->
 <div ng-controller="appController" id="top">
-    <!--<div ng-include="'views/modal.html'"></div>-->
-    <!--<div ng-include="'views/idggHeader.html'"></div>-->
-    <!--<div ng-include="'/views/partials/header.html'"></div>-->
+    <!--<div ng-bind="mytitle">Placeholder title</div>-->
     <div class="alert alert-info" ng-show="loading">Loading</div>
-    <div ng-view></div>
-    <!--<div ng-include="'/views/partials/footer.html'"></div>-->
+    <div ng-view autoscroll="true"></div>
 </div>
 
 <!-- Footer Navigation -->
@@ -314,6 +377,21 @@
         <!--$.cookie('aurza_signup', '1', { expires: 999 });-->
     <!--});-->
 <!--</script>-->
+
+<!-- Please call pinit.js only once per page -->
+<!--<script type="text/javascript" async  data-pin-color="white" data-pin-height="28" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>-->
+<!--<script type="text/javascript">-->
+    <!--(function(d){-->
+        <!--var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');-->
+        <!--p.type = 'text/javascript';-->
+        <!--p.async = true;-->
+        <!--p.src = '//assets.pinterest.com/js/pinit.js';-->
+        <!--p.setAttribute('data-pin-hover', true);-->
+        <!--p.setAttribute('data-pin-color', "white");-->
+        <!--p.setAttribute('data-pin-height', "28");-->
+        <!--f.parentNode.insertBefore(p, f);-->
+    <!--}(document));-->
+<!--</script>-->
 <!--<script src="/components/angular/angular.js"></script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
 <!--<script src="/components/angular-resource/angular-resource.js"></script>-->
@@ -323,9 +401,15 @@
 <!--<script src="/components/angular-route/angular-route.js"></script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.min.js "></script>
 
+<!-- Please call pinit.js only once per page -->
+<script type="text/javascript" async defer="defer" data-pin-build="parsePins"
+        data-pin-color="white" data-pin-height="28" data-pin-hover="true"
+        src="//assets.pinterest.com/js/pinit.js"></script>
+<!--<script defer="defer" src="//assets.pinterest.com/js/pinit.js" data-pin-build="parsePins"></script>-->
+
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>-->
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>-->
 
-<script src="/scripts/b5cdd89d.aurza.js"></script>
+<script src="/scripts/b79171b1.aurza.js"></script>
 </body>
 </html>

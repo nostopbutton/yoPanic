@@ -5,8 +5,8 @@
         , "type": "skirt"
         , "styleName": "Alexa Flare"
         , "styleFormalName": "Flare Skirt"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Alexa - Flare Skirt : Custom-Made"
+        , "strapline": "Design Your Own Elegant Alexa Flare Skirt, Customised To Suit You"
         , "description": [ "Both flattering and easy to wear the flare skirt allows elegant movement and a sense of delicate femininity."
         , "" ]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -86,8 +86,13 @@
 }    , "collection":
     [
         {
-            "itemId": "flare-skirt-1",
-            "itemDesc": "Flare skirt - Teal"
+            "itemId": "flare-skirt-1"
+            , "collections": ""
+            , "itemDesc": "Flare skirt - Teal"
+            , "itemUrl": ""
+            , "title": ""
+            , "strapline": ""
+            , "colours": ""
             , "images": {
 "               collection": {
                     "main": "dress.png"

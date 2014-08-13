@@ -5,8 +5,8 @@
         , "type": "dress"
         , "styleName": "Sophia"
         , "styleFormalName": "Printed Bustier Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Sophia Bustier Dress (Cotton) : Custom-Made"
+        , "strapline": "Design Your Own Sophia Bustier Dress In Cotton, Customised To Suit You"
         , "description": [ "Sleek and timeless our strapless bustier is boned for superior comfort and shape."
         , "Made in the latest printed stretch cotton for maximum sass."]
         , "care": [ "Our stretch cotton option provides a lightweight fabric alternative. Digitally printed with the latest techniques allowing for a fabulous colour palette."
@@ -90,17 +90,22 @@
     [
         {
             "itemId": "bustier-print-1"
-            , "itemDesc": "Sophia dress"
+            , "collections": "new"
+            , "itemDesc": "Floral Print Sophia Bustier Dress"
+            , "itemUrl": ""
+            , "title": "Floral Print Sophia Bustier Dress - Blue "
+            , "strapline": "Buy a blue floral print Sophia bustier dress in stretch cotton; customised to suit you."
+            , "colours": "Blue floral print"
             , "images": {
                 "collection": {
-                "main": "dress.png"
-                    , "rollover": "back.png"
+                    "main": "front.png"
+                    , "rollover": "model.jpg"
                 }
-                , "product": ["dress", "back"]
+            , "product": ["front", "model", "model2", "detail"]
             }
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "008", "size": "01", "fabric": "300", "trim": ""}
+                "neckline":   {"type": "nek", "id": "008", "size": "04", "fabric": "300", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }

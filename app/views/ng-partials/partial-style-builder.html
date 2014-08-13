@@ -1,17 +1,32 @@
+<meta itemprop="brand" content="AURZA" />
+<meta itemprop="name" content="{{page.title}}"> <!-- The Name or Title Here -->
+<meta itemprop="description" content="{{page.description}}">
+<meta itemprop="url" content="http://aurza.com/shop{{page.canonical}}" />
+<meta itemprop="image" content="{{page.image}}">
+
 <div id="style-panel">
     <div class="container-fluid ">
         <div class="row">
             <div class="intro col-sm-5">
                 <div class="name">{{item.style.styleName}}</div>
                 <div class="formal-name">{{item.style.styleFormalName}}</div>
-                <div class="price">HKD {{item.style.price | number:0}}</div>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <div class="price">
+                        <span itemprop="price">HKD {{item.style.price | number:0}}</span>
+                        <meta itemprop="priceCurrency" content="HKD" />
+                    </div>
+                    <div class="formal-name" itemprop="availability" itemtype="http://schema.org/ItemAvailability"
+                         content="http://schema.org/InStock">In stock! Order now!</div>
+                </div>
             </div>
             <div class="action col-sm-7">
                 <div class="row">
-                    <!--href="#!/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"-->
+                    <!--href="/design/{{item.style.styleId}}/{{item.itemDesign.itemId}}/design" data-toggle="tab"-->
                     <a class="btn btn-primary" style="width:150px;"
                        href="" data-toggle="tab"
                        ng-click="tabs.design = true; gaEvent('button', 'click', 'builder-style-customize');">Customize</a>
+                    <!--<a class="btn btn-primary" style="width:150px;"-->
+                       <!--href="/shop/mobile/{{styleId }}">Mobile</a>-->
                     <a class="btn btn-default visible-xs" style="width:150px;"
                        href="" data-toggle="tab"
                        ng-click="tabs.fit = true; gaEvent('button', 'click', 'builder-style-fit');">Choose Size</a>

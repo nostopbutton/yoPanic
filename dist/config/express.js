@@ -41,11 +41,15 @@ module.exports = function(app) {
 //        alert("config.root : "+ config.root);
         app.use(express.static(path.join(config.root, '.tmp')));
         app.use(express.static(path.join(config.root, 'app')));
-        app.use("/", express.static(path.join(config.root, '.tmp/html/')));
+
+        app.use("/shop/*", express.static(path.join(config.root, '.tmp/html/shop/')));
+        app.use("/shop/*/*", express.static(path.join(config.root, '.tmp/html/shop/')));
+        app.use("/shop/*/*/*", express.static(path.join(config.root, '.tmp/html/shop/')));
+        app.use("/", express.static(path.join(config.root, '.tmp/html')));
 //        app.use(errorHandler({ dumpExceptions: true, showStack: true }));
         app.use(errorHandler());
 //        app.set('views', config.root + '/app/views');
-        app.set('views', config.root + '/dist/public/');
+//        app.set('views', config.root + '/dist/public/');
     }
     else if ('test' == env) {
         app.use(favicon(path.join(config.root, '/dist/public', 'favicon.ico')));
@@ -104,3 +108,14 @@ module.exports = function(app) {
 //        app.use(app.router);
 //    };
 };
+
+//
+//app.use('/js', express.static(__dirname + '/js'));
+//app.use('/dist', express.static(__dirname + '/../dist'));
+//app.use('/css', express.static(__dirname + '/css'));
+//app.use('/partials', express.static(__dirname + '/partials'));
+//
+//app.all('/*', function(req, res, next) {
+//    // Just send the index.html for other files to support HTML5Mode
+//    res.sendfile('index.html', { root: __dirname });
+//});

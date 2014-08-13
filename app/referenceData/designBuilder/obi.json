@@ -61,6 +61,7 @@
     [
         {
             "itemId": "obi-1"
+            , "collections": ""
             , "itemDesc": "Obi Belt - "
             , "images": {
                "collection": {

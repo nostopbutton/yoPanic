@@ -9,6 +9,11 @@ angular.module('panicApp.Controllers')
 
             trackPageInGoogleAnalytics($rootScope, $scope, $window, $location, $routeParams);
 
+            $rootScope.page = {};
+            $rootScope.page.title = "Custom made women's dress designer - AURZA"
+            $rootScope.page.description = "Choose a style to start designing : sheath, swoosh, dolomon, swing, flare, shirt, shift dresses"
+            $rootScope.page.canonical = $location.path();
+
             // Put Style Catalogue data into page scope
             $scope.styles = Range.styleCatalogue(
                 function (data) {   //success
@@ -61,8 +66,9 @@ angular.module('panicApp.Controllers')
                 { id: 'crepe', label: 'Crepe'},
                 { id: 'cotton', label: 'Stretch cotton'},
                 { id: 'leather', label: 'Leather'}
-
             ];
+
+
 
 //        $scope.styleFilter = $scope.filterStyles[0].id;
 //        $scope.typeFilter = $scope.filterTypes[0].id;
@@ -72,7 +78,6 @@ angular.module('panicApp.Controllers')
             $scope.reset = function () {
                 $scope.styleFilter = $scope.filterStyles[0].id;
                 $scope.typeFilter = $scope.filterTypes[0].id;
-                $scope.fabricFilter = $scope.filterFabrics[0].id;
                 $scope.fabricFilter = $scope.filterFabrics[0].id;
             }
 
@@ -151,16 +156,16 @@ angular.module('panicApp.Controllers')
 //                $http.get('/images/120.png')
                 $http.get('/images/300.png'),
                 $http.get('/images/301.png'),
-                $http.get('/images/302.png'),
-                $http.get('/images/303.png'),
+//                $http.get('/images/302.png'),
+//                $http.get('/images/303.png'),
                 $http.get('/images/304.png'),
-                $http.get('/images/305.png'),
+//                $http.get('/images/305.png'),
                 $http.get('/images/406.png'),
-                $http.get('/images/407.png'),
+//                $http.get('/images/407.png'),
                 $http.get('/images/408.png'),
-                $http.get('/images/410.png'),
-                $http.get('/images/411.png'),
-                $http.get('/images/412.png')
+//                $http.get('/images/410.png'),
+                $http.get('/images/411.png')
+//                $http.get('/images/412.png')
             ])
 
             aggregatedPromise.then(

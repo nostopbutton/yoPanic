@@ -111,6 +111,7 @@
     [
         {
             "itemId": "swoosh-print-1"
+            , "collections": ""
             , "itemDesc": "Vivian dress"
             , "itemDesign": {
             "design": {

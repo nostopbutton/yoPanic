@@ -5,8 +5,8 @@
         , "type": "dress"
         , "styleName": "Kate"
         , "styleFormalName": "Swoosh Dress"
-        , "shortDesc": "...."
-        , "strapline": "..."
+        , "title": "Kate Swoosh Dress: Custom-Made"
+        , "strapline": "Design Your Own Classic Kate Swoosh Dress Customised To Suit You"
         , "description": [ "Understanding the wants of the modern woman, the Kate will make you feel a million dollars."
         , "Our classic sheath with a twist has perfectly positioned ruffles along the bodice to draw the eyes to all the right places and flatter your middle area. A tight fit for a sassy silouette." ]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -111,7 +111,12 @@
     [
         {
             "itemId": "swoosh-1"
+            , "collections": ""
             , "itemDesc": "Swoosh - Aubergine"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Aubergene "
+            , "strapline": "Buy A Flattering Aubergene Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "AUBERGENE"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -134,7 +139,12 @@
         },
         {
             "itemId": "swoosh-2"
+            , "collections": ""
             , "itemDesc": "Swoosh - Midnight blue"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Navy"
+            , "strapline": "Buy A Flattering Navy Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "NAVY"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -157,7 +167,12 @@
         },
         {
             "itemId": "swoosh-4"
+            , "collections": ""
             , "itemDesc": "Swoosh - Red"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Rose Red"
+            , "strapline": "Buy A Flattering Rose Red Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "ROSE RED"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -180,7 +195,12 @@
         },
         {
             "itemId": "swoosh-5"
+            , "collections": ""
             , "itemDesc": "Swoosh - Black"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Black"
+            , "strapline": "Buy A Flattering Black Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "BLACK"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -203,7 +223,12 @@
         },
         {
             "itemId": "swoosh-7"
-            , "itemDesc": "Swoosh - Auberine"
+            , "collections": ""
+            , "itemDesc": "Swoosh - Aubergine"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Aubergine "
+            , "strapline": "Buy A Flattering Aubergine Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "AUBERGINE"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -226,7 +251,12 @@
         },
         {
             "itemId": "swoosh-8"
+            , "collections": ""
             , "itemDesc": "Swoosh - Black"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Black"
+            , "strapline": "Buy A Flattering Black Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "BLACK"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -249,7 +279,12 @@
         },
         {
             "itemId": "swoosh-9"
+            , "collections": ""
             , "itemDesc": "Swoosh - Midnight blue"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Navy"
+            , "strapline": "Buy A Flattering Navy Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "NAVY"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -272,7 +307,12 @@
         },
         {
             "itemId": "swoosh-10"
+            , "collections": ""
             , "itemDesc": "Swoosh - Cream"
+            , "itemUrl": ""
+            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Cream "
+            , "strapline": "Buy A Flattering Cream Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "CREAM"
             , "images": {
                 "collection": {
                     "main": "dress.png"

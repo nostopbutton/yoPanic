@@ -164,7 +164,7 @@
                 <input type="hidden"  name="{{item.style.fc_image}}"
                        value="{{item.style.styleId | path : '/images/foxy/' : '.png'}}"/>
                 <!--<input type="hidden"  name="{{item.style.fc_url}}"-->
-                       <!--value="#!/review/{{item.style.styleId}}/{{param(form)}}"/>-->
+                       <!--value="/review/{{item.style.styleId}}/{{param(form)}}"/>-->
                 <!-- Custom Product Options -->
                 <input type="hidden"  name="{{item.style.fc_neckline}}"
                        ng-disabled="(!form.design.neckline.id ) || ('000' === form.design.neckline.id )"
@@ -230,7 +230,7 @@
                     <tbody>
                     <tr ng-repeat="design in form.design" ng-class-even="'alt'" ng-hide="'000'=== design.id">
                         <td colspan="2">
-                            <span title={{design.type+"-"+design.id+"-"+design.size}}>{{design | lookup}}test</span></td>
+                            <span title={{design.type+"-"+design.id+"-"+design.size}}>{{design | lookup}}</span></td>
                         <td colspan="3"><span> {{design|fablookup}} {{design.trim|trimlookup}}</span></td>
                     </tr>
                     <!--<tr>-->

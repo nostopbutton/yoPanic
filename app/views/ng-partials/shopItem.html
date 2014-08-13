@@ -1,4 +1,4 @@
-<div id="shopItemView" class="container">
+<div id="shopItemView" class="container" itemscope itemtype="http://schema.org/Product">
     <div class="row">
         <div class="col-sm-5">
             <div ng-include="'/views/ng-partials/partial-item-images.html'"></div>
@@ -11,11 +11,11 @@
                         <a href="#">Style</a>
                     </li>
                     <li ng-class="{active: false}">
-                        <a href="#!/item/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit"
+                        <a ng-href="/shop/collection/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit"
                            ng-click="gaEvent('nav', 'click', 'collection-item-fit');">Fit</a>
                     </li>
                     <li>
-                        <!--<a href="#!/item/{{item.style.styleId}}/{{item.itemDesign.itemId}}/order">Review</a>-->
+                        <!--<a ng-href="/collection/{{item.style.styleId}}/{{item.itemDesign.itemId}}/order">Review</a>-->
                         <a>Checkout</a>
                     </li>
                 </ul>

@@ -1,59 +1,5 @@
 [
-    {
-        "styleId": "sheath",
-        "type": "dress",
-        "styleName": "Coco",
-        "styleFormalName": "Crepe Sheath",
-        "filters": "crepe sheath",
-        "price": 2200,
-        "silhouetteImage": "pat-301"
-    },
-    {
-        "styleId": "doloman",
-        "type": "dress",
-        "styleName": "Christina",
-        "styleFormalName": "Crepe Doloman",
-        "filters": "crepe sheath doloman",
-        "price": 2200,
-        "silhouetteImage": "pat-305"
-    } ,
-    {
-        "styleId": "swoosh",
-        "type": "dress",
-        "styleName": "Kate",
-        "styleFormalName": "Crepe Swoosh",
-        "filters": "crepe sheath",
-        "price": 2200,
-        "silhouetteImage": "pat-303"
-    },
-    {
-        "styleId": "flare",
-        "type": "dress",
-        "styleName": "Alexa",
-        "styleFormalName": "Crepe Fit and Flare",
-        "filters": "crepe flare",
-        "price": 2200,
-        "silhouetteImage": "pat-302"
-    },
 
-    {
-        "styleId": "bustier",
-        "type": "dress",
-        "styleName": "Grace",
-        "styleFormalName": "Crepe Bustier",
-        "filters": "crepe sheath",
-        "price": 2300,
-        "silhouetteImage": "pat-306"
-    } ,
-    {
-        "styleId": "swing",
-        "type": "dress",
-        "styleName": "Audrey",
-        "styleFormalName": "Crepe Swing",
-        "filters": "crepe swing",
-        "price": 2200,
-        "silhouetteImage": "pat-304"
-    },
     {
         "styleId": "shift",
         "type": "dress",
@@ -82,6 +28,7 @@
         "price": 2000,
         "silhouetteImage": "pat-314"
     } ,
+
     {
         "styleId": "shirt-maxi",
         "type": "dress",
@@ -111,6 +58,63 @@
         "price": 2500,
         "silhouetteImage": "pat-315"
     },
+
+    {
+        "styleId": "sheath",
+        "type": "dress",
+        "styleName": "Coco",
+        "styleFormalName": "Crepe Sheath",
+        "filters": "crepe sheath",
+        "price": 2200,
+        "silhouetteImage": "pat-301"
+    },
+    {
+        "styleId": "doloman",
+        "type": "dress",
+        "styleName": "Christina",
+        "styleFormalName": "Crepe Doloman",
+        "filters": "crepe sheath doloman",
+        "price": 2200,
+        "silhouetteImage": "pat-305"
+    } ,
+    {
+        "styleId": "swoosh",
+        "type": "dress",
+        "styleName": "Kate",
+        "styleFormalName": "Crepe Swoosh",
+        "filters": "crepe sheath",
+        "price": 2200,
+        "silhouetteImage": "pat-303"
+    },
+
+    {
+        "styleId": "flare",
+        "type": "dress",
+        "styleName": "Alexa",
+        "styleFormalName": "Crepe Fit and Flare",
+        "filters": "crepe flare",
+        "price": 2200,
+        "silhouetteImage": "pat-302"
+    },
+    {
+        "styleId": "bustier",
+        "type": "dress",
+        "styleName": "Grace",
+        "styleFormalName": "Crepe Bustier",
+        "filters": "crepe sheath",
+        "price": 2300,
+        "silhouetteImage": "pat-306"
+    } ,
+    {
+        "styleId": "swing",
+        "type": "dress",
+        "styleName": "Audrey",
+        "styleFormalName": "Crepe Swing",
+        "filters": "crepe swing",
+        "price": 2200,
+        "silhouetteImage": "pat-304"
+    },
+
     {
         "styleId": "flare-skirt",
         "type": "skirt",

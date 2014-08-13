@@ -5,8 +5,8 @@
         , "type": "skirt"
         , "styleName": "Sophia Pencil"
         , "styleFormalName": "Printed Pencil Skirt"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Sophia - Pencil Skirt (Cotton) : Custom-Made"
+        , "strapline": "Design Your Own Classic Printed Cotton Sophia Pencil Skirt, Customised To Suit You"
         , "description": [ "Turn heads in our classic pencil served up in contemporary floral prints."
         , ""]
         , "care": [ "Our stretch cotton option provides a lightweight fabric alternative. Digitally printed with the latest techniques allowing for a fabulous colour palette."
@@ -87,7 +87,12 @@
     [
         {
             "itemId": "pencil-skirt-print-1"
+            , "collections": ""
             , "itemDesc": "Test - Empress"
+            , "itemUrl": ""
+            , "title": ""
+            , "strapline": ""
+            , "colours": ""
             , "images": {
                "collection": {
                     "main": "dress.png"

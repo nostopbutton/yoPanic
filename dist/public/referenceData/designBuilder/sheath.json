@@ -5,10 +5,11 @@
         , "type": "dress"
         , "styleName": "Coco"
         , "styleFormalName": "Sheath Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Coco Sheath Dress: Custom-made"
+        , "strapline": "Design your own classic Coco sheath dress in crepe fabric, customised to suit you"
         , "description": [ "The Coco is the ultimate sheath dress – impeccably tailored in stretch crepe for a figure hugging but comfortable fit."
         , "It features classic tailoring alongside modern pattern development to give you a sassy edge to a timeless classic."]
+        , "colours": "Black, Aubergene, Teal, Rose Red, Midnight Blue, Cream"
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
         , "Twisted yarns provide extra stretch and comfort. Faux leather option also has inherent stretch in the fabric."
         , "Crepe fabric - machine wash cold, delicate. Dry cleanable.  Do not tumble dry, low iron. Faux leather cold wash only, do not tumble dry or iron."]
@@ -135,7 +136,12 @@
     [
         {
             "itemId": "sheath-1"
+            , "collections": ""
             , "itemDesc": "Sheath - Black"
+            , "itemUrl": ""
+            , "title": "Coco Sheath Dress With Long Sleeves In Black"
+            , "strapline": "An elegant black crepe Coco sheath dress with bateau neckline, flared sleeves and long pencil skirt with ruffle, made to your own custom specification"
+            , "colours": "Black"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -158,7 +164,12 @@
         }
         , {
         "itemId": "sheath-2"
+        , "collections": ""
         , "itemDesc": "Wrap sheath - Cream / Black"
+        , "itemUrl": ""
+        , "title": "Coco Sheath Dress With Sleeveless Wrap Top In Cream And Black"
+        , "strapline": "A Two Tone Coco Sheath Dress With Sleeveless Cream Wrap Top, Contrasting Black Trim And Black Pencil Skirt, Made To Your Own Custom Specification"
+        , "colours": "BLACK / CREAM"
         , "images": {
             "collection": {
                 "main": "dress.png"
@@ -181,7 +192,12 @@
     }
         , {
         "itemId": "sheath-3"
+        , "collections": ""
         , "itemDesc": "Wrap sheath - Cream"
+        , "itemUrl": ""
+        , "title": "Coco Sheath Dress With Sleeveless Bateau Top In Cream"
+        , "strapline": "Buy A Stunning Cream Coco Sheath Dress With Wrap Top And Short Pencil Skirt, Made To Your Own Custom Specification"
+        , "colours": "CREAM"
         , "images": {
             "collection": {
                 "main": "dress.png"
@@ -204,7 +220,12 @@
     }
         , {
         "itemId": "sheath-4"
+        , "collections": ""
         , "itemDesc": "Sheath (Teal / Cream) + Obi"
+        , "itemUrl": ""
+        , "title": "Coco Sheath Dress With Sleeveless Bateau Top In Cream And Teal"
+        , "strapline": "Buy A Simple Two Tone Coco Sheath Dress With A Cream Sleeveless Top, Bateau Neckline, Long  Teal Pencil Skirt, Made To Your Own Custom Specification"
+        , "colours": "CREAM / TEAL"
         , "images": {
             "collection": {
                 "main": "dress.png"
@@ -227,7 +248,12 @@
     }
         , {
         "itemId": "sheath-5"
+        , "collections": ""
         , "itemDesc": "Sheath (Cream / Red) + Obi"
+        , "itemUrl": ""
+        , "title": "Coco Sheath Dress With Sleeveless Bateau Top In Cream And Rose Red"
+        , "strapline": "Buy A Simple Two Tone Coco Sheath Dress With A Cream Sleeveless Top, Bateau Neckline, Long Rose Red Pencil Skirt, Made To Your Own Custom Specification"
+        , "colours": "CREAM / ROSE RED"
         , "images": {
             "collection": {
                 "main": "dress.png"
@@ -250,7 +276,12 @@
     }
         , {
         "itemId": "sheath-6"
+        , "collections": ""
         , "itemDesc": "Sheath - Black"
+        , "itemUrl": ""
+        , "title": "Coco Sheath Dress With Sleeveless Bateau Top In Black"
+        , "strapline": "Buy A Classic Black Coco Sheath Dress With A Sleeveless Top, Bateau Neckline, Long Pencil Skirt Buy A Simple Two Tone Coco Sheath Dress With A Cream Sleeveless Top, Bateau Neckline, Long  Teal Pencil Skirt, Made To Your Own Custom Specification"
+        , "colours": "BLACK"
         , "images": {
             "collection": {
                 "main": "dress.png"
@@ -273,7 +304,12 @@
     }
         , {
         "itemId": "sheath-7"
+        , "collections": ""
         , "itemDesc": "Sheath - Red"
+        , "itemUrl": ""
+        , "title": "Coco Sheath Dress With Cap Sleeves In Rose Red "
+        , "strapline": "Buy A Rose Red Coco Sheath Dress With A Bateau Neckline, Cap Sleeved Bodice and Long Pencil Skirt, Made To Your Own Custom Specification"
+        , "colours": "ROSE RED"
         , "images": {
             "collection": {
                 "main": "dress.png"
@@ -296,7 +332,12 @@
     }
         , {
         "itemId": "sheath-8"
+        , "collections": ""
         , "itemDesc": "Wrap sheath - Teal"
+        , "itemUrl": ""
+        , "title": "Coco Sheath Dress With Sleeveless Bateau Top In Teal"
+        , "strapline": "Buy A Teal Coco Sheath Dress With A Sleeveless Wrap Top, Black Trim And A Long Pencil, Made To Your Own Custom Specification"
+        , "colours": "TEAL"
         , "images": {
             "collection": {
                 "main": "dress.png"

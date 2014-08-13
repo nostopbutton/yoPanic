@@ -5,8 +5,8 @@
         , "type": "top"
         , "styleName": "Classic Top"
         , "styleFormalName": "Top"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Tailored Tops : Custom-Made"
+        , "strapline": "Design Your Own Classic Tailored Top To Compliment Any AURZA Skirt, Customised To Suit You"
         , "description": [ "The ultimate range of all our bodice styles available here separately to mix and match with your perfect skirt."
         , "" ]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -119,7 +119,19 @@
     [
         {
             "itemId": "top-classic-1"
+            , "collections": ""
             , "itemDesc": "Top - Aubergine"
+            , "itemUrl": ""
+            , "title": ""
+            , "strapline": ""
+            , "colours": ""
+            , "images": {
+                "collection": {
+                    "main": "dress.png"
+                    , "rollover": "front.jpg"
+                }
+                , "product": ["front", "back", "dress"]
+            }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "001", "size": "10", "fabric": "013", "trim": ""}

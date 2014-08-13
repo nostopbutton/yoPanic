@@ -1,0 +1,125 @@
+<div id="mobDesignBuildView" class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div style="width:480px; height:320px; border-color:black ; border-style: solid; border-width:2px">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img itemprop="logo" src="/images/home/aurza-logo.png" style="height:50px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div style="max-height:260px">
+                            <img src="/images/dressed-whole-body.png" style="max-height:100%;width:auto; padding:5%"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                                <div class="btn-group" dropdown is-open="status.isopen">
+                                    <button type="button" class="btn dropdown-toggle" ng-disabled="disabled">
+                                        Button dropdown <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#" ng-repeat="part in item.design_builder.options[0].parts">{{part.label}}</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<button ng-repeat="fabric in fabricSet.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" -->
+                         <!--ng-model="selectedOption[attrib]" btn-radio="fabric.fabId"></button>-->
+                        <tabset class="">
+                            <tab ng-repeat="part in item.design_builder.options[0].parts" heading="{{part.label}}">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <select class="form-control">
+                                            <option ng-repeat="value in part.values">{{value.name}} - {{value.id}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                         <span ng-repeat="set in fabricSets | filterSets:part.fabricSets">
+                                                <div ng-repeat="fabric in set.fabrics">{{fabric}}</div>
+                                            </span>
+                                        <select class="form-control" >
+                                            <span ng-repeat="set in fabricSets | filterSets:part.fabricSets">
+                                                <option ng-repeat="fabric in set.fabrics">{{fabric}}</option>
+                                            </span>
+
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--<i class="pull-left glyphicon glyphicon-chevron-left"></i>-->
+                                <!--<i class="pull-right glyphicon glyphicon-chevron-right"></i>-->
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Add trim
+                                    </label>
+                                </div>
+                            </tab>
+                        </tabset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div style="height:480px; width:320px; border-color:black ; border-style: solid; border-width:2px">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img itemprop="logo" src="/images/home/aurza-logo.png" style="height:50px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div style="max-height:260px">
+                            <img src="/images/dressed-whole-body.png" style="max-height:100%;width:auto; padding:5%"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <select class="form-control">
+                                    <option>Neckline</option>
+                                    <option>Sleeves</option>
+                                    <option>Belt</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <select class="form-control">
+                                    <option>V neck</option>
+                                    <option>Round</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <select class="form-control">
+                                    <option>Red</option>
+                                    <option>Blue</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<i class="pull-left glyphicon glyphicon-chevron-left"></i>-->
+                        <!--<i class="pull-right glyphicon glyphicon-chevron-right"></i>-->
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Add trim
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

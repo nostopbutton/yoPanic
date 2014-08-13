@@ -5,8 +5,8 @@
         , "type": "silk"
         , "styleName": "Claudia"
         , "styleFormalName": "Maxi-Shirt Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Claudia Maxi Shirt Dress (silk): Custom-Made"
+        , "strapline": "Design Your Own Luxurious Silk Claudia Maxi Shirt Dress, Customised To Suit You"
         , "description": [ "Our maxi version of the shirt dress is effortless and flattering, whilst lengthening the body to create an elegant silhouette."
         , "" ]
         , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
@@ -61,7 +61,8 @@
             , "sizes": [
             {"id": "05", "name": "maxi"}
         ]
-            , "trim": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "p-sk-tr"}]
         }
         ,{
             "part_name": "sleeves"
@@ -76,12 +77,34 @@
         }
     ]
     }]
+    , "extras": [
+    {
+        "name": "extras"
+        , "label": "Extras"
+        , "active": "true"
+        , "parts": [
+        {
+            "part_name": "belt"
+            , "type": "blt"
+            , "active": "true"
+            , "label": "Belt"
+            , "values": [
+            {"id": "005", "name": "Silk belt", "defaultFabric": "085", "fabricSets": [ {"setId": "p-sk-blt"}, {"setId": "pr-sk"}]}
+        ]
+        }
+    ]}
+]
 }
     , "collection":
     [
         {
             "itemId": "shirt-maxi-1"
+            , "collections": ""
             , "itemDesc": "Maxi-Shirt - Coral"
+            , "itemUrl": ""
+            , "title": "Claudia Maxi Shirt Dress With Long Sleeves In Coral Silk"
+            , "strapline": "Buy A Luxurious Coral Silk Claudia Collared Maxi Shirt Dress With Long Sleeves, Made To Your Own Custom Specification"
+            , "colours": "CORAL"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -96,7 +119,7 @@
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -104,7 +127,12 @@
         },
         {
             "itemId": "shirt-maxi-2"
+            , "collections": ""
             , "itemDesc": "Maxi-Shirt - Hot pink"
+            , "itemUrl": ""
+            , "title": "Claudia Maxi Shirt Dress With Long Sleeves In Hot Pink Silk"
+            , "strapline": "Buy A Luxurious Hot Pink Silk Claudia Collared Maxi Shirt Dress With Long Sleeves, Made To Your Own Custom Specification"
+            , "colours": "HOT PINK"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -119,7 +147,7 @@
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -127,7 +155,12 @@
         },
         {
             "itemId": "shirt-maxi-3"
+            , "collections": ""
             , "itemDesc": "Maxi-Shirt - Cobalt"
+            , "itemUrl": ""
+            , "title": "Claudia Maxi Shirt Dress With Long Sleeves In Cobalt Blue Silk"
+            , "strapline": "Buy A Luxurious Cobalt Blue Silk Claudia Collared Maxi Shirt Dress With Long Sleeves, Made To Your Own Custom Specification"
+            , "colours": "COBALT BLUE"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -142,7 +175,35 @@
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "shirt-maxi-4"
+            , "collections": "new"
+            , "itemDesc": "Zebra print Claudia maxi-dress"
+            , "itemUrl": ""
+            , "title": "Zebra print Claudia maxi-dress - Grey"
+            , "strapline": "Buy a grey zebra silk Claudia maxi-dress; customised to suit you."
+            , "colours": "Grey zebra print"
+            , "images": {
+            "collection": {
+                "main": "front.png"
+                , "rollover": "model.jpg"
+            }
+            , "product": ["front", "back", "model", "detail"]
+        }
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "018", "size": "05", "fabric": "411", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "016", "size": "00", "fabric": "411", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }

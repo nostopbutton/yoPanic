@@ -5,8 +5,8 @@
         , "type": "dress"
         , "styleName": "Christina"
         , "styleFormalName": "Doloman Dress"
-        , "shortDesc": "...."
-        , "strapline": "..."
+        , "title": "Christina Dolomon Dress: Custom Made"
+        , "strapline": "Design Your Own Classic Christina Dolomon Dress, Customised To Suit You"
         , "description": [ "Perfect for curves whilst amazingly comfortable at the same time, the doloman top can be paired with any skirt."
         , "Its pleated shoulders result in  beautiful draping lines and provide a looser fit.  Keep it simple with a straight pencil or add a killer kick with the ruffle at the back." ]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -116,7 +116,12 @@
     [
         {
             "itemId": "doloman-1"
+            , "collections": ""
             , "itemDesc": "Doloman - Cream / Black"
+            , "itemUrl": ""
+            , "title": "Christina Dolomon Dress in Black and White "
+            , "strapline": "Buy An Elegant Two Tone Christina Dress With Cream Dolomon Top, Black Faux-Leather Trim, Black Pencil Skirt With Ruffle, Made To Your Own Custom Specification"
+            , "colours": "BLACK / CREAM"
             , "images": {
                 "collection": {
                     "main": "dress.png"

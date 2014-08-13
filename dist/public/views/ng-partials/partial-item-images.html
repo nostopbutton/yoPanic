@@ -1,13 +1,39 @@
 <div id="dress_image_panel" class="row">
     <div class="image col-sm-8 col-sm-push-3">
+        <div class="row">
         <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : image.view}}"
              alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
-             class="img-responsive">
+             class="img-responsive" itemprop="image"
+             data-pin-description="{{page.title}} by AURZA"
+             data-pin-url="{{page.snapshotUrl}}"
+             data-pin-height="28" data-pin-color="white">
         <!--item.itemDesign.hasOwnProperty('images') = {{item.itemDesign.hasOwnProperty('images')}}-->
         <!--<br>-->
         <!--'-lg-' + item.itemDesign.images.product[0] = {{'-lg-' + item.itemDesign.images.product[0]}}-->
 <!--<br>-->
         <!--image.view = {{(item.itemDesign.hasOwnProperty('images') ? '-lg-' + item.itemDesign.images.product[0] + '.jpg': image.view)}}-->
+        </div>
+        <div class="row center" style="padding-top:10px; padding-bottom: 50px">
+            <div class="col-sm-4" style="text-align: center">
+            <a href="http://pinterest.com/share" social-pinterest="" class="ng-isolate-scope"
+               url="{{page.snapshotUrl}}"
+               media="http://aurza.com{{item.itemDesign.itemId | path : '/images/collection/' : image.view}}"
+               description="{{page.title}} by AURZA">
+                <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" alt="Pin It!"/></a>
+            </div>
+            <div class="tweet_container col-sm-4" style="text-align: center">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-related="AURZAcustom" data-lang="en" data-size="medium" data-count="none"
+                   data-text="{{page.title}} by @AURZAcustom">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </a>
+            </div>
+            <div class="col-sm-4" style="text-align: center">
+            <a href="https://facebook.com/sharer.php" social-facebook="" class="ng-isolate-scope"
+               url="{{page.snapshotUrl}}">
+                <img src="/images/icons/fb-share.png" alt="Share!"/></a>
+
+            </div>
+        </div>
     </div>
     <div class="views col-sm-3 col-sm-pull-8">
         <div class="row">
@@ -15,7 +41,7 @@
                 <img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-'+prod_view+'.jpg'}}"
                      alt="{{item.style.styleName}} - {{item.itemDesign.itemDesc}}"
                      ng-click="image.view='-lg-'+prod_view+'.jpg'"
-                     class="img-responsive img-thumbnail">
+                     class="img-responsive img-thumbnail" itemprop="image">
             </div>
             <!--<div id="back" class="col-xs-4  col-sm-12">-->
                 <!--<img ng-src="{{item.itemDesign.itemId | path : '/images/collection/' : '-lg-back.jpg'}}"-->

@@ -1,0 +1,84 @@
+---
+page-title: '{{page.title}}'
+page-description: '{{page.description}}'
+page-image: '{{page.image}}'
+
+page-twitterCard: '{{page.twitterCard}}'
+
+page-ogType: '{{page.ogType}}'
+page-fbAdminId: '{{page.fbAdminId}}'
+page-url: '{{page.url}}'
+
+product-code: '{{product.code}}'
+product-image1: '{{product.image1}}'
+product-image2: '{{product.image2}}'
+product-price: '{{product.price}}'
+product-currency: '{{product.currency}}'
+product-availability: '{{product.availability}}'
+product-destinations: '{{product.destinations}}'
+product-color: '{{product.color}}'
+product-gender: '{{product.gender}}'
+item: '{{page.item}}'
+---
+
+<!--data-description="current_description"-->
+<div ng-controller="appController" id="top">
+    <div ng-bind="mytitle">Placeholder title</div>
+    <!--<div ng-include="'views/modal.html'"></div>-->
+    <!--<div ng-include="'views/idggHeader.html'"></div>-->
+    <!--<div ng-include="'/views/partials/header.html'"></div>-->
+    <div class="alert alert-info" ng-show="loading">Loading</div>
+
+    {{item}}
+    <div ng-view></div>
+    <!--<div ng-include="'/views/partials/footer.html'"></div>-->
+</div>
+
+<div class="col-sm-6">
+    title: {{page-title}}
+    <br>name="description" content="{{page-description}}"<!--Page description. No longer than 155 characters.-->
+    <br>
+    <!-- Schema.org markup for Google+ -->
+    <br>itemprop="name" content="{{page-title}}" <!-- The Name or Title Here -->
+    <br>itemprop="description" content="{{page-description}}"
+    <!--<br>itemprop="url" content="" />-->
+    <br>itemprop="image" content="{{page-image}}"
+    <br>itemprop="image" content="{{page-image}}"
+    <br>
+    <!-- Twitter Card data -->
+    <br>name="twitter:card" content="{{page-twitterCard}}"
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <!--<br>name="twitter:image:src" content=" http://www.example.com/image.html">-->
+    <br>name="twitter:site" content="@AURZAcustom"
+    <br>name="twitter:title" content="{{page-title}}"
+    <br>name="twitter:description" content="{{page-description}}"
+    <br>name="twitter:creator" content="@AURZAcustom"
+    <br>name="twitter:image" content="{{page-image}}"      <!-- content=" http://www.example.com/image.html"-->
+    <br>name="twitter:data1" content="{{product-currency}} {{product-price}}"    <!-- content="$3" -->
+    <br>name="twitter:label1" content="Price"                <!-- content="Price"-->
+    <br>name="twitter:data2" content="{{product-color}}"     <!-- content="Black"-->
+    <br>name="twitter:label2" content="Colour"               <!-- content="Color"-->
+    <br>
+</div>
+<div class="col-sm-6">
+    <!-- Open Graph data -->
+    <br>property="og:title" content="{{page-title}}"
+    <!--<br>property="og:type" content="article" -->
+    <br>property="og:type" content="product"
+    <br>property="og:url" content="{{page-url}}"
+    <br>property="og:image" content="{{page-image}}"
+    <br>property="og:image" content="{{product-image1}}"
+    <br>property="og:image" content="{{product-image2}}"
+    <br>property="og:description" content="{{page-description}}"
+    <br>property="og:site_name" content="AURZA"
+    <br>property="og:brand" content="AURZA"
+    <br>property="fb:admins" content="{{page-fbAdminId}}"
+    <br>property="og:upc" content="{{product-code}}"
+    <br>property="og:price:amount" content="{{product-price}}"
+    <br>property="og:price:currency" content="{{product-currency}}"
+    <br>property="og:availability" content="{{product-availability}}"
+    <br>property="og:availability:destinations" content="{{product-destinations}}"
+    <br>property="product:color" content="{{product-color}}"
+    <br>property="product:gender" content="{{product-gender}}"
+
+</div>

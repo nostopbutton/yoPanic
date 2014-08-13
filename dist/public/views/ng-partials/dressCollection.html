@@ -14,8 +14,12 @@
             <select ng-model="silhouetteFilter" ng-options="sil.id as sil.label for sil in silhouettes">
             </select>
         </div>
+        <!--<div class="col-sm-3 header">-->
+            <!--<select ng-model="typeFilter" ng-options="type.id as type.label for type in types">-->
+            <!--</select>-->
+        <!--</div>-->
         <div class="col-sm-3 header">
-            <select ng-model="typeFilter" ng-options="type.id as type.label for type in types">
+            <select ng-model="collectionFilter" ng-options="collection.id as collection.label for collection in collections">
             </select>
         </div>
         <div class="col-sm-3 header">
@@ -33,15 +37,16 @@
             <!--<div class="row">-->
 
             <!--</div>-->
+            <!--| filter:{type: typeFilter}-->
             <div class="row">
                 <div ng-repeat="dress in dresses
                                     | filter:{styleId: silhouetteFilter}
-                                    | filter:{type: typeFilter}
+                                    | filter:{collections: collectionFilter}
                                     | filter:{itemDesc: colourFilter}">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <div class="item">
 
-                        <a ng-href="#!/item/{{dress.styleId}}/{{dress.itemId}}"
+                        <a ng-href="/shop/collection/{{dress.styleId}}/{{dress.itemId}}"
                            ng-click="_gaq.push(['_trackEvent', 'Dress Collection', 'customize (image)', '{{dress.silId}}/{{dress.itemId}}']);">
                             <div class="row">
                                 <div class=" image page-curl">

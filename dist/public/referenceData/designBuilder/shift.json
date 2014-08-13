@@ -5,8 +5,8 @@
         , "type": "silk"
         , "styleName": "Eddie"
         , "styleFormalName": "Shift Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Eddie - Silk Shift Dress: Custom-Made"
+        , "strapline": "Design Your Own Chic Silk Eddie Shift Dress, Customised To Suit You"
         , "description": [ "This lightweight piece is a chic investment for any woman’s wardrobe."
         , "Cut for maximum style the shift skims the top of your body whilst flaring out to the thighs. Added detailing at the hem and sides gives an extra charm to this modern classic." ]
         , "care": [ "100% silk crepe de chine. Fabric dyed for vibrant colours"
@@ -15,7 +15,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-202-body"
-        , "defaultItemId": "shift-1"
+        , "defaultItemId": "shift-14"
         , "foxyImage": "pat-202"
         , "fc_category": "category||31b898ce8f01d294f0dbe505e3a523b37c10223e610e593dae34fec8b9120c30"
         , "fc_code": "code||5cda5cff0cd0b28c96b4e802c07d9dded79760e559d22b44ed163e179cb2d5d1"
@@ -61,7 +61,7 @@
             , {"id": "03", "name": "mid"}
         ]
             , "trim": true
-            , "trimFabricSets": [{"setId": "x-fl"}]
+            , "trimFabricSets": [{"setId": "x-fl"},{"setId": "p-sk-tr"}]
         }
         ,{
             "part_name": "sleeves"
@@ -90,7 +90,7 @@
             , "active": "true"
             , "label": "Belt"
             , "values": [
-            {"id": "003", "name": "Silk belt", "defaultFabric": "085", "fabricSets": [ {"setId": "p-sk"}]}
+            {"id": "003", "name": "Silk belt", "defaultFabric": "085", "fabricSets": [ {"setId": "p-sk-blt"}, {"setId": "pr-sk"}]}
         ]
         }
     ]}
@@ -100,7 +100,12 @@
     [
         {
             "itemId": "shift-1"
+            , "collections": ""
             , "itemDesc": "Shift - Hot pink"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Bell Sleeves In Hot Pink Silk"
+            , "strapline": "Buy A Chic Hot Pink Eddie Shift Dress With Bell Sleeves, Made To Your Own Custom Specification"
+            , "colours": "HOT PINK"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -115,7 +120,7 @@
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "belt":    {"type": "blt", "id": "003", "size": "00", "fabric": "083", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }
@@ -123,7 +128,12 @@
         },
         {
             "itemId": "shift-2"
+            , "collections": ""
             , "itemDesc": "Shift - Teal"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Bell Sleeves In Turquoise Silk"
+            , "strapline": "Buy A Chic Turquoise Eddie Shift Dress With Bell Sleeves, Made To Your Own Custom Specification"
+            , "colours": "TURQUOISE"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -146,7 +156,12 @@
         },
         {
             "itemId": "shift-3"
+            , "collections": ""
             , "itemDesc": "Shift - Coral"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Bell Sleeves In Coral Silk"
+            , "strapline": "Buy A Chic Coral Eddie Shift Dress With Bell Sleeves, Made To Your Own Custom Specification"
+            , "colours": "CORAL"
             , "images": {
             "collection": {
                 "main": "dress.png"
@@ -169,7 +184,12 @@
         },
         {
             "itemId": "shift-7"
+            , "collections": ""
             , "itemDesc": "Shift - Hot pink"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Elbow Length Sleeves In Hot Pink Silk "
+            , "strapline": "Buy A Chic Hot Pink Eddie Shift Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "HOT PINK"
             , "images": {
             "collection": {
                 "main": "dress.png"
@@ -192,7 +212,12 @@
         },
         {
             "itemId": "shift-8"
+            , "collections": ""
             , "itemDesc": "Shift - Coral"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Elbow Length Sleeves In Coral Silk"
+            , "strapline": "Buy A Chic Coral Eddie Shift Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "CORAL"
             , "images": {
             "collection": {
                 "main": "dress.png"
@@ -215,7 +240,12 @@
         },
         {
             "itemId": "shift-9"
+            , "collections": ""
             , "itemDesc": "Shift - Teal"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Elbow Length Sleeves In Turquoise Silk"
+            , "strapline": "Buy A Chic Turquoise Eddie Shift Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
+            , "colours": "TURQUOISE"
             , "images": {
             "collection": {
                 "main": "dress.png"
@@ -238,7 +268,12 @@
         },
         {
             "itemId": "shift-10"
+            , "collections": ""
             , "itemDesc": "Shift - Hot pink"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Sleeveless Scoop Neck Bodice In Hot Pink Silk"
+            , "strapline": "Buy A Hot Pink Sleeveless Eddie Shift Dress With Scoop Neck, Made To Your Own Custom Specification"
+            , "colours": "HOT PINK"
             , "images": {
             "collection": {
                 "main": "dress.png"
@@ -261,7 +296,12 @@
         },
         {
             "itemId": "shift-11"
+            , "collections": ""
             , "itemDesc": "Shift - Teal"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Sleeveless Scoop Neck Bodice In Coral Silk"
+            , "strapline": "Buy A Coral Sleeveless Eddie Shift Dress With Scoop Neck, Made To Your Own Custom Specification"
+            , "colours": "TURQUOISE"
             , "images": {
             "collection": {
                 "main": "dress.png"
@@ -284,7 +324,12 @@
         },
         {
             "itemId": "shift-13"
+            , "collections": ""
             , "itemDesc": "Shift - Coral"
+            , "itemUrl": ""
+            , "title": "Eddie Shift Dress With Sleeveless Scoop Neck Bodice In Turquoise Silk"
+            , "strapline": "Buy A Turquoise Sleeveless Eddie Shift Dress With Scoop Neck, Made To Your Own Custom Specification"
+            , "colours": "CORAL"
             , "images": {
             "collection": {
                 "main": "dress.png"
@@ -300,6 +345,34 @@
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
+                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
+            }
+        }
+        },
+        {
+            "itemId": "shift-14"
+            , "collections": "new"
+            , "itemDesc": "Zebra Print Eddie Kaftan"
+            , "itemUrl": ""
+            , "title": "Zebra-Print 'Eddie' Kaftan Dress (Navy Silk)"
+            , "strapline": "Buy a navy zebra-print silk 'Eddie' kaftan dress from AURZA - customised to suit you."
+            , "colours": "NAVY ZEBRA PRINT"
+            , "images": {
+            "collection": {
+                "main": "front.png"
+                , "rollover": "model.jpg"
+            }
+            , "product": ["front", "back", "model", "detail"]
+        }
+            , "itemDesign": {
+            "design": {
+                "neckline":   {"type": "nek", "id": "015", "size": "03", "fabric": "406", "trim": ""}
+                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "406", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
+            }
+            , "extras": {
+                "belt":    {"type": "blt", "id": "003", "size": "00", "fabric": "083", "code": "000-000"},
                 "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
                 "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
             }

@@ -7,6 +7,13 @@ angular.module('panicApp.Controllers')
 
             trackPageInGoogleAnalytics($rootScope,  $scope, $window, $location, $routeParams);
 
+            var collection = $routeParams.collection;
+
+            $rootScope.page = {};
+            $rootScope.page.title = "Shop custom made women's dresses - AURZA"
+            $rootScope.page.description = "A range of fabulous AURZA tailored dresses to inspire, buy and customise"
+            $rootScope.page.canonical = $location.path();
+
             // Put Dress Collection data into page scope
             var stylesPromise = CatalogueService.getStyleListPromise();
             var styles = [];
@@ -15,7 +22,7 @@ angular.module('panicApp.Controllers')
                 styles = result;
 
                 var itemsPromise = CatalogueService.getItemCollectionWithStyleDataPromiseForStyles(
-                    ['sheath', 'doloman', 'swing', 'swoosh', 'bustier', 'pencil-skirt'
+                    ['sheath', 'doloman', 'swing', 'swing-print', 'swoosh', 'bustier', 'bustier-print', 'pencil-skirt'
                         , 'shift', 'shirt', 'shirt-maxi', 'flare']);
                 var items = [], itemIds = [];
 
@@ -81,10 +88,26 @@ angular.module('panicApp.Controllers')
                 { id: 'cobalt', label: 'Cobalt'}
             ];
 
+            $scope.collections = [
+                { id: '', label: '-- All collections --'},
+                { id: 'new', label: 'New Arrivals!'}
+//                ,
+//                { id: 'patterned', label: 'Patterned'},
+//                { id: 'mono', label: 'Mono-chrome'}
+            ];
+
+
+
             $scope.silhouetteFilter = $scope.silhouettes[0].id;
             $scope.typeFilter = $scope.types[0].id;
             $scope.fabricTypeFilter = $scope.types[0].id;
             $scope.colourFilter = $scope.colours[0].id;
+            if (_.isUndefined(collection) ) {
+                $scope.collectionFilter = $scope.collections[0].id;
+            } else {
+                $scope.collectionFilter = $scope.collections[1].id;
+            }
+
 
 //            $scope.silFilter = { id: '', label: 'All'};
 
@@ -119,6 +142,7 @@ angular.module('panicApp.Controllers')
                 $scope.typeFilter = $scope.types[0].id;
                 $scope.fabricTypeFilter = $scope.types[0].id;
                 $scope.colourFilter = $scope.colours[0].id;
+                $scope.collectionFilter = $scope.collections[0].id;
             }
 
 //      $scope.reset();

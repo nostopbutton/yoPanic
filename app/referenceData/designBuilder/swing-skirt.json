@@ -5,8 +5,8 @@
         , "type": "skirt"
         , "styleName": "Audrey Swing"
         , "styleFormalName": "Swing Skirt"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Audrey - Swing Skirt : Custom-Made"
+        , "strapline": "Design Your Own Flattering Audrey Swing Skirt, Customised To Suit You"
         , "description": [ "Cinched at the waist with a full skirt to give freedom of movement this skirt is a must have wardrobe piece for the modern woman. "
         , "Side pockets add that perfect final touch." ]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -88,7 +88,12 @@
     [
         {
             "itemId": "swing-skirt-1"
+            , "collections": ""
             , "itemDesc": "Swing skirt - Black Leather"
+            , "itemUrl": ""
+            , "title": ""
+            , "strapline": ""
+            , "colours": ""
             , "images": {
                 "collection": {
                     "main": "dress.png"

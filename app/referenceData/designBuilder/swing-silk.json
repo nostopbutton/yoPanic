@@ -5,8 +5,8 @@
         , "type": "dress"
         , "styleName": "Carrie"
         , "styleFormalName": "Silk Swing Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Carrie - Silk Swing Dress: Custom-Made"
+        , "strapline": "Design Your Own Luxurious Silk Carrie Swing Dress, Customised To Suit You"
         , "description": [ "The ultimate in luxury."
         , "Our classic bodice with full swing skirt in either printed or solid coloured silk. "]
         , "care": [ "100% silk crepe de chine. Digitally printed with the latest techniques allowing for a  fabulous colour palette."
@@ -88,7 +88,12 @@
     [
         {
             "itemId": "swing-silk-1"
+            , "collections": ""
             , "itemDesc": "Carrie dress"
+            , "itemUrl": ""
+            , "title": ""
+            , "strapline": ""
+            , "colours": ""
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -98,7 +103,7 @@
             }
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "02", "fabric": "410", "trim": ""}
+                "neckline":   {"type": "nek", "id": "001", "size": "02", "fabric": "411", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
 

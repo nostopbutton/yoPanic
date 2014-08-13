@@ -5,8 +5,8 @@
         , "type": "skirt"
         , "styleName": "Adele Swing"
         , "styleFormalName": "Printed Swing Skirt"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Adele - Swing Skirt (Cotton) : Custom-Made"
+        , "strapline": "Design Your Own Flattering Printed Cotton Adele Swing Skirt, Customised To Suit You"
         , "description": [ "Our classic swing skirt in the the latest stripes and contemporary floral prints."
         , "Guaranteed to make you feel amazing."]
         , "care": [ "Our stretch cotton option provides a lightweight fabric alternative. Digitally printed with the latest techniques allowing for a fabulous colour palette."
@@ -87,7 +87,12 @@
     [
         {
             "itemId": "swing-skirt-print-1"
+            , "collections": ""
             , "itemDesc": "Print swing skirt"
+            , "itemUrl": ""
+            , "title": ""
+            , "strapline": ""
+            , "colours": ""
             , "images": {
                 "collection": {
                     "main": "dress.png"

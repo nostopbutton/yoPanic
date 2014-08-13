@@ -5,8 +5,8 @@
         , "type": "dress"
         , "styleName": "Adele"
         , "styleFormalName": "Patterned Swing Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Adele Swing Dress: Custom-Made"
+        , "strapline": "Design Your Own Adele Swing Dress, Customised To Suit You"
         , "description": [ "Our classic bodice with a full swing skirt for a dramatic Audrey Hepburn effect."
         , "Made in the latest printed stretch cotton for a modern twist on our timeless classic."]
         , "care": [ "Our stretch cotton option provides a lightweight fabric alternative. Digitally printed with the latest techniques allowing for a fabulous colour palette."
@@ -89,17 +89,22 @@
     [
         {
             "itemId": "swing-print-1"
-            , "itemDesc": "Adele dress"
+            , "collections": "new"
+            , "itemDesc": "Floral Print Adele Dress"
+            , "itemUrl": ""
+            , "title": "Floral Print Adele Dress - Monochrome"
+            , "strapline": "Buy A floral print monochrome Adele dress in stretch cotton; customised to suit you."
+            , "colours": "Monochrome floral print"
             , "images": {
                 "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
+                    "main": "front.png"
+                    , "rollover": "model.jpg"
                 }
-                , "product": ["front", "back", "dress"]
+            , "product": ["front", "back", "model", "detail", "model2"]
             }
             , "itemDesign": {
             "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "01", "fabric": "301", "trim": ""}
+                "neckline":   {"type": "nek", "id": "005", "size": "02", "fabric": "304", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }

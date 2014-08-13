@@ -5,8 +5,8 @@
         , "type": "skirt"
         , "styleName": "Coco Pencil"
         , "styleFormalName": "Pencil Skirt"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Coco - Pencil Skirt: Custom-Made"
+        , "strapline": "Design Your Own Classic Coco Pencil Skirt, Customised To Suit You"
         , "description": [ "Tailored for a closer fit this skirt is designed to flaunt your curves."
         , "It accentuates all the right bits whilst visually flattering your stomach area. The simple lines are chic and glamorous and never out of style. Killer heels a must." ]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -89,7 +89,12 @@
     [
         {
             "itemId": "pencil-skirt-1"
+            , "collections": ""
             , "itemDesc": "Pencil skirt - Teal"
+            , "itemUrl": ""
+            , "title": "Coco Pencil Skirt In Teal"
+            , "strapline": "Buy A Classic Teal Coco Pencil Skirt, Made To Your Own Custom Specification"
+            , "colours": "TEAL"
             , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -112,7 +117,12 @@
         }
         ,        {
         "itemId": "pencil-skirt-2"
+        , "collections": ""
         , "itemDesc": "Pencil skirt with ruffle - Creme"
+        , "itemUrl": ""
+        , "title": "Coco Pencil Skirt With Ruffle In Cream"
+        , "strapline": "Buy A Classic Cream Coco Pencil Skirt With Ruffle, Made To Your Own Custom Specification"
+        , "colours": "CREAM"
         , "images": {
             "collection": {
                 "main": "dress.png"
@@ -135,7 +145,12 @@
     },
         {
             "itemId": "pencil-skirt-3"
+            , "collections": ""
             , "itemDesc": "Pencil skirt - Midnight blue"
+            , "itemUrl": ""
+            , "title": "Coco Pencil Skirt In Navy"
+            , "strapline": "Buy A Classic Navy Coco Pencil Skirt, Made To Your Own Custom Specification"
+            , "colours": "NAVY"
             , "images": {
                 "collection": {
                     "main": "dress.png"

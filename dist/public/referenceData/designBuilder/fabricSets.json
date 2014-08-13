@@ -54,15 +54,37 @@
     , "type": "Premium"
     , "fabrics":
     [
+
       { "fabId": "085", "fabName" : "jade"}
       , { "fabId": "087", "fabName" : "midnight blue"}
       , { "fabId": "088", "fabName" : "fuscia"}
       , { "fabId": "089", "fabName" : "red"}
      , { "fabId": "091", "fabName" : "pewter"}
-
-
+        , { "fabId": "083", "fabName" : "overcast"}
     ]
   }
+    , { "setId": "p-sk-blt"
+    , "setName": "Silk"
+    , "type": "Premium"
+    , "fabrics":
+        [
+            { "fabId": "083", "fabName" : "overcast"}
+            , { "fabId": "085", "fabName" : "jade"}
+            , { "fabId": "087", "fabName" : "midnight blue"}
+            , { "fabId": "088", "fabName" : "fuscia"}
+            , { "fabId": "089", "fabName" : "red"}
+            , { "fabId": "091", "fabName" : "pewter"}
+        ]
+}
+    , { "setId": "p-sk-tr"
+    , "setName": "Silk"
+    , "type": "Premium"
+    , "fabrics":
+        [
+            { "fabId": "083", "fabName" : "overcast"}
+            , { "fabId": "091", "fabName" : "pewter"}
+        ]
+}
   , { "setId": "x-fl"
     , "setName": "Faux leather"
     , "type": "Special"
@@ -116,10 +138,7 @@
         [
             { "fabId": "300", "fabName" : "roseblue"}
             , { "fabId": "301", "fabName" : "rosered"}
-            , { "fabId": "302", "fabName" : "roseteal"}
-            , { "fabId": "303", "fabName" : "rosepink"}
             , { "fabId": "304", "fabName" : "rosemonochrome"}
-            , { "fabId": "305", "fabName" : "roseyellow"}
         ]
 }
 
@@ -143,11 +162,8 @@
     , "fabrics":
         [
             { "fabId": "406", "fabName" : "zebrablue"}
-            , { "fabId": "407", "fabName" : "zebraredYellow"}
             , { "fabId": "408", "fabName" : "zebrateal"}
-            , { "fabId": "410", "fabName" : "zebrablack"}
             , { "fabId": "411", "fabName" : "zebragrey"}
-            , { "fabId": "412", "fabName" : "zebrayellow"}
         ]
 }
 ]

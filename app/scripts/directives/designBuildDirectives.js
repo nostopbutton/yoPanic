@@ -226,7 +226,8 @@ designBuildDirective.directive('silhouette', function () {
         scope: {
             design: "="
         },
-        template: '<a href="#!/design/{{design.styleId}}"' +
+//        template: '<a href="/design/{{design.styleId}}"' +
+        template: '<a href="/design/{{design.styleId}}"' +
 //            "onClick=\"_gaq.push(['_trackEvent', 'Silhouettes', 'customize', '{{design.styleId}}']);\"" +
             ">" +
             '<div class="row image">' +

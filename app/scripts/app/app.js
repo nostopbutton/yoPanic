@@ -7,22 +7,31 @@ angular.module('panicApp',
         , 'panicApp.designBuildDirectives'
         , 'panicApp.designBuildFilters'
         , 'ui.bootstrap'
+        , 'socialLinks'
     ])//, 'analytics', 'ui'
     .config(function ($routeProvider, $locationProvider) {
+
+//        $provide.decorator('$sniffer', function($delegate) {
+//            $delegate.history = false;
+//            return $delegate;
+//        });
+
         $locationProvider
-//      .html5Mode(true)
+            .html5Mode(true)
             .hashPrefix('!');
+
         $routeProvider
-
-
 //     Shop The Collection routes
             .when('/collection', {
                 templateUrl: '/views/ng-partials/dressCollection.html', controller: 'DressCollectionCtrl'
             })
-            .when('/item/:styleId/:itemId', {
+            .when('/collection/:collection', {
+                templateUrl: '/views/ng-partials/dressCollection.html', controller: 'DressCollectionCtrl'
+            })
+            .when('/collection/:styleId/:itemId', {
                 templateUrl: '/views/ng-partials/shopItem.html', controller: 'DesignBuildCtrl'
             })
-            .when('/item/:styleId/:itemId/:tab', {
+            .when('/collection/:styleId/:itemId/:tab', {
                 templateUrl: '/views/ng-partials/shopItemBuy.html', controller: 'DesignBuildCtrl'
             })
 //      Design Builder routes
@@ -39,6 +48,48 @@ angular.module('panicApp',
             .when('/design/:styleId/:itemId/:tab', {
                 templateUrl: '/views/ng-partials/designBuild.html', controller: 'DesignBuildCtrl'
             })
+
+//      Mobile Design Builder routes
+            .when('/mobile/:styleId', {
+                templateUrl: '/views/ng-partials/mobDesignBuild.html', controller: 'DesignBuildCtrl'
+            })
+            .when('/mobile/:styleId/:itemId', {
+                templateUrl: '/views/ng-partials/mobDesignBuild.html', controller: 'DesignBuildCtrl'
+            })
+            .when('/mobile/:styleId/:itemId/:tab', {
+                templateUrl: '/views/ng-partials/mobDesignBuild.html', controller: 'DesignBuildCtrl'
+            })
+
+            .when('/shop/:url1', {
+                redirectTo: function ($routeParams, $path, $search) {
+                    console.log($routeParams);console.log($path);console.log($search);
+                    return "/" + $routeParams.url1;
+                }
+            })
+            .when('/shop/:url1/:url2', {
+                redirectTo: function ($routeParams, $path, $search) {
+                    console.log($routeParams);console.log($path);console.log($search);
+                    return "/" + $routeParams.url1 + "/" + $routeParams.url2;
+                }
+            })
+            .when('/shop/:url1/:url2/:url3', {
+                redirectTo: function ($routeParams, $path, $search) {
+                    console.log($routeParams);console.log($path);console.log($search);
+                    return "/" + $routeParams.url1 + "/" + $routeParams.url2 + "/" + $routeParams.url3;
+                }
+            })
+            .when('/shop/:url1/:url2/:url3/:url4', {
+                redirectTo: function ($routeParams, $path, $search) {
+                    console.log($routeParams);console.log($path);console.log($search);
+                    return "/" + $routeParams.url1 + "/" + $routeParams.url2 + "/" + $routeParams.url3
+                        + "/" + $routeParams.url4;
+                }
+            })
+//            .when('/:url.html', {
+//                redirectTo: $window.location.href($routeParams.url+'.html')
+//            })
+
+
 
             // Static Page routes
 //            .when('/', {
@@ -85,6 +136,10 @@ angular.module('panicApp',
 
             // Catch-all route
             .otherwise({
-                redirectTo: '/collection'
+                redirectTo: function ($routeParams, $path, $search) {
+                    console.log($routeParams);console.log($path);console.log($search);
+                    return 'collection';
+                }
+//                redirectTo: 'collection'
             });
     });

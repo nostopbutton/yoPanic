@@ -5,8 +5,8 @@
         , "type": "dress"
         , "styleName": "Grace"
         , "styleFormalName": "Bustier Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Grace Bustier Dress : Custom-Made"
+        , "strapline": "Design Your Own Sassy Grace Bustier Dress, Customised To Suit You"
         , "description": [ "Sleek and timeless this strapless  bodice can be paired with any skirt, to ooeze style and femininity."
         , "Boned for superior comfort and shape."]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -112,7 +112,12 @@
     [
         {
             "itemId": "bustier-1"
+            , "collections": ""
             , "itemDesc": "Bustier - Cream"
+            , "itemUrl": ""
+            , "title": "Grace Bustier Dress in Cream With Trim"
+            , "strapline": "Buy A Sassy Cream Grace Dress With A Bustier Top and Black Trim,Made To Your Own Custom Specification"
+            , "colours": "CREAM / BLACK"
             , "images": {
                 "collection": {
                     "main": "dress.png"

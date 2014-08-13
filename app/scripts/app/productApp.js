@@ -15,10 +15,10 @@ angular.module('productApp',
             .when('/collection', {
                 templateUrl: '/views/ng-partials/dressCollection.html', controller: 'DressCollectionCtrl'
             })
-            .when('/item/:styleId/:itemId', {
+            .when('/collection/:styleId/:itemId', {
                 templateUrl: '/views/ng-partials/shopItem.html', controller: 'DesignBuildCtrl'
             })
-            .when('/item/:styleId/:itemId/:tab', {
+            .when('/collection/:styleId/:itemId/:tab', {
                 templateUrl: '/views/ng-partials/shopItemBuy.html', controller: 'DesignBuildCtrl'
             })
 //      Design Builder routes

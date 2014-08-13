@@ -16,14 +16,52 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
                 allFabricSets = {},
                 range = {};
 
-//            alert(JSON.stringify($location));
+            $rootScope.page = {};
+            $rootScope.product = {};
 
+            var metaData = function(data) {
+//                alert(JSON.stringify(data.itemDesign))
 
-//            $scope.
-            $scope.form = "";
-            $scope.current_title = 'Test';
-            $scope.current_description = 'Test description';
-            $scope.headline = "test";
+//                $rootScope.page.baseUrl = "http://aurza.com/"
+
+                $rootScope.page.canonical = $location.path();
+//                console.info('$location.path(): '+ $rootScope.page.canonical);
+
+                if (_.isUndefined(itemId) ) {
+                    $rootScope.page.title = data.style.title;
+                    $rootScope.page.description = data.style.strapline;
+                    $rootScope.page.url = "http://aurza.com/shop/design/"+styleId;
+                    $rootScope.page.image = "http://aurza.com/images/collection/"+ data.style.defaultItemId+"-lg-"+ data.itemDesign.images.product[0]+".jpg";
+                    $rootScope.product.image1 = "http://aurza.com/images/collection/"+ data.style.defaultItemId+"-lg-"+ data.itemDesign.images.product[1]+".jpg";
+                    $rootScope.product.image2 = "http://aurza.com/images/collection/"+ data.style.defaultItemId+"-lg-"+ data.itemDesign.images.product[2]+".jpg";
+                    $rootScope.product.code = data.style.styleId;
+                    $rootScope.product.color = data.style.colours;
+                } else {
+                    $rootScope.page.title = data.itemDesign.title;
+                    $rootScope.page.description = data.itemDesign.strapline;
+                    $rootScope.page.url = "http://aurza.com/shop/collection/"+styleId+"/"+itemId;
+                    $rootScope.page.facebookUrl = "http://aurza.com/shop/#!/collection/"+styleId+"/"+itemId;
+                    $rootScope.page.snapshotUrl = "http://aurza.com/snapshot/shop_collection/"+styleId+"/"+itemId+".html";
+                    $rootScope.page.image = "http://aurza.com/images/collection/"+itemId+"-lg-"+ data.itemDesign.images.product[0]+".jpg";
+                    $rootScope.product.image1 = "http://aurza.com/images/collection/"+itemId+"-lg-"+ data.itemDesign.images.product[1]+".jpg";
+                    $rootScope.product.image2 = "http://aurza.com/images/collection/"+itemId+"-lg-"+ data.itemDesign.images.product[2]+".jpg";
+                    $rootScope.product.code = data.itemDesign.itemId;
+                    $rootScope.product.color = data.itemDesign.colours;
+                }
+
+                $rootScope.page.twitterCard = "product" // summary_large_image or product
+                //Twitter summary card with large image must be at least 280x150px
+
+                $rootScope.page.ogType = "product" // article or product
+
+                $rootScope.product.price = data.style.price;
+                $rootScope.product.currency = "HKD";
+                $rootScope.product.availability = "in stock";
+                $rootScope.product.destinations = "All";
+                $rootScope.product.gender = "female";
+//                alert("$rootScope.page.snapshotUrl: " + $rootScope.page.snapshotUrl);
+//                window.parsePin();
+            }
 
             $scope.gaEvent = function(category, action, label) {
                 $window.ga('send', 'event', category, action, label);
@@ -60,8 +98,11 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
                 $scope.master = master;     // so it can be viewed in debug screen
 //                console.log("master "+master)
                 $scope.params = $.param(master);
+                metaData($scope.item);
                 $scope.cancel();            // set form to master
             });
+
+
 
 
 

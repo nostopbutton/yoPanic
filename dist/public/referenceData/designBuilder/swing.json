@@ -5,8 +5,8 @@
         , "type": "dress"
         , "styleName": "Audrey"
         , "styleFormalName": "Swing Dress"
-        , "shortDesc": ""
-        , "strapline": ""
+        , "title": "Audrey Swing Dress : Custom-Made"
+        , "strapline": "Design Your Own Timeless Audrey Swing Dress,Customised To Suit You"
         , "description": [ "Our classic bodice with a full swing skirt for a dramatic Audrey Hepburn effect gives you curves in all the right places."
         , "The skirt includes perfectly positioned pockets on either side for added functionality."]
         , "care": [ "Viscose/polyester/elastane crepe for ultimate breathability,  drape, softness.  and easy care."
@@ -127,8 +127,13 @@
     [
         {
             "itemId": "swing-1"
+            , "collections": ""
             , "itemDesc": "Swing - Aubergine"
-                , "images": {
+            , "itemUrl": ""
+            , "title": "Audrey Swing Dress With Sleeveless Bateau Top In Aubergine"
+            , "strapline": "Buy A Timeless Aubergine Sleeveless Audrey Swing Dress With Bateau Neck, Made To Your Own Custom Specification"
+            , "colours": "AUBERGENE"
+            , "images": {
                 "collection": {
                     "main": "dress.png"
                     , "rollover": "front.jpg"
@@ -150,7 +155,12 @@
         }
         , {
         "itemId": "swing-2"
+        , "collections": ""
         , "itemDesc": "Swing - Midnight blue"
+        , "itemUrl": ""
+        , "title": "Audrey Swing Dress With Sleeveless Bateau Top In Navy"
+        , "strapline": "Buy A Timeless Navy Sleevless Audrey Swing Dress With Bateau Neck, Made To Your Own Custom Specification"
+        , "colours": "NAVY"
         , "images": {
                 "collection": {
                     "main": "dress.png"
@@ -175,7 +185,12 @@
 
         {
             "itemId": "swing-3"
+            , "collections": ""
             , "itemDesc": "Swing - Red"
+            , "itemUrl": ""
+            , "title": "Audrey Swing Dress With Sleeveless Bateau Top In Rose Red"
+            , "strapline": "Buy A Timeless Rose Red Sleevless Audrey Swing dress With Bateau Neck, Made To Your Own Custom Specification"
+            , "colours": "ROSE RED"
             , "images": {
                 "collection": {
                     "main": "dress.png"

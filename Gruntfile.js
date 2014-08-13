@@ -29,6 +29,8 @@ module.exports = function (grunt) {
 //        ,public_dist: 'dist/public'
     };
 
+    grunt.config.set('ngtitle', 'title' );
+
     // Define the configuration for all the tasks
     grunt.initConfig({
 
@@ -93,10 +95,8 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/templates/layouts/{,*//*}*.hbs',
                     '<%= yeoman.app %>/templates/pages/{,*//*}*.hbs',
                     '<%= yeoman.app %>/templates/partials/{,*//*}*.hbs'],
-                tasks: ['assemble:serverDesignBuilder'
-                        , 'assemble:serverShop'
+                tasks: [  'assemble:serverShop'
                         , 'assemble:serverMaintenance'
-                        , 'assemble:serverProduct'
                          , 'assemble:serverDist']
             },
             livereload: {
@@ -161,7 +161,7 @@ module.exports = function (grunt) {
                 //by default the task waits 500ms before fetching the html.
                 //this is to give the page enough time to to assemble itself.
                 //if your page needs more time, tweak here.
-                msWaitForPages: 1000,
+                msWaitForPages: 500,
                 //sanitize function to be used for filenames. Converts '#!/' to '_' as default
                 //has a filename argument, must have a return that is a sanitized string
                 sanitize: function (requestUri) {
@@ -190,6 +190,7 @@ module.exports = function (grunt) {
                     {'alert alert-info': 'hidden'}
                     , {'"/shop/#!/': '"http://aurza.com/shop/#!/'}
                     , {'"#!/': '"http://aurza.com/shop/#!/'}
+                    , {'<meta name="fragment" content="!">': ''}
                     , {'ng-app="panicApp"': ''}
                     , {'ng-controller="appController"': ''}
                     , {'ng-view': ''}
@@ -204,93 +205,188 @@ module.exports = function (grunt) {
                     'shop/#!/collection',
                     'shop/#!/design',
                     'shop/#!/design/sheath',
-                    'shop/#!/item/sheath/sheath-1',
-                    'shop/#!/item/sheath/sheath-2',
-                    'shop/#!/item/sheath/sheath-3',
-                    'shop/#!/item/sheath/sheath-4',
-                    'shop/#!/item/sheath/sheath-5',
-                    'shop/#!/item/sheath/sheath-6',
-                    'shop/#!/item/sheath/sheath-7',
-                    'shop/#!/item/sheath/sheath-8',
+                    'shop/#!/collection/sheath/sheath-1',
+                    'shop/#!/collection/sheath/sheath-2',
+                    'shop/#!/collection/sheath/sheath-3',
+                    'shop/#!/collection/sheath/sheath-4',
+                    'shop/#!/collection/sheath/sheath-5',
+                    'shop/#!/collection/sheath/sheath-6',
+                    'shop/#!/collection/sheath/sheath-7',
+                    'shop/#!/collection/sheath/sheath-8',
+//                    'shop/#!/collection/sheath/sheath-1/fit',
+//                    'shop/#!/collection/sheath/sheath-2/fit',
+//                    'shop/#!/collection/sheath/sheath-3/fit',
+//                    'shop/#!/collection/sheath/sheath-4/fit',
+//                    'shop/#!/collection/sheath/sheath-5/fit',
+//                    'shop/#!/collection/sheath/sheath-6/fit',
+//                    'shop/#!/collection/sheath/sheath-7/fit',
+//                    'shop/#!/collection/sheath/sheath-8/fit',
+//                    'shop/#!/design/sheath/sheath-1/design',
+//                    'shop/#!/design/sheath/sheath-2/design',
+//                    'shop/#!/design/sheath/sheath-3/design',
+//                    'shop/#!/design/sheath/sheath-4/design',
+//                    'shop/#!/design/sheath/sheath-5/design',
+//                    'shop/#!/design/sheath/sheath-6/design',
+//                    'shop/#!/design/sheath/sheath-7/design',
+//                    'shop/#!/design/sheath/sheath-8/design',
+
 
                     'shop/#!/design/doloman',
-                    'shop/#!/item/doloman/doloman-1',
+                    'shop/#!/collection/doloman/doloman-1',
+//                    'shop/#!/collection/doloman/doloman-1/fit',
+//                    'shop/#!/design/doloman/doloman-1/design',
 
                     'shop/#!/design/swoosh',
-                    'shop/#!/item/swoosh/swoosh-1',
-                    'shop/#!/item/swoosh/swoosh-2',
-                    'shop/#!/item/swoosh/swoosh-4',
-                    'shop/#!/item/swoosh/swoosh-5',
-                    'shop/#!/item/swoosh/swoosh-7',
-                    'shop/#!/item/swoosh/swoosh-8',
-                    'shop/#!/item/swoosh/swoosh-9',
-                    'shop/#!/item/swoosh/swoosh-10',
+                    'shop/#!/collection/swoosh/swoosh-1',
+                    'shop/#!/collection/swoosh/swoosh-2',
+                    'shop/#!/collection/swoosh/swoosh-4',
+                    'shop/#!/collection/swoosh/swoosh-5',
+                    'shop/#!/collection/swoosh/swoosh-7',
+                    'shop/#!/collection/swoosh/swoosh-8',
+                    'shop/#!/collection/swoosh/swoosh-9',
+                    'shop/#!/collection/swoosh/swoosh-10',
+//                    'shop/#!/collection/swoosh/swoosh-1/fit',
+//                    'shop/#!/collection/swoosh/swoosh-2/fit',
+//                    'shop/#!/collection/swoosh/swoosh-4/fit',
+//                    'shop/#!/collection/swoosh/swoosh-5/fit',
+//                    'shop/#!/collection/swoosh/swoosh-7/fit',
+//                    'shop/#!/collection/swoosh/swoosh-8/fit',
+//                    'shop/#!/collection/swoosh/swoosh-9/fit',
+//                    'shop/#!/collection/swoosh/swoosh-10/fit',
+//                    'shop/#!/design/swoosh/swoosh-1/design',
+//                    'shop/#!/design/swoosh/swoosh-2/design',
+//                    'shop/#!/design/swoosh/swoosh-4/design',
+//                    'shop/#!/design/swoosh/swoosh-5/design',
+//                    'shop/#!/design/swoosh/swoosh-7/design',
+//                    'shop/#!/design/swoosh/swoosh-8/design',
+//                    'shop/#!/design/swoosh/swoosh-9/design',
+//                    'shop/#!/design/swoosh/swoosh-10/design',
 
                     'shop/#!/design/flare',
-                    'shop/#!/item/flare/flare-1',
-                    'shop/#!/item/flare/flare-2',
-                    'shop/#!/item/flare/flare-3',
-                    'shop/#!/item/flare/flare-4',
+                    'shop/#!/collection/flare/flare-1',
+                    'shop/#!/collection/flare/flare-2',
+                    'shop/#!/collection/flare/flare-3',
+                    'shop/#!/collection/flare/flare-4',
+//                    'shop/#!/collection/flare/flare-1/fit',
+//                    'shop/#!/collection/flare/flare-2/fit',
+//                    'shop/#!/collection/flare/flare-3/fit',
+//                    'shop/#!/collection/flare/flare-4/fit',
+//                    'shop/#!/design/flare/flare-1/design',
+//                    'shop/#!/design/flare/flare-2/design',
+//                    'shop/#!/design/flare/flare-3/design',
+//                    'shop/#!/design/flare/flare-4/design',
 
                     'shop/#!/design/bustier',
-                    'shop/#!/item/bustier/bustier-1',
+                    'shop/#!/collection/bustier/bustier-1',
+//                    'shop/#!/collection/bustier/bustier-1/fit',
+//                    'shop/#!/design/bustier/bustier-1/design',
 
                     'shop/#!/design/swing',
-                    'shop/#!/item/swing/swing-1',
-                    'shop/#!/item/swing/swing-2',
-                    'shop/#!/item/swing/swing-3',
+                    'shop/#!/collection/swing/swing-1',
+                    'shop/#!/collection/swing/swing-2',
+                    'shop/#!/collection/swing/swing-3',
+//                    'shop/#!/collection/swing/swing-1/fit',
+//                    'shop/#!/collection/swing/swing-2/fit',
+//                    'shop/#!/collection/swing/swing-3/fit',
+//                    'shop/#!/design/swing/swing-1/design',
+//                    'shop/#!/design/swing/swing-2/design',
+//                    'shop/#!/design/swing/swing-3/design',
 
                     'shop/#!/design/shift',
-                    'shop/#!/item/shift/shift-1',
-                    'shop/#!/item/shift/shift-2',
-                    'shop/#!/item/shift/shift-3',
-                    'shop/#!/item/shift/shift-7',
-                    'shop/#!/item/shift/shift-8',
-                    'shop/#!/item/shift/shift-9',
-                    'shop/#!/item/shift/shift-10',
-                    'shop/#!/item/shift/shift-11',
-                    'shop/#!/item/shift/shift-13',
+                    'shop/#!/collection/shift/shift-1',
+                    'shop/#!/collection/shift/shift-2',
+                    'shop/#!/collection/shift/shift-3',
+                    'shop/#!/collection/shift/shift-7',
+                    'shop/#!/collection/shift/shift-8',
+                    'shop/#!/collection/shift/shift-9',
+                    'shop/#!/collection/shift/shift-10',
+                    'shop/#!/collection/shift/shift-11',
+                    'shop/#!/collection/shift/shift-13',
+                    'shop/#!/collection/shift/shift-14',
+//                    'shop/#!/collection/shift/shift-1/fit',
+//                    'shop/#!/collection/shift/shift-2/fit',
+//                    'shop/#!/collection/shift/shift-3/fit',
+//                    'shop/#!/collection/shift/shift-7/fit',
+//                    'shop/#!/collection/shift/shift-8/fit',
+//                    'shop/#!/collection/shift/shift-9/fit',
+//                    'shop/#!/collection/shift/shift-10/fit',
+//                    'shop/#!/collection/shift/shift-11/fit',
+//                    'shop/#!/collection/shift/shift-13/fit',
+//                    'shop/#!/collection/shift/shift-14/fit',
+//                    'shop/#!/design/shift/shift-1/design',
+//                    'shop/#!/design/shift/shift-2/design',
+//                    'shop/#!/design/shift/shift-3/design',
+//                    'shop/#!/design/shift/shift-7/design',
+//                    'shop/#!/design/shift/shift-8/design',
+//                    'shop/#!/design/shift/shift-9/design',
+//                    'shop/#!/design/shift/shift-10/design',
+//                    'shop/#!/design/shift/shift-11/design',
+//                    'shop/#!/design/shift/shift-13/design',
 
                     'shop/#!/design/bustier-print',
-//                    'shop/#!/item/bustier-print/bustier-print-1',
+                    'shop/#!/collection/bustier-print/bustier-print-1',
+//                    'shop/#!/collection/bustier-print/bustier-print-1/fit',
+//                    'shop/#!/design/bustier-print/bustier-print-1/design',
 
                     'shop/#!/design/swing-print',
-//                    'shop/#!/item/swing-print/swing-print-1',
+                    'shop/#!/collection/swing-print/swing-print-1',
+//                    'shop/#!/collection/swing-print/swing-print-1/fit',
+//                    'shop/#!/design/swing-print/swing-print-1/design',
 
                     'shop/#!/design/shirt-maxi',
-                    'shop/#!/item/shirt-maxi/shirt-maxi-1',
-                    'shop/#!/item/shirt-maxi/shirt-maxi-2',
-                    'shop/#!/item/shirt-maxi/shirt-maxi-3',
+                    'shop/#!/collection/shirt-maxi/shirt-maxi-1',
+                    'shop/#!/collection/shirt-maxi/shirt-maxi-2',
+                    'shop/#!/collection/shirt-maxi/shirt-maxi-3',
+                    'shop/#!/collection/shirt-maxi/shirt-maxi-4',
+//                    'shop/#!/collection/shirt-maxi/shirt-maxi-1/fit',
+//                    'shop/#!/collection/shirt-maxi/shirt-maxi-2/fit',
+//                    'shop/#!/collection/shirt-maxi/shirt-maxi-3/fit',
+//                    'shop/#!/collection/shirt-maxi/shirt-maxi-4/fit',
+//                    'shop/#!/design/shirt-maxi/shirt-maxi-1/design',
+//                    'shop/#!/design/shirt-maxi/shirt-maxi-2/design',
+//                    'shop/#!/design/shirt-maxi/shirt-maxi-3/design',
+//                    'shop/#!/design/shirt-maxi/shirt-maxi-4/design',
 
                     'shop/#!/design/shirt',
-                    'shop/#!/item/shirt/shirt-1',
-                    'shop/#!/item/shirt/shirt-2',
+                    'shop/#!/collection/shirt/shirt-1',
+                    'shop/#!/collection/shirt/shirt-2',
+//                    'shop/#!/collection/shirt/shirt-1/fit',
+//                    'shop/#!/collection/shirt/shirt-2/fit',
+//                    'shop/#!/design/shirt/shirt-1/design',
+//                    'shop/#!/design/shirt/shirt-2/design',
 
                     'shop/#!/design/swing-silk',
-//                    'shop/#!/item/swing-silk/swing-silk-1',
+//                    'shop/#!/collection/swing-silk/swing-silk-1',
 
                     'shop/#!/design/flare-skirt',
-//                    'shop/#!/item/flare-skirt/flare-skirt-1',
+//                    'shop/#!/collection/flare-skirt/flare-skirt-1',
 
                     'shop/#!/design/pencil-skirt',
-                    'shop/#!/item/pencil-skirt/pencil-skirt-1',
-                    'shop/#!/item/pencil-skirt/pencil-skirt-2',
-                    'shop/#!/item/pencil-skirt/pencil-skirt-3',
+                    'shop/#!/collection/pencil-skirt/pencil-skirt-1',
+                    'shop/#!/collection/pencil-skirt/pencil-skirt-2',
+                    'shop/#!/collection/pencil-skirt/pencil-skirt-3',
+//                    'shop/#!/collection/pencil-skirt/pencil-skirt-1/fit',
+//                    'shop/#!/collection/pencil-skirt/pencil-skirt-2/fit',
+//                    'shop/#!/collection/pencil-skirt/pencil-skirt-3/fit',
+//                    'shop/#!/design/pencil-skirt/pencil-skirt-1/design',
+//                    'shop/#!/design/pencil-skirt/pencil-skirt-2/design',
+//                    'shop/#!/design/pencil-skirt/pencil-skirt-3/design',
 
                     'shop/#!/design/swing-skirt',
-//                    'shop/#!/item/swing-skirt/swing-skirt-1',
+//                    'shop/#!/collection/swing-skirt/swing-skirt-1',
 
                     'shop/#!/design/swing-skirt-print',
-//                    'shop/#!/item/swing-skirt-print/swing-skirt-print-1',
+//                    'shop/#!/collection/swing-skirt-print/swing-skirt-print-1',
 
                     'shop/#!/design/pencil-skirt-print',
-//                    'shop/#!/item/pencil-skirt-print/pencil-skirt-print-1',
+//                    'shop/#!/collection/pencil-skirt-print/pencil-skirt-print-1',
 
                     'shop/#!/design/swing-skirt-silk',
-//                    'shop/#!/item/swing-skirt-silk/swing-skirt-silk-1',
+//                    'shop/#!/collection/swing-skirt-silk/swing-skirt-silk-1',
 
-                    'shop/#!/design/top-classic'
-//                    'shop/#!/item/top-classic/top-classic-1'
+                    'shop/#!/design/top-classic',
+//                    'shop/#!/collection/top-classic/top-classic-1'
+                    'shop/#!/design/obi'
                 ],
 
 //http://aurza.com/shop/#!/collection
@@ -298,7 +394,7 @@ module.exports = function (grunt) {
 //http://dontpanicthecat.com/shop/#!/collection
 //http://dontpanicthecat.com/shop/?_escaped_fragment_=/collection
 //
-//http://aurza.com/shop/#!/item/sheath/sheath-1
+//http://aurza.com/shop/#!/collection/sheath/sheath-1
 //http://aurza.com/shop/?_escaped_fragment_=/item/sheath/sheath-1
 //http://dontpanicthecat.com/shop/#!/sheath/sheath-1
 //http://dontpanicthecat.com/shop/?_escaped_fragment_=/item/sheath/sheath-1
@@ -335,7 +431,6 @@ module.exports = function (grunt) {
 
         },
 
-
         assemble: {
             options: {
                 flatten: true,
@@ -346,26 +441,32 @@ module.exports = function (grunt) {
 //                files: {
 //                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/static/*.hbs']
 //                }
+//                engine: 'swig',
+//                swig: {
+//                    varControls: ["%%", "%%"]
+//                }
             },
-            designBuilder:
-            {
-                // override task-level layout
-                options: {
-                    layout: 'design-builder.hbs'
-                    , partials: ['.tmp/templates/partials/*.hbs']
-                } ,
-                files: {
-                    '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/design-builder/*.hbs']
-                }
-            },
+//            designBuilder:
+//            {
+//                // override task-level layout
+//                options: {
+//                    layout: 'design-builder.hbs'
+//                    , partials: ['.tmp/templates/partials/*.hbs']
+//                } ,
+//                files: {
+//                    '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/design-builder/*.hbs']
+//                }
+//            },
             shop:
             {
                 // override task-level layout
                 options: {
                     layout: 'design-builder.hbs'
+//                    , partials: ['<%= yeoman.dist %>/templates/partials/*.hbs']
                     , partials: ['.tmp/templates/partials/*.hbs']
                 } ,
                 files: {
+//                    '<%= yeoman.dist %>/public/shop/': ['<%= yeoman.app %>/templates/pages/shop/*.hbs']
                     '<%= yeoman.dist %>/public/shop/': ['.tmp/templates/pages/shop/*.hbs']
                 }
             },
@@ -380,17 +481,17 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/maintenance/*.hbs']
                 }
             },
-            product:
-            {
-                // override task-level layout
-                options: {
-                    layout: 'product.hbs'
-                    , partials: ['.tmp/templates/partials/*.hbs']
-                } ,
-                files: {
-                    '<%= yeoman.dist %>/public/': ['<%= yeoman.app %>/templates/pages/products/*.hbs']
-                }
-            },
+//            product:
+//            {
+//                // override task-level layout
+//                options: {
+//                    layout: 'product.hbs'
+//                    , partials: ['.tmp/templates/partials/*.hbs']
+//                } ,
+//                files: {
+//                    '<%= yeoman.dist %>/public/': ['<%= yeoman.app %>/templates/pages/products/*.hbs']
+//                }
+//            },
             dist: {
                 options: {
                     partials: ['.tmp/templates/partials/*.hbs']
@@ -399,14 +500,14 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/public/': ['.tmp/templates/pages/static/*.hbs']
                 }
             },
-            serverDesignBuilder: {
-                options: {
-                    layout: 'design-builder.hbs'
-                } ,
-                files: {
-                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/design-builder/*.hbs']
-                }
-            },
+//            serverDesignBuilder: {
+//                options: {
+//                    layout: 'design-builder.hbs'
+//                } ,
+//                files: {
+//                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/design-builder/*.hbs']
+//                }
+//            },
             serverShop: {
                 options: {
                     layout: 'design-builder.hbs'
@@ -423,16 +524,16 @@ module.exports = function (grunt) {
                     '.tmp/html/': ['<%= yeoman.app %>/templates/pages/maintenance/*.hbs']
                 }
             },
-            serverProduct:
-            {
-                // override task-level layout
-                options: {
-                    layout: 'product.hbs'
-                } ,
-                files: {
-                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/products/*.hbs']
-                }
-            },
+//            serverProduct:
+//            {
+//                // override task-level layout
+//                options: {
+//                    layout: 'product.hbs'
+//                } ,
+//                files: {
+//                    '.tmp/html/': ['<%= yeoman.app %>/templates/pages/products/*.hbs']
+//                }
+//            },
             serverDist: {
                 files: {
                     '.tmp/html/': ['<%= yeoman.app %>/templates/pages/static/*.hbs']
@@ -958,6 +1059,9 @@ module.exports = function (grunt) {
 //            },
             options: {
                 mangle: false
+
+//               , beautify: true  // Specify beautify: true to beautify your code for debugging/troubleshooting purposes.
+
             },
             // dist configuration is provided by useminPrepare
             dist: {}
@@ -974,7 +1078,7 @@ module.exports = function (grunt) {
 //                        '.tmp/min/scripts/{,*/}*.js',
 //                        '.tmp/min/styles/{,*/}*.css',
 
-//                        '<%= yeoman.dist %>/public/images/*.{png,jpg,jpeg,gif,webp,svg}',
+                        '<%= yeoman.dist %>/public/images/*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/public/fonts/*'
                     ]
                 }
@@ -989,17 +1093,19 @@ module.exports = function (grunt) {
 //            html: ['<%= yeoman.dist %>/views/{,*/}*.html',
 //                '<%= yeoman.dist %>/views/{,*/}*.jade'],
 //            css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+            js: '<%= yeoman.dist %>/public/scripts/*.js',
             options: {
 //                dirs: ['<%= yeoman.dist %>/public']
-                assetsDirs: ['<%= yeoman.dist %>/public']
+                assetsDirs: ['<%= yeoman.dist %>/public', '<%= yeoman.dist %>/public/images'],
+                basedir: '<%= yeoman.dist %>/public',
+                patterns: {
+                    // FIXME While usemin won't have full support for revved files we have to put all references manually here
+                    js: [
+                        [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+                    ]
+                }
             }
         },
-
-
-
-
-
-
 
         imageoptim: {
             magick_png: {
@@ -1017,39 +1123,34 @@ module.exports = function (grunt) {
                     quitAfter: true
                 },
                 src: [
-//                      '/Users/Pete/dev/WebstormProjects/yoPanic/app/images/about/a-better-fit-the-aurza-flatter-factor.jpg'
+////                      '/Users/Pete/dev/WebstormProjects/yoPanic/app/images/about/a-better-fit-the-aurza-flatter-factor.jpg'
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/000.png',
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/120.png',
+//
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/008.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/010.png',
+//
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/083.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/085.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/087.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/088.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/089.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/091.png',
+//
+////                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/114.png'
 
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/008.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/010.png',
-
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/085.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/087.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/088.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/089.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/091.png',
-
-//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/114.png'
-
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/300.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/301.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/302.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/303.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/304.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/305.png',
-
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/300.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/301.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/304.png'
+////
                     '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/406.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/407.png',
                     '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/408.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/410.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/411.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/412.png',
-
-//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/icons.png',
-
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/body.png'
-//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt'
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/411.png'
+//
+////                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/icons.png',
+//
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/body.png'
+////                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt'
 
                 ]
             }
@@ -1103,10 +1204,10 @@ module.exports = function (grunt) {
             'clean:server',
 //            'bower-install',
             'concurrent:server'
-            , 'assemble:serverDesignBuilder'
+//            , 'assemble:serverDesignBuilder'
             , 'assemble:serverShop'
             , 'assemble:serverMaintenance'
-            , 'assemble:serverProduct'
+//            , 'assemble:serverProduct'
             , 'assemble:serverDist'
 
 //            'autoprefixer',
@@ -1183,10 +1284,10 @@ module.exports = function (grunt) {
         ,'rev'
         ,'usemin'
         , 'assemble:dist'
-        , 'assemble:designBuilder'
+//        , 'assemble:designBuilder'
         , 'assemble:shop'
         , 'assemble:maintenance'
-        , 'assemble:product'
+//        , 'assemble:product'
         , 'express:dist'
         , 'open:dist'
 //        , 'express-keepalive'
@@ -1214,16 +1315,16 @@ module.exports = function (grunt) {
         ,'rev'
         ,'usemin'
         , 'assemble:dist'
-        , 'assemble:designBuilder'
+//        , 'assemble:designBuilder'
         , 'assemble:shop'
         , 'assemble:maintenance'
-        , 'assemble:product'
+//        , 'assemble:product'
         , 'express:dist'
         , 'open:dist'
         , 'htmlSnapshot:dist'
 //        ,'htmlmin:dist'
-////        ,'htmlmin:deploy'
-////        , 'install-dependencies'
+//        ,'htmlmin:deploy'
+//        , 'install-dependencies'
     ]);
 
     grunt.registerTask('default', [
