@@ -470,6 +470,19 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/public/shop/': ['.tmp/templates/pages/shop/*.hbs']
                 }
             },
+            mobile:
+            {
+                // override task-level layout
+                options: {
+                    layout: 'mobile-builder.hbs'
+//                    , partials: ['<%= yeoman.dist %>/templates/partials/*.hbs']
+                    , partials: ['.tmp/templates/partials/*.hbs']
+                } ,
+                files: {
+//                    '<%= yeoman.dist %>/public/shop/': ['<%= yeoman.app %>/templates/pages/shop/*.hbs']
+                    '<%= yeoman.dist %>/public/mobile/': ['.tmp/templates/pages/mobile/*.hbs']
+                }
+            },
             maintenance:
             {
                 // override task-level layout
@@ -514,6 +527,14 @@ module.exports = function (grunt) {
                 } ,
                 files: {
                     '.tmp/html/shop/': ['<%= yeoman.app %>/templates/pages/shop/*.hbs']
+                }
+            },
+            serverMobile: {
+                options: {
+                    layout: 'mobile-builder.hbs'
+                } ,
+                files: {
+                    '.tmp/html/mobile/': ['<%= yeoman.app %>/templates/pages/mobile/*.hbs']
                 }
             },
             serverMaintenance: {
@@ -1206,6 +1227,7 @@ module.exports = function (grunt) {
             'concurrent:server'
 //            , 'assemble:serverDesignBuilder'
             , 'assemble:serverShop'
+            , 'assemble:serverMobile'
             , 'assemble:serverMaintenance'
 //            , 'assemble:serverProduct'
             , 'assemble:serverDist'
@@ -1286,6 +1308,7 @@ module.exports = function (grunt) {
         , 'assemble:dist'
 //        , 'assemble:designBuilder'
         , 'assemble:shop'
+        , 'assemble:mobile'
         , 'assemble:maintenance'
 //        , 'assemble:product'
         , 'express:dist'
@@ -1317,6 +1340,7 @@ module.exports = function (grunt) {
         , 'assemble:dist'
 //        , 'assemble:designBuilder'
         , 'assemble:shop'
+        , 'assemble:mobile'
         , 'assemble:maintenance'
 //        , 'assemble:product'
         , 'express:dist'

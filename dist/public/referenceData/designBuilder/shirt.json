@@ -59,7 +59,8 @@
             , "sizes": [
             {"id": "02", "name": "knee"}
         ]
-            , "trim": false
+            , "trim": true
+            , "trimFabricSets": [{"setId": "p-sk-tr"}]
         }
         ,{
             "part_name": "sleeves"

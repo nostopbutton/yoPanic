@@ -59,6 +59,9 @@ angular.module('panicApp',
             .when('/mobile/:styleId/:itemId/:tab', {
                 templateUrl: '/views/ng-partials/mobDesignBuild.html', controller: 'DesignBuildCtrl'
             })
+            .when('/test/:styleId', {
+                templateUrl: '/views/ng-partials/mobTestDesignBuild.html', controller: 'DesignBuildCtrl'
+            })
 
             .when('/shop/:url1', {
                 redirectTo: function ($routeParams, $path, $search) {

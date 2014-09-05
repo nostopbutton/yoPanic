@@ -1,0 +1,11 @@
+/**
+ * Created with TexturePacker http://www.codeandweb.com/texturepacker
+ *
+ * SmartUpdateHash: $TexturePacker:SmartUpdate:c58c7218b248e4a7a6e466997e2899d0:1/1$ 
+ * 
+ * .111-mob {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('111-mob.png?$TexturePacker:SmartUpdate:c58c7218b248e4a7a6e466997e2899d0:1/1$');}
+ */
+
+.sprite-111-mob {display:inline-block;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/111-mob.png');}
+.blt-004-00-111 {width:112px;height:115px; background-position: -0px -0px}
+

@@ -1,0 +1,32 @@
+---
+page-canonical: '{{page.canonical}}'
+page-title: '{{page.title}}'
+page-description: '{{page.description}}'
+page-image: '{{page.image}}'
+
+page-twitterCard: '{{page.twitterCard}}'
+
+page-ogType: '{{page.ogType}}'
+page-fbAdminIds: '{{page.fbAdminIds}}'
+page-url: '{{page.url}}'
+page-facebookUrl: '{{page.facebookUrl}}'
+page-snapshotUrl: '{{page.snapshotUrl}}'
+
+product-code: '{{product.code}}'
+product-image1: '{{product.image1}}'
+product-image2: '{{product.image2}}'
+product-price: '{{product.price}}'
+product-currency: '{{product.currency}}'
+product-availability: '{{product.availability}}'
+product-destinations: '{{product.destinations}}'
+product-color: '{{product.color}}'
+product-gender: '{{product.gender}}'
+item: '{{page.item}}'
+---
+
+<!--data-description="current_description"-->
+<div ng-controller="appController" id="top">
+    <!--<div ng-bind="mytitle">Placeholder title</div>-->
+    <div class="alert alert-info" ng-show="loading">Loading</div>
+    <div ng-view autoscroll="true"></div>
+</div>

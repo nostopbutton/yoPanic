@@ -50,25 +50,25 @@ designBuildDirective.directive('drawCollection', function () {
 designBuildDirective.directive('drawDesign', function () {
     return  {
         scope: {
-            model: "=", design: "="
+            model: "=", design: "=", ext: "="
         },
         template:
 
-            '<div class="db-image body sprite-body {{model}}"></div>'
-            + '<div draw-dress parts="design.design"></div>'
-            + '<div draw-accessories parts="design.extras"></div>'
+            '<div class="db-image mob body sprite-body{{ext}} {{model}}"></div>'
+            + '<div draw-dress parts="design.design" ext="ext"></div>'
+            + '<div draw-accessories parts="design.extras" ext="ext"></div>'
     }
 })
 
 designBuildDirective.directive('drawDress', function () {
     return  {
         scope: {
-            parts: "="
+            parts: "=", ext: "="
         },
         template:
             '<div ng-repeat="selection in parts">'
-            + ' <div class="db-image {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>'
-            + ' <div class="db-image trm sprite-{{selection.trim}} trm-{{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.trim}}"></div>'
+            + ' <div class="db-image mob {{selection.type}} sprite-{{selection.fabric}}{{ext}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>'
+            + ' <div class="db-image mob trm sprite-{{selection.trim}}{{ext}} trm-{{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.trim}}"></div>'
             + '</div>'
     }
 })
@@ -76,11 +76,11 @@ designBuildDirective.directive('drawDress', function () {
 designBuildDirective.directive('drawAccessories', function () {
     return  {
         scope: {
-            parts: "="
+            parts: "=", ext: "="
         },
         template:
             '<div ng-repeat="selection in parts">'
-            + ' <div class="db-image {{selection.type}} sprite-{{selection.fabric}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>'
+            + ' <div class="db-image mob {{selection.type}} sprite-{{selection.fabric}}{{ext}} {{selection.type}}-{{selection.id}}-{{selection.size}}-{{selection.fabric}}"></div>'
             + '</div>'
     }
 })
@@ -109,16 +109,100 @@ designBuildDirective.directive('partSelector', function () {
     }
 })
 
-designBuildDirective.directive('sizeSelector', function () {
+designBuildDirective.directive('mobPartSelector', function () {
     return  {
         restrict: 'E',
 //    templateUrl: 'template/designBuild/fabric.html',
         scope: {
             part: "=", selectedOption: "="
         },
+        template:
+            ' <div data-toggle="buttons">' +
+            '  <div class="mob-button" ng-repeat="value in part.values">' +
+            '    <button type="button" class="btn btn-default option"' +
+            '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' +
+            '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' +
+            '     <div class="db-icons-sprite {{part.type}}-{{value.id}}" ></div>' +
+            '   </button>' +
+            '  </div>' +
+            '</div>'
+
+    }
+})
+
+designBuildDirective.directive('mobFormPartSelector', function () {
+    return  {
+        restrict: 'E',
+//    templateUrl: 'template/designBuild/fabric.html',
+        scope: {
+            part: "=", selectedOption: "="
+        },
+        template:
+            '<div class="btn-group" dropdown is-open="status.isopen">' +
+
+            '   <button type="button" class="btn dropdown-toggle" ng-disabled="disabled">' +
+            '       Style <span class="caret"></span>' +
+            '   </button>' +
+            '   <ul class="dropdown-menu" role="menu">' +
+            '       <li class="mob-button" ng-repeat="value in part.values">' +
+            '           <button type="button" class="btn btn-default option"' +
+            '               ng-model="selectedOption[\'id\']" btn-radio="value.id"' +
+            '               ng-class="{highlight: selectedOption[\'id\']==value.id }">' +
+            '               <div class="db-icons-sprite {{part.type}}-{{value.id}}" ></div>' +
+            '           </button>' +
+            '       </li>' +
+            '   </ul>' +
+            '</div>'
+    }
+})
+
+designBuildDirective.directive('mobPartSelectorPanel', function () {
+    return  {
+        restrict: 'E',
+        scope: {
+            part: "=", selectedOption: "="
+        },
+        template:
+            ' <div data-toggle="buttons" style="margin-left:0px;width:160px; border-style: none">' +
+            '  <div class="mob-button" ng-repeat="value in part.values">' +
+            '    <button type="button" class="btn btn-default option"' +
+            '       ng-model="selectedOption[\'id\']" btn-radio="value.id"' +
+            '       ng-class="{highlight: selectedOption[\'id\']==value.id }">' +
+            '     <div class="db-icons-sprite-mob {{part.type}}-{{value.id}}" ></div>' +
+            '   </button>' +
+            '  </div>' +
+            '</div>'
+    }
+})
+
+designBuildDirective.directive('sizeSelector', function () {
+    return  {
+        restrict: 'E',
+        scope: {
+            part: "=", selectedOption: "="
+        },
         template: '<select class="form-control input-sm" ng-model="selectedOption[\'size\']" ng-options="size.id as size.name for size in part.sizes"></select>'
     }
 })
+
+designBuildDirective.directive('mobSizeSelector', function () {
+    return  {
+        restrict: 'E',
+        scope: {
+            part: "=", selectedOption: "="
+        },
+        template:
+//            '<select class="form-control input-sm" ng-model="selectedOption[\'size\']" ng-options="size.id as size.name for size in part.sizes"></select>'
+            '<div class="btn-group" style="margin-left:-11px">' +
+            '    <label class="btn btn-primary" ng-model="selectedOption[\'size\']" ng-repeat="size in part.sizes" btn-radio="size.id" style="font-size: 10px">{{size.name}}</label>' +
+//            '    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Middle'">Middle</label>'+
+//            '    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Right'">Right</label>'+
+            '</div>'
+    }
+})
+
+
+
 
 designBuildDirective.directive('fabricSelector', function () {
     return  {
@@ -137,6 +221,57 @@ designBuildDirective.directive('fabricSelector', function () {
             '           ng-model="selectedOption[attrib]" ' +
             '          btn-radio="fabric.fabId"></button>' +
 //                '{{attrib}}' +
+            '   </div>' +
+            '</div>'
+    }
+})
+
+designBuildDirective.directive('mobFormFabricSelector', function () {
+    return  {
+        restrict: 'E',
+//    templateUrl: 'template/designBuild/fabric.html',
+        scope: {
+            fabricSet: "=", selectedOption: "=",  attrib:"="
+        },
+        template:
+            '<div class="btn-group" dropdown is-open="status.isopen">' +
+            '   <button type="button" class="btn dropdown-toggle" ng-disabled="disabled">' +
+            '       Fabric <span class="caret"></span>' +
+            '   </button>' +
+            '   <ul class="dropdown-menu" role="menu">' +
+            '       <li ng-repeat-start="set in fabricSet">{{set.setName}}</li>' +
+            '           <li class="mob-button" ng-repeat="fabric in set.fabrics">' +
+            '               <button  type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' +
+            '                   ng-model="selectedOption[attrib]" ' +
+            '                    btn-radio="fabric.fabId"></button>' +
+            '           </li>' +
+            '       <li ng-repeat-end  class="divider"></li>' +
+            '   </ul>' +
+            '</div>'
+
+    }
+})
+
+designBuildDirective.directive('mobFabricSelectorPanel', function () {
+    return  {
+        restrict: 'E',
+        scope: {
+            fabricSet: "=", allSets:"=", selectedOption: "=",  attrib:"="
+        },
+        template:
+            ' <div data-toggle="buttons" style="margin-left: 0px;width:160px; border-style: none">' +
+            ' <div class="fabric-group" ng-repeat="set in allSets | filterSets:fabricSet">' +
+            '   <div class="row fabric-header" style="font-size: 10px">' +
+            '     {{set.setName}}' +
+            '   </div>' +
+            '   <div class="row ">' +
+            '       <button ng-repeat="fabric in set.fabrics" type="button" class="btn fabric-selector fabric{{fabric.fabId}}" ' +
+            '           ng-model="selectedOption[attrib]" ' +
+//            '           ng-class="{active: selectedOption[\'fabric\']==fabric.fabId }' +
+            '           btn-radio="fabric.fabId"></button>' +
+//                '{{selectedOption}}'+
+                ''+
+            '   </div>' +
             '   </div>' +
             '</div>'
     }

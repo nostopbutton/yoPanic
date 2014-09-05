@@ -45,6 +45,9 @@ module.exports = function(app) {
         app.use("/shop/*", express.static(path.join(config.root, '.tmp/html/shop/')));
         app.use("/shop/*/*", express.static(path.join(config.root, '.tmp/html/shop/')));
         app.use("/shop/*/*/*", express.static(path.join(config.root, '.tmp/html/shop/')));
+        app.use("/mobile/*", express.static(path.join(config.root, '.tmp/html/mobile/')));
+        app.use("/mobile/*/*", express.static(path.join(config.root, '.tmp/html/mobile/')));
+        app.use("/mobile/*/*/*", express.static(path.join(config.root, '.tmp/html/mobile/')));
         app.use("/", express.static(path.join(config.root, '.tmp/html')));
 //        app.use(errorHandler({ dumpExceptions: true, showStack: true }));
         app.use(errorHandler());

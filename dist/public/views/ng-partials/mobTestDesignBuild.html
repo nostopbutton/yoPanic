@@ -1,0 +1,132 @@
+<div id="mobDesignBuildView" class="container">
+
+    <div class="alert alert-info mob-alert">Please use Landscape view</div>
+
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="row">
+            <div style="max-height:260px">
+                <img itemprop="logo" class="" src="/images/home/aurza-logo.png" style="width:120px">
+                <!--<img src="/images/mobile/dressed-whole-body.png" style="max-height:100%;width:auto; padding:5%"/>-->
+
+                <div id="view_dress_image_panel" class="">
+                <div class="dress_image_panel mob">
+                <div draw-design model="item.design_builder.model" design="form" ext="'-mob'"></div>
+                </div>
+                </div>
+                <!--<div class="db-image body sprite-body-mob {{item.design_builder.model}}"></div>-->
+            </div>
+            </div>
+        </div>
+
+        <div class="col-xs-8">
+            <div class="row">
+            <tabset class="tabs mob-db-options">
+                <tab ng-repeat="part in item.design_builder.options[0].parts" heading="{{part.type}}">
+                    <!--{{part.label}}-->
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <mob-part-selector-panel part="part"
+                                 selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <mob-fabric-selector-panel fabric-set="part.fabricSets" all-sets="fabricSets"
+                                attrib="'fabric'"
+                                selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+
+                        </div>
+                    </div>
+                    <!--<div class="container-fluid opt-length db-options-divider" ng-show="part.size">-->
+
+                    <div class="row db-options-divider" ng-show="part.size">
+                        <div class="col-xs-6">
+                            Length:
+                        </div>
+                        <div class="col-xs-6">
+                            <mob-size-selector part="part"
+                                 selected-option="form[item.design_builder.options[0].option_name][part.part_name]"/>
+                        </div>
+                    </div>
+
+                    <!--<div class="container-fluid opt-trim db-options-divider" ng-show="part.trim">-->
+
+                    <div class="row db-options-divider" ng-show="part.trim">
+                        <div class="col-xs-6">
+                            Trim:
+                        </div>
+                        <div class="col-xs-6 ">
+                            <div data-toggle="buttons" class="row">
+                                <span class="fabric-group"
+                                      ng-repeat="set in fabricSets | filterSets:part.trimFabricSets">
+                                    <button ng-repeat="fabric in set.fabrics" type="button"
+                                            class="btn mob-button fabric-selector fabric{{fabric.fabId}}"
+                                            ng-click="toggleTrim(form[item.design_builder.options[0].option_name][part.part_name], fabric, part)"
+                                            btn-radio="fabric.fabId"
+                                            ng-model="fabric.fabId"
+                                            ng-class="{active: form[item.design_builder.options[0].option_name][part.part_name]['trim']===fabric.fabId }">
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+
+                <tab ng-repeat="part in item.design_builder.extras[0].parts" heading="{{part.type}}">
+
+                    <div class="row" ng-repeat="value in part.values">
+                        <div class="col-xs-6">
+                            <div data-toggle="buttons" style="margin-left:0px;width:160px; border-style: none">
+                                <!--https://github.com/angular-ui/bootstrap/issues/233-->
+                                <div class="mob-button">
+                                    <button type="button" class="btn btn-default option"
+                                            btn-radio="value.id"
+                                            ng-model="value.id"
+                                            ng-click="toggleExtraButton(form[item.design_builder.extras[0].name][part.part_name], value)"
+                                            ng-class="{highlight: form[item.design_builder.extras[0].name][part.part_name]['id']===value.id }">
+                                        <div class="db-icons-sprite-mob {{part.type}}-{{value.id}}">
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6" style="vertical-align: middle">
+                            <div ng-repeat="set in fabricSets | filterSets:value.fabricSets">
+                                <div class="fabric-group middle-inner">
+                                    <div class="row extras-fabric-header" style="font-size: 10px">
+                                        {{set.setName}}
+                                    </div>
+                                    <div class="row">
+                                        <button ng-repeat="fabric in set.fabrics" type="button"
+                                                class="btn fabric-selector fabric{{fabric.fabId}}"
+                                                ng-click="toggleExtra(form[item.design_builder.extras[0].name][part.part_name], fabric, value)"
+                                                btn-radio="value.id +'-'+fabric.fabId"
+                                                ng-model="form[item.design_builder.extras[0].name][part.part_name]['code']"
+                                                ng-class="{active: form[item.design.extras[0].name][part.part_name]['code']==value.id +'-'+fabric.fabId }">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </tab>
+
+
+            </tabset>
+            </div>
+            <div class="row">
+            <div class="col-md-3 col-sm-3 align-center" style="margin-top:0px">
+                <a class="btn btn-default design-buttons" id="reset-design"
+                   ng-click="cancel(); gaEvent('button', 'click', 'builder-customize-reset');"
+                   ng-disabled="isCancelDisabled()"
+                   style="font-family: 'Nothing You Could Do', cursive;font-size: 20px;">
+                    Reset</a>
+            </div>
+                </div>
+
+
+        </div>
+    </div>
+
+</div>

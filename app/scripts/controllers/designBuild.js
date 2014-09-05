@@ -18,6 +18,7 @@ angular.module('panicApp.Controllers')//, ['ngSocial'])
 
             $rootScope.page = {};
             $rootScope.product = {};
+//            $scope.loading = false;
 
             var metaData = function(data) {
 //                alert(JSON.stringify(data.itemDesign))
