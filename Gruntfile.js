@@ -1151,7 +1151,7 @@ module.exports = function (grunt) {
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/008.png',
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/010.png',
 //
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/083.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/083.png',
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/085.png',
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/087.png',
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/088.png',
@@ -1164,11 +1164,11 @@ module.exports = function (grunt) {
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/301.png',
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/304.png'
 ////
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/406.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/408.png',
-                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/411.png'
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/406.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/408.png',
+//                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/411.png'
 //
-////                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/icons.png',
+                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/icons.png'
 //
 //                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt/body.png'
 ////                    '/Users/Pete/dev/Sprites/dressSprites/output/images_final_opt'
