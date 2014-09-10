@@ -10,13 +10,14 @@ body { padding-top: 70px;}
 }
 
 @media (min-width: 768px) {
-    body { padding-top: 120px;}
+    body { padding-top: 140px;}
 }
 
 .navbar {
     background-color: #FFFFFF;
     border-color: #FFFFFF;
-    padding-bottom:5px;
+    padding-bottom:0px;
+    margin-bottom:0;
 }
 
 .navbar .nav {
@@ -43,13 +44,15 @@ body { padding-top: 70px;}
     line-height: 10px;
     color: #222;
     font-size: 18px;
+    padding: 6px;
+
 }
 /* Extra small devices (phones, less than 768px) - no media query since this is the default */
 
 /* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
 @media (min-width: 768px) {
     .navbar .nav {
-        height: 30px;
+        height: 38px;
     }
     .navbar .nav,
     .navbar .nav > li {
@@ -74,7 +77,7 @@ body { padding-top: 70px;}
 @media (min-width: 992px) {
     .navbar .nav,
     .navbar .nav > li {
-        padding: 0 10px;
+        padding: 0 3px;
     }
     .navbar-nav > li > a {
         font-size: 14px;
@@ -82,9 +85,12 @@ body { padding-top: 70px;}
 }
 /* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
 @media (min-width: 1200px) {
-    .navbar .nav,
+    .navbar .nav{
+        padding: 0;
+    }
     .navbar .nav > li {
-        padding: 0 17px;
+        /*padding: 0 18px;*/
+        padding: 0 18px;
     }
 }
 
@@ -92,15 +98,19 @@ body { padding-top: 70px;}
     margin-top: 5px;
     margin-bottom: 5px;
 
-    border-right-style: solid;
-    border-right-color: #ccc;
-    border-right-width: 1px;
+    border-left-style: solid;
+    border-left-color: #ccc;
+    border-left-width: 1px;
 }
 
-.navbar .nav > :last-child {
-    border-right-style: none;
+.navbar .nav > :first-child {
+    border-left-style: none;
+    padding-left:0;
 }
 
+/*.navbar .nav > :first-child {*/
+    /*padding: 0;*/
+/*}*/
 
 hr {
     margin: 0;
@@ -146,7 +156,7 @@ hr.grad-line  {
 }
 
 #logo {
-    width:100%;
+    /*width:100%;*/
     z-index: -99;
     text-align:left;
     margin-left:10px;
@@ -154,6 +164,27 @@ hr.grad-line  {
 
 #logo img {
     width:220px;
+}
+
+#logo-mob {
+    /*width:100%;*/
+    z-index: -99;
+    text-align:left;
+    margin-left:10px;
+}
+
+#logo-mob img {
+    width:220px;
+}
+
+#moto{
+    font-size: 12px;
+}
+
+#moto a:link, #moto a:visited, #moto a:hover, #moto a:active {
+    /*font-size: 12px;*/
+    color: black;
+    text-decoration: none;
 }
 
 #foxy_mincart {
@@ -173,6 +204,25 @@ hr.grad-line  {
 
     #logo img {
         width:auto;
+        /*width:120px;*/
+        /*height:22px;*/
+        /*padding-right:10px;*/
+        /*margin-top:-12px;*/
+    }
+
+    #logo-mob img {
+        width:auto;
+        /*width:120px;*/
+        /*height:22px;*/
+        /*padding-right:10px;*/
+        /*margin-top:-12px;*/
+    }
+}
+
+@media (max-width: 767px) {
+
+    #logo-nav {
+        display:none;
     }
 }
 
@@ -190,14 +240,67 @@ hr.grad-line  {
 
     #logo {
         position: static;
-        text-align:center;
+        text-align:left;
         margin-left:0;
+    }
+    #logo img {
+        height: 30px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    #moto {
+        font-size: 10px;
+        /*width:100px;*/
+        /*display:none;*/
     }
 }
 
+@media (min-width: 992px) {
+    #logo img {
+        /*width:120px;*/
+        /*height:22px;*/
+        padding-right:10px;
+        margin-top:-12px;
+    }
 
+    #logo img {
+        height: 40px;
+    }
 
+    #moto {
+        font-size: 12px;
+    }
+}
 
+.super-nav {
+    background-color: black; margin-bottom: 0;
+    height: 4px;
+     line-height: 30px
+}
+.super-nav .sign-up {
+    color:white; font-size: 14px;
+}
+.super-nav .gift {
+    color:white; font-size: 20px; margin-top:-5px;
+}
 
+.super-nav li a {
+    height:30px;
+}
 
+@media (max-width: 768px) {
+    .super-nav .container{
+        display: none;
+    }
+}
 
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    .super-nav {
+        height: auto;
+        margin-bottom:24px;
+    }
+}

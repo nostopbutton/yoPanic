@@ -28,9 +28,14 @@ HOME PAGE - SPLASH
 
 #wow {
     text-align:center;
-    border: solid 1px #bbb;
+    /*border: solid 1px #bbb;*/
     padding: 0;
     margin-bottom:20px;
+}
+
+#wow .icons {
+    margin-top:30px;
+    margin-bottom:40px;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -64,8 +69,9 @@ HOME PAGE - SPLASH
 }
 
 #home-splash aside section {
-    border: solid 1px #bbb;
+    /*border: solid 1px #bbb;*/
     margin: 20px 0;
+    height:auto;
 }
 
 
@@ -125,7 +131,7 @@ HOME PAGE - SPLASH
   text-align: center;
 }
 #home-splash aside #design a {
-    margin:5px;
+    /*margin:5px;*/
 }
 
 
@@ -150,7 +156,7 @@ HOME PAGE - SPLASH
 /* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
 @media (min-width: 768px) {
     #home-splash aside section {
-        height:156px;
+        /*height:156px;*/
         margin: 0;
     }
     #home-splash aside #craftmanship p {
@@ -171,10 +177,10 @@ HOME PAGE - SPLASH
         font-size: 14px;
     }
     #home-splash aside img {
-        height: 174px
+        /*height: 174px*/
     }
     #home-splash aside section {
-        height:204px;
+        /*height:204px;*/
     }
     #home-splash aside #craftmanship p {
         font-size: 16px;
@@ -194,11 +200,11 @@ HOME PAGE - SPLASH
 /* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
 @media (min-width: 1200px) {
     #home-splash aside img {
-        height: 214px
+        /*height: 345px*/
     }
 
     #home-splash aside section {
-        height:244px;
+        /*height:auto;*/
     }
     #home-splash aside #craftmanship p {
         font-size: 18px;
@@ -373,3 +379,77 @@ HOME PAGE - HOW IT WORKS
     left: -5000px;
     position: absolute;
 }
+
+ul.side-by-side  {
+    margin:auto;
+}
+
+.side-by-side ul {
+    list-style-type: none; /* remove bullet marks */
+    padding: .2em 0;
+    margin: 0;
+    text-align: center;
+}
+
+.side-by-side ul li {
+    display: inline;
+    padding: .2em 1.5em;
+    white-space: nowrap;
+}
+/* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
+@media (min-width: 768px) {
+    .side-by-side ul li {
+        padding: .2em 2em;
+    }
+}
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+/*@media (min-width: 992px) {*/
+    /*.side-by-side ul li {*/
+        /*padding: .2em 2em;*/
+    /*}*/
+/*}*/
+
+/* Large devices (large desktops, 1200px and up) - min-width: @screen-lg-min */
+@media (min-width: 1200px) {
+    .side-by-side ul li {
+        padding: .2em 3em;
+    }
+}
+
+.offer-signup-bar {
+    background:black;
+    height:50px;
+}
+
+.sign-up-label {
+    font-size: 12px;
+    color:white;
+    padding-bottom: 4px;
+}
+
+.sign-up-input {
+    height:28px; margin-top:-4px;
+    font-size: 10px;
+    padding-left: 5px;
+    width:100%;
+}
+
+.sign-up-submit {
+    color:white;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .offer-signup-bar {
+        height: 30px;
+        padding: 5px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
+@media (min-width: 992px) {
+    .sign-up-label {
+        font-size: 14px;
+    }
+}
+
