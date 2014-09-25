@@ -10,7 +10,7 @@ body { padding-top: 70px;}
 }
 
 @media (min-width: 768px) {
-    body { padding-top: 140px;}
+    body { padding-top: 130px;}
 }
 
 .navbar {
@@ -37,6 +37,11 @@ body { padding-top: 70px;}
     *zoom:1;  /*hasLayout ie7 trigger*/
     vertical-align: top;
     padding: 1px 0;
+}
+
+.navbar .spacer {
+    background-color: #ffffff;
+    height:22px;
 }
 
 .navbar-nav > li > a {
@@ -280,6 +285,12 @@ hr.grad-line  {
     height: 4px;
      line-height: 30px
 }
+.super-nav .bag {
+    color:white; font-size: 14px;
+    diplay:block;
+    position: relative;
+}
+
 .super-nav .sign-up {
     color:white; font-size: 14px;
 }
@@ -301,6 +312,6 @@ hr.grad-line  {
 @media (min-width: 768px) {
     .super-nav {
         height: auto;
-        margin-bottom:24px;
+        margin-bottom:20px;
     }
 }

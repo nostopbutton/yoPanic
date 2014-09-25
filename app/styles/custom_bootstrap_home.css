@@ -9,7 +9,7 @@
     /*font-family: Georgia, serif;*/
 }
 
-#wow h2 {
+#wow h2 , #as-seen h2, #be-inspired h2{
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     /*font-family: Arial, Helvetica, sans-serif;*/
     /*font-family: Verdana, Geneva, sans-serif;*/
@@ -30,12 +30,12 @@ HOME PAGE - SPLASH
     text-align:center;
     /*border: solid 1px #bbb;*/
     padding: 0;
-    margin-bottom:20px;
+    margin-bottom:0;
 }
 
 #wow .icons {
-    margin-top:30px;
-    margin-bottom:40px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -43,7 +43,14 @@ HOME PAGE - SPLASH
 
 /* Small devices (tablets, 768px and up) - min-width: @screen-sm-min */
 @media (min-width: 768px) {
+    #wow {
+        margin-bottom:20px;
+    }
 
+    #wow .icons {
+        margin-top:30px;
+        margin-bottom:40px;
+    }
 }
 /* Medium devices (desktops, 992px and up) - min-width: @screen-md-min */
 @media (min-width: 992px) {
@@ -70,7 +77,7 @@ HOME PAGE - SPLASH
 
 #home-splash aside section {
     /*border: solid 1px #bbb;*/
-    margin: 20px 0;
+    margin: 0;
     height:auto;
 }
 
@@ -105,6 +112,11 @@ HOME PAGE - SPLASH
     text-align: left;
     margin:0;
     font-family: 'Nothing You Could Do', cursive;
+}
+
+#home-splash aside #design{
+    border-width: 1px 0 1px 0;
+    border-style: solid
 }
 
 #home-splash aside #design h1 {
@@ -157,10 +169,13 @@ HOME PAGE - SPLASH
 @media (min-width: 768px) {
     #home-splash aside section {
         /*height:156px;*/
-        margin: 0;
+        /*margin: 0;*/
     }
     #home-splash aside #craftmanship p {
         font-size: 12px;
+    }
+    #home-splash aside #design{
+        border-width:0 1px 0 1px;
     }
     #home-splash aside #design .btn {
         font-size: 12px;
@@ -453,3 +468,57 @@ ul.side-by-side  {
     }
 }
 
+#as-seen, #be-inspired {
+    margin-top: 60px;
+}
+
+#as-seen .row {
+    margin-bottom: 20px;
+}
+
+#be-inspired .item{
+    display:block;
+    position: relative;
+    text-align: center;
+}
+
+#be-inspired img{
+    max-width:120px;
+    max-height:270px;
+}
+
+#as-seen h2,
+#be-inspired h2, #be-inspired p {
+    text-align: center;
+}
+
+#be-inspired .image {
+    height: 270px;
+}
+
+#be-inspired .title {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#be-inspired .description {
+    font-size: 10px;
+}
+
+#be-inspired .create-button {
+    background-color: black;
+    color: #ffffff;
+    height: 24px;
+    line-height: 24px;
+    width:50%;
+    margin: 10px auto;
+
+}
+
+#be-inspired a:link, #be-inspired a:visited,
+#be-inspired a:hover, #be-inspired a:active {
+    /*font-size: 12px;*/
+    color: black;
+    text-decoration: none;
+}
