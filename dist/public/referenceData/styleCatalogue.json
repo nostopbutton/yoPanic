@@ -140,7 +140,7 @@
         "styleName": "Audrey Swing",
         "styleFormalName": "Crepe Swing",
         "filters": "crepe swing",
-        "price": 1500,
+        "price": 1400,
         "silhouetteImage": "pat-102"
     },
     {
@@ -158,7 +158,7 @@
         "styleName": "Sophia Pencil",
         "styleFormalName": "Cotton Pencil",
         "filters": "cotton sheath",
-        "price": 1300,
+        "price": 1400,
         "silhouetteImage": "pat-111"
     } ,
     {
@@ -185,7 +185,7 @@
         "styleName": "Obi",
         "styleFormalName": "Leather Obi Belt",
         "filters": "leather",
-        "price": 650,
+        "price": 500,
         "silhouetteImage": "pat-401"
     }
 ]

@@ -10,7 +10,7 @@
         , "description": [ "The soft leather obi belt is incredibly flattering, perfect for accentuating the waist and a gorgeous addition to your wardrobe."
         , "With a small slit at the side it is easy to tie and adjust and comes in 2 sizes for optimum comfort." ]
         , "care": ["100% leather, do not clean and avoid contact with liquids."]
-        , "price": 650
+        , "price": 500
         , "dressSizes": ["AURZA Size 1 - 5", "AURZA Size 6 - 8" ]
         , "silhouetteImage": "pat-401"
         , "defaultItemId": "obi-1"
@@ -18,7 +18,7 @@
         , "fc_category":"category||e3c8a0bd603c0fa4886e3f833677279f9fd7b50cc23f642dfa30844edfe49896"
         , "fc_code":"code||02792fa86973c71335d7f9bd29e7ed014d4a4e303ca6e1ce98f483d1a5ba99f2"
         , "fc_name":"name||84c52bf6a270241e176547b2f5b7a56679e6c2369b021b918d660845d25beea9||open"
-        , "fc_price":"price||c1acd92502d8d2db8225bdb18af9873a1665b19521697357dd40355d74adc8e8"
+        , "fc_price":"price||7c01e8138d494efa1f8e120617b8945cc090ef7c330c09b2f9f755e20109f729"
         , "fc_image":"image||81bc834c1aa540a88ccd3aa4bae3ad17c33c50e5f2a2ad2efce6e7a59b5f529b||open"
         , "fc_url":"url||52693139736b116cba30d786d732693cb92a7c3279017654a4f2126ad82d32b2||open"
 
