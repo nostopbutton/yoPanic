@@ -116,7 +116,7 @@
     [
         {
             "itemId": "doloman-1"
-            , "collections": ""
+            , "collections": "work"
             , "itemDesc": "Doloman - Cream / Black"
             , "itemUrl": ""
             , "title": "Christina Dolomon Dress in Black and White "
@@ -125,9 +125,9 @@
             , "images": {
                 "collection": {
                     "main": "dress.png"
-                    , "rollover": "front.jpg"
+                    , "rollover": "model.jpg"
                 }
-                , "product": ["front", "back", "dress"]
+                , "product": [ "model", "dress", "model2",  "front", "back"]
             }
             , "itemDesign": {
             "design": {

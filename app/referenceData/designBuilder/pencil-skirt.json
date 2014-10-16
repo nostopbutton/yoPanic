@@ -117,8 +117,8 @@
         }
         ,        {
         "itemId": "pencil-skirt-2"
-        , "collections": ""
-        , "itemDesc": "Pencil skirt with ruffle - Creme"
+        , "collections": "work"
+        , "itemDesc": "Pencil skirt with ruffle - Cream"
         , "itemUrl": ""
         , "title": "Coco Pencil Skirt With Ruffle In Cream"
         , "strapline": "Buy A Classic Cream Coco Pencil Skirt With Ruffle, Made To Your Own Custom Specification"
@@ -126,9 +126,9 @@
         , "images": {
             "collection": {
                 "main": "dress.png"
-                , "rollover": "back.png"
+                , "rollover": "model.jpg"
             }
-            , "product": ["dress", "back"]
+            , "product": ["model", "model2", "dress", "back"]
         }
         , "itemDesign": {
             "design": {

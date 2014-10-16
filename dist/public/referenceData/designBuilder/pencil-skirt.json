@@ -117,7 +117,7 @@
         }
         ,        {
         "itemId": "pencil-skirt-2"
-        , "collections": ""
+        , "collections": "work"
         , "itemDesc": "Pencil skirt with ruffle - Creme"
         , "itemUrl": ""
         , "title": "Coco Pencil Skirt With Ruffle In Cream"
@@ -126,9 +126,9 @@
         , "images": {
             "collection": {
                 "main": "dress.png"
-                , "rollover": "back.png"
+                , "rollover": "model.jpg"
             }
-            , "product": ["dress", "back"]
+            , "product": ["model", "model2", "dress", "back"]
         }
         , "itemDesign": {
             "design": {

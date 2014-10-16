@@ -87,7 +87,7 @@
     [
         {
             "itemId": "swing-skirt-print-1"
-            , "collections": ""
+            , "collections": "work"
             , "itemDesc": "Print swing skirt"
             , "itemUrl": ""
             , "title": ""
@@ -95,10 +95,10 @@
             , "colours": ""
             , "images": {
                 "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
+                    "main": "front.png"
+                    , "rollover": "model.jpg"
                 }
-                , "product": ["front", "back", "dress"]
+                , "product": ["model", "model2", "front", "detail"]
             }
             , "itemDesign": {
             "design": {

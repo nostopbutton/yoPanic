@@ -84,26 +84,28 @@
 }
     , "collection":
     [
+
+
         {
             "itemId": "swing-skirt-silk-1"
-            , "collections": ""
-            , "itemDesc": "Test - Empress"
+            , "collections": "work"
+            , "itemDesc": "Printed silk swing skirt"
             , "itemUrl": ""
             , "title": ""
             , "strapline": ""
             , "colours": ""
             , "images": {
-                "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
-                }
-                , "product": ["front", "back", "dress"]
+            "collection": {
+                "main": "front.png"
+                , "rollover": "model.jpg"
+            }
+            , "product": ["model", "model2", "front", "detail"]
             }
             , "itemDesign": {
             "design": {
                 "neckline":   {"type": "nek", "id": "000", "size": "00", "fabric": "000", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "408", "trim": ""}
+                , "skirt":    {"type": "skt", "id": "005", "size": "04", "fabric": "411", "trim": ""}
             }
             , "extras": {
                 "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},

@@ -23,7 +23,7 @@ angular.module('panicApp.Controllers')
 
                 var itemsPromise = CatalogueService.getItemCollectionWithStyleDataPromiseForStyles(
                     ['sheath', 'doloman', 'swing', 'swing-print', 'swoosh', 'bustier', 'bustier-print', 'pencil-skirt'
-                        , 'shift', 'shirt', 'shirt-maxi', 'flare']);
+                        , 'swing-skirt-silk', 'shift', 'shirt', 'shirt-maxi', 'flare']);
                 var items = [], itemIds = [];
 
                 itemsPromise.then(function (result) {  // this is only run after $http completes
@@ -90,7 +90,9 @@ angular.module('panicApp.Controllers')
 
             $scope.collections = [
                 { id: '', label: '-- All collections --'},
-                { id: 'new', label: 'New Arrivals!'}
+                { id: 'new', label: 'New Arrivals!'},
+                { id: 'work', label: 'Workwear'}
+
 //                ,
 //                { id: 'patterned', label: 'Patterned'},
 //                { id: 'mono', label: 'Mono-chrome'}
@@ -104,6 +106,8 @@ angular.module('panicApp.Controllers')
             $scope.colourFilter = $scope.colours[0].id;
             if (_.isUndefined(collection) ) {
                 $scope.collectionFilter = $scope.collections[0].id;
+            } else if('workwear' == collection){
+                $scope.collectionFilter = $scope.collections[2].id;
             } else {
                 $scope.collectionFilter = $scope.collections[1].id;
             }

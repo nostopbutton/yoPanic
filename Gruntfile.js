@@ -213,6 +213,8 @@ module.exports = function (grunt) {
                     'shop/#!/collection/sheath/sheath-6',
                     'shop/#!/collection/sheath/sheath-7',
                     'shop/#!/collection/sheath/sheath-8',
+                    'shop/#!/collection/sheath/sheath-9',
+                    'shop/#!/collection/sheath/sheath-10',
 //                    'shop/#!/collection/sheath/sheath-1/fit',
 //                    'shop/#!/collection/sheath/sheath-2/fit',
 //                    'shop/#!/collection/sheath/sheath-3/fit',
@@ -382,7 +384,7 @@ module.exports = function (grunt) {
 //                    'shop/#!/collection/pencil-skirt-print/pencil-skirt-print-1',
 
                     'shop/#!/design/swing-skirt-silk',
-//                    'shop/#!/collection/swing-skirt-silk/swing-skirt-silk-1',
+                    'shop/#!/collection/swing-skirt-silk/swing-skirt-silk-1',
 
                     'shop/#!/design/top-classic',
 //                    'shop/#!/collection/top-classic/top-classic-1'
