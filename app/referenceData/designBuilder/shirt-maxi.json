@@ -126,62 +126,6 @@
         }
         },
         {
-            "itemId": "shirt-maxi-2"
-            , "collections": ""
-            , "itemDesc": "Maxi-Shirt - Hot pink"
-            , "itemUrl": ""
-            , "title": "Claudia Maxi Shirt Dress With Long Sleeves In Hot Pink Silk"
-            , "strapline": "Buy A Luxurious Hot Pink Silk Claudia Collared Maxi Shirt Dress With Long Sleeves, Made To Your Own Custom Specification"
-            , "colours": "HOT PINK"
-            , "images": {
-                "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
-                }
-                , "product": ["front", "back", "dress"]
-            }
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "088", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "088", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "shirt-maxi-3"
-            , "collections": ""
-            , "itemDesc": "Maxi-Shirt - Cobalt"
-            , "itemUrl": ""
-            , "title": "Claudia Maxi Shirt Dress With Long Sleeves In Cobalt Blue Silk"
-            , "strapline": "Buy A Luxurious Cobalt Blue Silk Claudia Collared Maxi Shirt Dress With Long Sleeves, Made To Your Own Custom Specification"
-            , "colours": "COBALT BLUE"
-            , "images": {
-                "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
-                }
-                , "product": ["front", "back", "dress"]
-            }
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "017", "size": "05", "fabric": "087", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "011", "size": "00", "fabric": "087", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "005", "size": "00", "fabric": "083", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
             "itemId": "shirt-maxi-4"
             , "collections": "new"
             , "itemDesc": "Zebra print Claudia maxi-dress"

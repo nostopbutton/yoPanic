@@ -182,15 +182,7 @@ hr.grad-line  {
     width:220px;
 }
 
-#moto{
-    font-size: 12px;
-}
 
-#moto a:link, #moto a:visited, #moto a:hover, #moto a:active {
-    /*font-size: 12px;*/
-    color: black;
-    text-decoration: none;
-}
 
 #foxy_mincart {
     margin:5px 0;
@@ -254,14 +246,7 @@ hr.grad-line  {
 
 }
 
-@media (max-width: 991px) {
 
-    #moto {
-        font-size: 10px;
-        /*width:100px;*/
-        /*display:none;*/
-    }
-}
 
 @media (min-width: 992px) {
     #logo img {
@@ -274,10 +259,6 @@ hr.grad-line  {
     #logo img {
         height: 40px;
     }
-
-    #moto {
-        font-size: 12px;
-    }
 }
 
 .super-nav {
@@ -287,22 +268,49 @@ hr.grad-line  {
 }
 .super-nav .bag {
     color:white; font-size: 14px;
-    diplay:block;
-    position: relative;
+    /*display:block;*/
+    /*position: relative;*/
+    float:right;
+    /*width: 200%;*/
+    /*line-height: 38px;*/
 }
 
-.super-nav .sign-up {
+.super-nav .bag a{
     color:white; font-size: 14px;
+    /*display:block;*/
+    /*float: right;*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+    /*line-height: 38px;*/
+    /*height: 38px;*/
 }
-.super-nav .gift {
-    color:white; font-size: 20px; margin-top:-5px;
+
+/*.super-nav .bag-text, .super-nav .shopping_bag{*/
+    /*color:white; font-size: 14px;*/
+    /*display:block;*/
+    /*float: right;*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+/*}*/
+.super-nav .bag .shopping_bag{
+    margin-top: 20px;
 }
+
+
+/*.super-nav .sign-up {*/
+    /*color:white; font-size: 14px;*/
+/*}*/
+/*.super-nav .gift {*/
+    /*color:white; font-size: 20px; margin-top:-5px;*/
+/*}*/
 
 .super-nav li a {
     height:30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .super-nav .container{
         display: none;
     }

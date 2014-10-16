@@ -99,9 +99,9 @@ footer .social span.socialicons_h{
 }
 
 footer .navbar {
-    background-color: #333;
+    background-color: black;
     margin-top: 20px;
-    border-color: #333;
+    border-color: black;
 }
 
 footer .navbar .nav > li {

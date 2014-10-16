@@ -9,10 +9,11 @@
             <div class="breaded">
                 <ul class="nav" id="options">
                     <li ng-class="{active: true}">
-                        <a href="#">Style</a>
+                        <a href="">Style</a>
                     </li>
                     <li ng-class="{active: false}">
                         <a ng-href="/shop/collection/{{item.style.styleId}}/{{item.itemDesign.itemId}}/fit"
+                           rel="nofollow"
                            ng-click="gaEvent('nav', 'click', 'collection-item-fit');">Fit</a>
                     </li>
                     <li>

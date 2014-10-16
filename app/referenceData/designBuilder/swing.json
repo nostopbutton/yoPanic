@@ -16,7 +16,7 @@
         , "dressSizes": ["AURZA Size 1", "AURZA Size 2", "AURZA Size 3", "AURZA Size 4",
                             "AURZA Size 5", "AURZA Size 6", "AURZA Size 7", "AURZA Size 8" ]
         , "silhouetteImage": "pat-304-body"
-        , "defaultItemId": "swing-1"
+        , "defaultItemId": "swing-2"
         , "foxyImage": "pat-304"
         , "fc_category": "category||05be67359dd9dfc344935dd39b55945810a66efe99555234f7153ad1084b5f17"
         , "fc_code": "code||ae669290b7afe449027d32791d0de6ac732125ac615bce0db30c8fd5ea0157cf"
@@ -125,35 +125,7 @@
 }
     , "collection":
     [
-        {
-            "itemId": "swing-1"
-            , "collections": ""
-            , "itemDesc": "Swing - Aubergine"
-            , "itemUrl": ""
-            , "title": "Audrey Swing Dress With Sleeveless Bateau Top In Aubergine"
-            , "strapline": "Buy A Timeless Aubergine Sleeveless Audrey Swing Dress With Bateau Neck, Made To Your Own Custom Specification"
-            , "colours": "AUBERGENE"
-            , "images": {
-                "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
-                }
-                , "product": ["front", "back", "dress"]
-            }
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "013", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "013", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "013", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        }
-        , {
+     {
         "itemId": "swing-2"
         , "collections": ""
         , "itemDesc": "Swing - Midnight blue"
@@ -181,36 +153,5 @@
             }
         }
     }
-        ,
-
-        {
-            "itemId": "swing-3"
-            , "collections": ""
-            , "itemDesc": "Swing - Red"
-            , "itemUrl": ""
-            , "title": "Audrey Swing Dress With Sleeveless Bateau Top In Rose Red"
-            , "strapline": "Buy A Timeless Rose Red Sleevless Audrey Swing dress With Bateau Neck, Made To Your Own Custom Specification"
-            , "colours": "ROSE RED"
-            , "images": {
-                "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
-                }
-                , "product": ["front", "back", "dress"]
-            }
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "001", "size": "00", "fabric": "003", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "003", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "005", "size": "02", "fabric": "003", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "002", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "003", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        }
-
     ]
 }

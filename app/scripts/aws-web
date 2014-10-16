@@ -1,0 +1,20 @@
+//AWS SDK
+//
+//* require AWS sdk
+//
+//# Credentials
+//
+//* IAM roles for EC2 instances
+//* Zero config
+//* Environement Variables
+//* File Systems (outside source control)
+//
+//
+//AWS.config.update({
+//    region: 'ap-southeast-1',
+//    maxRetries: 10,
+//    logger: process.stdout})
+//
+//AWS.config.loadFromPath('./config.json');
+//
+//# Region

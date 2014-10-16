@@ -191,34 +191,6 @@
         }
     }
         , {
-        "itemId": "sheath-3"
-        , "collections": ""
-        , "itemDesc": "Wrap sheath - Cream"
-        , "itemUrl": ""
-        , "title": "Coco Sheath Dress With Sleeveless Bateau Top In Cream"
-        , "strapline": "Buy A Stunning Cream Coco Sheath Dress With Wrap Top And Short Pencil Skirt, Made To Your Own Custom Specification"
-        , "colours": "CREAM"
-        , "images": {
-            "collection": {
-                "main": "dress.png"
-                , "rollover": "front.jpg"
-            }
-            , "product": ["front", "back", "dress"]
-        }
-        , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "004", "size": "00", "fabric": "008", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "001", "size": "01", "fabric": "008", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-    }
-        , {
         "itemId": "sheath-4"
         , "collections": ""
         , "itemDesc": "Sheath (Teal / Cream) + Obi"

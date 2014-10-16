@@ -166,34 +166,6 @@
         }
         },
         {
-            "itemId": "swoosh-4"
-            , "collections": ""
-            , "itemDesc": "Swoosh - Red"
-            , "itemUrl": ""
-            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Rose Red"
-            , "strapline": "Buy A Flattering Rose Red Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
-            , "colours": "ROSE RED"
-            , "images": {
-                "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
-                }
-                , "product": ["front", "back", "dress"]
-            }
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "003", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "006", "size": "00", "fabric": "003", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
             "itemId": "swoosh-5"
             , "collections": ""
             , "itemDesc": "Swoosh - Black"
@@ -268,34 +240,6 @@
             "design": {
                 "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "011", "trim": ""}
                 , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "011", "trim": ""}
-                , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
-            }
-            , "extras": {
-                "belt":    {"type": "blt", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "peplum":  {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"},
-                "rosetta": {"type": "ext", "id": "000", "size": "00", "fabric": "000", "code": "000-000"}
-            }
-        }
-        },
-        {
-            "itemId": "swoosh-9"
-            , "collections": ""
-            , "itemDesc": "Swoosh - Midnight blue"
-            , "itemUrl": ""
-            , "title": "Kate Swoosh Dress With Elbow Length Sleeves In Navy"
-            , "strapline": "Buy A Flattering Navy Kate Dress With Elbow Length Sleeves, Made To Your Own Custom Specification"
-            , "colours": "NAVY"
-            , "images": {
-                "collection": {
-                    "main": "dress.png"
-                    , "rollover": "front.jpg"
-                }
-                , "product": ["front", "back", "dress"]
-            }
-            , "itemDesign": {
-            "design": {
-                "neckline":   {"type": "nek", "id": "009", "size": "02", "fabric": "014", "trim": ""}
-                , "sleeves":  {"type": "slv", "id": "002", "size": "00", "fabric": "014", "trim": ""}
                 , "skirt":    {"type": "skt", "id": "000", "size": "00", "fabric": "000", "trim": ""}
             }
             , "extras": {
